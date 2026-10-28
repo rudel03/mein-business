@@ -1,0 +1,182 @@
+{%- liquid
+  assign b1 = all_products['honigmama-band-1']
+  assign b2 = all_products['honigmama-band-2']
+  assign b3 = all_products['honigmama-band-3']
+  assign pp = all_products['honigmama-paket-band-1-2']
+  assign pk = all_products['honigmama-komplett']
+  assign vk = pk.selected_or_first_available_variant
+  assign vp = pp.selected_or_first_available_variant
+  assign v1 = b1.selected_or_first_available_variant
+  assign v2 = b2.selected_or_first_available_variant
+  assign v3 = b3.selected_or_first_available_variant
+  assign sum3 = v1.price | plus: v2.price | plus: v3.price
+  assign sum2 = v1.price | plus: v2.price
+  assign c1 = images['bq-cover-honigmama.jpg']
+  assign c2 = images['hm-cover-b2.jpg']
+  assign c3 = images['hm-cover-b3.jpg']
+-%}
+
+
+<div class="hm">
+{%- comment -%} ===== HERO ===== {%- endcomment -%}
+<section class="hm-hero">
+  <div class="w">
+    <p class="eb" data-rv>Die Honigmama-Kochbuchreihe</p>
+    <h1 data-rv>Gut essen – von der Schwangerschaft <em>bis ins erste Jahr.</em></h1>
+    <p class="hm-hero__lead" data-rv>Drei Kochbücher mit fertigen Plänen und Einkaufslisten. Für jede Phase genau das Essen, das gerade passt – ohne Googeln, ohne Grübeln.</p>
+    <div class="hm-hero__cta" data-rv>
+      {%- if pk.available -%}
+      <form method="post" action="/cart/add"><input type="hidden" name="id" value="{{ vk.id }}"><input type="hidden" name="return_to" value="/checkout"><button class="btn btn--dark" type="submit">Komplette Reihe · {{ vk.price | money }}</button></form>
+      {%- endif -%}
+      <a class="btn btn--light" href="#hm-phasen">Meine Phase finden</a>
+    </div>
+    <p class="hm-hero__trust" data-rv><span>Sofort als PDF</span><span>Kein Abo</span><span>Sicherer Checkout</span><span>Ideal als Geschenk</span></p>
+    <div class="hm-books" data-rv>
+      <a href="{{ b1.url }}" aria-label="{{ b1.title }}">{% if c1 %}{{ c1 | image_url: width: 600 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '300,450,600', sizes: '250px', alt: 'Cover Band 1: Was darf ich essen?' }}{% endif %}</a>
+      <a href="{{ b2.url }}" aria-label="{{ b2.title }}">{% if c2 %}{{ c2 | image_url: width: 600 | image_tag: loading: 'eager', widths: '300,450,600', sizes: '250px', alt: 'Cover Band 2: Vorkochen fürs Wochenbett' }}{% endif %}</a>
+      <a href="{{ b3.url }}" aria-label="{{ b3.title }}">{% if c3 %}{{ c3 | image_url: width: 600 | image_tag: loading: 'eager', widths: '300,450,600', sizes: '250px', alt: 'Cover Band 3: Kraft-Küche fürs erste Jahr' }}{% endif %}</a>
+    </div>
+    <div class="hm-stats" data-rv>
+      <div><b data-count="160">160</b><span>Rezepte</span></div>
+      <div><b data-count="13">13</b><span>fertige Pläne</span></div>
+      <div><b data-count="3">3</b><span>Lebensphasen</span></div>
+    </div>
+  </div>
+</section>
+
+{%- comment -%} ===== PHASEN ===== {%- endcomment -%}
+<section class="hm-phases" id="hm-phasen">
+  <div class="w">
+    <div class="hm-sec-head" data-rv><p class="eb">Welche Phase ist gerade deine?</p><h2>Ein Band für jede Phase.</h2><p>Tippe deine Phase an – du siehst sofort, was drinsteckt.</p></div>
+    <div class="hm-tabs" role="tablist" data-rv>
+      <button role="tab" aria-selected="true" data-tab="1">Schwanger<small>Band 1</small></button>
+      <button role="tab" aria-selected="false" data-tab="2">Wochenbett<small>Band 2</small></button>
+      <button role="tab" aria-selected="false" data-tab="3">Erstes Jahr<small>Band 3</small></button>
+    </div>
+    {%- capture d1 -%}70 Rezepte für jede Lage – auch für Tage, an denen dir übel ist|3 Wochenpläne mit fertigen Einkaufslisten|Lebensmittel-Hinweise zum Nachschlagen statt Googeln|Hinweise zur sicheren Zubereitung bei jedem Rezept{%- endcapture -%}
+    {%- capture d2 -%}40 Gerichte zum Einfrieren – Suppen, Currys, Aufläufe, Frühstück|2 Kochtage mit Minuten-Ablauf und Einkaufsliste|6-Wochen-Plan für die Zeit nach der Geburt|Etiketten und „Wer bringt was?“-Liste für Helfer{%- endcapture -%}
+    {%- capture d3 -%}50 schnelle Rezepte in 5–25 Minuten, viele mit einer Hand|Ein Essen für alle – mit Hinweis fürs Baby ab Beikoststart|4 Wochenpläne mit Einkaufslisten|Snack-Ideen gegen Heißhunger beim Stillen{%- endcapture -%}
+    {%- for i in (1..3) -%}
+      {%- case i -%}
+        {%- when 1 -%}{%- assign p = b1 -%}{%- assign v = v1 -%}{%- assign img = c1 -%}{%- assign bul = d1 -%}{%- assign n = 70 -%}{%- assign t = 'Was darf ich essen?' -%}{%- assign s = 'Das Kochbuch für deine Schwangerschaft' -%}
+        {%- when 2 -%}{%- assign p = b2 -%}{%- assign v = v2 -%}{%- assign img = c2 -%}{%- assign bul = d2 -%}{%- assign n = 40 -%}{%- assign t = 'Vorkochen fürs Wochenbett' -%}{%- assign s = 'Zwei Kochtage – sechs Wochen versorgt' -%}
+        {%- when 3 -%}{%- assign p = b3 -%}{%- assign v = v3 -%}{%- assign img = c3 -%}{%- assign bul = d3 -%}{%- assign n = 50 -%}{%- assign t = 'Kraft-Küche fürs erste Jahr' -%}{%- assign s = 'Wieder richtig essen – mit Baby im Arm' -%}
+      {%- endcase -%}
+      <div class="hm-panel{% if i == 1 %} on{% endif %}" role="tabpanel" data-panel="{{ i }}">
+        <a href="{{ p.url }}">{% if img %}{{ img | image_url: width: 520 | image_tag: loading: 'lazy', widths: '260,520', sizes: '260px', alt: t }}{% endif %}</a>
+        <div>
+          <p class="eb">Band {{ i }}</p><h3>{{ t }}</h3><p class="hm-panel__sub">{{ s }}</p>
+          <ul>{% assign bl = bul | split: '|' %}{% for b in bl %}<li>{{ b }}</li>{% endfor %}</ul>
+          <div class="hm-panel__buy">
+            <div class="hm-price">{{ v.price | money }}<small>= {{ v.price | divided_by: n | money }} pro Rezept · einmalig</small></div>
+            {%- if p.available -%}<form method="post" action="/cart/add"><input type="hidden" name="id" value="{{ v.id }}"><input type="hidden" name="return_to" value="/checkout"><button class="btn btn--dark" type="submit">Jetzt kaufen</button></form>{%- endif -%}
+            <a class="hm-panel__more" href="{{ p.url }}">Blick ins Buch</a>
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{%- comment -%} ===== GERICHTE ===== {%- endcomment -%}
+<section class="hm-dishes">
+  <div class="w"><div class="hm-sec-head" data-rv><p class="eb">Aus allen drei Bänden</p><h2>Darauf darfst du dich freuen.</h2><p>Hausmannskost, schnelle Teller und Gerichte zum Vorkochen – mit Zutaten aus jedem Supermarkt.</p></div></div>
+  {%- capture dl -%}bq-gericht-01-pancakes.png|Band 1|Hafer-Bananen-Pancakes;hm-dish-b2_S01.jpg|Band 2|Süßkartoffel-Erdnuss-Suppe;hm-dish-b3_F01.jpg|Band 3|Frühstücks-Wrap mit Rührei;bq-gericht-02-honighaehnchen.png|Band 1|Zitronen-Honig-Hähnchen;hm-dish-b2_C02.jpg|Band 2|Rinder-Ragù zum Einfrieren;hm-dish-b3_A01.jpg|Band 3|Lachs vom Blech;bq-gericht-05-lachspasta.png|Band 1|Lachs-Spinat-Pasta;hm-dish-b2_A01.jpg|Band 2|Shepherd's Pie;hm-dish-b3_M09.jpg|Band 3|Ofen-Feta-Pasta;bq-gericht-10-shakshuka.png|Band 1|Shakshuka mit Spinat;hm-dish-b2_E04.jpg|Band 2|Spinat-Feta-Taschen;hm-dish-b3_V01.jpg|Band 3|Quinoa-Bowls zum Mitnehmen;bq-gericht-03-lasagne.png|Band 1|Spinat-Ricotta-Lasagne;hm-dish-b2_F01.jpg|Band 2|Blaubeer-Quark-Muffins;hm-dish-b3_Z01.jpg|Band 3|Schoko-Avocado-Mousse{%- endcapture -%}
+  {%- assign dishes = dl | split: ';' -%}
+  <div class="hm-marquee" data-rv><div class="hm-marquee__track">
+    {%- for round in (1..2) -%}{%- for d in dishes -%}{%- assign x = d | split: '|' -%}{%- assign pic = images[x[0]] -%}
+      <figure class="hm-dish"{% if round == 2 %} aria-hidden="true"{% endif %}>{% if pic %}{{ pic | image_url: width: 520 | image_tag: loading: 'lazy', widths: '260,520', sizes: '260px', alt: x[2] }}{% endif %}<figcaption><span>{{ x[1] }}</span>{{ x[2] }}</figcaption></figure>
+    {%- endfor -%}{%- endfor -%}
+  </div></div>
+  <p class="hm-note">Fotos: KI-generierte Darstellungen der Gerichte aus den Büchern.</p>
+</section>
+
+{%- comment -%} ===== PAKETE ===== {%- endcomment -%}
+<section class="hm-packs" id="hm-reihe">
+  <div class="w">
+    <div class="hm-sec-head" data-rv><p class="eb">Im Paket günstiger</p><h2>Gleich mitplanen – und sparen.</h2><p>Die meisten Phasen kommen schneller, als man denkt. Im Paket bekommst du mehrere Bände zum festen Paketpreis.</p></div>
+    <div class="hm-packs__grid">
+      {%- for k in (1..2) -%}
+        {%- if k == 1 -%}{%- assign P = pp -%}{%- assign V = vp -%}{%- assign S = sum2 -%}{%- assign T = 'Schwangerschaft + Wochenbett' -%}{%- assign D = 'Band 1 + 2 · 110 Rezepte · vor und nach der Geburt' -%}{%- else -%}{%- assign P = pk -%}{%- assign V = vk -%}{%- assign S = sum3 -%}{%- assign T = 'Die komplette Reihe' -%}{%- assign D = 'Band 1 + 2 + 3 · 160 Rezepte · 13 Pläne' -%}{%- endif -%}
+        <article class="hm-pack{% if k == 2 %} hm-pack--best{% endif %}" data-rv>
+          {%- if k == 2 -%}<span class="hm-pack__tag">Bestes Angebot</span>{%- endif -%}
+          <a href="{{ P.url }}">{% if P.featured_image %}{{ P.featured_image | image_url: width: 400 | image_tag: loading: 'lazy', alt: T }}{% endif %}</a>
+          <div>
+            <h3>{{ T }}</h3><p>{{ D }}</p>
+            <div class="hm-pack__price">{{ V.price | money }}<s>{{ S | money }}</s><em>Du sparst {{ S | minus: V.price | money }} gegenüber einzeln</em></div>
+            {%- if P.available -%}<form method="post" action="/cart/add"><input type="hidden" name="id" value="{{ V.id }}"><input type="hidden" name="return_to" value="/checkout"><button class="btn {% if k == 2 %}btn--dark{% else %}btn--light{% endif %}" type="submit">Paket kaufen</button></form>{%- endif -%}
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{%- comment -%} ===== SO GEHT'S ===== {%- endcomment -%}
+<section class="hm-steps">
+  <div class="w">
+    <div class="hm-sec-head" data-rv><p class="eb">So einfach geht's</p><h2>In zwei Minuten startklar.</h2></div>
+    <div class="hm-steps__grid">
+      <div class="hm-step" data-rv><h3>Band oder Paket wählen</h3><p>Für deine Phase – oder gleich die ganze Reihe zum Paketpreis.</p></div>
+      <div class="hm-step" data-rv><h3>PDF sofort erhalten</h3><p>Direkt nach dem Kauf per E-Mail und als Download. Kein Abo, kein Versand.</p></div>
+      <div class="hm-step" data-rv><h3>Plan aufschlagen, kochen</h3><p>Wochenplan wählen, Einkaufsliste mitnehmen, loslegen. Auf Handy, Tablet oder ausgedruckt.</p></div>
+    </div>
+  </div>
+</section>
+
+{%- comment -%} ===== VERTRAUEN + FAQ ===== {%- endcomment -%}
+<section class="hm-trust">
+  <div class="w">
+    <div class="hm-trust__grid">
+      <div class="hm-trust__item" data-rv><b>Mit Quellen</b><span>Hinweise auf Basis von Netzwerk Gesund ins Leben, DGE und BfR.</span></div>
+      <div class="hm-trust__item" data-rv><b>Ehrlich gemacht</b><span>Fotos der Gerichte sind KI-Darstellungen – das sagen wir offen.</span></div>
+      <div class="hm-trust__item" data-rv><b>Einmal zahlen</b><span>Fester Preis, kein Abo, keine versteckten Kosten.</span></div>
+      <div class="hm-trust__item" data-rv><b>Sofort da</b><span>PDF direkt nach dem Kauf – auch als Geschenk weiterleitbar.</span></div>
+    </div>
+    <div class="hm-sec-head" data-rv><p class="eb">Häufige Fragen</p><h2>Gut zu wissen.</h2></div>
+    <div class="hm-faq" data-rv>
+      <details><summary>Welcher Band passt zu mir?</summary><p>Band 1 für die Schwangerschaft, Band 2 zum Vorkochen in den letzten Wochen vor der Geburt, Band 3 für die Zeit mit Baby. Wer früh plant, nimmt das Paket – das ist günstiger als einzeln.</p></details>
+      <details><summary>Wie bekomme ich die Bücher?</summary><p>Als PDF direkt nach dem Kauf – per E-Mail und als Download-Link. Bei Paketen sind alle Bände in einer Datei mit anklickbarem Inhaltsverzeichnis.</p></details>
+      <details><summary>Kann ich die Bücher verschenken?</summary><p>Ja. Leite die PDF einfach weiter oder drucke sie aus. Besonders beliebt zur Babyparty: Band 2 oder die komplette Reihe.</p></details>
+      <details><summary>Ersetzen die Bücher eine Beratung?</summary><p>Nein. Sie geben allgemeine Orientierung. Bei Fragen zu Ernährung, Allergien oder Stillen gelten die Empfehlungen deiner Hebamme oder Ärztin. <a href="/pages/ernaehrung-schwangerschaft-quellen">Alle Quellen ansehen</a></p></details>
+    </div>
+  </div>
+</section>
+
+{%- comment -%} ===== ABSCHLUSS ===== {%- endcomment -%}
+<section class="hm-end">
+  <div class="w">
+    <h2 data-rv>Weniger Essensstress. Mehr Kopf frei.</h2>
+    <p data-rv>Hol dir den Band für deine Phase – oder gleich die ganze Reihe zum Paketpreis.</p>
+    <div class="hm-hero__cta" data-rv>
+      {%- if pk.available -%}<form method="post" action="/cart/add"><input type="hidden" name="id" value="{{ vk.id }}"><input type="hidden" name="return_to" value="/checkout"><button class="btn btn--dark" type="submit">Komplette Reihe · {{ vk.price | money }}</button></form>{%- endif -%}
+      <a class="btn btn--light" href="#hm-phasen">Einzelnen Band wählen</a>
+    </div>
+    <div class="hm-probe" id="bq-probieren" data-rv>
+      <h3>Erst mal reinschnuppern?</h3><p>Hol dir das kostenlose Probierheft mit Rezepten per E-Mail.</p>
+      {%- form 'customer', id: 'hm-probe-form' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter, probierheft">
+        {%- if form.posted_successfully? -%}<p role="status">Danke! Schau gleich in dein Postfach.</p>{%- else -%}
+        {%- if form.errors -%}<div role="alert">{{ form.errors | default_errors }}</div>{%- endif -%}
+        <label for="hm-probe-email">Deine E-Mail-Adresse</label>
+        <input id="hm-probe-email" type="email" name="contact[email]" autocomplete="email" required placeholder="name@beispiel.de">
+        <label class="bq-consent"><input type="checkbox" name="contact[accepts_marketing]" value="true" required><span>Ja, ich möchte das Probierheft und den Honigmama-Newsletter per E-Mail erhalten. Abmelden ist jederzeit möglich.{% if shop.privacy_policy.body != blank %} <a href="{{ shop.privacy_policy.url }}">Datenschutz</a>{% endif %}</span></label>
+        <button class="btn btn--light" type="submit" style="width:100%">Probierheft anfordern</button>
+        {%- endif -%}
+      {%- endform -%}
+    </div>
+  </div>
+</section>
+
+{%- if pk.available -%}
+<div class="hm-sticky" data-hm-sticky aria-hidden="true">
+  <div><b>Die komplette Honigmama-Reihe</b><span>3 Bände · 160 Rezepte · {{ vk.price | money }}</span></div>
+  <form method="post" action="/cart/add"><input type="hidden" name="id" value="{{ vk.id }}"><input type="hidden" name="return_to" value="/checkout"><button class="btn" type="submit" tabindex="-1">Kaufen</button></form>
+</div>
+{%- endif -%}
+</div>
+
+
+{% schema %}
+{"name":"Honigmama: Startseite Reihe","settings":[],"presets":[{"name":"Honigmama: Startseite Reihe"}]}
+{% endschema %}

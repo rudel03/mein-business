@@ -1,0 +1,92 @@
+{%- comment -%}
+  Kaufauswahl über dem Kaufen-Knopf: Einzelband oder Paket (fester Paketpreis, kein Rabatt).
+  render 'hm-choice', item: product, form_id: main_id
+  Vorausgewählt ist immer das Produkt der Seite – die Pakete sind sichtbar, aber nicht voreingestellt.
+{%- endcomment -%}
+{%- liquid
+  assign h = item.handle
+  case h
+    when 'honigmama-band-1'
+      assign opts = 'honigmama-band-1|honigmama-paket-band-1-2|honigmama-komplett'
+    when 'honigmama-band-2'
+      assign opts = 'honigmama-band-2|honigmama-paket-band-1-2|honigmama-komplett'
+    when 'honigmama-band-3'
+      assign opts = 'honigmama-band-3|honigmama-komplett'
+    when 'honigmama-paket-band-1-2'
+      assign opts = 'honigmama-paket-band-1-2|honigmama-komplett'
+    else
+      assign opts = ''
+  endcase
+  assign list = opts | split: '|'
+  assign shown = 0
+  for oh in list
+    assign op = all_products[oh]
+    if op != blank and op.available
+      assign shown = shown | plus: 1
+    endif
+  endfor
+-%}
+{%- if shown > 1 -%}
+<style>
+.hm-choice{border:0;padding:0;margin:4px 0 12px;display:grid;gap:8px}
+.hm-choice legend{font:600 14px/1.3 var(--font-body--family,Arial,sans-serif);margin-bottom:8px;padding:0}
+.hm-opt{position:relative;display:grid;grid-template-columns:22px 1fr auto;gap:12px;align-items:center;padding:12px 14px;border:1.5px solid #ead8b4;border-radius:14px;background:#fff;cursor:pointer;transition:border-color .2s,box-shadow .2s,background .2s}
+.hm-opt:hover{border-color:#e9a53b}
+.hm-opt input{position:absolute;opacity:0;pointer-events:none}
+.hm-opt__dot{width:20px;height:20px;border-radius:50%;border:2px solid #cdb68c;display:grid;place-items:center;transition:border-color .2s}
+.hm-opt__dot:after{content:"";width:10px;height:10px;border-radius:50%;background:#2f2118;transform:scale(0);transition:transform .2s}
+.hm-opt:has(input:checked){border-color:#2f2118;background:#fffaf1;box-shadow:0 6px 18px #49301a14}
+.hm-opt:has(input:checked) .hm-opt__dot{border-color:#2f2118}
+.hm-opt:has(input:checked) .hm-opt__dot:after{transform:scale(1)}
+.hm-opt input:focus-visible ~ .hm-opt__dot{outline:2px solid #e9a53b;outline-offset:2px}
+.hm-opt__txt b{display:block;font:600 15.5px/1.25 var(--font-heading--family,Georgia,serif)}
+.hm-opt__txt small{display:block;font-size:12.5px;opacity:.72;margin-top:2px}
+.hm-opt__save{display:inline-block;margin-top:4px;font:600 12px/1 var(--font-body--family,Arial,sans-serif);color:#2f6b3a}
+.hm-opt__price{text-align:right;font-weight:700;white-space:nowrap}
+.hm-opt__price s{display:block;font-weight:400;font-size:12px;opacity:.5}
+.hm-opt__tag{position:absolute;top:-9px;right:12px;background:#b4532f;color:#fff;font:700 10.5px/1 var(--font-body--family,Arial,sans-serif);letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:99px}
+.hm-choice-note{font-size:12px;opacity:.65;margin:-4px 0 10px}
+</style>
+<form method="post" action="{{ routes.cart_add_url }}" id="{{ form_id }}" class="bq-purchase hm-choice-form">
+<input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓"><input type="hidden" name="quantity" value="1">
+<fieldset class="hm-choice">
+<legend>Wähle deine Ausgabe</legend>
+{%- for oh in list -%}
+  {%- assign op = all_products[oh] -%}
+  {%- if op == blank or op.available != true -%}{%- continue -%}{%- endif -%}
+  {%- assign ov = op.selected_or_first_available_variant -%}
+  {%- liquid
+    case oh
+      when 'honigmama-band-1'
+        assign t = 'Nur Band 1'
+        assign sub = '70 Rezepte · Schwangerschaft'
+      when 'honigmama-band-2'
+        assign t = 'Nur Band 2'
+        assign sub = '55 Rezepte · über 160 Portionen fürs Wochenbett'
+      when 'honigmama-band-3'
+        assign t = 'Nur Band 3'
+        assign sub = '65 Rezepte · erstes Jahr mit Baby'
+      when 'honigmama-paket-band-1-2'
+        assign t = 'Paket Band 1 + 2'
+        assign sub = '125 Rezepte · Schwangerschaft + Wochenbett'
+      when 'honigmama-komplett'
+        assign t = 'Komplette Reihe · Band 1 + 2 + 3'
+        assign sub = '190 Rezepte · 13 Pläne · bis ins erste Jahr'
+    endcase
+  -%}
+  <label class="hm-opt">
+    <input type="radio" name="id" value="{{ ov.id }}"{% if oh == h %} checked{% endif %}>
+    <span class="hm-opt__dot" aria-hidden="true"></span>
+    <span class="hm-opt__txt"><b>{{ t }}</b><small>{{ sub }}</small>{% if ov.compare_at_price > ov.price %}<span class="hm-opt__save">Du sparst {{ ov.compare_at_price | minus: ov.price | money }} gegenüber einzeln</span>{% endif %}</span>
+    <span class="hm-opt__price">{{ ov.price | money }}{% if ov.compare_at_price > ov.price %}<s>{{ ov.compare_at_price | money }}</s>{% endif %}</span>
+    {%- if oh == 'honigmama-komplett' -%}<span class="hm-opt__tag">Bestes Angebot</span>{%- endif -%}
+  </label>
+{%- endfor -%}
+</fieldset>
+<p class="hm-choice-note">Pakete: alle Bände in einer PDF, fester Paketpreis.</p>
+<button type="submit" name="return_to" value="/checkout" class="bq-button bq-button--wide" data-bq-buy-now>Jetzt kaufen{% render 'bq-icon', name: 'arrow' %}</button>
+<button type="submit" name="return_to" value="{{ routes.cart_url }}" class="bq-atc-quiet">oder in den Warenkorb legen</button>
+</form>
+{%- else -%}
+{% render 'bq-purchase', item: item, form_id: form_id, compact: true %}
+{%- endif -%}

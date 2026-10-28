@@ -1,0 +1,8 @@
+# große Rohbilder (die JPGs reichen für Buch und Shop)
+buch/ph/*.png
+*/shot_*.png
+web/shot_*.png
+theme/shot_*.png
+node_modules/
+__pycache__/
+*.PLACEHOLDER

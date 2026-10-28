@@ -1,0 +1,171 @@
+<style>@font-face{font-family:"Barlow Condensed";font-weight:600;font-style:normal;font-display:swap;src:url({{ 'barlow-condensed-latin-600-normal.woff2' | asset_url }}) format("woff2")}@font-face{font-family:"Barlow Condensed";font-weight:700;font-style:normal;font-display:swap;src:url({{ 'barlow-condensed-latin-700-normal.woff2' | asset_url }}) format("woff2")}@font-face{font-family:"Barlow Condensed";font-weight:800;font-style:normal;font-display:swap;src:url({{ 'barlow-condensed-latin-800-normal.woff2' | asset_url }}) format("woff2")}@font-face{font-family:"Inter";font-weight:400;font-style:normal;font-display:swap;src:url({{ 'inter-latin-400-normal.woff2' | asset_url }}) format("woff2")}@font-face{font-family:"Inter";font-weight:600;font-style:normal;font-display:swap;src:url({{ 'inter-latin-600-normal.woff2' | asset_url }}) format("woff2")}@font-face{font-family:"Inter";font-weight:700;font-style:normal;font-display:swap;src:url({{ 'inter-latin-700-normal.woff2' | asset_url }}) format("woff2")}@font-face{font-family:"JetBrains Mono";font-weight:500;font-style:normal;font-display:swap;src:url({{ 'jetbrains-mono-latin-500-normal.woff2' | asset_url }}) format("woff2")}@font-face{font-family:"JetBrains Mono";font-weight:700;font-style:normal;font-display:swap;src:url({{ 'jetbrains-mono-latin-700-normal.woff2' | asset_url }}) format("woff2")}</style>
+{{ 'ds-home.css' | asset_url | stylesheet_tag }}
+{{ 'ds-rechner.css' | asset_url | stylesheet_tag }}
+<div class="ds">
+<section class="ds-hero">
+ <div class="ds-hero-txt">
+  <div class="ds-kick">E-Book · PDF · sofort per Mail</div>
+  <h1>Essen nach<br>Dienst&shy;plan.</h1>
+  <p class="ds-sub">48 Rezepte und 6 fertige Pläne für Früh, Spät und Nacht – sortiert danach, was es in deinem Pausenraum wirklich gibt.</p>
+  <div class="ds-btns">
+   <a class="ds-btn" href="/products/durchschicht">E-Book holen · 19,90 €</a>
+   <a class="ds-btn ds-ghost" href="#rechner">Erst Plan ausrechnen – gratis</a>
+  </div>
+  <ul class="ds-facts"><li>48 Rezepte</li><li>6 Dienstplan-Pläne</li><li>Lagerkarte & Etiketten</li></ul>
+ </div>
+ <div class="ds-hero-img"><img src="{{ 'ds-hero.jpg' | asset_url }}" alt="Pausenraum bei Nacht mit Thermobehälter und Essensbox" width="1400" height="1050" fetchpriority="high"></div>
+ <div class="ds-bar" aria-hidden="true"><i class="F"></i><i class="S"></i><i class="N"></i></div>
+</section>
+
+<section class="ds-pain">
+ <div class="ds-in">
+  <div class="ds-kick">Kennst du das?</div>
+  <h2>Die echten Probleme stehen in keinem Kochbuch.</h2>
+  <div class="ds-cards4">
+   <article><b>01</b><h3>Keine Mikrowelle</h3><p>Im Pausenraum gibt es einen Wasserkocher. Und sonst nichts.</p></article>
+   <article><b>02</b><h3>Die Schlange davor</h3><p>Eine Mikrowelle für die ganze Schicht – und deine Pause läuft.</p></article>
+   <article><b>03</b><h3>3 Uhr nachts</h3><p>Hunger, Übelkeit, Automat. Und morgen das Gleiche.</p></article>
+   <article><b>04</b><h3>Seit wann steht das da?</h3><p>Nach drei Nächten weiß keiner mehr, ob die Box von gestern ist.</p></article>
+  </div>
+ </div>
+</section>
+
+<div id="rechner"><section class="dsr" id="rechner-tool" data-ds-rechner data-days="7">
+ <div class="dsr-in">
+  <div class="dsr-kick">Schichtplan-Rechner · kostenlos</div>
+  <h2>Dienstplan rein.<br>Essensplan raus.</h2>
+  <p class="dsr-lead">Tipp auf jeden Tag, bis deine Schicht stimmt. Sag uns, was es in deinem Pausenraum gibt – du bekommst sofort, was du wann isst und wann du kochst.</p>
+  <div class="dsr-step"><i>01</i>Deine Woche</div>
+  <div class="dsr-grid" data-grid></div>
+  <p class="dsr-hint">Tippen wechselt: Früh → Spät → Nacht → Frei</p>
+  <div class="dsr-pre">
+   <button type="button" data-preset="FFSSNNX">2-2-2 Wechsel</button>
+   <button type="button" data-preset="NNNXXXX">3 Nächte</button>
+   <button type="button" data-preset="SSSSSXX">Spätwoche</button>
+   <button type="button" data-preset="FFFFFXX">Frühwoche</button>
+  </div>
+  <div class="dsr-step"><i>02</i>Dein Pausenraum</div>
+  <div class="dsr-eq">
+   <label><input type="checkbox" data-eq="M"> Mikrowelle</label>
+   <label><input type="checkbox" data-eq="K"> Kühlschrank</label>
+   <label><input type="checkbox" data-eq="T"> Ich habe einen Thermobehälter</label>
+  </div>
+  <div class="dsr-step"><i>03</i>Dein Essensplan</div>
+  <div class="dsr-res" data-result></div>
+  <div class="dsr-cta">
+   <p><b>Alle Rezepte, Mengen und Lagerzeiten</b> zu diesem Plan stehen im E-Book – plus 6 fertige Dienstplan-Pläne, Lagerkarte und Etiketten zum Ausdrucken.</p>
+   <a href="/products/durchschicht">Zum E-Book · 19,90 €</a>
+  </div>
+  <p class="dsr-src">Grundlagen: BfR (Kühlschrank, Aufwärmen), DGE (Mahlzeiten bei Schichtarbeit), DGUV-Information 206-027. Allgemeine Alltagshilfe, keine Ernährungsberatung.</p>
+ </div>
+</section>
+</div>
+
+<section class="ds-how">
+ <div class="ds-in">
+  <div class="ds-kick">So funktioniert das Buch</div>
+  <h2>Nicht nach Zutaten sortiert.<br>Nach Schicht und Pausenraum.</h2>
+  <div class="ds-sym">
+   <div><span class="ds-ico">M</span><h3>Mikrowelle</h3><p>Abgedeckt erhitzen, umrühren, bis alles dampfend heiß ist.</p></div>
+   <div><span class="ds-ico">K</span><h3>Nur Kühlschrank</h3><p>Kalt gekocht und kalt gut. Bis zur Pause im Kühlschrank.</p></div>
+   <div><span class="ds-ico">O</span><h3>Ohne Kühlung</h3><p>Mit zwei Kühlakkus in der Tasche – oder Rezepte, die keine Kühlung brauchen.</p></div>
+   <div><span class="ds-ico">T</span><h3>Thermobehälter</h3><p>Vorwärmen, kochend einfüllen, warm essen ohne Anstehen.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="ds-chap">
+ <div class="ds-in">
+  <div class="ds-kick">Was drin ist</div>
+  <h2>7 Kapitel. Eins für jeden Moment der Schicht.</h2>
+  <div class="ds-chgrid">
+   <figure><img src="{{ 'ds-ch-V.jpg' | asset_url }}" alt="" loading="lazy"><figcaption><b>01</b> Vor der Schicht</figcaption></figure>
+   <figure><img src="{{ 'ds-ch-M.jpg' | asset_url }}" alt="" loading="lazy"><figcaption><b>02</b> Box mit Mikrowelle</figcaption></figure>
+   <figure><img src="{{ 'ds-ch-K.jpg' | asset_url }}" alt="" loading="lazy"><figcaption><b>03</b> Box ohne Mikrowelle</figcaption></figure>
+   <figure><img src="{{ 'ds-ch-T.jpg' | asset_url }}" alt="" loading="lazy"><figcaption><b>04</b> Thermobehälter</figcaption></figure>
+   <figure><img src="{{ 'ds-ch-N.jpg' | asset_url }}" alt="" loading="lazy"><figcaption><b>05</b> Nachtsnack</figcaption></figure>
+   <figure><img src="{{ 'ds-ch-A.jpg' | asset_url }}" alt="" loading="lazy"><figcaption><b>06</b> Nach der Schicht</figcaption></figure>
+   <figure><img src="{{ 'ds-ch-B.jpg' | asset_url }}" alt="" loading="lazy"><figcaption><b>07</b> Kochtag-Bausteine</figcaption></figure>
+   <figure class="ds-chcta"><a href="/products/durchschicht"><span>48 Rezepte mit Mengen, Schritten, Lagerzeit und Allergenen</span><b>Zum E-Book →</b></a></figure>
+  </div>
+ </div>
+</section>
+
+<section class="ds-plans">
+ <div class="ds-in">
+  <div class="ds-kick">6 fertige Pläne</div>
+  <h2>Du suchst deinen Dienstplan.<br>Der Rest steht schon da.</h2>
+  <div class="ds-plgrid">
+   <article class="F"><h3>Früh-Block</h3><p>3 Frühdienste · ein Kochblock am Vortag</p></article>
+   <article class="S"><h3>Spät-Block</h3><p>3 Spätdienste · nach 22 Uhr wird nicht gekocht</p></article>
+   <article class="N"><h3>Nacht-Block</h3><p>3 Nächte · Hauptmahlzeit vor der Schicht</p></article>
+   <article class="W"><h3>Wechsel 2-2-3</h3><p>Die Truhe füllt sich früh und leert sich nachts</p></article>
+   <article class="N"><h3>Erste Nacht & Umschalttag</h3><p>Die Tage, an denen der Rhythmus kippt</p></article>
+   <article class="X"><h3>Kochtag 90 Minuten</h3><p>Ein Block, minutengenau, für die ganze Woche</p></article>
+  </div>
+  <div class="ds-pages">
+   <img src="{{ 'ds-page-plan.jpg' | asset_url }}" alt="Buchseite: Nacht-Block" loading="lazy">
+   <img src="{{ 'ds-page-rezept.jpg' | asset_url }}" alt="Buchseite: Rezept Gemüse-Curry" loading="lazy">
+   <img src="{{ 'ds-page-lager.jpg' | asset_url }}" alt="Buchseite: Lagerkarte" loading="lazy">
+   <img src="{{ 'ds-page-etiketten.jpg' | asset_url }}" alt="Buchseite: Etiketten" loading="lazy">
+  </div>
+ </div>
+</section>
+
+<section class="ds-extra">
+ <div class="ds-in ds-two">
+  <div>
+   <img src="{{ 'ds-mood-dawn.jpg' | asset_url }}" alt="Küche am frühen Morgen" loading="lazy">
+   <div class="ds-kick">Für zu Hause</div>
+   <h3>Die Übergabe</h3>
+   <p>Ein Blatt für den Kühlschrank: wann wer schläft, was in der Truhe ist, wann gemeinsam gegessen wird. Für alle, die mit Schichtarbeitenden leben – und ein Geschenk, das wirklich benutzt wird.</p>
+  </div>
+  <div>
+   <img src="{{ 'ds-mood-boxes.jpg' | asset_url }}" alt="Vier Essensboxen von oben" loading="lazy">
+   <div class="ds-kick">Für deine Schicht</div>
+   <h3>Die Kollegen-Kochkette</h3>
+   <p>Vier Leute, jede:r kocht einmal vier Boxen, alle essen vier verschiedene Gerichte. Regeln zu Kühlung, Etiketten und Allergenen auf einer Seite.</p>
+  </div>
+ </div>
+</section>
+
+<section class="ds-faq">
+ <div class="ds-in">
+  <div class="ds-kick">Fragen</div>
+  <h2>Kurz geklärt.</h2>
+  <details><summary>Was bekomme ich genau?</summary><p>Ein PDF mit 75 Seiten: 48 Rezepte mit Foto, 6 Dienstplan-Pläne, Lagerkarte, Koffein-Übersicht, „Die Übergabe“, Kollegen-Kochkette und Etiketten zum Ausdrucken. Der Download-Link kommt direkt nach dem Kauf per Mail.</p></details>
+  <details><summary>Ist das ein Diätbuch?</summary><p>Nein. Für Schichtarbeitende gelten dieselben Empfehlungen wie für alle anderen – nur die Verteilung über den Tag ist anders (DGE). Das Buch sortiert Essen nach deiner Schicht, nicht nach Kalorien.</p></details>
+  <details><summary>Bei uns gibt es keine Mikrowelle. Bringt mir das was?</summary><p>Genau dafür ist es gemacht. Jedes Rezept hat Symbole für Mikrowelle, Kühlschrank, ohne Kühlung und Thermobehälter. Ein eigenes Kapitel ist nur für Boxen ohne Mikrowelle.</p></details>
+  <details><summary>Woher kommen die Lagerzeiten?</summary><p>Aus öffentlichen Stellen wie BfR, BZfE, DGE und EFSA. Die Quellen stehen hinten im Buch. Im Zweifel gilt die kürzere Zeit.</p></details>
+  <details><summary>Gibt es das gedruckt?</summary><p>Nein, es ist ein PDF. Es läuft auf Handy, Tablet und PC, und du kannst Pläne und Etiketten selbst ausdrucken.</p></details>
+  <details><summary>Ist das ein Abo?</summary><p>Nein. Du zahlst einmal 19,90 € und behältst das PDF.</p></details>
+  <details><summary>Allergien, Schwangerschaft, Erkrankungen?</summary><p>Die 14 Hauptallergene stehen bei jedem Rezept. Das Buch ist eine Alltagshilfe und ersetzt keine ärztliche oder Ernährungsberatung.</p></details>
+ </div>
+</section>
+
+<section class="ds-final">
+ <div class="ds-in">
+  <img src="{{ 'ds-cover.jpg' | asset_url }}" alt="E-Book-Cover DURCHSCHICHT" loading="lazy" width="900" height="1200">
+  <div>
+   <h2>Früh. Spät. Nacht.<br><span>Du isst trotzdem.</span></h2>
+   <p>48 Rezepte · 6 Pläne · Lagerkarte · Etiketten. Als PDF, sofort per Mail.</p>
+   <a class="ds-btn" href="/products/durchschicht">E-Book holen · 19,90 €</a>
+  </div>
+ </div>
+</section>
+</div>
+
+<script src="{{ 'ds-rechner.js' | asset_url }}" defer></script>
+{% schema %}
+{
+ "name": "DS Startseite",
+ "tag": "section",
+ "class": "ds-section",
+ "settings": [],
+ "presets": [
+  {
+   "name": "DS Startseite"
+  }
+ ]
+}
+{% endschema %}

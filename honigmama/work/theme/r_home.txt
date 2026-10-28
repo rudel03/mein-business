@@ -1,0 +1,330 @@
+{%- liquid
+  assign b1 = all_products['honigmama-band-1']
+  assign b2 = all_products['honigmama-band-2']
+  assign b3 = all_products['honigmama-band-3']
+  assign pp = all_products['honigmama-paket-band-1-2']
+  assign pk = all_products['honigmama-komplett']
+  assign vk = pk.selected_or_first_available_variant
+  assign vp = pp.selected_or_first_available_variant
+  assign v1 = b1.selected_or_first_available_variant
+  assign v2 = b2.selected_or_first_available_variant
+  assign v3 = b3.selected_or_first_available_variant
+  assign sum3 = v1.price | plus: v2.price | plus: v3.price
+  assign sum2 = v1.price | plus: v2.price
+  assign c1 = images['bq-cover-honigmama.jpg']
+  assign c2 = images['hm-cover-b2.jpg']
+  assign c3 = images['hm-cover-b3.jpg']
+-%}
+<style>
+.hm{--ink:#2f2118;--honey:#e9a53b;--honeyd:#a97016;--terra:#b4532f;--cream:#fbf5ea;--paper:#fffdf8;--line:#ead8b4;--sage:#e6ebdd;color:var(--ink)}
+.hm *{box-sizing:border-box}
+.hm .w{max-width:1180px;margin:0 auto;padding:0 20px}
+.hm h1,.hm h2,.hm h3{font-family:var(--font-heading--family,Georgia,serif);color:var(--ink);letter-spacing:-.01em}
+.hm .eb{font:700 12px/1 var(--font-body--family,Arial,sans-serif);letter-spacing:.16em;text-transform:uppercase;color:var(--honeyd);margin:0 0 12px}
+.hm .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:999px;font:600 16px/1 var(--font-body--family,Arial,sans-serif);text-decoration:none;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.hm .btn--dark{background:var(--ink);color:#fff;box-shadow:0 10px 24px #2f211833}.hm .btn--dark:hover{transform:translateY(-2px);box-shadow:0 14px 30px #2f211844}
+.hm .btn--light{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}.hm .btn--light:hover{background:var(--ink);color:#fff}
+.hm section{padding:64px 0}
+.hm-sec-head{text-align:center;max-width:720px;margin:0 auto 34px}.hm-sec-head h2{font-size:clamp(28px,3.6vw,42px);line-height:1.1;margin:0 0 10px}.hm-sec-head p{margin:0;opacity:.8;font-size:17px}
+/* Reveal */
+.hm [data-rv]{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.hm [data-rv].in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.hm [data-rv]{opacity:1;transform:none;transition:none}.hm-books img,.hm-marquee__track{animation:none!important}}
+/* HERO */
+.hm-hero{position:relative;overflow:hidden;text-align:center;padding:56px 0 30px!important;background:radial-gradient(1200px 520px at 50% 105%,#f6d7a0 0,#fbf1df 45%,var(--cream) 70%)}
+.hm-hero h1{font-size:clamp(36px,5.4vw,68px);line-height:1.02;margin:0 auto 18px;max-width:15ch}
+.hm-hero h1 em{font-style:italic;color:var(--terra)}
+.hm-hero__lead{font-size:clamp(17px,1.6vw,20px);line-height:1.5;max-width:620px;margin:0 auto 26px;opacity:.85}
+.hm-hero__cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+.hm-hero__cta form{margin:0}
+.hm-hero__trust{display:flex;gap:6px 18px;justify-content:center;flex-wrap:wrap;font:500 14px/1.4 var(--font-body--family,Arial,sans-serif);opacity:.8;margin:0}
+.hm-hero__trust span:before{content:"✓ ";color:var(--honeyd);font-weight:700}
+.hm-books{position:relative;height:clamp(250px,32vw,420px);max-width:760px;margin:30px auto 0}
+.hm-books a{position:absolute;bottom:0;left:50%;width:clamp(150px,20vw,250px);border-radius:6px 12px 12px 6px;overflow:hidden;box-shadow:0 26px 50px #49301a40;transition:transform .35s ease}
+.hm-books img{display:block;width:100%;height:auto;animation:hmfloat 6s ease-in-out infinite}
+.hm-books a:nth-child(1){transform:translateX(-150%) rotate(-9deg) scale(.9)}.hm-books a:nth-child(1) img{animation-delay:-2s}
+.hm-books a:nth-child(2){transform:translateX(-50%);z-index:2}
+.hm-books a:nth-child(3){transform:translateX(50%) rotate(9deg) scale(.9)}.hm-books a:nth-child(3) img{animation-delay:-4s}
+.hm-books a:nth-child(1):hover{transform:translateX(-150%) rotate(-6deg) scale(.95) translateY(-10px)}
+.hm-books a:nth-child(2):hover{transform:translateX(-50%) translateY(-12px)}
+.hm-books a:nth-child(3):hover{transform:translateX(50%) rotate(6deg) scale(.95) translateY(-10px)}
+@keyframes hmfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hm-stats{display:flex;justify-content:center;gap:clamp(18px,5vw,64px);margin:28px auto 0;flex-wrap:wrap}
+.hm-stats div{text-align:center}.hm-stats b{display:block;font:700 clamp(26px,3vw,36px)/1 var(--font-heading--family,Georgia,serif);color:var(--terra)}.hm-stats span{font-size:13px;opacity:.75}
+/* PHASEN */
+.hm-phases{background:var(--paper)}
+.hm-tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:0 auto 26px}
+.hm-tabs button{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:12px 20px;font:600 15px/1 var(--font-body--family,Arial,sans-serif);color:var(--ink);cursor:pointer;transition:all .2s}
+.hm-tabs button[aria-selected=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.hm-tabs small{display:block;font-weight:500;font-size:11px;opacity:.7;margin-top:3px}
+.hm-panel{display:none;grid-template-columns:260px 1fr;gap:40px;align-items:center;max-width:920px;margin:0 auto;background:var(--cream);border:1px solid var(--line);border-radius:24px;padding:28px}
+.hm-panel.on{display:grid;animation:hmfade .45s ease}
+@keyframes hmfade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.hm-panel img{width:100%;height:auto;border-radius:6px 12px 12px 6px;box-shadow:0 18px 36px #49301a33;display:block}
+.hm-panel h3{font-size:clamp(24px,2.6vw,32px);margin:0 0 6px}.hm-panel__sub{margin:0 0 14px;opacity:.8}
+.hm-panel ul{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:8px}.hm-panel li{padding-left:28px;position:relative;line-height:1.4}
+.hm-panel li:before{content:"";position:absolute;left:0;top:2px;width:18px;height:18px;border-radius:50%;background:var(--honey) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232f2118' stroke-width='3'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
+.hm-panel__buy{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.hm-panel__buy form{margin:0}
+.hm-price{font:700 26px/1 var(--font-heading--family,Georgia,serif)}.hm-price small{display:block;font:500 13px/1.4 var(--font-body--family,Arial,sans-serif);opacity:.7;margin-top:4px}
+.hm-panel__more{font-weight:600;color:var(--honeyd);text-decoration:underline;text-underline-offset:3px}
+/* MARQUEE */
+.hm-dishes{background:var(--cream);overflow:hidden}
+.hm-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.hm-marquee__track{display:flex;gap:16px;width:max-content;animation:hmscroll 70s linear infinite}
+.hm-marquee:hover .hm-marquee__track{animation-play-state:paused}
+@keyframes hmscroll{to{transform:translateX(-50%)}}
+.hm-dish{width:260px;flex:none;margin:0;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.hm-dish img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.hm-dish figcaption{padding:10px 12px 12px;font:600 15px/1.3 var(--font-heading--family,Georgia,serif)}
+.hm-dish figcaption span{display:block;font:600 11px/1 var(--font-body--family,Arial,sans-serif);letter-spacing:.1em;text-transform:uppercase;color:var(--honeyd);margin-bottom:6px}
+.hm-note{text-align:center;font-size:12.5px;opacity:.65;margin:16px 0 0}
+/* PAKETE */
+.hm-packs__grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:960px;margin:0 auto}
+.hm-pack{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:22px;padding:24px;display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:center;transition:transform .25s,box-shadow .25s}
+.hm-pack:hover{transform:translateY(-4px);box-shadow:0 18px 36px #49301a1f}
+.hm-pack--best{border:2px solid var(--terra);background:#fff7ef}
+.hm-pack__tag{position:absolute;top:-13px;left:22px;background:var(--terra);color:#fff;font:700 12px/1 var(--font-body--family,Arial,sans-serif);padding:7px 12px;border-radius:999px}
+.hm-pack img{width:100%;height:auto;border-radius:12px;display:block}
+.hm-pack h3{margin:0 0 6px;font-size:22px}.hm-pack p{margin:0 0 10px;font-size:14.5px;opacity:.85}
+.hm-pack__price{font:700 24px/1 var(--font-heading--family,Georgia,serif);margin-bottom:12px}.hm-pack__price s{font-size:16px;opacity:.5;font-weight:500;margin-left:8px}.hm-pack__price em{display:block;font:600 13px/1.3 var(--font-body--family,Arial,sans-serif);color:#2f6b3a;font-style:normal;margin-top:6px}
+.hm-pack form{margin:0}.hm-pack .btn{width:100%}
+/* STEPS */
+.hm-steps{background:var(--ink);color:#fff}.hm-steps h2,.hm-steps h3{color:#fff}.hm-steps .eb{color:var(--honey)}
+.hm-steps__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:960px;margin:0 auto;counter-reset:s}
+.hm-step{background:#3b2c21;border-radius:20px;padding:24px;counter-increment:s}
+.hm-step:before{content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--honey);color:var(--ink);font:700 18px/1 var(--font-heading--family,Georgia,serif);margin-bottom:14px}
+.hm-step h3{margin:0 0 6px;font-size:20px}.hm-step p{margin:0;opacity:.8;font-size:15px;line-height:1.5}
+/* TRUST + FAQ */
+.hm-trust__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1080px;margin:0 auto 40px}
+.hm-trust__item{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px}.hm-trust__item b{display:block;margin-bottom:6px;font-size:16px}.hm-trust__item span{font-size:14px;opacity:.8;line-height:1.5}
+.hm-faq{max-width:760px;margin:0 auto}
+.hm-faq details{border-bottom:1px solid var(--line);padding:16px 4px}.hm-faq summary{cursor:pointer;font:600 17px/1.4 var(--font-heading--family,Georgia,serif);list-style:none;display:flex;justify-content:space-between;gap:12px}
+.hm-faq summary:after{content:"+";font-size:22px;color:var(--honeyd);transition:transform .2s}.hm-faq details[open] summary:after{transform:rotate(45deg)}
+.hm-faq p{margin:10px 0 0;opacity:.85;line-height:1.6}
+/* END */
+.hm-end{text-align:center;background:radial-gradient(900px 400px at 50% 0,#f6d7a0 0,var(--cream) 70%)}
+.hm-end h2{font-size:clamp(28px,3.6vw,44px);margin:0 auto 12px;max-width:18ch;line-height:1.1}
+.hm-end p{max-width:560px;margin:0 auto 22px;opacity:.85}
+.hm-end .hm-hero__cta{margin-bottom:28px}
+.hm-probe{max-width:560px;margin:10px auto 0;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;text-align:left}
+.hm-probe h3{margin:0 0 4px;font-size:20px}.hm-probe p{margin:0 0 12px;font-size:14.5px;text-align:left}
+.hm-probe input[type=email]{width:100%;min-height:48px;border:1.5px solid var(--line);border-radius:12px;padding:0 14px;font-size:16px;margin:6px 0 10px}
+.hm-probe label{font-size:13px}.hm-probe .bq-consent{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;opacity:.85;margin-bottom:12px}
+/* STICKY */
+.hm-sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;background:var(--ink);color:#fff;border-radius:18px;padding:10px 10px 10px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 14px 34px #0005;transform:translateY(140%);transition:transform .35s ease}
+.hm-sticky.on{transform:none}.hm-sticky b{display:block;font-size:14px}.hm-sticky span{font-size:12px;opacity:.75}.hm-sticky form{margin:0}
+.hm-sticky .btn{min-height:44px;padding:0 18px;background:var(--honey);color:var(--ink);font-size:15px}
+@media(min-width:900px){.hm-sticky{left:50%;right:auto;width:560px;transform:translate(-50%,140%)}.hm-sticky.on{transform:translate(-50%,0)}}
+/* MOBILE */
+@media(max-width:799px){
+ .hm section{padding:46px 0}
+ .hm-panel{grid-template-columns:1fr;gap:18px;padding:20px;text-align:left}.hm-panel img{max-width:180px;margin:0 auto}
+ .hm-packs__grid{grid-template-columns:1fr}.hm-pack{grid-template-columns:100px 1fr;padding:18px;gap:14px}
+ .hm-steps__grid{grid-template-columns:1fr}.hm-trust__grid{grid-template-columns:1fr 1fr}
+ .hm-tabs button{padding:10px 14px;font-size:14px}
+ .hm-books a:nth-child(1){transform:translateX(-128%) rotate(-9deg) scale(.86)}.hm-books a:nth-child(3){transform:translateX(28%) rotate(9deg) scale(.86)}
+ .hm-dish{width:210px}
+}
+
+@media(min-width:800px){
+.hm-hero{padding:40px 0 26px!important}
+.hm-hero h1{font-size:clamp(40px,4.4vw,60px);max-width:21ch;margin-bottom:14px}
+.hm-hero__lead{margin-bottom:20px}
+.hm-hero__cta{margin-bottom:12px}
+.hm-books{height:clamp(240px,24vw,310px);margin-top:14px}
+.hm-books a{width:clamp(150px,16vw,220px)}
+.hm-stats{margin-top:18px}
+}
+.hm [id]{scroll-margin-top:90px}
+@media(max-width:799px){
+.hm-hero{padding-top:36px!important}
+.hm-books{height:205px;margin-top:22px}
+.hm-books a{width:132px}
+.hm-books a:nth-child(1){transform:translateX(-140%) rotate(-8deg) scale(.88)}
+.hm-books a:nth-child(3){transform:translateX(40%) rotate(8deg) scale(.88)}
+}
+@media(min-width:800px){.hm-panel{grid-template-columns:210px 1fr;gap:34px;padding:24px 30px}}
+@media(max-width:799px){
+.hm-panel.on{grid-template-columns:92px 1fr;gap:14px;align-items:start;padding:16px}
+.hm-panel img{max-width:92px;margin:0}
+.hm-panel h3{font-size:21px}
+.hm-panel__sub{font-size:14px;margin-bottom:10px}
+.hm-panel ul{font-size:14px;gap:6px;margin-bottom:14px}
+.hm-panel li{padding-left:24px}.hm-panel li:before{width:16px;height:16px}
+}
+</style>
+
+<div class="hm">
+{%- comment -%} ===== HERO ===== {%- endcomment -%}
+<section class="hm-hero">
+  <div class="w">
+    <p class="eb" data-rv>Die Honigmama-Kochbuchreihe</p>
+    <h1 data-rv>Gut essen – von der Schwangerschaft <em>bis ins erste Jahr.</em></h1>
+    <p class="hm-hero__lead" data-rv>Drei Kochbücher mit fertigen Plänen und Einkaufslisten. Für jede Phase genau das Essen, das gerade passt – ohne Googeln, ohne Grübeln.</p>
+    <div class="hm-hero__cta" data-rv>
+      {%- if pk.available -%}
+      <form method="post" action="/cart/add"><input type="hidden" name="id" value="{{ vk.id }}"><input type="hidden" name="return_to" value="/checkout"><button class="btn btn--dark" type="submit">Komplette Reihe · {{ vk.price | money }}</button></form>
+      {%- endif -%}
+      <a class="btn btn--light" href="#hm-phasen">Meine Phase finden</a>
+    </div>
+    <p class="hm-hero__trust" data-rv><span>Sofort als PDF</span><span>Kein Abo</span><span>Sicherer Checkout</span><span>Ideal als Geschenk</span></p>
+    <div class="hm-books" data-rv>
+      <a href="{{ b1.url }}" aria-label="{{ b1.title }}">{% if c1 %}{{ c1 | image_url: width: 600 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '300,450,600', sizes: '250px', alt: 'Cover Band 1: Was darf ich essen?' }}{% endif %}</a>
+      <a href="{{ b2.url }}" aria-label="{{ b2.title }}">{% if c2 %}{{ c2 | image_url: width: 600 | image_tag: loading: 'eager', widths: '300,450,600', sizes: '250px', alt: 'Cover Band 2: Vorkochen fürs Wochenbett' }}{% endif %}</a>
+      <a href="{{ b3.url }}" aria-label="{{ b3.title }}">{% if c3 %}{{ c3 | image_url: width: 600 | image_tag: loading: 'eager', widths: '300,450,600', sizes: '250px', alt: 'Cover Band 3: Kraft-Küche fürs erste Jahr' }}{% endif %}</a>
+    </div>
+    <div class="hm-stats" data-rv>
+      <div><b data-count="190">190</b><span>Rezepte</span></div>
+      <div><b data-count="13">13</b><span>fertige Pläne</span></div>
+      <div><b data-count="3">3</b><span>Lebensphasen</span></div>
+    </div>
+  </div>
+</section>
+
+{%- comment -%} ===== PHASEN ===== {%- endcomment -%}
+<section class="hm-phases" id="hm-phasen">
+  <div class="w">
+    <div class="hm-sec-head" data-rv><p class="eb">Welche Phase ist gerade deine?</p><h2>Ein Band für jede Phase.</h2><p>Tippe deine Phase an – du siehst sofort, was drinsteckt.</p></div>
+    <div class="hm-tabs" role="tablist" data-rv>
+      <button role="tab" aria-selected="true" data-tab="1">Schwanger<small>Band 1</small></button>
+      <button role="tab" aria-selected="false" data-tab="2">Wochenbett<small>Band 2</small></button>
+      <button role="tab" aria-selected="false" data-tab="3">Erstes Jahr<small>Band 3</small></button>
+    </div>
+    {%- capture d1 -%}70 Rezepte für jede Lage – auch für Tage, an denen dir übel ist|3 Wochenpläne mit fertigen Einkaufslisten|Lebensmittel-Hinweise zum Nachschlagen statt Googeln|Hinweise zur sicheren Zubereitung bei jedem Rezept{%- endcapture -%}
+    {%- capture d2 -%}Über 160 warme Portionen aus 55 Rezepten zum Einfrieren|2 Kochtage mit Minuten-Ablauf und Einkaufsliste|6-Wochen-Plan für die Zeit nach der Geburt|Etiketten und „Wer bringt was?“-Liste für Helfer{%- endcapture -%}
+    {%- capture d3 -%}65 schnelle Rezepte in 5–25 Minuten, viele mit einer Hand|Ein Essen für alle – mit Hinweis fürs Baby ab Beikoststart|4 Wochenpläne mit Einkaufslisten|Snack-Ideen gegen Heißhunger beim Stillen{%- endcapture -%}
+    {%- for i in (1..3) -%}
+      {%- case i -%}
+        {%- when 1 -%}{%- assign p = b1 -%}{%- assign v = v1 -%}{%- assign img = c1 -%}{%- assign bul = d1 -%}{%- assign n = 70 -%}{%- assign t = 'Was darf ich essen?' -%}{%- assign s = 'Das Kochbuch für deine Schwangerschaft' -%}
+        {%- when 2 -%}{%- assign p = b2 -%}{%- assign v = v2 -%}{%- assign img = c2 -%}{%- assign bul = d2 -%}{%- assign n = 55 -%}{%- assign t = 'Vorkochen fürs Wochenbett' -%}{%- assign s = 'Zwei Kochtage – sechs Wochen versorgt' -%}
+        {%- when 3 -%}{%- assign p = b3 -%}{%- assign v = v3 -%}{%- assign img = c3 -%}{%- assign bul = d3 -%}{%- assign n = 65 -%}{%- assign t = 'Kraft-Küche fürs erste Jahr' -%}{%- assign s = 'Wieder richtig essen – mit Baby im Arm' -%}
+      {%- endcase -%}
+      <div class="hm-panel{% if i == 1 %} on{% endif %}" role="tabpanel" data-panel="{{ i }}">
+        <a href="{{ p.url }}">{% if img %}{{ img | image_url: width: 520 | image_tag: loading: 'lazy', widths: '260,520', sizes: '260px', alt: t }}{% endif %}</a>
+        <div>
+          <p class="eb">Band {{ i }}</p><h3>{{ t }}</h3><p class="hm-panel__sub">{{ s }}</p>
+          <ul>{% assign bl = bul | split: '|' %}{% for b in bl %}<li>{{ b }}</li>{% endfor %}</ul>
+          <div class="hm-panel__buy">
+            <div class="hm-price">{{ v.price | money }}<small>= {{ v.price | divided_by: n | money }} pro Rezept · einmalig</small></div>
+            {%- if p.available -%}<form method="post" action="/cart/add"><input type="hidden" name="id" value="{{ v.id }}"><input type="hidden" name="return_to" value="/checkout"><button class="btn btn--dark" type="submit">Jetzt kaufen</button></form>{%- endif -%}
+            <a class="hm-panel__more" href="{{ p.url }}">Blick ins Buch</a>
+          </div>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</section>
+
+{%- comment -%} ===== GERICHTE ===== {%- endcomment -%}
+<section class="hm-dishes">
+  <div class="w"><div class="hm-sec-head" data-rv><p class="eb">Aus allen drei Bänden</p><h2>Darauf darfst du dich freuen.</h2><p>Hausmannskost, schnelle Teller und Gerichte zum Vorkochen – mit Zutaten aus jedem Supermarkt.</p></div></div>
+  {%- capture dl -%}bq-gericht-01-pancakes.png|Band 1|Hafer-Bananen-Pancakes;hm-dish-b2_S01.jpg|Band 2|Süßkartoffel-Erdnuss-Suppe;hm-dish-b3_F01.jpg|Band 3|Frühstücks-Wrap mit Rührei;bq-gericht-02-honighaehnchen.png|Band 1|Zitronen-Honig-Hähnchen;hm-dish-b2_C02.jpg|Band 2|Rinder-Ragù zum Einfrieren;hm-dish-b3_A01.jpg|Band 3|Lachs vom Blech;bq-gericht-05-lachspasta.png|Band 1|Lachs-Spinat-Pasta;hm-dish-b2_A01.jpg|Band 2|Shepherd's Pie;hm-dish-b3_M09.jpg|Band 3|Ofen-Feta-Pasta;bq-gericht-10-shakshuka.png|Band 1|Shakshuka mit Spinat;hm-dish-b2_E04.jpg|Band 2|Spinat-Feta-Taschen;hm-dish-b3_V01.jpg|Band 3|Quinoa-Bowls zum Mitnehmen;bq-gericht-03-lasagne.png|Band 1|Spinat-Ricotta-Lasagne;hm-dish-b2_F01.jpg|Band 2|Blaubeer-Quark-Muffins;hm-dish-b3_Z01.jpg|Band 3|Schoko-Avocado-Mousse{%- endcapture -%}
+  {%- assign dishes = dl | split: ';' -%}
+  <div class="hm-marquee" data-rv><div class="hm-marquee__track">
+    {%- for round in (1..2) -%}{%- for d in dishes -%}{%- assign x = d | split: '|' -%}{%- assign pic = images[x[0]] -%}
+      <figure class="hm-dish"{% if round == 2 %} aria-hidden="true"{% endif %}>{% if pic %}{{ pic | image_url: width: 520 | image_tag: loading: 'lazy', widths: '260,520', sizes: '260px', alt: x[2] }}{% endif %}<figcaption><span>{{ x[1] }}</span>{{ x[2] }}</figcaption></figure>
+    {%- endfor -%}{%- endfor -%}
+  </div></div>
+  <p class="hm-note">Fotos: KI-generierte Darstellungen der Gerichte aus den Büchern.</p>
+</section>
+
+{%- comment -%} ===== PAKETE ===== {%- endcomment -%}
+<section class="hm-packs" id="hm-reihe">
+  <div class="w">
+    <div class="hm-sec-head" data-rv><p class="eb">Im Paket günstiger</p><h2>Gleich mitplanen – und sparen.</h2><p>Die meisten Phasen kommen schneller, als man denkt. Im Paket bekommst du mehrere Bände zum festen Paketpreis.</p></div>
+    <div class="hm-packs__grid">
+      {%- for k in (1..2) -%}
+        {%- if k == 1 -%}{%- assign P = pp -%}{%- assign V = vp -%}{%- assign S = sum2 -%}{%- assign T = 'Schwangerschaft + Wochenbett' -%}{%- assign D = 'Band 1 + 2 · 125 Rezepte · vor und nach der Geburt' -%}{%- else -%}{%- assign P = pk -%}{%- assign V = vk -%}{%- assign S = sum3 -%}{%- assign T = 'Die komplette Reihe' -%}{%- assign D = 'Band 1 + 2 + 3 · 190 Rezepte · 13 Pläne' -%}{%- endif -%}
+        <article class="hm-pack{% if k == 2 %} hm-pack--best{% endif %}" data-rv>
+          {%- if k == 2 -%}<span class="hm-pack__tag">Bestes Angebot</span>{%- endif -%}
+          <a href="{{ P.url }}">{% if P.featured_image %}{{ P.featured_image | image_url: width: 400 | image_tag: loading: 'lazy', alt: T }}{% endif %}</a>
+          <div>
+            <h3>{{ T }}</h3><p>{{ D }}</p>
+            <div class="hm-pack__price">{{ V.price | money }}<s>{{ S | money }}</s><em>Du sparst {{ S | minus: V.price | money }} gegenüber einzeln</em></div>
+            {%- if P.available -%}<form method="post" action="/cart/add"><input type="hidden" name="id" value="{{ V.id }}"><input type="hidden" name="return_to" value="/checkout"><button class="btn {% if k == 2 %}btn--dark{% else %}btn--light{% endif %}" type="submit">Paket kaufen</button></form>{%- endif -%}
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{%- comment -%} ===== SO GEHT'S ===== {%- endcomment -%}
+<section class="hm-steps">
+  <div class="w">
+    <div class="hm-sec-head" data-rv><p class="eb">So einfach geht's</p><h2>In zwei Minuten startklar.</h2></div>
+    <div class="hm-steps__grid">
+      <div class="hm-step" data-rv><h3>Band oder Paket wählen</h3><p>Für deine Phase – oder gleich die ganze Reihe zum Paketpreis.</p></div>
+      <div class="hm-step" data-rv><h3>PDF sofort erhalten</h3><p>Direkt nach dem Kauf per E-Mail und als Download. Kein Abo, kein Versand.</p></div>
+      <div class="hm-step" data-rv><h3>Plan aufschlagen, kochen</h3><p>Wochenplan wählen, Einkaufsliste mitnehmen, loslegen. Auf Handy, Tablet oder ausgedruckt.</p></div>
+    </div>
+  </div>
+</section>
+
+{%- comment -%} ===== VERTRAUEN + FAQ ===== {%- endcomment -%}
+<section class="hm-trust">
+  <div class="w">
+    <div class="hm-trust__grid">
+      <div class="hm-trust__item" data-rv><b>Mit Quellen</b><span>Hinweise auf Basis von Netzwerk Gesund ins Leben, DGE und BfR.</span></div>
+      <div class="hm-trust__item" data-rv><b>Ehrlich gemacht</b><span>Fotos der Gerichte sind KI-Darstellungen – das sagen wir offen.</span></div>
+      <div class="hm-trust__item" data-rv><b>Einmal zahlen</b><span>Fester Preis, kein Abo, keine versteckten Kosten.</span></div>
+      <div class="hm-trust__item" data-rv><b>Sofort da</b><span>PDF direkt nach dem Kauf – auch als Geschenk weiterleitbar.</span></div>
+    </div>
+    <div class="hm-sec-head" id="hm-fragen" data-rv><p class="eb">Häufige Fragen</p><h2>Gut zu wissen.</h2></div>
+    <div class="hm-faq" data-rv>
+      <details><summary>Welcher Band passt zu mir?</summary><p>Band 1 für die Schwangerschaft, Band 2 zum Vorkochen in den letzten Wochen vor der Geburt, Band 3 für die Zeit mit Baby. Wer früh plant, nimmt das Paket – das ist günstiger als einzeln.</p></details>
+      <details><summary>Wie bekomme ich die Bücher?</summary><p>Als PDF direkt nach dem Kauf – per E-Mail und als Download-Link. Bei Paketen sind alle Bände in einer Datei mit anklickbarem Inhaltsverzeichnis.</p></details>
+      <details><summary>Kann ich die Bücher verschenken?</summary><p>Ja. Leite die PDF einfach weiter oder drucke sie aus. Schön als Geschenk zur Babyparty: Band 2 oder die komplette Reihe.</p></details>
+      <details><summary>Ersetzen die Bücher eine Beratung?</summary><p>Nein. Sie geben allgemeine Orientierung. Bei Fragen zu Ernährung, Allergien oder Stillen gelten die Empfehlungen deiner Hebamme oder Ärztin. <a href="/pages/ernaehrung-schwangerschaft-quellen">Alle Quellen ansehen</a></p></details>
+    </div>
+  </div>
+</section>
+
+{%- comment -%} ===== ABSCHLUSS ===== {%- endcomment -%}
+<section class="hm-end">
+  <div class="w">
+    <h2 data-rv>Weniger Essensstress. Mehr Kopf frei.</h2>
+    <p data-rv>Hol dir den Band für deine Phase – oder gleich die ganze Reihe zum Paketpreis.</p>
+    <div class="hm-hero__cta" data-rv>
+      {%- if pk.available -%}<form method="post" action="/cart/add"><input type="hidden" name="id" value="{{ vk.id }}"><input type="hidden" name="return_to" value="/checkout"><button class="btn btn--dark" type="submit">Komplette Reihe · {{ vk.price | money }}</button></form>{%- endif -%}
+      <a class="btn btn--light" href="#hm-phasen">Einzelnen Band wählen</a>
+    </div>
+    <div class="hm-probe" id="bq-probieren" data-rv>
+      <h3>Erst mal reinschnuppern?</h3><p>Hol dir das kostenlose Probierheft mit Rezepten per E-Mail.</p>
+      {%- form 'customer', id: 'hm-probe-form' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter, probierheft">
+        {%- if form.posted_successfully? -%}<p role="status">Danke! Schau gleich in dein Postfach.</p>{%- else -%}
+        {%- if form.errors -%}<div role="alert">{{ form.errors | default_errors }}</div>{%- endif -%}
+        <label for="hm-probe-email">Deine E-Mail-Adresse</label>
+        <input id="hm-probe-email" type="email" name="contact[email]" autocomplete="email" required placeholder="name@beispiel.de">
+        <label class="bq-consent"><input type="checkbox" name="contact[accepts_marketing]" value="true" required><span>Ja, ich möchte das Probierheft und den Honigmama-Newsletter per E-Mail erhalten. Abmelden ist jederzeit möglich.{% if shop.privacy_policy.body != blank %} <a href="{{ shop.privacy_policy.url }}">Datenschutz</a>{% endif %}</span></label>
+        <button class="btn btn--light" type="submit" style="width:100%">Probierheft anfordern</button>
+        {%- endif -%}
+      {%- endform -%}
+    </div>
+  </div>
+</section>
+
+{%- if pk.available -%}
+<div class="hm-sticky" data-hm-sticky aria-hidden="true">
+  <div><b>Die komplette Honigmama-Reihe</b><span>3 Bände · 190 Rezepte · {{ vk.price | money }}</span></div>
+  <form method="post" action="/cart/add"><input type="hidden" name="id" value="{{ vk.id }}"><input type="hidden" name="return_to" value="/checkout"><button class="btn" type="submit" tabindex="-1">Kaufen</button></form>
+</div>
+{%- endif -%}
+</div>
+
+<script>
+(function(){
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12}):null;
+  document.querySelectorAll('.hm [data-rv]').forEach(function(el,i){el.style.transitionDelay=(i%4)*70+'ms';io?io.observe(el):el.classList.add('in')});
+  document.querySelectorAll('.hm-tabs button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.hm-tabs button').forEach(function(x){x.setAttribute('aria-selected',x===b)});
+    document.querySelectorAll('.hm-panel').forEach(function(p){p.classList.toggle('on',p.dataset.panel===b.dataset.tab)});
+  })});
+  var st=document.querySelector('[data-hm-sticky]'),hero=document.querySelector('.hm-hero'),end=document.querySelector('.hm-end');
+  if(st&&hero){var on=function(){var r=hero.getBoundingClientRect(),e=end?end.getBoundingClientRect():null;var show=(0>r.bottom)&&!(e&&window.innerHeight>e.top);st.classList.toggle('on',show);st.setAttribute('aria-hidden',!show);var bt=st.querySelector('button');if(bt)bt.tabIndex=show?0:-1};document.addEventListener('scroll',on,{passive:true,capture:true});addEventListener('resize',on);on()}
+  document.querySelectorAll('.hm-stats b[data-count]').forEach(function(el){var n=+el.dataset.count,done=false;var run=function(){if(done)return;done=true;var t0=null;var step=function(t){t0=t0||t;var p=Math.min((t-t0)/1200,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)};if(io){var o=new IntersectionObserver(function(es){if(es[0].isIntersecting){run();o.disconnect()}});o.observe(el)}});
+})();
+</script>
+{% schema %}
+{"name":"Honigmama Startseite","settings":[],"presets":[{"name":"Honigmama Startseite"}]}
+{% endschema %}

@@ -1,0 +1,128 @@
+{% liquid
+  assign has_digital = false
+  assign book = settings.bq_proof_product
+  assign book_url = book.url | default: routes.root_url
+  assign cart_form_url = routes.cart_url
+  for line in cart.items
+    unless line.requires_shipping
+      assign has_digital = true
+    endunless
+  endfor
+  if request.locale.iso_code == 'en'
+    for language in localization.available_languages
+      if language.iso_code == 'de'
+        assign cart_form_url = language.root_url | append: '/cart'
+      endif
+    endfor
+  endif
+  assign form_id = 'bq-basket-form-' | append: section.id
+%}
+<bq-basket class="bq-basket" data-section-id="{{ section.id }}" data-change-url="{{ routes.cart_change_url }}.js" data-update-url="{{ routes.cart_update_url }}.js" data-loading-text="{{ 'bq.cart.loading' | t | escape }}" data-error-text="{{ 'bq.cart.error' | t | escape }}" data-updated-text="{{ 'bq.cart.updated' | t | escape }}">
+  <section class="bq-basket__page">
+    <div class="bq-wrap bq-basket__wrap">
+      <div class="bq-basket__heading">
+        <p class="bq-basket__eyebrow">{{ 'bq.cart.kicker' | t }}</p>
+        <h1>{{ 'bq.cart.title' | t }}</h1>
+        {% if cart.item_count > 0 %}<p>{{ 'bq.cart.intro' | t }}</p>{% endif %}
+      </div>
+      {% if cart.item_count == 0 %}
+        <div class="bq-basket__empty">
+          <span class="bq-basket__empty-icon">{% render 'bq-icon', name: 'book' %}</span>
+          <h2>{{ 'bq.cart.empty_heading' | t }}</h2>
+          <p>{{ 'bq.cart.empty' | t }}</p>
+          <a class="bq-button" href="{{ book_url }}">{{ 'bq.cart.back' | t }}{% render 'bq-icon', name: 'arrow' %}</a>
+        </div>
+      {% else %}
+        <p class="bq-basket__status visually-hidden" aria-live="polite" aria-atomic="true" data-bq-cart-status></p>
+        <div class="bq-basket__error" role="alert" hidden data-bq-cart-error><span></span> <a href="{{ routes.cart_url }}">{{ 'bq.cart.reload' | t }}</a></div>
+        {% render 'hm-bundle-offer', mode: 'cart' %}
+        <form id="{{ form_id }}" action="{{ cart_form_url }}" method="post" class="bq-basket__form" data-bq-cart-form>
+          <input type="hidden" name="attributes[Digitale Bereitstellung]" value="">
+          <input type="hidden" name="attributes[Version der Bereitstellungserklärung]" value="">
+          <div class="bq-basket__selection">
+            <h2 class="bq-basket__section-title">{{ 'bq.cart.selection' | t }}</h2>
+            <div class="bq-basket__items">
+              {% for line in cart.items %}
+                {% liquid
+                  assign cover = line.image
+                  if line.product.id == book.id
+                    for candidate in line.product.images
+                      if candidate.alt contains 'Cover von Honigmama'
+                        assign cover = candidate
+                        break
+                      endif
+                    endfor
+                  endif
+                  assign quantity_id = 'bq-quantity-' | append: section.id | append: '-' | append: forloop.index
+                %}
+                <article class="bq-basket__item" data-bq-cart-line="{{ line.key | escape }}">
+                  {% if cover %}<a class="bq-basket__cover" href="{{ line.url }}">{{ cover | image_url: width: 260 | image_tag: loading: 'eager', widths: '90, 140, 180, 260', sizes: '(max-width: 749px) 80px, 96px', alt: line.product.title }}</a>{% endif %}
+                  <div class="bq-basket__item-info">
+                    {% unless line.requires_shipping %}<span class="bq-basket__format">{{ 'bq.cart.digital_format' | t }}</span>{% endunless %}
+                    <h3><a href="{{ line.url }}">{{ line.product.title | escape }}</a></h3>
+                    {% unless line.variant.title == 'Default Title' %}<p class="bq-basket__variant">{{ line.variant.title | escape }}</p>{% endunless %}
+                    {% if line.product.id == book.id %}<p class="bq-basket__subtitle">{{ 'bq.product.subtitle' | t }}</p>{% endif %}
+                    <p class="bq-basket__line-price">{{ line.final_line_price | money }}{% if line.quantity > 1 %}<small>{{ line.final_price | money }} {{ 'bq.cart.each' | t }}</small>{% endif %}</p>
+                    {% if line.selling_plan_allocation %}<p>{{ line.selling_plan_allocation.selling_plan.name | escape }}</p>{% endif %}
+                    {% for property in line.properties %}{% assign property_first_char = property.first | slice: 0 %}{% if property.last != blank and property_first_char != '_' %}<p class="bq-basket__property">{{ property.first | escape }}: {{ property.last | escape }}</p>{% endif %}{% endfor %}
+                    {% for discount in line.line_level_discount_allocations %}<p class="bq-basket__discount">{{ discount.discount_application.title | escape }} −{{ discount.amount | money }}</p>{% endfor %}
+                    <div class="bq-basket__item-actions">
+                      <div class="bq-basket__quantity">
+                        <label for="{{ quantity_id }}">{{ 'bq.cart.quantity' | t }}</label>
+                        <div class="bq-basket__stepper">
+                          <button class="bq-basket__step" type="button" data-bq-quantity-step="-1" aria-label="{{ 'bq.cart.decrease' | t }}" {% if line.quantity <= 1 %}disabled{% endif %}>−</button>
+                          <input id="{{ quantity_id }}" name="updates[]" type="number" min="1" step="1" value="{{ line.quantity }}" data-original-quantity="{{ line.quantity }}" data-line-key="{{ line.key | escape }}" data-bq-quantity-input inputmode="numeric" autocomplete="off" aria-label="{{ 'bq.cart.quantity_for' | t: title: line.product.title | escape }}">
+                          <button class="bq-basket__step" type="button" data-bq-quantity-step="1" aria-label="{{ 'bq.cart.increase' | t }}">+</button>
+                        </div>
+                      </div>
+                      <a class="bq-basket__remove" href="{{ line.url_to_remove }}" data-bq-cart-remove data-line-key="{{ line.key | escape }}">{{ 'bq.cart.remove' | t }}</a>
+                    </div>
+                  </div>
+                </article>
+                {% if line.product.id == book.id %}
+                  <div class="bq-basket__included">
+                    <p>{{ 'bq.cart.included' | t }}</p>
+                    <ul><li>{% render 'bq-icon', name: 'check' %}{{ 'bq.cart.includes_recipes' | t }}</li><li>{% render 'bq-icon', name: 'check' %}{{ 'bq.cart.includes_plans' | t }}</li><li>{% render 'bq-icon', name: 'check' %}{{ 'bq.cart.includes_devices' | t }}</li></ul>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div class="bq-basket__secondary">
+              <button class="bq-basket__update" type="submit" name="update" formnovalidate data-bq-cart-update>{{ 'bq.cart.update' | t }}</button>
+              <a href="{{ book_url }}">{{ 'bq.cart.back' | t }}</a>
+            </div>
+          </div>
+          <aside class="bq-basket__summary" aria-labelledby="bq-summary-{{ section.id }}">
+            <div class="bq-basket__summary-heading"><h2 id="bq-summary-{{ section.id }}">{{ 'bq.cart.summary' | t }}</h2>{% render 'bq-icon', name: 'lock' %}</div>
+            {% for discount in cart.cart_level_discount_applications %}<p class="bq-basket__discount">{{ discount.title | escape }} −{{ discount.total_allocated_amount | money }}</p>{% endfor %}
+            <div class="bq-basket__delivery"><span>{{ 'bq.cart.delivery' | t }}</span><span>{% if cart.requires_shipping %}{{ 'bq.cart.shipping_checkout' | t }}{% else %}{{ 'bq.cart.digital_delivery' | t }}{% endif %}</span></div>
+            <div class="bq-basket__total"><span>{{ 'bq.cart.total' | t }}</span><strong>{{ cart.total_price | money }}</strong></div>
+            <p class="bq-basket__tax">{% if cart.taxes_included %}{{ 'bq.product.tax_included' | t }}{% endif %}{% unless cart.requires_shipping %}{% if cart.taxes_included %} · {% endif %}{{ 'bq.trust.no_shipping' | t }}{% endunless %}</p>
+            <div class="bq-basket__legal">
+              {% if pages['agb'] != blank %}<p>{{ 'bq.legal.terms_intro' | t }} <a href="{{ pages['agb'].url }}">{{ 'bq.legal.terms' | t }}</a>.</p>{% endif %}
+              <p>{% if pages['widerruf'] != blank %}<a href="{{ pages['widerruf'].url }}">{{ 'bq.legal.withdrawal' | t }}</a>{% endif %}{% if pages['zahlung-und-download'] != blank %} · <a href="{{ pages['zahlung-und-download'].url }}">{{ 'bq.legal.delivery' | t }}</a>{% endif %}{% if pages['datenschutz'] != blank %} · <a href="{{ pages['datenschutz'].url }}">{{ 'bq.legal.privacy' | t }}</a>{% endif %}</p>
+            </div>
+            <button type="submit" name="checkout" class="bq-button bq-button--wide bq-basket__checkout bq-basket__checkout--main" data-bq-checkout><span data-bq-checkout-label>{{ 'bq.cart.checkout' | t }}</span>{% render 'bq-icon', name: 'arrow' %}</button>
+            <p class="bq-basket__guest">{% render 'bq-icon', name: 'check' %}{{ 'bq.cart.guest' | t }}</p>
+            {% if shop.enabled_payment_types.size > 0 %}
+              <div class="bq-basket__payments"><p>{{ 'bq.cart.payment_label' | t }}</p><ul aria-label="{{ 'bq.product.payments' | t }}">{% assign payment_count = 0 %}{% assign priority_payments = 'paypal,visa,master,apple_pay,klarna,google_pay,shop_pay,american_express' | split: ',' %}{% for type in priority_payments %}{% if shop.enabled_payment_types contains type and payment_count < 5 %}<li>{{ type | payment_type_svg_tag }}</li>{% assign payment_count = payment_count | plus: 1 %}{% endif %}{% endfor %}{% if payment_count == 0 %}{% for type in shop.enabled_payment_types limit: 5 %}<li>{{ type | payment_type_svg_tag }}</li>{% endfor %}{% endif %}</ul></div>
+            {% endif %}
+            <div class="bq-basket__reassurance"><span>{% render 'bq-icon', name: 'lock' %}{{ 'bq.cart.secure' | t }}</span>{% if has_digital %}<span>{{ 'bq.trust.no_subscription' | t }}</span>{% endif %}</div>
+          </aside>
+        </form>
+        <p class="bq-basket__help">{{ 'bq.cart.help' | t }} <a href="mailto:{{ shop.email }}">{{ 'bq.footer.contact' | t }}</a></p>
+        <div class="bq-basket__dock"><div><span>{{ 'bq.cart.total' | t }}</span><strong>{{ cart.total_price | money }}</strong></div><button type="submit" form="{{ form_id }}" name="checkout" class="bq-button bq-basket__checkout" data-bq-checkout><span data-bq-checkout-label>{{ 'bq.cart.checkout' | t }}</span>{% render 'bq-icon', name: 'arrow' %}</button></div>
+      {% endif %}
+    </div>
+  </section>
+</bq-basket>
+{% schema %}
+{"name":"BeeQueen: Warenkorb","settings":[]}
+{% endschema %}
+
+
+
+{% stylesheet %}
+.bq-basket__legal{font-size:.875rem;line-height:1.55;margin:1rem 0;color:inherit}
+.bq-basket__legal p{margin:.35rem 0}.bq-basket__legal a{text-decoration:underline;text-underline-offset:.18em}
+{% endstylesheet %}

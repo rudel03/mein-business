@@ -1,0 +1,46 @@
+{
+ "title": "DURCHSCHICHT – Essen nach Dienstplan",
+ "handle": "durchschicht",
+ "productType": "E-Book",
+ "vendor": "DURCHSCHICHT",
+ "price": "19.90",
+ "requiresShipping": false,
+ "tags": [
+  "E-Book",
+  "Schichtarbeit",
+  "Meal Prep",
+  "Nachtschicht",
+  "Pflege"
+ ],
+ "seo": {
+  "title": "Kochbuch für Schichtarbeit: Essen nach Dienstplan | DURCHSCHICHT",
+  "description": "E-Book für Früh-, Spät- und Nachtschicht: 48 Rezepte, 6 Dienstplan-Pläne, Lagerkarte. Sortiert nach Pausenraum – mit und ohne Mikrowelle. PDF, 19,90 €."
+ },
+ "descriptionHtml": "<h2>Für Leute, deren Woche nicht um 18 Uhr endet</h2><p>Die meisten Kochbücher gehen von Frühstück um 7, Mittag um 12 und Abendessen um 19 Uhr aus. DURCHSCHICHT geht von deinem Dienstplan aus: Was isst du vor der Nachtschicht, was in der Pause um 0 Uhr, was um 3 Uhr bei Hunger und was danach, bevor du schläfst?</p><h3>Sortiert nach deinem Pausenraum</h3><p>Jedes Rezept zeigt, wo es funktioniert: mit Mikrowelle, nur mit Kühlschrank, ganz ohne Kühlung oder im Thermobehälter. Ein eigenes Kapitel ist nur für Boxen ohne Mikrowelle.</p><h3>Pläne statt Rezeptsammlung</h3><p>Sechs fertige Pläne für Früh-Block, Spät-Block, Nacht-Block, Wechsel 2-2-3, die erste Nacht mit Umschalttag und einen 90-Minuten-Kochtag. Du siehst, wann du kochst, was in den Kühlschrank kommt und was in die Truhe.</p><h3>Lagern ohne Rätselraten</h3><p>Die Lagerkarte sagt, wie lange Gekochtes hält, wie du richtig aufwärmst und was es mit Reis auf sich hat – nach BfR, BZfE und EFSA. Dazu Etiketten zum Ausdrucken, mit Feld für Datum und Uhrzeit.</p><h3>Technisches</h3><p>PDF, 75 Seiten, Download-Link sofort nach dem Kauf per Mail. Läuft auf Handy, Tablet und PC. Kein Abo.</p><p><small>Allgemeine Alltagshilfe, keine Ernährungs- oder medizinische Beratung. Die 14 Hauptallergene stehen bei jedem Rezept.</small></p>",
+ "images": [
+  [
+   "mock_tablet.png",
+   "E-Book DURCHSCHICHT auf Tablet und Handy"
+  ],
+  [
+   "mock_phone.png",
+   "E-Book DURCHSCHICHT auf dem Handy im Pausenraum"
+  ],
+  [
+   "../final/cover.jpg",
+   "Cover: Das Essenssystem für Früh, Spät, Nacht"
+  ],
+  [
+   "../theme/assets/ds-page-plan.jpg",
+   "Beispielseite: Plan Nacht-Block"
+  ],
+  [
+   "../theme/assets/ds-page-rezept.jpg",
+   "Beispielseite: Rezept Gemüse-Curry"
+  ],
+  [
+   "../theme/assets/ds-page-lager.jpg",
+   "Beispielseite: Lagerkarte"
+  ]
+ ]
+}

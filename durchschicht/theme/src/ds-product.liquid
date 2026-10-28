@@ -1,0 +1,80 @@
+{%- assign v = product.selected_or_first_available_variant -%}
+<div class="ds dsp">
+ <section class="dsp-top">
+  <div class="dsp-media">
+   <div class="dsp-main"><img id="dsp-main" src="{{ product.featured_media | image_url: width: 1100 }}" alt="{{ product.featured_media.alt | default: product.title | escape }}" width="1100" height="1100"></div>
+   {%- if product.media.size > 1 -%}
+   <div class="dsp-thumbs">
+    {%- for m in product.media -%}
+     <button type="button" data-src="{{ m | image_url: width: 1100 }}" aria-label="Bild {{ forloop.index }}"{% if forloop.first %} class="on"{% endif %}><img src="{{ m | image_url: width: 160 }}" alt="" loading="lazy" width="160" height="160"></button>
+    {%- endfor -%}
+   </div>
+   {%- endif -%}
+  </div>
+  <div class="dsp-info">
+   <div class="ds-kick">E-Book · PDF · 75 Seiten</div>
+   <h1>{{ product.title }}</h1>
+   <p class="dsp-claim">Essen nach Dienstplan. 48 Rezepte und 6 fertige Pläne für Früh, Spät und Nacht.</p>
+   <div class="dsp-price">{{ v.price | money }} <small>inkl. MwSt. · Sofort-Download</small></div>
+   {%- form 'product', product, class: 'dsp-form' -%}
+    <input type="hidden" name="id" value="{{ v.id }}">
+    <input type="hidden" name="return_to" value="/checkout">
+    <button class="ds-btn dsp-buy" type="submit"{% unless v.available %} disabled{% endunless %}>{% if v.available %}Jetzt kaufen – sofort per Mail{% else %}Gerade nicht verfügbar{% endif %}</button>
+   {%- endform -%}
+   <ul class="dsp-trust">
+    <li>Download-Link direkt nach dem Kauf per Mail</li>
+    <li>Handy, Tablet, PC – und zum Ausdrucken</li>
+    <li>Einmal zahlen, kein Abo</li>
+   </ul>
+   <div class="dsp-inside">
+    <h2>Das ist drin</h2>
+    <dl>
+     <dt>48</dt><dd>Rezepte mit Foto, Mengen, Lagerzeit und Allergenen – sortiert nach Schicht und Pausenraum</dd>
+     <dt>6</dt><dd>Dienstplan-Pläne: Früh-, Spät-, Nacht-Block, Wechsel 2-2-3, Erste Nacht & Umschalttag, Kochtag 90 Minuten</dd>
+     <dt>1</dt><dd>Lagerkarte: wie lange was hält – nach BfR, BZfE und EFSA</dd>
+     <dt>+</dt><dd>Koffein-Übersicht, „Die Übergabe“ für zu Hause, Kollegen-Kochkette, Etiketten mit Datum und Uhrzeit</dd>
+    </dl>
+   </div>
+  </div>
+ </section>
+
+ <section class="dsp-sym">
+  <div class="ds-in">
+   <div class="ds-kick">Für jeden Pausenraum</div>
+   <h2>Jedes Rezept sagt dir, wo es funktioniert.</h2>
+   <div class="ds-sym">
+    <div><span class="ds-ico">M</span><h3>Mikrowelle</h3><p>Abgedeckt erhitzen, bis alles dampfend heiß ist.</p></div>
+    <div><span class="ds-ico">K</span><h3>Nur Kühlschrank</h3><p>Kalt gekocht und kalt gut.</p></div>
+    <div><span class="ds-ico">O</span><h3>Ohne Kühlung</h3><p>Mit Kühlakkus oder ganz ohne.</p></div>
+    <div><span class="ds-ico">T</span><h3>Thermobehälter</h3><p>Warm essen ohne Anstehen.</p></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="dsp-look">
+  <div class="ds-in">
+   <div class="ds-kick">Blick ins Buch</div>
+   <h2>So sieht es innen aus.</h2>
+   <div class="ds-pages">
+    <img src="{{ 'ds-page-plan.jpg' | asset_url }}" alt="Buchseite: Nacht-Block" loading="lazy">
+    <img src="{{ 'ds-page-rezept.jpg' | asset_url }}" alt="Buchseite: Rezept Gemüse-Curry" loading="lazy">
+    <img src="{{ 'ds-page-lager.jpg' | asset_url }}" alt="Buchseite: Lagerkarte" loading="lazy">
+    <img src="{{ 'ds-page-etiketten.jpg' | asset_url }}" alt="Buchseite: Etiketten" loading="lazy">
+   </div>
+  </div>
+ </section>
+
+ <section class="dsp-desc">
+  <div class="ds-in">{{ product.description }}</div>
+ </section>
+
+ <div class="dsp-sticky" hidden><span>{{ product.title }} · {{ v.price | money }}</span><a class="ds-btn" href="#dsp-buy-top">Kaufen</a></div>
+</div>
+<script>
+(function(){
+ var main=document.getElementById('dsp-main');
+ document.querySelectorAll('.dsp-thumbs button').forEach(function(b){b.addEventListener('click',function(){main.src=b.getAttribute('data-src');document.querySelectorAll('.dsp-thumbs button').forEach(function(x){x.classList.remove('on')});b.classList.add('on')})});
+ var buy=document.querySelector('.dsp-buy'),bar=document.querySelector('.dsp-sticky');
+ if(buy&&bar&&'IntersectionObserver' in window){buy.id='dsp-buy-top';new IntersectionObserver(function(e){bar.hidden=e[0].isIntersecting||e[0].boundingClientRect.top>0}).observe(buy)}
+})();
+</script>

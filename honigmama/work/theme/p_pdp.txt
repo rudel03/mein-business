@@ -1,0 +1,112 @@
+{%- comment -%}
+  Bausteine für die Produktseiten im Stil der Startseite.
+  render 'hm-pdp', part: 'dishes' | 'steps' | 'faq' | 'style', h: product.handle
+{%- endcomment -%}
+{%- liquid
+  assign d1 = 'bq-gericht-01-pancakes.png|Band 1|Hafer-Bananen-Pancakes;bq-gericht-02-honighaehnchen.png|Band 1|Zitronen-Honig-Hähnchen;bq-gericht-05-lachspasta.png|Band 1|Lachs-Spinat-Pasta;bq-gericht-10-shakshuka.png|Band 1|Shakshuka mit Spinat;bq-gericht-03-lasagne.png|Band 1|Spinat-Ricotta-Lasagne'
+  assign d2 = "hm-dish-b2_S01.jpg|Band 2|Süßkartoffel-Erdnuss-Suppe;hm-dish-b2_C02.jpg|Band 2|Rinder-Ragù zum Einfrieren;hm-dish-b2_A01.jpg|Band 2|Shepherd's Pie;hm-dish-b2_E04.jpg|Band 2|Spinat-Feta-Taschen;hm-dish-b2_F01.jpg|Band 2|Blaubeer-Quark-Muffins"
+  assign d3 = 'hm-dish-b3_F01.jpg|Band 3|Frühstücks-Wrap mit Rührei;hm-dish-b3_A01.jpg|Band 3|Lachs vom Blech;hm-dish-b3_M09.jpg|Band 3|Ofen-Feta-Pasta;hm-dish-b3_V01.jpg|Band 3|Quinoa-Bowls zum Mitnehmen;hm-dish-b3_Z01.jpg|Band 3|Schoko-Avocado-Mousse'
+  case h
+    when 'honigmama-band-2'
+      assign dl = d2
+      assign dlead = 'Suppen, Currys, Aufläufe und Frühstück – alles zum Einfrieren und schnellen Aufwärmen.'
+    when 'honigmama-band-3'
+      assign dl = d3
+      assign dlead = 'Schnelle Teller in 5–25 Minuten, viele davon mit einer Hand zu essen.'
+    when 'honigmama-paket-band-1-2'
+      assign dl = d1 | append: ';' | append: d2
+      assign dlead = 'Aus Band 1 und Band 2: Lieblingsgerichte für die Schwangerschaft und Vorrat fürs Wochenbett.'
+    when 'honigmama-komplett'
+      assign dl = d1 | append: ';' | append: d2 | append: ';' | append: d3
+      assign dlead = 'Aus allen drei Bänden – mit Zutaten aus jedem Supermarkt.'
+    else
+      assign dl = d1
+      assign dlead = 'Hausmannskost und schnelle Teller – mit Zutaten aus jedem Supermarkt.'
+  endcase
+-%}
+{%- case part -%}
+{%- when 'style' -%}
+<style>
+.hm-pdp{--ink:#2f2118;--honey:#e9a53b;--honeyd:#a97016;--terra:#b4532f;--cream:#fbf5ea;--line:#ead8b4;color:var(--ink)}
+.hm-pdp .w{max-width:1180px;margin:0 auto;padding:0 20px}
+.hm-pdp .hm-head{text-align:center;max-width:680px;margin:0 auto 26px}
+.hm-pdp .hm-head .eb{font:700 12px/1 var(--font-body--family,Arial,sans-serif);letter-spacing:.14em;text-transform:uppercase;color:var(--honeyd);margin:0 0 10px}
+.hm-pdp .hm-head h2{margin:0 0 8px}.hm-pdp .hm-head p{margin:0;opacity:.8}
+.hm-pdp-dishes{background:var(--cream);padding:56px 0 40px;overflow:hidden}
+.hm-marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.hm-marquee__track{display:flex;gap:16px;width:max-content;animation:hmscroll 50s linear infinite}
+.hm-marquee:hover .hm-marquee__track{animation-play-state:paused}
+@keyframes hmscroll{to{transform:translateX(-50%)}}
+.hm-dish{width:240px;flex:none;margin:0;background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.hm-dish img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.hm-dish figcaption{padding:10px 12px 12px;font:600 15px/1.3 var(--font-heading--family,Georgia,serif)}
+.hm-dish figcaption span{display:block;font:600 11px/1 var(--font-body--family,Arial,sans-serif);letter-spacing:.1em;text-transform:uppercase;color:var(--honeyd);margin-bottom:6px}
+.hm-note{text-align:center;font-size:12px;opacity:.65;margin:14px 0 0}
+.hm-pdp-steps{background:#2f2118;color:#fbf5ea;padding:56px 0}
+.hm-pdp-steps .hm-head .eb{color:var(--honey)}.hm-pdp-steps h2{color:#fff}
+.hm-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:960px;margin:0 auto}
+.hm-step{background:#3d2c21;border-radius:16px;padding:22px}
+.hm-step b{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--honey);color:#2f2118;font-weight:700;margin-bottom:12px}
+.hm-step h3{color:#fff;font-size:19px;margin:0 0 6px}.hm-step p{margin:0;opacity:.8;font-size:15px;line-height:1.5}
+/* Vorschau-Kopf zentriert */
+.bq-preview-section .bq-section-head{display:block;text-align:center;max-width:720px;margin-inline:auto}
+.bq-preview-section .bq-section-head p{margin-inline:auto}
+/* FAQ zentriert und schmaler */
+#bq-fragen .bq-faq-layout{display:block;max-width:820px;margin-inline:auto}
+#bq-fragen .bq-faq-layout>div:first-child{text-align:center;margin-bottom:20px}
+/* Einblenden + Hover */
+.hm-rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.hm-rv.in{opacity:1;transform:none}
+.hm-card,.hm-offer,.hm-step,.hm-dish{transition:transform .3s ease,box-shadow .3s ease}
+.hm-card:hover,.hm-step:hover{transform:translateY(-4px);box-shadow:0 14px 30px #49301a1f}
+@media(prefers-reduced-motion:reduce){.hm-rv{opacity:1;transform:none;transition:none}.hm-marquee__track{animation:none}}
+@media(max-width:799px){.hm-steps{grid-template-columns:1fr}.hm-dish{width:200px}.hm-pdp-dishes,.hm-pdp-steps{padding:44px 0}}
+</style>
+<script>
+(function(){
+  if(!('IntersectionObserver' in window))return;
+  var sel='.bq-section h2,.bq-section-head,.hm-card,.hm-offer,.hm-step,.hm-pdp .hm-head,.hm-marquee,.bq-faq details,.bq-final-purchase>*,.bq-carousel,.bq-book-carousel';
+  var els=document.querySelectorAll(sel);
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  els.forEach(function(el,i){if(el.closest('.bq-product-hero'))return;var r=el.getBoundingClientRect();if(window.innerHeight>r.top)return;el.classList.add('hm-rv');el.style.transitionDelay=(i%4)*60+'ms';io.observe(el)});
+})();
+</script>
+{%- when 'dishes' -%}
+{%- assign dishes = dl | split: ';' -%}
+<section class="hm-pdp hm-pdp-dishes">
+  <div class="w"><div class="hm-head"><p class="eb">Aus dem Buch</p><h2>Darauf darfst du dich freuen.</h2><p>{{ dlead }}</p></div></div>
+  <div class="hm-marquee"><div class="hm-marquee__track">
+    {%- for round in (1..2) -%}{%- for d in dishes -%}{%- assign x = d | split: '|' -%}{%- assign pic = images[x[0]] -%}
+      <figure class="hm-dish"{% if round == 2 %} aria-hidden="true"{% endif %}>{% if pic %}{{ pic | image_url: width: 480 | image_tag: loading: 'lazy', widths: '240,480', sizes: '240px', alt: x[2] }}{% endif %}<figcaption><span>{{ x[1] }}</span>{{ x[2] }}</figcaption></figure>
+    {%- endfor -%}{%- endfor -%}
+  </div></div>
+  <p class="hm-note">Fotos: KI-generierte Darstellungen der Gerichte aus dem Buch.</p>
+</section>
+{%- when 'steps' -%}
+<section class="hm-pdp hm-pdp-steps">
+  <div class="w">
+    <div class="hm-head"><p class="eb">So einfach geht's</p><h2>In zwei Minuten startklar.</h2></div>
+    <div class="hm-steps">
+      <div class="hm-step"><b>1</b><h3>Kaufen</h3><p>Sicher bezahlen – mit PayPal, Klarna, Apple Pay oder Karte.</p></div>
+      <div class="hm-step"><b>2</b><h3>PDF sofort erhalten</h3><p>Direkt nach dem Kauf per E-Mail und als Download. Kein Abo, kein Versand.</p></div>
+      <div class="hm-step"><b>3</b><h3>Plan aufschlagen, kochen</h3><p>Plan wählen, Einkaufsliste mitnehmen, loslegen. Auf Handy, Tablet oder ausgedruckt.</p></div>
+    </div>
+  </div>
+</section>
+{%- when 'faq' -%}
+{%- case h -%}
+{%- when 'honigmama-band-2' -%}
+<details><summary>Wann sollte ich vorkochen?<span aria-hidden="true">+</span></summary><div><p>Am besten in den letzten Wochen vor dem Geburtstermin. Das Buch plant dafür zwei Kochtage mit Ablauf und Einkaufsliste.</p></div></details>
+<details><summary>Muss ich alles auf einmal kochen?<span aria-hidden="true">+</span></summary><div><p>Nein. Jedes Rezept steht für sich. Du kannst auch nur einen Teil vorkochen oder einzelne Gerichte zwischendurch einfrieren.</p></div></details>
+<details><summary>Können Partner, Familie oder Freunde mithelfen?<span aria-hidden="true">+</span></summary><div><p>Ja. Mit der „Wer bringt was?“-Liste und den Etiketten können Helfer gezielt kochen und mitbringen.</p></div></details>
+<details><summary>Wie bekomme ich das Buch?<span aria-hidden="true">+</span></summary><div><p>Als PDF direkt nach dem Kauf – per E-Mail und als Download-Link.</p></div></details>
+{%- when 'honigmama-band-3' -%}
+<details><summary>Für wen ist Band 3?<span aria-hidden="true">+</span></summary><div><p>Für Mamas im ersten Jahr mit Baby, die schnell und gut essen wollen – mit Rezepten in 5–25 Minuten.</p></div></details>
+<details><summary>Ist das ein Beikost-Kochbuch?<span aria-hidden="true">+</span></summary><div><p>Nein. Die Rezepte sind für dich und die Familie. Bei vielen steht ein Hinweis, wie du ab dem Beikoststart eine Portion fürs Baby abzweigen kannst. Bei Fragen zur Beikost gilt der Rat deiner Hebamme oder Kinderärztin.</p></div></details>
+<details><summary>Wie bekomme ich das Buch?<span aria-hidden="true">+</span></summary><div><p>Als PDF direkt nach dem Kauf – per E-Mail und als Download-Link.</p></div></details>
+{%- else -%}
+<details><summary>Was ist im Paket enthalten?<span aria-hidden="true">+</span></summary><div><p>Alle Bände des Pakets in einer PDF mit anklickbarem Inhaltsverzeichnis – direkt nach dem Kauf per E-Mail und als Download.</p></div></details>
+<details><summary>Ich habe schon einen Band. Was tun?<span aria-hidden="true">+</span></summary><div><p>Dann hol dir die fehlenden Bände einzeln. Der Paketpreis gilt für das komplette Paket.</p></div></details>
+<details><summary>Warum ist das Paket günstiger?<span aria-hidden="true">+</span></summary><div><p>Das Paket ist ein eigenes Produkt mit festem Preis. Die einzelnen Bände kosten weiterhin ihren regulären Preis.</p></div></details>
+{%- endcase -%}
+{%- endcase -%}

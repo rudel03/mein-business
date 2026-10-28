@@ -1,0 +1,59 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "bq-home",
+      "settings": {
+        "product": "honigmama-band-1",
+        "mascot": "shopify://shop_images/bq-honigmama-hero.png",
+        "mascot_alt": "Honigmama: Schwangere mit einem Glas Honig",
+        "cover": "shopify://shop_images/beequeen-honigmama-was-darf-ich-essen-cover.png",
+        "offer_image": "shopify://shop_images/beequeen-honigmama-produkt-neu.png",
+        "peek_image": "shopify://shop_images/bqk-blick-curry.jpg",
+        "peek_alt": "Rezept-Doppelseite Kichererbsen-Spinat-Curry aus Honigmama"
+      },
+      "blocks": {
+        "ideas": {
+          "type": "reason",
+          "settings": {
+            "icon": "book",
+            "title": "Keine Idee, aber Hunger?",
+            "text": "70 Rezepte geben dir Auswahl. So beginnt die nächste Mahlzeit mit einer Idee statt mit einer neuen Suche."
+          }
+        },
+        "steps": {
+          "type": "reason",
+          "settings": {
+            "icon": "plan",
+            "title": "Zu viel im Kopf vor dem Einkauf?",
+            "text": "3 Wochenpläne mit passenden Listen nehmen dir das Zusammenstellen ab. Du gehst mit mehr Überblick los."
+          }
+        },
+        "plans": {
+          "type": "reason",
+          "settings": {
+            "icon": "check",
+            "title": "Unsicher bei Lebensmitteln?",
+            "text": "Hinweise im Buch und offizielle Quellen helfen beim Nachschlagen. Für mehr Orientierung bei Auswahl und Zubereitung."
+          }
+        }
+      },
+      "block_order": [
+        "ideas",
+        "steps",
+        "plans"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,90 @@
+{% assign item = section.settings.product %}
+{%- capture hm_nav -%}<button type="button" class="hm-nav-books" data-hm-drawer-open aria-controls="hm-drawer" aria-expanded="false">Die Bücher<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><a href="{{ routes.root_url }}#hm-reihe">Pakete</a><a href="{{ routes.root_url }}#hm-fragen">Fragen</a><a href="/pages/contact">Kontakt</a>{%- endcapture -%}
+<header class="bq-header{% if template.name == 'cart' %} bq-header--checkout{% endif %}" id="header-component">
+<div class="bq-wrap bq-header__inner">
+<a class="bq-logo" href="{{ routes.root_url }}" aria-label="{{ 'bq.brand' | t }}"><img src="{{ 'bq-logo.svg' | asset_url }}" width="292" height="78" alt="{{ 'bq.brand' | t }}" loading="eager"></a>
+{% if template.name == 'cart' %}<p class="bq-header__checkout-note">{% render 'bq-icon', name: 'lock' %}{{ 'bq.cart.secure_header' | t }}</p>{% else %}<nav class="bq-nav" aria-label="{{ 'bq.nav.label' | t }}">{{ hm_nav }}</nav>
+<div class="bq-header__actions">
+<a class="bq-cart" href="{{ routes.cart_url }}" aria-label="{{ 'bq.nav.cart' | t }}">{% render 'bq-icon', name: 'cart' %}{% if cart.item_count > 0 %}<span>{{ cart.item_count }}</span>{% endif %}</a>
+<button type="button" class="hm-burger" data-hm-drawer-open aria-controls="hm-drawer" aria-expanded="false" aria-label="{{ 'bq.nav.menu' | t }}">{% render 'bq-icon', name: 'menu' %}</button>
+</div>{% endif %}
+</div>
+</header>
+{%- unless template.name == 'cart' -%}
+{%- capture hm_rows -%}
+honigmama-band-1|Band 1 · Schwangerschaft|70 Rezepte · 3 Wochenpläne
+honigmama-band-2|Band 2 · Wochenbett|40 Gerichte zum Einfrieren · 6-Wochen-Plan
+honigmama-band-3|Band 3 · Erstes Jahr|50 schnelle Rezepte · 4 Wochenpläne
+honigmama-paket-band-1-2|Paket · Band 1 + 2|110 Rezepte · fester Paketpreis
+honigmama-komplett|Komplett · Band 1 + 2 + 3|160 Rezepte · bestes Angebot
+{%- endcapture -%}
+{%- assign hm_list = hm_rows | strip | split: '
+' -%}
+<div class="hm-drawer" id="hm-drawer" role="dialog" aria-modal="true" aria-label="Alle Bücher" hidden>
+  <div class="hm-drawer__bg" data-hm-drawer-close></div>
+  <div class="hm-drawer__panel">
+    <div class="hm-drawer__top"><p>Die Honigmama-Reihe</p><button type="button" class="hm-drawer__x" data-hm-drawer-close aria-label="Menü schließen"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button></div>
+    {%- for row in hm_list -%}
+      {%- assign c = row | strip | split: '|' -%}{%- assign p = all_products[c[0]] -%}
+      {%- if forloop.index == 1 -%}<p class="hm-drawer__label">Einzelbände</p>{%- elsif forloop.index == 4 -%}<p class="hm-drawer__label">Pakete – günstiger zusammen</p>{%- endif -%}
+      {%- if p != blank -%}
+      {%- assign v = p.selected_or_first_available_variant -%}
+      <a class="hm-drawer__item{% if product and product.handle == c[0] %} is-current{% endif %}{% if c[0] == 'honigmama-komplett' %} is-best{% endif %}" href="{{ p.url }}">
+        {%- if p.featured_image -%}{{ p.featured_image | image_url: width: 160 | image_tag: loading: 'lazy', alt: '' }}{%- endif -%}
+        <span class="hm-drawer__txt"><small>{{ c[1] }}</small><b>{{ p.title | remove: 'Paket: ' | escape }}</b><em>{{ c[2] }}</em></span>
+        <span class="hm-drawer__price">{{ v.price | money }}{% if v.compare_at_price > v.price %}<s>{{ v.compare_at_price | money }}</s>{% endif %}</span>
+      </a>
+      {%- endif -%}
+    {%- endfor -%}
+    <nav class="hm-drawer__links" aria-label="Weitere Seiten"><a href="{{ routes.root_url }}">Startseite</a><a href="{{ routes.root_url }}#hm-phasen">Welcher Band passt?</a><a href="{{ routes.root_url }}#hm-fragen">Fragen</a><a href="/pages/contact">Kontakt</a><a href="{{ routes.cart_url }}">Warenkorb{% if cart.item_count > 0 %} ({{ cart.item_count }}){% endif %}</a></nav>
+  </div>
+</div>
+<style>
+.bq-header{position:sticky;top:0;z-index:50}
+.hm-nav-books{display:inline-flex;align-items:center;gap:5px;background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer}
+.hm-nav-books svg{transition:transform .25s}.hm-nav-books[aria-expanded="true"] svg{transform:rotate(180deg)}
+.hm-burger{display:none;background:none;border:0;padding:6px;color:inherit;cursor:pointer}
+@media(max-width:899px){.hm-burger{display:inline-flex}.bq-header .bq-nav{display:none}}
+.hm-drawer{position:fixed;inset:0;z-index:1000}
+.hm-drawer[hidden]{display:none}
+.hm-drawer__bg{position:absolute;inset:0;background:#2f211866;opacity:0;transition:opacity .3s}
+.hm-drawer__panel{position:absolute;top:0;right:0;bottom:0;width:min(420px,92vw);background:#fffdf8;box-shadow:-20px 0 50px #2f21182e;overflow-y:auto;padding:18px 18px 28px;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.8,.2,1);color:#2f2118}
+.hm-drawer.is-open .hm-drawer__bg{opacity:1}.hm-drawer.is-open .hm-drawer__panel{transform:none}
+.hm-drawer__top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.hm-drawer__top p{margin:0;font:700 12px/1 var(--font-body--family,Arial,sans-serif);letter-spacing:.14em;text-transform:uppercase;color:#a97016}
+.hm-drawer__x{background:#f3e7d2;border:0;border-radius:50%;width:38px;height:38px;display:grid;place-items:center;cursor:pointer;color:#2f2118}
+.hm-drawer__label{margin:18px 0 8px;font:600 13px/1 var(--font-body--family,Arial,sans-serif);opacity:.7}
+.hm-drawer__item{display:grid;grid-template-columns:58px 1fr auto;gap:12px;align-items:center;padding:10px;border:1px solid #ead8b4;border-radius:14px;background:#fff;margin-bottom:8px;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s,border-color .2s;opacity:0;transform:translateX(16px)}
+.hm-drawer.is-open .hm-drawer__item{opacity:1;transform:none;transition:opacity .35s,transform .35s,box-shadow .2s,border-color .2s}
+.hm-drawer.is-open .hm-drawer__item:nth-of-type(2){transition-delay:.04s}.hm-drawer.is-open .hm-drawer__item:nth-of-type(3){transition-delay:.08s}.hm-drawer.is-open .hm-drawer__item:nth-of-type(4){transition-delay:.12s}.hm-drawer.is-open .hm-drawer__item:nth-of-type(5){transition-delay:.16s}
+.hm-drawer__item:hover{border-color:#e9a53b;box-shadow:0 8px 20px #49301a1a}
+.hm-drawer__item img{width:58px;height:58px;object-fit:cover;border-radius:8px;display:block;background:#f3e7d2}
+.hm-drawer__txt{display:flex;flex-direction:column;gap:2px;min-width:0}
+.hm-drawer__txt small{font:700 10.5px/1.2 var(--font-body--family,Arial,sans-serif);letter-spacing:.08em;text-transform:uppercase;color:#a97016}
+.hm-drawer__txt b{font:600 15.5px/1.25 var(--font-heading--family,Georgia,serif)}
+.hm-drawer__txt em{font-style:normal;font-size:12.5px;opacity:.7}
+.hm-drawer__price{text-align:right;font-weight:700;font-size:14px;white-space:nowrap}.hm-drawer__price s{display:block;font-weight:400;font-size:12px;opacity:.5}
+.hm-drawer__item.is-best{border:2px solid #b4532f;background:#fff7ef}
+.hm-drawer__item.is-current{background:#fbf1df;border-color:#e9a53b}
+.hm-drawer__item.is-current small:after{content:" · hier bist du";color:#2f6b3a;text-transform:none;letter-spacing:0}
+.hm-drawer__links{display:flex;flex-direction:column;margin-top:18px;border-top:1px solid #ead8b4;padding-top:8px}
+.hm-drawer__links a{padding:11px 4px;text-decoration:none;color:inherit;font-weight:500;border-bottom:1px solid #f1e6cf}
+@media(prefers-reduced-motion:reduce){.hm-drawer__panel,.hm-drawer__bg,.hm-drawer__item{transition:none!important}}
+</style>
+<script>
+(function(){
+  var d=document.getElementById('hm-drawer');if(!d)return;
+  var openers=document.querySelectorAll('[data-hm-drawer-open]'),last=null;
+  function set(v){openers.forEach(function(b){b.setAttribute('aria-expanded',v)})}
+  function open(e){last=e&&e.currentTarget;d.hidden=false;requestAnimationFrame(function(){d.classList.add('is-open')});set(true);document.documentElement.style.overflow='hidden';var x=d.querySelector('.hm-drawer__x');x&&x.focus()}
+  function close(){d.classList.remove('is-open');set(false);document.documentElement.style.overflow='';setTimeout(function(){d.hidden=true},350);last&&last.focus()}
+  openers.forEach(function(b){b.addEventListener('click',open)});
+  d.querySelectorAll('[data-hm-drawer-close]').forEach(function(b){b.addEventListener('click',close)});
+  d.querySelectorAll('a[href*="#"]').forEach(function(a){a.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!d.hidden)close()});
+})();
+</script>
+{%- endunless -%}
+{% schema %}
+{"name":"BeeQueen: Header","enabled_on":{"groups":["header"]},"settings":[{"type":"product","id":"product","label":"Kochbuch"}]}
+{% endschema %}

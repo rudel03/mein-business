@@ -1,0 +1,70 @@
+{%- comment -%}
+  Honigmama-Reihe: drei Bände + zwei Pakete. Aufruf: render 'hm-series', current: product.handle, mode: 'full' | 'upsell'
+  Unveröffentlichte Produkte erscheinen als „Bald verfügbar“.
+{%- endcomment -%}
+{%- assign mode = mode | default: 'full' -%}
+{%- capture rows -%}
+honigmama-band-1|Band 1|Was darf ich essen?|Schwangerschaft · 70 Rezepte · 3 Wochenpläne|bq-cover-honigmama.jpg
+honigmama-band-2|Band 2|Vorkochen fürs Wochenbett|Wochenbett · 40 Gerichte zum Einfrieren · 6-Wochen-Plan|hm-b2_1.jpg
+honigmama-band-3|Band 3|Kraft-Küche fürs erste Jahr|Erstes Jahr · 50 schnelle Rezepte · 4 Wochenpläne|hm-b3_1.jpg
+{%- endcapture -%}
+{%- capture packs -%}
+honigmama-paket-band-1-2|Paket|Schwangerschaft + Wochenbett|Band 1 + 2 · 110 Rezepte|hm-bundle12.jpg
+honigmama-komplett|Komplett|Die ganze Reihe|Band 1 + 2 + 3 · 160 Rezepte · bestes Angebot|hm-bundle123.jpg
+{%- endcapture -%}
+<style>
+.hm-series{padding:3.5rem 0;background:#fbf4e7}.hm-series--upsell{background:#fff7e6;border-top:1px solid #ead8b4;border-bottom:1px solid #ead8b4}
+.hm-series h2{margin:.2rem 0 .4rem}.hm-series__lead{max-width:40rem;margin:0 0 1.6rem;opacity:.85}
+.hm-grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.hm-card{background:#fff;border:1px solid #ead8b4;border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:8px;position:relative}
+.hm-card img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;display:block;background:#f3e7d2}
+.hm-card__band{font:700 12px/1 var(--font-body--family,Arial,sans-serif);letter-spacing:.12em;text-transform:uppercase;color:#a97016}
+.hm-card h3{margin:0;font-size:1.15rem;line-height:1.2}.hm-card p{margin:0;font-size:.9rem;opacity:.85}
+.hm-card__price{font-weight:700;font-size:1.05rem}.hm-card__price s{opacity:.55;font-weight:500;margin-left:6px}
+.hm-card .bq-button,.hm-card button{margin-top:auto;width:100%}
+.hm-card--best{border:2px solid #b4532f}.hm-card--best:before{content:"Bestes Angebot";position:absolute;top:-11px;left:14px;background:#b4532f;color:#fff;font:700 12px/1 var(--font-body--family,Arial,sans-serif);padding:6px 10px;border-radius:99px}
+.hm-soon{margin-top:auto;text-align:center;padding:12px;border-radius:99px;background:#f3e7d2;font-weight:600;font-size:.9rem}
+.hm-packs{margin-top:22px}
+/* Zentrierung Abschluss-Bereiche */
+.bq-end,.bq-final-purchase{text-align:center;max-width:780px;margin-inline:auto}
+.bq-end>[data-bq-cta],.bq-final-purchase>[data-bq-cta]{max-width:440px;margin:1.4rem auto 0}
+.bq-end .bq-price,.bq-final-purchase .bq-price{text-align:center}
+.bq-end .bq-price__values,.bq-final-purchase .bq-price__values{justify-content:center;display:flex}
+.bq-end .bq-probe{text-align:left;margin-inline:auto}
+/* Reihe: Kopf mit Bild */
+.hm-intro{display:grid;gap:22px;align-items:center;margin-bottom:26px}
+.hm-intro img{width:100%;height:auto;border-radius:18px;display:block}
+@media(min-width:800px){.hm-intro{grid-template-columns:.9fr 1.1fr;gap:44px}}
+@media(max-width:799px){.hm-series .hm-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px;margin-inline:-20px;padding:14px 20px 10px}.hm-series .hm-card{flex:0 0 72%;scroll-snap-align:start}}
+
+</style>
+<section class="hm-series{% if mode == 'upsell' %} hm-series--upsell{% endif %}" id="hm-reihe"><div class="bq-wrap">
+{%- if mode == 'upsell' -%}
+<p class="bq-eyebrow">Passt dazu</p><h2>Mach die Reihe komplett – und spar mit dem Paket.</h2>
+<p class="hm-series__lead">Honigmama begleitet dich von der Schwangerschaft über das Wochenbett bis ins erste Jahr. Im Paket bekommst du alle Bände günstiger.</p>
+{%- else -%}
+<div class="hm-intro"><div><p class="bq-eyebrow">Die Honigmama-Reihe</p><h2>Ein Kochbuch für jede Phase.</h2>
+<p class="hm-series__lead">Schwangerschaft, Wochenbett, erstes Jahr: Jede Phase hat ihre eigene Essens-Frage. Für jede gibt es einen Band mit fertigen Plänen und Einkaufslisten.</p></div>{% if images['hm-reihe-banner.jpg'] != blank %}{{ images['hm-reihe-banner.jpg'] | image_url: width: 1400 | image_tag: loading: 'lazy', widths: '600,900,1400', sizes: '(min-width: 800px) 640px, 100vw', alt: 'Die drei Honigmama-Kochbücher nebeneinander' }}{% endif %}</div>
+{%- endif -%}
+{%- for section_rows in (1..2) -%}
+{%- if section_rows == 1 -%}{%- assign list = rows | strip | split: '
+' -%}{%- if mode == 'upsell' -%}{%- continue -%}{%- endif -%}{%- else -%}{%- assign list = packs | strip | split: '
+' -%}{%- endif -%}
+<div class="hm-grid{% if section_rows == 2 and mode != 'upsell' %} hm-packs{% endif %}">
+{%- for row in list -%}{%- assign c = row | strip | split: '|' -%}{%- assign h = c[0] -%}
+{%- if h == current -%}{%- continue -%}{%- endif -%}
+{%- assign p = all_products[h] -%}
+<article class="hm-card{% if h == 'honigmama-komplett' %} hm-card--best{% endif %}">
+{%- if p != blank and p.featured_image -%}{{ p.featured_image | image_url: width: 500 | image_tag: loading: 'lazy', alt: c[2] }}{%- elsif images[c[4]] != blank -%}{{ images[c[4]] | image_url: width: 500 | image_tag: loading: 'lazy', alt: c[2] }}{%- endif -%}
+<span class="hm-card__band">{{ c[1] }}</span><h3>{{ c[2] }}</h3><p>{{ c[3] }}</p>
+{%- if p != blank and p.available -%}
+{%- assign v = p.selected_or_first_available_variant -%}
+<p class="hm-card__price">{{ v.price | money }}{% if v.compare_at_price > v.price %}<s>{{ v.compare_at_price | money }}</s>{% endif %}</p>
+<form method="post" action="/cart/add"><input type="hidden" name="id" value="{{ v.id }}"><input type="hidden" name="return_to" value="/checkout"><button class="bq-button" type="submit">{% if mode == 'upsell' %}Dazu kaufen{% else %}Jetzt kaufen{% endif %}</button></form>
+<a class="bq-link" href="{{ p.url }}" style="font-size:.85rem;text-align:center">Mehr erfahren</a>
+{%- else -%}<div class="hm-soon">Bald verfügbar</div>{%- endif -%}
+</article>
+{%- endfor -%}
+</div>
+{%- endfor -%}
+</div></section>

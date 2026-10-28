@@ -1,0 +1,9 @@
+# große Rohbilder (die JPGs reichen für Buch und Shop)
+durchschicht/buch/ph/*.png
+**/shot_*.png
+durchschicht/web/shot_*.png
+durchschicht/theme/shot_*.png
+node_modules/
+__pycache__/
+*.PLACEHOLDER
+*.bak*

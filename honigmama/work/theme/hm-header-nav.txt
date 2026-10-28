@@ -1,0 +1,1 @@
+<a href="{{ routes.root_url }}#hm-phasen">Die Bücher</a><a href="{{ routes.root_url }}#hm-reihe">Pakete</a><a href="{{ routes.root_url }}#hm-fragen">Fragen</a><a href="/pages/contact">Kontakt</a>

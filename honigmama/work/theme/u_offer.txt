@@ -1,0 +1,167 @@
+{%- comment -%}
+  Paket-Angebot (Festpreis-Pakete, kein Rabatt – Buchpreisbindung).
+  mode: 'cart'    -> im Warenkorb, tauscht Einzelbände gegen das Paket
+  mode: 'product' -> unter dem Kauf-Button, Parameter current: product.handle
+{%- endcomment -%}
+{%- liquid
+  assign h1 = 'honigmama-band-1'
+  assign h2 = 'honigmama-band-2'
+  assign h3 = 'honigmama-band-3'
+  assign hp = 'honigmama-paket-band-1-2'
+  assign hk = 'honigmama-komplett'
+  assign p1 = all_products[h1]
+  assign p2 = all_products[h2]
+  assign p3 = all_products[h3]
+  assign pp = all_products[hp]
+  assign pk = all_products[hk]
+  assign v1 = p1.selected_or_first_available_variant
+  assign v2 = p2.selected_or_first_available_variant
+  assign v3 = p3.selected_or_first_available_variant
+  assign vp = pp.selected_or_first_available_variant
+  assign vk = pk.selected_or_first_available_variant
+
+  assign has1 = false
+  assign has2 = false
+  assign has3 = false
+  assign hasp = false
+  assign hask = false
+  assign mode = mode | default: 'product'
+  if mode == 'cart'
+    for line in cart.items
+      case line.product.handle
+        when h1
+          assign has1 = true
+        when h2
+          assign has2 = true
+        when h3
+          assign has3 = true
+        when hp
+          assign hasp = true
+          assign has1 = true
+          assign has2 = true
+        when hk
+          assign hask = true
+      endcase
+    endfor
+  else
+    case current
+      when h1
+        assign has1 = true
+      when h2
+        assign has2 = true
+      when h3
+        assign has3 = true
+      when hp
+        assign hasp = true
+        assign has1 = true
+        assign has2 = true
+      when hk
+        assign hask = true
+    endcase
+  endif
+
+  assign offer = ''
+  unless hask
+    if has1 and has2 and has3
+      assign offer = 'k'
+    elsif has1 and has2
+      assign offer = 'k'
+    elsif has3
+      assign offer = 'k'
+    elsif has1 or has2
+      assign offer = 'p'
+    endif
+  endunless
+  if offer == 'p' and pp.available != true
+    assign offer = ''
+  endif
+  if offer == 'k' and pk.available != true
+    assign offer = ''
+  endif
+
+  # Einzelpreis-Summe der Bände im Paket und schon vorhandener Anteil
+  if offer == 'p'
+    assign pack = pp
+    assign pv = vp
+    assign single_sum = v1.price | plus: v2.price
+    assign pack_name = 'Band 1 + 2'
+    assign missing = ''
+    unless has1
+      assign missing = 'Band 1 · Was darf ich essen?'
+    endunless
+    unless has2
+      assign missing = 'Band 2 · Vorkochen fürs Wochenbett'
+    endunless
+  elsif offer == 'k'
+    assign pack = pk
+    assign pv = vk
+    assign single_sum = v1.price | plus: v2.price | plus: v3.price
+    assign pack_name = 'Band 1 + 2 + 3'
+    assign missing = ''
+    unless has1
+      assign missing = missing | append: 'Band 1, '
+    endunless
+    unless has2
+      assign missing = missing | append: 'Band 2, '
+    endunless
+    unless has3
+      assign missing = missing | append: 'Band 3, '
+    endunless
+    assign missing = missing | remove_last: ', '
+  endif
+
+  assign owned_sum = 0
+  if has1 and hasp == false
+    assign owned_sum = owned_sum | plus: v1.price
+  endif
+  if has2 and hasp == false
+    assign owned_sum = owned_sum | plus: v2.price
+  endif
+  if has3
+    assign owned_sum = owned_sum | plus: v3.price
+  endif
+  if hasp
+    assign owned_sum = owned_sum | plus: vp.price
+  endif
+  assign extra = pv.price | minus: owned_sum
+  assign saving = single_sum | minus: pv.price
+-%}
+{%- if offer != '' -%}
+<style>
+.hm-offer{border:2px solid #b4532f;background:#fff7ef;border-radius:16px;padding:16px;margin:16px 0;display:grid;grid-template-columns:84px 1fr;gap:14px;align-items:center;text-align:left}
+.hm-offer img{width:84px;height:84px;object-fit:cover;border-radius:10px;display:block}
+.hm-offer__tag{display:inline-block;background:#b4532f;color:#fff;font:700 11px/1 var(--font-body--family,Arial,sans-serif);letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:99px;margin-bottom:6px}
+.hm-offer h3{margin:0 0 4px;font-size:1.05rem;line-height:1.25}
+.hm-offer p{margin:0 0 8px;font-size:.9rem;line-height:1.45}
+.hm-offer__price{font-weight:700}.hm-offer__price s{opacity:.55;font-weight:500;margin:0 6px}
+.hm-offer__save{color:#2f6b3a;font-weight:600}
+.hm-offer button,.hm-offer .bq-button{width:100%;margin-top:4px}
+.hm-offer__small{font-size:.75rem;opacity:.7;margin-top:6px}
+@media(max-width:480px){.hm-offer{grid-template-columns:64px 1fr}.hm-offer img{width:64px;height:64px}}
+</style>
+<div class="hm-offer" data-hm-offer>
+  {%- if pack.featured_image -%}{{ pack.featured_image | image_url: width: 200 | image_tag: loading: 'lazy', alt: pack.title }}{%- endif -%}
+  <div>
+    <span class="hm-offer__tag">Im Paket günstiger</span>
+    {%- if mode == 'cart' -%}
+      <h3>Mach ein Paket draus: {{ pack_name }}</h3>
+      <p>{% if missing != '' %}Hol dir {{ missing }} dazu – {% endif %}für nur <strong>{{ extra | money }} mehr</strong> bekommst du {{ pack_name }} zum Paketpreis.</p>
+    {%- else -%}
+      <h3>{{ pack_name }} zusammen: {{ pack.title }}</h3>
+      <p>{% if missing != '' %}Mit {{ missing }} dazu – {% endif %}als Paket für {{ pv.price | money }}.</p>
+    {%- endif -%}
+    <p class="hm-offer__price">{{ pv.price | money }}<s>{{ single_sum | money }}</s><span class="hm-offer__save">Du sparst {{ saving | money }}</span></p>
+    {%- if mode == 'cart' -%}
+      <form method="post" action="{{ routes.cart_update_url }}">
+        {%- for line in cart.items -%}{%- if line.product.handle == h1 or line.product.handle == h2 or line.product.handle == h3 or line.product.handle == hp -%}<input type="hidden" name="updates[{{ line.key }}]" value="0">{%- endif -%}{%- endfor -%}
+        <input type="hidden" name="updates[{{ pv.id }}]" value="1">
+        <button class="bq-button" type="submit">Gegen das Paket tauschen</button>
+      </form>
+      <p class="hm-offer__small">Deine Bände im Warenkorb werden durch das Paket ersetzt. Alle Bände als PDF in einer Datei.</p>
+    {%- else -%}
+      <form method="post" action="/cart/add"><input type="hidden" name="id" value="{{ pv.id }}"><input type="hidden" name="return_to" value="/checkout"><button class="bq-button" type="submit">Paket kaufen</button></form>
+      <p class="hm-offer__small">Fester Paketpreis · sofort als PDF · kein Abo</p>
+    {%- endif -%}
+  </div>
+</div>
+{%- endif -%}

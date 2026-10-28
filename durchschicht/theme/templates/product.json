@@ -1,0 +1,11 @@
+{
+ "sections": {
+  "main": {
+   "type": "ds-product",
+   "settings": {}
+  }
+ },
+ "order": [
+  "main"
+ ]
+}
