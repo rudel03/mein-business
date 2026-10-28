@@ -86,3 +86,63 @@ Ergebnis als ausführlicher Bericht in `essensplaner/recherche/` (Markdown + PDF
 - Regeln aus `../CLAUDE.md` gelten: Higgsfield für Content, keine unbelegten Aussagen, keine Heil- oder Abnehmversprechen, Live-Themes nie direkt ändern, Double-Opt-in.
 - Bei Entscheidungen, die nur der Inhaber treffen kann (Geld, Rechtsform, Name, Preis), Optionen mit Empfehlung vorlegen und fragen. Alles andere selbst entscheiden und dokumentieren.
 - Am Ende jeder Phase eine kurze Zusammenfassung für den Inhaber (Deutsch, verständlich, ohne Fachchinesisch) plus die Dateien.
+
+---
+
+## 8. Arbeite wie ein Expertenteam
+
+Jede Aufgabe wird von der passenden Rolle erledigt und von mindestens einer **anderen** Rolle geprüft, bevor sie als fertig gilt. Für parallele Recherche und unabhängige Prüfungen Sub-Agenten mit der jeweiligen Rolle einsetzen. Prüfer bekommen nur das Ergebnis, nicht den Lösungsweg, damit sie unvoreingenommen sind.
+
+| Rolle | Verantwortung | Prüft auch |
+|---|---|---|
+| **Marktforscher:in** | Marktgrößen, Zielgruppen, Schmerzpunkte, Zitate, Quellen | Positionierung |
+| **Wettbewerbsanalyst:in** | Konkurrenz, Preise, Bewertungen, Ads, Lücken | Pricing, Angles |
+| **Produktmanager:in** | Varianten, Funktionsumfang, MVP-Schnitt, Prioritäten, Roadmap | alles gegen den Nutzen für Kunden |
+| **Ernährungsfachkraft (Ökotrophologie)** | Rezepte, Nährwerte, Makro-Logik, Allergene, Lagerung (BfR/BZfE/DGE) | Marketing-Aussagen auf fachliche Richtigkeit |
+| **Jurist:in (IT-, Wettbewerbs-, Lebensmittelrecht)** | Gründung, Abo-Recht, DSGVO (Art. 9), Health-Claims, UWG, Marken | jeden Werbetext, jede Landingpage, jeden Checkout |
+| **Steuerberater:in** | Rechtsform, USt/OSS, Kleinunternehmer, Kosten | Unit Economics |
+| **Finanzanalyst:in** | Unit Economics, CAC/LTV, Szenarien, Break-even | Pricing |
+| **Brand-Strateg:in & Designer:in** | Namen, Markenbücher, Logos, Bildstil je Nische | UI, Ads, Landingpages (Design-Kritik) |
+| **UX-Designer:in** | Onboarding, Formulare, Plan-Darstellung, Handy zuerst, Barrierefreiheit | Produkt-Screenshots |
+| **Software-Architekt:in & Entwickler:in** | Architektur, Datenmodell, Planer-Algorithmus, Bezahlung, Tests, Sicherheit | technische Machbarkeit aller Ideen |
+| **QA-Tester:in** | automatische Tests, Grenzfälle (keine Geräte, Mini-Budget, widersprüchliche Makros, Allergien), Handy/Desktop | jede Version vor der Abnahme |
+| **Performance-Marketer:in** | Angles, Creatives, Zielgruppen, Teststruktur, KPIs | Landingpages auf Conversion |
+| **Copywriter:in** | alle Texte auf Deutsch, Tonalität je Nische | — |
+| **SEO-Spezialist:in** | Keywords je Nische, Seitenstruktur, Inhalte | — |
+| **Advocatus Diaboli** | sucht am Ende jeder Phase die 5 größten Schwachstellen und Gründe, warum es scheitern könnte | alles |
+
+## 9. Qualitätsregeln (Definition of Done)
+
+**Recherche (Phase A) ist fertig, wenn:**
+- jede Zahl eine Quelle mit Link und Datum hat und unsichere Zahlen als Schätzung markiert sind,
+- je Nische mindestens 15 echte Kundenzitate/Schmerzpunkte mit Fundstelle gesammelt sind,
+- mindestens 15 Wettbewerber in einer Vergleichstabelle stehen,
+- ein Faktencheck-Agent stichprobenartig 20 % der Quellen geprüft hat,
+- der Advocatus Diaboli seine Einwände geliefert hat und diese beantwortet sind,
+- es eine Entscheidungsvorlage für den Inhaber mit klarer Empfehlung gibt.
+
+**Strategie & Marke (Phase B) ist fertig, wenn:**
+- jeder Name per DPMA/EUIPO und RDAP geprüft ist,
+- jede Variante ein eigenes Markenbuch, Logo-Dateien und 3 Beispielbilder (Higgsfield) hat,
+- jeder Angle mit einem Recherche-Beleg verknüpft ist,
+- Jurist:in und Ernährungsfachkraft alle Claims freigegeben haben.
+
+**Produkt (Phase C) ist fertig, wenn:**
+- automatische Tests für Planer-Logik, Einkaufsliste, Makros und Budget laufen und grün sind,
+- Grenzfälle getestet sind und es keine Abstürze oder leeren Pläne gibt (bei Unmöglichem eine verständliche Meldung),
+- Screenshots (Handy + Desktop) aller Hauptseiten geprüft sind und es keinen horizontalen Scroll gibt,
+- Lighthouse Performance und Barrierefreiheit jeweils mindestens 90 erreichen,
+- Kündigungsbutton, Widerruf, Datenschutz und Impressum vorhanden sind (Entwürfe, vom Inhaber prüfen lassen),
+- keine Rezept-Kombination die Lagerregeln verletzt (wie bei DURCHSCHICHT).
+
+**Launch (Phase D) ist fertig, wenn:**
+- je Variante Landingpage, mindestens 8 Bild-Creatives, mindestens 3 Video-Creatives, Anzeigentexte und Zielgruppen bereitstehen,
+- Tracking (Pixel/Conversions-API) und Testkauf funktionieren,
+- ein Launch-Kalender mit Verantwortlichkeiten (Claude / Inhaber) existiert.
+
+## 10. Laufende Dokumentation in `essensplaner/`
+
+- `CLAUDE.md`: Stand, offene Aufgaben, Fallstricke (nach jeder Runde aktualisieren).
+- `ENTSCHEIDUNGEN.md`: jede wichtige Entscheidung mit Datum, Optionen, Begründung und wer entschieden hat.
+- `RISIKEN.md`: Risiko, Wahrscheinlichkeit, Auswirkung, Gegenmaßnahme.
+- `recherche/`, `marke/`, `app/`, `marketing/`, `recht/`, `finanzen/` als Unterordner.
