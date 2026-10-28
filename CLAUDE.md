@@ -7,7 +7,7 @@ Wird beim Start jeder Sitzung gelesen. Ein Repository, ein Ordner pro Projekt. P
 |---|---|---|---|
 | Honigmama / BeeQueen (Koch-E-Books Schwangerschaft & erstes Jahr) | `honigmama/` | jctx4r-bu.myshopify.com | live; Entwurf mit Verbesserungen wartet aufs Veröffentlichen |
 | DURCHSCHICHT (E-Book für Schichtarbeit) | `durchschicht/` | mystore | Buch + Theme fertig, Upload in den Store offen |
-| Essensplaner (Idee) | `essensplaner/` (noch anlegen) | – | Idee: Planer nach Geräten, Budget, Laden, Zielgruppe (Schicht, Montage/Unterkunft, Fitness/Makros) |
+| Essensplaner | `essensplaner/` | – | Auftrag steht in `essensplaner/AUFTRAG.md`, Recherche noch nicht begonnen |
 
 ## Arbeitsweise
 - **Eine Sitzung pro Projekt** (der Kontext bleibt sauber). Andere Projektordner nur lesen, wenn sie relevant sind.
