@@ -84,7 +84,9 @@ Ergebnis als ausführlicher Bericht in `essensplaner/recherche/` (Markdown + PDF
 
 - Ordner `essensplaner/` mit eigener `CLAUDE.md` (Stand, Entscheidungen, Fallstricke) anlegen und **nach jeder Arbeitsrunde committen und pushen**.
 - Regeln aus `../CLAUDE.md` gelten: Higgsfield für Content, keine unbelegten Aussagen, keine Heil- oder Abnehmversprechen, Live-Themes nie direkt ändern, Double-Opt-in.
-- Bei Entscheidungen, die nur der Inhaber treffen kann (Geld, Rechtsform, Name, Preis), Optionen mit Empfehlung vorlegen und fragen. Alles andere selbst entscheiden und dokumentieren.
+- **Autonom arbeiten:** Der Inhaber lässt die Arbeit (z. B. über Nacht) laufen. Alle Entscheidungen – auch Name, Preis, Positionierung, Tech-Stack, Rechtsform-Empfehlung – selbst treffen, nicht auf Antworten warten. Jede Entscheidung in `ENTSCHEIDUNGEN.md` mit den 2–3 besten Alternativen und Begründung festhalten, damit der Inhaber sie später leicht ändern kann. Entscheidungen so bauen, dass sie austauschbar bleiben (z. B. Name und Preis zentral konfigurierbar).
+- **Grenzen der Autonomie (nur vorbereiten, nicht ausführen):** kein Geld ausgeben (außer Higgsfield-Generierungen im üblichen Rahmen), keine Konten anlegen, keine Domains oder Marken registrieren, nichts veröffentlichen oder live schalten, keine Anzeigen starten, keine Mails versenden. Solche Schritte als Checkliste in `essensplaner/FUER_DICH.md` sammeln.
+- Wenn ein Schritt blockiert ist, ihn notieren und mit dem nächsten weitermachen statt zu warten.
 - Am Ende jeder Phase eine kurze Zusammenfassung für den Inhaber (Deutsch, verständlich, ohne Fachchinesisch) plus die Dateien.
 
 ---
