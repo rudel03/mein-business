@@ -257,11 +257,84 @@ Quelle: EHI Retail Institute / Berechnungen Lebensmittel Zeitung, Top 25 LEH 202
 4. **Refund-Risiko:** H&F hat überdurchschnittlich viele Erstattungen. Ehrliche Erwartungen setzen und kein Abnehmversprechen machen (HWG/Health-Claims).
 
 
-## 7. TAM/SAM/SOM je Variante
-(in Arbeit)
+## 7. TAM/SAM/SOM je Variante (alle Werte **Schätzung**)
+
+**Gemeinsame Annahmen (offen gelegt):**
+- **Preis/ARPU:** 36 € pro zahlendem Nutzer und Jahr (z. B. Jahresabo 29,99–39,99 € plus Monatsabo-Anteil). Abgeleitet aus Chefkoch PLUS (30–50 €/Jahr) und dem RevenueCat-H&F-Median (ca. 40 US$/Jahr). Für Fitness: 40 €.
+- **TAM** = alle Personen/Haushalte der Zielgruppe × ARPU (theoretische Obergrenze, „alle zahlen“).
+- **SAM** = der Teil, der das Problem hat, selbst kocht, digital erreichbar ist und dessen Sprache wir abdecken.
+- **SOM** = realistisch gewinnbare zahlende Nutzer in **3 Jahren** mit kleinem Marketingbudget (Meta-Ads, SEO, Kooperationen). Abgeleitet aus Freemium-Conversion ca. 2 % (RevenueCat) und einer erreichbaren Reichweite im fünf- bis niedrigen sechsstelligen Bereich.
+- AT/CH als Aufschlag: AT etwa 10 %, CH etwa 10 % der DE-Bevölkerung (eigene Faustregel, nicht geprüft), CH mit höherer Kaufkraft.
+
+### Variante 1: Montage / Unterkunft
+| Ebene | Herleitung | Personen | € pro Jahr |
+|---|---|---|---|
+| TAM DE | Kern 0,47–0,82 Mio. (Abschnitt 2.4) × 36 € | 0,47–0,82 Mio. | **17–30 Mio. €** |
+| TAM DACH | + ca. 20 % (AT/CH grob) | 0,56–0,98 Mio. | 20–35 Mio. € |
+| SAM | 50–60 % des DE-Kerns: kocht selbst (mind. Wasserkocher/Mikrowelle/Platte), Smartphone, Sprache DE (später PL/RO) | 0,24–0,49 Mio. | **8,5–17,7 Mio. €** |
+| SOM (3 Jahre) | 1–2 % des SAM | 2.400–9.800 Zahlende | **ca. 90.000–350.000 €/Jahr** |
+
+Zusätzlicher Hebel (nicht eingerechnet): **B2B-Lizenzen** für Bau- und Montagefirmen, Personaldienstleister und Monteurzimmer-Vermieter (Planer als Gastgeber-Service). 4.273 Entsendebetriebe und 72.000 inländische Baubetriebe (SOKA-BAU 2024/25) sind adressierbar. Dazu gibt es keine Zahlungsbereitschaftsdaten (**Lücke**).
+
+### Variante 2: Fitness / Makros
+| Ebene | Herleitung | Personen | € pro Jahr |
+|---|---|---|---|
+| Basis | Trainierende DE 13,83 Mio. (inkl. Aggregatoren) + AT 1,27 Mio. + CH 1,37 Mio. Mitglieder | ca. 16,5 Mio. | – |
+| TAM DACH | 15–25 % makro-/aufbauorientiert (Annahme) × 40 € | 2,5–4,1 Mio. | **99–165 Mio. €** |
+| SAM | 20–30 % davon wollen Plan + Einkaufsliste statt nur Tracking und sind nicht fest an YAZIO/MyFitnessPal gebunden (Annahme) | 0,5–1,2 Mio. | **20–49 Mio. €** |
+| SOM (3 Jahre) | 0,2–0,5 % des SAM (starker Wettbewerb: YAZIO ist Umsatz-Nr. 1 in DE) | 1.000–6.000 Zahlende | **ca. 40.000–240.000 €/Jahr** |
+
+Plausibilitätscheck: Der Marktführer YAZIO setzt in DE geschätzt 15–25 Mio. US$ pro Jahr um (Abschnitt 1). Das SAM liegt in derselben Größenordnung. Der Markt existiert also, ist aber besetzt.
+
+### Variante 3: Weitere Nische (Platzhalter, Auswahl in `04_Nischen_Vergleich.md`)
+Rechenschema analog. Beispiel **Schichtarbeitende** (Daten aus Abschnitt 4):
+| Ebene | Herleitung | Personen | € pro Jahr |
+|---|---|---|---|
+| TAM DE | 5–6 Mio. Schichtarbeitende × 36 € | 5–6 Mio. | 180–216 Mio. € |
+| SAM | harter Kern Nacht/Wechselschicht 2–3 Mio. × 40 % digital-affin und mit Planungsbedarf (Annahme) | 0,8–1,2 Mio. | 29–43 Mio. € |
+| SOM (3 Jahre) | 0,3–0,8 % des SAM, Synergie mit DURCHSCHICHT-Kundenliste | 2.400–9.600 | ca. 86.000–345.000 €/Jahr |
+
+### Variante 4: Allgemein
+| Ebene | Herleitung | Einheit | € pro Jahr |
+|---|---|---|---|
+| TAM DE | 41,0 Mio. Haushalte × 80 % kochen mind. 2–3×/Woche (Ernährungsreport 2025) × 36 € | 32,8 Mio. Haushalte | **ca. 1,18 Mrd. €** |
+| TAM DACH | + ca. 20 % | ca. 39 Mio. | ca. 1,4 Mrd. € |
+| SAM | 20 % nutzen bereits eine App zur Einkaufsplanung (BVLH 2020) | ca. 6,6 Mio. Haushalte | **ca. 236 Mio. €** |
+| SOM (3 Jahre) | 0,05–0,1 % des SAM (Massenmarkt, gegen Chefkoch, Kochboxen, kostenlose Prospekt-Apps) | 3.300–6.600 Zahlende | **ca. 120.000–240.000 €/Jahr** |
+
+**Gesamtbild:** Die SOMs liegen bei allen Varianten in derselben Größenordnung (**ca. 0,1–0,35 Mio. € Jahresumsatz nach 3 Jahren**). Begrenzt wird nicht die Marktgröße, sondern die **Reichweite pro Werbe-Euro**. Nischen (Montage, Schicht) haben kleinere TAMs, aber schärfere Botschaften, weniger Wettbewerb und eigene Kanäle (Monteurzimmer-Portale, Personaldienstleister, DURCHSCHICHT-Kunden). Das spricht für eine Plattform mit Nischen-Landingpages, deren Conversion getestet wird. Alle SOM-Werte sind Planungshypothesen und müssen per Landingpage-/Ads-Test validiert werden.
+
 
 ## 8. Wichtigste Erkenntnisse
-(in Arbeit)
+
+1. **Der Bedarf „Was koche ich?“ hat Geldwert.** Allein HelloFresh setzt in Deutschland **476 Mio. €** um (2025, −4,4 %). Die Kochbox schrumpft, während die Preisorientierung beim Einkauf seit 2020 von 46 % auf **59 %** gestiegen ist (Ernährungsreport 2025). Ein günstiger Planer für Discounter-Einkäufe trifft diesen Trend.
+2. **Der Handel ist hoch konzentriert.** Edeka (inkl. Netto), Schwarz (Lidl, Kaufland), Rewe (inkl. Penny) und Aldi haben ca. **24.900 Filialen** und **ca. 190 Mrd. €** Umsatz (2024). Mit diesen sieben Ketten ist praktisch der ganze Markt abgedeckt. Die Discounter machen etwa die Hälfte aus.
+3. **Die Montage-Zielgruppe ist real, aber nicht amtlich gezählt.** Belegt sind: 607.000 gewerbliche Bauarbeitnehmer, 65.000 entsandte Bauarbeitnehmer (2025, vor allem aus PL, AT, SK, RO, CZ), 535.000 Berufskraftfahrer (32 % Ausländer), 622.000 Leiharbeitnehmer. Daraus geschätzt ergeben sich **ca. 0,5–0,8 Mio. Menschen**, die wochenweise mit eingeschränkter Küche leben. **Mehrsprachigkeit (PL/RO)** wäre ein echtes Alleinstellungsmerkmal.
+4. **Spesen sind ein rechenbares Verkaufsargument.** 14 €/28 € Verpflegungspauschale gelten 2026 unverändert. Wer davon einen Teil spart, hat einen klaren Nutzen. Der Vorteil muss mit einer transparenten Beispielrechnung belegt werden (UWG).
+5. **Fitness ist groß und zahlungsbereit, aber besetzt.** 12,36 Mio. Studiomitglieder (+5,6 %) zahlen im Schnitt 48,55 €/Monat. YAZIO ist die umsatzstärkste Health-&-Fitness-App in DE. Eine Differenzierung gelingt nur über „Makros + Budget + Geräte + Einkaufsliste für meinen Discounter“, nicht über Tracking.
+6. **Freemium verdient wenig, Testphase mit Paywall verdient mehr.** Freemium wandelt ca. 2 % der Installationen in Zahlende um, ein harter Paywall mit Testphase 10–12 % (RevenueCat 2025/2026). Health & Fitness: Trial→Paid ca. 40 %, Jahresabos gewinnen Anteile (61 % des Umsatzes). Daraus folgen ein Jahresabo von **30–50 €** als Preisanker und ein Monatsabo von 5–10 €.
+7. **Kochen ist Alltag, Zeit ist knapp.** 43 % kochen fast täglich, weitere 37 % 2–3-mal pro Woche. 57 % wollen „einfach und schnell“ (2015: 45 %), bei Alleinlebenden sind es 64 %. 42 % aller Haushalte sind Einpersonenhaushalte. Portionierung für eine Person und Reste-Logik sind Pflicht.
+8. **Die Marktgröße ist nicht der Engpass, die Reichweite ist es.** Die realistischen 3-Jahres-SOMs liegen bei allen Varianten bei ca. 0,1–0,35 Mio. € Jahresumsatz. Nischen mit eigenen Kanälen (Monteurzimmer-Portale, Personaldienstleister, DURCHSCHICHT-Kunden) senken die Akquisekosten.
+
 
 ## 9. Offene Lücken
-(in Arbeit)
+
+| Lücke | Warum wichtig | Wie schließen |
+|---|---|---|
+| Keine amtliche Zahl zu Beschäftigten mit auswärtiger Übernachtung (Monteure) | Kern der Variante 1 | BIBB/BAuA-Erwerbstätigenbefragung (Arbeitsort/Übernachtung) auswerten; Anfrage bei BA-Statistik; Umfrage über Monteurzimmer-Portale |
+| Aktuelle Anbieter-/Bettenzahl Monteurzimmer (monteurzimmer.de, HRS u. a.) | Kanal- und Marktgröße | Portale direkt anfragen; Listings zählen (nur öffentlich, AGB beachten) |
+| Fernpendler/Wochenendpendler mit Zweitwohnung (aktuell) | Erweiterte Zielgruppe | BBSR-Pendleratlas, Destatis Mikrozensus-Sonderauswertung |
+| Entsandte außerhalb des Baus (Montage Industrie, Fleisch, Logistik) | Sprachen-Strategie | DVKA/GKV-Spitzenverband A1-Statistik, EU-Kommission „Posting of workers“-Bericht |
+| Anteil Kraftsport/Makro-Tracking unter Studiomitgliedern | Variante 2 | DSSV-Vollstudie (für Presse auf Anfrage), eigene Umfrage mit Studios |
+| Aktuelle Nutzung von Kalorien-/Ernährungs-Apps in DE | Variante 2/4 | Statista-Umfrage (Paywall), Bitkom anfragen, eigene Umfrage |
+| Umsatz Ernährungs-/Meal-Planning-Apps DE | TAM-Abgleich | Statista Market Insights (Paywall), Sensor-Tower-Daten (kostenpflichtig) |
+| Meal-Prep-Quote, Google-Trends-Verlauf „Meal Prep“, „Monteur kochen“, „Essensplan“ | Nachfrage und Saisonalität | Google Trends manuell (geo=DE, 5 Jahre), Keyword-Planer |
+| Supplement-/Sportnahrungsmarkt mit sicherem Jahr | Zahlungsbereitschaft Fitness | Lebensmittelverband-/AK-NEM-Pressemitteilung im Original prüfen |
+| Web-/PWA-Conversion-Benchmarks (statt App-Store) | Unit Economics | Stripe-/Paddle-Benchmarks, eigene Tests |
+| Zahlungsbereitschaft Arbeitgeber (B2B) für Montage-Variante | möglicher größerer Hebel | 10–20 Gespräche mit Bau-/Montagefirmen und Personaldienstleistern |
+| AT/CH-Zahlen zu Haushalten, Bau, Monteuren | DACH-Ausbau | Statistik Austria, BFS, WKO und Baumeisterverband direkt abfragen |
+| Gesetzeswortlaute (§ 9 Abs. 4a EStG) und Destatis-Seiten nur über Sekundärquellen/Suchauszüge geprüft | Rechtssicherheit der Spesen-Aussagen | Vor Veröffentlichung im Original prüfen |
+
+## Quellenhinweis zur Arbeitsweise
+- Direkt gelesen (PDF/Seite): DSSV Eckdaten 2026 und DACH 2025, BMLEH Ernährungsreport 2025, SOKA-BAU Geschäftsbericht 2025, HelloFresh Annual Report 2025, EHI/LZ Top 25 LEH 2025, Destatis PM 019/2026, UBA Lebensmittelabfälle, RevenueCat SOSA 2025, RevenueCat Blog 2026, Adapty H&F-Benchmarks, Sensor Tower Top 5 DE Q2/2025.
+- Alle anderen Angaben stammen aus Suchauszügen oder Sekundärquellen und sind in der Spalte „Sicherheit“ entsprechend markiert.

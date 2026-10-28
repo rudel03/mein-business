@@ -116,7 +116,7 @@
 | B10 | „grade für Familien mit geringen Geld Mitteln könnte sich das lohnen. Aber … Quizmaster spielen“ | App Store, mise (1★) | https://apps.apple.com/de/app/id6777471316 | 24.10.2026 | Familie/Budget/Onboarding |
 | B11 | „Leider sind die Rezepte nicht wirklich brauchbar. … 5 mal die Woche Reis finde ich etwas viel“ | App Store, mise (2★) | https://apps.apple.com/de/app/id6777471316 | 03.09.2026 | Abwechslung/KI-Qualität |
 | B12 | „Ich würde die App gerne nutzen, wenn ich sie mit Familienmitgliedern teilen könnte.“ | App Store, mise (1★) | https://apps.apple.com/de/app/id6777471316 | 25.09.2026 | Haushalt teilen |
-| B13 | „Ich mag hier besonders die ‚Was koche ich heute' Funktion.“ … „Ich bin nicht bereit dafür zu zahlen.“ | App Store, Chefkoch (1★) | https://apps.apple.com/de/app/id478618165 | 16.10.2026 | Inspiration/Zahlungsunwille |
+| B13 | „Ich bin nicht bereit dafür zu zahlen. … Ich mag hier besonders die ‚Was koche ich heute' Funktion.“ | App Store, Chefkoch (1★) | https://apps.apple.com/de/app/id478618165 | 16.10.2026 | Inspiration/Zahlungsunwille |
 | B14 | „Werbung ohne Ende, man hat das Gefühl ist es ein mobile Game“ | App Store, Chefkoch (1★) | https://apps.apple.com/de/app/id478618165 | 26.10.2026 | Werbung |
 | B15 | „Ich zahle gerne einen akzeptablen Einmalbetrag … aber Apps dauerhaft mit Abos zu belegen … geht mir langsam zu weit“ | App Store, Chefkoch (1★) | https://apps.apple.com/de/app/id478618165 | 10.10.2026 | Abo-Müdigkeit |
 | B16 | „dann nutz ich halt einfach ne Ki.“ | App Store, Chefkoch (1★) | https://apps.apple.com/de/app/id478618165 | 10.10.2026 | KI als Alternative |
@@ -149,3 +149,63 @@
 
 *42 Einträge aus 13 Quellen.*
 
+### B2. Top-10-Schmerzpunkte allgemeine Nutzer
+
+| # | Schmerzpunkt | Belege | Konfidenz |
+|---|---|---|---|
+| 1 | **Abo- und Werbe-Müdigkeit:** „nicht bereit zu zahlen“, Einmalbetrag lieber, Werbung „wie mobile Game“ | B13–B15, B22, B29 und Dutzende weitere Chefkoch-/KptnCook-Rezensionen | Hoch |
+| 2 | **Die tägliche Frage „Was essen wir heute?“** | B1, B13, B36, B37, B39 | Hoch (App Store + gutefrage) |
+| 3 | **Die Supermarkt-Zuordnung muss stimmen.** Zutaten, die es im gewählten Markt nicht gibt, zerstören das Vertrauen sofort. | B2, B3 (Wettbewerber mise) | Mittel (zwei unabhängige Rezensenten, ein Produkt), aber sehr hohe Intensität |
+| 4 | **Kosten unrealistisch:** halbe Avocado berechnet, Angebote nicht berücksichtigt, Budget-Untergrenze zu hoch | B4, B5, B6 | Mittel |
+| 5 | **Allergien und Diäten werden nicht zuverlässig eingehalten** oder kosten extra | B7, B8, B19 (siehe auch KptnCook: Fleisch trotz vegetarisch) | Hoch |
+| 6 | **Einkaufsliste unzuverlässig und nicht teilbar** (Familie, Partner) | B12, B21, B23, B28 | Hoch |
+| 7 | **Kochbox zu teuer ohne Rabatt, Portionen zu klein, Verpackungsmüll, Abo-Fallen** | B30–B35 | Hoch (Trustpilot + App Store) |
+| 8 | **Abwechslung fehlt, Rezepte wiederholen sich,** KI-Rezepte banal | B11, B18 | Mittel |
+| 9 | **Geräte werden nicht berücksichtigt** (Thermomix-Modell, Mixer, Slow Cooker) | B24, B25, A28 | Mittel |
+| 10 | **Paywall erst nach langem Onboarding / Datenabfrage** wirkt wie Täuschung | B9, B10, B17 | Hoch (mise, Chefkoch, HelloFresh) |
+
+**Kernaussage:** Der Bedarf ist klar („Was essen wir heute?“, Budget-Fragen). mise zeigt, dass das Versprechen „Supermarkt plus Budget plus Plan“ zieht, und an der Umsetzung scheitert: falscher Markt, falsche Preise, missachtete Allergien und eine versteckte Paywall. Vertrauen entsteht über **Genauigkeit** (wirklich bei Aldi erhältlich, echte Packungsgrößen, echte Preise) und **Ehrlichkeit beim Preis**.
+
+### B3. Heutige Workarounds
+- **Chefkoch-Website statt App** („Die Website funktioniert auch so“, Chefkoch 1★, 16.10.2026)
+- **KI-Chatbots fragen** (B16, B20; mise-Rezensent: „Or ask AI for recommendations that fit your budget“, 08.09.2026). Für ein kostenpflichtiges Produkt ist KI die wichtigste kostenlose Konkurrenz.
+- **Rezepte abschreiben** oder in eigener Rezept-App speichern (B22; Nextcloud-Rezepte-App laut Chefkoch-Rezension vom 13.10.2026)
+- **Instagram nach Rezepten durchsuchen** (mise 1★, 08.09.2026)
+- **Feste Rotation von Lieblingsgerichten, Wochenplan und dann Einkaufsliste.** Laut Suchauszügen aus gutefrage wird das empfohlen, ebenso Vorkochen und Einfrieren und kostenlose Händler-Planer (Lidl-Wochenplaner). Wörtliche Zitate waren nicht abrufbar.
+- **Kochbox mit Rabattcodes nutzen und kündigen, sobald der Rabatt endet** (B31, B32)
+
+### B4. Zahlungsbereitschaft (Indizien)
+| Angebot | Preis | Quelle / Reaktion |
+|---|---|---|
+| mise – Essensplaner (direkter Wettbewerber) | 44,99 €/Jahr; auch „34€ im Jahr“ und „10€ pro Monat“ genannt | App Store, Rezensionen 18.10., 09.10., 04.10.2026: „Lächerlich für eine Rezepte-App“ |
+| Kitchen Stories | ca. 40 €/Jahr bzw. 8 €/Monat, Schmerzgrenze laut Nutzer „maximal 3,99 als Jahresabo“ | B22 |
+| Cookidoo (Thermomix) | 60 €/Jahr, ca. 5 €/Monat, „Dürfte günstiger sein“ | B24, Rezension vom 24.08.2026 |
+| HelloFresh | Box 65 € (Rabatt) → 95 € regulär; Erstbuchung 39,49 € | B31, HelloFresh-App 1★ vom 17.06.2026 |
+| Lebensmittelbudget (Kontext) | gutefrage: 400–500 €/Monat wirkt einer Nutzerin „unnormal“; ein Student will unter 65 €/Woche | B40, B6 |
+
+**Deutung:** Allgemeine Nutzer haben eine **niedrige Schmerzgrenze für Rezept-Apps** (3,99–40 €/Jahr) und viele lehnen ein Abo grundsätzlich ab. Bezahlt wird für **Ersparnis**: Eine Kochbox kostet 40–95 € pro Woche und wird trotzdem gekauft, weil sie Planung und Einkauf abnimmt. Ein Planer muss deshalb mit **messbarer Ersparnis beim Einkauf** argumentieren, die belegbar sein muss (UWG), und nicht mit „mehr Rezepten“.
+
+### B5. Vokabular der Zielgruppe
+„Was essen wir heute?“, „Was koche ich heute“, „kein Plan was ich heute kochen soll“, „Wochenplan“ / „Wocheneinkauf“, „Einkaufsliste“, „abhaken“, „Angebote“, „Rabattcode“, „Abo“ / „Abo-Falle“ / „Abzocke“, „Einmalbetrag“, „Werbung ohne Ende“, „Konto anlegen“, „Datenschutz“, „Abneigungen“, „Das esse ich nicht“, „Allergiker“, „familientauglich“, „Familienfreigabe“, „teilen mit dem Partner“, „Portion für 2 Personen“, „satt“, „Verpackungsmüll“, „halbe Avocado“, „Kühlschrank-Situation“, „für eine Person“, „geringe Geldmittel“
+
+---
+
+## Projektübergreifende Erkenntnisse für den Essensplaner
+
+1. **Genauigkeit ist das Hauptversprechen, noch vor dem Funktionsumfang.** Echte Produkte im gewählten Markt, echte Packungsgrößen und echte Kosten (B2–B5, A15). Hier ist mise sichtbar gescheitert. Unser Ansatz: Kosten über ganze Packungen rechnen und Reste im Folgerezept einplanen (A29, B4, B27).
+2. **Meal-Prep heißt: wiederholen statt neu erfinden.** Eine Mahlzeit soll mit einem Tipp für mehrere Tage gelten, mit Kochablauf (A2, A23).
+3. **Allergien sind ein harter Filter, kein Vorschlag**, und gehören nicht hinter die Paywall (B7, B8, B19).
+4. **Den Haushalt teilen:** Familie oder Partner mit einer gemeinsamen Liste (A22, B12, B21, B23).
+5. **Ehrliche Preisgestaltung:** Preis vor dem langen Onboarding zeigen, Testphase mit Erinnerung, keine Fake-Rabatt-Glücksräder (B9, Yazio-Rezension „Pseudo-Glücksrad für 75% Rabatt“). Das gilt auch rechtlich (§ 312k BGB, UWG).
+6. **Makros in Gramm**, optional zuschaltbar, damit allgemeine Nutzer nicht von Tracking-Optik abgeschreckt werden (A13).
+7. **Konkurrenz durch KI-Chatbots** ist real (B16, B20). Unser Mehrwert gegenüber einem Chat: verlässliche Preise und Sortiment je Markt, Einkaufsliste, Mengenrechnung, Allergie-Sicherheit.
+8. **Geräte als Filter** (Thermomix-Modell, Airfryer, kein Mixer) wird ausdrücklich vermisst (A28, B25).
+
+## Offene Lücken
+- **Reddit, YouTube und Google Play fehlen ganz** (technisch gesperrt). Diese Quellen sollte der Inhaber manuell im Browser prüfen, am besten: r/de_fitness, r/Kochen, r/Finanzen (Suche „Lebensmittel Budget“), r/MealPrepSunday, r/EatCheapAndHealthy, YouTube-Kommentare unter deutschen Budget-Meal-Prep-Videos, Google-Play-1★ für Yazio, Chefkoch und mise.
+- **gutefrage und Elternforen** (urbia, rund-ums-baby): Nur Fragetitel sind wörtlich belegt, die Antworttexte nicht. Die Inhalte der Antworten stammen aus Suchauszügen und gelten als niedrige Konfidenz.
+- **Familien mit Kindern** sind unterrepräsentiert. Es fehlen Stimmen zu wählerischen Kindern und Brotdosen-Planung, Hauptquelle wären Elternforen und Facebook-Gruppen.
+- **team-andro und andere Fitness-Foren:** nicht erreichbar. Kraftsport-Profis mit Budget-Fokus sind deshalb nur über gutefrage-Titel und App-Rezensionen vertreten.
+- **Zahlungsbereitschaft für Etsy-/Digistore-Meal-Prep-Pläne:** Nur ein Digistore-Beispiel (19,99 €) wurde geprüft. Etsy-Listings und Verkaufszahlen fehlen.
+- **Quantifizierung:** keine Umfrage. Nächster Schritt (Mode 3): 8–10 Kurzinterviews (5 Fitness, 5 Familien) bzw. eine Umfrage mit Fragen zu Lebensmittelbudget, bevorzugtem Markt, Planungsaufwand pro Woche und Preisbereitschaft.
+- **Recency:** Die meisten App-Zitate stammen von 08–10/2026 und sind damit aktuell. Die Eat-This-Much-Zitate sind teils älter (2019–2025).

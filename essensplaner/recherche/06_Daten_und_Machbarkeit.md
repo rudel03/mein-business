@@ -5,7 +5,24 @@ Stand: 28.10.2026 · Abrufdatum aller Links: 28.10.2026, sofern nicht anders ang
 Kennzeichnung: **[belegt]** = mit Quelle geprüft · **[unsicher]** = nicht abschließend geprüft, vor Umsetzung klären · **[Einschätzung]** = fachliche Bewertung ohne Primärquelle. Keine Rechtsberatung.
 
 ## Kurzfazit
-_(wird am Ende ergänzt)_
+
+| Punkt | Empfehlung | Wichtigste Alternative | Machbar? |
+|---|---|---|---|
+| 1 Nährwerte | **BLS 4.0** (CC BY 4.0, kostenlos, ~7.140 Lebensmittel, 138 Nährstoffe), MRI nennen | USDA FDC (CC0), Schweizer DB (kommerziell mit Quellenvermerk), CIQUAL (Lizenz 2025 prüfen) | **ja**, 0 € |
+| 2 Allergene | 14 LMIV-Gruppen + Untergruppen an der **Zutat**, Rezept automatisch, harte Filter, Etikett-Hinweis | – | **ja** |
+| 3 Preise | **Kein Scraping.** Eigener Warenkorb (~150 Zutaten), Preisstufen je Kette, Nutzer überschreibt, „ca.“ + Datum | Affiliate (Rewe/Awin 2–8 %, Picnic) als Erlös, nicht als Datenquelle | **ja**, ca. 18 h Vollerhebung, danach ~1 h/Monat |
+| 4 Lagerung | BfR-Werte als Regelwerk L1–L12, strengere Wahl bei Meal-Prep (2 Tage, Reis 24 h) | – | **ja** |
+| 5 Rezepte | **Eigene Rezepte**: KI-Entwurf → Code-Prüfung → Fachprüfung → Testkochen | Lizenz von Foodbloggern (später) | **ja**, größter Zeitposten (~90–180 h für 120 Rezepte) |
+| 6 Algorithmus | **Hybrid:** Regeln + MILP (HiGHS-WASM, MIT, ~1,2 MB gzip) im Browser; LLM nur für Texte | yalps (MIT, 30 KB) | **ja**, 0 € laufend |
+| 7 Technik | **PWA**, statisch gehostet, Supabase EU optional, **Paddle** (MoR) oder Stripe, eigener Kündigungsbutton, pdfmake | native App später | **ja** |
+
+Größte Unsicherheiten: aktueller iOS-PWA-Stand in der EU (auf Gerät testen), Lizenz CIQUAL 2025, Kündigungsbutton-Umsetzung bei MoR-Anbietern, Hetzner-Preise 2026, OpenAI-Preise, Rechenzeit HiGHS auf alten Handys (Benchmark im MVP).
+
+### Was der Inhaber tun muss
+1. Bei Awin als Publisher registrieren (Rewe, Picnic) – erst nach Launch sinnvoll.
+2. Entscheidung Kleinunternehmer/Regelbesteuerung abwarten (Steuerbericht) → dann Paddle oder Stripe.
+3. Ein iPhone (EU-Konto) für den PWA-Test bereithalten.
+4. Optional: Minijob/Hilfskraft für Preiserhebung einplanen.
 
 ## 1. Nährwertdaten
 
@@ -209,10 +226,142 @@ Anzeige-Text Beispiel: „Hält im Kühlschrank (≤ 7 °C, besser ≤ 5 °C) bi
 Aufwand: ca. 45–90 Minuten pro Rezept inkl. Testkochen [Einschätzung] → 120 Rezepte ≈ 90–180 Stunden. Größter einzelner Zeitposten des MVP.
 
 ## 6. Planungs-Algorithmus
-_(in Arbeit)_
+
+**Empfehlung: Hybrid, mit klarer Arbeitsteilung.**
+1. **Harte Filter regelbasiert** (Code, testbar): Allergene, Diät, Abneigungen, Geräte, Kühlschrank ja/nein, max. Zubereitungszeit, Lagerregeln L1–L12.
+2. **Auswahl per ganzzahliger Optimierung (MILP) im Browser** mit **HiGHS (WebAssembly, MIT)**: Ziel = Kosten minimieren bzw. Makro-Abweichung minimieren, Nebenbedingungen = Budget, Kalorien/Protein-Band, Abwechslung (Rezept max. 2×/Woche), Reste-Verwertung (Packungen aufbrauchen), Meal-Prep-Blöcke (Kochtag + max. 2 Tage).
+3. **Fallback regelbasiert (Greedy + Zufall)**, falls der Solver keine Lösung findet oder das Gerät zu schwach ist; mit klarer Meldung, welche Bedingung gelockert wurde.
+4. **LLM nur optional und nur für Text** (z. B. „Plan erklären“, Rezept-Variation als Entwurf für die Redaktion). **Kein LLM entscheidet über Allergene, Mengen, Nährwerte oder Kosten.**
+
+### 6.1 Solver-Bibliotheken (geprüft über npm-Registry, 28.10.2026)
+
+| Paket | Version | Lizenz | Größe | Eignung |
+|---|---|---|---|---|
+| **highs** (HiGHS, Uni Edinburgh → WebAssembly) | 1.15.4 | **MIT** | `highs.wasm` 3,53 MB, **gzip ca. 1,21 MB** (selbst gemessen) + JS-Lader ca. 168 KB | **empfohlen**: echter MILP-Solver, schnell; WASM lazy laden (erst beim Planen), per Service Worker cachen |
+| **yalps** | 0.6.4 | MIT | ca. 30 KB JS | gute leichte Alternative (Neuschreibung von javascript-lp-solver), für kleine Modelle |
+| **javascript-lp-solver** | 1.0.3 | Unlicense | ca. 2,4 MB entpackt (Paket) | funktioniert, aber langsamer bei MIP [Einschätzung] |
+| **glpk.js** | 5.0.0 | **GPL-3.0** | ca. 2,6 MB entpackt | **nicht verwenden**: GPL bei Auslieferung an den Browser = Weitergabe → eigener Code müsste GPL-kompatibel offengelegt werden [Einschätzung] |
+
+**Modellgröße und Rechenzeit:** 7 Tage × 3–4 Mahlzeiten × ca. 120–200 Kandidaten nach Filter → ca. 2.500–5.600 Binärvariablen, dazu Packungs-Variablen (ganzzahlig, ca. 150). Für HiGHS ist das ein kleines Modell; erwartete Rechenzeit **unter 1–3 Sekunden** auf einem Mittelklasse-Handy [Einschätzung, **nicht gemessen** – im MVP mit Benchmark-Test auf einem älteren Android-Gerät prüfen]. Gegenmaßnahmen: Vorfilter auf 30–50 Kandidaten je Mahlzeit, Zeitlimit für den Solver (z. B. 3 s) und beste gefundene Lösung nehmen, Berechnung im Web Worker (UI friert nicht ein).
+
+### 6.2 LLM-Kosten pro Plan (Preise laut Anthropic, Stand 06.10.2026, [Pricing](https://platform.claude.com/docs/en/about-claude/pricing))
+
+| Modell | Input $/1 Mio. Tokens | Output $/1 Mio. Tokens | Plan „Auswahl aus Katalog“ (≈ 6.000 in / 2.000 out) | Plan „Rezepte frei schreiben“ (≈ 6.000 in / 15.000 out) |
+|---|---|---|---|---|
+| Claude Haiku 5.5 | 0,10 (bis 100K Prompt) | 0,50 | ≈ 0,0016 $ | ≈ 0,008 $ |
+| Claude Haiku 4.5 | 1,00 | 5,00 | ≈ 0,016 $ | ≈ 0,081 $ |
+| Claude Sonnet 5.5 | 2,00 | 10,00 | ≈ 0,032 $ | ≈ 0,16 $ |
+| OpenAI GPT-4o-mini / Nachfolger | **nicht geprüft** (Preisseite nicht abrufbar, 403) [unsicher] | | | |
+
+Batch-API: 50 % Rabatt (asynchron); Prompt-Caching senkt wiederholten Systemprompt/Katalog stark [laut Anthropic-Dokumentation]. Denk-Tokens (adaptives Denken) kommen als Output hinzu und können die Output-Kosten vervielfachen [Einschätzung]. Rechnung: Token-Schätzung von mir, nicht gemessen.
+
+**Bewertung:** Kosten sind mit Haiku 5.5 vernachlässigbar (unter 1 Cent je Plan), mit Sonnet bei 2–3 Plänen pro Nutzer und Woche ca. 0,30–2 $ pro Nutzer und Monat. **Das Problem ist nicht der Preis, sondern die Zuverlässigkeit:**
+- LLMs halten Summen (Kalorien, Budget) nicht zuverlässig ein und erfinden Nährwerte [Einschätzung, bekannt aus Praxis].
+- **Allergen-Halluzination** (z. B. Pesto „ohne Nüsse“, Sojasauce „glutenfrei“) ist ein Haftungsrisiko; ein Fehler bei Anaphylaxie ist nicht hinnehmbar.
+- Ergebnisse sind nicht reproduzierbar, schwer testbar; Datenschutz (Allergien/Gewicht = möglicherweise Gesundheitsdaten nach Art. 9 DSGVO) würde an einen US-Anbieter übermittelt.
+- Offline-Nutzung (Monteurzimmer ohne WLAN) wäre unmöglich.
+
+**Regelbasiert/MILP:** deterministisch, testbar (Eigenschaftstests: „nie Allergen X“, „nie Budget überschritten“), offline, 0 € laufende Kosten, keine Gesundheitsdaten verlassen das Gerät. Nachteil: Qualität hängt an der Rezeptdatenbank und an guten Tags.
 
 ## 7. Technik
-_(in Arbeit)_
 
-## Quellen
-_(wird ergänzt)_
+**Empfehlung:** **PWA** (statisch gehostet, offline-fähig, Planung im Gerät), **Konto optional** (Supabase EU-Region mit Magic Link, nur für Sync und Abo), **Bezahlung über einen Merchant of Record (Paddle)** zum Start, **Kündigungsbutton selbst bauen** (Webhook/API), **PDF clientseitig** (pdfmake oder Druck-CSS). Native App erst, wenn Zahlen es rechtfertigen.
+
+### 7.1 PWA vs. native App
+| Kriterium | PWA | Native (iOS/Android) |
+|---|---|---|
+| Kosten | 0 € Store-Gebühr; ein Code | Apple 99 $/Jahr, Google 25 $ einmalig [Einschätzung, bekannte Gebühren]; In-App-Kauf-Provision 15–30 % (siehe Auftrag) |
+| Offline | Service Worker + IndexedDB (z. B. Dexie, Apache-2.0) | ja |
+| Installieren | Android: Installations-Aufforderung; **iOS: nur manuell über „Teilen → Zum Home-Bildschirm“**, kein `beforeinstallprompt` ([MagicBell](https://www.magicbell.com/blog/pwa-ios-limitations-safari-support-complete-guide); [MobiLoud](https://www.mobiloud.com/blog/progressive-web-apps-ios)) [belegt, Sekundärquellen]. Seit iOS 26 öffnen Seiten vom Home-Bildschirm standardmäßig als Web-App [laut Sekundärquelle, unsicher] | Store-Auffindbarkeit |
+| Push | iOS ab 16.4 **nur für installierte Web-Apps**; Safari 18.4 brachte Declarative Web Push [Sekundärquellen] | voll |
+| EU/DMA | Apple wollte mit iOS 17.4 (Feb. 2024) Home-Screen-Web-Apps in der EU abschalten und hat das nach Kritik **zurückgenommen**; sie laufen weiter auf WebKit-Basis ([Apple: DMA and apps in the EU](https://developer.apple.com/support/dma-and-apps-in-the-eu/); [heise/iphone-ticker-Berichte](https://www.iphone-ticker.de/keine-web-apps-in-europa-apple-huellt-sich-in-schweigen-229991/)) [Stand meines Wissens; aktuellen Stand 2026 **auf einem iPhone mit EU-Konto testen**] | – |
+| Reichweite | Link teilen (Facebook-Gruppen, WhatsApp) = ideal für Monteure | Store-Suche |
+
+**Fazit:** Für ein Ein-Personen-Unternehmen ohne Budget ist die PWA klar besser. Push ist für den Kern (Plan, Einkaufsliste) nicht nötig; Erinnerungen notfalls per E-Mail (Double-Opt-in). Später optional als Store-App verpacken (z. B. Capacitor/TWA) [Einschätzung].
+
+### 7.2 Hosting (EU)
+| Option | Kosten | Hinweis |
+|---|---|---|
+| Statisches Hosting (Cloudflare Pages, Netlify, Vercel – US-Firmen mit EU-Rechenzentren; Bunny.net – EU-Firma) | Starttarife kostenlos bzw. wenige € [Einschätzung, Tarife nicht einzeln geprüft] | PWA ist statisch → kein eigener Server nötig. Auftragsverarbeitungsvertrag (AVV) und Drittlandtransfer prüfen. |
+| **Hetzner Cloud** (DE) | Preise 2026 zweimal erhöht (April und Juni 2026), kleinster Server laut Berichten ca. 4–5 €/Monat ([heise](https://heise.de/-11333037); [Hetzner Docs](https://docs.hetzner.cloud/whats-new)) [unsicher, exakte Preise auf Hetzner-Seite prüfen] | volle EU-Kontrolle, aber Wartung selbst |
+| **Supabase** (Auth + Postgres) | **Free:** 500 MB DB, 50.000 MAU, Projekt pausiert nach 1 Woche Inaktivität; **Pro: ab 25 $/Monat**, 100.000 MAU, 8 GB ([Supabase Pricing](https://supabase.com/pricing)) [belegt] | EU-Region (Frankfurt) wählbar [Einschätzung, auf Pricing-Seite nicht genannt]; Supabase Inc. ist US-Firma → Datenschutzerklärung/AVV, Drittlandtransfer |
+
+**Datenschutz-Architektur:** Allergien, Gewicht und Makros **standardmäßig nur lokal im Gerät** speichern (IndexedDB). Sync ins Konto nur mit ausdrücklicher Einwilligung. So bleibt die Frage Art. 9 DSGVO (Gesundheitsdaten) klein [Einschätzung, im Rechtsbericht klären].
+
+### 7.3 Auth/Konto
+- **Supabase Auth mit Magic Link** (E-Mail-Link statt Passwort). Für Monteure ohne festes Gerät praktisch. Achtung: Standard-E-Mail-Versand von Supabase ist stark limitiert; eigener SMTP-Anbieter (EU, z. B. Brevo/Mailjet) nötig [Einschätzung, Limits nicht geprüft].
+- **Ohne Konto nutzbar** (Gastmodus, lokal) senkt die Einstiegshürde; Konto erst beim Kauf.
+
+### 7.4 Bezahlung
+| Anbieter | Gebühr | Übernimmt USt/OSS? | Kündigungsbutton (§ 312k BGB) |
+|---|---|---|---|
+| **Stripe** (eigener Händler) | EWR-Karten **1,5 % + 0,25 €**; UK 2,5 % + 0,25 €; international 3,15 % + 0,25 €; SEPA-Lastschrift 0,35 €; **Billing (Abos) 0,7 %**; **Stripe Tax 0,5 %** (No-Code) bzw. 0,45 €/Transaktion (API) ([Stripe Preise DE](https://stripe.com/de/pricing)) [belegt] | **Nein** – Stripe Tax berechnet, aber Verkäufer bleibt Steuerschuldner (OSS-Meldung selbst) | Kundenportal vorhanden; § 312k-Button muss man selbst auf der Website bauen (API) [Einschätzung] |
+| **Stripe Managed Payments** (MoR) | **3,5 % zusätzlich** zu den Zahlungsgebühren ([Stripe Preise DE](https://stripe.com/de/pricing)) [belegt]; nur mit Stripe Checkout/Payment Links [Sekundärquelle] | ja (MoR) | wie oben, Umfang [unsicher] |
+| **Paddle** (MoR) | **5 % + 0,50 $** pro Transaktion, keine Monatsgebühr; Sonderpreise unter 10 $ auf Anfrage ([Paddle Pricing](https://www.paddle.com/pricing)) [belegt] | **ja**: Paddle ist Merchant of Record, erhebt und führt Steuern ab [belegt] | Kündigung per API möglich → eigener Button; ob Paddle-Standardstrecke § 312k erfüllt [unsicher] |
+| **Lemon Squeezy** (MoR) | 5 % + 0,50 $ [Sekundärquellen]; 2024 von Stripe übernommen, Entwicklung geht in Stripe Managed Payments über ([Finextra](https://finextra.com/pressarticle/101686/stripe-acquires-lemon-squeezy); [Fungies](https://fungies.io/lemon-squeezy-stripe-acquisition-saas-founders-2026/)) | ja | **nicht empfohlen** (Zukunft unklar) |
+| **Digistore24** (DE, MoR/Wiederverkäufer) | **7,9 % + 1 €** pro Verkauf [mehrere Sekundärquellen, z. B. [ecom-tools](https://ecom-tools.de/digistore24/)]; vzbv-Verfahren wegen Abo-Transparenz erwähnt [Sekundärquelle, unsicher] | ja (Digistore24 verkauft im eigenen Namen) | [unsicher] – beim Anbieter erfragen |
+| **CopeCart** (DE) | **4,9 % + 1 €** pro Verkauf (EU-Vendor), Pro 3,9 % + 1 € laut OMR ([CopeCart-Hilfe](https://intercom.help/copehelp/de/articles/6990780-copecart-gebuhr); [OMR](https://omr.com/de/reviews/product/copecart/pricing)) [belegt/Sekundär] | ja (Wiederverkäufer) | [unsicher] |
+| **PayPal** | nicht geprüft [unsicher] | nein | – |
+
+Rechenbeispiel Abo 4,99 €/Monat (brutto, EWR-Karte):
+- Stripe: 1,5 % + 0,25 € + 0,7 % Billing + 0,5 % Tax ≈ **0,38 €** (≈ 7,6 %), USt/OSS selbst.
+- Paddle: 5 % + 0,50 $ ≈ 0,25 € + ca. 0,43 € ≈ **0,68 €** (≈ 14 %) [Wechselkurs ca. 1,16 $/€ geschätzt], alles inklusive.
+- CopeCart: 4,9 % + 1 € ≈ **1,24 €** (≈ 25 %). Digistore24: 7,9 % + 1 € ≈ **1,39 €** (≈ 28 %).
+→ Bei kleinen Monatsbeträgen fressen Fixgebühren viel. **Jahresabo** (z. B. 39 €/Jahr) senkt den Anteil deutlich.
+
+**Empfehlung:** Start mit **Paddle** (MoR: keine OSS-Meldungen, keine Rechnungen, Steuerhaftung beim MoR) oder – falls Inhaber ohnehin Kleinunternehmer bleibt und nur DE-Kunden hat – Stripe direkt (günstiger). Entscheidung hängt am Steuerbericht. **Kündigungsbutton immer selbst auf der eigenen Seite** („Verträge hier kündigen“ → Bestätigungsseite „Jetzt kündigen“), technisch über die Kündigungs-API des Anbieters. Kein Shopify nötig (Abos digitaler Dienste passen schlecht zur Digital-Downloads-App).
+
+### 7.5 PDF-Export clientseitig
+| Bibliothek | Lizenz | Hinweis |
+|---|---|---|
+| **pdfmake** 0.3.13 | MIT | Tabellen, Seitenumbrüche, eigene Schriften (lokal einbetten, DSGVO) → **empfohlen** für Wochenplan + Einkaufsliste |
+| jsPDF 4.2.1 | MIT | eher Zeichenebene, viel Handarbeit |
+| pdf-lib 1.17.1 | MIT | Bearbeiten/Ausfüllen, weniger Layout |
+| @react-pdf/renderer 4.9.0 | MIT | gut, wenn die App React nutzt |
+| Druck-CSS (`@media print`, „Als PDF speichern“) | – | 0 KB extra, funktioniert überall; als Sofort-Lösung im MVP |
+Zusätzlich: Einkaufsliste als Text teilen (Web Share API → WhatsApp) und `.ics` für Kochtage [Einschätzung].
+
+## Quellen (alle abgerufen am 28.10.2026)
+
+**Nährwerte**
+- BLS-Download und Lizenz: https://blsdb.de/download · BLS-FAQ: https://blsdb.de/faq · BLS-Dokumentation: https://blsdb.de/assets/uploads/BLS_4_0_Dokumentation_DE.pdf · MRI: https://www.mri.bund.de/de/institute/ernaehrungsverhalten/forschungsbereiche/bundeslebensmittelschluessel-bls/ · heise: https://heise.de/-11123877
+- USDA FDC API-Guide (Lizenz, Limits): https://fdc.nal.usda.gov/api-guide/
+- Open Food Facts Terms of use: https://world.openfoodfacts.org/terms-of-use
+- CIQUAL-Update 19.11.2025: https://www.anses.fr/en/content/new-enhanced-and-more-representative-version-ciqual-table · data.gouv: https://www.data.gouv.fr/datasets/table-de-composition-nutritionnelle-des-aliments-ciqual/
+- Schweizer Nährwertdatenbank: https://naehrwertdaten.ch/de/downloads/ · https://www.blv.admin.ch/de/schweizer-naehrwertdatenbank · https://ckan.opendata.swiss/dataset/naehrwerte_lebensmittel
+
+**Allergene**
+- VO (EU) 1169/2011: https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32011R1169 · Verbraucherzentrale NRW: https://www.verbraucherzentrale.nrw/kennzeichnung-von-allergenen-und-zusatzstoffen-94938
+
+**Preise und Recht**
+- Awin Rewe DE: https://ui.awin.com/merchant-profile/11652 · Awin Picnic DE: https://ui.awin.com/merchant-profile/116041 · Knuspr (FlexOffers): https://www.flexoffers.com/affiliate-programs/knuspr-de-affiliate-program/
+- Kaufland Marketplace API: https://www.kauflandglobalmarketplace.com/en/seller-university/selling/listing-via-api-interface/ · Apify Rewe-Scraper (Beleg für inoffizielle Endpunkte): https://apify.com/studio-amba/rewe-scraper
+- SupermarktCheck: https://www.supermarktcheck.de/ueber-uns/ · heisse-preise Impressum: https://heissepreise.github.io/imprint.html · FM4: https://fm4.orf.at/stories/3034417/
+- BWB-Fokuspapier 09/2023: https://www.bwb.gv.at/fileadmin/user_upload/Fokuspapier_Preisvergleichsplattformen_Sept_2023_barrierefrei_14.09.2023.pdf
+- § 87b UrhG: https://www.gesetze-im-internet.de/urhg/__87b.html
+- EuGH C-762/19: https://www.scl.org/12290-cjeu-search-engine-copying-of-databases-infringes-sui-generis-right-where-it-adversely-affects-database-maker-investment/ · https://www.twobirds.com/en/insights/2021/uk/cv-online-latvia-cjeu-complicates-the-enforcement-of-database-rights
+- EuGH C-30/14 Ryanair: https://curia.europa.eu/juris/liste.jsf?num=C-30/14
+- BGH I ZR 159/10: https://rewis.io/urteile/urteil/rlw-21-06-2011-i-zr-15910/ · https://betriebs-berater.ruw.de/wirtschaftsrecht/urteile/Zur-automatisierten-Auswertung-von-Online-Datenbanken---Automobil-Onlineboerse-17656
+- BGH I ZR 224/12: https://www.lto.de/recht/hintergruende/h/bgh-urteil-izr22412-screen-scraping-flugdaten-automatisiert-auslesen-ryanair-reiseportal · https://www.ra-plutte.de/bgh-zum-automatisierten-auslesen-fremder-websites-via-screen-scraping/
+
+**Lagerung**
+- BfR Verbrauchertipps Privathaushalt: https://www.bfr.bund.de/cm/350/verbrauchertipps_schutz_vor_lebensmittelinfektionen_im_privathaushalt.pdf
+- BfR-FAQ Vorkochen: https://www.bfr.bund.de/en/service/frequently-asked-questions/topic/pre-cooking-for-several-days-what-should-i-bear-in-mind/ · https://www.bfr.bund.de/assets/01_Ver%C3%B6ffentlichungen/FAQ_deutsch/faq-vorkochen-fuer-mehrere-tage.pdf
+- BfR Stellungnahme 016/2024 Heißhalten: https://www.bfr.bund.de/cm/343/schutz-vor-lebensmittelbedingten-erkrankungen-beim-heisshalten-von-speisen-aktualisiert.pdf
+- BfR Bacillus cereus (09.01.2026): https://www.bfr.bund.de/assets/01_Ver%C3%B6ffentlichungen/Mitteilungen_deutsch/bacillus-cereus-in-lebensmitteln-bei-vermehrung-kann-das-bakterium-ein-gift-bilden.pdf
+- BZfE Mealprep: https://www.bzfe.de/presse/pressemeldungen-archiv/mealprep-fuer-die-mittagspause · BZfE Lagerung: https://www.bzfe.de/einfache-sprache/kochen-und-aufbewahren/lagerung
+- FSA: https://www.food.gov.uk/safety-hygiene/home-food-fact-checker · NHS: https://www.nhs.uk/live-well/eat-well/food-types/starchy-foods-and-carbohydrates/ · USDA: https://www.usda.gov/node/15671 (aus Vorrecherche)
+
+**Rezepte**
+- e-recht24: https://www.e-recht24.de/urheberrecht/8208-abmahnung-rezepte-kochbuch.html · netzpolitik.org: https://netzpolitik.org/2006/stehen-kochrezepte-unter-dem-copyright/ · RecipeNLG: https://huggingface.co/datasets/mbien/recipe_nlg
+
+**Algorithmus**
+- npm-Registry (Lizenz/Version): https://registry.npmjs.org/highs · /glpk.js · /javascript-lp-solver · /yalps · WASM-Datei: https://unpkg.com/highs@1.15.4/build/highs.wasm
+- Anthropic-Preise: https://platform.claude.com/docs/en/about-claude/pricing
+
+**Technik**
+- Stripe DE: https://stripe.com/de/pricing · Paddle: https://www.paddle.com/pricing · Supabase: https://supabase.com/pricing
+- CopeCart: https://intercom.help/copehelp/de/articles/6990780-copecart-gebuhr · OMR: https://omr.com/de/reviews/product/copecart/pricing · Digistore24 (Sekundär): https://ecom-tools.de/digistore24/
+- Lemon Squeezy/Stripe: https://finextra.com/pressarticle/101686/stripe-acquires-lemon-squeezy · https://fungies.io/lemon-squeezy-stripe-acquisition-saas-founders-2026/
+- iOS-PWA: https://www.magicbell.com/blog/pwa-ios-limitations-safari-support-complete-guide · https://www.mobiloud.com/blog/progressive-web-apps-ios · https://developer.apple.com/support/dma-and-apps-in-the-eu/
+- Hetzner: https://heise.de/-11333037 · https://docs.hetzner.cloud/whats-new

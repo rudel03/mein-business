@@ -139,14 +139,96 @@ Wichtige Grenze dieser Recherche: Reddit war aus der Sitzung nicht abrufbar (Pro
 - **G:** 43 % der Haushalte (Mintel 2024), 47 % (YouGov), > 40 % bzw. ~18 Mio. Haushalte (Tiefkühlinstitut) ([Übersicht lebensmittelpraxis](https://lebensmittelpraxis.de/sortiment/47543-dauerbrenner-heissluftfritteuse-vom-tiefkuehlsnack-bis-zum-gewuerz-so-erobert-der-airfryer-immer-mehr-warengruppen.html), [YouGov](https://yougov.com/de-de/artikel/54606-airfryer-in-deutschland-vom-trendgerat-zum-festen-bestandteil-des-alltags)) **[Q]**.
 - **Z:** mittel (Kochbücher verkaufen sich massenhaft). **E:** sehr gut (Interesse „Heißluftfritteuse“). **K:** hoch (kostenlose Hersteller-Apps, airfryer.club, Hunderte Bücher). **S:** gering. **U:** gut beim Gerät, aber das ist ein **Filter**, keine Zielgruppe. **R:** gering. **P:** neutral. Als **Geräte-Filter in allen Varianten** umsetzen.
 
-## 2. Scoring-Tabelle
-(folgt)
+## 2. Gewichtete Scoring-Tabelle
+
+**Skala:** 1 (schlecht) bis 5 (gut). Bei **K** (Konkurrenz) heißt 5 „kaum Konkurrenz“, bei **R** (Risiko) heißt 5 „geringes Risiko“. U und P fließen in die Basis nicht ein, werden aber in Szenario D gewichtet.
+
+**Basis-Gewichte (Szenario A, wie vom Auftrag vorgeschlagen):** Zahlungsbereitschaft **25 %**, Größe **15 %**, Erreichbarkeit **20 %**, Konkurrenz **15 %**, Schmerz **15 %**, Risiko **10 %**.
+
+Die Punkte sind eine begründete Einschätzung aus Abschnitt 1, keine Messung. Am unsichersten sind E (Gruppengrößen nicht prüfbar) und S (Forenbelege ungleich verfügbar).
+
+| # | Kandidat | Z | G | E | K | S | R | U | P | **Score A** |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Camper/Wohnmobil/Caravan | 5 | 3 | 4 | 4 | 3 | 5 | 5 | 4 | **4,05** |
+| 2 | Airfryer-Haushalte (eigen) | 3 | 5 | 5 | 2 | 2 | 5 | 4 | 3 | **3,60** |
+| 3 | Familien kleines Budget | 2 | 5 | 5 | 2 | 4 | 4 | 4 | 4 | **3,55** |
+| 4 | Eltern Kleinkinder | 3 | 4 | 5 | 2 | 4 | 3 | 3 | 1 | **3,55** |
+| 5 | Singles unter 65 (eigen) | 4 | 5 | 2 | 3 | 3 | 5 | 4 | 3 | **3,55** |
+| 6 | Alleinerziehende | 2 | 3 | 4 | 4 | 5 | 4 | 4 | 4 | **3,50** |
+| 7 | Diabetes-Lifestyle | 4 | 5 | 3 | 2 | 4 | 1 | 2 | 3 | **3,35** |
+| 8 | Paare beide berufstätig | 5 | 4 | 2 | 1 | 3 | 5 | 2 | 3 | **3,35** |
+| 9 | Pflegekräfte | 3 | 3 | 4 | 2 | 4 | 4 | 4 | 1 | **3,30** |
+| 10 | Kleingarten/Dauercamper | 3 | 2 | 3 | 5 | 2 | 5 | 4 | 3 | **3,20** |
+| 11 | Senioren/Singles 65+ | 3 | 4 | 2 | 4 | 3 | 3 | 3 | 3 | **3,10** |
+| 12 | Vegan-Einsteiger | 3 | 3 | 5 | 1 | 2 | 4 | 2 | 3 | **3,05** |
+| 13 | Studierende/WG | 1 | 4 | 5 | 2 | 3 | 4 | 4 | 3 | **3,00** |
+| 14 | Bürgergeld/Kleinstbudget | 1 | 5 | 3 | 3 | 5 | 2 | 4 | 3 | **3,00** |
+| 15 | Schulkind-Brotdose | 2 | 4 | 4 | 2 | 3 | 3 | 2 | 4 | **2,95** |
+| 16 | Azubis/erste Wohnung | 1 | 3 | 3 | 3 | 3 | 2 | 4 | 3 | **2,40** |
+
+Kurzbegründung der wichtigsten Punkte:
+- **Camper Z = 5:** Halter sind überwiegend 50–69 Jahre alt, und es gibt einen belegten Markt für bezahlte digitale Camping-Kochbücher (14,99–17,99 € pro E-Book). **S = 3:** Es ist Urlaub, der Schmerz betrifft die Organisation (Platz, Kühlung, Gas, Einkauf, Aufwand) und nicht die Existenz.
+- **Airfryer:** Platz 2 rechnerisch, aber **keine Zielgruppe**, sondern ein Gerät, das 43–47 % aller Haushalte haben. Es wird als Filter in allen Varianten gebaut und deshalb nicht als Variante empfohlen.
+- **Pflegekräfte P = 1 / Eltern Kleinkinder P = 1:** direkte Kannibalisierung mit DURCHSCHICHT bzw. Honigmama.
+- **Diabetes R = 1:** Art. 9 DSGVO plus mögliche MDR-Einstufung plus HCVO/HWG. Ohne Medizinprodukt-Zulassung ist das nicht sinnvoll.
+
+Rechenweg: Score = Σ (Punkte × Gewicht). Skript: `scratchpad/score.py` (nicht im Repo; die Werte sind oben vollständig angegeben und lassen sich nachrechnen).
 
 ## 3. Sensitivitätsprüfung
-(folgt)
+
+| Szenario | Gewichte Z/G/E/K/S/R/U/P (%) | Platz 1 | Platz 2 | Platz 3 |
+|---|---|---|---|---|
+| A Basis | 25/15/20/15/15/10/0/0 | **Camper (4,05)** | Airfryer (3,60) | Familien kleines Budget (3,55) |
+| B alle 6 gleich | 16,7 je Kriterium | **Camper (4,00)** | Alleinerziehende (3,67) | Familien kleines Budget (3,67) |
+| C Schmerz stark | 15/15/20/15/25/10/0/0 | **Camper (3,85)** | Alleinerziehende (3,80) | Familien kleines Budget (3,75) |
+| D mit USP + Portfolio | 20/10/15/15/10/5/15/10 | **Camper (4,20)** | Alleinerziehende (3,60) | Familien kleines Budget (3,55) |
+| E Zahlung 40 % | 40/10/15/15/10/10/0/0 | **Camper (4,30)** | Paare berufstätig (3,65) | Singles unter 65 (3,65) |
+| F Größe 30 % | 20/30/15/15/10/10/0/0 | **Camper (3,90)** | Singles unter 65 (3,85) | Airfryer (3,85) |
+| G Risiko 20 % | 20/15/15/15/15/20/0/0 | **Camper (4,10)** | Singles unter 65 (3,75) | Airfryer (3,70) |
+| H Erreichbarkeit 30 % | 20/15/30/10/15/10/0/0 | **Camper (4,00)** | Familien kleines Budget (3,85) | Airfryer (3,85) |
+
+**Zusätzliche Belastungstests (Basisgewichte):**
+- Camper-Schmerz von 3 auf 2 oder sogar 1 gesenkt: Camper bleibt vorn (3,90 bzw. 3,75 gegenüber 3,60).
+- Camper-Zahlungsbereitschaft von 5 auf 4 gesenkt: Camper bleibt vorn (3,80). **Erst bei Z = 3 kippt der Sieger** (zu Airfryer 3,60 bzw. Familien 3,55). Die Empfehlung hängt also an der Annahme „Camper zahlen“. Deshalb ist der Validierungstest in Abschnitt 4 genau darauf ausgerichtet.
+- Alleinerziehende-Zahlungsbereitschaft von 2 auf 3 angehoben: Camper 4,05 vor Alleinerziehenden 3,75.
+- Camping weit gefasst (Reisemobil + Caravan + Dauercamper + Mieter, G = 4): **4,20**.
+
+**Ergebnis:** Der Sieger ist in allen 8 Gewichtungen derselbe. Am knappsten ist Szenario C (Schmerz 25 %), wo Alleinerziehende nur 0,05 Punkte dahinter liegen. Der zweite Platz wechselt je nach Gewichtung. Unter den echten Zielgruppen (ohne den Gerätefilter Airfryer und ohne die Allgemein-nahen Singles/Paare) ist das am stabilsten **„Familien mit knappem Budget, insbesondere Alleinerziehende“**.
 
 ## 4. Empfehlung
-(folgt)
+
+### Sieger: **Camping-Küche – Reisemobil, Kastenwagen/Van, Wohnwagen und Dauercamper** (Score 4,05; weit gefasst 4,20)
+
+**Begründung**
+1. **Zahlungsbereitschaft belegt:** Halter sind zu über 90 % 40 Jahre oder älter, die stärksten Gruppen sind 60–69 und 50–59 Jahre (KBA 04/2025). Für digitale Camping-Kochbücher werden heute schon 14,99–17,99 € pro Stück bezahlt (App „mobile cooking“), Omnia-Kochbücher kosten 19,50–30,29 €. Ein Planer, der mehr kann als ein Buch, hat einen klaren Preisanker.
+2. **Der USP passt am besten:** Keine andere Gruppe hat so harte, abfragbare Geräte-Grenzen (Flammen, Kühlschrank-Liter, kein Gefrierfach, Omnia, Kartusche, Landstrom ja/nein, Wassertank). Genau das ist der Kern des Produkts, und kein Wettbewerber verbindet es mit Laden und Budget.
+3. **Wenig Konkurrenz bei Planern:** nur Bücher/E-Books, eine schwach bewertete E-Book-App (3,6 Sterne, letzte Version 2023) und PDF-Wochenpläne für 4 Personen.
+4. **Wächst:** 1 Mio. Reisemobile (Verdopplung der Freizeitfahrzeuge 2015–2025), 44,7 Mio. Campingübernachtungen 2025 (4. Rekordjahr in Folge).
+5. **Kaum Rechtsrisiko** und **kein Konflikt** mit Honigmama oder DURCHSCHICHT.
+6. **Geringe Grenzkosten:** Die Rezepte für „wenig Geräte, kleine Kühlung“ entstehen ohnehin für die Montage-Variante. Mit einem Camping-Bildstil und eigenen Tags (Omnia, Grill, Kartusche, Wasser sparen) wird daraus eine zweite Variante.
+
+**Risiken und Gegenmaßnahmen**
+- **Saisonalität** (Juli/August = 18,7 Mio. der 44,7 Mio. Übernachtungen): Statt Monatsabo einen **Saison- oder Reisepass** (z. B. 3 Monate) oder einen Einmalkauf pro Reise anbieten, dazu Wintercamping- und Dauercamper-Inhalte. Preise in Phase B (Pricing) festlegen.
+- **Laden-USP im Ausland schwächer:** Lidl und Aldi gibt es in vielen Reiseländern, das ist ein Angle („Dein Lidl-Plan funktioniert auch in Kroatien“). Preise im Ausland nur als Niveau angeben, nicht als Einzelpreis.
+- **Schmerz nur mittel:** Positionierung über **Entlastung und Genuss** („Urlaub statt Küchendienst“, „Kühlschrank-Tetris“), nicht über Not.
+- **Kernannahme Zahlungsbereitschaft** (Sensitivität: kippt bei Z = 3): vor dem Bau **validieren**, nämlich mit einer Landingpage plus Warteliste (Double-Opt-in) und einem Meta-Test mit Interessen Wohnmobil/Camping/Kastenwagen (Altersgruppe 45–70), dazu einem Preis-Test (Einmalkauf gegen Saisonpass). Abbruchkriterium wird in Phase D festgelegt.
+
+### Zweitplatzierter: **Familien mit knappem Budget, mit Schwerpunkt Alleinerziehende** (3,50–3,55; in Szenario C 3,80)
+- Größter Schmerz (Zeit, Geld und Mental Load in einer Person) und mit 1,7 Mio. Alleinerziehenden mit minderjährigen Kindern eine klare Zielgruppe, für die **kein eigenes Produkt** gefunden wurde. Dazu Synergie mit Honigmama.
+- Dagegen sprechen: geringe Zahlungsbereitschaft (28,7 % armutsgefährdet) und direkte Konkurrenz beim Budget-Planen (MealDeal, Disha, Supermarkt-Apps).
+- **Empfehlung:** kein eigener Zweig jetzt, aber **Modus in der Allgemein-Variante** („1 Erwachsener + Kinder“, Budget-Deckel, 20-Minuten-Filter) und als spätere vierte Nische prüfen, wenn das Kernprodukt läuft. Bezahlt werden sollte dann über einen niedrigen Festpreis, nicht über ein teures Abo.
+
+### Was aus den anderen Kandidaten wird
+| Kandidat | Umgang |
+|---|---|
+| Airfryer-Haushalte, Singles unter 65, Paare | Filter bzw. Modus in **Allgemein** (Gerät Airfryer, Personen = 1, „unter 30 Min.“) |
+| Kleingarten/Dauercamper | Teil der **Camping-Variante** (Laube/Dauerplatz als Profil) |
+| Pflegekräfte | **Upsell im DURCHSCHICHT-Funnel** (Schichtplan-Rechner → App), keine eigene Variante |
+| Eltern Kleinkinder, Schulkind-Brotdose | Anschluss an **Honigmama** (Kleinkind 1–3, Brotdosen-Modul) |
+| Studierende, Azubis, Bürgergeld | höchstens als kostenloser Spar-Lead-Magnet; kein Bezahlfokus (geringe Zahlungsbereitschaft, Minderjährige, Ethik) |
+| Diabetes | **nicht machen** (Art. 9 DSGVO, MDR, HCVO/HWG) |
+| Senioren 65+ | später über Angehörige als Käufer prüfen; Erreichbarkeit schwach |
+| Vegan | Diät-Filter in allen Varianten |
 
 ## 5. Sieger-Tiefenrecherche (Zitate, Schmerzpunkte, Vokabular)
 (folgt)
