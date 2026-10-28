@@ -5,7 +5,7 @@ Wird beim Start jeder Sitzung gelesen. Am Ende jeder Arbeitsrunde „Stand & off
 ## Projekt
 - **Marke:** DURCHSCHICHT – „Essen nach Dienstplan.“ Zielgruppe: Schichtarbeitende (Pflege, Rettung, Polizei, Logistik, Produktion). Bewusst ganz anders als Honigmama: Industrie-Stil, Direktblitz-Nachtfotos.
 - **Produkt:** E-Book (PDF, 75 Seiten): 48 Rezepte, 6 Dienstplan-Pläne, Lagerkarte, Koffein-Übersicht, „Die Übergabe“, Kollegen-Kochkette, Etiketten. 19,90 €. Datei: `final/DURCHSCHICHT_Essen-nach-Dienstplan.pdf`
-- **Shopify-Store:** „mystore“ (im Shopify-Account des Inhabers). Hier ist noch nichts hochgeladen.
+- **Shopify-Store:** „My Store“ / mystore, `q2e8xh-pz.myshopify.com` (Trial-Plan).
 - **Lead-Magnet:** Schichtplan-Rechner („Dienstplan rein, Essensplan raus“) auf der Startseite.
 
 ## Marke
@@ -33,7 +33,10 @@ Wird beim Start jeder Sitzung gelesen. Am Ende jeder Arbeitsrunde „Stand & off
 
 ## Stand & offene Aufgaben (28.10.2026)
 - [x] Recherche, Marke, Logo, Buch mit allen Fotos, Rechner, Theme-Sections, 8 Anzeigen, Kampagnen-Plan (`ads/Kampagne_DURCHSCHICHT.md`), Rechtstext-Entwurf.
-- [ ] Theme in mystore hochladen (neues Theme, unveröffentlicht), Produkt anlegen (als Entwurf), Bilder hochladen.
+- [x] Theme „DURCHSCHICHT“ (210480726355) in mystore (`q2e8xh-pz.myshopify.com`) – in einer anderen Sitzung hochgeladen, ist seit 28.10. **Haupt-Theme (live)**. Altes Horizon-Theme: 210465784147 (unveröffentlicht).
+- [x] Produkt „DURCHSCHICHT – Essen nach Dienstplan“ (gid://shopify/Product/11039085330771, Handle `durchschicht`) angelegt, Status **Entwurf**.
+- [ ] Store ist im **Trial-Plan** – vor dem Verkauf bezahlten Plan wählen.
+- [ ] Änderungen aus der Upload-Sitzung wurden nicht ins Repository gepusht – vor weiteren Theme-Änderungen den Live-Stand aus Shopify lesen statt der Dateien hier.
 - [ ] Inhaber: Impressum-Daten; Kleinunternehmer ja/nein (sonst Preisangabe „inkl. MwSt.“, E-Books 7 %).
 - [ ] Inhaber: PDF über Digital Downloads anhängen; Domains durchschicht.de/.com (am 28.10. frei); DPMA-Recherche.
 - [ ] Rechtstexte (Widerruf digitale Inhalte § 356 Abs. 5 BGB mit Checkbox), Cookie-Banner, Meta-Pixel.
