@@ -210,7 +210,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
   >
   > **2. Frag den Vermieter, bevor die Platte mitkommt.** Mobile Kochgeräte im Zimmer brauchen oft seine Erlaubnis. Eine Textvorlage für die Frage ist im PDF.
   >
-  > **3. Die Lagerkarte gehört an dein Fach.** Gekochtes hält im Kühlschrank höchstens 2 Tage. Reis, Nudeln, Fisch, Hack und Ei nur 1 Tag. Ungekühlt höchstens 2 Stunden. Das sind vorsichtige Werte nach BfR.
+  > **3. Die Lagerkarte gehört an dein Fach.** Gekochtes hält im Kühlschrank höchstens 2 Tage. Reis, Nudeln, Fisch, Hack und Ei nur 1 Tag. Ungekühlt höchstens 2 Stunden. Die Quellen je Regel (BfR, FSA, USDA, teils strenger) stehen auf der Karte.
   >
   > Den Plan für einen Tag bekommst du gratis. Ohne Konto, ohne E-Mail:
   > **[Tagesplan machen]** → {{URL_PLANER}}?v=montage
@@ -517,19 +517,19 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 **Ton:** wie ein Trainingspartner, der rechnen kann. Sachlich, knapp, in Gramm, Minuten und Uhrzeiten. Humor nur über die Küche, **nie über Körper**. Keine Wörter wie „Muskeln“, „Fett weg“, „Form“, „fit“, „gesund“, „Traumkörper“. „Proteinreich“ nur für Rezepte ab 20 % Energie aus Protein. Den zugelassenen Claim zu Protein und Muskelmasse **nicht** in Mails verwenden (Markenregel, Abschnitt 9).
 **Absender:** `Kochsatz <hallo@{{DOMAIN_KOCHSATZ}}>` · Verträge: `Kochsatz Verträge <vertrag@{{DOMAIN_KOCHSATZ}}>` · eigene (Sub-)Domain, getrennt von den anderen Marken (Meta-Einstufung „Health & Wellness“, `07` § 4.4).
-**Einwilligungstext** (aus dem Markenbuch, um die Startstrecke ergänzt): „Ja, schickt mir die Protein-pro-Euro-Liste, in den nächsten zehn Tagen bis zu fünf Mails mit Tipps und Angeboten zu Kochsatz und danach einmal im Monat die aktualisierte Liste. Abmelden geht jederzeit über den Link in jeder Mail. [Datenschutz]“
+**Einwilligungstext** (aus dem Markenbuch, um die Startstrecke ergänzt): „Ja, schickt mir die Protein-Liste, in den nächsten zehn Tagen bis zu fünf Mails mit Tipps und Angeboten zu Kochsatz und danach einmal im Monat die aktualisierte Liste. Abmelden geht jederzeit über den Link in jeder Mail. [Datenschutz]“
 **Alter:** Bezahlabo ab 18 (`07` § 9.2). Keine Mails mit Kaufaufforderung an Adressen, bei denen ein Hinweis auf Minderjährigkeit vorliegt.
-**Sperre:** Alle Preise und „Protein pro Euro“-Werte sind Schätzungen (Stand 10/2026). Kein Betrag für einen Wochenplan vor dem Kassenbon-Test.
+**Sperre:** Alle Preise und „Protein pro Euro“-Werte sind Schätzungen (Stand 10/2026). Kein Betrag für einen Wochenplan vor dem Kassenbon-Test. Bis dahin zeigen Liste und PDF (`app/public/pdf/protein-liste.pdf`) nur die Reihenfolge und Protein je 100 g, keine Euro-Werte (K12).
 
 ### K-0 · Double-Opt-in (T)
 
 - **Auslöser:** sofort nach dem Formular. Link gilt 7 Tage. Ohne Klick keine weitere Mail, Löschung nach 30 Tagen.
-- **Betreff:** Bitte bestätigen: Protein-pro-Euro-Liste (40)
+- **Betreff:** Bitte bestätigen: deine Protein-Liste (32)
 - **Vorschau:** Ein Klick, dann kommt das PDF. Nicht angefordert? Dann ignorier die Mail.
 - **Text:**
   > Hallo,
   >
-  > du hast bei Kochsatz die Protein-pro-Euro-Liste angefordert. Bitte bestätige deine Adresse:
+  > du hast bei Kochsatz die Protein-Liste angefordert. Bitte bestätige deine Adresse:
   >
   > **[Adresse bestätigen]** → {{DOI_LINK}}
   >
@@ -544,27 +544,25 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### K-L1 · Tag 0: Die Liste (W)
 
 - **Auslöser:** sofort nach DOI-Klick
-- **Betreff:** Protein pro Euro: deine Liste (29)
-- **Vorschau:** Rote Linsen vorn, Lachs hinten. Acht Zutaten im Vergleich, mit Preisstand und Quelle.
+- **Betreff:** Deine Protein-Liste ist da (26)
+- **Vorschau:** Rote Linsen vorn. Zwölf Zutaten in Reihenfolge, mit Protein je 100 g und Quelle.
 - **Text:**
   > Hallo,
   >
   > hier ist deine Liste: **[PDF herunterladen]** → {{LINK_PDF}}
   >
-  > Die ersten acht Zeilen (Gramm Protein pro Euro, Schätzpreise Discounter, Stand 10/2026, Nährwerte aus dem BLS 4.0):
+  > Die ersten sechs Plätze (Reihenfolge nach unserer Schätzung „Protein je Euro“, Schätzpreise Aldi und Lidl, Stand 10/2026; Nährwerte aus dem BLS 4.0):
   >
-  > | Zutat | Protein pro € |
-  > |---|---|
-  > | rote Linsen, 500 g | ca. 86 g |
-  > | Magerquark, 500 g | ca. 54 g |
-  > | Skyr natur, 450 g | ca. 34 g |
-  > | Tofu natur, 400 g | ca. 33 g |
-  > | Eier, 10 Stück | ca. 28 g |
-  > | Hähnchenbrustfilet, 1 kg | ca. 26 g |
-  > | Thunfisch im eigenen Saft | ca. 21 g |
-  > | Lachsfilet, 250 g | ca. 12 g |
+  > | Platz | Zutat | Protein je 100 g |
+  > |---|---|---|
+  > | 1 | rote Linsen, 500 g | 25,6 g |
+  > | 2 | Tellerlinsen, 500 g | 23,4 g |
+  > | 3 | Sojaschnetzel, 200 g | 50,2 g |
+  > | 4 | Magerquark, 500 g | 11,9 g |
+  > | 5 | Linsen (Dose), 400 g | 9 g |
+  > | 6 | Skyr natur, 500 g | 10,4 g |
   >
-  > Preise schwanken je Laden und Woche. Im Rechner kannst du jeden Preis selbst überschreiben.
+  > Euro-Werte zeigen wir erst, wenn wir die Preise an der Kasse nachgeprüft haben. Preise schwanken je Laden und Woche.
   >
   > Was die Liste nicht sagt: was du daraus kochst. Das macht der Planer. Ein Tag mit deinen Zahlen ist gratis, ohne Konto:
   > **[Makroziel eingeben, Tag planen]** → {{URL_PLANER}}?v=fitness
@@ -831,7 +829,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 - **Text:**
   > Hallo,
   >
-  > einmal im Monat schicken wir die Protein-pro-Euro-Liste mit neuem Preisstand. Willst du sie weiter?
+  > einmal im Monat schicken wir die Protein-Liste mit neuem Preisstand. Willst du sie weiter?
   >
   > **[Ja, Liste weiter bekommen]** → {{LINK_BLEIBEN}}
   > **[Nein, austragen]** → {{ABMELDELINK}}
@@ -1193,7 +1191,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 - **Auslöser:** sofort nach DOI-Klick
 - **Betreff:** Dein Reste-Retter-Wochenplan ist da (35)
-- **Vorschau:** Sieben Tage, ein Einkaufszettel, und jede angebrochene Packung wird bis Sonntag aufgebraucht.
+- **Vorschau:** Sieben Tage, ein Einkaufszettel und ein Reste-Fahrplan: wo die angebrochene Packung als Nächstes landet.
 - **Text:**
   > Hallo,
   >
@@ -1201,9 +1199,9 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
   >
   > - **[1 Person]** → {{LINK_PDF_1}}
   > - **[2 Personen]** → {{LINK_PDF_2}}
-  > - **[1 Erwachsene:r und 2 Kinder]** → {{LINK_PDF_3}}
+  > - **[3 Personen]** → {{LINK_PDF_3}} (gerechnet mit drei Erwachsenenportionen)
   >
-  > Jede Fassung gibt es für Aldi und Lidl. Drin sind die Gerichte von Montag bis Sonntag, der Einkaufszettel nach Abteilungen sortiert und der Reste-Fahrplan. Da steht zum Beispiel, in welchem Gericht die zweite Hälfte vom Sahnebecher landet.
+  > Jede Fassung passt für Aldi und Lidl. Drin sind die Gerichte von Montag bis Sonntag, der Einkaufszettel nach Abteilungen sortiert, der Reste-Fahrplan und was am Ende übrig bleibt. Da steht zum Beispiel, in welchem Gericht die zweite Hälfte vom Sahnebecher landet.
   >
   > Auf der letzten Seite ist die Lagerkarte für den Kühlschrank: gekochte Reste höchstens 2 Tage, Reis und Nudeln höchstens 1 Tag.
   >
@@ -1562,7 +1560,7 @@ Keiner der Anbieter ist ein Partner oder Sponsor, keine Empfehlung aus Provision
 | `{{URL_IMPRESSUM}}`, `{{URL_DATENSCHUTZ}}`, `{{URL_KUENDIGEN}}`, `{{URL_WIDERRUFEN}}`, `{{URL_WIDERRUFSBELEHRUNG}}` | Rechtsseiten (`impressum.html`, `datenschutz.html`, `kuendigen.html`, `widerrufen.html`, `widerruf.html`) | Seiten-Generator |
 | `{{URL_PLANER}}`, `{{URL_PREISE}}` | `planer.html`, `preise.html`, jeweils mit `?v=montage`, `fitness`, `camping`, `alltag` | App |
 | `{{DOI_LINK}}`, `{{DOI_DATUM}}` | Bestätigungslink, Datum der Bestätigung | Mail-Tool |
-| `{{LEADMAGNET}}` | Zimmer-Check, Protein-pro-Euro-Liste, Bordküchen-Check, Reste-Retter-Wochenplan, Warteliste | fest je Formular |
+| `{{LEADMAGNET}}` | Zimmer-Check, Protein-Liste, Bordküchen-Check, Reste-Retter-Wochenplan, Warteliste | fest je Formular |
 | `{{LINK_PDF}}`, `{{LINK_PDF_1}}` bis `{{LINK_PDF_3}}` | Download des Lead-Magneten | Inhaber |
 | `{{ABMELDELINK}}`, `{{LINK_BLEIBEN}}`, `{{TIPPS_ABMELDEN}}` | Abmeldung Werbung, Bestätigung „weiter schreiben“, Abbestellen der Kunden-Tipps | Mail-Tool |
 | `{{PRODUKT}}` | Plus Monat, Plus Jahr, Montage-Pass, Saison-Pass | Paddle |
@@ -1590,4 +1588,4 @@ Keiner der Anbieter ist ein Partner oder Sponsor, keine Empfehlung aus Provision
 3. **Mail-Anbieter wählen** (Abschnitt 5.3), AV-Vertrag schließen, Domains einrichten.
 4. **Widerspruchshinweis beim Kauf** einbauen, falls die sachlichen Hinweise auf neuen Pass bzw. Pass statt Abo in Z-P1, F-P1, Z-K4, F-K4 bleiben sollen (§ 7 Abs. 3 UWG). Sonst diese Sätze streichen.
 5. **Mehrere Geräte pro Schlüssel** in den AGB regeln (F-K1).
-6. Lead-Magnet-PDFs erstellen (Zimmer-Check, Protein-Liste, Bordküchen-Check, Reste-Retter-Plan). Die Strecken setzen sie voraus.
+6. Lead-Magnet-PDFs: gebaut mit `node tools/leadmagnete.mjs` (aus `app/`) nach `app/public/pdf/` (zimmer-check, protein-liste, bordkuechen-check, wochenplan-1-person / -2-personen / -3-personen). Reste-Retter-Plan erst nach Kassenbon-Test und Testkochen versenden. Die Strecken setzen sie voraus.
