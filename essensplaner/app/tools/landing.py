@@ -69,7 +69,7 @@ VARIANTEN = {
         check_geraete=["wasserkocher", "mikrowelle", "herd", "topf", "pfanne", "sandwichmaker", "kuehlschrank", "gefrier"],
         check_start=["wasserkocher", "mikrowelle", "kuehlschrank"],
         punkte=[f"{N_WASSERKOCHER} Rezepte nur mit Wasserkocher (und Kühlschrank)", f"{N_OHNE_GERAET} Rezepte ganz ohne Gerät, für Pausen und Kabine",
-                "Lagerregeln nach BfR, teils strenger: was in den Kühlschrank muss und wie lange es hält", "Ohne Kühlschrank planen wir nur Zutaten, die ungekühlt lagern dürfen",
+                "Lagerregeln nach BfR, teils strenger: was in den Kühlschrank muss und wie lange es hält", "Ohne Kühlschrank kommt Kühlware nur am Einkaufstag auf den Teller",
                 "Einmal kochen, bis zu zwei Tage essen: Boxen mit Datum"],
         faq=[("Brauche ich ein Konto?", "Nein. Der Planer läuft im Browser. Deine Eingaben bleiben auf deinem Handy."),
              ("Was, wenn es im Zimmer nur einen Wasserkocher gibt?", f"Dann plant Zimmerherd nur Rezepte, die damit gehen. Mit Kühlschrank im Zimmer sind das {N_WASSERKOCHER} von {N_GESAMT}."),
@@ -85,7 +85,7 @@ VARIANTEN = {
         probleme=[("Makros treffen ist Rechnerei", "Kochsatz skaliert die Portionen, bis Kalorien und Protein im Wochenschnitt passen. Im automatischen Test (2.800 kcal, 180 g Protein) liegt das Protein im Wochenschnitt bei mindestens 90 % des Ziels."),
                   ("Meal-Prep nach Gefühl", "Zwei Kochtage, ein Ablauf mit Uhrzeiten, Boxen mit „essen bis“-Datum nach den Lagerempfehlungen des BfR, teils strenger."),
                   ("Tracking nach dem Essen nervt", "Vorher planen statt hinterher eintragen. Die Nährwerte kommen aus einer Quelle: dem Bundeslebensmittelschlüssel 4.0.")],
-        check_titel="Protein pro Euro", check_text="Welche Zutaten bringen beim gewählten Laden am meisten Protein fürs Geld? Berücksichtigt sind nur Lebensmittel, bei denen mindestens 20 % der Energie aus Protein stammen.",
+        check_titel="Protein pro Euro", check_text="Welche Zutaten bringen beim gewählten Laden voraussichtlich am meisten Protein fürs Geld? Berücksichtigt sind nur Lebensmittel, bei denen mindestens 20 % der Energie aus Protein stammen.",
         check_geraete=[], check_start=[],
         punkte=[f"{N_EIWEISS} Rezepte mit mindestens 30 g Protein je Portion", f"{N_VORKOCH} Rezepte zum Vorkochen",
                 "Ofen und Heißluftfritteuse als zwei Wege im selben Rezept", "Kalorien und Budget in einem Plan",
@@ -101,7 +101,7 @@ VARIANTEN = {
         beschreibung="Wohnmobil, Van oder Wohnwagen: Flammen, Omnia und Kühlbox ankreuzen, Wochenplan und Einkaufsliste für die Tour bekommen. Läuft offline.",
         dach="Kochen, wie dein Camper es kann.", h1="Kochen im Wohnmobil: der Wochenplan für deine Bordküche", unter=f"Zwei Flammen, ein Omnia, eine kleine Kühlbox: Zweiflammer plant die Woche für genau diese Bordküche. Mit Einkaufsliste vor der Abfahrt und Hinweisen, was in die Kühlung muss. Mit zwei Flammen, Omnia und Kühlbox gehen {N_ZWEI_FLAMMEN_OMNIA} unserer Rezepte.",
         h2_probleme="Kochen im Wohnmobil: was die Bordküche schwer macht",
-        probleme=[("Kühlschrank-Tetris", "Wenig Platz in der Kühlung. Zweiflammer plant ohne Kühlschrank nur ungekühlt lagerbare Zutaten und sucht für angebrochene Packungen weitere Gerichte."),
+        probleme=[("Kühlschrank-Tetris", "Wenig Platz in der Kühlung. Ohne Kühlschrank plant Zweiflammer Kühlware nur für den Einkaufstag und sucht für angebrochene Packungen weitere Gerichte."),
                   ("Eine Flamme, ein Topf", f"{N_EINE_PLATTE} Rezepte gehen mit einer einzigen Flamme, Topf und Pfanne. Der Omnia macht Gratin und Crumble auf dem Gasherd."),
                   ("Weit zum nächsten Laden", "Der Einkauf für mehrere Tage steht vor der Abfahrt, nach Abteilungen sortiert.")],
         check_titel="Bordküchen-Check", check_text="Was hat deine Bordküche? Wir zählen live, wie viele Rezepte damit gehen.",
@@ -196,7 +196,7 @@ def seite(v, t):
         check = f'<div class="chips" id="check-geraete">{chips}</div><p class="check-ergebnis" id="check-ergebnis" aria-live="polite">&nbsp;</p><div class="rk-reihe" id="check-beispiele"></div>'
     else:
         laeden = "".join(f'<option value="{k}">{k.capitalize()}</option>' for k in ["aldi", "lidl", "netto", "penny", "kaufland", "rewe", "edeka"])
-        check = f'<div class="feld"><label for="check-laden">Laden</label><select id="check-laden">{laeden}</select></div><table class="nw-tabelle" id="check-protein"><thead><tr><th>Zutat</th><th>Protein je €</th><th>Packung ca.</th></tr></thead><tbody></tbody></table><p class="hilfe">Packungspreise sind Schätzwerte (Stand 10/2026, teils per Stichprobe geprüft). Fleisch und Fisch kosten laut Stichprobe oft mehr als hier geschätzt. Nährwerte: BLS 4.0, Max Rubner-Institut, CC BY 4.0.</p>'
+        check = f'<div class="feld"><label for="check-laden">Laden</label><select id="check-laden">{laeden}</select></div><table class="nw-tabelle" id="check-protein"><thead><tr><th>Platz</th><th>Zutat</th><th>Protein je 100 g</th></tr></thead><tbody></tbody></table><p class="hilfe">Reihenfolge nach geschätzten Packungspreisen (Stand 10/2026, teils per Stichprobe geprüft). Euro-Werte zeigen wir erst, wenn wir sie an der Kasse nachgeprüft haben. Nährwerte: BLS 4.0, Max Rubner-Institut, CC BY 4.0.</p>'
     P = CONFIG["preise"]
     pass_txt = ""
     if v in P["pass"]["varianten"]:

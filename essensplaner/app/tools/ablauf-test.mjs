@@ -29,7 +29,10 @@ for (const [seite, knopf] of [['kuendigen.html', 'Jetzt kündigen'], ['widerrufe
   pruef(/Bitte fülle/.test(await page.locator('#vertragstatus').textContent()), seite + ': Pflichtfeld-Meldung');
   await page.fill('#name', 'Erika Muster'); await page.fill('#email', 'erika@example.org'); await page.fill('#vertrag', 'Plus Jahr');
   await page.click(`button[type=submit]:has-text("${knopf}")`);
-  pruef(/Eingang:/.test(await page.locator('#vertragbereich').textContent()), seite + ': Bestätigung mit Zeitstempel');
+  const bestaetigung = await page.locator('#vertragbereich').textContent();
+  pruef(/Eingang:|Erstellt:/.test(bestaetigung), seite + ': Bestätigung mit Zeitstempel');
+  // ohne Server darf die Seite keinen Eingang behaupten
+  pruef(!/eingegangen/.test(bestaetigung) && /nicht übermittelt/.test(bestaetigung), seite + ': ohne Server kein falscher Eingang');
 }
 pruef(fehler.length === 0, 'JS-Fehler: ' + fehler.join(' | '));
 console.log(`E2E: ${ok} ok, ${nok} Fehler`);

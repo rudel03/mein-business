@@ -39,7 +39,7 @@ Zielgruppe Meta: DE, 20–60, Broad. Optional Interessen (nur zum Vergleich in T
 | 4 | Zehn Minuten | `04_zehn-minuten.jpg` | Zehn Minuten. Dann Feierabend. | Viele Gerichte brauchen nicht mehr Arbeit. Die Box für morgen entsteht gleich mit. |
 | 5 | 21:15 Raststätte zu | `05_raststaette-zu.jpg` | 21:15. Raststätte zu. | Der Plan rechnet damit: Die Box für heute Abend ist schon vorbereitet. Einkaufszettel für den Discounter um die Ecke. |
 | 6 | Montagekoffer | `06_montagekoffer.jpg` | Der Montagekoffer | Was mit muss, damit du im Zimmer kochen kannst. Und was du damit kochst. Zimmerherd plant nach deiner Ausstattung. |
-| 7 | Sonntagskiste | `07_sonntagskiste.jpg`, Video V3 | Die Sonntagskiste | Sonntag zu Hause vorkochen, Montag losfahren. Boxen mit Datum, damit du weißt, was wann gegessen wird. |
+| 7 | Sonntagskiste | `07_sonntagskiste.jpg`, Video V3 | Die Sonntagskiste | (⏸ zurückgestellt: Der Planer kann „zu Hause kochen, im Zimmer essen“ noch nicht mit zwei Geräteprofilen planen.) Sonntag zu Hause vorkochen, Montag losfahren. Boxen mit Datum, in der Kühltasche transportieren, höchstens 2 Tage, Reis 1 Tag. |
 | 8 | Kabine statt Küche | `08_kabine-24-volt.jpg` | Kabine statt Küche | Rezepte für Wasserkocher, 24-Volt-Box oder ganz ohne Gerät. Kreuz an, was in der Kabine geht. |
 CTA-Knopf: „Mehr dazu“. Angebot auf der Landingpage: Tagesplan gratis → Montage-Pass 17,99 € (3 Monate, endet von selbst).
 

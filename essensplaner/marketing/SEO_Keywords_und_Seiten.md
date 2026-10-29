@@ -138,7 +138,7 @@ Legende: **Intention** I = informativ (will wissen/kochen), K = kommerziell (ver
 | 5 | meal prep für anfänger | I | mittel | Bücher, Blogs | `/ratgeber/meal-prep-anfaenger/` |
 | 6 | meal prep 5 tage (haltbar) | I | hoch | Blogs, oft mit zu langen Haltbarkeiten | `/ratgeber/meal-prep-haltbarkeit/` |
 | 7 | meal prep wie lange haltbar | I | hoch (Reis, Hähnchen, Salat …) | Blogs | `/ratgeber/meal-prep-haltbarkeit/` |
-| 8 | meal prep reis wie lange haltbar | I | mittel | Blogs | Abschnitt auf 7 (BfR: höchstens 1 Tag, unsere Regel C9) |
+| 8 | meal prep reis wie lange haltbar | I | mittel | Blogs | Abschnitt auf 7 (FSA: höchstens 1 Tag, unsere Regel C9) |
 | 9 | meal prep hähnchen wie lange haltbar | I | mittel | Blogs | Abschnitt auf 7 |
 | 10 | meal prep rezepte zum einfrieren | I | mittel | Blogs | Abschnitt auf 7 |
 | 11 | meal prep frühstück | I | hoch | Blogs | programmatisch `/rezepte/meal-prep/fruehstueck/` |
@@ -286,7 +286,7 @@ Alle Zahlen sind am 29.10.2026 aus `app/public/data/daten.json` gezählt, nach d
 Für jede Ratgeberseite gilt dasselbe Grundgerüst (es dient Menschen und hilft AI-Suchsystemen, Passagen zu zitieren, siehe 7.4):
 1. **Antwort zuerst:** 2–3 Sätze (40–60 Wörter) beantworten die Suchfrage direkt.
 2. **Tabelle oder Liste** mit echten Rezepten aus der Datenbank (Foto, Zeit, Geräte, Lagerhinweis).
-3. **Praxisteil** mit Wissen, das es woanders kaum gibt: Lagerregeln nach BfR (unsere Tabelle C9), Gerätekniffe, Einkauf.
+3. **Praxisteil** mit Wissen, das es woanders kaum gibt: Lagerregeln nach BfR, FSA und USDA, teils strenger (unsere Tabelle C9), Gerätekniffe, Einkauf.
 4. **FAQ** (3–5 Fragen aus Autocomplete-Frageformen).
 5. **CTA:** „Mit deiner Ausstattung einen Tag gratis planen“, mit Link `/planer/?v=…` und vorausgefüllten Geräten.
 6. Datum „Zuletzt geprüft“ und Autor oder Prüfer mit Namen (E-E-A-T). Quellen (BfR, BLS 4.0) verlinken.
@@ -342,7 +342,7 @@ Später: `/ratgeber/kochen-im-lkw/` (16 Rezepte mit Tag `lkw`), `/ratgeber/wasse
 | `/ratgeber/meal-prep-plan-aldi/` | aldi meal prep plan | Meal-Prep-Plan mit Aldi: eine Woche, Einkaufsliste, Kosten | Plan aus dem Planer (Laden Aldi), Kosten als Schätzung mit Datum |
 | `/ratgeber/meal-prep-plan-lidl/` | meal prep lidl | Meal-Prep mit Lidl: Wochenplan und Einkaufsliste | wie oben, Laden Lidl. **Eigener Plan**, kein Kopie-Text |
 | `/ratgeber/meal-prep-rezepte-proteinreich/` | meal prep rezepte proteinreich | 43 proteinreiche Meal-Prep-Rezepte | 43 (Meal-Prep und ≥ 30 g Protein, ≥ 20 % Energie aus Protein) |
-| `/ratgeber/meal-prep-haltbarkeit/` | meal prep wie lange haltbar | Wie lange hält Meal-Prep? Reis, Hähnchen, Salat | Regeln C9 + BfR-Quellen. 50 einfrierbare Meal-Prep-Rezepte |
+| `/ratgeber/meal-prep-haltbarkeit/` | meal prep wie lange haltbar | Wie lange hält Meal-Prep? Reis, Hähnchen, Salat | Regeln C9 + Quellen BfR, FSA, USDA. 50 einfrierbare Meal-Prep-Rezepte |
 | `/ratgeber/protein-pro-euro/` | billige proteinquellen | Protein pro Euro: günstige Eiweißquellen im Discounter | Tabelle aus `zutaten.py` (Grundpreis + BLS), Stand-Datum |
 | `/ratgeber/makros-berechnen/` | makros berechnen | Makros berechnen: Formel, Beispiel, Rechner | kleiner Rechner (Mifflin-St Jeor, offen erklärt), Ergebnis → Planer. Kein Abnehmziel als Voreinstellung |
 | `/ratgeber/150-g-protein-am-tag/` | 150g protein am tag beispiel | 150 g Protein am Tag: ein Beispieltag vom Discounter | ein Planer-Tag mit Nährwerten und Kosten. Kein Wirkversprechen |
@@ -560,7 +560,7 @@ Laut Google braucht es für AI Overviews nichts Besonderes, gutes normales SEO r
   ## Fakten (Stand 10/2026)
   - 195 Rezepte; 59 davon mit Wasserkocher, Mikrowelle und Kühlschrank, 47 nur mit Wasserkocher
   - Nährwerte: Bundeslebensmittelschlüssel 4.0 (Max Rubner-Institut); Preise: eigene Schätzung je Laden
-  - Lagerregeln nach BfR: Kühlschrank max. 2 Tage, Reis/Nudeln/Fisch/Hack/Ei max. 1 Tag
+  - Lagerregeln nach BfR, FSA und USDA, teils strenger, bei höchstens 7 °C: Kühlschrank max. 2 Tage, Reis/Nudeln/Fisch/Hack/Ei max. 1 Tag
   - Preise: Tagesplan gratis; Montage-Pass 17,99 € einmalig für 3 Monate (endet automatisch); Plus 6,99 €/Monat oder 44,99 €/Jahr
 
   ## Seiten
@@ -588,7 +588,7 @@ Regeln: kurze, wahre Antworten. Zahlen kommen im Build aus `daten.json` bzw. `co
 2. **Was kann man nur mit dem Wasserkocher kochen?**
    Alles, was in heißem Wasser quillt oder gart, etwa Couscous, Haferflocken oder Suppe. Das Wasser kocht im Wasserkocher, das Essen zieht in einer Schüssel mit Deckel. Mit Wasserkocher und Kühlschrank sind es 47 Rezepte.
 3. **Was esse ich, wenn im Zimmer kein Kühlschrank steht?**
-   Dann plant Zimmerherd nur Zutaten, die ungekühlt lagern oder als Einzelportion sofort verbraucht werden. Fertige Speisen stehen höchstens 2 Stunden ungekühlt (Empfehlung des BfR). Mit Wasserkocher und Mikrowelle bleiben 38 Rezepte.
+   Dann plant Zimmerherd Kühlware nur für den Einkaufstag, sonst nur Zutaten, die ungekühlt lagern. Fertige Speisen stehen höchstens 2 Stunden ungekühlt (Empfehlung des BfR). Mit Wasserkocher und Mikrowelle bleiben 38 Rezepte.
 4. **Darf ich im Hotel- oder Monteurzimmer kochen?**
    Das regelt die Hausordnung der Unterkunft. Frag vorher, ob Wasserkocher, Mikrowelle oder Kochplatte erlaubt sind. Zimmerherd plant nur mit den Geräten, die du ankreuzt.
 5. **Was kostet Zimmerherd?**

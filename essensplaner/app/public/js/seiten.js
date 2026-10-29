@@ -65,8 +65,8 @@ function vertragFormular() {
       ? (daten.zum ? `Gewünschter Zeitpunkt: ${new Date(daten.zum).toLocaleDateString('de-DE')} (sonst zum frühestmöglichen Termin).` : 'Die Kündigung wirkt zum frühestmöglichen Termin.')
       : 'Der Vertrag wird rückabgewickelt. Bereits gezahlte Beträge erhältst du innerhalb von 14 Tagen zurück (abzüglich eines etwaigen anteiligen Wertersatzes laut Widerrufsbelehrung).';
     $('#vertragbereich').innerHTML = `
-      <h2>${was} ${gesendet ? 'eingegangen' : 'erstellt'}</h2>
-      <p><b>Eingang:</b> ${eingang}</p>
+      <h2>${gesendet ? `${was} eingegangen` : `${was} noch nicht übermittelt`}</h2>
+      ${gesendet ? `<p><b>Eingang:</b> ${eingang}</p>` : `<p class="meldung fehler" role="alert">Deine Erklärung ist noch <b>nicht bei uns angekommen</b>. Bitte schick sie per E-Mail (Link unten), damit sie wirksam wird.</p><p><b>Erstellt:</b> ${eingang}</p>`}
       <p><b>Name:</b> ${esc(daten.name)} · <b>E-Mail:</b> ${esc(daten.email)}</p>
       <p><b>Vertrag:</b> ${esc(daten.vertrag)}${daten.art ? ` · <b>Art:</b> ${daten.art === 'ausserordentlich' ? 'außerordentlich' : 'ordentlich'}` : ''}${daten.grund ? ` · <b>Grund:</b> ${esc(daten.grund)}` : ''}</p>
       <p>${wirkung}</p>

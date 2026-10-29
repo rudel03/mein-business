@@ -30,6 +30,8 @@ async function geraeteCheck() {
   zaehle();
 }
 
+const zahlDe = (x) => (Math.round(x * 10) / 10).toString().replace('.', ',');
+
 async function proteinProEuro() {
   const d = await lade();
   const sel = box.querySelector('#check-laden');
@@ -38,8 +40,9 @@ async function proteinProEuro() {
     const liste = Object.values(d.zutaten).filter((z) => z.n100.kcal > 0 && (4 * z.n100.p) / z.n100.kcal >= 0.2 && !z.flags.includes('b')) // mind. 20 % Energie aus Protein
       .map((z) => { const preis = z.preis * L.faktorEigenmarke; return { z, preis, pje: (z.n100.p * packGramm(z) / 100) / preis }; })
       .sort((a, b) => b.pje - a.pje).slice(0, 12);
-    box.querySelector('#check-protein tbody').innerHTML = liste.map(({ z, preis, pje }) =>
-      `<tr><td>${esc(z.name)}</td><td>${Math.round(pje)} g</td><td>${preis.toFixed(2).replace('.', ',')} €</td></tr>`).join('');
+    // Euro-Werte erst nach dem Kassenbon-Test zeigen (Claim-Freigabe), bis dahin nur die Reihenfolge
+    box.querySelector('#check-protein tbody').innerHTML = liste.map(({ z }, i) =>
+      `<tr><td>${i + 1}.</td><td>${esc(z.name)}</td><td>${zahlDe(z.n100.p)} g</td></tr>`).join('');
   };
   sel.addEventListener('change', zeige);
   zeige();

@@ -17,7 +17,7 @@ Stand: 29.10.2026 · Entwurf zur Freigabe durch den Inhaber, **vor dem Versand a
 | Keine Fake-Dringlichkeit | keine Countdowns, kein „nur heute“, keine Streichpreise, keine erfundenen Zahlen oder Stimmen | § 5 UWG, UWG Anhang Nr. 7, 23b/c |
 | Gratis nur für Gratis | „gratis“ nur für den 1-Tages-Plan. Testphase immer: „7 Tage 0 €, danach 44,99 € im Jahr“ bzw. „6,99 € im Monat“ in gleicher Größe | UWG Anhang Nr. 21, § 312j BGB |
 | Keine Gesundheits-, Abnehm-, Spar- oder Umweltversprechen | kein „gesund“, „fit“, „spart X €“, „weniger Müll“, „spart Gas“, „allergiesicher“ | HCVO, HWG, § 5 UWG, RL (EU) 2024/825 |
-| Haltbarkeit nur nach unserer BfR-Regel | Kühlschrank höchstens 2 Tage; Reis, Nudeln, Fisch, Hack, Ei höchstens 1 Tag; ungekühlt höchstens 2 Stunden; aufwärmen auf mindestens 70 °C für 2 Minuten | ENTSCHEIDUNGEN C9 |
+| Haltbarkeit nur nach unserer Lagerregel (BfR, FSA, USDA, teils strenger) | Kühlschrank höchstens 2 Tage; Reis, Nudeln, Fisch, Hack, Ei höchstens 1 Tag; ungekühlt höchstens 2 Stunden; aufwärmen auf mindestens 70 °C für 2 Minuten | ENTSCHEIDUNGEN C9 |
 | Keine App-Daten im Mail-Tool | Geräte, Allergien, Makros, Personen, Kinder nie mit der Adresse speichern oder für Segmente nutzen | Art. 9 DSGVO, ENTSCHEIDUNGEN C3 |
 | Zahlen mit Stand | Rezeptzahlen „Stand 10/2026“, vor jedem Versand neu zählen. Kosten nur nach Kassenbon-Test, sonst Absatz streichen | `11` Punkt 4 |
 | Form | Betreff höchstens 45 Zeichen, ohne Ausrufezeichen, ohne Gedankenstrich, ohne Emoji, ohne „Re:“. Vorschauzeile wiederholt den Betreff nicht | Skill `emails` |
@@ -206,7 +206,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
   >
   > Drei Dinge, die sich vor dem nächsten Einsatz lohnen:
   >
-  > **1. Kreuz an, was im Zimmer steht.** Nur Wasserkocher: 48 Rezepte. Mit Mikrowelle: 64. Mit einer Kochplatte dazu: 147 (Stand 10/2026). Die Tabelle steht auf Seite 1.
+  > **1. Kreuz an, was im Zimmer steht.** Nur Wasserkocher: 47 Rezepte. Mit Mikrowelle: 59. Mit einer Kochplatte dazu: 119 (jeweils mit Kühlschrank, Stand 10/2026). Die Tabelle steht auf Seite 1.
   >
   > **2. Frag den Vermieter, bevor die Platte mitkommt.** Mobile Kochgeräte im Zimmer brauchen oft seine Erlaubnis. Eine Textvorlage für die Frage ist im PDF.
   >
@@ -256,7 +256,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
   >
   > Hotel ohne Küche. Auf dem Schrank steht ein Wasserkocher. Das reicht für mehr als Tütensuppe.
   >
-  > Bei Zimmerherd gehen 48 Rezepte nur mit Wasserkocher. 21 davon sind Mittag- oder Abendessen (Stand 10/2026). Zwei Beispiele:
+  > Bei Zimmerherd gehen 47 Rezepte nur mit Wasserkocher und Kühlschrank. 21 davon sind Mittag- oder Abendessen (Stand 10/2026). Zwei Beispiele:
   >
   > - **Kartoffelpüree mit Wiener Würstchen und Senf.** Rund 5 Minuten Arbeit.
   > - **Couscous-Salat mit Kichererbsen.** Rund 10 Minuten Arbeit, geht auch als Box für den nächsten Mittag. Hält gekühlt 1 Tag.
@@ -480,7 +480,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
   >
   > seit einem Monat bist du ohne Plus unterwegs. Der Tagesplan läuft weiter gratis.
   >
-  > Ein Tipp für Zimmer mit Mikrowelle: Mit Wasserkocher und Mikrowelle gehen 64 Rezepte, 24 davon zum Abendessen (Stand 10/2026). Kreuz beides an, und der Plan nimmt nur diese.
+  > Ein Tipp für Zimmer mit Mikrowelle: Mit Wasserkocher, Mikrowelle und Kühlschrank gehen 59 Rezepte, 22 davon zum Abendessen (Stand 10/2026). Kreuz beides an, und der Plan nimmt nur diese.
   >
   > {{NEU_SEIT_ENDE}} *(nur einsetzen, wenn es wirklich Neues gibt, z. B. neue Rezepte mit Zahl. Sonst Absatz streichen.)*
   >
@@ -587,7 +587,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
   > - Ungekühlt, etwa in der Sporttasche: höchstens **2 Stunden**
   > - Aufwärmen: mindestens **70 °C für 2 Minuten**
   >
-  > Quelle: Verbrauchertipps des BfR, für den Planer bewusst streng ausgelegt.
+  > Quellen: Verbrauchertipps des BfR, dazu die Reis-Regel der britischen FSA und die 2-Stunden-Regel der US-Behörde USDA, für den Planer bewusst streng ausgelegt. Alle Fristen gelten bei höchstens 7 °C.
   >
   > Daraus folgt: **zwei Kochtage statt einem.** Zum Beispiel Sonntag und Mittwoch. Was länger halten soll, kommt in den Tiefkühler.
   >
@@ -884,10 +884,10 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
   >
   > Auf Seite 1 steht, was eure Ausstattung hergibt (Stand 10/2026):
   >
-  > - eine Flamme, ein Topf: 78 Rezepte
-  > - eine Flamme, Topf und Pfanne: 121
-  > - zwei Flammen und Omnia-Backofen: 136, davon 92 fürs Abendessen
-  > - mit Landstrom für Heißluftfritteuse, Mikrowelle und Wasserkocher: 192
+  > - eine Flamme, ein Topf: 66 Rezepte
+  > - eine Flamme, Topf und Pfanne: 95
+  > - zwei Flammen und Omnia-Backofen: 107, davon 67 fürs Abendessen
+  > - mit Landstrom für Heißluftfritteuse, Mikrowelle und Wasserkocher: 152
   >
   > Die Kühlschrank-Karte gehört an die Tür. Gekochtes hält höchstens 2 Tage, Reis, Nudeln, Fisch, Hack und Ei 1 Tag. Ungekühlt höchstens 2 Stunden, das geht in der Sonne schnell.
   >
