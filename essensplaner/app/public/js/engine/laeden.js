@@ -11,6 +11,6 @@ export const LAEDEN = {
   netto: { name: 'Netto Marken-Discount', faktorEigenmarke: 1.02, faktorMarke: 1.25, reihenfolge: DISCOUNTER },
   penny: { name: 'Penny', faktorEigenmarke: 1.02, faktorMarke: 1.25, reihenfolge: DISCOUNTER },
   kaufland: { name: 'Kaufland', faktorEigenmarke: 1.03, faktorMarke: 1.3, reihenfolge: VOLL },
-  rewe: { name: 'Rewe', faktorEigenmarke: 1.08, faktorMarke: 1.45, reihenfolge: VOLL },
-  edeka: { name: 'Edeka', faktorEigenmarke: 1.1, faktorMarke: 1.45, reihenfolge: VOLL },
+  rewe: { name: 'Rewe', faktorEigenmarke: 1.03, faktorMarke: 1.45, reihenfolge: VOLL },
+  edeka: { name: 'Edeka', faktorEigenmarke: 1.05, faktorMarke: 1.45, reihenfolge: VOLL },
 };
