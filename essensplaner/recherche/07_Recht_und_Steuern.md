@@ -1,6 +1,8 @@
 # 07 – Recht & Steuern für den Essensplaner (DE/DACH)
 
 Stand: 28.10.2026 · Abrufdatum aller Links: 28.10.2026 · Perspektive: IT-, Wettbewerbs-, Lebensmittelrecht + Steuern
+
+> **Korrigiert nach Faktencheck (10) am 29.10.2026:** Widerrufsfunktion = § 356a BGB eingetragen, OLG Nürnberg um Login-Ausnahme ergänzt (cms-Link vermerkt), BGH I ZR 200/25 als durch zwei Kanzleiquellen bestätigt vermerkt, tote Links ersetzt (DPMA, Digistore24, Börsenverein, BZSt), Börsenverein-Aussage zu Apps als „sinngemäß, Primärquelle offen“ gekennzeichnet. Geänderte Stellen tragen „(korr. 10)“.
 Gegenstand: Web-App/PWA „Essensplaner“ (Abo und/oder Einmalkauf), Varianten Montage, Fitness, dritte Nische (Familien/Studierende), Allgemein. Betreiber: Privatperson, die bereits zwei Shopify-E-Book-Shops betreibt.
 
 **Legende Risiko-Ampel:** 🟢 geringes Risiko / Standard · 🟡 handhabbar, aber Pflichten oder Graubereich · 🔴 hohes Abmahn-/Bußgeld-/Haftungsrisiko, vor Launch zwingend lösen.
@@ -32,7 +34,7 @@ Gegenstand: Web-App/PWA „Essensplaner“ (Abo und/oder Einmalkauf), Varianten 
 | 3 | USt-Satz | App/Abo = elektronische Dienstleistung **19 %**. E-Book **7 %**. Bundle = zwei Leistungen, Entgelt nach Einzelverkaufspreisen aufteilen. | 🟡 |
 | 4 | Verkauf & Steuern EU/CH | **Merchant of Record** (Paddle, Lemon Squeezy, Digistore24) nimmt OSS, Schweizer MWST, Rechnungen, Chargebacks ab. Für ein Ein-Personen-Unternehmen klare Empfehlung. | 🟢 |
 | 5 | Buchpreisbindung | Gilt **nicht** für die Planer-App/das Abo. Gilt für jedes beigelegte E-Book: kein „E-Book gratis zum Abo“, Bundles nur als eigenes Festpreis-Produkt, das der Inhaber als Verleger festsetzt und veröffentlicht. | 🟡 |
-| 6 | Abo-Recht | Kündigungsbutton ohne Login (OLG Nürnberg 3 U 2214/23, LG München I 33 O 15098/22), auch für „Lifetime“/Einmalzahlung mit Laufzeit (BGH I ZR 161/24). Bestellbutton „zahlungspflichtig bestellen“. Neue **Widerrufsfunktion** seit 19.06.2026. | 🔴 (wenn falsch) → 🟢 (wenn sauber gebaut) |
+| 6 | Abo-Recht | Kündigungsbutton ohne Login (OLG Nürnberg 3 U 2214/23 mit Ausnahme, wenn der Dienst seiner Natur nach ohnehin Login erfordert; höchstrichterlich ungeklärt, deshalb ohne Login bauen (korr. 10); LG München I 33 O 15098/22), auch für „Lifetime“/Einmalzahlung mit Laufzeit (BGH I ZR 161/24). Bestellbutton „zahlungspflichtig bestellen“. Neue **Widerrufsfunktion** seit 19.06.2026. | 🔴 (wenn falsch) → 🟢 (wenn sauber gebaut) |
 | 7 | Datenschutz | Allergien, Unverträglichkeiten, Gewicht/Ziel = **Gesundheitsdaten** (Art. 9 DSGVO); Diätform „halal/koscher“ kann religiöse Überzeugung offenbaren. Lösung: **Daten nur lokal im Gerät** speichern + ausdrückliche Einwilligung für alles, was doch auf den Server muss. | 🔴 → 🟡 |
 | 8 | Tracking/Meta | Meta Pixel/CAPI nur nach Einwilligung (§ 25 TDDDG) und **niemals** mit Gesundheits-Events (z. B. „Allergie gewählt“). Meta schränkt Health-&-Wellness-Werbetreibende seit 2025 bei Conversion-Events ein – Fitness-/Diät-Variante kann betroffen sein. | 🔴 |
 | 9 | Werbung | Health-Claims-VO gilt für Werbung, die Lebensmittel/Rezepte bewirbt, sobald Nährwert- oder Gesundheitsaussagen gemacht werden. Keine Gewichtsverlust-Mengen/-Zeiten (Art. 12 lit. b HCVO), keine Krankheitsbezüge (§ 11 LFGB, HWG). | 🔴 |
@@ -117,7 +119,7 @@ Beim MoR verkauft der Plattformbetreiber die Leistung **im eigenen Namen** an de
 
 ### 2.1 Gilt sie für die App / das Abo? 🟢 Nein
 - **§ 2 Abs. 1 BuchPrG** erfasst Bücher, Musiknoten, kartografische Produkte (Nr. 1–2), **Produkte, die Bücher reproduzieren oder substituieren und bei Würdigung der Gesamtumstände als überwiegend verlagstypisch anzusehen sind** (Nr. 3 – darunter E-Books, seit der Klarstellung 2016 ausdrücklich) und **kombinierte Objekte, bei denen eines dieser Erzeugnisse die Hauptsache bildet** (Nr. 4).
-- Ein Planer, der aus Eingaben (Geräte, Budget, Makros) Pläne, Einkaufslisten und Kosten **errechnet**, ist Software, kein Buchsubstitut. Er ist nicht „verlagstypisch“. Der Börsenverein ordnet Apps nur dann als preisgebunden ein, wenn sie im Kern ein Buch in App-Form sind (z. B. ein linear lesbares Kochbuch mit ein paar Lesezeichen-Funktionen) **[Börsenverein-Hinweis „Preisbindung von E-Books und Apps“ prüfen]**.
+- Ein Planer, der aus Eingaben (Geräte, Budget, Makros) Pläne, Einkaufslisten und Kosten **errechnet**, ist Software, kein Buchsubstitut. Er ist nicht „verlagstypisch“. Der Börsenverein ordnet Apps nur dann als preisgebunden ein, wenn sie im Kern ein Buch in App-Form sind (z. B. ein linear lesbares Kochbuch mit ein paar Lesezeichen-Funktionen) **[Börsenverein-Hinweis „Preisbindung von E-Books und Apps“ prüfen]**. **Sinngemäß, Primärquelle offen** (korr. 10): Eine Börsenverein-Aussage ausdrücklich zu Apps wurde im Faktencheck nicht gefunden; belegt ist nur § 2 BuchPrG („Produkte, die Bücher … ersetzen“) und die Börsenverein-Linie, dass Datenbankzugänge und vernetzte Inhalte keine E-Books sind.
 - **Grenzfall:** Eine reine „Rezeptsammlung im Abo“ ohne Planungslogik, inhaltlich identisch mit einem E-Book, könnte als Substitut (Nr. 3) gelten. Deshalb: Planungsfunktion ist der Kern des Produkts, Rezepte sind Datenbasis. 🟢
 - Österreich: Bundesgesetz über die Preisbindung bei Büchern (BPrBG) erfasst seit 2014 auch E-Books – gleiche Logik wie DE. Schweiz: keine Buchpreisbindung.
 
@@ -159,8 +161,8 @@ Beim MoR verkauft der Plattformbetreiber die Leistung **im eigenen Namen** an de
 
 **Rechtsprechung 2022–2026 (Auswahl):**
 - **BGH, Urt. v. 22.05.2025 – I ZR 161/24:** Button auch bei Einmalzahlung für befristete Laufzeit.
-- **BGH, Urt. v. 16.07.2026 – I ZR 200/25** (BGH-PM Nr. 128/2026): Die in § 312k Abs. 2 BGB genannten Inhalte der Bestätigungsseite sind abschließend; **keine Halteangebote, Rabatte, „Bist du sicher?“-Schleifen** im Kündigungsablauf. **[nur über Sekundärquellen erfasst – Volltext/PM prüfen]**
-- **OLG Nürnberg, Urt. v. 30.07.2024 – 3 U 2214/23** (Deutschlandticket): Button, der erst **nach Login** erreichbar ist, genügt nicht.
+- **BGH, Urt. v. 16.07.2026 – I ZR 200/25** (BGH-PM Nr. 128/2026): Die in § 312k Abs. 2 BGB genannten Inhalte der Bestätigungsseite sind abschließend; **keine Halteangebote, Rabatte, „Bist du sicher?“-Schleifen** im Kündigungsablauf. **[nur über Sekundärquellen erfasst – Volltext/PM prüfen]** Az., Datum und Vorinstanz (OLG Düsseldorf 20 UKl 1/25) sind durch zwei Kanzleiquellen bestätigt (ra-kotz.de, mtrlegal.com); Vermerk bleibt, bis die BGH-PM 128/2026 verlinkt ist (korr. 10).
+- **OLG Nürnberg, Urt. v. 30.07.2024 – 3 U 2214/23** (Deutschlandticket): Button, der erst **nach Login** erreichbar ist, genügt nicht. Ausnahme denkbar, wenn der Dienst seiner Natur nach ohnehin Login erfordert. Höchstrichterlich ist das nicht geklärt, deshalb Button ohne Login bauen (korr. 10).
 - **LG München I, Urt. v. 10.10.2023 – 33 O 15098/22** (Sky/WOW, rechtskräftig): Kündigung muss **ohne Login** möglich sein; Name + Identifikationsmerkmale genügen.
 - **OLG Köln, Urt. v. 10.01.2025 – 6 U 62/24:** Button, der erst nach mehreren Eingabeschritten erscheint, ist unzulässig.
 - **OLG Koblenz, Urt. v. 19.09.2024 – 2 U 437/23** (1&1): Umleitung der Kunden weg von der gesetzlichen Kündigungsstrecke unzulässig.
@@ -196,7 +198,7 @@ Seit 01.03.2022 (Verträge ab diesem Datum) sind in AGB unwirksam:
 | Folge bei Widerruf | Verbraucher schuldet **anteiligen Wertersatz** für bereits genutzte Tage, wenn er ausdrücklich den Beginn vor Fristende verlangt hat und ordnungsgemäß belehrt wurde (§ 357a Abs. 2 BGB). **[Anwendung auf digitale Dienstleistungen mit RA abstimmen]** | Kein Wertersatz, aber Widerrufsrecht weg, wenn alle drei Schritte erfüllt sind. |
 | Umsetzung | Checkbox (nicht vorangekreuzt): „Ich verlange ausdrücklich, dass mit der Leistung vor Ablauf der Widerrufsfrist begonnen wird. Mir ist bekannt, dass ich bei Widerruf einen anteiligen Betrag für die bis dahin erbrachte Leistung zahle.“ | Checkbox: „Ich stimme ausdrücklich zu, dass mit der Ausführung des Vertrags vor Ablauf der Widerrufsfrist begonnen wird. Mir ist bekannt, dass ich mit Beginn der Ausführung mein Widerrufsrecht verliere.“ + Bestätigungs-Mail mit diesem Text (Haus-Regel aus den Shops). |
 - **Muster-Widerrufsbelehrung:** Anlage 1 zu Art. 246a § 1 Abs. 2 S. 2 EGBGB; Muster-Widerrufsformular: Anlage 2. Gestaltungshinweis für digitale Inhalte/Dienstleistungen jeweils einsetzen. Wer das Muster korrekt nutzt, genießt Gesetzlichkeitsfiktion (Art. 246a § 1 Abs. 2 S. 3 EGBGB).
-- **NEU – Widerrufsfunktion („Widerrufsbutton“):** Richtlinie (EU) 2023/2673 fügt Art. 11a in die Verbraucherrechte-RL ein; seit **19.06.2026** müssen online geschlossene Verträge eine gut sichtbare Funktion „Vertrag widerrufen“ (o. ä.) während der Widerrufsfrist bieten, mit Bestätigungsschritt und Eingangsbestätigung – analog zum Kündigungsbutton. Deutsche Umsetzung im BGB **[Paragraf und Wortlaut des Umsetzungsgesetzes prüfen]**. Für die PWA: im Footer neben „Verträge hier kündigen“ auch „Vertrag widerrufen“ vorsehen.
+- **NEU – Widerrufsfunktion („Widerrufsbutton“):** Richtlinie (EU) 2023/2673 fügt Art. 11a in die Verbraucherrechte-RL ein; seit **19.06.2026** müssen online geschlossene Verträge eine gut sichtbare Funktion „Vertrag widerrufen“ (o. ä.) während der Widerrufsfrist bieten, mit Bestätigungsschritt und Eingangsbestätigung – analog zum Kündigungsbutton. Deutsche Umsetzung: **§ 356a BGB** (Elektronische Widerrufsfunktion): Beschriftung „Vertrag widerrufen“, Pflichtangaben Name, Vertrag, Kontaktweg; Bestätigung „Widerruf bestätigen“; Eingangsbestätigung mit Datum/Uhrzeit auf dauerhaftem Datenträger (korr. 10). Für die PWA: im Footer neben „Verträge hier kündigen“ auch „Vertrag widerrufen“ vorsehen.
 
 ### 3.6 Digitale-Produkte-Recht §§ 327 ff. BGB 🟡
 - **Bereitstellung** (§ 327b), **Produktmangel** (§§ 327d, 327e): Die App muss die vereinbarten und üblichen Eigenschaften haben (Funktion, Kompatibilität, Sicherheit). Falsche Nährwerte/Allergen-Tags, nicht funktionierender Export oder ein Planer, der vegetarische Pläne mit Fleisch liefert, sind **Mängel** → Nacherfüllung, Minderung, Vertragsbeendigung, Schadensersatz (§ 327i).
@@ -572,7 +574,7 @@ StB 1.800–3.500 €, IHK 150–300 €, Offenlegung ca. 10–50 €, Geschäft
 - UStG (§§ 3a, 12, 18j, 19, 19a): https://www.gesetze-im-internet.de/ustg_1980/
 - UStAE: https://www.bundesfinanzministerium.de (Umsatzsteuer-Anwendungserlass, aktuelle Fassung)
 - BZSt – One-Stop-Shop: https://www.bzst.de/DE/Unternehmen/Umsatzsteuer/One-Stop-Shop_EU/one_stop_shop_eu_node.html
-- BZSt – EU-Kleinunternehmerregelung: https://www.bzst.de/DE/Unternehmen/Umsatzsteuer/EU-Kleinunternehmerregelung/eu-kleinunternehmerregelung_node.html
+- BZSt – EU-Kleinunternehmerregelung: https://www.bzst.de/DE/Unternehmen/Umsatzsteuer/EU-KU-Regelung/eu_ku_regelung_node.html (korr. 10; alter Link 404, neuer Link am 29.10.2026 erreichbar)
 - ESTV Schweiz – MWST für ausländische Unternehmen: https://www.estv.admin.ch
 - GewO § 14: https://www.gesetze-im-internet.de/gewo/__14.html
 - GewStG § 11: https://www.gesetze-im-internet.de/gewstg/__11.html
@@ -611,7 +613,7 @@ StB 1.800–3.500 €, IHK 150–300 €, Offenlegung ca. 10–50 €, Geschäft
 - OLG Nürnberg, 30.07.2024 – 3 U 2214/23: https://www.gesetze-bayern.de/Content/Document/Y-300-Z-GRURRS-B-2024-N-22885
 - LG München I, 10.10.2023 – 33 O 15098/22 (Sky/WOW): https://www.vzbv.de/urteile/kuendigung-von-online-abos-muss-ohne-login-moeglich-sein
 - OLG Köln, 10.01.2025 – 6 U 62/24; OLG Koblenz, 19.09.2024 – 2 U 437/23: https://www.verbraucherzentrale.nrw/pressemeldungen/presse-nrw/11-erschwert-einfache-kuendigung-99965
-- LG Köln, 29.07.2022 – 33 O 355/22: https://cms.law/de/deu/legal-updates/olg-nuernberg-kuendigungsbutton-nach-login-zulaessig
+- LG Köln, 29.07.2022 – 33 O 355/22: https://cms.law/de/deu/legal-updates/olg-nuernberg-kuendigungsbutton-nach-login-zulaessig (Achtung: der Beitrag betrifft OLG Nürnberg 3 U 2214/23, die Überschrift „Kündigungsbutton nach Login zulässig“ betont die Ausnahme) (korr. 10)
 - Händlerbund-Ratgeber § 312k: https://www.haendlerbund.de/de/ratgeber/recht/kuendigungsbutton-nach-312k-bgb
 - EuGH, 07.04.2022 – C-249/21 (Fuhrmann-2): https://curia.europa.eu/juris/liste.jsf?num=C-249/21
 - EuGH, 01.08.2022 – C-184/20 (OT): https://curia.europa.eu/juris/liste.jsf?num=C-184/20
@@ -630,15 +632,15 @@ StB 1.800–3.500 €, IHK 150–300 €, Offenlegung ca. 10–50 €, Geschäft
 - KG Berlin, 11.08.2026 – 5 UKl 1/26 (E-Mail im Impressum) – laut vzbv-Urteilsliste: https://www.vzbv.de/urteile
 
 **Behörden, Verbände, Plattformen**
-- DPMA Gebühren Marken: https://www.dpma.de/marken/gebuehren/index.html · DPMAregister: https://register.dpma.de
+- DPMA Gebühren Marken: https://www.dpma.de/service/gebuehren/marken/index.html (korr. 10; Werte 290/100/300/200 € bestätigt) · DPMAregister: https://register.dpma.de
 - EUIPO Gebühren: https://www.euipo.europa.eu/de/trade-marks/before-applying/fees-payable-direct · SME Fund: https://www.euipo.europa.eu/de/discover-ip/sme-fund · TMview: https://www.tmdn.org/tmview · TMclass: https://www.tmdn.org/tmclass
 - DSK, Orientierungshilfe für Anbieter digitaler Dienste: https://www.datenschutzkonferenz-online.de/orientierungshilfen.html
 - DSK, Liste DSFA-pflichtiger Verarbeitungen: https://www.datenschutzkonferenz-online.de/
 - Art.-29-Gruppe, Annex Health data in apps and devices (05.02.2015): https://ec.europa.eu/justice/article-29/documentation/other-document/files/2015/20150205_letter_art29wp_ec_health_data_after_plenary_annex_en.pdf
-- Börsenverein, Preisbindung: https://www.boersenverein.de/beratung-service/recht/preisbindung/
+- Börsenverein, Preisbindung: https://www.boersenverein.de/beratung-service/recht/buchpreisbindung/ (korr. 10; alter Link 404, neuer Link am 29.10.2026 erreichbar; Aussage zu Apps dort nicht gefunden)
 - Bundesfachstelle Barrierefreiheit zum BFSG: https://www.bundesfachstelle-barrierefreiheit.de
 - BfArM, Abgrenzung Medizinprodukte/Medical Apps: https://www.bfarm.de/DE/Medizinprodukte/Abgrenzung-und-Klassifizierung/_node.html
 - Meta, Health & Wellness-Beschränkungen (Sekundärquellen): https://www.haus.io/blog/meta-announces-new-health-wellness-conversion-restrictions, https://www.click.co.uk/insights/metas-new-advertising-restrictions-impacts-health-and-wellness-brands/, https://www.accelerateddigitalmedia.com/insights/guide-to-social-media-health-ad-restrictions-2025/ · Primärquelle Meta Business Hilfebereich **[prüfen]**: https://www.facebook.com/business/help
-- Paddle Preise: https://www.paddle.com/pricing · Lemon Squeezy: https://www.lemonsqueezy.com/pricing · Digistore24: https://www.digistore24.com/de/home/prices
+- Paddle Preise: https://www.paddle.com/pricing · Lemon Squeezy: https://www.lemonsqueezy.com/pricing · Digistore24: https://help.digistore24.com/hc/en-us/articles/23694504392721 (korr. 10; „7.9% + €1 per transaction“)
 
 **Hinweis zur Prüftiefe:** Mit **[prüfen]** markierte Punkte beruhen auf Sekundärquellen oder auf Entwicklungen nach dem gesicherten Kenntnisstand dieses Berichts (insbesondere 2026er Urteile, nationale Umsetzung der Widerrufsfunktion und der Produkthaftungs-RL, Meta-EU-Zeitplan, Gebühren der Zahlungsanbieter). Vor dem Launch einmal gegen die Primärquelle abgleichen; an der Gesamteinschätzung ändern sie voraussichtlich nichts.
