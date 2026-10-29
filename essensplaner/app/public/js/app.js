@@ -70,7 +70,7 @@ function formular(p) {
   return `
   <form id="planform" novalidate>
     <fieldset><legend>Was steht dir zur Verfügung?</legend>
-      <p class="hilfe">Kreuz an, was es dort gibt, wo du kochst. Wir planen nur Rezepte, die damit klappen.</p>
+      <p class="hilfe">Kreuz an, was es dort gibt, wo du kochst. Wir planen nur Rezepte, die damit klappen. Eine Kühlbox zählt als Kühlschrank nur, wenn sie zuverlässig unter 7 °C kühlt.</p>
       <div class="zeile">${stepper('herd', p.geraete.herd, 0, 4, V.herdName)}</div>
       ${chips('geraet', GERAETE.filter(([g]) => VARIANTE === 'camping' || !['omnia', 'grill'].includes(g)), 'checkbox', (g) => p.geraete[g])}
     </fieldset>
@@ -90,7 +90,7 @@ function formular(p) {
       ${chips('diaet', DIAETEN, 'radio', (d) => p.diaet === d)}
       <details class="mehr"${p.allergene.length ? ' open' : ''}><summary>Allergien und Unverträglichkeiten</summary>
         ${chips('allergen', ALLERGENE, 'checkbox', (a) => p.allergene.includes(a))}
-        <p class="hilfe">Wir filtern nach den 14 Hauptallergenen. Spuren können wir nicht erkennen: Prüf bei Allergien immer das Etikett.</p>
+        <p class="hilfe">Wir filtern nach den 14 Hauptallergenen. Spuren können wir nicht erkennen: Prüf bei Allergien immer das Etikett. Der Planer ersetzt keine ärztliche Beratung.</p>
       </details>
       <details class="mehr"${p.abneigungen.length ? ' open' : ''}><summary>Das mag ich nicht</summary>
         ${chips('abneigung', ABNEIGUNGEN, 'checkbox', abn)}
@@ -116,7 +116,7 @@ function formular(p) {
       <p class="lbl"><b>Mittags unter der Woche</b></p>
       ${chips('pause', PAUSEN, 'radio', (x) => p.pause === x)}
       <details class="mehr"${p.kochtage?.length ? ' open' : ''}><summary>Feste Kochtage (Vorkochen)</summary>
-        <p class="hilfe">Leer lassen = jeden Tag frisch. Mit Kochtagen planen wir Boxen für die Tage danach, nach den Lagerregeln des BfR.</p>
+        <p class="hilfe">Leer lassen = jeden Tag frisch. Mit Kochtagen planen wir Boxen für die Tage danach, nach den Lagerempfehlungen des BfR, teils strenger.</p>
         ${chips('kochtag', TAGE_KURZ.map((t, i) => [String(i), t]), 'checkbox', (i) => (p.kochtage || []).includes(Number(i)))}
       </details>
     </fieldset>
@@ -242,11 +242,11 @@ function rezeptDialog(id, faktor) {
   const AL = Object.fromEntries(ALLERGENE);
   const L = r.lager;
   const lager = [
-    L.kuehl_tage ? `Im Kühlschrank (höchstens 7 °C) bis zu ${L.kuehl_tage === 1 ? '1 Tag' : '2 Tage'}.` : 'Am besten gleich essen.',
+    L.kuehl_tage ? `Im Kühlschrank (höchstens 7 °C, besser 5 °C) bis zu ${L.kuehl_tage === 1 ? '1 Tag' : '2 Tage'}.` : 'Am besten gleich essen.',
     L.einfrierbar ? 'Lässt sich einfrieren.' : 'Nicht zum Einfrieren geeignet.',
     L.ungekuehlt_h >= 24 ? 'Hält auch ungekühlt bis zum nächsten Tag.' : 'Ungekühlt höchstens 2 Stunden.',
     L.aufwaermen !== 'nein' && L.aufwaermen !== 'thermo' ? 'Zum Aufwärmen durch und durch erhitzen (dampfend heiß, mindestens 70 °C für 2 Minuten).' : '',
-    L.aufwaermen === 'thermo' ? 'Für den Thermobehälter: Behälter mit kochendem Wasser vorwärmen, Essen kochend heiß einfüllen.' : '',
+    L.aufwaermen === 'thermo' ? 'Für den Thermobehälter: Behälter mit kochendem Wasser vorwärmen, Essen kochend heiß einfüllen. Bis zum Essen muss es mindestens 60 °C heiß bleiben. Ist es nur noch lauwarm, nicht mehr essen.' : '',
   ].filter(Boolean).map((x) => `<li>${x}</li>`).join('');
   const dlg = $('#rezept');
   $('.inhalt', dlg).innerHTML = `

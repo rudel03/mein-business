@@ -20,7 +20,7 @@ function uhr(min) {
 export function lagerText(art, tag, starttag) {
   const wt = TAGE[(tag + starttag) % 7];
   if (art === 'kuehl') return `Kühlschrank, essen bis ${wt}`;
-  if (art === 'tk') return `einfrieren, am Vortag (${TAGE[(tag - 1 + starttag + 7) % 7]}) in den Kühlschrank zum Auftauen oder in der Mikrowelle auftauen`;
+  if (art === 'tk') return `einfrieren, am Vortag (${TAGE[(tag - 1 + starttag + 7) % 7]}) in den Kühlschrank zum Auftauen oder in der Mikrowelle auftauen und gleich erhitzen`;
   if (art === 'ungekuehlt') return `ungekühlt haltbar bis ${wt}`;
   return 'gleich essen';
 }
@@ -74,7 +74,7 @@ export function vorkochAblauf(kochen, p) {
     out.push({
       d, wochentag: TAGE[((d + p.starttag) % 7 + 7) % 7] + (d < 0 ? " (vor Planbeginn)" : ""), dauer: gesamt, aktiv: schritte.reduce((s, x) => s + x.aktiv, 0), schritte, boxen,
       abschluss: [
-        'Gerichte zügig abkühlen lassen (flache Boxen, Deckel erst schließen, wenn nur noch lauwarm) und innerhalb von etwa 2 Stunden in den Kühlschrank stellen.',
+        'Gerichte zügig abkühlen lassen (flache Boxen, Deckel erst schließen, wenn nur noch lauwarm) und innerhalb von etwa 2 Stunden, Reis innerhalb von 1 Stunde, in den Kühlschrank stellen.',
         'Jede Box mit Inhalt, Kochdatum und „essen bis“ beschriften.',
         'Später durch und durch erhitzen (dampfend heiß, mindestens 70 °C für 2 Minuten) und nur einmal aufwärmen.',
       ],

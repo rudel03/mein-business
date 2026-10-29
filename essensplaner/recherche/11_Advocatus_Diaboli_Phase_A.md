@@ -2,7 +2,7 @@
 
 Stand: 29.10.2026 · Rolle: Advocatus Diaboli · Grundlage: nur die Ergebnisse in `recherche/01`–`08` und die Rezeptdaten in `app/data/rezepte/*.json` (dazu `app/data/zutaten.py`, `REZEPTFORMAT.md`, `AUFTRAG.md`). Der Lösungsweg der anderen Rollen war nicht bekannt.
 
-> Zweck: Ich suche die Stellen, an denen das Vorhaben scheitern kann, und schlage für jede einen Test mit Abbruchkriterium vor. Ich halte das Vorhaben nicht für falsch. Ich halte aber mehrere tragende Annahmen für unbelegt. Die Spalte bzw. Zeile **„Antwort des Teams“** bleibt leer und wird später ausgefüllt.
+> Zweck: Ich suche die Stellen, an denen das Vorhaben scheitern kann, und schlage für jede einen Test mit Abbruchkriterium vor. Ich halte das Vorhaben nicht für falsch. Ich halte aber mehrere tragende Annahmen für unbelegt. Die Spalte bzw. Zeile **„Antwort des Teams“** wurde am 29.10.2026 von der Produktmanagement-Rolle ausgefüllt (Stand: umgesetzt / offen). Zusammenfassung in `00_Gesamtbericht_Phase_A.md`, Entscheidungen in `Entscheidungsvorlage.md`.
 
 **Vorbemerkung zur Rezeptstatistik:** Der Auftrag nennt 165 Rezepte. In `app/data/rezepte/` liegen inzwischen **180** (F 45, H 40, O 40, U 40, C 15; `C.json` mit Camping-Rezepten kam am 29.10. um 05:32 dazu). Die Zahlen unten beziehen sich auf alle 180 Rezepte. Ausgewertet habe ich mit den Allergenen und Flags aus `zutaten.py` und mit der Planer-Regel „erster Weg, für den alle Geräte vorhanden sind“.
 
@@ -12,11 +12,11 @@ Stand: 29.10.2026 · Rolle: Advocatus Diaboli · Grundlage: nur die Ergebnisse i
 
 | # | Schwachstelle | Wahrscheinlichkeit | Auswirkung | Antwort des Teams |
 |---|---|---|---|---|
-| 1 | Bezahlte Reichweite rechnet sich nicht, und die organische Reichweite ist nur angenommen (CAC ≫ LTV) | **hoch** | existenziell | |
-| 2 | Nachfrage und Zahlungsbereitschaft sind nicht validiert, die Belege sind dünn, alt oder nur Suchauszüge | **hoch** | existenziell | |
-| 3 | Fokus: vier Marken plus zwei bestehende Shops für eine Person | **hoch** | hoch | |
-| 4 | Das Kernversprechen „Kosten stimmen an der Kasse“ steht auf Schätzpreisen, und an genau diesem Punkt scheitert mise | **mittel bis hoch** | hoch | |
-| 5 | Rezeptqualität, Rezeptabdeckung und Allergen-Haftung ohne menschliche Fachprüfung und ohne Testkochen | **mittel** | hoch bis existenziell (Personenschaden) | |
+| 1 | Bezahlte Reichweite rechnet sich nicht, und die organische Reichweite ist nur angenommen (CAC ≫ LTV) | **hoch** | existenziell | **Anerkannt.** Werbetest gedeckelt auf 150 € je Nische mit Abbruchregel (P4), Validierung vor Werbegeld (A4). Offen: Reichweite messen, Szenarien neu rechnen. |
+| 2 | Nachfrage und Zahlungsbereitschaft sind nicht validiert, die Belege sind dünn, alt oder nur Suchauszüge | **hoch** | existenziell | **Anerkannt.** Faktencheck erledigt (27 %, 0 falsch). Warteliste + Interviews + Preistest je Nische vor Werbegeld (A4). Offen: Interviews, Preistest. |
+| 3 | Fokus: vier Marken plus zwei bestehende Shops für eine Person | **hoch** | hoch | **Teilweise übernommen.** Eine Nische nach der anderen (A3: Montage → Camping → Fitness). Markenbücher für alle vier sind schon da. Offen: Zeitbudget des Inhabers. |
+| 4 | Das Kernversprechen „Kosten stimmen an der Kasse“ steht auf Schätzpreisen, und an genau diesem Punkt scheitert mise | **mittel bis hoch** | hoch | **Teilweise erledigt.** Preisstichprobe 09: 31 Preise und 2 Ladenfaktoren korrigiert. Offen: Kassenbon-Test, Obst/Gemüse. Bis dahin keine Werbung mit Ersparnis. |
+| 5 | Rezeptqualität, Rezeptabdeckung und Allergen-Haftung ohne menschliche Fachprüfung und ohne Testkochen | **mittel** | hoch bis existenziell (Personenschaden) | **Teilweise erledigt.** Rezeptprüfung 12 (alle 195, Befunde behoben), Lagerregel „nach dem Öffnen kühlen“ im Planer. Offen: Testkochen, menschliche Fachprüfung, Versicherung, Status-Feld. |
 
 ---
 
@@ -42,8 +42,11 @@ Stand: 29.10.2026 · Rolle: Advocatus Diaboli · Grundlage: nur die Ergebnisse i
 3. **B2B ernsthaft prüfen**, bevor B2C skaliert wird. Laut `01`, 7 gibt es dazu „keine Zahlungsbereitschaftsdaten (Lücke)“. Geplant sind 10 Gespräche mit Montagefirmen, Personaldienstleistern und Monteurzimmer-Vermietern. **Abbruchkriterium für den B2B-Zweig:** Unter 2 Absichtserklärungen (Pilot gegen Rechnung).
 4. Für das Gratis-Angebot einen **Wochenplan mit Einkaufsliste einmalig gratis** prüfen statt nur eines Tagesplans (A/B-Test, sobald genug Besucher da sind).
 
-| Antwort des Teams | |
+| Antwort des Teams | **Stand 29.10.2026:** Wir teilen die Einschätzung. Das Modell trägt sich nur über kostenlose Reichweite, und dafür gibt es noch keinen gemessenen Wert. |
 |---|---|
+| Umgesetzt | **Validierung vor Werbegeld** (ENTSCHEIDUNGEN A4): Warteliste mit Double-Opt-in, Interviews und Preistest je Nische, bevor bezahlt geworben wird. **Test-Budget-Deckel** (P4): höchstens 150 € je Nische mit Abbruchregel, Schwerpunkt organisch. **Eine Nische nach der anderen** (A3), damit das Testbudget nicht auf vier Nischen verteilt wird. Zu Punkt 4: Der Gratis-Umfang ist jetzt **ein 1-Tages-Plan mit Einkaufsliste, unbegrenzt oft** (C10) statt „1 Tagesplan pro Woche“. Kunden sehen den Nutzen also öfter. |
+| Übernommen als Abbruchkriterium | Ihre Werte aus Punkt 1 und 2 (unter 150 organische Besucher bzw. unter 30 bestätigte Wartelisten-Einträge in 4 Wochen; Kosten je DOI-Lead über 3 € oder Kaufquote unter 1 %) stehen in `Entscheidungsvorlage.md`. |
+| Noch offen | 4-Wochen-Reichweitentest; B2B-Gespräche (10 Firmen); A/B-Test „Wochenplan einmal gratis“; Neuberechnung der Szenarien mit Paddle, unbegrenztem Gratis-Tag und Camping-Saisonpass; `marketing/Launchplan.md` schreiben. Mails an Honigmama-Liste und Kooperationsanfragen verschickt nur der Inhaber. |
 
 ---
 
@@ -69,8 +72,11 @@ Stand: 29.10.2026 · Rolle: Advocatus Diaboli · Grundlage: nur die Ergebnisse i
 2. **Preistest auf der Landingpage** (aus Schwachstelle 1): zwei Preisvarianten mit Vorbestellung bzw. „Pass sichern“ über echten Checkout. Kein Fake-Checkout, denn das wäre irreführend nach UWG. Wer zahlt, bekommt sein Geld bis zum Start auf Wunsch sofort zurück. **Abbruchkriterium:** Unter 5 zahlende Vorbesteller je Nische bei mindestens 300 Landingpage-Besuchern.
 3. **Gesperrte Quellen von Hand nachholen** (Reddit, gutefrage, Facebook-Gruppen, Google Play). Das sind laut `02`, 8 und `03` ausdrücklich offene Lücken. Gleichzeitig den Faktencheck mit 20 % der Quellen erledigen, den `AUFTRAG.md` 9 vorschreibt.
 
-| Antwort des Teams | |
+| Antwort des Teams | **Stand 29.10.2026:** Richtig. Die Recherche zeigt das Problem, nicht die Zahlungsbereitschaft. Eine Lücke im Markt ist kein Beleg für Nachfrage. |
 |---|---|
+| Umgesetzt | **Faktencheck** (10): 122 von 455 Links = 27 % geprüft, 0 falsche Angaben, 33 Zitate wörtlich bestätigt. Die Zitate sind echt, nur teils alt. Korrigierte Zahlen (z. B. Camping-Umsatz −6,5 %) stehen im Gesamtbericht 00. **Validierung vor Werbegeld** (A4) mit Interviews und Preistest je Nische. Kein Fake-Checkout: Der Preistest läuft über echte Vorbestellung mit Geld-zurück. |
+| Übernommen als Abbruchkriterium | Weniger als die Hälfte bestätigt ein Planungsproblem oder weniger als ein Drittel nennt ≥ 15 € → Nische wird zum Filter. Unter 5 zahlende Vorbesteller bei mindestens 300 Besuchern → kein Werbegeld für diese Nische. Für Montage wird die Frage „Würdest du lieber gar nicht kochen?“ gestellt. |
+| Noch offen | **Interviews** (6–8 je Nische, Leitfaden Camping in 04, 5.7); Preistest; gesperrte Quellen (Reddit, gutefrage, Facebook-Gruppen, Google Play) von Hand im Browser nachholen. |
 
 ---
 
@@ -96,8 +102,12 @@ Stand: 29.10.2026 · Rolle: Advocatus Diaboli · Grundlage: nur die Ergebnisse i
 2. Den Sieger bestimmen die Tests aus Schwachstelle 1 und 2 (gleiche Landingpage-Vorlage, gleiches Budget je Nische, 4 Wochen). **Abbruchkriterium:** Nischen, die bei Wartelisten-Quote oder Vorbestellungen weniger als halb so gut abschneiden wie die beste, werden für 6 Monate eingefroren.
 3. **Zeitbudget festlegen:** höchstens X Stunden pro Woche für den Essensplaner, solange die offenen Punkte bei Honigmama und DURCHSCHICHT nicht erledigt sind. X entscheidet der Inhaber.
 
-| Antwort des Teams | |
+| Antwort des Teams | **Stand 29.10.2026:** Teilweise übernommen. Die Technik bleibt eine, die **Vermarktung** läuft aber nacheinander. |
 |---|---|
+| Umgesetzt | **ENTSCHEIDUNGEN A3:** Alle vier Landingpages stehen bereit, aktiv beworben wird eine Nische nach der anderen: 1. Montage (sofort), 2. Camping (ab Februar, Saison März bis September), 3. Fitness. „Alltag“ läuft nur über Suchmaschinen. Kanäle, Community-Arbeit und Testbudget gibt es also immer nur für eine Nische. |
+| Abweichung von Ihrem Vorschlag | Markenbücher, Logos und Beispielbilder für alle vier Marken sind schon erstellt (Phase B vorgezogen). Diese Arbeit ist erledigt. Weitere Markenarbeit (Creatives, Texte, Kanäle) bekommt nur die gerade aktive Nische. |
+| Übernommen als Abbruchkriterium | Eine Nische, die bei Warteliste oder Vorbestellungen weniger als halb so gut abschneidet wie die beste, wird für 6 Monate eingefroren. |
+| Noch offen | **Zeitbudget pro Woche** legt der Inhaber fest (Kästchen in der Entscheidungsvorlage), solange bei Honigmama und DURCHSCHICHT Punkte offen sind. Rezeptabdeckung für Montage: Abdeckungstest der häufigsten Filter steht aus, siehe Punkt 5. |
 
 ---
 
@@ -122,8 +132,12 @@ Stand: 29.10.2026 · Rolle: Advocatus Diaboli · Grundlage: nur die Ergebnisse i
 2. `recherche/09_Preisstichprobe.md` tatsächlich erstellen, mindestens 3 Referenzketten nach `06`, 3.4, mit Datum.
 3. In der App die Spanne zeigen statt eines Punktwerts („ca. 31–36 €“), dazu einen Preis, den der Nutzer selbst überschreiben kann (steht schon in `06`, 3.3). Beim Kassenbon-Test messen, ob die Spanne trifft.
 
-| Antwort des Teams | |
+| Antwort des Teams | **Stand 29.10.2026:** Teilweise erledigt. Die Datei `09_Preisstichprobe.md` gibt es jetzt. |
 |---|---|
+| Umgesetzt | **Preisstichprobe 09:** 56 Zutaten geprüft, 37 mit belegtem Preis (Aldi Süd, Lidl, Rewe, Edeka). Abweichung im Mittel −6,0 %, Median −4,0 %, absolut 18,9 %. Fleisch und Fisch waren zu billig geschätzt (Hähnchen +26 %, Hack bis +32 %). **31 Preise in `zutaten.py` korrigiert**, Ladenfaktoren Rewe 1,08 → 1,03 und Edeka 1,10 → 1,05 in `laeden.js`. Alle Kosten stehen in der App als „Schätzung, Stand 10/2026“. Keine Sperren umgangen, kein Scraping. |
+| Regel für die Werbung | Bis zum Kassenbon-Test wird **nicht mit Kosten oder Ersparnis geworben**. Montage startet mit „Geräte zuerst“ (05, Option 1), nicht mit „Discounter-ehrlich“. |
+| Übernommen als Abbruchkriterium | Kassenbon-Test: mittlere Abweichung über ±15 % oder ein Plan über ±25 % → keine Kosten-Werbung, Positionierung bleibt „Geräte zuerst“. |
+| Noch offen | **Kassenbon-Test** mit 6 echten Plänen; Preise für Obst, Gemüse, Kaufland (Kassenbon-Fotos des Inhabers); Spanne statt Punktwert und eigener Preis zum Überschreiben in der App; Stichprobe alle 3 Monate wiederholen. |
 
 ---
 
@@ -161,8 +175,11 @@ Stand: 29.10.2026 · Rolle: Advocatus Diaboli · Grundlage: nur die Ergebnisse i
 4. **Abdeckungstest im QA:** Für die 20 häufigsten Kombinationen aus Gerät, Allergen und Diät muss ein 7-Tage-Plan mit höchstens 2 Wiederholungen je Rezept möglich sein. **Abbruchkriterium (Launch-Gate):** Scheitern mehr als 3 Kombinationen, wird der Filter in der Werbung nicht genannt, oder es gibt erst gezielt neue Rezepte.
 5. Den Widerspruch bei `ohne_kuehlschrank` + Milch korrigieren, z. B. mit Milch in Portionspackungen oder Milchpulver, oder den Tag entfernen.
 
-| Antwort des Teams | |
+| Antwort des Teams | **Stand 29.10.2026:** Teilweise erledigt. Die Prüfung am Schreibtisch ist gemacht, die Prüfung in der Küche und durch Menschen nicht. |
 |---|---|
+| Umgesetzt | **Rezeptprüfung 12:** alle 195 Rezepte vollständig fachlich gelesen. 1 kritischer Befund (Allergen-Entwarnung im Tipp F11) und 37 mittlere Befunde behoben, 25 leichte aufgelistet. Salz über 6 g je Portion: 5 → 0. **Widerspruch „ohne Kühlschrank“ + Milch behoben:** Tag bei 21 Rezepten entfernt (41 → 20). **Lagerregel „nach dem Öffnen kühlen“ im Planer:** Ohne Kühlschrank plant der Planer kein Rezept mehr, das eine kühlpflichtige Packung angebrochen zurücklässt (`planer.js`, Funktion `angebrochen`). Alle Rezepte tragen den Status „nicht testgekocht“ (C8). 26 automatische Tests grün. |
+| Übernommen als Abbruchkriterium | Testkochen von 20 Montage-Rezepten: Muss bei mehr als 3 von 20 etwas Wesentliches geändert werden, gilt der Bestand als ungeprüft und wird vor dem Launch vollständig testgekocht. Abdeckung: Scheitern mehr als 3 der 20 häufigsten Kombinationen, wird der Filter nicht beworben oder es kommen erst neue Rezepte. |
+| Noch offen | **Testkochen** (Inhaber); **menschliche Fachprüfung** des Allergen-Mappings und der Lagerregeln (Werkvertrag Ökotrophologin); **Betriebshaftpflicht** vor dem Launch (Produkthaftungs-RL, Frist 09.12.2026); Status-Feld (`status`, `geprueft_von`, `datum`, `testgekocht`) mit Test, dass nur freigegebene Rezepte geplant werden; Abdeckungstest; Kleinpackungen (H-Milch 200 ml u. a.), damit mehr Rezepte ehrlich „ohne Kühlschrank“ gehen. |
 
 ---
 
@@ -170,11 +187,11 @@ Stand: 29.10.2026 · Rolle: Advocatus Diaboli · Grundlage: nur die Ergebnisse i
 
 | # | Einwand | Beleg | Vorschlag | Antwort des Teams |
 |---|---|---|---|---|
-| A | **„Daten nur lokal“ beißt sich mit Abo, Kündigungsbutton und Gerätewechsel.** Ein Abo braucht E-Mail und Zahlungs-ID auf dem Server. Der Kündigungsbutton braucht Name und E-Mail, auch für den Pass. Browser können lokal gespeicherte Daten löschen, vor allem Safari auf iOS bei nicht installierten Web-Apps. Monteure wechseln Handys, und dann sind Profil und Pläne weg. | `07`, 3.1 (BGH I ZR 161/24: Button auch bei Einmalzahlung), `07`, 4.3 (Sync nur optional), `06`, Kurzfazit („iOS-PWA-Stand in der EU (auf Gerät testen)“) | Lizenzschlüssel- bzw. Magic-Link-Konzept festlegen, Export/Import des Profils als Datei, iPhone-Test auf Datenverlust nach 7+ Tagen ohne Nutzung. | |
-| B | **mise wird unterschätzt.** Die „81 % 1–3★“ stammen aus den *geschriebenen* Rezensionen, die laut eigener Methodik „deutlich negativer als der Sterne-Schnitt“ sind. Der Gesamtwert liegt bei **4,5★ aus 1.540 Bewertungen**, Updates kommen alle 2 Wochen, und mise hat Werbereichweite. Der Vergleich im Kopf der Nutzer ist außerdem die kostenlose KI. | `05`, 0 (Methodik), `05`, 2.1, `05`, 2.20 („Kostenlose KI ist also der Standard-Vergleich“) | Monatlich ein Konkurrenz-Check (Version, Preis, Funktionen). Den eigenen Mehrwert gegenüber ChatGPT in einem 30-Sekunden-Demo-Vergleich belegen, sonst nicht damit werben. | |
-| C | **Monteure sind schwer erreichbar, und ein Teil spricht kein Deutsch.** 32 % der Berufskraftfahrer sind Ausländer, die Entsandten am Bau kommen vor allem aus PL/RO. Facebook-Gruppen und TikTok waren nicht abrufbar. Die Kanäle (Portale, Vermieter) sind Vermutungen ohne Zusage. | `01`, 2.3, `02`, 8.3 und 8.6 (rumänische Quellen „nicht gefunden“) | Zwei Kanal-Partner vor Phase B anfragen (Abbruch, wenn keiner antwortet). Polnisch und Rumänisch nur nach Nachfragetest einbauen, nicht vorab. | |
-| D | **Saisonalität beim Camping und Abo-Unlust.** Juli und August bringen 18,7 von 44,7 Mio. Übernachtungen (≈ 42 %). Ein Monats- oder Jahresabo passt schlecht zu 2–3 Reisen im Jahr. Der Pass zu 17,99 € liegt genau an der geäußerten Grenze „17,99 … ist zu viel“. Im Winter gibt es praktisch keine Neukunden, und ein Launch im Herbst/Winter verfehlt die Saison. | `04`, 4 (Risiken), `04`, 5.6, `08`, 4.2 | Den Camping-Test auf Februar bis April legen (Planung der Reisesaison, Messen). Für Camping einen günstigeren Reisepass testen. Abbruch, wenn bis Mai weniger als 5 Vorbestellungen vorliegen. | |
-| E | **Recht: viele 🔴-Punkte bauen auf „[prüfen]“, und es gibt keine menschliche Prüfung.** Die BGH-Entscheidung zu Halteangeboten ist „nur über Sekundärquellen erfasst“, die Meta-Health-Einschränkung ebenso. Bei der Kleinunternehmergrenze zählen beide Shops mit. „halal/koscher“ ist ein Art.-9-Datum. Abmahnstreitwerte liegen bei 10.000–30.000 €. | `07`, 0 (Punkte 2, 6, 7, 8), `07`, 3.1, `07`, Schlusshinweis zur Prüftiefe | Einmalige anwaltliche Prüfung von Checkout, Kündigungsstrecke und Datenschutzerklärung vor dem Launch einplanen und das Budget in `08` aufnehmen (fehlt derzeit in den Startkosten). Steuerberatung zur Kleinunternehmerfrage über alle drei Projekte. | |
+| A | **„Daten nur lokal“ beißt sich mit Abo, Kündigungsbutton und Gerätewechsel.** Ein Abo braucht E-Mail und Zahlungs-ID auf dem Server. Der Kündigungsbutton braucht Name und E-Mail, auch für den Pass. Browser können lokal gespeicherte Daten löschen, vor allem Safari auf iOS bei nicht installierten Web-Apps. Monteure wechseln Handys, und dann sind Profil und Pläne weg. | `07`, 3.1 (BGH I ZR 161/24: Button auch bei Einmalzahlung), `07`, 4.3 (Sync nur optional), `06`, Kurzfazit („iOS-PWA-Stand in der EU (auf Gerät testen)“) | Lizenzschlüssel- bzw. Magic-Link-Konzept festlegen, Export/Import des Profils als Datei, iPhone-Test auf Datenverlust nach 7+ Tagen ohne Nutzung. | **Teilweise.** Umgesetzt: Lizenzschlüssel per E-Mail, offline geprüft (C4), kein Konto; Profil und Allergien nur im Gerät (C3); Kündigen und Widerrufen ohne Login (R2). Die MoR-Kasse (Paddle, P2) hält E-Mail und Zahlungs-ID, nicht die Gesundheitsdaten. **Offen:** Profil-Export/-Import als Datei, iPhone-Test nach 7+ Tagen. |
+| B | **mise wird unterschätzt.** Die „81 % 1–3★“ stammen aus den *geschriebenen* Rezensionen, die laut eigener Methodik „deutlich negativer als der Sterne-Schnitt“ sind. Der Gesamtwert liegt bei **4,5★ aus 1.540 Bewertungen**, Updates kommen alle 2 Wochen, und mise hat Werbereichweite. Der Vergleich im Kopf der Nutzer ist außerdem die kostenlose KI. | `05`, 0 (Methodik), `05`, 2.1, `05`, 2.20 („Kostenlose KI ist also der Standard-Vergleich“) | Monatlich ein Konkurrenz-Check (Version, Preis, Funktionen). Den eigenen Mehrwert gegenüber ChatGPT in einem 30-Sekunden-Demo-Vergleich belegen, sonst nicht damit werben. | **Angenommen.** Wir werben nicht mit „besser als mise“ und nennen Konkurrenten nur nach Rechtsprüfung (§ 6 UWG). Vorteile, die der Planer gegenüber KI belegbar hat: geprüfte Allergen-Filter, Lagerregeln mit Quelle, ganze Packungen, offline. **Offen:** monatlicher Konkurrenz-Check, 30-Sekunden-Vergleich mit ChatGPT. |
+| C | **Monteure sind schwer erreichbar, und ein Teil spricht kein Deutsch.** 32 % der Berufskraftfahrer sind Ausländer, die Entsandten am Bau kommen vor allem aus PL/RO. Facebook-Gruppen und TikTok waren nicht abrufbar. Die Kanäle (Portale, Vermieter) sind Vermutungen ohne Zusage. | `01`, 2.3, `02`, 8.3 und 8.6 (rumänische Quellen „nicht gefunden“) | Zwei Kanal-Partner vor Phase B anfragen (Abbruch, wenn keiner antwortet). Polnisch und Rumänisch nur nach Nachfragetest einbauen, nicht vorab. | **Angenommen.** Keine Übersetzung vorab. **Offen:** zwei Kanal-Partner anfragen (z. B. deutschland-monteurzimmer.de, gesunde-trucker.com); die Anfragen verschickt der Inhaber. Abbruch, wenn keiner antwortet, steht in der Entscheidungsvorlage. |
+| D | **Saisonalität beim Camping und Abo-Unlust.** Juli und August bringen 18,7 von 44,7 Mio. Übernachtungen (≈ 42 %). Ein Monats- oder Jahresabo passt schlecht zu 2–3 Reisen im Jahr. Der Pass zu 17,99 € liegt genau an der geäußerten Grenze „17,99 … ist zu viel“. Im Winter gibt es praktisch keine Neukunden, und ein Launch im Herbst/Winter verfehlt die Saison. | `04`, 4 (Risiken), `04`, 5.6, `08`, 4.2 | Den Camping-Test auf Februar bis April legen (Planung der Reisesaison, Messen). Für Camping einen günstigeren Reisepass testen. Abbruch, wenn bis Mai weniger als 5 Vorbestellungen vorliegen. | **Umgesetzt:** Camping wird erst ab Februar beworben (A3). Statt Monatsabo gibt es einen **Saisonpass 24,99 € für 6 Monate**, der automatisch endet (P1). Das Abbruchkriterium „unter 5 Vorbestellungen bis Mai“ ist übernommen. **Offen:** Der Saisonpass liegt über der geäußerten Grenze von 17,99 €. Im Preistest wird deshalb eine günstigere Reisepass-Variante mitgetestet. |
+| E | **Recht: viele 🔴-Punkte bauen auf „[prüfen]“, und es gibt keine menschliche Prüfung.** Die BGH-Entscheidung zu Halteangeboten ist „nur über Sekundärquellen erfasst“, die Meta-Health-Einschränkung ebenso. Bei der Kleinunternehmergrenze zählen beide Shops mit. „halal/koscher“ ist ein Art.-9-Datum. Abmahnstreitwerte liegen bei 10.000–30.000 €. | `07`, 0 (Punkte 2, 6, 7, 8), `07`, 3.1, `07`, Schlusshinweis zur Prüftiefe | Einmalige anwaltliche Prüfung von Checkout, Kündigungsstrecke und Datenschutzerklärung vor dem Launch einplanen und das Budget in `08` aufnehmen (fehlt derzeit in den Startkosten). Steuerberatung zur Kleinunternehmerfrage über alle drei Projekte. | **Teilweise.** Der Faktencheck (10) hat mehrere Prüfvermerke geschlossen: Widerrufsfunktion ist § 356a BGB, BGH I ZR 161/24 und I ZR 200/25 sind bestätigt, die OLG-Nürnberg-Ausnahme ist ergänzt. Die Seiten zum Kündigen und Widerrufen sind gebaut. **Offen:** einmalige anwaltliche Prüfung von Kasse, Kündigungsstrecke und Datenschutz (800–2.000 €, 07 §11.1) und Steuerberatung über alle drei Projekte. Beide Posten kommen bei der Neuberechnung in die Startkosten. |
 
 ---
 

@@ -60,7 +60,7 @@ VARIANTEN = {
     "montage": dict(
         datei="montage.html", titel="Zimmerherd – Essensplan für Monteure im Monteurzimmer",
         beschreibung=f"Wochenplan für Montage: Du kreuzt an, was im Zimmer steht – Wasserkocher, Mikrowelle, Kochplatte. {N_MIKRO_WK} Rezepte gehen schon ohne Herd. Einkaufsliste nach Laden sortiert.",
-        h1="Was steht im Zimmer?", unter=f"Kreuz an, was dasteht: Wasserkocher, Mikrowelle, Kochplatte. Zimmerherd plant die Woche, schreibt den Einkaufszettel für den Discounter um die Ecke und sagt, was wie lange im Kühlschrank hält. Nur Wasserkocher, Mikrowelle und Kühlschrank? Dann gehen {N_MIKRO_WK} unserer {N_GESAMT} Rezepte.",
+        h1="Was steht im Zimmer?", unter=f"Kreuz an, was dasteht: Wasserkocher, Mikrowelle, Kochplatte. Zimmerherd plant die Woche, schreibt den Einkaufszettel für den Laden deiner Wahl und sagt, was wie lange im Kühlschrank hält. Nur Wasserkocher, Mikrowelle und Kühlschrank? Dann gehen {N_MIKRO_WK} unserer {N_GESAMT} Rezepte.",
         probleme=[("Ausstattung erst vor Ort klar", "Mal Kochplatte, mal nur Wasserkocher, mal ein Kühlschrank für alle. Der Plan richtet sich nach dem, was diese Woche dasteht."),
                   ("Nach zehn Stunden kein Kopf fürs Kochen", "Viele Gerichte brauchen zehn Minuten Arbeit oder weniger. Die Box für morgen entsteht gleich mit."),
                   ("Raststätte zu, Imbiss teuer", "Der Einkaufszettel ist nach Abteilungen sortiert, mit geschätzten Kosten für Aldi, Lidl, Netto, Penny, Rewe, Edeka oder Kaufland.")],
@@ -68,8 +68,8 @@ VARIANTEN = {
         check_geraete=["wasserkocher", "mikrowelle", "herd", "topf", "pfanne", "sandwichmaker", "kuehlschrank", "gefrier"],
         check_start=["wasserkocher", "mikrowelle", "kuehlschrank"],
         punkte=[f"{N_WASSERKOCHER} Rezepte nur mit Wasserkocher (und Kühlschrank)", f"{N_OHNE_GERAET} Rezepte ganz ohne Gerät, für Pausen und Kabine",
-                "Lagerregeln nach BfR: was in den Kühlschrank muss und wie lange es hält", "Ohne Kühlschrank planen wir nur, was ungekühlt sicher ist",
-                "Einmal kochen, zwei Tage essen: Boxen mit Datum"],
+                "Lagerregeln nach BfR, teils strenger: was in den Kühlschrank muss und wie lange es hält", "Ohne Kühlschrank planen wir nur Zutaten, die ungekühlt lagern dürfen",
+                "Einmal kochen, bis zu zwei Tage essen: Boxen mit Datum"],
         faq=[("Brauche ich ein Konto?", "Nein. Der Planer läuft im Browser. Deine Eingaben bleiben auf deinem Handy."),
              ("Was, wenn es im Zimmer nur einen Wasserkocher gibt?", f"Dann plant Zimmerherd nur Rezepte, die damit gehen. Mit Kühlschrank im Zimmer sind das {N_WASSERKOCHER} von {N_GESAMT}."),
              ("Wie genau sind die Preise?", "Es sind Schätzwerte je Laden, keine Tagespreise. Ein Teil ist per Stichprobe vom 29.10.2026 geprüft."),
@@ -79,9 +79,9 @@ VARIANTEN = {
     "fitness": dict(
         datei="fitness.html", titel="Kochsatz – Meal-Prep-Plan nach Makros vom Discounter",
         beschreibung="Kalorien und Makros eingeben, Laden und Budget wählen: Kochsatz plant Meal-Prep mit zwei Kochtagen, Einkaufsliste und Boxen mit Datum. Nährwerte aus dem BLS 4.0.",
-        h1="Deine Makros. Dein Discounter. Dein Plan.", unter="Gib Kalorien, Protein, Kohlenhydrate und Fett ein, wähl Laden und Budget. Kochsatz baut die Woche aus zwei Kochtagen, rechnet die Portionen an dein Ziel an und schreibt die Einkaufsliste in der Reihenfolge des Markts.",
-        probleme=[("Makros treffen ist Rechnerei", "Kochsatz skaliert die Portionen, bis Kalorien und Protein im Wochenschnitt passen. In unseren Testläufen (2.000–3.200 kcal) lag das Protein im Wochenschnitt bei 94–100 % des Ziels."),
-                  ("Meal-Prep nach Gefühl", "Zwei Kochtage, ein Ablauf mit Uhrzeiten, Boxen mit „essen bis“-Datum nach den Lagerregeln des BfR."),
+        h1="Deine Makros. Dein Discounter. Dein Plan.", unter="Gib Kalorien, Protein, Kohlenhydrate und Fett ein, wähl Laden und Budget. Kochsatz baut die Woche aus zwei Kochtagen, rechnet die Portionen an dein Ziel an und schreibt die Einkaufsliste nach Abteilungen sortiert.",
+        probleme=[("Makros treffen ist Rechnerei", "Kochsatz skaliert die Portionen, bis Kalorien und Protein im Wochenschnitt passen. Im automatischen Test (2.800 kcal, 180 g Protein) liegt das Protein im Wochenschnitt bei mindestens 90 % des Ziels."),
+                  ("Meal-Prep nach Gefühl", "Zwei Kochtage, ein Ablauf mit Uhrzeiten, Boxen mit „essen bis“-Datum nach den Lagerempfehlungen des BfR, teils strenger."),
                   ("Tracking nach dem Essen nervt", "Vorher planen statt hinterher eintragen. Die Nährwerte kommen aus einer Quelle: dem Bundeslebensmittelschlüssel 4.0.")],
         check_titel="Protein pro Euro", check_text="Welche Zutaten bringen beim gewählten Laden am meisten Protein fürs Geld? Berücksichtigt sind nur Lebensmittel, bei denen mindestens 20 % der Energie aus Protein stammen.",
         check_geraete=[], check_start=[],
@@ -91,15 +91,15 @@ VARIANTEN = {
         faq=[("Ist Kochsatz ein Diätprogramm?", "Nein. Kochsatz plant Essen nach den Zahlen, die du eingibst. Unter 1.200 kcal am Tag planen wir nicht."),
              ("Woher kommen die Nährwerte?", "Aus dem Bundeslebensmittelschlüssel 4.0 des Max Rubner-Instituts. Echte Produkte können abweichen."),
              ("Kann ich mit Heißluftfritteuse statt Ofen kochen?", "Ja. Die meisten Ofenrezepte haben einen zweiten Weg für die Heißluftfritteuse."),
-             ("Was kostet Kochsatz?", "Ein Tagesplan ist gratis. Plus kostet 6,99 € im Monat oder 44,99 € im Jahr, die ersten 7 Tage 0 €.")],
+             ("Was kostet Kochsatz?", "Ein Tagesplan ist gratis. Plus kostet 6,99 € im Monat oder 44,99 € im Jahr (Laufzeit 12 Monate, danach monatlich kündbar), die ersten 7 Tage 0 €.")],
         rezepte=["O01", "O05", "O12", "O17", "O22", "O30"],
     ),
     "camping": dict(
         datei="camping.html", titel="Zweiflammer – Wochenplan für die Bordküche im Wohnmobil",
-        beschreibung=f"Essensplan für Wohnmobil, Van und Wohnwagen: Flammen, Omnia und Kühlbox ankreuzen. {N_ZWEI_FLAMMEN_OMNIA} Rezepte gehen mit zwei Gasflammen, Omnia-Backofen und Kühlbox. Einkaufsliste für die ganze Tour.",
+        beschreibung=f"Essensplan für Wohnmobil, Van und Wohnwagen: Flammen, Omnia und Kühlbox ankreuzen. {N_ZWEI_FLAMMEN_OMNIA} Rezepte gehen mit zwei Gasflammen, Omnia-Backofen und Kühlbox. Einkaufsliste für bis zu 14 Tage.",
         h1="Kochen, wie dein Camper es kann.", unter=f"Zwei Flammen, ein Omnia, eine kleine Kühlbox: Zweiflammer plant die Woche für genau diese Bordküche. Mit Einkaufsliste vor der Abfahrt und Hinweisen, was in die Kühlung muss. Mit zwei Flammen, Omnia und Kühlbox gehen {N_ZWEI_FLAMMEN_OMNIA} unserer Rezepte.",
-        probleme=[("Kühlschrank-Tetris", "Wenig Platz in der Kühlung. Zweiflammer bevorzugt Zutaten, die ungekühlt lagern, und plant angebrochene Packungen mit ein."),
-                  ("Eine Flamme, ein Topf", f"{N_EINE_PLATTE} Rezepte gehen mit einer einzigen Flamme, Topf und Pfanne. Der Omnia macht Gratin und Kuchen auf dem Gasherd."),
+        probleme=[("Kühlschrank-Tetris", "Wenig Platz in der Kühlung. Zweiflammer plant ohne Kühlschrank nur ungekühlt lagerbare Zutaten und sucht für angebrochene Packungen weitere Gerichte."),
+                  ("Eine Flamme, ein Topf", f"{N_EINE_PLATTE} Rezepte gehen mit einer einzigen Flamme, Topf und Pfanne. Der Omnia macht Gratin und Crumble auf dem Gasherd."),
                   ("Weit zum nächsten Laden", "Der Einkauf für mehrere Tage steht vor der Abfahrt, nach Abteilungen sortiert.")],
         check_titel="Bordküchen-Check", check_text="Was hat deine Bordküche? Wir zählen live, wie viele Rezepte damit gehen.",
         check_geraete=["herd", "topf", "pfanne", "omnia", "grill", "wasserkocher", "kuehlschrank"],
@@ -116,10 +116,10 @@ VARIANTEN = {
     "alltag": dict(
         datei="alltag.html", titel="Wochenschmaus – Wochenplan mit Einkaufsliste nach Budget",
         beschreibung="Die Woche ist geplant, der Einkauf auch: Wochenplan nach Geräten, Laden, Budget, Personen und Allergien. Einkaufsliste nach Abteilungen sortiert, ohne Konto.",
-        h1="Die Woche ist geplant. Der Einkauf auch.", unter="Sag uns, wer mitisst, was ihr nicht mögt und wo du einkaufst. Wochenschmaus plant sieben Tage, schreibt die Einkaufsliste in der Reihenfolge deines Ladens und rechnet mit ganzen Packungen statt halben Avocados.",
-        probleme=[("Die Frage um 17:30", "Was gibt es heute? Der Plan steht für die ganze Woche, mit Resten, die am nächsten Tag weiterverwendet werden."),
-                  ("Ganze Packungen, ehrliche Kosten", "Wir rechnen mit echten Packungsgrößen und zeigen, was übrig bleibt. Die Preise sind Schätzwerte je Laden."),
-                  ("Allergien gehören in jeden Plan", "Filter für die 14 Hauptallergene und Abneigungen. Was nicht passt, kommt nicht in den Plan.")],
+        h1="Die Woche ist geplant. Der Einkauf auch.", unter="Sag uns, wer mitisst, was ihr nicht mögt und wo du einkaufst. Wochenschmaus plant sieben Tage, schreibt die Einkaufsliste nach Abteilungen sortiert und rechnet mit ganzen Packungen statt halben Avocados.",
+        probleme=[("Die Frage um 17:30", "Was gibt es heute? Der Plan steht für die ganze Woche, angebrochene Packungen plant der Planer, wo es geht, in die nächsten Tage ein."),
+                  ("Ganze Packungen, geschätzte Kosten", "Wir rechnen mit echten Packungsgrößen und zeigen, was übrig bleibt. Die Preise sind Schätzwerte je Laden."),
+                  ("Allergien gehören in jeden Plan", "Filter für die 14 Hauptallergene und Abneigungen. Was du ausschließt, filtert der Planer nach unseren Zutatendaten heraus. Prüf bei Allergien immer das Etikett.")],
         check_titel="Was geht mit meiner Küche?", check_text="Tipp an, was in deiner Küche steht. Wir zählen live, wie viele Rezepte damit gehen.",
         check_geraete=["herd", "topf", "pfanne", "ofen", "airfryer", "mikrowelle", "wasserkocher", "kuehlschrank", "gefrier"],
         check_start=["herd", "topf", "pfanne", "ofen", "kuehlschrank", "gefrier"],
@@ -128,7 +128,7 @@ VARIANTEN = {
         faq=[("Brauche ich ein Konto?", "Nein. Alles bleibt in deinem Browser."),
              ("Für wie viele Personen?", "Für 1 bis 8 Personen. Die Mengen werden umgerechnet."),
              ("Wie genau sind die Preise?", "Es sind Schätzwerte je Laden, keine Tagespreise. Ein Teil ist per Stichprobe vom 29.10.2026 geprüft."),
-             ("Was kostet Wochenschmaus?", "Ein Tagesplan ist gratis. Plus kostet 6,99 € im Monat oder 44,99 € im Jahr, die ersten 7 Tage 0 €.")],
+             ("Was kostet Wochenschmaus?", "Ein Tagesplan ist gratis. Plus kostet 6,99 € im Monat oder 44,99 € im Jahr (Laufzeit 12 Monate, danach monatlich kündbar), die ersten 7 Tage 0 €.")],
         rezepte=["F23", "F30", "F25", "F13", "F33", "F01"],
     ),
 }
@@ -173,7 +173,7 @@ def seite(v, t):
         check = f'<div class="chips" id="check-geraete">{chips}</div><p class="check-ergebnis" id="check-ergebnis" aria-live="polite">&nbsp;</p><div class="rk-reihe" id="check-beispiele"></div>'
     else:
         laeden = "".join(f'<option value="{k}">{k.capitalize()}</option>' for k in ["aldi", "lidl", "netto", "penny", "kaufland", "rewe", "edeka"])
-        check = f'<div class="feld"><label for="check-laden">Laden</label><select id="check-laden">{laeden}</select></div><table class="nw-tabelle" id="check-protein"><thead><tr><th>Zutat</th><th>Protein je €</th><th>Packung ca.</th></tr></thead><tbody></tbody></table><p class="hilfe">Packungspreise sind Schätzwerte (Stand 10/2026, teils per Stichprobe geprüft). Nährwerte: BLS 4.0, Max Rubner-Institut, CC BY 4.0.</p>'
+        check = f'<div class="feld"><label for="check-laden">Laden</label><select id="check-laden">{laeden}</select></div><table class="nw-tabelle" id="check-protein"><thead><tr><th>Zutat</th><th>Protein je €</th><th>Packung ca.</th></tr></thead><tbody></tbody></table><p class="hilfe">Packungspreise sind Schätzwerte (Stand 10/2026, teils per Stichprobe geprüft). Fleisch und Fisch kosten laut Stichprobe oft mehr als hier geschätzt. Nährwerte: BLS 4.0, Max Rubner-Institut, CC BY 4.0.</p>'
     P = CONFIG["preise"]
     pass_txt = ""
     if v in P["pass"]["varianten"]:
@@ -201,13 +201,13 @@ def seite(v, t):
 <section class="wrap abschnitt"><h2>So geht's</h2><ol class="schritte">
 <li><b>Ankreuzen</b> – Geräte, Laden, Budget, wer mitisst, was nicht auf den Teller soll.</li>
 <li><b>Plan bekommen</b> – Mahlzeiten für die Woche, Einkaufsliste nach Abteilungen, geschätzte Kosten.</li>
-<li><b>Vorkochen</b> – Ablauf mit Uhrzeiten, Boxen mit „essen bis“, Lagerhinweise nach BfR.</li></ol></section>
+<li><b>Vorkochen</b> – Ablauf mit Uhrzeiten, Boxen mit „essen bis“, Lagerhinweise nach BfR, teils strenger.</li></ol></section>
 <section class="wrap abschnitt"><h2>Was drin ist</h2><ul class="punkte">{''.join(f'<li>{esc(p)}</li>' for p in t['punkte'])}</ul>
 <div class="rk-reihe">{karten}</div></section>
 <section class="wrap abschnitt"><h2>Preise</h2><ul class="punkte">
 <li><b>Gratis:</b> Tagesplan mit Einkaufsliste, so oft du willst</li>
-<li><b>Plus:</b> {P['monat']['text']} oder {P['jahr']['text']}, die ersten {CONFIG['probeTage']} Tage 0 €</li>{pass_txt}</ul>
-<p><a href="preise.html?v={v}">Alle Preise und Bedingungen</a> · Kündigen jederzeit über „Verträge hier kündigen“, ohne Login.</p></section>
+<li><b>Plus:</b> {P['monat']['text']} oder {P['jahr']['text']}, die ersten {CONFIG['probeTage']} Tage 0 €. Jahr: Laufzeit 12 Monate, danach monatlich kündbar</li>{pass_txt}</ul>
+<p><a href="preise.html?v={v}">Alle Preise und Bedingungen</a> · Kündigen über „Verträge hier kündigen“, ohne Login, wirksam zum Ende der Laufzeit.</p></section>
 <section class="wrap abschnitt"><h2>Fragen</h2>{''.join(f'<details class="mehr"><summary>{esc(f)}</summary><p>{esc(a)}</p></details>' for f, a in t['faq'])}</section>
 </main>
 <footer class="fuss"><div class="wrap"><nav aria-label="Rechtliches">

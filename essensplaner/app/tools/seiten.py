@@ -34,7 +34,7 @@ def preiskarten():
     t = CONFIG["probeTage"]
     karten = [
         ("jahr", "Plus Jahr (empfohlen)", f"{P['jahr']['text']}. Die ersten {t} Tage kosten 0 €. Erste Abbuchung am {t + 1}. Tag. Laufzeit 12 Monate, danach monatlich kündbar.", "", "Jetzt zahlungspflichtig abonnieren"),
-        ("monat", "Plus Monat", f"{P['monat']['text']}. Die ersten {t} Tage kosten 0 €. Jederzeit zum Monatsende kündbar.", "", "Jetzt zahlungspflichtig abonnieren"),
+        ("monat", "Plus Monat", f"{P['monat']['text']}. Die ersten {t} Tage kosten 0 €. Erste Abbuchung am {t + 1}. Tag. Kündbar zum Ende des laufenden Abrechnungsmonats.", "", "Jetzt zahlungspflichtig abonnieren"),
         ("pass", "Montage-Pass", f"{P['pass']['text']}. {P['pass']['laufzeit']}.", " ".join(P["pass"]["varianten"]), "Zahlungspflichtig kaufen"),
         ("saison", "Saison-Pass", f"{P['saison']['text']}. {P['saison']['laufzeit']}.", " ".join(P["saison"]["varianten"]), "Zahlungspflichtig kaufen"),
     ]
@@ -148,7 +148,7 @@ SEITEN = {
 <h2>Verbraucherstreitbeilegung</h2>
 <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
 <h2>Quellen</h2>
-<p>Nährwerte: Max Rubner-Institut (2025): Bundeslebensmittelschlüssel (BLS), Version 4.0. DOI 10.25826/Data20251217-134202-0, Lizenz CC BY 4.0. Lagerhinweise nach Verbrauchertipps des Bundesinstituts für Risikobewertung (BfR). Schriften: SIL Open Font License.</p>
+<p>Nährwerte: Max Rubner-Institut (2025): Bundeslebensmittelschlüssel (BLS), Version 4.0. DOI 10.25826/Data20251217-134202-0, Lizenz CC BY 4.0. Lagerhinweise nach den Verbrauchertipps des Bundesinstituts für Risikobewertung (BfR), teils strenger (u. a. FSA für Reis, USDA für die 2-Stunden-Regel). Schriften: SIL Open Font License.</p>
 """),
 
 "datenschutz.html": ("Datenschutz", "Datenschutzerklärung: Deine Planer-Eingaben bleiben auf deinem Gerät.", "index,follow", ENTWURF + """
@@ -180,7 +180,7 @@ SEITEN = {
 <p>Der Planer erstellt aus deinen Angaben Essenspläne, Einkaufslisten mit geschätzten Kosten und Vorkoch-Abläufe. Preise sind Schätzwerte und keine Tagespreise der Händler. Nährwerte sind aus Durchschnittswerten berechnet (BLS 4.0) und können von konkreten Produkten abweichen. Allergene werden nach den 14 Hauptallergenen gefiltert; Spuren und Rezepturänderungen der Hersteller können wir nicht erkennen – prüf bei Allergien immer das Etikett. Der Planer ist kein Medizinprodukt, keine Ernährungstherapie und keine Diät.</p>
 <h2>3. Laufzeit und Kündigung</h2>
 <ul>
-<li><b>Plus Monat:</b> Laufzeit ein Monat, verlängert sich jeweils um einen Monat, jederzeit zum Ende des laufenden Monats kündbar.</li>
+<li><b>Plus Monat:</b> Laufzeit ein Monat, verlängert sich jeweils um einen Monat, jederzeit zum Ende des laufenden Abrechnungsmonats kündbar.</li>
 <li><b>Plus Jahr:</b> Erstlaufzeit 12 Monate. Danach läuft der Vertrag auf unbestimmte Zeit weiter und ist jederzeit mit einer Frist von einem Monat kündbar.</li>
 <li><b>Montage-Pass / Saison-Pass:</b> feste Laufzeit (3 bzw. 6 Monate), endet automatisch ohne Kündigung.</li>
 <li><b>Testphase:</b> Die ersten <span data-feld="probeTage">7</span> Tage eines Abos kosten 0 €. Kündigst du in dieser Zeit, zahlst du nichts.</li>
