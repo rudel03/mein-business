@@ -1,0 +1,3218 @@
+[
+ {
+  "id": "H01",
+  "titel": "Rote-Linsen-Dal mit Kokosmilch und Fladenbrot",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "rote_linsen",
+    300
+   ],
+   [
+    "kokosmilch",
+    400
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "knoblauch",
+    10
+   ],
+   [
+    "ingwer",
+    15
+   ],
+   [
+    "currypulver",
+    8
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "salz",
+    6
+   ],
+   [
+    "fladenbrot",
+    1,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 35,
+    "aktiv": 12,
+    "schritte": [
+     "Zwiebeln, Knoblauch und Ingwer fein würfeln.",
+     "Öl im Topf auf mittlerer Hitze (Stufe 6 von 9) erhitzen, Zwiebeln 4 Minuten glasig dünsten, Knoblauch, Ingwer und Currypulver 1 Minute mitrösten.",
+     "Linsen in einem Sieb kurz abspülen und mit Tomaten, Kokosmilch, 600 ml Wasser und Salz in den Topf geben.",
+     "Aufkochen, dann auf kleiner Hitze (Stufe 3) mit Deckel 20 Minuten köcheln, alle 5 Minuten umrühren, damit nichts ansetzt. Ist es zu dick, 100 ml Wasser nachgießen.",
+     "Mit Salz abschmecken und mit Fladenbrot servieren. Reste in Dosen füllen, offen abkühlen lassen und innerhalb von 2 Stunden in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "box",
+   "guenstig"
+  ],
+  "tipp": "Dal dickt im Kühlschrank nach: beim Aufwärmen einen Schuss Wasser zugeben. Das Fladenbrot getrennt lagern.",
+  "foto": "creamy red lentil dal with coconut milk and tomatoes in a pot, flatbread on the side, rustic table"
+ },
+ {
+  "id": "H02",
+  "titel": "Chili sin Carne mit Reis aus einem Topf",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "reis",
+    300
+   ],
+   [
+    "kidney_dose",
+    500
+   ],
+   [
+    "mais_dose",
+    285
+   ],
+   [
+    "tomaten_dose",
+    800
+   ],
+   [
+    "sojagranulat",
+    80
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "rapsoel",
+    30
+   ],
+   [
+    "paprikapulver",
+    5
+   ],
+   [
+    "kreuzkuemmel",
+    3
+   ],
+   [
+    "salz",
+    7
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Zwiebeln und Paprika würfeln. Bohnen und Mais in ein Sieb geben und abspülen.",
+     "Öl im großen Topf auf mittlerer bis hoher Hitze (Stufe 7) erhitzen. Zwiebeln und Paprika 5 Minuten anbraten.",
+     "Sojaschnetzel trocken dazugeben, Paprikapulver und Kreuzkümmel darüberstreuen, 1 Minute rösten.",
+     "Tomaten, 800 ml Wasser, Salz und den Reis einrühren. Aufkochen.",
+     "Auf kleiner Hitze (Stufe 3) mit Deckel 18 Minuten köcheln, alle 4–5 Minuten vom Boden her umrühren. Bohnen und Mais zugeben und weitere 4 Minuten erhitzen, bis der Reis weich ist.",
+     "Abschmecken. Reste sofort abkühlen lassen und innerhalb von 2 Stunden in den Kühlschrank oder ins Gefrierfach stellen (Reis!)."
+    ]
+   },
+   {
+    "geraete": [
+     "herd2",
+     "topf",
+     "pfanne"
+    ],
+    "zeit": 30,
+    "aktiv": 15,
+    "schritte": [
+     "Reis mit 600 ml Salzwasser im Topf aufkochen und auf kleiner Hitze mit Deckel 15 Minuten garen.",
+     "Gleichzeitig in der Pfanne Zwiebeln und Paprika in Öl 5 Minuten anbraten, Sojaschnetzel und Gewürze 1 Minute mitrösten.",
+     "Tomaten und 300 ml Wasser zugeben, 10 Minuten köcheln, dann Bohnen und Mais 4 Minuten miterhitzen. Mit dem Reis servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "box",
+   "familie"
+  ],
+  "tipp": "Wer am nächsten Tag essen will: eine Portion in den Kühlschrank, die übrigen direkt nach dem Abkühlen einfrieren.",
+  "foto": "vegan chili with kidney beans, corn and rice in a large pot, wooden spoon, steam"
+ },
+ {
+  "id": "H03",
+  "titel": "Gnocchi-Pfanne mit Spinat, Tomaten und Feta",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "gnocchi",
+    500
+   ],
+   [
+    "tk_spinat",
+    300
+   ],
+   [
+    "cherrytomate",
+    250
+   ],
+   [
+    "feta",
+    100
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "knoblauch",
+    6
+   ],
+   [
+    "olivenoel",
+    25
+   ],
+   [
+    "salz",
+    2
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 20,
+    "aktiv": 15,
+    "schritte": [
+     "Zwiebel und Knoblauch fein würfeln, Tomaten halbieren.",
+     "Öl in der Pfanne auf mittlerer bis hoher Hitze (Stufe 7) erhitzen. Gnocchi direkt aus der Packung (nicht vorkochen) hineingeben und 7–8 Minuten rundum goldbraun braten, öfter wenden.",
+     "Zwiebel und Knoblauch zugeben, 2 Minuten mitbraten.",
+     "Gefrorenen Spinat und 50 ml Wasser zugeben, Deckel drauf und auf mittlerer Hitze 5 Minuten garen, bis der Spinat aufgetaut und heiß ist. Umrühren.",
+     "Tomaten 2 Minuten mit erhitzen, mit Salz und Pfeffer würzen, Feta darüberbröseln und sofort essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft"
+  ],
+  "tipp": "Die Gnocchi werden knuspriger, wenn du sie in einer Lage brätst und nicht zu früh wendest.",
+  "foto": "pan-fried golden gnocchi with spinach, cherry tomatoes and crumbled feta in a skillet"
+ },
+ {
+  "id": "H04",
+  "titel": "Shakshuka mit Kichererbsen und Brot",
+  "mahlzeit": [
+   "fruehstueck",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "eier",
+    6,
+    "stk"
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "kichererbsen_dose",
+    240
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "kreuzkuemmel",
+    2
+   ],
+   [
+    "paprikapulver",
+    3
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "mischbrot",
+    200
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 30,
+    "aktiv": 12,
+    "schritte": [
+     "Zwiebel und Paprika würfeln, Kichererbsen abspülen.",
+     "Öl in der Pfanne auf mittlerer Hitze (Stufe 6) erhitzen, Zwiebel und Paprika 6 Minuten weich braten. Kreuzkümmel und Paprikapulver 1 Minute mitrösten.",
+     "Tomaten, Kichererbsen, 50 ml Wasser und Salz zugeben, 8 Minuten offen köcheln lassen, bis die Sauce etwas eindickt.",
+     "Mit einem Löffel 6 Mulden formen und die Eier hineinschlagen. Deckel auflegen und auf kleiner bis mittlerer Hitze (Stufe 4) 10–12 Minuten garen, bis Eiweiß UND Eigelb vollständig fest sind.",
+     "Mit Brot direkt aus der Pfanne essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "eiweiss"
+  ],
+  "tipp": "Für die Unterkunft die Eier immer ganz durchgaren: das Eigelb soll beim Anstechen fest sein.",
+  "foto": "shakshuka in a skillet with fully set eggs, chickpeas, red pepper tomato sauce, slices of bread"
+ },
+ {
+  "id": "H05",
+  "titel": "Linsen-Kartoffel-Eintopf mit Möhren",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "tellerlinsen",
+    400
+   ],
+   [
+    "kartoffel",
+    700
+   ],
+   [
+    "moehre",
+    300
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "gemuesebruehe",
+    15
+   ],
+   [
+    "rapsoel",
+    40
+   ],
+   [
+    "essig",
+    20
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "mischbrot",
+    250
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 55,
+    "aktiv": 15,
+    "schritte": [
+     "Zwiebeln würfeln, Kartoffeln und Möhren schälen und in 1-cm-Würfel schneiden. Linsen in einem Sieb abspülen.",
+     "Öl im großen Topf auf mittlerer Hitze (Stufe 6) erhitzen, Zwiebeln 4 Minuten andünsten.",
+     "Linsen, Kartoffeln, Möhren, Brühpulver und 1,5 Liter Wasser zugeben und aufkochen.",
+     "Auf kleiner Hitze (Stufe 3) mit Deckel 35–40 Minuten köcheln, bis die Linsen weich sind. Alle 10 Minuten umrühren, bei Bedarf 200 ml Wasser nachgießen.",
+     "Mit Essig und Salz abschmecken, mit Brot servieren. Reste in Dosen füllen, offen abkühlen lassen und innerhalb von 2 Stunden in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "topf"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "guenstig"
+  ],
+  "tipp": "Ein Schuss Essig zum Schluss macht den Eintopf frischer. Schmeckt am zweiten Tag oft noch besser.",
+  "foto": "hearty German lentil stew with potatoes and carrots in a pot, slice of rye bread"
+ },
+ {
+  "id": "H06",
+  "titel": "Kichererbsen-Süßkartoffel-Curry mit Reis",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "kichererbsen_dose",
+    480
+   ],
+   [
+    "suesskartoffel",
+    600
+   ],
+   [
+    "kokosmilch",
+    400
+   ],
+   [
+    "tk_spinat",
+    300
+   ],
+   [
+    "reis",
+    250
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "currypulver",
+    10
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "salz",
+    6
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 40,
+    "aktiv": 12,
+    "schritte": [
+     "Zwiebeln würfeln, Süßkartoffeln schälen und in 2-cm-Würfel schneiden, Kichererbsen abspülen.",
+     "Öl im Topf auf mittlerer Hitze (Stufe 6) erhitzen, Zwiebeln 4 Minuten dünsten, Currypulver 1 Minute mitrösten.",
+     "Süßkartoffeln, Reis, Kokosmilch, 700 ml Wasser und Salz zugeben, aufkochen.",
+     "Auf kleiner Hitze (Stufe 3) mit Deckel 18 Minuten köcheln, alle 4 Minuten vom Boden her umrühren.",
+     "Gefrorenen Spinat und Kichererbsen zugeben, weitere 6 Minuten köcheln, bis alles heiß und der Reis weich ist. Abschmecken.",
+     "Reste sofort abkühlen lassen und innerhalb von 2 Stunden kühlen oder einfrieren (Reis!)."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "box",
+   "familie",
+   "guenstig"
+  ],
+  "tipp": "Wird das Curry beim Aufwärmen zu fest, 3 EL Wasser unterrühren.",
+  "foto": "chickpea sweet potato coconut curry with spinach and rice in a pot, bowl serving"
+ },
+ {
+  "id": "H07",
+  "titel": "One-Pot-Pasta mit Tomate, Zucchini und Mozzarella",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "nudeln",
+    250
+   ],
+   [
+    "passata",
+    500
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "knoblauch",
+    6
+   ],
+   [
+    "mozzarella",
+    1,
+    "stk"
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "italien_kraeuter",
+    2
+   ],
+   [
+    "salz",
+    4
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 22,
+    "aktiv": 10,
+    "schritte": [
+     "Zwiebel und Knoblauch fein würfeln, Zucchini in Würfel schneiden, Mozzarella zerzupfen.",
+     "Öl im Topf auf mittlerer Hitze (Stufe 6) erhitzen, Zwiebel, Knoblauch und Zucchini 3 Minuten anbraten.",
+     "Nudeln, Passata, 500 ml Wasser, Kräuter und Salz zugeben, aufkochen.",
+     "Offen auf mittlerer Hitze (Stufe 5) 10–12 Minuten köcheln, alle 2 Minuten umrühren, bis die Nudeln bissfest sind und die Sauce cremig ist. Bei Bedarf 50 ml Wasser nachgießen.",
+     "Vom Herd nehmen, Mozzarella unterrühren und sofort essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "familie"
+  ],
+  "tipp": "Die Nudeln garen in der Sauce, dadurch brauchst du kein Nudelwasser abzugießen.",
+  "foto": "one pot pasta with tomato sauce, zucchini and melted mozzarella in a saucepan"
+ },
+ {
+  "id": "H08",
+  "titel": "Bratkartoffeln mit Zwiebeln und Rührei",
+  "mahlzeit": [
+   "fruehstueck",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "kartoffel",
+    900
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "eier",
+    4,
+    "stk"
+   ],
+   [
+    "rapsoel",
+    40
+   ],
+   [
+    "butter",
+    10
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "gurke",
+    0.5,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 40,
+    "aktiv": 20,
+    "schritte": [
+     "Kartoffeln schälen und in 3 mm dünne Scheiben schneiden, Zwiebeln in Streifen schneiden.",
+     "Öl in der großen Pfanne auf mittlerer bis hoher Hitze (Stufe 7) erhitzen. Kartoffeln hineingeben, Deckel drauf und 10 Minuten braten, nach 5 Minuten wenden.",
+     "Deckel abnehmen, Hitze auf Stufe 6, weitere 12–15 Minuten braten und alle 3 Minuten wenden, bis die Kartoffeln innen weich und außen braun sind. Zwiebeln und Butter in den letzten 5 Minuten zugeben, salzen und pfeffern.",
+     "Kartoffeln an den Rand schieben. Eier verquirlen, in die freie Fläche gießen und unter Rühren 3–4 Minuten braten, bis das Rührei vollständig fest ist.",
+     "Gurke in Scheiben dazu essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "guenstig"
+  ],
+  "tipp": "Festkochende Kartoffeln zerfallen beim Braten nicht. Der Deckel am Anfang spart Zeit.",
+  "foto": "crispy German fried potato slices with onions and scrambled eggs in a cast iron pan, cucumber slices"
+ },
+ {
+  "id": "H09",
+  "titel": "Tofu-Gemüse-Reispfanne mit Erdnusssauce",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "tofu",
+    800
+   ],
+   [
+    "reis",
+    300
+   ],
+   [
+    "tk_asiagemuese",
+    750
+   ],
+   [
+    "sojasauce",
+    60
+   ],
+   [
+    "erdnussmus",
+    60
+   ],
+   [
+    "ingwer",
+    15
+   ],
+   [
+    "knoblauch",
+    10
+   ],
+   [
+    "rapsoel",
+    30
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 40,
+    "aktiv": 20,
+    "schritte": [
+     "Tofu ausdrücken, trocken tupfen und in 2-cm-Würfel schneiden. Ingwer und Knoblauch fein hacken.",
+     "Öl in einer großen Pfanne mit Deckel auf hoher Hitze (Stufe 8) erhitzen, Tofu 8 Minuten rundum knusprig braten. Mit 2 EL Sojasauce ablöschen und auf einen Teller geben.",
+     "Reis, 650 ml Wasser und 1 Prise Salz in die Pfanne geben, aufkochen und mit Deckel auf kleiner Hitze (Stufe 3) 12 Minuten garen.",
+     "Gefrorenes Gemüse, Ingwer und Knoblauch auf den Reis geben, Deckel drauf und 6 Minuten weitergaren, bis Gemüse heiß und Reis weich ist.",
+     "Erdnussmus mit restlicher Sojasauce und 4 EL heißem Wasser glattrühren. Mit dem Tofu unter den Reis mischen und 2 Minuten erhitzen.",
+     "Reste sofort abkühlen lassen und innerhalb von 2 Stunden kühlen oder einfrieren (Reis!)."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "box",
+   "eiweiss"
+  ],
+  "tipp": "Je trockener der Tofu, desto knuspriger wird er. Ein Küchentuch zum Ausdrücken reicht.",
+  "foto": "rice stir fry with crispy tofu cubes, asian vegetables and peanut sauce in a large pan"
+ },
+ {
+  "id": "H10",
+  "titel": "Kürbis-Kokos-Suppe mit Kernen und Brot",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "kuerbis",
+    1,
+    "stk"
+   ],
+   [
+    "kartoffel",
+    300
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "kokosmilch",
+    400
+   ],
+   [
+    "gemuesebruehe",
+    15
+   ],
+   [
+    "ingwer",
+    10
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "sonnenblumenkerne",
+    60
+   ],
+   [
+    "mischbrot",
+    400
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf",
+     "puerierstab"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Hokkaido waschen, halbieren, Kerne entfernen und mit Schale in 3-cm-Stücke schneiden. Kartoffeln schälen und würfeln, Zwiebeln und Ingwer hacken.",
+     "Sonnenblumenkerne im trockenen Topf auf mittlerer Hitze 3 Minuten rösten, herausnehmen.",
+     "Öl in den Topf geben, Zwiebeln und Ingwer 3 Minuten dünsten. Kürbis, Kartoffeln, Brühpulver und 800 ml Wasser zugeben.",
+     "Aufkochen und mit Deckel auf kleiner Hitze (Stufe 3) 20 Minuten köcheln, bis alles weich ist.",
+     "Kokosmilch zugeben und mit dem Pürierstab fein pürieren. Mit Salz abschmecken, mit Kernen und Brot servieren. Reste in Dosen füllen, offen abkühlen lassen und innerhalb von 2 Stunden in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Kürbis und Kartoffeln in kleine 1,5-cm-Würfel schneiden, damit sie schneller zerfallen.",
+     "Kerne im trockenen Topf 3 Minuten rösten, herausnehmen. Öl, Zwiebeln und Ingwer 3 Minuten dünsten.",
+     "Kürbis, Kartoffeln, Brühpulver und 800 ml Wasser zugeben und mit Deckel 25 Minuten auf kleiner Hitze köcheln.",
+     "Kokosmilch zugeben und das Gemüse mit dem Kochlöffel oder einer Gabel am Topfrand grob zerdrücken. Als stückige Suppe mit Kernen und Brot essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "familie",
+   "guenstig"
+  ],
+  "tipp": "Hokkaido musst du nicht schälen, die Schale wird beim Kochen weich.",
+  "foto": "bright orange pumpkin coconut soup in a bowl topped with toasted sunflower seeds, bread slices"
+ },
+ {
+  "id": "H11",
+  "titel": "One-Pot-Linsen-Bolognese mit Nudeln",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "nudeln",
+    400
+   ],
+   [
+    "rote_linsen",
+    200
+   ],
+   [
+    "passata",
+    1000
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "moehre",
+    200
+   ],
+   [
+    "tomatenmark",
+    30
+   ],
+   [
+    "olivenoel",
+    30
+   ],
+   [
+    "italien_kraeuter",
+    4
+   ],
+   [
+    "salz",
+    7
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 35,
+    "aktiv": 12,
+    "schritte": [
+     "Zwiebeln und Möhren sehr fein würfeln (oder Möhren grob reiben). Linsen abspülen.",
+     "Öl im großen Topf auf mittlerer Hitze (Stufe 6) erhitzen, Zwiebeln und Möhren 5 Minuten anbraten, Tomatenmark 1 Minute mitrösten.",
+     "Linsen, Passata, 900 ml Wasser, Kräuter und Salz zugeben, aufkochen und 5 Minuten köcheln.",
+     "Nudeln einrühren und offen auf mittlerer Hitze (Stufe 5) 12–14 Minuten köcheln, alle 2 Minuten umrühren, bis Nudeln und Linsen weich sind. Bei Bedarf 100 ml Wasser nachgießen.",
+     "Abschmecken. Reste sofort abkühlen lassen und innerhalb von 2 Stunden kühlen oder einfrieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "box",
+   "familie",
+   "guenstig"
+  ],
+  "tipp": "Rote Linsen zerfallen in der Sauce und machen sie sämig wie Hack.",
+  "foto": "one pot pasta with red lentil bolognese sauce in a saucepan, herbs on top"
+ },
+ {
+  "id": "H12",
+  "titel": "Kartoffel-Blumenkohl-Curry mit Kichererbsen",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "kartoffel",
+    800
+   ],
+   [
+    "blumenkohl",
+    1,
+    "stk"
+   ],
+   [
+    "kichererbsen_dose",
+    480
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "currypulver",
+    10
+   ],
+   [
+    "kreuzkuemmel",
+    3
+   ],
+   [
+    "rapsoel",
+    40
+   ],
+   [
+    "salz",
+    7
+   ],
+   [
+    "fladenbrot",
+    1,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Kartoffeln schälen und in 2-cm-Würfel schneiden, Blumenkohl in kleine Röschen teilen, Zwiebeln würfeln, Kichererbsen abspülen.",
+     "Öl im großen Topf auf mittlerer Hitze (Stufe 6) erhitzen, Zwiebeln 4 Minuten dünsten, Currypulver und Kreuzkümmel 1 Minute mitrösten.",
+     "Kartoffeln, Blumenkohl, Tomaten, 400 ml Wasser und Salz zugeben, aufkochen.",
+     "Mit Deckel auf kleiner Hitze (Stufe 3) 20 Minuten köcheln, bis die Kartoffeln weich sind. Zwischendurch umrühren.",
+     "Kichererbsen zugeben, 5 Minuten miterhitzen, abschmecken und mit Fladenbrot essen. Reste in Dosen füllen, offen abkühlen lassen und innerhalb von 2 Stunden in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "box"
+  ],
+  "tipp": "Statt frischem Blumenkohl gehen auch 600 g TK-Blumenkohl, dann 5 Minuten kürzer kochen.",
+  "foto": "aloo gobi potato cauliflower curry with chickpeas in a pot, flatbread"
+ },
+ {
+  "id": "H13",
+  "titel": "Käse-Spinat-Nudeln aus einem Topf",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "nudeln",
+    250
+   ],
+   [
+    "milch",
+    500
+   ],
+   [
+    "reibekaese",
+    100
+   ],
+   [
+    "tk_spinat",
+    200
+   ],
+   [
+    "butter",
+    10
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 18,
+    "aktiv": 12,
+    "schritte": [
+     "Nudeln, Milch, 250 ml Wasser, Salz und den gefrorenen Spinat in den Topf geben.",
+     "Auf mittlerer Hitze (Stufe 6) aufkochen, dabei ständig rühren, damit die Milch nicht ansetzt.",
+     "Auf Stufe 4 offen 10–12 Minuten köcheln, alle 1–2 Minuten umrühren, bis die Nudeln weich sind und kaum Flüssigkeit übrig ist.",
+     "Vom Herd nehmen, Käse und Butter unterrühren, pfeffern und sofort essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "familie",
+   "kinder",
+   "guenstig"
+  ],
+  "tipp": "Kurze Nudeln wie Hörnchen oder Penne eignen sich am besten.",
+  "foto": "creamy cheesy macaroni with spinach in a saucepan, wooden spoon"
+ },
+ {
+  "id": "H14",
+  "titel": "Halloumi-Gemüse-Pfanne mit Couscous",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "halloumi",
+    225
+   ],
+   [
+    "couscous",
+    150
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "cherrytomate",
+    250
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "gemuesebruehe",
+    4
+   ],
+   [
+    "kreuzkuemmel",
+    2
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 20,
+    "aktiv": 15,
+    "schritte": [
+     "Halloumi in 1 cm dicke Scheiben, Zucchini und Paprika in Würfel schneiden, Tomaten halbieren.",
+     "Pfanne ohne Öl auf mittlerer bis hoher Hitze (Stufe 7) erhitzen, Halloumi je Seite 2 Minuten goldbraun braten, herausnehmen.",
+     "Öl in die Pfanne geben, Zucchini und Paprika 5 Minuten braten, Tomaten und Kreuzkümmel 1 Minute mitbraten.",
+     "200 ml Wasser und Brühpulver zugeben, aufkochen, Couscous einstreuen, umrühren, Pfanne vom Herd nehmen und mit Deckel 5 Minuten quellen lassen.",
+     "Mit einer Gabel auflockern und den Halloumi obendrauf legen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "box"
+  ],
+  "tipp": "Kalt am nächsten Tag als Couscous-Salat essbar, dann innerhalb eines Tages verbrauchen.",
+  "foto": "golden grilled halloumi slices on vegetable couscous with cherry tomatoes and zucchini in a pan"
+ },
+ {
+  "id": "H15",
+  "titel": "Gebratener Ei-Reis mit Erbsen und Möhren",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "reis",
+    200
+   ],
+   [
+    "eier",
+    4,
+    "stk"
+   ],
+   [
+    "tk_erbsen",
+    200
+   ],
+   [
+    "moehre",
+    150
+   ],
+   [
+    "fruehlingszwiebel",
+    1,
+    "stk"
+   ],
+   [
+    "sojasauce",
+    30
+   ],
+   [
+    "rapsoel",
+    30
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 35,
+    "aktiv": 15,
+    "schritte": [
+     "Reis mit 400 ml Wasser und 1 Prise Salz in der Pfanne mit Deckel aufkochen und auf kleiner Hitze (Stufe 2–3) 15 Minuten garen. Deckel abnehmen und 3 Minuten ausdampfen lassen, Reis auf einen Teller geben.",
+     "Möhre fein würfeln, Frühlingszwiebel in Ringe schneiden.",
+     "Öl in der Pfanne auf hoher Hitze (Stufe 8) erhitzen, Möhren und Erbsen 4 Minuten braten.",
+     "Gemüse an den Rand schieben, Eier hineinschlagen und unter Rühren 3 Minuten braten, bis sie vollständig fest sind.",
+     "Reis zugeben, 4 Minuten unter Wenden braten, mit Sojasauce würzen und mit Frühlingszwiebeln bestreuen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd2",
+     "topf",
+     "pfanne"
+    ],
+    "zeit": 25,
+    "aktiv": 15,
+    "schritte": [
+     "Reis mit 400 ml Wasser im Topf aufkochen und auf kleiner Hitze 15 Minuten garen.",
+     "Gleichzeitig in der Pfanne Möhren und Erbsen in Öl 4 Minuten braten, Eier zugeben und vollständig fest braten.",
+     "Reis in die Pfanne geben, 3 Minuten braten, mit Sojasauce würzen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "box"
+  ],
+  "tipp": "Vom Vortag übrig gebliebener, gekühlter Reis wird besonders körnig. Dann nur noch Schritt 3 bis 5.",
+  "foto": "egg fried rice with peas, carrots and spring onions in a frying pan"
+ },
+ {
+  "id": "H16",
+  "titel": "Chili con Carne mit Reis aus einem Topf",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "rinderhack",
+    500
+   ],
+   [
+    "kidney_dose",
+    500
+   ],
+   [
+    "mais_dose",
+    285
+   ],
+   [
+    "tomaten_dose",
+    800
+   ],
+   [
+    "reis",
+    250
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "rapsoel",
+    15
+   ],
+   [
+    "paprikapulver",
+    5
+   ],
+   [
+    "kreuzkuemmel",
+    3
+   ],
+   [
+    "chiliflocken",
+    1
+   ],
+   [
+    "salz",
+    7
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Zwiebeln und Paprika würfeln, Bohnen und Mais abspülen.",
+     "Öl im großen Topf auf hoher Hitze (Stufe 8) erhitzen. Hack hineingeben und 7–8 Minuten krümelig braten, bis kein rosa Fleisch mehr zu sehen ist.",
+     "Zwiebeln und Paprika 4 Minuten mitbraten, Gewürze 1 Minute mitrösten.",
+     "Tomaten, 700 ml Wasser, Salz und Reis einrühren, aufkochen. Auf kleiner Hitze (Stufe 3) mit Deckel 18 Minuten köcheln, alle 4–5 Minuten vom Boden her umrühren.",
+     "Bohnen und Mais zugeben, 4 Minuten miterhitzen, bis der Reis weich ist.",
+     "Reste sofort abkühlen lassen und innerhalb von 2 Stunden in Kühlschrank oder Gefrierfach stellen (Hack und Reis: höchstens 1 Tag kühlen)."
+    ]
+   },
+   {
+    "geraete": [
+     "herd2",
+     "topf",
+     "pfanne"
+    ],
+    "zeit": 35,
+    "aktiv": 15,
+    "schritte": [
+     "Reis mit 500 ml Salzwasser im Topf aufkochen und auf kleiner Hitze 15 Minuten garen.",
+     "Gleichzeitig in der Pfanne Hack in Öl 7–8 Minuten durchbraten, Zwiebeln, Paprika und Gewürze 4 Minuten mitbraten.",
+     "Tomaten und 200 ml Wasser zugeben, 10 Minuten köcheln, Bohnen und Mais 4 Minuten miterhitzen. Mit Reis servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "box",
+   "familie",
+   "eiweiss"
+  ],
+  "tipp": "Zweite Portion für morgen in den Kühlschrank, weitere Portionen sofort einfrieren und im Kühlschrank auftauen.",
+  "foto": "chili con carne with ground beef, kidney beans, corn and rice in a pot"
+ },
+ {
+  "id": "H17",
+  "titel": "Hähnchen-Kokos-Curry mit Brokkoli und Reis",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "haehnchenbrust",
+    600
+   ],
+   [
+    "kokosmilch",
+    400
+   ],
+   [
+    "reis",
+    300
+   ],
+   [
+    "tk_brokkoli",
+    450
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "currypulver",
+    12
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "salz",
+    7
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Hähnchen in 2-cm-Würfel schneiden, Zwiebeln würfeln. Brett und Messer danach heiß abspülen.",
+     "Öl im großen Topf auf hoher Hitze (Stufe 8) erhitzen, Hähnchen 5 Minuten rundum anbraten. Zwiebeln und Currypulver 2 Minuten mitbraten.",
+     "Reis, Kokosmilch, 650 ml Wasser und Salz zugeben, aufkochen.",
+     "Auf kleiner Hitze (Stufe 3) mit Deckel 15 Minuten köcheln, alle 4 Minuten umrühren.",
+     "Gefrorenen Brokkoli zugeben, Deckel drauf und 6 Minuten weiterköcheln, bis der Reis weich ist und das Hähnchen innen nicht mehr rosa ist (Stück aufschneiden).",
+     "Reste sofort abkühlen lassen und innerhalb von 2 Stunden kühlen oder einfrieren (Reis!)."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "box",
+   "sportnach",
+   "eiweiss"
+  ],
+  "tipp": "Das Hähnchen gart im Reis mit und bleibt so saftig.",
+  "foto": "chicken coconut curry with broccoli and rice in a pot, bowl"
+ },
+ {
+  "id": "H18",
+  "titel": "Hähnchen-Reispfanne mit Paprika und Erbsen",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "haehnchenbrust",
+    500
+   ],
+   [
+    "reis",
+    350
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "tk_erbsen",
+    300
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "paprikapulver",
+    6
+   ],
+   [
+    "gemuesebruehe",
+    10
+   ],
+   [
+    "olivenoel",
+    40
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Hähnchen in Würfel, Paprika in Streifen, Zwiebeln in Würfel schneiden.",
+     "Öl in einer großen, tiefen Pfanne mit Deckel auf hoher Hitze (Stufe 8) erhitzen, Hähnchen 5 Minuten rundum anbraten.",
+     "Zwiebeln, Paprika und Paprikapulver 3 Minuten mitbraten. Reis einrühren und 1 Minute anrösten.",
+     "Tomaten, 750 ml Wasser und Brühpulver zugeben, aufkochen und mit Deckel auf kleiner Hitze (Stufe 3) 18 Minuten garen. Nicht zu oft umrühren.",
+     "Erbsen darüberstreuen, Deckel drauf und 5 Minuten weitergaren, bis Reis weich und Hähnchen durchgegart ist.",
+     "Reste sofort abkühlen lassen und innerhalb von 2 Stunden kühlen oder einfrieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "box",
+   "familie",
+   "eiweiss"
+  ],
+  "tipp": "Am Boden darf sich eine leichte Kruste bilden, die gehört bei Paella-Art dazu.",
+  "foto": "paella style chicken rice pan with red peppers and green peas in a wide skillet"
+ },
+ {
+  "id": "H19",
+  "titel": "Geschmorte Hähnchenschenkel mit Kartoffeln und Möhren",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "haehnchen_unterschenkel",
+    8,
+    "stk"
+   ],
+   [
+    "kartoffel",
+    1000
+   ],
+   [
+    "moehre",
+    400
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "tomatenmark",
+    30
+   ],
+   [
+    "gemuesebruehe",
+    10
+   ],
+   [
+    "paprikapulver",
+    6
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "salz",
+    5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 60,
+    "aktiv": 15,
+    "schritte": [
+     "Schenkel mit Salz und Paprikapulver einreiben. Kartoffeln und Möhren schälen und in 3-cm-Stücke schneiden, Zwiebeln vierteln. Hände und Brett danach gründlich waschen.",
+     "Öl im großen Topf auf hoher Hitze (Stufe 8) erhitzen, Schenkel rundum 6 Minuten anbraten.",
+     "Zwiebeln und Tomatenmark 1 Minute mitrösten, Kartoffeln, Möhren, Brühpulver und 500 ml Wasser zugeben.",
+     "Aufkochen und mit Deckel auf kleiner Hitze (Stufe 3) 40 Minuten schmoren, nach 20 Minuten umrühren.",
+     "Prüfen: Das Fleisch löst sich leicht vom Knochen und der Saft am Knochen ist klar, nicht rosa. Sonst 10 Minuten länger schmoren. Reste in Dosen füllen, offen abkühlen lassen und innerhalb von 2 Stunden in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "familie"
+  ],
+  "tipp": "Unterschenkel sind günstiger als Brust und werden beim Schmoren nicht trocken.",
+  "foto": "braised chicken drumsticks with potatoes and carrots in a rich tomato paprika sauce in a pot"
+ },
+ {
+  "id": "H20",
+  "titel": "One-Pot-Spaghetti Bolognese",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "rinderhack",
+    500
+   ],
+   [
+    "nudeln",
+    500
+   ],
+   [
+    "passata",
+    1000
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "moehre",
+    200
+   ],
+   [
+    "tomatenmark",
+    30
+   ],
+   [
+    "olivenoel",
+    15
+   ],
+   [
+    "italien_kraeuter",
+    4
+   ],
+   [
+    "salz",
+    7
+   ],
+   [
+    "parmesan",
+    40
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Zwiebeln und Möhren fein würfeln.",
+     "Öl im großen Topf auf hoher Hitze (Stufe 8) erhitzen, Hack 7–8 Minuten krümelig braten, bis nichts mehr rosa ist.",
+     "Zwiebeln und Möhren 4 Minuten mitbraten, Tomatenmark 1 Minute mitrösten.",
+     "Passata, 1 Liter Wasser, Kräuter und Salz zugeben, aufkochen. Spaghetti in der Mitte durchbrechen und einrühren.",
+     "Offen auf mittlerer Hitze (Stufe 5) 12–14 Minuten köcheln, alle 2 Minuten umrühren, bis die Nudeln bissfest sind. Bei Bedarf 100 ml Wasser nachgießen.",
+     "Mit Parmesan bestreuen. Reste sofort abkühlen lassen und innerhalb von 2 Stunden kühlen oder einfrieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "box",
+   "familie",
+   "eiweiss"
+  ],
+  "tipp": "Kurze Nudeln wie Penne lassen sich im Topf leichter rühren als Spaghetti.",
+  "foto": "one pot spaghetti bolognese with grated hard cheese in a large saucepan"
+ },
+ {
+  "id": "H21",
+  "titel": "Hack-Kartoffel-Pfanne mit Paprika und Schmand",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "rinderhack",
+    250
+   ],
+   [
+    "kartoffel",
+    600
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "schmand",
+    100
+   ],
+   [
+    "rapsoel",
+    30
+   ],
+   [
+    "paprikapulver",
+    4
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 35,
+    "aktiv": 15,
+    "schritte": [
+     "Kartoffeln schälen und in 1-cm-Würfel schneiden, Paprika und Zwiebel würfeln.",
+     "Öl in der großen Pfanne auf mittlerer bis hoher Hitze (Stufe 7) erhitzen. Kartoffeln mit Deckel 12 Minuten braten, alle 3 Minuten wenden.",
+     "Hack zugeben und 7–8 Minuten krümelig braten, bis kein rosa Fleisch mehr zu sehen ist. Zwiebel, Paprika und Paprikapulver 4 Minuten mitbraten.",
+     "Mit Salz und Pfeffer würzen, Prüfen, ob die Kartoffeln weich sind, und mit einem Klecks Schmand servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft"
+  ],
+  "tipp": "Kleine Würfel garen schneller durch als Scheiben.",
+  "foto": "skillet with crispy diced potatoes, browned ground beef and red peppers, dollop of sour cream"
+ },
+ {
+  "id": "H22",
+  "titel": "Hähnchen-Gnocchi-Pfanne mit Brokkoli und Frischkäse",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "haehnchenbrust",
+    300
+   ],
+   [
+    "gnocchi",
+    500
+   ],
+   [
+    "tk_brokkoli",
+    300
+   ],
+   [
+    "frischkaese",
+    100
+   ],
+   [
+    "knoblauch",
+    6
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 25,
+    "aktiv": 15,
+    "schritte": [
+     "Hähnchen in 2-cm-Würfel schneiden, Knoblauch hacken. Brett und Messer danach heiß abspülen.",
+     "Öl in der Pfanne auf hoher Hitze (Stufe 8) erhitzen, Hähnchen 6 Minuten rundum braten, bis es innen nicht mehr rosa ist. Herausnehmen.",
+     "Gnocchi direkt aus der Packung in die Pfanne geben und 6 Minuten goldbraun braten.",
+     "Gefrorenen Brokkoli, Knoblauch und 100 ml Wasser zugeben, Deckel drauf und auf mittlerer Hitze 5 Minuten garen.",
+     "Frischkäse und Hähnchen unterrühren, 2 Minuten erhitzen, bis alles heiß ist. Salzen und pfeffern."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "sportnach",
+   "eiweiss"
+  ],
+  "tipp": "Der Frischkäse ergibt mit dem Gemüsewasser eine schnelle, cremige Sauce.",
+  "foto": "pan with golden gnocchi, chicken pieces and broccoli in a light cream cheese sauce"
+ },
+ {
+  "id": "H23",
+  "titel": "Puten-Rahm-Nudeln mit Champignons",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "putenbrust",
+    500
+   ],
+   [
+    "nudeln",
+    500
+   ],
+   [
+    "champignon",
+    400
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "schlagsahne",
+    200
+   ],
+   [
+    "gemuesebruehe",
+    15
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 35,
+    "aktiv": 15,
+    "schritte": [
+     "Pute in Streifen schneiden, Pilze in Scheiben, Zwiebeln würfeln. Brett und Messer danach heiß abspülen.",
+     "Öl im großen Topf auf hoher Hitze (Stufe 8) erhitzen, Putenstreifen 5 Minuten rundum anbraten.",
+     "Zwiebeln und Pilze 5 Minuten mitbraten.",
+     "1,1 Liter Wasser, Brühpulver und Nudeln zugeben, aufkochen und offen auf mittlerer Hitze (Stufe 5) 11–13 Minuten köcheln, alle 2 Minuten umrühren.",
+     "Sahne einrühren, 2 Minuten köcheln, bis die Sauce bindet und die Pute durchgegart ist. Pfeffern.",
+     "Reste sofort abkühlen lassen und innerhalb von 2 Stunden kühlen oder einfrieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "box",
+   "familie",
+   "eiweiss"
+  ],
+  "tipp": "Beim Aufwärmen einen Schuss Wasser zugeben, die Nudeln saugen über Nacht Sauce auf.",
+  "foto": "creamy turkey mushroom pasta in a pot, parsley-free, rustic"
+ },
+ {
+  "id": "H24",
+  "titel": "Weißkohl-Hack-Eintopf mit Kartoffeln",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "rinderhack",
+    500
+   ],
+   [
+    "weisskohl",
+    600
+   ],
+   [
+    "kartoffel",
+    800
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "tomatenmark",
+    30
+   ],
+   [
+    "gemuesebruehe",
+    15
+   ],
+   [
+    "paprikapulver",
+    5
+   ],
+   [
+    "rapsoel",
+    15
+   ],
+   [
+    "mischbrot",
+    300
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 50,
+    "aktiv": 15,
+    "schritte": [
+     "Kohl vierteln, Strunk entfernen und in 1-cm-Streifen schneiden. Kartoffeln schälen und würfeln, Zwiebeln hacken.",
+     "Öl im großen Topf auf hoher Hitze (Stufe 8) erhitzen, Hack 7–8 Minuten krümelig braten, bis nichts mehr rosa ist.",
+     "Zwiebeln, Tomatenmark und Paprikapulver 2 Minuten mitrösten.",
+     "Kohl, Kartoffeln, Brühpulver und 1,2 Liter Wasser zugeben, aufkochen.",
+     "Mit Deckel auf kleiner Hitze (Stufe 3) 30 Minuten köcheln, bis Kohl und Kartoffeln weich sind. Mit Brot servieren. Reste in Dosen füllen, offen abkühlen lassen und innerhalb von 2 Stunden in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "topf"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag"
+  ],
+  "tipp": "Ein halber Weißkohl reicht hier, der Rest hält im Kühlschrank etwa eine Woche.",
+  "foto": "hearty white cabbage stew with ground beef and potatoes in a pot, bread slices"
+ },
+ {
+  "id": "H25",
+  "titel": "Hähnchen-Fajita-Pfanne mit Tortillas",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "haehnchenbrust",
+    300
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "rote_zwiebel",
+    80
+   ],
+   [
+    "tortilla",
+    6,
+    "stk"
+   ],
+   [
+    "schmand",
+    100
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "paprikapulver",
+    4
+   ],
+   [
+    "kreuzkuemmel",
+    2
+   ],
+   [
+    "salz",
+    3
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 25,
+    "aktiv": 20,
+    "schritte": [
+     "Tortillas in der trockenen Pfanne je Seite 30 Sekunden auf mittlerer Hitze erwärmen, in ein Tuch wickeln.",
+     "Hähnchen in dünne Streifen, Paprika und Zwiebel in Streifen schneiden. Brett und Messer danach heiß abspülen.",
+     "Öl in der Pfanne auf hoher Hitze (Stufe 8) erhitzen, Hähnchen 5 Minuten braten. Paprika, Zwiebel und Gewürze zugeben und 5 Minuten weiterbraten, bis das Fleisch innen nicht mehr rosa ist.",
+     "Füllung mit Schmand in die Tortillas geben und einrollen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "box",
+   "sportnach",
+   "eiweiss"
+  ],
+  "tipp": "Die Füllung schmeckt am nächsten Tag kalt im Wrap, dann gekühlt transportieren.",
+  "foto": "chicken fajita strips with peppers and red onion in a skillet, warm tortillas and sour cream"
+ },
+ {
+  "id": "H26",
+  "titel": "Hähnchen-Satay-Reispfanne mit Asiagemüse",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "tk_haehnchen",
+    600
+   ],
+   [
+    "reis",
+    300
+   ],
+   [
+    "tk_asiagemuese",
+    750
+   ],
+   [
+    "erdnussmus",
+    80
+   ],
+   [
+    "sojasauce",
+    50
+   ],
+   [
+    "knoblauch",
+    10
+   ],
+   [
+    "rapsoel",
+    20
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Hähnchen im Kühlschrank über Nacht auftauen lassen, Tauwasser weggießen, Fleisch in Würfel schneiden. Brett, Messer und Hände danach gründlich waschen.",
+     "Öl in einer großen Pfanne mit Deckel auf hoher Hitze (Stufe 8) erhitzen, Hähnchen 7 Minuten rundum braten, bis es innen nicht mehr rosa ist. Herausnehmen.",
+     "Reis, 650 ml Wasser und 1 Prise Salz in die Pfanne geben, aufkochen und mit Deckel auf kleiner Hitze (Stufe 3) 12 Minuten garen.",
+     "Gefrorenes Gemüse und Knoblauch obenauf geben, Deckel drauf und 6 Minuten garen.",
+     "Erdnussmus mit Sojasauce und 5 EL heißem Wasser glattrühren, mit dem Hähnchen unterheben und 2 Minuten erhitzen.",
+     "Reste sofort abkühlen lassen und innerhalb von 2 Stunden kühlen oder einfrieren (Reis!)."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "box",
+   "eiweiss"
+  ],
+  "tipp": "Wer kein Auftauen geplant hat, nimmt frische Hähnchenbrust in gleicher Menge.",
+  "foto": "chicken satay rice stir fry with asian vegetables and peanut sauce in a large pan"
+ },
+ {
+  "id": "H27",
+  "titel": "Hühner-Nudelsuppe mit Gemüse",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "haehnchen_unterschenkel",
+    4,
+    "stk"
+   ],
+   [
+    "nudeln",
+    400
+   ],
+   [
+    "moehre",
+    300
+   ],
+   [
+    "lauch",
+    1,
+    "stk"
+   ],
+   [
+    "gemuesebruehe",
+    25
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "mischbrot",
+    200
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 65,
+    "aktiv": 15,
+    "schritte": [
+     "Unterschenkel mit 2 Litern Wasser und dem Brühpulver in den großen Topf geben. Aufkochen und auf kleiner Hitze (Stufe 3) mit Deckel 35 Minuten köcheln.",
+     "Inzwischen Möhren in Scheiben, Lauch in Ringe schneiden und gründlich waschen.",
+     "Schenkel mit einer Gabel herausheben, etwas abkühlen lassen, Fleisch von Haut und Knochen zupfen. Es muss ganz durchgegart sein (kein rosa Fleisch am Knochen). Hände und Brett danach waschen.",
+     "Möhren, Lauch und Nudeln in die Brühe geben, offen auf mittlerer Hitze (Stufe 5) 10 Minuten kochen.",
+     "Fleisch zurück in den Topf geben, 2 Minuten erhitzen, abschmecken, mit Brot essen.",
+     "Reste sofort abkühlen lassen und innerhalb von 2 Stunden kühlen oder einfrieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "topf"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "familie",
+   "guenstig"
+  ],
+  "tipp": "Zum Einfrieren die Nudeln besser frisch kochen und nur die Suppe einfrieren, dann werden sie nicht weich.",
+  "foto": "chicken noodle soup with carrots and leeks in a pot, steaming bowl, bread"
+ },
+ {
+  "id": "H28",
+  "titel": "Reisfleisch mit Rinderhack und Paprika",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "rinderhack",
+    500
+   ],
+   [
+    "reis",
+    350
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "tomatenmark",
+    40
+   ],
+   [
+    "paprikapulver",
+    8
+   ],
+   [
+    "gemuesebruehe",
+    10
+   ],
+   [
+    "rapsoel",
+    25
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Zwiebeln und Paprika würfeln.",
+     "Öl im großen Topf auf hoher Hitze (Stufe 8) erhitzen, Hack 7–8 Minuten krümelig braten, bis nichts mehr rosa ist.",
+     "Zwiebeln und Paprika 4 Minuten mitbraten, Tomatenmark und Paprikapulver 1 Minute mitrösten.",
+     "Reis einrühren, 800 ml Wasser und Brühpulver zugeben, aufkochen.",
+     "Mit Deckel auf kleiner Hitze (Stufe 2–3) 20 Minuten garen, nach 10 Minuten einmal umrühren. Danach 5 Minuten mit Deckel ziehen lassen.",
+     "Reste sofort abkühlen lassen und innerhalb von 2 Stunden kühlen oder einfrieren (Hack und Reis!)."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "box",
+   "familie"
+  ],
+  "tipp": "Dazu passen saure Gurken aus dem Glas, die ohne Kühlung lagern.",
+  "foto": "Austrian style beef rice pot with paprika and red peppers in a saucepan"
+ },
+ {
+  "id": "H29",
+  "titel": "Puten-Zucchini-Couscous mit Feta",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "putenbrust",
+    300
+   ],
+   [
+    "couscous",
+    160
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "cherrytomate",
+    250
+   ],
+   [
+    "feta",
+    100
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "gemuesebruehe",
+    5
+   ],
+   [
+    "oregano",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 20,
+    "aktiv": 15,
+    "schritte": [
+     "Pute in Würfel, Zucchini in Würfel schneiden, Tomaten halbieren. Brett und Messer danach heiß abspülen.",
+     "Öl in der Pfanne auf hoher Hitze (Stufe 8) erhitzen, Pute 6 Minuten rundum braten, bis sie innen nicht mehr rosa ist.",
+     "Zucchini, Tomaten und Oregano 3 Minuten mitbraten.",
+     "220 ml Wasser und Brühpulver zugeben, aufkochen, Couscous einrühren, Pfanne vom Herd nehmen und mit Deckel 5 Minuten quellen lassen.",
+     "Auflockern und Feta darüberbröseln."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "box",
+   "sportnach",
+   "eiweiss"
+  ],
+  "tipp": "Schmeckt am nächsten Tag auch kalt aus der Box, gekühlt transportieren.",
+  "foto": "turkey zucchini couscous with cherry tomatoes and crumbled feta in a pan"
+ },
+ {
+  "id": "H30",
+  "titel": "Hähnchen-Süßkartoffel-Eintopf mit Kichererbsen",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "haehnchenbrust",
+    500
+   ],
+   [
+    "suesskartoffel",
+    800
+   ],
+   [
+    "kichererbsen_dose",
+    240
+   ],
+   [
+    "tk_spinat",
+    300
+   ],
+   [
+    "passata",
+    500
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "kreuzkuemmel",
+    4
+   ],
+   [
+    "paprikapulver",
+    5
+   ],
+   [
+    "rapsoel",
+    30
+   ],
+   [
+    "fladenbrot",
+    1,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Hähnchen in Würfel schneiden, Süßkartoffeln schälen und in 2-cm-Würfel schneiden, Zwiebeln würfeln, Kichererbsen abspülen. Brett und Messer danach heiß abspülen.",
+     "Öl im großen Topf auf hoher Hitze (Stufe 8) erhitzen, Hähnchen 5 Minuten anbraten. Zwiebeln und Gewürze 2 Minuten mitbraten.",
+     "Süßkartoffeln, Passata und 500 ml Wasser zugeben, salzen und aufkochen.",
+     "Mit Deckel auf kleiner Hitze (Stufe 3) 20 Minuten köcheln.",
+     "Spinat und Kichererbsen zugeben und 6 Minuten weiterköcheln, bis alles heiß und das Hähnchen durchgegart ist. Mit Fladenbrot essen. Reste in Dosen füllen, offen abkühlen lassen und innerhalb von 2 Stunden in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "box",
+   "familie",
+   "eiweiss"
+  ],
+  "tipp": "Fladenbrot getrennt aufbewahren, dann bleibt es weich und der Eintopf hält 2 Tage.",
+  "foto": "chicken sweet potato stew with chickpeas and spinach in tomato sauce, flatbread on the side"
+ },
+ {
+  "id": "H31",
+  "titel": "Linseneintopf mit Wiener Würstchen",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "tellerlinsen",
+    300
+   ],
+   [
+    "kartoffel",
+    700
+   ],
+   [
+    "moehre",
+    300
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "wiener",
+    400
+   ],
+   [
+    "gemuesebruehe",
+    15
+   ],
+   [
+    "essig",
+    20
+   ],
+   [
+    "rapsoel",
+    15
+   ],
+   [
+    "salz",
+    3
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 55,
+    "aktiv": 15,
+    "schritte": [
+     "Zwiebeln würfeln, Kartoffeln und Möhren schälen und in 1-cm-Würfel schneiden, Linsen abspülen.",
+     "Öl im großen Topf auf mittlerer Hitze (Stufe 6) erhitzen, Zwiebeln 4 Minuten andünsten.",
+     "Linsen, Kartoffeln, Möhren, Brühpulver und 1,5 Liter Wasser zugeben, aufkochen.",
+     "Mit Deckel auf kleiner Hitze (Stufe 3) 35–40 Minuten köcheln, bis die Linsen weich sind. Alle 10 Minuten umrühren.",
+     "Würstchen in Scheiben schneiden, 5 Minuten im Eintopf heiß werden lassen (nicht mehr kochen, sonst platzen sie). Mit Essig und Salz abschmecken. Reste in Dosen füllen, offen abkühlen lassen und innerhalb von 2 Stunden in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "topf"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "familie",
+   "guenstig"
+  ],
+  "tipp": "Würstchen im Glas lagern ungeöffnet ohne Kühlung, ideal für die Unterkunft.",
+  "foto": "German lentil stew with sliced frankfurter sausages, potatoes and carrots in a pot"
+ },
+ {
+  "id": "H32",
+  "titel": "Schnitzel-Jägerpfanne mit Kartoffeln und Pilzrahm",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "schweineschnitzel",
+    300
+   ],
+   [
+    "kartoffel",
+    600
+   ],
+   [
+    "champignon",
+    250
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "schlagsahne",
+    100
+   ],
+   [
+    "rapsoel",
+    30
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 40,
+    "aktiv": 20,
+    "schritte": [
+     "Kartoffeln schälen und in 1-cm-Würfel schneiden, Schnitzel in Streifen, Pilze in Scheiben, Zwiebel in Würfel schneiden. Brett und Messer danach heiß abspülen.",
+     "Die Hälfte des Öls in der großen Pfanne auf mittlerer bis hoher Hitze (Stufe 7) erhitzen, Kartoffeln mit Deckel 15 Minuten braten, alle 3 Minuten wenden. An den Rand schieben.",
+     "Restliches Öl in die Mitte geben, Fleischstreifen auf hoher Hitze (Stufe 8) 4–5 Minuten braten, bis sie innen nicht mehr rosa sind.",
+     "Zwiebel und Pilze zugeben, 5 Minuten braten. Sahne und 50 ml Wasser angießen, alles mischen und 2 Minuten köcheln. Salzen und pfeffern."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "sportnach",
+   "eiweiss"
+  ],
+  "tipp": "Schnitzel in dünne Streifen geschnitten gart in wenigen Minuten sicher durch.",
+  "foto": "pork strips with mushroom cream sauce and pan-fried potato cubes in a skillet"
+ },
+ {
+  "id": "H33",
+  "titel": "Käse-Lauch-Suppe mit Hack",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "gemischtes_hack",
+    500
+   ],
+   [
+    "lauch",
+    2,
+    "stk"
+   ],
+   [
+    "frischkaese",
+    200
+   ],
+   [
+    "kartoffel",
+    600
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "gemuesebruehe",
+    20
+   ],
+   [
+    "rapsoel",
+    10
+   ],
+   [
+    "mischbrot",
+    200
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Lauch längs halbieren, gründlich waschen und in Ringe schneiden. Kartoffeln schälen und klein würfeln, Zwiebeln hacken.",
+     "Öl im großen Topf auf hoher Hitze (Stufe 8) erhitzen, Hack 8 Minuten krümelig braten, bis nichts mehr rosa ist.",
+     "Zwiebeln und Lauch 4 Minuten mitdünsten. Kartoffeln, Brühpulver und 1,2 Liter Wasser zugeben, aufkochen.",
+     "Mit Deckel auf kleiner Hitze (Stufe 3) 15 Minuten köcheln, bis die Kartoffeln weich sind.",
+     "Frischkäse einrühren, bis er geschmolzen ist, 2 Minuten köcheln. Mit Brot essen.",
+     "Reste sofort abkühlen lassen und innerhalb von 2 Stunden kühlen oder einfrieren (Hack: höchstens 1 Tag kühlen)."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "topf"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag",
+   "familie"
+  ],
+  "tipp": "Lauch hat oft Erde zwischen den Schichten: nach dem Schneiden in einer Schüssel Wasser durchspülen.",
+  "foto": "creamy leek and cheese soup with ground meat in a pot, bread on the side"
+ },
+ {
+  "id": "H34",
+  "titel": "Schinken-Erbsen-Nudeln in Sahnesauce",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "nudeln",
+    250
+   ],
+   [
+    "kochschinken",
+    150
+   ],
+   [
+    "tk_erbsen",
+    200
+   ],
+   [
+    "schlagsahne",
+    100
+   ],
+   [
+    "reibekaese",
+    50
+   ],
+   [
+    "gemuesebruehe",
+    5
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 18,
+    "aktiv": 10,
+    "schritte": [
+     "Schinken in Streifen schneiden.",
+     "Nudeln, 650 ml Wasser und Brühpulver in den Topf geben, aufkochen und offen auf mittlerer Hitze (Stufe 5) 8 Minuten köcheln, alle 2 Minuten umrühren.",
+     "Gefrorene Erbsen und Sahne zugeben, 3–4 Minuten weiterköcheln, bis die Nudeln bissfest sind und die Sauce eindickt.",
+     "Schinken und Käse unterrühren, 1 Minute erhitzen, pfeffern und sofort essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "familie",
+   "kinder",
+   "eiweiss"
+  ],
+  "tipp": "Bleibt zu viel Flüssigkeit, 2 Minuten offen weiterköcheln lassen.",
+  "foto": "creamy pasta with ham strips and green peas in a saucepan, grated cheese"
+ },
+ {
+  "id": "H35",
+  "titel": "Bauernfrühstück mit Schinken",
+  "mahlzeit": [
+   "fruehstueck",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "kartoffel",
+    800
+   ],
+   [
+    "eier",
+    4,
+    "stk"
+   ],
+   [
+    "kochschinken",
+    100
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "rapsoel",
+    30
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "schnittlauch",
+    1,
+    "stk",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 40,
+    "aktiv": 20,
+    "schritte": [
+     "Kartoffeln schälen und in 3 mm dünne Scheiben schneiden, Zwiebel würfeln, Schinken in Streifen schneiden.",
+     "Öl in der großen Pfanne auf mittlerer bis hoher Hitze (Stufe 7) erhitzen, Kartoffeln mit Deckel 10 Minuten braten, nach 5 Minuten wenden. Dann offen 12 Minuten weiterbraten und öfter wenden, bis sie weich und braun sind.",
+     "Zwiebel und Schinken 3 Minuten mitbraten, salzen und pfeffern.",
+     "Eier verquirlen, über die Kartoffeln gießen, Deckel drauf und auf mittlerer Hitze (Stufe 5) 4–5 Minuten stocken lassen, dann wenden oder umrühren, bis das Ei vollständig fest ist.",
+     "Mit Schnittlauch bestreuen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft"
+  ],
+  "tipp": "Gekochte Pellkartoffeln vom Vortag halbieren die Bratzeit.",
+  "foto": "German farmer's breakfast with fried potatoes, ham and fully set eggs in a skillet, chives"
+ },
+ {
+  "id": "H36",
+  "titel": "Thunfisch-Tomaten-Nudeln aus einem Topf",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "nudeln",
+    250
+   ],
+   [
+    "thunfisch",
+    280
+   ],
+   [
+    "passata",
+    500
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "knoblauch",
+    6
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "oregano",
+    2
+   ],
+   [
+    "salz",
+    3
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 22,
+    "aktiv": 10,
+    "schritte": [
+     "Zwiebel und Knoblauch fein würfeln, Thunfisch abtropfen lassen.",
+     "Öl im Topf auf mittlerer Hitze (Stufe 6) erhitzen, Zwiebel und Knoblauch 3 Minuten dünsten.",
+     "Nudeln, Passata, 550 ml Wasser, Oregano und Salz zugeben, aufkochen.",
+     "Offen auf mittlerer Hitze (Stufe 5) 11–12 Minuten köcheln, alle 2 Minuten umrühren, bis die Nudeln bissfest sind.",
+     "Thunfisch unterheben und 2 Minuten mit erhitzen, bis alles dampfend heiß ist."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "box",
+   "sportnach",
+   "eiweiss"
+  ],
+  "tipp": "Thunfisch in der Dose lagert ohne Kühlung, gut für den Vorrat in der Unterkunft.",
+  "foto": "one pot pasta with tuna and tomato sauce, oregano, in a saucepan"
+ },
+ {
+  "id": "H37",
+  "titel": "Seelachs in Paprika-Tomaten-Sauce mit Reis",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "tk_seelachs",
+    400
+   ],
+   [
+    "reis",
+    180
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "olivenoel",
+    30
+   ],
+   [
+    "paprikapulver",
+    3
+   ],
+   [
+    "salz",
+    4
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 40,
+    "aktiv": 12,
+    "schritte": [
+     "Fisch im Kühlschrank auftauen lassen (über Nacht) oder gefroren verwenden und 4 Minuten länger garen. Paprika und Zwiebel würfeln.",
+     "Öl in einer tiefen Pfanne mit Deckel auf mittlerer Hitze (Stufe 6) erhitzen, Zwiebel und Paprika 4 Minuten braten, Paprikapulver und Reis 1 Minute mitrösten.",
+     "Tomaten, 400 ml Wasser und Salz zugeben, aufkochen und mit Deckel auf kleiner Hitze (Stufe 3) 12 Minuten garen.",
+     "Fischfilets salzen, auf den Reis legen, Deckel drauf und 8–10 Minuten (gefroren 12–14 Minuten) garen, bis der Fisch in der Mitte weiß ist und leicht zerfällt."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "sportnach",
+   "eiweiss"
+  ],
+  "tipp": "Der Fisch dämpft auf dem Reis und braucht dadurch keine zweite Pfanne.",
+  "foto": "white fish fillets steamed on tomato pepper rice in a deep skillet"
+ },
+ {
+  "id": "H38",
+  "titel": "Lachs-Spinat-Nudeln mit Zitrone",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "lachs",
+    250
+   ],
+   [
+    "nudeln",
+    250
+   ],
+   [
+    "tk_spinat",
+    300
+   ],
+   [
+    "schlagsahne",
+    100
+   ],
+   [
+    "zitrone",
+    1,
+    "stk"
+   ],
+   [
+    "knoblauch",
+    6
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 25,
+    "aktiv": 12,
+    "schritte": [
+     "Lachs in 2-cm-Würfel schneiden, Knoblauch hacken. Brett und Messer danach heiß abspülen.",
+     "Nudeln, 600 ml Wasser, Salz, Knoblauch und gefrorenen Spinat in den Topf geben, aufkochen und offen auf mittlerer Hitze (Stufe 5) 8 Minuten köcheln, öfter umrühren.",
+     "Sahne und Lachswürfel zugeben, vorsichtig unterheben und mit Deckel auf kleiner Hitze (Stufe 3) 5 Minuten garen, bis der Lachs innen nicht mehr glasig ist und die Nudeln bissfest sind.",
+     "Mit Zitronensaft und Pfeffer abschmecken und sofort essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "eiweiss"
+  ],
+  "tipp": "Gefrorenen Lachs vorher im Kühlschrank auftauen, dann gart er gleichmäßig durch.",
+  "foto": "creamy salmon pasta with spinach and lemon in a saucepan"
+ },
+ {
+  "id": "H39",
+  "titel": "Fischstäbchen mit Bratkartoffeln und Erbsen",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "tk_fischstaebchen",
+    300
+   ],
+   [
+    "kartoffel",
+    700
+   ],
+   [
+    "tk_erbsen",
+    150
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "rapsoel",
+    40
+   ],
+   [
+    "salz",
+    4
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 40,
+    "aktiv": 20,
+    "schritte": [
+     "Kartoffeln schälen und in 3 mm dünne Scheiben schneiden, Zwiebel würfeln.",
+     "Die Hälfte des Öls in der großen Pfanne auf mittlerer bis hoher Hitze (Stufe 7) erhitzen, Kartoffeln mit Deckel 10 Minuten, dann offen 10 Minuten braten und öfter wenden. Zwiebel und Erbsen in den letzten 4 Minuten zugeben, salzen. Auf Teller verteilen und abdecken.",
+     "Restliches Öl in die Pfanne geben, gefrorene Fischstäbchen auf mittlerer Hitze (Stufe 6) je Seite 4–5 Minuten braten, bis sie goldbraun und innen heiß sind.",
+     "Fischstäbchen auf die Kartoffeln legen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "familie",
+   "kinder",
+   "guenstig"
+  ],
+  "tipp": "Fischstäbchen gefroren in die Pfanne geben, dann bleibt die Panade knusprig.",
+  "foto": "golden fish fingers on crispy fried potatoes with green peas on a plate"
+ },
+ {
+  "id": "H40",
+  "titel": "Mediterraner Fischeintopf mit Kartoffeln",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "tk_seelachs",
+    400
+   ],
+   [
+    "kartoffel",
+    1000
+   ],
+   [
+    "tomaten_dose",
+    800
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "knoblauch",
+    10
+   ],
+   [
+    "olivenoel",
+    40
+   ],
+   [
+    "gemuesebruehe",
+    10
+   ],
+   [
+    "mischbrot",
+    400
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Fisch im Kühlschrank über Nacht auftauen lassen und in 3-cm-Stücke schneiden. Kartoffeln schälen und in 2-cm-Würfel schneiden, Zwiebeln, Paprika und Knoblauch würfeln.",
+     "Öl im großen Topf auf mittlerer Hitze (Stufe 6) erhitzen, Zwiebeln, Paprika und Knoblauch 5 Minuten dünsten.",
+     "Kartoffeln, Tomaten, Brühpulver und 700 ml Wasser zugeben, aufkochen und mit Deckel auf kleiner Hitze (Stufe 3) 18 Minuten köcheln.",
+     "Fischstücke einlegen und ohne Umrühren mit Deckel 7–8 Minuten ziehen lassen, bis der Fisch innen weiß ist und zerfällt. Mit Brot essen.",
+     "Reste sofort abkühlen lassen und innerhalb von 2 Stunden kühlen oder einfrieren (Fisch: höchstens 1 Tag kühlen)."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "topf"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "mealprep",
+   "kochtag"
+  ],
+  "tipp": "Beim Aufwärmen nur sanft rühren, damit der Fisch nicht ganz zerfällt.",
+  "foto": "mediterranean fish stew with white fish, potatoes, tomatoes and peppers in a pot, rustic bread"
+ }
+]

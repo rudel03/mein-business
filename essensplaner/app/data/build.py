@@ -17,6 +17,9 @@ AUFWAERMEN = {"mikrowelle", "topf", "pfanne", "wasserkocher", "nein", "thermo"}
 KURZ = {"reis", "parboiled", "couscous", "bulgur", "quinoa", "nudeln", "vollkornnudeln", "gnocchi",
         "rinderhack", "gemischtes_hack", "lachs", "tk_seelachs", "tk_fischstaebchen", "eier",
         "thunfisch", "makrele_dose", "sardinen_dose", "hering_tomate", "lachs_geraeuchert"}
+# Rohe Komponenten: kalt gegessene Gerichte damit höchstens 1 Tag im Kühlschrank (BfR-FAQ, Regel L3)
+ROH = {"gurke", "eisberg", "rucola", "spinat_frisch", "tomate", "cherrytomate", "paprika", "fruehlingszwiebel",
+       "petersilie", "schnittlauch", "avocado", "zucchini", "champignon", "moehre", "weisskohl"}
 NAEHR = ["enercc", "prot625", "fat", "cho", "fibt", "sugar", "nacl"]
 
 
@@ -113,6 +116,8 @@ def pruefe(rezepte, Z, datei=""):
         gegart = any(set(w.get("geraete", [])) - {"toaster"} for w in wege)
         if gegart and zids & KURZ and L.get("kuehl_tage", 0) > 1:
             f(f"Lagerregel: mit {sorted(zids & KURZ)} höchstens 1 Tag im Kühlschrank")
+        if L.get("aufwaermen") == "nein" and zids & ROH and L.get("kuehl_tage", 0) > 1:
+            f(f"Lagerregel L3: kalt mit roher Komponente {sorted(zids & ROH)} höchstens 1 Tag im Kühlschrank")
         if L.get("ungekuehlt_h") == 24:
             leicht = [z for z in zids if Z.get(z, {}).get("lager") in ("k", "t") and "e" not in Z.get(z, {}).get("flags", [])]
             if leicht:

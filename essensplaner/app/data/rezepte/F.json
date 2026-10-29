@@ -1,0 +1,2403 @@
+[
+ {
+  "id": "F01",
+  "titel": "Overnight Oats Apfel-Zimt",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "haferflocken",
+    60
+   ],
+   [
+    "haferdrink",
+    180
+   ],
+   [
+    "apfel",
+    1,
+    "stk"
+   ],
+   [
+    "leinsamen",
+    10
+   ],
+   [
+    "erdnussmus",
+    15
+   ],
+   [
+    "zimt",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 5,
+    "aktiv": 5,
+    "schritte": [
+     "Haferflocken, Leinsamen und Zimt in ein Glas mit Deckel geben.",
+     "Haferdrink dazugießen und gut umrühren.",
+     "Apfel waschen, grob reiben oder klein würfeln und unterheben.",
+     "Glas verschließen und über Nacht (mindestens 6 Stunden) in den Kühlschrank stellen.",
+     "Morgens umrühren und das Erdnussmus obendrauf geben."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "schnell",
+   "guenstig",
+   "unterkunft"
+  ],
+  "tipp": "Du kannst zwei Gläser auf einmal ansetzen, sie halten zwei Tage im Kühlschrank.",
+  "foto": "overnight oats in a glass jar with grated apple, cinnamon and a spoon of peanut butter on top, wooden table"
+ },
+ {
+  "id": "F02",
+  "titel": "Bananen-Porridge mit Erdnussmus",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "haferflocken",
+    60
+   ],
+   [
+    "milch",
+    250
+   ],
+   [
+    "banane",
+    1,
+    "stk"
+   ],
+   [
+    "erdnussmus",
+    15
+   ],
+   [
+    "zimt",
+    1
+   ],
+   [
+    "salz",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 8,
+    "aktiv": 6,
+    "schritte": [
+     "Haferflocken, Milch und eine Prise Salz in einen kleinen Topf geben.",
+     "Auf mittlerer Stufe aufkochen und 3–4 Minuten unter Rühren köcheln lassen, bis es cremig ist.",
+     "Die Hälfte der Banane mit der Gabel zerdrücken und unterrühren.",
+     "In eine Schüssel füllen, restliche Banane in Scheiben, Erdnussmus und Zimt darauf geben."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 6,
+    "aktiv": 4,
+    "schritte": [
+     "Haferflocken, Milch und Salz in eine große mikrowellenfeste Schüssel geben (kocht hoch).",
+     "Bei 600 Watt 2 Minuten erhitzen, umrühren, nochmal 1–2 Minuten erhitzen.",
+     "1 Minute stehen lassen, halbe Banane zerdrücken und unterrühren.",
+     "Mit Bananenscheiben, Erdnussmus und Zimt servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "schnell",
+   "guenstig",
+   "unterkunft",
+   "kinder"
+  ],
+  "tipp": "Eine sehr reife Banane macht das Porridge süß genug, Zucker brauchst du dann nicht.",
+  "foto": "creamy oat porridge in a bowl topped with banana slices, peanut butter drizzle and cinnamon"
+ },
+ {
+  "id": "F03",
+  "titel": "Quinoa-Frühstück mit warmen Beeren",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "quinoa",
+    60
+   ],
+   [
+    "sojadrink",
+    200
+   ],
+   [
+    "tk_beeren",
+    100
+   ],
+   [
+    "datteln",
+    2,
+    "stk"
+   ],
+   [
+    "mandeln",
+    15
+   ],
+   [
+    "zimt",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 22,
+    "aktiv": 8,
+    "schritte": [
+     "Quinoa in einem Sieb oder einer Schüssel gründlich mit Wasser abspülen.",
+     "Mit 150 ml Sojadrink und Zimt in einem Topf aufkochen, dann zugedeckt 15 Minuten bei kleiner Hitze quellen lassen.",
+     "Datteln klein schneiden und mit den Beeren dazugeben, 3 Minuten mitköcheln, bis die Beeren dampfend heiß sind.",
+     "Restlichen Sojadrink unterrühren, Mandeln grob hacken und darüberstreuen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "eiweiss"
+  ],
+  "tipp": "Tiefgekühlte Beeren immer richtig erhitzen, bevor du sie isst. Das empfiehlt das BfR.",
+  "foto": "warm quinoa breakfast bowl with hot mixed berries, chopped dates and almonds"
+ },
+ {
+  "id": "F04",
+  "titel": "Quark-Bowl mit Beerenkompott",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "magerquark",
+    200
+   ],
+   [
+    "milch",
+    30
+   ],
+   [
+    "tk_beeren",
+    100
+   ],
+   [
+    "haferflocken",
+    30
+   ],
+   [
+    "honig",
+    10
+   ],
+   [
+    "walnuesse",
+    10
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 8,
+    "aktiv": 5,
+    "schritte": [
+     "Beeren in eine mikrowellenfeste Schüssel geben und bei 600 Watt 2–3 Minuten erhitzen, bis sie dampfend heiß sind. Umrühren.",
+     "Kurz abkühlen lassen.",
+     "Quark mit der Milch glatt rühren.",
+     "Quark in eine Schüssel geben, Beerenkompott, Haferflocken, gehackte Walnüsse und Honig darauf verteilen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 8,
+    "aktiv": 5,
+    "schritte": [
+     "Beeren mit 1 EL Wasser in einem kleinen Topf aufkochen und 2 Minuten köcheln lassen.",
+     "Kurz abkühlen lassen.",
+     "Quark mit Milch glatt rühren und mit Kompott, Haferflocken, Walnüssen und Honig anrichten."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "eiweiss",
+   "schnell",
+   "unterkunft"
+  ],
+  "tipp": "Das Kompott kannst du am Vorabend kochen und abgedeckt im Kühlschrank lagern.",
+  "foto": "bowl of creamy quark topped with warm berry compote, oats, walnuts and a drizzle of honey"
+ },
+ {
+  "id": "F05",
+  "titel": "Skyr-Bowl mit Banane und Müsli",
+  "mahlzeit": [
+   "fruehstueck",
+   "snack"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "skyr",
+    200
+   ],
+   [
+    "muesli",
+    40
+   ],
+   [
+    "banane",
+    1,
+    "stk"
+   ],
+   [
+    "zimt",
+    1,
+    "",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 3,
+    "aktiv": 3,
+    "schritte": [
+     "Skyr in eine Schüssel geben und glatt rühren.",
+     "Banane in Scheiben schneiden und darauf verteilen.",
+     "Müsli darüberstreuen, nach Belieben mit Zimt bestäuben."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "eiweiss",
+   "schnell",
+   "unterkunft",
+   "sportnach"
+  ],
+  "tipp": "Gib das Müsli erst kurz vor dem Essen dazu, dann bleibt es knusprig.",
+  "foto": "skyr bowl with sliced banana and crunchy muesli, top view"
+ },
+ {
+  "id": "F06",
+  "titel": "Vollkornbrot mit Frischkäse, Gurke und Tomate",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "vollkornbrot",
+    120
+   ],
+   [
+    "frischkaese",
+    40
+   ],
+   [
+    "gurke",
+    80
+   ],
+   [
+    "tomate",
+    80
+   ],
+   [
+    "schnittlauch",
+    5,
+    "",
+    "opt"
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 5,
+    "aktiv": 5,
+    "schritte": [
+     "Brotscheiben mit Frischkäse bestreichen.",
+     "Gurke und Tomate in Scheiben schneiden und auf das Brot legen.",
+     "Mit Pfeffer und nach Belieben Schnittlauch bestreuen."
+    ]
+   },
+   {
+    "geraete": [
+     "toaster"
+    ],
+    "zeit": 6,
+    "aktiv": 5,
+    "schritte": [
+     "Brotscheiben 2–3 Minuten im Toaster rösten.",
+     "Kurz abkühlen lassen, mit Frischkäse bestreichen.",
+     "Mit Gurken- und Tomatenscheiben belegen und pfeffern."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "schnell",
+   "guenstig",
+   "unterkunft"
+  ],
+  "tipp": "Belege das Brot erst kurz vor dem Essen, sonst weicht es durch.",
+  "foto": "two slices of dark rye bread with cream cheese, cucumber and tomato slices, chives"
+ },
+ {
+  "id": "F07",
+  "titel": "Erdnussmus-Bananen-Brot",
+  "mahlzeit": [
+   "fruehstueck",
+   "snack"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "vollkornbrot",
+    100
+   ],
+   [
+    "erdnussmus",
+    25
+   ],
+   [
+    "banane",
+    1,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 3,
+    "aktiv": 3,
+    "schritte": [
+     "Brotscheiben mit Erdnussmus bestreichen.",
+     "Banane in Scheiben schneiden und darauflegen.",
+     "Zum Mitnehmen zwei Scheiben zusammenklappen und einwickeln."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 24,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "unterkunft",
+   "lkw",
+   "einhand"
+  ],
+  "tipp": "Alle Zutaten lagern ungekühlt, das klappt auch auf Montage ohne Kühlschrank.",
+  "foto": "rye bread slices with peanut butter and banana slices, rustic board"
+ },
+ {
+  "id": "F08",
+  "titel": "Rührei mit Vollkorntoast",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "eier",
+    3,
+    "stk"
+   ],
+   [
+    "milch",
+    30
+   ],
+   [
+    "butter",
+    5
+   ],
+   [
+    "toast",
+    2,
+    "stk"
+   ],
+   [
+    "salz",
+    1
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "schnittlauch",
+    5,
+    "",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 10,
+    "aktiv": 8,
+    "schritte": [
+     "Eier mit Milch, Salz und Pfeffer in einer Schüssel verquirlen.",
+     "Butter in der Pfanne bei mittlerer Hitze schmelzen.",
+     "Eimasse hineingeben und mit einem Pfannenwender 3–4 Minuten langsam rühren, bis kein flüssiges Ei mehr zu sehen ist.",
+     "Mit dem Toast servieren, nach Belieben Schnittlauch darüberstreuen."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 6,
+    "aktiv": 4,
+    "schritte": [
+     "Eier, Milch, Salz und Pfeffer in einer mikrowellenfesten Schüssel verquirlen, Butter dazugeben.",
+     "Bei 600 Watt 1 Minute erhitzen, mit der Gabel umrühren.",
+     "In 30-Sekunden-Schritten weiter erhitzen und umrühren, bis das Ei überall fest ist (insgesamt etwa 2–3 Minuten).",
+     "Mit Toast servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "eiweiss",
+   "schnell",
+   "unterkunft"
+  ],
+  "tipp": "Rührei ist fertig, wenn nichts Flüssiges mehr glänzt. Eier immer ganz durchgaren.",
+  "foto": "fluffy fully cooked scrambled eggs on a plate with two slices of wholegrain toast and chives"
+ },
+ {
+  "id": "F09",
+  "titel": "Gemüse-Omelett mit Spinat und Paprika",
+  "mahlzeit": [
+   "fruehstueck",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "eier",
+    3,
+    "stk"
+   ],
+   [
+    "paprika",
+    80
+   ],
+   [
+    "spinat_frisch",
+    50
+   ],
+   [
+    "rapsoel",
+    10
+   ],
+   [
+    "salz",
+    1
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 12,
+    "aktiv": 8,
+    "schritte": [
+     "Paprika in kleine Würfel schneiden, Spinat waschen.",
+     "Eier mit Salz und Pfeffer verquirlen.",
+     "Öl in der Pfanne erhitzen, Paprika 3 Minuten anbraten, Spinat dazugeben und zusammenfallen lassen.",
+     "Eier darübergießen, Deckel oder Teller auflegen und bei kleiner Hitze 4–5 Minuten stocken lassen, bis die Oberfläche fest ist.",
+     "Zusammenklappen und servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 15,
+    "aktiv": 5,
+    "schritte": [
+     "Paprika würfeln, Spinat waschen und grob hacken.",
+     "Eine kleine hitzefeste Form mit dem Öl ausstreichen, Gemüse hineingeben.",
+     "Eier mit Salz und Pfeffer verquirlen und darübergießen.",
+     "Im Airfryer bei 160 °C 10–12 Minuten backen, bis das Omelett in der Mitte fest ist."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "eiweiss",
+   "schnell"
+  ],
+  "tipp": "Ohne Brot dazu ist das Gericht glutenfrei.",
+  "foto": "folded vegetable omelette with spinach and red pepper on a plate"
+ },
+ {
+  "id": "F10",
+  "titel": "Bananen-Hafer-Pfannkuchen",
+  "mahlzeit": [
+   "fruehstueck",
+   "snack"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "haferflocken",
+    80
+   ],
+   [
+    "banane",
+    2,
+    "stk"
+   ],
+   [
+    "eier",
+    2,
+    "stk"
+   ],
+   [
+    "milch",
+    100
+   ],
+   [
+    "rapsoel",
+    10
+   ],
+   [
+    "zimt",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 20,
+    "aktiv": 15,
+    "schritte": [
+     "Bananen mit der Gabel fein zerdrücken.",
+     "Eier, Milch, Haferflocken und Zimt untermischen und 5 Minuten quellen lassen.",
+     "Etwas Öl in der Pfanne bei mittlerer Hitze erhitzen.",
+     "Pro Pfannkuchen 2 EL Teig hineingeben, 2–3 Minuten backen, wenden und weitere 2 Minuten backen, bis sie innen nicht mehr feucht sind.",
+     "Mit restlichem Teig genauso verfahren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": true,
+  "tags": [
+   "kinder",
+   "familie",
+   "guenstig"
+  ],
+  "tipp": "Kleine Pfannkuchen lassen sich leichter wenden als große.",
+  "foto": "stack of small banana oat pancakes on a plate with banana slices"
+ },
+ {
+  "id": "F11",
+  "titel": "Müsli mit Milch und Apfel",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "muesli",
+    60
+   ],
+   [
+    "milch",
+    200
+   ],
+   [
+    "apfel",
+    80
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 3,
+    "aktiv": 3,
+    "schritte": [
+     "Müsli in eine Schüssel geben.",
+     "Apfel waschen, in kleine Stücke schneiden oder grob reiben und dazugeben.",
+     "Mit Milch übergießen und sofort essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "schnell",
+   "guenstig",
+   "unterkunft"
+  ],
+  "tipp": "Statt Milch passt auch Haferdrink, dann ist das Frühstück milchfrei.",
+  "foto": "bowl of muesli with milk and fresh apple pieces"
+ },
+ {
+  "id": "F12",
+  "titel": "Avocado-Brot mit Tomate",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "vollkornbrot",
+    100
+   ],
+   [
+    "avocado",
+    0.5,
+    "stk"
+   ],
+   [
+    "tomate",
+    80
+   ],
+   [
+    "zitrone",
+    10
+   ],
+   [
+    "salz",
+    1
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "chiliflocken",
+    1,
+    "",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 5,
+    "aktiv": 5,
+    "schritte": [
+     "Avocado halbieren, Kern entfernen, Fruchtfleisch herauslöffeln.",
+     "Mit Zitronensaft, Salz und Pfeffer zerdrücken.",
+     "Auf die Brotscheiben streichen und mit Tomatenscheiben belegen.",
+     "Nach Belieben mit Chiliflocken bestreuen."
+    ]
+   },
+   {
+    "geraete": [
+     "toaster"
+    ],
+    "zeit": 6,
+    "aktiv": 5,
+    "schritte": [
+     "Brotscheiben 2–3 Minuten toasten.",
+     "Avocado mit Zitronensaft, Salz und Pfeffer zerdrücken.",
+     "Aufs Brot streichen und mit Tomatenscheiben belegen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "schnell",
+   "unterkunft"
+  ],
+  "tipp": "Die zweite Avocadohälfte mit Kern und etwas Zitronensaft abgedeckt in den Kühlschrank legen und am nächsten Tag essen.",
+  "foto": "rye bread topped with mashed avocado and tomato slices, chili flakes"
+ },
+ {
+  "id": "F13",
+  "titel": "Nudelsalat mit Erbsen, Paprika und Käse",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "nudeln",
+    200
+   ],
+   [
+    "tk_erbsen",
+    100
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "gouda",
+    60
+   ],
+   [
+    "joghurt",
+    100
+   ],
+   [
+    "senf",
+    5
+   ],
+   [
+    "essig",
+    10
+   ],
+   [
+    "rapsoel",
+    10
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "schnittlauch",
+    10,
+    "",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 25,
+    "aktiv": 12,
+    "schritte": [
+     "Nudeln in reichlich Salzwasser nach Packungsangabe kochen, die Erbsen in den letzten 2 Minuten mitkochen.",
+     "Abgießen, kalt abspülen und gut abtropfen lassen.",
+     "Paprika und Käse in kleine Würfel schneiden.",
+     "Joghurt mit Senf, Essig, Öl, Salz und Pfeffer verrühren.",
+     "Alles vermischen, in zwei Dosen füllen und sofort in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "box",
+   "guenstig"
+  ],
+  "tipp": "Bewahre die Box bis zur Pause gekühlt auf, ohne Kühlung höchstens 2 Stunden.",
+  "foto": "pasta salad with peas, red pepper and cheese cubes in a lunch box, creamy yoghurt dressing"
+ },
+ {
+  "id": "F14",
+  "titel": "Linsensalat mit Paprika und Walnüssen",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "tellerlinsen",
+    200
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "rote_zwiebel",
+    50
+   ],
+   [
+    "petersilie",
+    0.5,
+    "stk"
+   ],
+   [
+    "walnuesse",
+    30
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "essig",
+    20
+   ],
+   [
+    "senf",
+    10
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 35,
+    "aktiv": 12,
+    "schritte": [
+     "Linsen mit 600 ml Wasser (ohne Salz) aufkochen und 25 Minuten bei kleiner Hitze garen, bis sie weich, aber nicht zerfallen sind.",
+     "Abgießen und abkühlen lassen.",
+     "Paprika und Zwiebel fein würfeln, Petersilie hacken, Walnüsse grob hacken.",
+     "Essig, Senf, Öl, Salz und Pfeffer verrühren und mit allen Zutaten mischen.",
+     "In zwei Dosen füllen und in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "box",
+   "guenstig",
+   "eiweiss"
+  ],
+  "tipp": "Salz erst nach dem Kochen zugeben, dann werden die Linsen gleichmäßiger weich.",
+  "foto": "brown lentil salad with diced red pepper, red onion, parsley and walnuts in a lunch box"
+ },
+ {
+  "id": "F15",
+  "titel": "Couscous-Salat mit Kichererbsen",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "couscous",
+    150
+   ],
+   [
+    "kichererbsen_dose",
+    240
+   ],
+   [
+    "gurke",
+    200
+   ],
+   [
+    "tomate",
+    160
+   ],
+   [
+    "zitrone",
+    30
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "kreuzkuemmel",
+    2
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "petersilie",
+    0.5,
+    "stk",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 15,
+    "aktiv": 10,
+    "schritte": [
+     "Couscous mit 1 g Salz in eine Schüssel geben, 180 ml kochendes Wasser aus dem Wasserkocher darübergießen, abdecken und 5 Minuten quellen lassen.",
+     "Mit der Gabel auflockern und abkühlen lassen.",
+     "Kichererbsen abspülen und abtropfen lassen, Gurke und Tomaten würfeln.",
+     "Zitronensaft, Öl, Kreuzkümmel und restliches Salz verrühren und alles vermischen.",
+     "In zwei Dosen füllen und sofort kühl stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 15,
+    "aktiv": 10,
+    "schritte": [
+     "180 ml Wasser mit 1 g Salz im Topf aufkochen, vom Herd nehmen, Couscous einrühren, abdecken und 5 Minuten quellen lassen.",
+     "Auflockern und abkühlen lassen.",
+     "Kichererbsen abspülen, Gemüse würfeln, Dressing anrühren und alles mischen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "box",
+   "guenstig",
+   "unterkunft",
+   "schnell"
+  ],
+  "tipp": "Gurke und Tomate erst morgens untermischen, wenn du die Box am Vorabend vorbereitest.",
+  "foto": "couscous salad with chickpeas, cucumber and tomato in a lunch box, lemon wedge"
+ },
+ {
+  "id": "F16",
+  "titel": "Hähnchen-Wrap mit Paprika und Joghurtsoße",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "tortilla",
+    4,
+    "stk"
+   ],
+   [
+    "tk_haehnchen",
+    200
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "eisberg",
+    100
+   ],
+   [
+    "joghurt",
+    80
+   ],
+   [
+    "reibekaese",
+    40
+   ],
+   [
+    "rapsoel",
+    10
+   ],
+   [
+    "paprikapulver",
+    2
+   ],
+   [
+    "salz",
+    2
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 25,
+    "aktiv": 15,
+    "schritte": [
+     "Hähnchen über Nacht im Kühlschrank auftauen lassen, Auftauwasser weggießen, Hände und Brett danach gründlich waschen.",
+     "Fleisch in dünne Streifen schneiden, mit Paprikapulver und Salz würzen.",
+     "Öl in der Pfanne erhitzen und die Streifen 6–8 Minuten rundum braten, bis sie innen weiß und nicht mehr rosa sind. Abkühlen lassen.",
+     "Paprika in Streifen schneiden, Salat in feine Streifen schneiden.",
+     "Tortillas mit Joghurt bestreichen, mit Salat, Paprika, Hähnchen und Käse belegen, unten einschlagen und fest aufrollen.",
+     "In Folie oder Dose verpacken und kühl stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 25,
+    "aktiv": 12,
+    "schritte": [
+     "Aufgetautes Hähnchen in Streifen schneiden, mit Öl, Paprikapulver und Salz mischen.",
+     "Im Airfryer bei 200 °C 10–12 Minuten garen, nach der Hälfte schütteln, bis kein rosa Fleisch mehr zu sehen ist. Abkühlen lassen.",
+     "Tortillas mit Joghurt, Salat, Paprika, Hähnchen und Käse belegen und aufrollen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "box",
+   "eiweiss"
+  ],
+  "tipp": "Lass das Hähnchen vollständig abkühlen, bevor du es einrollst. So bleibt der Salat knackig.",
+  "foto": "two chicken tortilla wraps cut in half showing chicken strips, red pepper, lettuce and cheese"
+ },
+ {
+  "id": "F17",
+  "titel": "Hummus-Gemüse-Wrap",
+  "mahlzeit": [
+   "mittag"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "tortilla",
+    4,
+    "stk"
+   ],
+   [
+    "hummus",
+    150
+   ],
+   [
+    "moehre",
+    150
+   ],
+   [
+    "gurke",
+    150
+   ],
+   [
+    "eisberg",
+    100
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 10,
+    "aktiv": 10,
+    "schritte": [
+     "Möhren schälen und grob raspeln, Gurke in Stifte schneiden, Salat in feine Streifen schneiden.",
+     "Tortillas mit Hummus bestreichen.",
+     "Gemüse in die Mitte legen, pfeffern, unten einschlagen und fest aufrollen.",
+     "In Folie oder eine Dose packen und kühl lagern."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "box",
+   "schnell",
+   "guenstig",
+   "einhand"
+  ],
+  "tipp": "Wickle die Wraps eng in Folie, dann fallen sie in der Box nicht auseinander.",
+  "foto": "vegan tortilla wraps with hummus, grated carrot, cucumber sticks and lettuce, cut diagonally"
+ },
+ {
+  "id": "F18",
+  "titel": "Brotzeit-Box mit Ei, Käse und Rohkost",
+  "mahlzeit": [
+   "mittag"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "vollkornbrot",
+    100
+   ],
+   [
+    "gouda",
+    2,
+    "stk"
+   ],
+   [
+    "eier",
+    1,
+    "stk"
+   ],
+   [
+    "moehre",
+    100
+   ],
+   [
+    "apfel",
+    1,
+    "stk"
+   ],
+   [
+    "butter",
+    5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 15,
+    "aktiv": 5,
+    "schritte": [
+     "Ei in einen Topf mit kaltem Wasser legen, aufkochen und 10 Minuten kochen, bis es hart ist.",
+     "Unter kaltem Wasser abschrecken und in der Schale abkühlen lassen.",
+     "Brot dünn mit Butter bestreichen und mit Käse belegen, zusammenklappen.",
+     "Möhre schälen und in Stifte schneiden.",
+     "Brot, Ei in der Schale, Möhrenstifte und Apfel in die Box packen und kühl lagern."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "box",
+   "guenstig",
+   "kinder",
+   "schnell"
+  ],
+  "tipp": "Lass das Ei in der Schale, dann hält es länger und es riecht nicht in der Box.",
+  "foto": "german lunch box with rye bread cheese sandwich, hard boiled egg, carrot sticks and an apple"
+ },
+ {
+  "id": "F19",
+  "titel": "Reissalat mit Thunfisch und Mais",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "reis",
+    150
+   ],
+   [
+    "thunfisch",
+    140
+   ],
+   [
+    "mais_dose",
+    140
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "essig",
+    15
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "fruehlingszwiebel",
+    0.5,
+    "stk",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 30,
+    "aktiv": 12,
+    "schritte": [
+     "Reis mit 300 ml Wasser und 1 g Salz aufkochen, zugedeckt bei kleiner Hitze 15 Minuten garen.",
+     "Reis auf einem großen Teller flach verteilen, damit er schnell abkühlt (höchstens 1 Stunde bei Raumtemperatur).",
+     "Thunfisch und Mais abtropfen lassen, Paprika würfeln.",
+     "Öl, Essig, restliches Salz und Pfeffer verrühren und alles mischen.",
+     "In zwei Dosen füllen und sofort in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "box",
+   "eiweiss",
+   "guenstig"
+  ],
+  "tipp": "Gekochter Reis muss schnell abkühlen und gekühlt bleiben. Iss den Salat spätestens am nächsten Tag.",
+  "foto": "rice salad with tuna, sweetcorn and diced red pepper in a lunch box"
+ },
+ {
+  "id": "F20",
+  "titel": "Quinoa-Bohnen-Salat mit Mais",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "quinoa",
+    150
+   ],
+   [
+    "kidney_dose",
+    250
+   ],
+   [
+    "mais_dose",
+    140
+   ],
+   [
+    "tomate",
+    160
+   ],
+   [
+    "zitrone",
+    30
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "kreuzkuemmel",
+    2
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 30,
+    "aktiv": 10,
+    "schritte": [
+     "Quinoa gründlich abspülen, mit 300 ml Wasser aufkochen und zugedeckt 15 Minuten bei kleiner Hitze garen.",
+     "Flach auf einem Teller ausbreiten und abkühlen lassen.",
+     "Bohnen und Mais abspülen und abtropfen lassen, Tomaten würfeln.",
+     "Zitronensaft, Öl, Kreuzkümmel, Salz und Pfeffer verrühren und alles mischen.",
+     "In zwei Dosen füllen und kühl stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "box",
+   "eiweiss"
+  ],
+  "tipp": "Das Abspülen nimmt der Quinoa den bitteren Geschmack.",
+  "foto": "quinoa salad with kidney beans, sweetcorn and tomatoes, lime and lemon wedge, lunch box"
+ },
+ {
+  "id": "F21",
+  "titel": "Kartoffelsalat mit Gurke und Ei",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "kartoffel",
+    700
+   ],
+   [
+    "eier",
+    2,
+    "stk"
+   ],
+   [
+    "gurke",
+    200
+   ],
+   [
+    "zwiebel",
+    50
+   ],
+   [
+    "gemuesebruehe",
+    4
+   ],
+   [
+    "essig",
+    30
+   ],
+   [
+    "rapsoel",
+    30
+   ],
+   [
+    "senf",
+    10
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "schnittlauch",
+    10,
+    "",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd2",
+     "topf"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Kartoffeln waschen und in der Schale in Salzwasser 20–25 Minuten weich kochen.",
+     "Gleichzeitig die Eier 10 Minuten hart kochen und kalt abschrecken.",
+     "Kartoffeln abgießen, kurz ausdampfen lassen, pellen und in Scheiben schneiden.",
+     "Brühpulver in 100 ml heißem Wasser auflösen, Zwiebel fein würfeln, mit Essig, Senf, Öl und Pfeffer verrühren und über die warmen Kartoffeln gießen.",
+     "Gurke in dünne Scheiben schneiden, Eier pellen und würfeln, beides untermischen.",
+     "Abkühlen lassen, in zwei Dosen füllen und kühl stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "box",
+   "guenstig"
+  ],
+  "tipp": "Die warme Marinade zieht besser in die Kartoffeln ein als eine kalte.",
+  "foto": "german potato salad with cucumber slices, chopped egg and chives in a bowl"
+ },
+ {
+  "id": "F22",
+  "titel": "Bulgursalat mit Feta und Tomate",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "bulgur",
+    150
+   ],
+   [
+    "tomate",
+    200
+   ],
+   [
+    "gurke",
+    200
+   ],
+   [
+    "petersilie",
+    0.5,
+    "stk"
+   ],
+   [
+    "zitrone",
+    40
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "feta",
+    100
+   ],
+   [
+    "salz",
+    2
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 25,
+    "aktiv": 10,
+    "schritte": [
+     "Bulgur in eine Schüssel geben, 300 ml kochendes Wasser aus dem Wasserkocher darübergießen, abdecken und 15 Minuten quellen lassen.",
+     "Auflockern und abkühlen lassen.",
+     "Tomaten und Gurke würfeln, Petersilie fein hacken, Feta zerbröseln.",
+     "Zitronensaft, Öl, Salz und Pfeffer verrühren und alles mischen.",
+     "In zwei Dosen füllen und kühl stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 25,
+    "aktiv": 10,
+    "schritte": [
+     "300 ml Wasser im Topf aufkochen, Bulgur einrühren, vom Herd nehmen und zugedeckt 15 Minuten quellen lassen.",
+     "Abkühlen lassen, Gemüse und Feta schneiden, mit Dressing mischen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "box",
+   "unterkunft"
+  ],
+  "tipp": "Feta ist schon salzig. Schmecke deshalb erst am Ende mit Salz ab.",
+  "foto": "bulgur salad with tomato, cucumber, parsley and crumbled feta in a lunch box"
+ },
+ {
+  "id": "F23",
+  "titel": "Nudelauflauf mit Brokkoli und Käse",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "nudeln",
+    400
+   ],
+   [
+    "tk_brokkoli",
+    450
+   ],
+   [
+    "milch",
+    400
+   ],
+   [
+    "mehl",
+    30
+   ],
+   [
+    "butter",
+    30
+   ],
+   [
+    "reibekaese",
+    150
+   ],
+   [
+    "salz",
+    5
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd2",
+     "topf",
+     "ofen"
+    ],
+    "zeit": 45,
+    "aktiv": 20,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Nudeln in Salzwasser 2 Minuten kürzer als auf der Packung kochen, Brokkoli die letzten 3 Minuten mitkochen, abgießen.",
+     "Gleichzeitig Butter in einem zweiten Topf schmelzen, Mehl einrühren und 1 Minute anschwitzen.",
+     "Milch nach und nach mit dem Schneebesen einrühren, aufkochen und 3 Minuten köcheln, mit Salz und Pfeffer würzen.",
+     "Nudeln und Brokkoli mit der Soße in einer Auflaufform mischen, mit Käse bestreuen.",
+     "20 Minuten backen, bis der Käse goldbraun ist."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "topf",
+     "airfryer"
+    ],
+    "zeit": 40,
+    "aktiv": 20,
+    "schritte": [
+     "Nudeln mit Brokkoli wie oben kochen und abgießen.",
+     "Im selben Topf Butter schmelzen, Mehl einrühren, Milch nach und nach zugeben und 3 Minuten köcheln, würzen.",
+     "Nudeln und Brokkoli unterheben und in eine airfryer-taugliche Form füllen, mit Käse bestreuen.",
+     "Im Airfryer bei 180 °C 8–10 Minuten überbacken (bei kleinem Korb in 2 Durchgängen)."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "familie",
+   "kinder",
+   "guenstig"
+  ],
+  "tipp": "Reste zügig abkühlen lassen und beim Aufwärmen durch und durch dampfend heiß machen.",
+  "foto": "baked pasta casserole with broccoli and golden melted cheese in a baking dish"
+ },
+ {
+  "id": "F24",
+  "titel": "Gemüse-Nudel-Lasagne",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "nudeln",
+    350
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "moehre",
+    200
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "passata",
+    500
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "rapsoel",
+    15
+   ],
+   [
+    "italien_kraeuter",
+    3
+   ],
+   [
+    "salz",
+    5
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "schmand",
+    200
+   ],
+   [
+    "reibekaese",
+    150
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf",
+     "ofen"
+    ],
+    "zeit": 70,
+    "aktiv": 25,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Zwiebel, Zucchini und Möhren klein würfeln.",
+     "Öl im Topf erhitzen, Gemüse 5 Minuten anbraten.",
+     "Passata, stückige Tomaten, 250 ml Wasser, Kräuter, Salz und Pfeffer dazugeben und 5 Minuten köcheln.",
+     "Ungekochte Nudeln unter die Soße mischen und in eine Auflaufform füllen.",
+     "Schmand darauf verstreichen und mit Käse bestreuen.",
+     "Mit Alufolie abgedeckt 30 Minuten backen, Folie abnehmen und weitere 10–15 Minuten backen, bis die Nudeln weich sind."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "familie",
+   "kinder",
+   "guenstig",
+   "kochtag"
+  ],
+  "tipp": "Die Nudeln garen in der Soße mit. Wichtig ist, dass sie ganz mit Flüssigkeit bedeckt sind.",
+  "foto": "vegetable pasta bake in layers with tomato sauce, sour cream and golden cheese, served on plate"
+ },
+ {
+  "id": "F25",
+  "titel": "Fischstäbchen mit Kartoffelpüree und Erbsen",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "tk_fischstaebchen",
+    450
+   ],
+   [
+    "kartoffel",
+    1000
+   ],
+   [
+    "milch",
+    200
+   ],
+   [
+    "butter",
+    20
+   ],
+   [
+    "tk_erbsen",
+    450
+   ],
+   [
+    "salz",
+    5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd2",
+     "topf",
+     "ofen"
+    ],
+    "zeit": 35,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 220 °C Ober-/Unterhitze vorheizen.",
+     "Kartoffeln schälen, vierteln und in Salzwasser 20 Minuten weich kochen.",
+     "Fischstäbchen auf einem Blech mit Backpapier verteilen und 15–18 Minuten backen, nach der Hälfte wenden, bis sie innen heiß sind.",
+     "Erbsen in einem zweiten Topf mit wenig Wasser 5 Minuten garen.",
+     "Kartoffeln abgießen, Milch und Butter erhitzen, dazugeben und alles zerstampfen.",
+     "Fischstäbchen mit Püree und Erbsen servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "herd2",
+     "topf",
+     "airfryer"
+    ],
+    "zeit": 35,
+    "aktiv": 15,
+    "schritte": [
+     "Kartoffeln schälen, vierteln und 20 Minuten in Salzwasser kochen.",
+     "Fischstäbchen im Airfryer bei 200 °C 10–12 Minuten garen, nach der Hälfte wenden (je nach Korbgröße in 2 Durchgängen).",
+     "Erbsen in einem zweiten Topf 5 Minuten garen.",
+     "Kartoffeln mit heißer Milch und Butter zerstampfen und alles servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "familie",
+   "kinder",
+   "guenstig"
+  ],
+  "tipp": "Fischstäbchen nicht in der Mikrowelle aufwärmen, dort werden sie weich. Iss sie frisch.",
+  "foto": "plate with golden fish fingers, mashed potatoes and green peas"
+ },
+ {
+  "id": "F26",
+  "titel": "Kartoffel-Gemüse-Blech mit Kräuterquark",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "kartoffel",
+    1500
+   ],
+   [
+    "moehre",
+    400
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "rapsoel",
+    40
+   ],
+   [
+    "paprikapulver",
+    4
+   ],
+   [
+    "salz",
+    6
+   ],
+   [
+    "magerquark",
+    500
+   ],
+   [
+    "milch",
+    50
+   ],
+   [
+    "tk_kraeuter",
+    25
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 50,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Kartoffeln waschen und in Spalten schneiden, Möhren in Stifte, Zucchini und Paprika in grobe Stücke.",
+     "Alles auf einem Blech mit Öl, Paprikapulver und 4 g Salz mischen.",
+     "35–40 Minuten backen, nach 20 Minuten einmal wenden.",
+     "Quark mit Milch, Kräutern und restlichem Salz glatt rühren und dazu servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 50,
+    "aktiv": 15,
+    "schritte": [
+     "Gemüse wie oben schneiden und mit Öl, Paprikapulver und Salz mischen.",
+     "Kartoffeln im Airfryer bei 200 °C 20 Minuten garen, dabei zweimal schütteln.",
+     "Restliches Gemüse dazugeben und weitere 10 Minuten garen (bei kleinem Korb in 2 Durchgängen).",
+     "Mit dem Kräuterquark servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": true,
+  "tags": [
+   "familie",
+   "kinder",
+   "guenstig"
+  ],
+  "tipp": "Schneide die Kartoffeln gleich dick, dann werden sie gleichzeitig gar.",
+  "foto": "baking tray with roasted potato wedges, carrots, zucchini and pepper, bowl of herb quark dip"
+ },
+ {
+  "id": "F27",
+  "titel": "Pfannkuchen mit Apfelmark",
+  "mahlzeit": [
+   "abend",
+   "fruehstueck"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "mehl",
+    300
+   ],
+   [
+    "milch",
+    600
+   ],
+   [
+    "eier",
+    3,
+    "stk"
+   ],
+   [
+    "rapsoel",
+    30
+   ],
+   [
+    "zucker",
+    15
+   ],
+   [
+    "salz",
+    2
+   ],
+   [
+    "apfelmark",
+    360
+   ],
+   [
+    "zimt",
+    2,
+    "",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 40,
+    "aktiv": 30,
+    "schritte": [
+     "Mehl, Zucker und Salz in eine Schüssel geben, Milch nach und nach mit dem Schneebesen einrühren.",
+     "Eier dazugeben und zu einem glatten Teig verrühren, 10 Minuten quellen lassen.",
+     "Etwas Öl in der Pfanne bei mittlerer Hitze erhitzen.",
+     "Eine Kelle Teig hineingeben, durch Schwenken verteilen und 1–2 Minuten backen, bis die Unterseite goldbraun ist.",
+     "Wenden und 1 Minute weiterbacken. So weitermachen, bis der Teig aufgebraucht ist.",
+     "Mit Apfelmark und nach Belieben Zimt servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": true,
+  "tags": [
+   "familie",
+   "kinder",
+   "guenstig"
+  ],
+  "tipp": "Fertige Pfannkuchen im Ofen bei 50 °C warm halten, bis alle fertig sind.",
+  "foto": "stack of thin golden pancakes with a bowl of apple sauce and cinnamon"
+ },
+ {
+  "id": "F28",
+  "titel": "Hähnchen-Reis-Pfanne mit Erbsen und Paprika",
+  "mahlzeit": [
+   "abend",
+   "mittag"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "reis",
+    300
+   ],
+   [
+    "tk_haehnchen",
+    400
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "tk_erbsen",
+    450
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "rapsoel",
+    30
+   ],
+   [
+    "paprikapulver",
+    5
+   ],
+   [
+    "gemuesebruehe",
+    10
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 40,
+    "aktiv": 20,
+    "schritte": [
+     "Hähnchen über Nacht im Kühlschrank auftauen, Auftauwasser weggießen, danach Hände und Brett waschen.",
+     "Hähnchen in Würfel schneiden, Zwiebel und Paprika würfeln.",
+     "Öl in einer großen Pfanne mit Deckel erhitzen, Hähnchen 5 Minuten rundum anbraten.",
+     "Zwiebel, Paprika, Reis und Paprikapulver dazugeben und 2 Minuten mitbraten.",
+     "Brühpulver in 650 ml heißem Wasser auflösen, angießen, aufkochen und zugedeckt bei kleiner Hitze 15 Minuten garen.",
+     "Erbsen untermischen und weitere 5 Minuten garen, bis der Reis weich ist und das Hähnchen innen nicht mehr rosa. Mit Salz und Pfeffer abschmecken."
+    ]
+   },
+   {
+    "geraete": [
+     "herd2",
+     "topf",
+     "pfanne"
+    ],
+    "zeit": 35,
+    "aktiv": 20,
+    "schritte": [
+     "Reis mit 600 ml Wasser und Salz aufkochen und zugedeckt 15 Minuten garen.",
+     "Gleichzeitig Hähnchenwürfel in Öl 6–8 Minuten durchbraten, Zwiebel und Paprika dazugeben.",
+     "Erbsen und Paprikapulver dazugeben, 5 Minuten mitgaren.",
+     "Reis untermischen und abschmecken."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "familie",
+   "kinder",
+   "guenstig",
+   "eiweiss"
+  ],
+  "tipp": "Reste nach dem Abkühlen sofort einfrieren oder spätestens am nächsten Tag essen.",
+  "foto": "one pan chicken and rice skillet with green peas and red pepper"
+ },
+ {
+  "id": "F29",
+  "titel": "Linsen-Bolognese mit Nudeln",
+  "mahlzeit": [
+   "abend",
+   "mittag"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "rote_linsen",
+    200
+   ],
+   [
+    "passata",
+    500
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "moehre",
+    200
+   ],
+   [
+    "knoblauch",
+    10
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "tomatenmark",
+    30
+   ],
+   [
+    "italien_kraeuter",
+    3
+   ],
+   [
+    "zucker",
+    3
+   ],
+   [
+    "salz",
+    6
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "nudeln",
+    500
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd2",
+     "topf"
+    ],
+    "zeit": 35,
+    "aktiv": 15,
+    "schritte": [
+     "Zwiebel, Knoblauch und Möhren fein würfeln.",
+     "Öl im Topf erhitzen, Gemüse 4 Minuten anbraten, Tomatenmark 1 Minute mitrösten.",
+     "Linsen, Passata, stückige Tomaten, 300 ml Wasser, Kräuter, Zucker, 3 g Salz und Pfeffer dazugeben.",
+     "Aufkochen und 15 Minuten bei kleiner Hitze köcheln lassen, gelegentlich umrühren.",
+     "Gleichzeitig die Nudeln im zweiten Topf in Salzwasser nach Packungsangabe kochen.",
+     "Nudeln abgießen und mit der Soße servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "topf"
+  },
+  "mealprep": true,
+  "tags": [
+   "familie",
+   "kinder",
+   "guenstig",
+   "eiweiss",
+   "kochtag"
+  ],
+  "tipp": "Die Soße ohne Nudeln hält 2 Tage im Kühlschrank und lässt sich gut einfrieren.",
+  "foto": "spaghetti with red lentil tomato bolognese sauce in a bowl, family style"
+ },
+ {
+  "id": "F30",
+  "titel": "Ofen-Gnocchi mit Tomate und Mozzarella",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "gnocchi",
+    1000
+   ],
+   [
+    "passata",
+    500
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "mozzarella",
+    2,
+    "stk"
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "italien_kraeuter",
+    3
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 35,
+    "aktiv": 10,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Zucchini würfeln und mit ungekochten Gnocchi, Passata, Öl, Kräutern, Salz und Pfeffer in einer Auflaufform mischen.",
+     "Mozzarella in Stücke zupfen und darauf verteilen.",
+     "25 Minuten backen, bis die Soße blubbert und der Käse geschmolzen ist."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 30,
+    "aktiv": 10,
+    "schritte": [
+     "Zucchini würfeln und mit Gnocchi, Passata, Öl und Gewürzen in einer airfryer-tauglichen Form mischen.",
+     "Mozzarella darauf zupfen.",
+     "Bei 180 °C 15–18 Minuten garen, nach 8 Minuten umrühren (bei kleinem Korb in 2 Durchgängen)."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "familie",
+   "kinder",
+   "guenstig",
+   "schnell"
+  ],
+  "tipp": "Die Gnocchi musst du nicht vorkochen, sie garen in der Tomatensoße.",
+  "foto": "baked gnocchi in tomato sauce with melted mozzarella and zucchini in a baking dish"
+ }
+]

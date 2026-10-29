@@ -1,11 +1,16 @@
 # 04 – Nischen-Vergleich: dritte Variante des Essensplaners
 
-Stand: 28.10.2026 · Methodik: customer-research (Mode 2, „Digital Watering Holes“) · Status: in Arbeit
+Stand: 28.10.2026 · Methodik: customer-research (Mode 2, „Digital Watering Holes“) · Status: fertig (Teilbericht Phase A)
 
 Legende: **[Q]** = Zahl mit Quelle · **[S]** = Schätzung (Herleitung angegeben) · Konfidenz Hoch/Mittel/Niedrig nach Skill-Regel (3+ unabhängige Quellen = hoch).
 
 ## 0. Kurzfazit
-(folgt)
+- **Sieger: Camping-Küche** (Reisemobil, Van/Kastenwagen, Wohnwagen, Dauercamper), **Score 4,05 von 5** (weit gefasst 4,20). In **allen 8 Gewichtungen** auf Platz 1; der knappste Abstand liegt in Szenario C (Schmerz 25 %) mit 0,05 Punkten.
+- Gründe: höchste Zahlungsbereitschaft (Halter vor allem 50–69 Jahre; digitale Camping-Kochbücher werden für 14,99–17,99 € gekauft), **beste Passung zum Geräte-USP** (Flammen, Omnia, Kühlbox, Landstrom), **kein vergleichbarer Planer** am Markt, wachsender Markt (1 Mio. Reisemobile, 44,7 Mio. Campingnächte 2025), kaum Rechtsrisiko, kein Konflikt mit Honigmama oder DURCHSCHICHT, Rezeptbasis zum Teil aus der Montage-Variante.
+- Schwächen: Schmerz nur mittel (Urlaub), Saisonalität, Laden-USP im Ausland schwächer. **Kernannahme Zahlungsbereitschaft vor dem Bau testen** (kippt der Wert auf 3, verliert Camping Platz 1).
+- **Zweiter: Familien mit knappem Budget / Alleinerziehende** (3,50–3,55; in Szenario C 3,80). Größter Schmerz, aber geringe Zahlungsbereitschaft und direkte Budget-Planer-Konkurrenz (MealDeal, Disha). Empfehlung: als Modus in „Allgemein“, später eventuell als vierte Nische.
+- Aussortiert: Pflegekräfte (Kannibalisierung DURCHSCHICHT), Eltern Kleinkinder (Kannibalisierung Honigmama), Diabetes (Art. 9 DSGVO, MDR, HCVO). Airfryer, Singles und Vegan werden **Filter**, keine Varianten.
+- 30 echte Zitate mit Fundstelle in Abschnitt 5 (Wohnwagen-Forum, GS-Forum, App Store), dazu Top-10-Schmerzpunkte, Vokabular, Workarounds und Indizien für Zahlungsbereitschaft.
 
 ## 1. Geprüfte Kandidaten – Fakten je Kriterium
 
@@ -230,8 +235,141 @@ Rechenweg: Score = Σ (Punkte × Gewicht). Skript: `scratchpad/score.py` (nicht 
 | Senioren 65+ | später über Angehörige als Käufer prüfen; Erreichbarkeit schwach |
 | Vegan | Diät-Filter in allen Varianten |
 
-## 5. Sieger-Tiefenrecherche (Zitate, Schmerzpunkte, Vokabular)
-(folgt)
+## 5. Sieger-Tiefenrecherche: Camping-Küche
+
+### 5.1 Methode und Grenzen
+- Vorgehen nach `customer-research` Mode 2 („Digital Watering Holes“): Foren, App-Store-Rezensionen, Fachmedien. Alle Zitate sind **öffentlich, unaufgefordert** geschrieben und wurden in dieser Sitzung abgerufen (28.10.2026).
+- **Grenzen:** Im wohnwagen-forum.de sind pro Thread nur die ersten Beiträge ohne Login sichtbar (z. B. „Schnelles Essen“: 3 von 427 Beiträgen; „Fertiggerichte“: 3 von 91). Reddit war gesperrt, Facebook-Gruppen und YouTube-Kommentare sind ohne Login nicht lesbar. Die Zitate wurden über ein Abrufwerkzeug ausgelesen. **Vor der Verwendung in Werbung jedes Zitat per Link gegenprüfen** und, falls öffentlich genutzt, nur sinngemäß und ohne Nutzernamen verwenden (keine Kundenstimmen vortäuschen, UWG).
+- **Verzerrung:** Forenschreiber sind erfahrene, eher ältere Wohnwagen-Camper (passt zur KBA-Altersstruktur). Van-Neulinge und Mieter sind unterrepräsentiert, und die GS-Forum-Beiträge kommen von Motorrad-Reisenden mit Zelt (Nachbarsegment, mit dem härtesten Geräte-Limit). Drei Zitate stammen von 2012 und sind als „alt“ markiert.
+
+### 5.2 Zitate (30 Stück)
+| # | Zitat (wörtlich, gekürzt) | Nutzer | Datum | Fundstelle | Kategorie |
+|---|---|---|---|---|---|
+| 1 | „Allerdings würde ich gerne die Essenszubereitung fürs Campen etwas vereinfachen“ | Fendt410 | 17.06.2026 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/203124-schmackhafte-fertiggerichte-f%C3%BCrs-campen/) | Wunsch: Vereinfachung |
+| 2 | „zumal unsere beiden Teenager (13 und 16) meist wenig Lust auf Gemüse schneiden haben.“ | Fendt410 | 17.06.2026 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/203124-schmackhafte-fertiggerichte-f%C3%BCrs-campen/) | Aufwand / Familie |
+| 3 | „Grundsätzlich bin ich kein Freund von Fertiggerichten.“ | Fendt410 | 17.06.2026 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/203124-schmackhafte-fertiggerichte-f%C3%BCrs-campen/) | Anspruch an Qualität |
+| 4 | „aber ab und an gibt's keine frischen Produkte oder es muss schnell gehen“ | Camper-Toby | 17.06.2026 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/203124-schmackhafte-fertiggerichte-f%C3%BCrs-campen/) | Versorgung / Zeit |
+| 5 | „1 Dose Lisnesuppe & 1 Glas Würstchen fahren meinst den ganzen Urlaub mit herum“ | Camper-Toby | 17.06.2026 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/203124-schmackhafte-fertiggerichte-f%C3%BCrs-campen/) | Vorrat / Workaround |
+| 6 | „Meine Frau hat mittlerweile so viel Rezepte aus den Netz gezogen“ | holgerito | 17.06.2026 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/203124-schmackhafte-fertiggerichte-f%C3%BCrs-campen/) | Workaround: Rezepte zusammensuchen |
+| 7 | „Es geht um Essen , was man im Vorzelt , vor dem Wagen oder im Wagen auf einem Gasherd/Kartuschenkocher o.ä. kochen kann.“ | Almi | 30.11.2024 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/198271-schnelles-essen/) | Geräte-Grenze |
+| 8 | „herzhafte , "zügige Gerichte" fürs Dauer - und Reisecamping sammeln“ | Almi | 30.11.2024 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/198271-schnelles-essen/) | Wunsch: schnell |
+| 9 | „Sicherlich ändert sich die Gerätezusammenstellung auch nach dem Stromverbrauch“ | Kaffeetasse | 11.05.2026 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/202531-was-nehnt-ihr-f%C3%BCr-kochger%C3%A4te-mit-zum-camping/) | Strom / Geräte |
+| 10 | „Fleisch anbraten und Röstaromen kann man natürlich vergessen.“ | Kaffeetasse | 11.05.2026 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/202531-was-nehnt-ihr-f%C3%BCr-kochger%C3%A4te-mit-zum-camping/) | Geräte-Grenze |
+| 11 | „alles nur zum sporadischen Einsatz, da wir im Urlaub echt viel und gerne essen gehen“ | acer911 | 11.05.2026 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/202531-was-nehnt-ihr-f%C3%BCr-kochger%C3%A4te-mit-zum-camping/) | Alternative: Essen gehen |
+| 12 | „Die extrem leise 22 Liter Bingi Kompressor-Kühlbox ist für das Fahrzeug während der Fahrt und für das Vorzelt.“ | Kaffeetasse | 11.05.2026 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/202531-was-nehnt-ihr-f%C3%BCr-kochger%C3%A4te-mit-zum-camping/) | Kühlung / Workaround |
+| 13 | „da ich nicht wusste wie der Platz abgesichert ist“ | doris2460 | 06.12.2024 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/198315-hei%C3%9Fluftfriteuse-hlf-auf-dem-cp-rezepte-und-austausch-willkommen/) | Strom-Unsicherheit |
+| 14 | „Unsere HLF bleibt zu Hause, da zu groß, zu schwer, zuviel Leistung.“ | ABurger | 06.12.2024 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/198315-hei%C3%9Fluftfriteuse-hlf-auf-dem-cp-rezepte-und-austausch-willkommen/) | Platz / Gewicht / Strom |
+| 15 | „wo wir wegen der Entfernung selten einkaufen.“ | Almi | 13.03.2026 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/116194-reste-essen-von-vorgestern/) | Einkauf / Versorgung |
+| 16 | „Man kann Alles kalt zusammenmengen und anschließend portionsweise in 1 Mikrowelle erhitzen.“ | Almi | 13.03.2026 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/116194-reste-essen-von-vorgestern/) | Workaround: Vorkochen |
+| 17 | „während der Fahrt hat mein Kühlschrank keinen Strom“ | Casual 1848 | 19.08.2026 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/204067-k%C3%BChlschrank-w%C3%A4hrend-der-fahrt/) | Kühlung |
+| 18 | „Das Essen kann, fertig gekauft aus dem Supermarkt, sehr teuer und eintönig sein.“ | soulreaver001 | 09.06.2012 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/46624-kochen-braten-grillen-f%C3%BCr-den-sommerurlaub/) | Kosten / Monotonie (alt) |
+| 19 | „Wir wollen nur sehr bedingt (tagelange Geruchsbelästigung) den Herd im Wohnwagen nutzen.“ | soulreaver001 | 09.06.2012 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/46624-kochen-braten-grillen-f%C3%BCr-den-sommerurlaub/) | Gerüche (alt) |
+| 20 | „Von zuhause werden nur ein paar Mahlzeiten mitgenommen, damit man am Urlaubsort nicht sofort einkaufen gehen muss.“ | Hobby485 | 09.06.2012 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/46624-kochen-braten-grillen-f%C3%BCr-den-sommerurlaub/) | Workaround: Mitnehmen (alt) |
+| 21 | „Wenn keine Lust zum Kochen da ist, dann kommt die teurere Variante (Essen gehen)“ | Hobby485 | 09.06.2012 | [Wohnwagen-Forum](https://wohnwagen-forum.de/forum/thread/46624-kochen-braten-grillen-f%C3%BCr-den-sommerurlaub/) | Kosten (alt) |
+| 22 | „Da habe ich normalerweise nur einen Gaskocher (einflammig) mit Kartusche dabei.“ | Sumsebrumse | 23.07.2024 | [GS-Forum (Motorrad-Camper)](https://www.gs-forum.eu/threads/camping-kueche-und-gerichte.205766/) | Geräte-Grenze |
+| 23 | „abends dann meistens das, was keine Arbeit benötigt“ | cowy | 23.07.2024 | [GS-Forum (Motorrad-Camper)](https://www.gs-forum.eu/threads/camping-kueche-und-gerichte.205766/) | Aufwand |
+| 24 | „wobei mir die auf Dauer zu teuer sind.“ | balu069 | 23.07.2024 | [GS-Forum (Motorrad-Camper)](https://www.gs-forum.eu/threads/camping-kueche-und-gerichte.205766/) | Kosten Fertiggerichte |
+| 25 | „besonders wenn es mal keinen Bäcker in der Nähe hat.“ | GBAdventure | 05.08.2024 | [GS-Forum (Motorrad-Camper)](https://www.gs-forum.eu/threads/camping-kueche-und-gerichte.205766/) | Versorgung |
+| 26 | „leider Müll-intensiv“ | FlowRider | 23.07.2024 | [GS-Forum (Motorrad-Camper)](https://www.gs-forum.eu/threads/camping-kueche-und-gerichte.205766/) | Müll |
+| 27 | „das Reinigen ist mir zu aufwendig.“ | GBAdventure | 05.08.2024 | [GS-Forum (Motorrad-Camper)](https://www.gs-forum.eu/threads/camping-kueche-und-gerichte.205766/) | Abwasch / Aufwand |
+| 28 | „Aber in der heutigen Zeit 17,99.- für a digitales Kochbuch zu verlangen ist zu viel.“ | Sirhc79 | 18.12.2025 | [App Store (Rezension „mobile cooking“)](https://apps.apple.com/de/app/mobile-cooking/id1496735209) | Preisgrenze |
+| 29 | „Die App funktioniert super und die erworbenen Kochbücher sind somit überall dabei.“ | Frau Blumenfeld | 27.06.2024 | [App Store (Rezension „mobile cooking“)](https://apps.apple.com/de/app/mobile-cooking/id1496735209) | Zahlungsbereitschaft |
+| 30 | „Hallo,mit IOS17 lässt sich die App nicht mehr öffnen.“ | Sushi 1205 | 19.09.2023 | [App Store (Rezension „mobile cooking“)](https://apps.apple.com/de/app/mobile-cooking/id1496735209) | Schwäche Konkurrenz |
+
+Ergänzend (redaktionell, keine Kundenstimmen): promobil nennt „Kleine Küche, wenig Stauraum“ und „begrenzte Energie“ als Grundprobleme ([promobil, 20.08.2025](https://www.promobil.de/ratgeber/kochen-im-wohnmobil-fuenf-geniale-campingkuechen-hacks-fuer-unterwegs/)), außerdem Zuladung (keine Gusseisenpfannen) und Gasverbrauch bei langem Köcheln und mehreren Flammen ([promobil, 28.10.2013](https://www.promobil.de/tipp/ratgeber-kochen-im-reisemobil-zu-tisch-bitte-wohnmobil-kueche-rezepte-utensilien-kochbuecher/)). Im Camperstyle-Podcast berichtet der Gastgeber, dass Kissen „noch 3 Tage nach dem Braten nach Kartoffeln rochen“ ([camperstyle, 12.12.2020](https://camperstyle.de/podcast/kochen-und-backen-im-camper/)).
+
+### 5.3 Top-10-Schmerzpunkte (nach Häufigkeit × Intensität)
+| Rang | Schmerzpunkt | Belege (Zitat-Nr.) | Konfidenz | Produktantwort |
+|---|---|---|---|---|
+| 1 | **Urlaub statt Küchendienst:** Kochen soll schnell gehen und wenig Arbeit machen | 1, 2, 8, 23, 27, Thread „Schnelles Essen“ mit 427 Antworten | Hoch | Filter „max. 20 Min. / 1 Topf“, Vorkoch-Plan für zu Hause vor der Abfahrt |
+| 2 | **Geräte-Grenzen:** 1 Flamme, Kartusche, kein Backofen, kein Anbraten im Multikocher | 7, 10, 22 + Omnia-Kultur | Hoch | Geräte-Checkliste mit Bordküche (Flammen, Omnia, Grill, Airfryer) |
+| 3 | **Einkauf unterwegs:** kein Bäcker, weite Wege, keine frischen Produkte | 4, 15, 20, 25 | Hoch | Einkaufsliste „Vorrat von zu Hause + frisch vor Ort“, Laden-Auswahl inkl. Lidl/Aldi im Ausland |
+| 4 | **Kosten:** Fertiggerichte und Essen gehen auf Dauer teuer | 18, 21, 24, 11 | Hoch | Kosten pro Reise/Tag statt pro Woche |
+| 5 | **Ideenlosigkeit und Monotonie;** Rezepte werden aus dem Netz zusammengesucht | 6, 18, Thread-Größe (427 Antworten) | Mittel bis hoch | fertiger Reiseplan statt Rezeptsammlung |
+| 6 | **Strom-Unsicherheit am Platz:** Wie ist der Platz abgesichert, wie viel Watt hat das Gerät? | 9, 13, 14 | Mittel | Schalter „Landstrom: ja/nein/unsicher“ und Watt-Hinweis je Rezept |
+| 7 | **Kühlung klein oder unzuverlässig** (Fahrt, Absorber, Kühlbox) | 12, 17, Forum-Board mit 5 Kühlschrank-Threads 08–10/2026 | Mittel | Lagerhinweise nach Kühl-Liter und ohne Gefrierfach; Reihenfolge „Verderbliches zuerst“ |
+| 8 | **Platz und Zuladung:** schwere Geräte bleiben zu Hause, Vorräte fahren mit | 5, 14, promobil | Mittel | Packliste mit Gewicht; Vorratsmengen genau für die Reisedauer |
+| 9 | **Gerüche, Abwasch, Müll** | 19, 26, 27, Camperstyle-Podcast | Mittel | Tags „draußen kochen“, „wenig Abwasch“, „wenig Verpackung“ |
+| 10 | **Familie/Mitesser:** Teenager helfen ungern, Qualitätsanspruch bleibt | 2, 3 | Niedrig | Personen- und Abneigungs-Filter, Aufgaben im Ablauf |
+
+### 5.4 Vokabular (so sprechen Camper)
+Womo, WoWa, Kasten(wagen), Van · CP (Campingplatz), Stellplatz, Vorzelt · Dauercamping und Reisecamping · Bordküche, Gasherd, Kartuschenkocher, einflammig, Campinggaz · **Omnia** (Herd-Backofen), Nonna Aurelia, Cadac, RidgeMonkey, Dutch Oven · **HLF / „HeiLiFritte“** (Heißluftfritteuse) · Kompressor-Kühlbox, Absorber, Towerkühlschrank, „kühlt nicht“ · **Landstrom**, „wie der Platz abgesichert ist“, Watt, 12 V, autark · Zuladung · **„Onepot“**, „zügige Gerichte“, „schnelles Essen“, „was keine Arbeit benötigt“, „vereinfachen“ · Dosenessen „in Not- & Ausnahmesituationen“ · Reste-Essen · Vorrat von zu Hause.
+
+Ableitung für Texte: nicht „Meal-Prep“ oder „Makros“ sagen, sondern **„Onepot“, „Bordküche“, „zügig“, „Vorrat“, „Landstrom“**. Den Ton als Forum unter Gleichen halten, mit Humor über Kühlschrank-Tetris und Kartuschen.
+
+### 5.5 Workarounds (was heute statt eines Planers genutzt wird)
+1. **Mahlzeiten von zu Hause vorkochen und mitnehmen** (Zitat 20).
+2. **One-Pot-Gerichte** als Standard („ansonsten gibt es bei uns Onepot gerichte.“, holgerito, 17.06.2026, Thread Fertiggerichte; Zitat 5: Nudeln + Dose im heißen Topf).
+3. **Omnia-Backofen** auf der Gasflamme, mit Spezialbüchern (14,99–30,29 €).
+4. **Heißluftfritteuse oder Mikrowelle**, aber nur bei sicherem Landstrom (Zitate 13, 14, 16).
+5. **Dosen und Gläser als Notreserve**, die oft den ganzen Urlaub mitfahren (Zitat 5).
+6. **Rezepte aus dem Netz zusammensuchen** und Foren-Threads mit Hunderten Antworten (Zitat 6).
+7. **Fertiggerichte** oder **Essen gehen** als teure Ausweichlösung (Zitate 11, 21, 24).
+8. **Zusätzliche Kompressor-Kühlbox** für Fahrt und Vorzelt (Zitat 12).
+9. **Kalte Salate** und vorbereitete Nudelsalate.
+
+### 5.6 Indizien für Zahlungsbereitschaft
+| Indiz | Wert | Quelle |
+|---|---|---|
+| Digitale Camping-/Omnia-Kochbücher als In-App-Kauf | 9,99–17,99 € pro Buch | [App Store „mobile cooking“](https://apps.apple.com/de/app/mobile-cooking/id1496735209) |
+| Gedruckte Omnia-Kochbücher | 19,50 € (Reimo) bis 30,29 € (Kaufland) | [camperstyle Übersicht](https://camperstyle.de/die-besten-camping-kochbuecher/) und Suchergebnisse |
+| Preisgrenze geäußert | „17,99.- … ist zu viel“ (12/2025) | Zitat 28 |
+| Altersstruktur der Halter | 60–69 J.: 318.589 Fz.; 50–59 J.: 265.073; < 40 J.: < 10 % | KBA via [promobil](https://www.promobil.de/ratgeber/so-alt-sind-deutschlands-wohnmobil-fahrer-graue-schlaefen-treffen-auf-weisswaren/) |
+| Komfort-Ausgaben in den Zitaten | Kompressor-Kühlbox, Cosori-Airfryer, Kaffeevollautomat im Wohnwagen, Multikocher | Zitat 12, Cosori-Beitrag (Rene_Bodensee, 06.12.2024) im HLF-Thread, [Thread Kochgeräte](https://wohnwagen-forum.de/forum/thread/202531-was-nehnt-ihr-f%C3%BCr-kochger%C3%A4te-mit-zum-camping/) |
+| Essen gehen als Ausweichlösung | „die teurere Variante“, so akzeptiert | Zitat 21 |
+| Branchenumsatz | 14,1 Mrd. € (2025) | CIVD via [motor1](https://de.motor1.com/news/784807/caravaning-jahresbilanz-markt-zulassungen-2025/?channel=MSN) |
+| Messe-Interesse | 269.000 Besucher Caravan Salon 2025 | [Messe Düsseldorf](https://www.caravan-salon.com/en/Media_News/Press/Press_Releases/CARAVAN_SALON_D%C3%9CSSELDORF_2025_inspires_with_269,000_visitors) |
+
+**Ableitung für Phase B (Hypothese, muss getestet werden):** Die Zahlungsbereitschaft ist da, aber es gibt eine **Preisgrenze bei digitalen Inhalten um 15–18 €** pro Einzelkauf. Ein Saison- oder Reisepass sollte unter diesem Anker oder klar darüber mit sichtbarem Mehrwert (Planer statt Buch) liegen. Preise werden im Pricing-Bericht festgelegt.
+
+### 5.7 Offene Fragen für Interviews (Mode 3)
+1. Wie planen Sie Essen heute vor einer Reise, und wie lange dauert das?
+2. Was ist beim letzten Trip beim Essen schiefgegangen (verdorben, zu viel, zu wenig, zu teuer)?
+3. Welche Geräte nutzen Sie wirklich, und wie oft gibt es Landstrom?
+4. Kaufen Sie im Ausland bei Lidl/Aldi oder lokal ein?
+5. Was haben Sie zuletzt für Camping-Küche ausgegeben (Gerät, Buch, App)?
+Rekrutierung: wohnwagen-forum.de (Regeln beachten, keine Werbung ohne Erlaubnis), Campingplätze, Dauercamper-Vereine. Ziel 10 Gespräche, 5 sind ausreichend.
 
 ## 6. Quellen
-(folgt)
+Alle Links abgerufen am 28.10.2026. **[Q]** = Quelle mit Zahl, **[S]** = Schätzung mit Herleitung im Text.
+
+**Statistik / Größe**
+- Destatis, Haushalte und Familien (Mikrozensus 2024, Erstergebnisse): https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Haushalte-Familien/_inhalt.html
+- Mikrozensus 2024 Tabelle Haushalte (sozialpolitik-aktuell): https://www.sozialpolitik-aktuell.de/files/sozialpolitik-aktuell/_Politikfelder/Bevoelkerung/Datensammlung/PDF-Dateien/tabVII3.pdf
+- Destatis PM Armutsgefährdung 02/2026: https://www.destatis.de/DE/Presse/Pressemitteilungen/2026/02/PD26_039_63.html
+- Destatis PM Alleinlebende Ältere 09/2021: https://destatis.de/EN/Press/2021/09/PE21_N057_12411.html
+- Destatis PM Pflegekräftevorausberechnung 01/2024: https://www.destatis.de/DE/Presse/Pressemitteilungen/2024/01/PD24_033_23_12.html
+- Studierende WS 2025/26: https://statistiken-aktuell.de/studierende-wintersemester-2025-2026-datenmonitor/
+- 21. Sozialerhebung (DSW): https://www.studierendenwerke.de/fileadmin/api/files/21._sozielerhebung-broschuere_low_res.pdf
+- Zahlen & Fakten Alleinerziehende 2024: https://www.dejavu-film.de/media/zahlen_und_fakten_ae_2024.pdf
+- Bertelsmann Stiftung, Alleinerziehende 06/2024: https://www.bertelsmann-stiftung.de/de/themen/aktuelle-meldungen/2024/juni/trotz-arbeit-haben-alleinerziehende-noch-immer-das-hoechste-armutsrisiko
+- Bürgergeld-Regelsatz 2026: https://www.buergergeld.org/leistungen/regelsatz/ · Bezieherzahl: https://www.schwaebische.de/politik/bas-plant-2026-nullrunde-beim-buergergeld-3882077
+- Diabetes, Gesundheitsbericht 2026 (PM 11/2025): https://www.diabetesde.org/system/files/document/20251113_PM%20DDG_diabetesDE%20WDT_Gesundheitsbericht_F_0.pdf
+- BIBB Ausbildungsvergütung 2024: https://www.bibb.de/de/pressemitteilung_204110.php
+- Pflege-Arbeitsmarkt: https://www.medi-karriere.de/magazin/pflegeberufe-der-aktuelle-arbeitsmarkt/
+- Kleingärten (BKD 2025): https://www.lobbyregister.bundestag.de/media/d4/68/772173/BKD_2025.pdf
+- Vegetarier (AWA 2025): https://de.statista.com/infografik/amp/24000/anzahl-der-vegetarier-und-veganer-in-deutschland/
+- Airfryer-Verbreitung: https://lebensmittelpraxis.de/sortiment/47543-dauerbrenner-heissluftfritteuse-vom-tiefkuehlsnack-bis-zum-gewuerz-so-erobert-der-airfryer-immer-mehr-warengruppen.html · https://yougov.com/de-de/artikel/54606-airfryer-in-deutschland-vom-trendgerat-zum-festen-bestandteil-des-alltags
+- Lebensmittelpreise/Einschränkung (vzbv/Forsa 11/2025): https://www.t-online.de/leben/aktuelles/id_101069842/lebensmittelpreise-haushalte-fuehlen-sich-durch-kosten-belastet.html
+- Essen auf Rädern, DRK Berlin Preisliste 2024: https://www.drk-berlin.de:443/fileadmin/Eigene_Bilder_und_Videos/Essen_auf_Raedern/Downloads/2024-01-03_DRK_Men%C3%BCservice_Preisliste_ab_22.01.2024.pdf
+
+**Camping**
+- KBA-Bestand und Altersstruktur (promobil, 31.05.2025): https://www.promobil.de/ratgeber/so-alt-sind-deutschlands-wohnmobil-fahrer-graue-schlaefen-treffen-auf-weisswaren/
+- Campingübernachtungen 2025: https://www.promobil.de/weitere-ratgeber/camping-rekord-2025-44-7-mio-uebernachtungen-in-deutschland/
+- Bestand Caravans/Reisemobile 2025 (news.at nach CIVD): https://www.news.at/ausflugsziele/caravan-salon-reisemobil-anbieter-hoffen-auf-gute-geschafte
+- CIVD-Jahresbilanz 2025 (motor1): https://de.motor1.com/news/784807/caravaning-jahresbilanz-markt-zulassungen-2025/?channel=MSN
+- Caravan Salon 2025: https://www.caravan-salon.com/en/Media_News/Press/Press_Releases/CARAVAN_SALON_D%C3%9CSSELDORF_2025_inspires_with_269,000_visitors
+- App „mobile cooking“: https://apps.apple.com/de/app/mobile-cooking/id1496735209
+- Camping-Kochbücher: https://camperstyle.de/die-besten-camping-kochbuecher/ · https://www.lesejury.de/nico-stanitzok/buecher/backofen-to-go/9783833884450
+- Senia Camping-Wochenplan: https://www.senia.es/de/blog/campaholics/wochentliches-campingmenu
+- Camping-Apps-Übersicht: https://www.netzwelt.de/news/170871-besten-camping-apps-campingplaetze-stellplatzfinder-co.html
+- Foren: https://wohnwagen-forum.de/forum/board/74-koch-und-grillrezepte-im-wohnwagen/ · https://www.gs-forum.eu/threads/camping-kueche-und-gerichte.205766/
+- promobil Küchen-Ratgeber: https://www.promobil.de/ratgeber/kochen-im-wohnmobil-fuenf-geniale-campingkuechen-hacks-fuer-unterwegs/ · https://www.promobil.de/tipp/ratgeber-kochen-im-reisemobil-zu-tisch-bitte-wohnmobil-kueche-rezepte-utensilien-kochbuecher/
+- Camperstyle-Podcast: https://camperstyle.de/podcast/kochen-und-backen-im-camper/
+
+**Konkurrenz Budget-Familien**
+- MealDeal (Google Play, laut Suchergebnis; direkter Abruf 404): https://play.google.com/store/apps/details?id=de.ss
+- Disha: https://mwm.ai/apps/disha-weekly-plan-budget/6779303849
+- Aldi Süd Spartipps/Wochenplan: https://www.aldi-sued.de/de/tipps-trends/haushalt/organisieren/geld-sparen-beim-einkaufen.html
+
+**Nicht prüfbar in dieser Sitzung (vor Phase D nachholen):** Mitgliederzahlen von Facebook-Gruppen, Subreddit-Größen, Meta-Zielgruppengrößen (in der Anzeigenverwaltung prüfen), Veganer-Zahl 2024/25 (Statista-Paywall), Halter-Einkommen (keine Quelle gefunden).

@@ -1,0 +1,2878 @@
+[
+ {
+  "id": "U01",
+  "titel": "Instant-Haferbrei mit Banane und Erdnussmus",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "haferflocken",
+    90
+   ],
+   [
+    "banane",
+    1,
+    "stk"
+   ],
+   [
+    "erdnussmus",
+    25
+   ],
+   [
+    "honig",
+    10
+   ],
+   [
+    "zimt",
+    1
+   ],
+   [
+    "salz",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 8,
+    "aktiv": 4,
+    "schritte": [
+     "Haferflocken, Zimt und eine Prise Salz in eine Schüssel oder einen großen Becher geben.",
+     "250 ml Wasser im Wasserkocher aufkochen und sofort über die Haferflocken gießen, umrühren.",
+     "Abdecken (Teller drauf) und 5 Minuten quellen lassen.",
+     "Banane in Scheiben schneiden, mit Erdnussmus und Honig auf den Brei geben."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 6,
+    "aktiv": 3,
+    "schritte": [
+     "Haferflocken, Zimt, Salz und 250 ml Wasser in eine große mikrowellenfeste Schüssel geben (sie kocht hoch).",
+     "bei 800 Watt 2 Minuten erhitzen, umrühren, weitere 1 Minute erhitzen, bis der Brei dick ist.",
+     "1 Minute stehen lassen. Banane, Erdnussmus und Honig darauf verteilen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "lkw"
+  ],
+  "tipp": "Haferflocken und Erdnussmus halten ungeöffnet und geöffnet ohne Kühlschrank, ideal als Vorrat im Zimmer.",
+  "foto": "bowl of creamy oat porridge topped with banana slices, a swirl of peanut butter and honey, cinnamon dusting"
+ },
+ {
+  "id": "U02",
+  "titel": "Apfel-Zimt-Porridge mit Rosinen",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "haferflocken",
+    80
+   ],
+   [
+    "milch",
+    250
+   ],
+   [
+    "apfel",
+    1,
+    "stk"
+   ],
+   [
+    "rosinen",
+    20
+   ],
+   [
+    "zimt",
+    1
+   ],
+   [
+    "sonnenblumenkerne",
+    15
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 8,
+    "aktiv": 4,
+    "schritte": [
+     "Apfel grob reiben oder klein würfeln.",
+     "Haferflocken, Milch, Apfel, Rosinen und Zimt in eine große mikrowellenfeste Schüssel geben.",
+     "bei 800 Watt 2 Minuten erhitzen, umrühren, weitere 1,5 Minuten erhitzen. Nicht abdecken, sonst kocht die Milch über.",
+     "1 Minute stehen lassen, mit Sonnenblumenkernen bestreuen."
+    ]
+   },
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 9,
+    "aktiv": 4,
+    "schritte": [
+     "Haferflocken, Apfelwürfel, Rosinen und Zimt in eine Schüssel geben.",
+     "150 ml Wasser aufkochen, darübergießen, abdecken und 5 Minuten quellen lassen.",
+     "100 ml kalte H-Milch unterrühren und mit Sonnenblumenkernen bestreuen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig"
+  ],
+  "tipp": "H-Milch gibt es auch als kleine 200-ml-Packung, die du ohne Kühlschrank auf einmal aufbrauchst.",
+  "foto": "warm oat porridge with grated apple, raisins, sunflower seeds and cinnamon in a ceramic bowl"
+ },
+ {
+  "id": "U03",
+  "titel": "Mikrowellen-Rührei im Becher mit Käsetoast",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "eier",
+    3,
+    "stk"
+   ],
+   [
+    "milch",
+    30
+   ],
+   [
+    "gouda",
+    2,
+    "stk"
+   ],
+   [
+    "toast",
+    3,
+    "stk"
+   ],
+   [
+    "salz",
+    1
+   ],
+   [
+    "pfeffer",
+    0.5
+   ],
+   [
+    "schnittlauch",
+    5,
+    "",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 6,
+    "aktiv": 4,
+    "schritte": [
+     "Eier, Milch, Salz und Pfeffer in einem großen mikrowellenfesten Becher mit der Gabel gut verquirlen.",
+     "bei 800 Watt 1 Minute erhitzen, mit der Gabel umrühren, weitere 45 Sekunden erhitzen und wieder rühren.",
+     "In 15-Sekunden-Schritten weitergaren, bis das Ei überall fest ist und keine flüssigen oder glasigen Stellen mehr hat.",
+     "Toastscheiben mit Gouda belegen, Rührei daraufgeben, nach Wunsch Schnittlauch darüber."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle",
+     "toaster"
+    ],
+    "zeit": 7,
+    "aktiv": 4,
+    "schritte": [
+     "Toast im Toaster goldbraun rösten.",
+     "Eier mit Milch, Salz und Pfeffer im Becher verquirlen und bei 800 Watt 1 Minute, dann 45 Sekunden garen, dazwischen umrühren.",
+     "So lange in 15-Sekunden-Schritten weitergaren, bis das Ei vollständig fest ist.",
+     "Warmen Toast mit Gouda und Rührei belegen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "schnell",
+   "eiweiss"
+  ],
+  "tipp": "Ein hoher Becher und häufiges Umrühren verhindern, dass das Ei überkocht oder gummiartig wird.",
+  "foto": "fluffy scrambled eggs in a large mug next to toast slices with melted gouda"
+ },
+ {
+  "id": "U04",
+  "titel": "Overnight Oats mit Skyr und Apfel",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "haferflocken",
+    70
+   ],
+   [
+    "skyr",
+    150
+   ],
+   [
+    "milch",
+    100
+   ],
+   [
+    "apfel",
+    1,
+    "stk"
+   ],
+   [
+    "honig",
+    10
+   ],
+   [
+    "walnuesse",
+    15
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 5,
+    "aktiv": 5,
+    "schritte": [
+     "Haferflocken, Skyr und Milch in einem Schraubglas oder einer Box verrühren.",
+     "Apfel klein würfeln oder reiben und unterheben.",
+     "Verschlossen über Nacht (mindestens 6 Stunden) in den Kühlschrank stellen.",
+     "Morgens mit Honig und gehackten Walnüssen toppen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "box",
+   "eiweiss",
+   "guenstig"
+  ],
+  "tipp": "Nur mit Kühlschrank: Abends angesetzt, hältst du morgens eine fertige Box in der Hand.",
+  "foto": "glass jar with overnight oats layered with skyr, diced apple, walnuts and honey"
+ },
+ {
+  "id": "U05",
+  "titel": "Erdnussmus-Bananen-Brot",
+  "mahlzeit": [
+   "fruehstueck",
+   "snack"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "vollkornbrot",
+    3,
+    "stk"
+   ],
+   [
+    "erdnussmus",
+    30
+   ],
+   [
+    "banane",
+    1,
+    "stk"
+   ],
+   [
+    "honig",
+    10
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 4,
+    "aktiv": 4,
+    "schritte": [
+     "Brotscheiben mit Erdnussmus bestreichen.",
+     "Banane in Scheiben schneiden und darauf verteilen.",
+     "Mit Honig beträufeln, zusammenklappen und in Papier einschlagen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 24,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "lkw",
+   "einhand"
+  ],
+  "tipp": "Zusammengeklappt bleibt das Brot im Führerhaus handlich und krümelt kaum.",
+  "foto": "rye wholegrain bread slices spread with peanut butter, topped with banana slices and honey"
+ },
+ {
+  "id": "U06",
+  "titel": "Müsli mit H-Milch, Apfel und Kernen",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "muesli",
+    90
+   ],
+   [
+    "milch",
+    250
+   ],
+   [
+    "apfel",
+    1,
+    "stk"
+   ],
+   [
+    "sonnenblumenkerne",
+    15
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 3,
+    "aktiv": 3,
+    "schritte": [
+     "Apfel klein schneiden.",
+     "Müsli in eine Schüssel geben, Apfel und Sonnenblumenkerne darüberstreuen.",
+     "H-Milch darübergießen und 2 Minuten ziehen lassen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig"
+  ],
+  "tipp": "Offene H-Milch gehört in den Kühlschrank. Ohne Kühlschrank kaufst du kleine Packungen und brauchst sie auf einmal auf.",
+  "foto": "bowl of muesli with milk, diced apple and sunflower seeds"
+ },
+ {
+  "id": "U07",
+  "titel": "Quark-Toast mit Banane und Honig",
+  "mahlzeit": [
+   "fruehstueck",
+   "snack"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "toast",
+    3,
+    "stk"
+   ],
+   [
+    "magerquark",
+    150
+   ],
+   [
+    "banane",
+    1,
+    "stk"
+   ],
+   [
+    "honig",
+    15
+   ],
+   [
+    "zimt",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "toaster"
+    ],
+    "zeit": 5,
+    "aktiv": 4,
+    "schritte": [
+     "Toastscheiben im Toaster goldbraun rösten.",
+     "Quark mit Zimt glatt rühren und dick auf den Toast streichen.",
+     "Banane in Scheiben darauflegen und mit Honig beträufeln."
+    ]
+   },
+   {
+    "geraete": [],
+    "zeit": 4,
+    "aktiv": 4,
+    "schritte": [
+     "Ungetoasteten Toast mit Zimt-Quark bestreichen, Banane und Honig darauf verteilen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "schnell",
+   "eiweiss",
+   "guenstig"
+  ],
+  "tipp": "Den offenen Quark innerhalb von zwei Tagen aufbrauchen, etwa für U14 oder als Dip.",
+  "foto": "golden toast slices spread with quark, banana slices and honey drizzle"
+ },
+ {
+  "id": "U08",
+  "titel": "Schoko-Haferbrei aus dem Wasserkocher",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "haferflocken",
+    90
+   ],
+   [
+    "milch",
+    100
+   ],
+   [
+    "kakao",
+    8
+   ],
+   [
+    "zucker",
+    10
+   ],
+   [
+    "banane",
+    1,
+    "stk"
+   ],
+   [
+    "salz",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 8,
+    "aktiv": 3,
+    "schritte": [
+     "Haferflocken, Kakao, Zucker und eine Prise Salz in eine Schüssel geben und trocken vermischen.",
+     "200 ml Wasser im Wasserkocher aufkochen und darübergießen, gut umrühren, damit der Kakao nicht klumpt.",
+     "Abdecken und 5 Minuten quellen lassen.",
+     "100 ml H-Milch unterrühren, Banane in Scheiben darauf."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 6,
+    "aktiv": 3,
+    "schritte": [
+     "Haferflocken, Kakao, Zucker, Salz, 150 ml Wasser und 100 ml Milch in eine große mikrowellenfeste Schüssel geben.",
+     "bei 800 Watt 2 Minuten erhitzen, umrühren, weitere 1 Minute erhitzen.",
+     "1 Minute stehen lassen und mit Bananenscheiben belegen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig"
+  ],
+  "tipp": "Kakao und Zucker vorher trocken mit den Flocken mischen, dann klumpt nichts.",
+  "foto": "chocolate oat porridge in a bowl topped with banana slices"
+ },
+ {
+  "id": "U09",
+  "titel": "Couscous-Kichererbsen-Bowl mit Ajvar",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "couscous",
+    100
+   ],
+   [
+    "kichererbsen_dose",
+    240
+   ],
+   [
+    "ajvar",
+    60
+   ],
+   [
+    "tomate",
+    2,
+    "stk"
+   ],
+   [
+    "olivenoel",
+    10
+   ],
+   [
+    "gemuesebruehe",
+    4
+   ],
+   [
+    "kreuzkuemmel",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 12,
+    "aktiv": 7,
+    "schritte": [
+     "Couscous, Brühpulver und Kreuzkümmel in eine Schüssel geben.",
+     "160 ml Wasser aufkochen, über den Couscous gießen, abdecken und 5 Minuten quellen lassen.",
+     "Kichererbsen in ein Sieb geben, abspülen und abtropfen lassen. Tomaten würfeln.",
+     "Couscous mit der Gabel auflockern, Olivenöl unterrühren, Kichererbsen, Tomaten und Ajvar darauf verteilen."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 10,
+    "aktiv": 6,
+    "schritte": [
+     "Couscous, Brühpulver, Kreuzkümmel und 160 ml Wasser in eine mikrowellenfeste Schüssel geben.",
+     "bei 800 Watt 2,5 Minuten erhitzen, bis das Wasser kocht, abdecken und 5 Minuten quellen lassen.",
+     "Auflockern, Öl, Kichererbsen, Tomatenwürfel und Ajvar unterheben."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "box"
+  ],
+  "tipp": "Schmeckt auch kalt. Ohne Kühlschrank isst du die Bowl innerhalb von 2 Stunden.",
+  "foto": "bowl of fluffy couscous with chickpeas, diced tomatoes and red pepper ajvar"
+ },
+ {
+  "id": "U10",
+  "titel": "Bulgur-Chili mit Kidneybohnen und Mais",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "bulgur",
+    220
+   ],
+   [
+    "kidney_dose",
+    250
+   ],
+   [
+    "mais_dose",
+    285
+   ],
+   [
+    "tomatenmark",
+    60
+   ],
+   [
+    "gemuesebruehe",
+    8
+   ],
+   [
+    "paprikapulver",
+    3
+   ],
+   [
+    "rapsoel",
+    25
+   ],
+   [
+    "chiliflocken",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 20,
+    "aktiv": 8,
+    "schritte": [
+     "Bulgur, Tomatenmark, Brühpulver, Paprikapulver, Chiliflocken und Öl in eine große Schüssel geben.",
+     "450 ml Wasser aufkochen, darübergießen und gut verrühren, bis sich das Tomatenmark gelöst hat.",
+     "Abdecken (Teller oder Deckel) und 15 Minuten quellen lassen.",
+     "Kidneybohnen und Mais abgießen, abspülen und unter den Bulgur heben. Wer es heißer mag: Bohnen vorher 3 Minuten in heißem Wasser stehen lassen und abgießen."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 15,
+    "aktiv": 6,
+    "schritte": [
+     "Bulgur, Tomatenmark, Brühpulver, Gewürze, Öl und 450 ml Wasser in eine große mikrowellenfeste Schüssel mit Deckel geben.",
+     "Abgedeckt bei 800 Watt 5 Minuten garen, umrühren, Bohnen und Mais dazugeben, weitere 3 Minuten erhitzen.",
+     "5 Minuten abgedeckt ziehen lassen, bis der Bulgur weich ist."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "guenstig",
+   "box",
+   "eiweiss"
+  ],
+  "tipp": "Die zweite Portion ist das Mittagessen für morgen, aber nur mit Kühlschrank.",
+  "foto": "hearty bulgur chili with kidney beans and sweet corn in a deep bowl"
+ },
+ {
+  "id": "U11",
+  "titel": "Kartoffelpüree mit Wiener Würstchen und Senf",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "kartoffelpueree",
+    100
+   ],
+   [
+    "milch",
+    120
+   ],
+   [
+    "wiener",
+    3,
+    "stk"
+   ],
+   [
+    "senf",
+    20
+   ],
+   [
+    "salz",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 12,
+    "aktiv": 5,
+    "schritte": [
+     "Würstchen in einen hohen Becher oder eine Schüssel legen, mit kochendem Wasser aus dem Wasserkocher bedecken und 8 Minuten ziehen lassen. Nach 4 Minuten das Wasser einmal durch frisch gekochtes ersetzen.",
+     "Währenddessen 250 ml Wasser aufkochen, mit 120 ml H-Milch in eine Schüssel geben.",
+     "Püreeflocken einrühren, 1 Minute quellen lassen und mit der Gabel aufschlagen.",
+     "Würstchen abgießen und mit Püree und Senf servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 8,
+    "aktiv": 4,
+    "schritte": [
+     "250 ml Wasser und 120 ml Milch in einer mikrowellenfesten Schüssel bei 800 Watt 3 Minuten erhitzen, bis es dampft.",
+     "Püreeflocken einrühren und 1 Minute quellen lassen.",
+     "Würstchen in Stücke schneiden, auf einem Teller abgedeckt bei 800 Watt 1,5 Minuten erhitzen, bis sie durch und durch heiß sind.",
+     "Mit Senf servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "lkw"
+  ],
+  "tipp": "Ein angebrochenes Würstchenglas gehört in den Kühlschrank. Ohne Kühlschrank isst du die restlichen Würstchen am selben Tag kalt zum Brot.",
+  "foto": "creamy mashed potatoes with three hot frankfurter sausages and a dollop of mustard"
+ },
+ {
+  "id": "U12",
+  "titel": "Rotes Linsen-Kokos-Curry aus der Mikrowelle",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "rote_linsen",
+    200
+   ],
+   [
+    "kokosmilch",
+    200
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "currypulver",
+    6
+   ],
+   [
+    "gemuesebruehe",
+    6
+   ],
+   [
+    "fladenbrot",
+    0.5,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 25,
+    "aktiv": 8,
+    "schritte": [
+     "Rote Linsen in einem Sieb kurz abspülen.",
+     "Linsen, 500 ml Wasser, Brühpulver und Curry in eine große mikrowellenfeste Schüssel geben (höchstens halb voll, es schäumt).",
+     "Locker abgedeckt bei 800 Watt 10 Minuten garen, umrühren, weitere 5 Minuten garen.",
+     "Tomaten und Kokosmilch einrühren und nochmals 3 Minuten erhitzen, bis die Linsen weich zerfallen und alles dampfend heiß ist.",
+     "Mit Fladenbrot servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "guenstig",
+   "eiweiss"
+  ],
+  "tipp": "Die angebrochene Kokosmilch ohne Kühlschrank nicht aufheben; im Zweifel die ganze Dose verwenden, das Curry wird nur cremiger.",
+  "foto": "golden red lentil coconut curry in a bowl with torn flatbread"
+ },
+ {
+  "id": "U13",
+  "titel": "Linsen aus der Dose mit Würstchen",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "linsen_dose",
+    400
+   ],
+   [
+    "gefluegelwiener",
+    2,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    0.5,
+    "stk"
+   ],
+   [
+    "essig",
+    10
+   ],
+   [
+    "senf",
+    10
+   ],
+   [
+    "broetchen",
+    1,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 10,
+    "aktiv": 5,
+    "schritte": [
+     "Zwiebel fein würfeln, Würstchen in Scheiben schneiden.",
+     "Linsen mit Flüssigkeit, Zwiebel und Würstchen in eine mikrowellenfeste Schüssel geben, abdecken.",
+     "bei 800 Watt 3 Minuten erhitzen, umrühren, weitere 2 Minuten erhitzen, bis alles durch und durch dampfend heiß ist.",
+     "Mit Essig und Senf abschmecken und mit dem Brötchen essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "lkw",
+   "eiweiss"
+  ],
+  "tipp": "Der Schuss Essig zum Schluss macht Dosenlinsen frischer. Das Brötchen geht auch ungebacken als weiches Brot durch.",
+  "foto": "rustic lentil stew with sliced sausages in a bowl, two bread rolls on the side"
+ },
+ {
+  "id": "U14",
+  "titel": "Mikrowellen-Kartoffeln mit Kräuterquark",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "kartoffel",
+    600
+   ],
+   [
+    "magerquark",
+    250
+   ],
+   [
+    "milch",
+    30
+   ],
+   [
+    "tk_kraeuter",
+    10
+   ],
+   [
+    "rapsoel",
+    15
+   ],
+   [
+    "salz",
+    2
+   ],
+   [
+    "pfeffer",
+    0.5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 16,
+    "aktiv": 6,
+    "schritte": [
+     "Kartoffeln gründlich waschen, große halbieren, mehrmals mit der Gabel einstechen.",
+     "In eine mikrowellenfeste Schüssel mit 3 EL Wasser legen, abdecken und bei 800 Watt 6 Minuten garen.",
+     "Kartoffeln wenden, weitere 4 bis 6 Minuten garen, bis ein Messer leicht hineingleitet. 2 Minuten abgedeckt ruhen lassen.",
+     "Quark mit Milch, Öl, Kräutern, Salz und Pfeffer glatt rühren und zu den aufgeschnittenen Kartoffeln essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "eiweiss",
+   "guenstig"
+  ],
+  "tipp": "Gleich große Kartoffeln garen gleichmäßig. Am besten festkochende oder vorwiegend festkochende nehmen.",
+  "foto": "steamed potatoes cut open with a generous bowl of herb quark"
+ },
+ {
+  "id": "U15",
+  "titel": "Dosen-Ravioli mit Kidneybohnen",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "ravioli_dose",
+    800
+   ],
+   [
+    "kidney_dose",
+    125
+   ],
+   [
+    "oregano",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 8,
+    "aktiv": 3,
+    "schritte": [
+     "Ravioli in eine mikrowellenfeste Schüssel geben (nie in der Dose erhitzen), Bohnen abspülen und dazugeben.",
+     "Abgedeckt bei 800 Watt 3 Minuten erhitzen, umrühren, weitere 2 bis 3 Minuten erhitzen, bis alles durch und durch dampfend heiß ist.",
+     "Mit Oregano bestreuen und direkt aus der Schüssel essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "lkw"
+  ],
+  "tipp": "Die Kidneybohnen machen die Dose satter. Den Rest der Bohnen am selben Tag in U27 oder U19 verwenden.",
+  "foto": "bowl of ravioli in tomato sauce mixed with kidney beans, sprinkled with oregano"
+ },
+ {
+  "id": "U16",
+  "titel": "Weiße Bohnen mit Geflügelwürstchen und Fladenbrot",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "weisse_bohnen_tomate",
+    420
+   ],
+   [
+    "gefluegelwiener",
+    2,
+    "stk"
+   ],
+   [
+    "paprikapulver",
+    1
+   ],
+   [
+    "fladenbrot",
+    0.25,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 8,
+    "aktiv": 3,
+    "schritte": [
+     "Würstchen in Stücke schneiden und mit den Bohnen in eine mikrowellenfeste Schüssel geben, Paprikapulver darüber.",
+     "Abgedeckt bei 800 Watt 2 Minuten erhitzen, umrühren, weitere 2 Minuten erhitzen, bis es durch und durch dampfend heiß ist.",
+     "Fladenbrot in Stücke reißen und zum Dippen dazu essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "lkw",
+   "eiweiss"
+  ],
+  "tipp": "Ein Fladenbrot reicht für vier Mahlzeiten, zum Beispiel noch für U12 und U26.",
+  "foto": "baked beans in tomato sauce with chicken sausage pieces, torn flatbread"
+ },
+ {
+  "id": "U17",
+  "titel": "Mikrowellen-Nudeln mit Thunfisch-Tomatensoße",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "nudeln",
+    150
+   ],
+   [
+    "passata",
+    200
+   ],
+   [
+    "thunfisch",
+    140
+   ],
+   [
+    "olivenoel",
+    10
+   ],
+   [
+    "oregano",
+    1
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    0.5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 20,
+    "aktiv": 6,
+    "schritte": [
+     "Nudeln (kurze Sorten wie Penne oder Fusilli) in eine große mikrowellenfeste Schüssel geben, 500 ml Wasser und 1 TL Salz dazu, die Nudeln müssen bedeckt sein.",
+     "Ohne Deckel bei 800 Watt so lange garen wie auf der Packung angegeben plus 3 Minuten (meist 12 bis 14 Minuten), nach der Hälfte umrühren.",
+     "Nudeln abgießen. Passata, Öl, Oregano und Pfeffer unterrühren und 2 Minuten erhitzen, bis die Soße dampft.",
+     "Thunfisch abtropfen lassen, zerpflücken und unterheben."
+    ]
+   },
+   {
+    "geraete": [
+     "wasserkocher",
+     "mikrowelle"
+    ],
+    "zeit": 18,
+    "aktiv": 6,
+    "schritte": [
+     "500 ml Wasser im Wasserkocher aufkochen und mit Nudeln und Salz in die mikrowellenfeste Schüssel geben, so sparst du Zeit.",
+     "bei 800 Watt Packungszeit plus 1 Minute garen, nach der Hälfte umrühren.",
+     "Abgießen, Passata, Öl und Gewürze unterrühren, 2 Minuten erhitzen und den Thunfisch unterheben."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "guenstig",
+   "eiweiss"
+  ],
+  "tipp": "Eine große Schüssel ist wichtig: Nudelwasser schäumt in der Mikrowelle stark.",
+  "foto": "penne pasta in tomato sauce with flaked tuna and oregano in a bowl"
+ },
+ {
+  "id": "U18",
+  "titel": "Couscous mit Thunfisch, Mais und Zitrone",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "couscous",
+    125
+   ],
+   [
+    "thunfisch",
+    140
+   ],
+   [
+    "mais_dose",
+    140
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "zitrone",
+    0.5,
+    "stk"
+   ],
+   [
+    "gemuesebruehe",
+    3
+   ],
+   [
+    "pfeffer",
+    0.5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 10,
+    "aktiv": 5,
+    "schritte": [
+     "Couscous und Brühpulver in eine Schüssel geben.",
+     "200 ml Wasser aufkochen, darübergießen, abdecken und 5 Minuten quellen lassen.",
+     "Thunfisch und Mais abtropfen lassen.",
+     "Couscous auflockern, Öl und Zitronensaft unterrühren, Thunfisch und Mais unterheben, pfeffern."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 10,
+    "aktiv": 5,
+    "schritte": [
+     "Couscous, Brühpulver und 200 ml Wasser in einer mikrowellenfesten Schüssel bei 800 Watt 2,5 Minuten erhitzen, abdecken, 5 Minuten quellen lassen.",
+     "Auflockern und mit Öl, Zitrone, Thunfisch und Mais mischen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "eiweiss",
+   "box"
+  ],
+  "tipp": "Den restlichen Mais am selben Tag aufbrauchen, zum Beispiel morgens im Wrap.",
+  "foto": "couscous salad with flaked tuna, sweet corn and lemon wedge in a bowl"
+ },
+ {
+  "id": "U19",
+  "titel": "Bulgur mit Sojaschnetzeln in Tomatensalsa",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "sojagranulat",
+    80
+   ],
+   [
+    "bulgur",
+    200
+   ],
+   [
+    "tomatensalsa",
+    300
+   ],
+   [
+    "kidney_dose",
+    125
+   ],
+   [
+    "gemuesebruehe",
+    8
+   ],
+   [
+    "paprikapulver",
+    3
+   ],
+   [
+    "rapsoel",
+    30
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 20,
+    "aktiv": 8,
+    "schritte": [
+     "Sojaschnetzel mit 4 g Brühpulver in eine Schüssel geben, 300 ml kochendes Wasser darübergießen und 10 Minuten quellen lassen.",
+     "Bulgur mit restlichem Brühpulver und Paprikapulver in eine zweite Schüssel geben, 400 ml kochendes Wasser darübergießen, abdecken, 15 Minuten quellen lassen.",
+     "Sojaschnetzel abgießen und gut ausdrücken, mit Öl, Salsa und abgespülten Bohnen mischen.",
+     "Bulgur auflockern und mit der Soja-Salsa servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 18,
+    "aktiv": 7,
+    "schritte": [
+     "Sojaschnetzel mit Brühpulver und 300 ml Wasser bei 800 Watt 4 Minuten garen, 5 Minuten stehen lassen, ausdrücken.",
+     "Bulgur mit 400 ml Wasser abgedeckt bei 800 Watt 5 Minuten garen, 5 Minuten ziehen lassen.",
+     "Schnetzel mit Öl, Salsa und Bohnen 2 Minuten erhitzen und zum Bulgur geben."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "guenstig",
+   "eiweiss",
+   "box"
+  ],
+  "tipp": "Sojaschnetzel gut ausdrücken, dann nehmen sie die Salsa besser auf.",
+  "foto": "bulgur wheat with textured soy chunks in chunky tomato salsa and kidney beans"
+ },
+ {
+  "id": "U20",
+  "titel": "Mikrowellen-Süßkartoffel mit Bohnen und Salsa",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "suesskartoffel",
+    400
+   ],
+   [
+    "kidney_dose",
+    125
+   ],
+   [
+    "mais_dose",
+    100
+   ],
+   [
+    "tomatensalsa",
+    100
+   ],
+   [
+    "avocado",
+    0.5,
+    "stk"
+   ],
+   [
+    "salz",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 18,
+    "aktiv": 5,
+    "schritte": [
+     "Süßkartoffeln waschen und rundherum mehrmals mit der Gabel einstechen.",
+     "Auf einem Teller bei 800 Watt 5 Minuten garen, wenden, weitere 4 bis 6 Minuten garen, bis sie ganz weich sind. 2 Minuten ruhen lassen.",
+     "Bohnen und Mais abspülen, mit der Salsa mischen und bei 800 Watt 1,5 Minuten erhitzen.",
+     "Süßkartoffeln längs aufschneiden, salzen, Bohnenmischung und Avocadowürfel hineingeben."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "guenstig"
+  ],
+  "tipp": "Eine angeschnittene Avocado mit Kern hält sich bis zum nächsten Tag besser; ohne Kühlschrank lieber ganz aufessen.",
+  "foto": "microwave baked sweet potatoes split open and filled with kidney beans, corn, salsa and avocado"
+ },
+ {
+  "id": "U21",
+  "titel": "Mikrowellen-Kartoffeln mit Hering in Tomatensoße",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "kartoffel",
+    500
+   ],
+   [
+    "hering_tomate",
+    200
+   ],
+   [
+    "zwiebel",
+    0.5,
+    "stk"
+   ],
+   [
+    "salz",
+    1
+   ],
+   [
+    "pfeffer",
+    0.5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 15,
+    "aktiv": 5,
+    "schritte": [
+     "Kartoffeln waschen, große halbieren und mehrmals mit der Gabel einstechen.",
+     "Mit 3 EL Wasser in eine mikrowellenfeste Schüssel geben, abdecken und bei 800 Watt 5 Minuten garen, wenden, weitere 4 bis 5 Minuten garen, bis ein Messer leicht hineingleitet.",
+     "2 Minuten abgedeckt ruhen lassen. Zwiebel in feine Ringe schneiden.",
+     "Kartoffeln aufschneiden, salzen und pfeffern, Heringsfilets mit Soße und Zwiebelringe darauf verteilen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "guenstig",
+   "eiweiss"
+  ],
+  "tipp": "Der Hering kommt kalt auf die heißen Kartoffeln, so musst du die Dose nicht erhitzen.",
+  "foto": "steamed potatoes with herring fillets in tomato sauce and thin onion rings on a plate"
+ },
+ {
+  "id": "U22",
+  "titel": "Gemüse-Couscous mit Feta aus der Mikrowelle",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "couscous",
+    100
+   ],
+   [
+    "tk_kaisergemuese",
+    300
+   ],
+   [
+    "feta",
+    100
+   ],
+   [
+    "olivenoel",
+    10
+   ],
+   [
+    "gemuesebruehe",
+    3
+   ],
+   [
+    "oregano",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 15,
+    "aktiv": 5,
+    "schritte": [
+     "TK-Gemüse mit 2 EL Wasser in eine mikrowellenfeste Schüssel geben, abdecken und bei 800 Watt 4 Minuten garen, umrühren, weitere 3 Minuten garen, bis es durch und durch heiß ist.",
+     "Couscous, Brühpulver und 160 ml Wasser in eine zweite Schüssel geben, bei 800 Watt 2,5 Minuten erhitzen, abdecken und 5 Minuten quellen lassen.",
+     "Couscous auflockern, mit Öl, Oregano und Gemüse mischen.",
+     "Feta darüberbröseln."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "guenstig",
+   "schnell"
+  ],
+  "tipp": "Ein Beutel TK-Gemüse reicht für zwei bis drei Mahlzeiten. Ohne Gefrierfach kaufst du ihn erst am Tag des Kochens und garst ihn ganz.",
+  "foto": "couscous mixed with steamed mixed vegetables, crumbled feta and oregano"
+ },
+ {
+  "id": "U23",
+  "titel": "Gnocchi mit Tomatensoße und Mozzarella",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "gnocchi",
+    350
+   ],
+   [
+    "passata",
+    150
+   ],
+   [
+    "mozzarella",
+    1,
+    "stk"
+   ],
+   [
+    "italien_kraeuter",
+    1
+   ],
+   [
+    "salz",
+    1
+   ],
+   [
+    "pfeffer",
+    0.5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 10,
+    "aktiv": 4,
+    "schritte": [
+     "Gnocchi mit 3 EL Wasser in eine mikrowellenfeste Schüssel geben, abdecken und bei 800 Watt 2 Minuten garen, umrühren, weitere 2 Minuten garen.",
+     "Wasser abgießen. Passata, Kräuter, Salz und Pfeffer unterrühren.",
+     "Mozzarella zerzupfen und darauflegen.",
+     "Abgedeckt bei 800 Watt 2 Minuten erhitzen, bis der Käse schmilzt und alles dampfend heiß ist."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "schnell",
+   "guenstig"
+  ],
+  "tipp": "Die restlichen Gnocchi aus der angebrochenen Packung kommen gut verschlossen in den Kühlschrank und werden am nächsten Tag gegessen.",
+  "foto": "gnocchi in tomato sauce topped with melted torn mozzarella and herbs in a bowl"
+ },
+ {
+  "id": "U24",
+  "titel": "Bulgur-Salat mit Gurke, Tomate und Feta",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "bulgur",
+    240
+   ],
+   [
+    "gurke",
+    1,
+    "stk"
+   ],
+   [
+    "tomate",
+    4,
+    "stk"
+   ],
+   [
+    "feta",
+    150
+   ],
+   [
+    "olivenoel",
+    30
+   ],
+   [
+    "zitrone",
+    1,
+    "stk"
+   ],
+   [
+    "salz",
+    2
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 25,
+    "aktiv": 12,
+    "schritte": [
+     "Bulgur mit 1 TL Salz in eine Schüssel geben, 400 ml kochendes Wasser darübergießen, abdecken und 15 Minuten quellen lassen.",
+     "Währenddessen Gurke und Tomaten würfeln, Zitrone auspressen.",
+     "Bulgur auflockern und etwas abkühlen lassen, dann mit Gemüse, Olivenöl, Zitronensaft und Pfeffer mischen.",
+     "Feta darüberbröseln. Die zweite Portion sofort in eine Box füllen und in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 20,
+    "aktiv": 10,
+    "schritte": [
+     "Bulgur mit Salz und 400 ml Wasser abgedeckt bei 800 Watt 5 Minuten garen, 10 Minuten ziehen lassen.",
+     "Gemüse würfeln und alles wie oben mischen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "box",
+   "guenstig"
+  ],
+  "tipp": "Wird kalt gegessen. Die Box zur Arbeit nur mit Kühlschrank oder Kühltasche vorbereiten.",
+  "foto": "fresh bulgur salad with cucumber, tomato cubes and crumbled feta in a lunch box"
+ },
+ {
+  "id": "U25",
+  "titel": "Bulgur mit Linsen, Zwiebel und Joghurt",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "bulgur",
+    200
+   ],
+   [
+    "linsen_dose",
+    400
+   ],
+   [
+    "zwiebel",
+    1,
+    "stk"
+   ],
+   [
+    "joghurt_becher",
+    2,
+    "stk"
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "kreuzkuemmel",
+    3
+   ],
+   [
+    "gemuesebruehe",
+    6
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 22,
+    "aktiv": 8,
+    "schritte": [
+     "Zwiebel fein würfeln. Linsen abgießen und abspülen.",
+     "Bulgur, Brühpulver, Kreuzkümmel, Öl und Zwiebel in eine große Schüssel geben, die Linsen obenauf.",
+     "450 ml Wasser aufkochen, darübergießen, abdecken und 15 Minuten quellen lassen. Die Linsen werden dabei heiß.",
+     "Umrühren und jede Portion mit einem Becher Joghurt servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 15,
+    "aktiv": 6,
+    "schritte": [
+     "Bulgur, Brühpulver, Kreuzkümmel, Öl, Zwiebel und 400 ml Wasser abgedeckt bei 800 Watt 5 Minuten garen.",
+     "Linsen unterrühren, weitere 3 Minuten erhitzen, bis alles dampfend heiß ist, 5 Minuten ziehen lassen.",
+     "Mit Joghurt servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "guenstig",
+   "eiweiss"
+  ],
+  "tipp": "Joghurt im Einzelbecher brauchst du ohne Kühlschrank gleich auf. Ohne Kühlschrank kochst du nur so viel, wie du sofort isst.",
+  "foto": "bulgur pilaf with brown lentils and onions, two small bowls of natural yogurt"
+ },
+ {
+  "id": "U26",
+  "titel": "Kichererbsen-Couscous mit Erdnusssoße",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "couscous",
+    100
+   ],
+   [
+    "kichererbsen_dose",
+    240
+   ],
+   [
+    "erdnussmus",
+    25
+   ],
+   [
+    "sojasauce",
+    15
+   ],
+   [
+    "currypulver",
+    2
+   ],
+   [
+    "tomate",
+    1,
+    "stk"
+   ],
+   [
+    "gemuesebruehe",
+    3
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 12,
+    "aktiv": 6,
+    "schritte": [
+     "Couscous und Brühpulver in eine Schüssel geben, 160 ml kochendes Wasser darübergießen, abdecken, 5 Minuten quellen lassen.",
+     "Kichererbsen abspülen, in einen Becher geben, mit kochendem Wasser bedecken und 3 Minuten stehen lassen, dann abgießen.",
+     "Erdnussmus, Sojasauce und Curry mit 3 EL heißem Wasser glatt rühren.",
+     "Couscous auflockern, Kichererbsen und Tomatenwürfel daraufgeben, Erdnusssoße darüberträufeln."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 10,
+    "aktiv": 5,
+    "schritte": [
+     "Couscous, Brühpulver und 160 ml Wasser bei 800 Watt 2,5 Minuten erhitzen, abdecken, 5 Minuten quellen lassen.",
+     "Kichererbsen abgedeckt bei 800 Watt 1,5 Minuten erhitzen.",
+     "Soße anrühren und alles wie oben anrichten."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "eiweiss"
+  ],
+  "tipp": "Die Erdnusssoße geht auch mit Wasser aus der Leitung, wird dann aber dicker.",
+  "foto": "couscous bowl with chickpeas, tomato pieces and creamy peanut curry sauce drizzle"
+ },
+ {
+  "id": "U27",
+  "titel": "Thunfisch-Bohnen-Salat mit Brot",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "thunfisch",
+    140
+   ],
+   [
+    "kidney_dose",
+    250
+   ],
+   [
+    "mais_dose",
+    140
+   ],
+   [
+    "rote_zwiebel",
+    0.5,
+    "stk"
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "essig",
+    15
+   ],
+   [
+    "mischbrot",
+    1,
+    "stk"
+   ],
+   [
+    "salz",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 8,
+    "aktiv": 8,
+    "schritte": [
+     "Thunfisch, Bohnen und Mais abgießen, Bohnen und Mais kurz abspülen.",
+     "Zwiebel fein würfeln.",
+     "Öl, Essig und Salz in einer Box verrühren, alles dazugeben und mischen.",
+     "Mit Brot essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "eiweiss",
+   "box"
+  ],
+  "tipp": "Ohne Kühlschrank den Salat erst kurz vor der Pause anmachen und innerhalb von 2 Stunden essen.",
+  "foto": "tuna salad with kidney beans, sweet corn and red onion in a lunch box, slice of rye bread"
+ },
+ {
+  "id": "U28",
+  "titel": "Hummus-Gemüse-Wraps",
+  "mahlzeit": [
+   "mittag"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "tortilla",
+    3,
+    "stk"
+   ],
+   [
+    "hummus",
+    120
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "gurke",
+    100
+   ],
+   [
+    "salz",
+    0.5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 8,
+    "aktiv": 8,
+    "schritte": [
+     "Paprika und Gurke in dünne Streifen schneiden.",
+     "Tortillas mit Hummus bestreichen, dabei einen Rand frei lassen.",
+     "Gemüse darauflegen, leicht salzen, Seiten einschlagen und fest aufrollen.",
+     "In Papier oder Folie wickeln und halbieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "schnell",
+   "box",
+   "einhand"
+  ],
+  "tipp": "Fest gewickelt in Papier halten die Wraps in der Box und lassen sich mit einer Hand essen.",
+  "foto": "three rolled tortilla wraps with hummus, red pepper and cucumber strips, cut in halves"
+ },
+ {
+  "id": "U29",
+  "titel": "Puten-Frischkäse-Wraps",
+  "mahlzeit": [
+   "mittag"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "tortilla",
+    3,
+    "stk"
+   ],
+   [
+    "frischkaese",
+    80
+   ],
+   [
+    "putenbrust_aufschnitt",
+    150
+   ],
+   [
+    "eisberg",
+    60
+   ],
+   [
+    "tomate",
+    1,
+    "stk"
+   ],
+   [
+    "pfeffer",
+    0.5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 8,
+    "aktiv": 8,
+    "schritte": [
+     "Salat in Streifen, Tomate in dünne Scheiben schneiden.",
+     "Tortillas mit Frischkäse bestreichen und pfeffern.",
+     "Putenbrust, Salat und Tomate darauflegen, fest aufrollen und in Papier wickeln."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "schnell",
+   "box",
+   "einhand",
+   "lkw",
+   "eiweiss"
+  ],
+  "tipp": "Aufschnitt und Frischkäse brauchen Kühlung. Im LKW eine Kühlbox oder Kühltasche mit Kühlakku nutzen.",
+  "foto": "rolled wraps filled with turkey slices, cream cheese, lettuce and tomato"
+ },
+ {
+  "id": "U30",
+  "titel": "Couscous-Box mit Makrele, Paprika und Mais",
+  "mahlzeit": [
+   "mittag"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "couscous",
+    100
+   ],
+   [
+    "makrele_dose",
+    125
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "mais_dose",
+    100
+   ],
+   [
+    "olivenoel",
+    10
+   ],
+   [
+    "zitrone",
+    0.5,
+    "stk"
+   ],
+   [
+    "gemuesebruehe",
+    3
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 15,
+    "aktiv": 8,
+    "schritte": [
+     "Couscous und Brühpulver in eine Box geben, 160 ml kochendes Wasser darübergießen, abdecken und 5 Minuten quellen lassen.",
+     "Paprika würfeln, Mais abtropfen lassen, Makrele in Stücke zupfen.",
+     "Couscous auflockern, mit Öl und Zitronensaft mischen, abkühlen lassen.",
+     "Paprika, Mais und Makrele unterheben, Box verschließen."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 15,
+    "aktiv": 8,
+    "schritte": [
+     "Couscous, Brühpulver und 160 ml Wasser bei 800 Watt 2,5 Minuten erhitzen, abdecken, 5 Minuten quellen lassen.",
+     "Weiter wie oben."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "box",
+   "eiweiss",
+   "guenstig"
+  ],
+  "tipp": "Mit Fisch nur bis zum nächsten Tag im Kühlschrank aufheben.",
+  "foto": "couscous lunch box with mackerel pieces, diced red pepper and sweet corn"
+ },
+ {
+  "id": "U31",
+  "titel": "Linsensalat mit Feta und Tomate",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "linsen_dose",
+    400
+   ],
+   [
+    "feta",
+    75
+   ],
+   [
+    "tomate",
+    2,
+    "stk"
+   ],
+   [
+    "rote_zwiebel",
+    0.5,
+    "stk"
+   ],
+   [
+    "balsamico",
+    15
+   ],
+   [
+    "olivenoel",
+    15
+   ],
+   [
+    "salz",
+    1
+   ],
+   [
+    "pfeffer",
+    0.5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 8,
+    "aktiv": 8,
+    "schritte": [
+     "Linsen abgießen und gut abspülen.",
+     "Tomaten und Zwiebel würfeln.",
+     "Balsamico, Öl, Salz und Pfeffer in der Box verrühren, Linsen und Gemüse unterheben.",
+     "Feta darüberbröseln."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "schnell",
+   "guenstig",
+   "box",
+   "eiweiss"
+  ],
+  "tipp": "Zieht der Salat über Nacht durch, schmeckt er am nächsten Tag noch besser.",
+  "foto": "brown lentil salad with tomato, red onion and crumbled feta in a lunch box"
+ },
+ {
+  "id": "U32",
+  "titel": "Leberwurstbrot-Box mit Tomate und Apfel",
+  "mahlzeit": [
+   "mittag"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "vollkornbrot",
+    3,
+    "stk"
+   ],
+   [
+    "leberwurst_dose",
+    125
+   ],
+   [
+    "tomate",
+    1,
+    "stk"
+   ],
+   [
+    "apfel",
+    1,
+    "stk"
+   ],
+   [
+    "senf",
+    5,
+    "",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 5,
+    "aktiv": 5,
+    "schritte": [
+     "Brotscheiben mit der Leberwurst bestreichen, nach Wunsch etwas Senf darauf.",
+     "Tomate in Scheiben schneiden und auflegen, Brote zusammenklappen.",
+     "Mit dem ganzen Apfel in die Box packen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "lkw",
+   "box"
+  ],
+  "tipp": "Die kleine Leberwurstdose ist genau eine Mahlzeit, so bleibt ohne Kühlschrank kein Rest.",
+  "foto": "lunch box with rye bread sandwiches with liver sausage spread and tomato, a whole apple"
+ },
+ {
+  "id": "U33",
+  "titel": "Schinken-Käse-Sandwich aus dem Sandwichmaker",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "toast",
+    6,
+    "stk"
+   ],
+   [
+    "kochschinken",
+    4,
+    "stk"
+   ],
+   [
+    "gouda",
+    4,
+    "stk"
+   ],
+   [
+    "senf",
+    10
+   ],
+   [
+    "tomate",
+    1,
+    "stk",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "sandwichmaker"
+    ],
+    "zeit": 10,
+    "aktiv": 5,
+    "schritte": [
+     "Sandwichmaker 3 Minuten vorheizen.",
+     "3 Toastscheiben dünn mit Senf bestreichen, mit je einer Scheibe Schinken und Gouda belegen, nach Wunsch Tomatenscheiben dazu, mit den restlichen Scheiben abdecken.",
+     "Im Sandwichmaker 3 bis 4 Minuten goldbraun backen, bis der Käse geschmolzen ist."
+    ]
+   },
+   {
+    "geraete": [
+     "toaster"
+    ],
+    "zeit": 6,
+    "aktiv": 5,
+    "schritte": [
+     "Toastscheiben im Toaster rösten.",
+     "Heiß mit Senf, Schinken und Gouda belegen und zusammenklappen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "schnell",
+   "box",
+   "einhand",
+   "eiweiss"
+  ],
+  "tipp": "Abgekühlt in Papier gewickelt sind die Sandwiches auch ein gutes Pausenbrot.",
+  "foto": "golden pressed ham and cheese toast sandwiches cut diagonally with melted cheese"
+ },
+ {
+  "id": "U34",
+  "titel": "Thunfisch-Mais-Käse-Toast",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "toast",
+    4,
+    "stk"
+   ],
+   [
+    "thunfisch",
+    140
+   ],
+   [
+    "mais_dose",
+    60
+   ],
+   [
+    "frischkaese",
+    30
+   ],
+   [
+    "reibekaese",
+    60
+   ],
+   [
+    "pfeffer",
+    0.5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "sandwichmaker"
+    ],
+    "zeit": 10,
+    "aktiv": 6,
+    "schritte": [
+     "Sandwichmaker vorheizen. Thunfisch gut abtropfen lassen.",
+     "Thunfisch, Mais, Frischkäse und Pfeffer mit der Gabel verrühren.",
+     "Auf 2 Toastscheiben verteilen, mit geriebenem Käse bestreuen, mit den anderen Scheiben abdecken.",
+     "3 bis 4 Minuten backen, bis der Käse geschmolzen und die Füllung heiß ist."
+    ]
+   },
+   {
+    "geraete": [
+     "toaster"
+    ],
+    "zeit": 7,
+    "aktiv": 6,
+    "schritte": [
+     "Toast im Toaster rösten.",
+     "Thunfischmischung mit dem geriebenen Käse verrühren, auf den heißen Toast streichen und zusammenklappen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "schnell",
+   "eiweiss",
+   "box"
+  ],
+  "tipp": "Den Thunfisch gut ausdrücken, sonst wird der Toast matschig.",
+  "foto": "two pressed tuna melt toast sandwiches with sweet corn and melted cheese"
+ },
+ {
+  "id": "U35",
+  "titel": "Bohnen-Käse-Quesadilla",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "tortilla",
+    3,
+    "stk"
+   ],
+   [
+    "kidney_dose",
+    125
+   ],
+   [
+    "mais_dose",
+    100
+   ],
+   [
+    "reibekaese",
+    60
+   ],
+   [
+    "tomatensalsa",
+    60
+   ],
+   [
+    "kreuzkuemmel",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "sandwichmaker"
+    ],
+    "zeit": 15,
+    "aktiv": 8,
+    "schritte": [
+     "Sandwichmaker vorheizen. Bohnen und Mais abspülen, Bohnen mit der Gabel grob zerdrücken, mit Kreuzkümmel mischen.",
+     "Auf je eine Tortillahälfte Bohnen, Mais und Käse geben, Tortilla zuklappen.",
+     "Nacheinander im Sandwichmaker 3 bis 4 Minuten backen, bis der Käse geschmolzen ist.",
+     "In Stücke schneiden und mit Salsa dippen."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 10,
+    "aktiv": 6,
+    "schritte": [
+     "Füllung wie oben auf die Tortillas geben und zuklappen.",
+     "Einzeln auf einem Teller bei 800 Watt 1 Minute erhitzen, bis der Käse geschmolzen ist.",
+     "Mit Salsa essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "guenstig",
+   "einhand"
+  ],
+  "tipp": "Aus dem Sandwichmaker wird die Tortilla knusprig, aus der Mikrowelle bleibt sie weich.",
+  "foto": "crispy folded quesadillas with beans, corn and melted cheese, small bowl of salsa"
+ },
+ {
+  "id": "U36",
+  "titel": "Studentenfutter selbst gemischt",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "erdnuesse",
+    100
+   ],
+   [
+    "mandeln",
+    60
+   ],
+   [
+    "rosinen",
+    80
+   ],
+   [
+    "zartbitter",
+    40
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 3,
+    "aktiv": 3,
+    "schritte": [
+     "Schokolade in kleine Stücke brechen.",
+     "Alle Zutaten in einer Dose oder einem Gefrierbeutel mischen.",
+     "In vier Portionen teilen, etwa eine gute Handvoll je Portion."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 24,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "lkw",
+   "einhand"
+  ],
+  "tipp": "Selbst gemischt ist günstiger als fertige Mischungen. Bei Hitze im Führerhaus die Schokolade weglassen.",
+  "foto": "homemade trail mix with peanuts, almonds, raisins and dark chocolate pieces in a jar"
+ },
+ {
+  "id": "U37",
+  "titel": "Reiswaffeln mit Erdnussmus und Apfel",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "reiswaffel",
+    4,
+    "stk"
+   ],
+   [
+    "erdnussmus",
+    25
+   ],
+   [
+    "apfel",
+    1,
+    "stk"
+   ],
+   [
+    "zimt",
+    0.5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 4,
+    "aktiv": 4,
+    "schritte": [
+     "Reiswaffeln dünn mit Erdnussmus bestreichen.",
+     "Apfel in dünne Spalten schneiden, auflegen und mit Zimt bestreuen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig"
+  ],
+  "tipp": "Erst kurz vor dem Essen belegen, sonst werden die Reiswaffeln weich.",
+  "foto": "rice cakes spread with peanut butter topped with thin apple slices and cinnamon"
+ },
+ {
+  "id": "U38",
+  "titel": "Skyr-Becher mit Honig, Hafer und Walnüssen",
+  "mahlzeit": [
+   "snack",
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "skyr_becher",
+    1,
+    "stk"
+   ],
+   [
+    "haferflocken",
+    20
+   ],
+   [
+    "honig",
+    10
+   ],
+   [
+    "walnuesse",
+    15
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 3,
+    "aktiv": 3,
+    "schritte": [
+     "Becher öffnen, Haferflocken und gehackte Walnüsse direkt hineinstreuen.",
+     "Mit Honig beträufeln, umrühren und sofort essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "eiweiss"
+  ],
+  "tipp": "Ohne Kühlschrank den Becher am Tag des Einkaufs kaufen und innerhalb von 2 Stunden essen.",
+  "foto": "single cup of skyr topped with oats, chopped walnuts and honey drizzle"
+ },
+ {
+  "id": "U39",
+  "titel": "Schnelle Tomatensuppe mit Knäckebrot",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "tomatenmark",
+    60
+   ],
+   [
+    "gemuesebruehe",
+    6
+   ],
+   [
+    "olivenoel",
+    10
+   ],
+   [
+    "paprikapulver",
+    1
+   ],
+   [
+    "zucker",
+    3
+   ],
+   [
+    "knaeckebrot",
+    3,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 5,
+    "aktiv": 3,
+    "schritte": [
+     "Tomatenmark, Brühpulver, Paprikapulver, Zucker und Öl in einen großen Becher geben.",
+     "350 ml Wasser aufkochen, erst einen Schluck dazugeben und glatt rühren, dann den Rest aufgießen.",
+     "Knäckebrot dazu essen oder hineinbröseln."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 5,
+    "aktiv": 2,
+    "schritte": [
+     "Alle Zutaten außer Knäckebrot mit 350 ml Wasser in einem großen Becher verrühren und bei 800 Watt 3 Minuten erhitzen, umrühren.",
+     "Mit Knäckebrot essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "lkw"
+  ],
+  "tipp": "Tomatenmark in der Tube hält geöffnet länger als die Dose.",
+  "foto": "mug of smooth tomato soup with crispbread on the side"
+ },
+ {
+  "id": "U40",
+  "titel": "Dattel-Hafer-Becher",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "haferflocken",
+    40
+   ],
+   [
+    "datteln",
+    4,
+    "stk"
+   ],
+   [
+    "zimt",
+    0.5
+   ],
+   [
+    "sonnenblumenkerne",
+    10
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 6,
+    "aktiv": 2,
+    "schritte": [
+     "Datteln klein schneiden und mit Haferflocken und Zimt in einen Becher geben.",
+     "150 ml Wasser aufkochen, darübergießen, umrühren und abgedeckt 4 Minuten quellen lassen.",
+     "Mit Sonnenblumenkernen bestreuen und löffeln."
+    ]
+   },
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 5,
+    "aktiv": 2,
+    "schritte": [
+     "Alles mit 150 ml Wasser in einen großen Becher geben, bei 800 Watt 1,5 Minuten erhitzen, umrühren, 2 Minuten quellen lassen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "unterkunft",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "lkw"
+  ],
+  "tipp": "Die Datteln süßen den Becher, Zucker brauchst du nicht.",
+  "foto": "mug of warm oat porridge with chopped dates and sunflower seeds"
+ }
+]
