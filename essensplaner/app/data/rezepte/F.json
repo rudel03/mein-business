@@ -352,11 +352,11 @@
   "zutaten": [
    [
     "vollkornbrot",
-    120
+    130
    ],
    [
     "frischkaese",
-    40
+    50
    ],
    [
     "gurke",
@@ -765,7 +765,7 @@
   "zutaten": [
    [
     "vollkornbrot",
-    100
+    120
    ],
    [
     "avocado",
@@ -994,7 +994,7 @@
    }
   ],
   "lager": {
-   "kuehl_tage": 2,
+   "kuehl_tage": 1,
    "einfrierbar": false,
    "ungekuehlt_h": 2,
    "kalt_essbar": true,
@@ -2399,5 +2399,1102 @@
   ],
   "tipp": "Die Gnocchi musst du nicht vorkochen, sie garen in der Tomatensoße.",
   "foto": "baked gnocchi in tomato sauce with melted mozzarella and zucchini in a baking dish"
+ },
+ {
+  "id": "F31",
+  "titel": "Kartoffel-Möhren-Suppe mit Brot",
+  "mahlzeit": [
+   "abend",
+   "mittag"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "kartoffel",
+    1200
+   ],
+   [
+    "moehre",
+    300
+   ],
+   [
+    "lauch",
+    1,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "gemuesebruehe",
+    15
+   ],
+   [
+    "rapsoel",
+    30
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "mischbrot",
+    300
+   ],
+   [
+    "wiener",
+    4,
+    "stk",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf",
+     "puerierstab"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Kartoffeln und Möhren schälen und würfeln, Lauch längs aufschneiden, waschen und in Ringe schneiden, Zwiebel würfeln.",
+     "Öl im großen Topf erhitzen, Zwiebel und Lauch 3 Minuten anschwitzen.",
+     "Kartoffeln, Möhren, 1,2 l Wasser und Brühpulver dazugeben, aufkochen und 20 Minuten köcheln, bis alles weich ist.",
+     "Mit dem Pürierstab fein pürieren, mit Salz und Pfeffer abschmecken.",
+     "Wer mag, schneidet Würstchen in Scheiben und lässt sie 5 Minuten in der Suppe heiß werden. Mit Brot servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Gemüse wie oben schneiden und anschwitzen, mit Wasser und Brühe 20 Minuten weich kochen.",
+     "Mit einer Gabel oder einem Kartoffelstampfer grob zerdrücken, abschmecken und mit Brot servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "topf"
+  },
+  "mealprep": true,
+  "tags": [
+   "familie",
+   "kinder",
+   "guenstig",
+   "kochtag"
+  ],
+  "tipp": "Die Suppe dickt im Kühlschrank nach. Gib beim Aufwärmen einen Schluck Wasser dazu und lass sie einmal kräftig aufkochen.",
+  "foto": "creamy potato carrot soup in a bowl with leek and slices of rye bread"
+ },
+ {
+  "id": "F32",
+  "titel": "Rote-Linsen-Kokos-Suppe",
+  "mahlzeit": [
+   "abend",
+   "mittag"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "rote_linsen",
+    300
+   ],
+   [
+    "kokosmilch",
+    400
+   ],
+   [
+    "moehre",
+    300
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "tomatenmark",
+    30
+   ],
+   [
+    "currypulver",
+    6
+   ],
+   [
+    "gemuesebruehe",
+    15
+   ],
+   [
+    "rapsoel",
+    15
+   ],
+   [
+    "zitrone",
+    30
+   ],
+   [
+    "salz",
+    3
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf",
+     "puerierstab"
+    ],
+    "zeit": 35,
+    "aktiv": 12,
+    "schritte": [
+     "Zwiebel und Möhren klein würfeln.",
+     "Öl im Topf erhitzen, Zwiebel 3 Minuten anschwitzen, Currypulver und Tomatenmark 1 Minute mitrösten.",
+     "Möhren, Linsen, 1 l Wasser und Brühpulver dazugeben, aufkochen und 15 Minuten köcheln, bis die Linsen zerfallen.",
+     "Kokosmilch einrühren, kurz aufkochen und fein pürieren.",
+     "Mit Zitronensaft und Salz abschmecken."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 35,
+    "aktiv": 12,
+    "schritte": [
+     "Wie oben kochen, die Linsen 20 Minuten garen, bis sie ganz zerfallen.",
+     "Kokosmilch einrühren, kräftig umrühren, mit Zitronensaft und Salz abschmecken."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "topf"
+  },
+  "mealprep": true,
+  "tags": [
+   "familie",
+   "guenstig",
+   "eiweiss",
+   "kochtag"
+  ],
+  "tipp": "Für Kinder kannst du das Currypulver halbieren und am Tisch nachwürzen.",
+  "foto": "orange red lentil coconut soup in a bowl with a swirl of coconut milk and lemon wedge"
+ },
+ {
+  "id": "F33",
+  "titel": "Pizza-Toast mit Mais und Paprika",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "toast",
+    16,
+    "stk"
+   ],
+   [
+    "passata",
+    200
+   ],
+   [
+    "reibekaese",
+    200
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "mais_dose",
+    285
+   ],
+   [
+    "oregano",
+    2
+   ],
+   [
+    "salz",
+    1
+   ],
+   [
+    "kochschinken",
+    100,
+    "",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 25,
+    "aktiv": 10,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen, Toastscheiben auf ein Blech mit Backpapier legen.",
+     "Passata mit Oregano und Salz verrühren und dünn auf die Toasts streichen.",
+     "Paprika fein würfeln, Mais abtropfen lassen und beides verteilen, nach Belieben Schinken dazu.",
+     "Mit Käse bestreuen und 10–12 Minuten backen, bis der Käse geschmolzen und leicht gebräunt ist."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 25,
+    "aktiv": 10,
+    "schritte": [
+     "Toasts wie oben belegen.",
+     "Im Airfryer bei 180 °C 5–6 Minuten backen, je nach Korbgröße in mehreren Durchgängen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "familie",
+   "kinder",
+   "guenstig",
+   "schnell"
+  ],
+  "tipp": "Lass die Kinder ihre Toasts selbst belegen. Dazu passen Gurkenscheiben oder Möhrensticks.",
+  "foto": "pizza toasts with tomato sauce, melted cheese, sweetcorn and red pepper on a baking tray"
+ },
+ {
+  "id": "F34",
+  "titel": "Milchreis mit Apfel und Zimt",
+  "mahlzeit": [
+   "abend",
+   "fruehstueck"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "reis",
+    250
+   ],
+   [
+    "milch",
+    1000
+   ],
+   [
+    "zucker",
+    40
+   ],
+   [
+    "butter",
+    15
+   ],
+   [
+    "apfel",
+    2,
+    "stk"
+   ],
+   [
+    "zimt",
+    3
+   ],
+   [
+    "salz",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 50,
+    "aktiv": 15,
+    "schritte": [
+     "Milch mit Zucker, Butter und Salz im Topf aufkochen.",
+     "Reis einrühren und bei kleinster Hitze mit Deckel 35–40 Minuten quellen lassen, alle 5 Minuten umrühren, damit nichts ansetzt.",
+     "Inzwischen Äpfel schälen, würfeln und mit 3 EL Wasser und Zimt in einer Schüssel in der Mikrowelle 3 Minuten oder im Topf 5 Minuten weich dünsten.",
+     "Milchreis mit dem Apfelkompott servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "familie",
+   "kinder",
+   "guenstig"
+  ],
+  "tipp": "Langkornreis wird nicht ganz so cremig wie Milchreis. Ein Schuss Milch am Ende hilft.",
+  "foto": "creamy rice pudding in bowls topped with warm cinnamon apple compote"
+ },
+ {
+  "id": "F35",
+  "titel": "Hähnchenkeulen mit Ofenkartoffeln und Möhren",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "haehnchen_unterschenkel",
+    800
+   ],
+   [
+    "kartoffel",
+    1200
+   ],
+   [
+    "moehre",
+    500
+   ],
+   [
+    "rapsoel",
+    40
+   ],
+   [
+    "paprikapulver",
+    6
+   ],
+   [
+    "knoblauch",
+    10
+   ],
+   [
+    "salz",
+    6
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 60,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Knoblauch fein hacken und mit Öl, Paprikapulver, Salz und Pfeffer verrühren.",
+     "Kartoffeln in Spalten und Möhren in dicke Stifte schneiden, mit der Hälfte des Würzöls auf einem Blech mischen.",
+     "Hähnchenschenkel mit dem restlichen Würzöl einreiben und auf das Gemüse legen. Danach Hände und Brett gründlich waschen.",
+     "45 Minuten backen, bis die Haut knusprig ist und an der dicksten Stelle klarer Fleischsaft austritt (Kerntemperatur mind. 75 °C)."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 60,
+    "aktiv": 15,
+    "schritte": [
+     "Würzöl anrühren, Hähnchen und Gemüse damit mischen.",
+     "Hähnchen im Airfryer bei 190 °C 25 Minuten garen, nach der Hälfte wenden, bis kein rosa Fleischsaft mehr austritt. Warm stellen.",
+     "Kartoffeln und Möhren bei 200 °C 20–25 Minuten garen, zweimal schütteln (je nach Korbgröße in 2 Durchgängen)."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "familie",
+   "kinder",
+   "guenstig",
+   "eiweiss"
+  ],
+  "tipp": "Hähnchenschenkel sind deutlich günstiger als Brustfilet und werden im Ofen saftig.",
+  "foto": "roasted chicken drumsticks with potato wedges and carrots on a baking tray"
+ },
+ {
+  "id": "F36",
+  "titel": "Chili sin Carne mit Reis",
+  "mahlzeit": [
+   "abend",
+   "mittag"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "kidney_dose",
+    500
+   ],
+   [
+    "mais_dose",
+    285
+   ],
+   [
+    "tomaten_dose",
+    800
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "paprikapulver",
+    6
+   ],
+   [
+    "kreuzkuemmel",
+    4
+   ],
+   [
+    "salz",
+    6
+   ],
+   [
+    "reis",
+    300
+   ],
+   [
+    "chiliflocken",
+    1,
+    "",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd2",
+     "topf"
+    ],
+    "zeit": 35,
+    "aktiv": 15,
+    "schritte": [
+     "Zwiebeln und Paprika würfeln.",
+     "Öl im Topf erhitzen, Zwiebeln 3 Minuten anschwitzen, Paprika, Paprikapulver und Kreuzkümmel 2 Minuten mitbraten.",
+     "Tomaten, abgespülte Bohnen und Mais dazugeben, 4 g Salz einrühren und 20 Minuten köcheln.",
+     "Gleichzeitig Reis mit 600 ml Wasser und restlichem Salz aufkochen und zugedeckt 15 Minuten garen.",
+     "Chili mit Reis servieren, Chiliflocken für Erwachsene am Tisch dazugeben."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "familie",
+   "kinder",
+   "guenstig",
+   "eiweiss",
+   "kochtag"
+  ],
+  "tipp": "Friere das Chili ohne Reis ein. Den Reis kochst du am Essenstag frisch.",
+  "foto": "bowl of vegan chili with kidney beans, corn and peppers next to white rice"
+ },
+ {
+  "id": "F37",
+  "titel": "Kartoffelpuffer mit Apfelmark",
+  "mahlzeit": [
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "kartoffel",
+    1200
+   ],
+   [
+    "eier",
+    2,
+    "stk"
+   ],
+   [
+    "mehl",
+    60
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "rapsoel",
+    60
+   ],
+   [
+    "salz",
+    5
+   ],
+   [
+    "apfelmark",
+    360
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 45,
+    "aktiv": 35,
+    "schritte": [
+     "Kartoffeln schälen und fein reiben, Zwiebel fein reiben.",
+     "Masse in einem sauberen Geschirrtuch kräftig ausdrücken.",
+     "Mit Eiern, Mehl und Salz vermengen.",
+     "Etwas Öl in der Pfanne erhitzen, je 2 EL Teig flach drücken und pro Seite 3–4 Minuten goldbraun braten.",
+     "Auf Küchenpapier abtropfen lassen und mit Apfelmark servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 45,
+    "aktiv": 20,
+    "schritte": [
+     "Ofen auf 220 °C Ober-/Unterhitze vorheizen, zwei Bleche mit Backpapier belegen und mit dem Öl bestreichen.",
+     "Kartoffelmasse wie oben zubereiten.",
+     "Flache Puffer auf die Bleche setzen und 15 Minuten backen, wenden und weitere 10 Minuten backen, bis sie goldbraun und durchgegart sind.",
+     "Mit Apfelmark servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": true,
+  "tags": [
+   "familie",
+   "kinder",
+   "guenstig"
+  ],
+  "tipp": "Gut ausgedrückte Kartoffelmasse macht die Puffer knusprig und spritzt weniger.",
+  "foto": "golden crispy potato pancakes on a plate with a bowl of apple sauce"
+ },
+ {
+  "id": "F38",
+  "titel": "Apfel mit Erdnussmus",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "apfel",
+    1,
+    "stk"
+   ],
+   [
+    "erdnussmus",
+    20
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 3,
+    "aktiv": 3,
+    "schritte": [
+     "Apfel waschen, vierteln und das Kerngehäuse entfernen.",
+     "Apfelspalten in das Erdnussmus dippen oder es daraufstreichen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 24,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "unterkunft",
+   "lkw",
+   "einhand"
+  ],
+  "tipp": "Nimm Apfel und ein kleines Glas Erdnussmus ganz mit und schneide erst vor Ort.",
+  "foto": "apple wedges with a small bowl of peanut butter for dipping"
+ },
+ {
+  "id": "F39",
+  "titel": "Gemüsesticks mit Hummus",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "moehre",
+    100
+   ],
+   [
+    "gurke",
+    100
+   ],
+   [
+    "paprika",
+    80
+   ],
+   [
+    "hummus",
+    60
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 5,
+    "aktiv": 5,
+    "schritte": [
+     "Möhre schälen, Möhre, Gurke und Paprika in Stifte schneiden.",
+     "Hummus in eine kleine Dose geben und die Sticks daneben packen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "schnell",
+   "box",
+   "kinder"
+  ],
+  "tipp": "Schneide die Sticks am Vorabend und lege sie in eine Dose mit feuchtem Küchenpapier.",
+  "foto": "colorful carrot, cucumber and red pepper sticks with a small bowl of hummus"
+ },
+ {
+  "id": "F40",
+  "titel": "Nussmix mit Rosinen",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "erdnuesse",
+    60
+   ],
+   [
+    "mandeln",
+    40
+   ],
+   [
+    "sonnenblumenkerne",
+    40
+   ],
+   [
+    "rosinen",
+    60
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 3,
+    "aktiv": 3,
+    "schritte": [
+     "Alle Zutaten in einer Schüssel mischen.",
+     "Auf vier kleine Dosen oder Beutel verteilen (je etwa eine Handvoll)."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 24,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "unterkunft",
+   "lkw",
+   "einhand"
+  ],
+  "tipp": "Verschlossen und trocken gelagert hält die Mischung mehrere Wochen.",
+  "foto": "small bowl of mixed peanuts, almonds, sunflower seeds and raisins"
+ },
+ {
+  "id": "F41",
+  "titel": "Kräuterquark-Dip mit Rohkost",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "magerquark",
+    250
+   ],
+   [
+    "milch",
+    30
+   ],
+   [
+    "rapsoel",
+    10
+   ],
+   [
+    "tk_kraeuter",
+    10
+   ],
+   [
+    "salz",
+    2
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "moehre",
+    200
+   ],
+   [
+    "gurke",
+    200
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 8,
+    "aktiv": 8,
+    "schritte": [
+     "Quark mit Milch und Öl glatt rühren.",
+     "Kräuter, Salz und Pfeffer unterrühren.",
+     "Möhren schälen, Möhren und Gurke in Stifte schneiden und mit dem Dip servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "schnell",
+   "guenstig",
+   "kinder"
+  ],
+  "tipp": "Schneide die Rohkost frisch und iss Dip und Gemüse spätestens am nächsten Tag.",
+  "foto": "bowl of herb quark dip with carrot and cucumber sticks"
+ },
+ {
+  "id": "F42",
+  "titel": "Dattel-Hafer-Energiekugeln",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "datteln",
+    100
+   ],
+   [
+    "haferflocken",
+    80
+   ],
+   [
+    "erdnussmus",
+    40
+   ],
+   [
+    "kakao",
+    10
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "puerierstab"
+    ],
+    "zeit": 20,
+    "aktiv": 15,
+    "schritte": [
+     "Datteln 10 Minuten in warmem Wasser einweichen und gut abtropfen lassen.",
+     "Datteln mit dem Pürierstab zu einer Paste pürieren.",
+     "Haferflocken, Erdnussmus und Kakao dazugeben und zu einem festen Teig verkneten.",
+     "Mit feuchten Händen 12 Kugeln formen (3 pro Portion)."
+    ]
+   },
+   {
+    "geraete": [],
+    "zeit": 25,
+    "aktiv": 20,
+    "schritte": [
+     "Datteln sehr fein hacken.",
+     "Mit Haferflocken, Erdnussmus und Kakao kräftig verkneten, bis der Teig zusammenhält.",
+     "12 Kugeln formen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 24,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": true,
+  "tags": [
+   "ohne_kuehlschrank",
+   "guenstig",
+   "unterkunft",
+   "lkw",
+   "sportnach"
+  ],
+  "tipp": "In einer Dose verschlossen bleiben die Kugeln einige Tage fest. Bei Hitze werden sie weich.",
+  "foto": "chocolate date oat energy balls on a small plate"
+ },
+ {
+  "id": "F43",
+  "titel": "Joghurt mit warmen Beeren",
+  "mahlzeit": [
+   "snack",
+   "fruehstueck"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "joghurt",
+    150
+   ],
+   [
+    "tk_beeren",
+    80
+   ],
+   [
+    "haferflocken",
+    15
+   ],
+   [
+    "honig",
+    5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "mikrowelle"
+    ],
+    "zeit": 6,
+    "aktiv": 3,
+    "schritte": [
+     "Beeren in eine mikrowellenfeste Schüssel geben und bei 600 Watt 2 Minuten erhitzen, bis sie dampfend heiß sind.",
+     "Kurz abkühlen lassen.",
+     "Joghurt in eine Schale geben, Beeren, Haferflocken und Honig darauf verteilen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 6,
+    "aktiv": 3,
+    "schritte": [
+     "Beeren in einem kleinen Topf 2 Minuten aufkochen.",
+     "Kurz abkühlen lassen und mit Joghurt, Haferflocken und Honig anrichten."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "schnell",
+   "guenstig",
+   "unterkunft"
+  ],
+  "tipp": "Tiefgekühlte Beeren immer erhitzen, bevor du sie isst. Das empfiehlt das BfR.",
+  "foto": "natural yoghurt with warm berry compote, oats and honey in a glass"
+ },
+ {
+  "id": "F44",
+  "titel": "Reiswaffeln mit Erdnussmus und Banane",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 1,
+  "zutaten": [
+   [
+    "reiswaffel",
+    3,
+    "stk"
+   ],
+   [
+    "erdnussmus",
+    15
+   ],
+   [
+    "banane",
+    0.5,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 3,
+    "aktiv": 3,
+    "schritte": [
+     "Reiswaffeln dünn mit Erdnussmus bestreichen.",
+     "Banane in Scheiben schneiden und darauflegen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 24,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "unterkunft",
+   "lkw"
+  ],
+  "tipp": "Belege die Waffeln erst kurz vor dem Essen, sonst werden sie weich.",
+  "foto": "rice cakes with peanut butter and banana slices"
+ },
+ {
+  "id": "F45",
+  "titel": "Knusprige Ofen-Kichererbsen",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "kichererbsen_dose",
+    240
+   ],
+   [
+    "rapsoel",
+    10
+   ],
+   [
+    "paprikapulver",
+    3
+   ],
+   [
+    "salz",
+    2
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 40,
+    "aktiv": 5,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Kichererbsen abspülen, abtropfen lassen und mit Küchenpapier gut trocken tupfen.",
+     "Mit Öl, Paprikapulver und Salz mischen und auf einem Blech mit Backpapier verteilen.",
+     "30–35 Minuten rösten, nach der Hälfte schütteln, bis sie knusprig sind. Auf dem Blech abkühlen lassen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 20,
+    "aktiv": 5,
+    "schritte": [
+     "Kichererbsen abspülen und gut trocken tupfen, mit Öl und Gewürzen mischen.",
+     "Im Airfryer bei 190 °C 14–16 Minuten rösten, alle 5 Minuten schütteln."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "ohne_kuehlschrank",
+   "guenstig"
+  ],
+  "tipp": "Je trockener die Kichererbsen vor dem Rösten sind, desto knuspriger werden sie.",
+  "foto": "bowl of crispy roasted chickpeas with paprika"
  }
 ]

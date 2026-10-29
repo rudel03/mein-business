@@ -175,8 +175,8 @@ test('Feste Kochtage (So + Mi): Hauptgerichte werden nur an Kochtagen oder frisc
   assert.equal(erg.ok, true);
   invarianten(erg);
   for (const k of erg.kochen) {
-    const wt = (k.kochtag + erg.profil.starttag) % 7;
-    if (k.weg.zeit > 10) assert.ok([6, 2].includes(wt) || k.kochtag === 0, `${k.titel} an Tag ${wt}`);
+    const wt = ((k.kochtag + erg.profil.starttag) % 7 + 7) % 7;
+    if (k.weg.zeit > 10) assert.ok([6, 2].includes(wt) || k.kochtag <= 0, `${k.titel} an Tag ${wt}`);
   }
 });
 

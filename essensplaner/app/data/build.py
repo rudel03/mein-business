@@ -10,7 +10,9 @@ import csv, json, glob, os, sys
 
 HIER = os.path.dirname(os.path.abspath(__file__))
 GERAETE = {"herd", "herd2", "topf", "pfanne", "ofen", "airfryer", "mikrowelle", "wasserkocher",
-           "puerierstab", "toaster", "sandwichmaker"}
+           "puerierstab", "toaster", "sandwichmaker", "omnia", "grill"}
+# Essbarer Anteil bei Zutaten, die mit Knochen gewogen werden (BLS-Werte gelten für den essbaren Teil)
+ESSBAR = {"haehnchen_unterschenkel": 0.7}
 MAHLZEITEN = {"fruehstueck", "mittag", "abend", "snack"}
 AUFWAERMEN = {"mikrowelle", "topf", "pfanne", "wasserkocher", "nein", "thermo"}
 # Zutaten, bei denen gegarte Gerichte höchstens 1 Tag im Kühlschrank bleiben (BfR/BZfE)
@@ -40,7 +42,7 @@ def lade_zutaten():
         n = {k: 0.0 for k in NAEHR}
         if code != "-":
             r = bls[code]
-            n = {k: zahl(r[k]) for k in NAEHR}
+            n = {k: zahl(r[k]) * ESSBAR.get(zid, 1) for k in NAEHR}
         out[zid] = dict(id=zid, name=name, bls=code, abt=abt, pack=pack, einheit=einheit, preis=preis,
                         stk_g=stk_g, al=al.split(), flags=flags.split(), lager=lager,
                         n100={"kcal": n["enercc"], "p": n["prot625"], "f": n["fat"], "kh": n["cho"],

@@ -17,7 +17,7 @@ import { LAEDEN } from './laeden.js';
 
 export const STANDARD_PROFIL = {
   geraete: { herd: 2, topf: true, pfanne: true, ofen: true, airfryer: false, mikrowelle: true, wasserkocher: true,
-    puerierstab: false, toaster: false, sandwichmaker: false, kuehlschrank: true, gefrier: true, thermo: false },
+    puerierstab: false, toaster: false, sandwichmaker: false, omnia: false, grill: false, kuehlschrank: true, gefrier: true, thermo: false },
   laden: 'aldi',
   eigenmarken: true,
   budget: null, // € für den ganzen Zeitraum und alle Personen, null = egal
@@ -124,7 +124,9 @@ function kochtagFuer(slot, p, kurz) {
   if (slot.m === 'fruehstueck' && kurz) spaetester = slot.d; // Frühstück macht man morgens frisch
   if (!p.kochtage || !p.kochtage.length || kurz) return Math.max(spaetester, slot.d - 1) < 0 ? slot.d : Math.max(0, spaetester);
   for (let d = spaetester; d >= 0; d--) if (p.kochtage.includes((d + p.starttag) % 7)) return d;
-  return 0; // vor dem ersten Kochtag: Planstart gilt als Kochtag
+  // Vor dem ersten Kochtag im Plan: ist der Tag vor Planbeginn ein Kochtag (z. B. Sonntag), wird dort gekocht,
+  // sonst gilt der erste Plantag als Kochtag.
+  return p.kochtage.includes((p.starttag + 6) % 7) ? -1 : 0;
 }
 
 // ---------------------------------------------------------------- Bewertung
@@ -162,7 +164,7 @@ function bewerte(plan, ctx) {
     strafe += (p.makros ? 300 : 120) * dk * dk;
     if (p.makros) {
       const dp = (t.p - ziel.p) / Math.max(ziel.p, 1);
-      strafe += (dp < 0 ? 260 : 60) * dp * dp;
+      strafe += (dp < 0 ? 900 : 40) * dp * dp;
       if (!ziel.khFettWeich) {
         const dkh = (t.kh - ziel.kh) / Math.max(ziel.kh, 1);
         const df = (t.f - ziel.f) / Math.max(ziel.f, 1);

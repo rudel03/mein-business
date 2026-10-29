@@ -72,7 +72,7 @@ export function vorkochAblauf(kochen, p) {
       }
     }
     out.push({
-      d, wochentag: TAGE[(d + p.starttag) % 7], dauer: gesamt, aktiv: schritte.reduce((s, x) => s + x.aktiv, 0), schritte, boxen,
+      d, wochentag: TAGE[((d + p.starttag) % 7 + 7) % 7] + (d < 0 ? " (vor Planbeginn)" : ""), dauer: gesamt, aktiv: schritte.reduce((s, x) => s + x.aktiv, 0), schritte, boxen,
       abschluss: [
         'Gerichte zügig abkühlen lassen (flache Boxen, Deckel erst schließen, wenn nur noch lauwarm) und innerhalb von etwa 2 Stunden in den Kühlschrank stellen.',
         'Jede Box mit Inhalt, Kochdatum und „essen bis“ beschriften.',
