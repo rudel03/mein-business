@@ -17,10 +17,10 @@ Stand 29.10.2026 · Grundlage: Markenbücher (`marke/*/Markenbuch_*.md`), Claim-
 2. **Test 1 – Angle-Test:** 1 Kampagne „Leads“ (Optimierung auf bestätigte Warteliste-Anmeldung bzw. Tagesplan-Start), 1 Anzeigengruppe Broad (Land DE, Alter laut Marke, Sprache Deutsch), **8 Bild-Anzeigen + 3 Videos** (je Angle eine). Budget **15 €/Tag, 10 Tage = max. 150 € je Marke**. Kein Eingreifen in den ersten 72 h.
 3. **Auswertung nach 10 Tagen:** Gewinner = niedrigste Kosten je bestätigtem Lead bei mindestens 1.000 Impressionen je Anzeige. Verlierer pausieren. Die 2–3 besten Angles gehen in Test 2.
 4. **Test 2 – Angebot:** Pass vs. Abo (Montage/Camping) bzw. Monat vs. Jahr (Fitness/Alltag) auf der Preisseite; gleiche Anzeigen, Ziel „Kauf“.
-5. **Abbruchregeln (aus `recherche/Entscheidungsvorlage.md`):**
-   - Kosten je bestätigtem Lead > 4 € nach 150 € → Angle/Marke stoppen, Botschaft überarbeiten.
-   - Weniger als 3 % der Leads kaufen in 30 Tagen → kein weiteres Werbegeld, nur organisch.
-   - CPA (Kauf) > 12 € dauerhaft (Ziel-CAC aus `recherche/08`) → nicht skalieren.
+5. **Abbruchregeln** (gleich wie in `recherche/Entscheidungsvorlage.md`, dort maßgeblich):
+   - Kosten je bestätigtem Lead > 3 € **oder** Kaufquote je Linkklick < 1 % → keine weitere bezahlte Werbung für diese Marke, nur organisch und B2B.
+   - Eine einzelne Anzeige stoppt nach etwa 25–30 € ohne Kauf.
+   - CPA (Kauf) dauerhaft > 12 € (Ziel-CAC aus `recherche/08`) → nicht skalieren.
 
 ## Tracking (vorbereitet, nicht aktiv)
 - Meta Pixel + Conversions API **nur auf den Landingpages und der Preisseite**, nicht im Planer (dort werden Allergien/Ziele eingegeben – keine Übertragung an Meta).
