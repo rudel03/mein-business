@@ -24,3 +24,7 @@ Stand 29.10.2026. Quellen: Advocatus Diaboli Phase A (`recherche/11`), Phase B�
 | 18 | KI-Fotos zeigen das Gericht nicht realistisch | m | n | Kennzeichnung „KI-generiert, beispielhaft“, nach dem Testkochen echte Fotos | teilweise |
 | 19 | Kleinunternehmergrenze über alle drei Projekte | m | m | Steuerberatung vor Start | offen, Inhaber |
 | 20 | Abhängigkeit von Paddle (Kontosperre, Gebühren) | n | h | Kasse über `config.js` austauschbar, Lizenzlogik unabhängig vom Zahlungsanbieter | vorbereitet |
+| 21 | Widerruf beim Jahresabo: Schlüssel bleibt 12 Monate gültig (offline keine Sperrliste) | n | n | akzeptiert (44,99 €); Ausbau möglich: erst 16-Tage-Schlüssel, nach Ablauf der Widerrufsfrist der Jahresschlüssel (Worker mit Cron) | akzeptiert |
+| 22 | Monatsabo: Kunde muss jeden Monat den neuen Schlüssel einfügen | m | m | Schlüssel bis Periodenende + 3 Tage Kulanz, Mail mit Ein-Klick-Link `preise.html#schluessel=…` als Ausbau | offen, Ausbau |
+| 23 | Jahresabo verlängert sich bei Paddle um ein Jahr, AGB sagen „danach monatlich kündbar“ (§ 309 Nr. 9 BGB) | h | h | nach 12 Monaten per Paddle-API auf Monatspreis umstellen; Preis ab Monat 13 festlegen | offen, Inhaber |
+| 24 | Wenig Abwechslung bei engen Einstellungen (z. B. nur Wasserkocher ohne Kühlschrank) | h | m | Planer meldet es offen und nennt, was hilft | erledigt |

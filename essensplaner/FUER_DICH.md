@@ -5,7 +5,7 @@ Ich habe nichts gekauft, kein Konto angelegt, nichts registriert, nichts veröff
 ## 0. Zuerst entscheiden (je 5 Minuten, Details in `ENTSCHEIDUNGEN.md`)
 - [ ] Namen behalten? Dachmarke **Tellerkontor**, Marken **Zimmerherd** (Montage), **Kochsatz** (Fitness), **Zweiflammer** (Camping), **Wochenschmaus** (Alltag).
 - [ ] Domain-Modell: eine Domain je Marke (Vorschlag SEO-Bericht) oder zuerst alles unter `tellerkontor.de`. Danach `basisUrl` in `app/public/js/config.js` setzen und `python3 tools/seiten.py && python3 tools/landing.py` ausführen (oder mich bitten).
-- [ ] Preis für Plus Jahr ab Monat 13 festlegen (heute: „danach monatlich kündbar“, Preis fehlt). **Vorher keine Kasse freischalten** (Claim-Freigabe A02).
+- [ ] Preis für Plus Jahr ab Monat 13 festlegen (heute: „danach monatlich kündbar“, Preis fehlt). **Vorher keine Kasse freischalten** (Claim-Freigabe A02). Wichtig: Paddle verlängert ein Jahresabo sonst um ein ganzes Jahr. Nach 12 Monaten muss es auf einen monatlich kündbaren Preis umgestellt werden (§ 309 Nr. 9 BGB), das baue ich in den Worker, sobald der Preis steht.
 - [ ] Wertersatz beim Widerruf: Vorschlag ist, keinen zu verlangen (einfacher, kundenfreundlich).
 - [ ] Trainings-Crawler (GPTBot, ClaudeBot, Google-Extended) erlauben oder sperren. Vorschlag: erlauben (heute in `robots.txt`).
 - [ ] Wer steht als Autor/Prüfer an den Ratgebern? (Name für E-E-A-T, darf auch „Redaktion Tellerkontor“ sein.)

@@ -154,3 +154,24 @@ Stand: 29.10.2026, ca. 16 Uhr · Rolle: Advocatus Diaboli · Grundlage: `AUFTRAG
 3. Claude: C-8, C-9, C-12, C-14 (Schlüssel in Monatsscheiben mit Auto-Abruf, ehrliche Bestätigung ohne Server, Service Worker mit Zeitlimit).
 4. Claude: D-2 (Wartelisten-Formular und Lead-PDFs), C-24 (Monotonie-Meldung), C-27 (Lighthouse-Berichte, Screenshots).
 5. Inhaber: Anwalt zu C-18/C-19/C-10 (Widerrufsmodell, Vertragspartner, Jahresabo), Preis ab Monat 13, Paddle-Sandbox, Worker, Testkauf, 20 Rezepte testkochen, Kassenbon-Test, Interviews ab November, bezahlter Montage-Test erst ab Mitte Januar (D-3), Entscheidung „eine Domain, drei Marken einfrieren“ (B-1).
+
+---
+
+## Antwort des Teams (29.10.2026, abends)
+
+| Befund | Status | Was geändert wurde |
+|---|---|---|
+| C-1 bis C-3 Frische über die Tage | **erledigt** | Einkaufstage, Haltbarkeit je Zutat seit dem Einkauf, angebrochene Dosen mit Zeitfenster, Einkaufsliste nach Einkäufen (ENTSCHEIDUNGEN C11). Invariante im Zufallstest (250 Profile, jetzt auch mit zufälliger Einkaufshäufigkeit) und 3 neue Tests: 29/29 grün |
+| C-4 Kühltasche | **erledigt** | Hinweis im Plan und Marke „Box, Kühltasche“ bei kalter Pause |
+| Datenfehler `milch`, `mais_dose` | **erledigt** | Felder korrigiert, `build.py` prüft Einheit, Preis, Packung, Lager |
+| Monotonie ohne Meldung | **erledigt** | Hinweis, wenn weniger als 40 % verschiedene Gerichte |
+| Service Worker ohne Zeitlimit | **erledigt** | nach 3 s Zwischenspeicher, offline getestet |
+| iPhone löscht Daten nach 7 Tagen | **teilweise** | Hinweis „Zum Home-Bildschirm“; Schlüssel steht in der Kauf-Mail |
+| Kündigungsseite behauptet Eingang ohne Server | **erledigt** | „noch nicht übermittelt“ + Mail-Link, E2E prüft das (27/27) |
+| Protein je € trotz Sperre | **erledigt** | nur Reihenfolge und Protein je 100 g (C12) |
+| Rezeptzahlen und BfR-Zuschreibung in Mails, SEO, Video V3 | **erledigt** | Zahlen 47/59/119 bzw. 107/67/95/66/152, Quellen BfR/FSA/USDA, V3-Endkarte mit Kühltasche |
+| Sonntagskiste | **zurückgestellt** | ENTSCHEIDUNGEN C14 |
+| Keine Warteliste, PDFs fehlen | **erledigt/in Arbeit** | Formular auf allen Landingpages (C13), PDFs per `tools/leadmagnete.mjs` |
+| Jahresabo-Verlängerung, Widerruf-Schlüssel, Monatsschlüssel | **Inhaber/Ausbau** | RISIKEN 21–23, FUER_DICH Abschnitt 0 |
+| Rechtsmodell AGB/Widerruf, Wertersatz | **Inhaber (Anwalt)** | FUER_DICH Abschnitt 5 |
+| Vier Marken zu viel | **entschieden** | eine Nische nach der anderen (A3); „drei einfrieren“ bleibt deine Option |
