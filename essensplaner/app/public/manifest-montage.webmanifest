@@ -1,0 +1,23 @@
+{
+ "name": "Zimmerherd – Wochenplan",
+ "short_name": "Zimmerherd",
+ "lang": "de",
+ "start_url": "planer.html?v=montage",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#23262B",
+ "icons": [
+  {
+   "src": "img/icon-montage-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "img/icon-montage-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
+}

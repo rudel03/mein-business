@@ -293,19 +293,19 @@ function teilen() {
 async function start() {
   $('#vname').textContent = V.name;
   $('#logo').src = `img/logo-${VARIANTE}.svg`;
-  $('#heimlink').href = `${VARIANTE}.html`;
+  $('#heimlink').href = `${VARIANTE}.html`; // Landingpage der Variante
   document.querySelectorAll('.fuss nav a').forEach((a) => { a.href += `?v=${VARIANTE}`; });
   document.title = `${V.name} – Wochenplan nach deinen Geräten`;
-  $('#claim').textContent = V.claim;
-  $('#kurz').textContent = V.kurz;
-  const schl = gespeicherteLizenz();
-  if (schl) plus = (await pruefeLizenz(schl)).ok;
-  $('#status').innerHTML = plus ? 'Plus aktiv' : `<a href="preise.html?v=${VARIANTE}">Plus</a>`;
-  daten = await (await fetch('data/daten.json')).json();
+  // Formular sofort zeigen, Rezeptdaten parallel laden (vermeidet Layout-Sprünge)
+  const laden = fetch('data/daten.json').then((r) => r.json()).then((d) => { daten = d; });
   const p = startProfil();
   $('#formular').innerHTML = formular(p);
+  $('#formular').style.minHeight = 'auto';
   const form = $('#planform');
-  form.addEventListener('submit', (ev) => { ev.preventDefault(); planen(form); });
+  const schl = gespeicherteLizenz();
+  const lizenz = schl ? pruefeLizenz(schl).then((r) => { plus = r.ok; }) : Promise.resolve();
+  lizenz.then(() => { $('#status').innerHTML = plus ? 'Plus aktiv' : `<a href="preise.html?v=${VARIANTE}">Plus</a>`; });
+  form.addEventListener('submit', async (ev) => { ev.preventDefault(); await Promise.all([laden, lizenz]); planen(form); });
   form.addEventListener('click', (ev) => {
     const b = ev.target.closest('[data-step]');
     if (!b) return;

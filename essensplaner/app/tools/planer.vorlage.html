@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wochenplan nach deinen Geräten</title>
+<meta name="description" content="Wochenplan, Einkaufsliste mit Kosten und Vorkoch-Ablauf – passend zu deinen Geräten, deinem Laden und deinem Budget. Ohne Konto, deine Daten bleiben auf dem Gerät.">
+<meta name="theme-color" content="#2c3146">
+<link rel="manifest" id="manifest" href="manifest-alltag.webmanifest">
+<link rel="icon" href="img/logo-dach.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/stil.css">
+<script>
+  // Variante so früh wie möglich setzen, damit nichts flackert
+  var TEXTE = /*TEXTE*/{};
+  (function () { var v = new URLSearchParams(location.search).get('v');
+    document.documentElement.dataset.theme = TEXTE[v] ? v : 'alltag';
+    document.getElementById('manifest').href = 'manifest-' + document.documentElement.dataset.theme + '.webmanifest'; })();
+</script>
+<script type="module" src="js/app.js"></script>
+</head>
+<body>
+<header class="kopf">
+  <div class="wrap">
+    <a href="./" id="heimlink"><img class="logo" id="logo" src="img/logo-dach.svg" alt="" width="36" height="36"><span class="name" id="vname">Planer</span></a>
+    <span class="rechts" id="status"></span>
+  </div>
+</header>
+<div class="markenband" aria-hidden="true"></div>
+<main class="wrap">
+  <section class="intro">
+    <h1 id="claim">Dein Wochenplan nach deinen Geräten</h1>
+    <p id="kurz"></p>
+    <script>(function () { var t = TEXTE[document.documentElement.dataset.theme]; document.getElementById('claim').textContent = t.claim;
+      document.getElementById('kurz').textContent = t.kurz; document.getElementById('vname').textContent = t.name;
+      document.getElementById('logo').src = 'img/logo-' + document.documentElement.dataset.theme + '.svg'; })();</script>
+    <p class="datenhinweis">Kein Konto nötig. Was du hier eingibst, bleibt in diesem Browser und wird nicht an uns gesendet.</p>
+  </section>
+  <div id="formular"><p>Planer wird geladen …</p></div>
+  <section id="ergebnis" hidden aria-labelledby="ergebnis-titel"></section>
+  <h2 id="ergebnis-titel" class="sr" tabindex="-1">Dein Plan</h2>
+</main>
+<dialog id="rezept" aria-labelledby="rezept-titel">
+  <div class="schliessen"><button class="knopf leise" type="button">Schließen</button></div>
+  <div class="inhalt"></div>
+</dialog>
+<footer class="fuss">
+  <div class="wrap">
+    <nav aria-label="Rechtliches">
+      <a href="preise.html">Preise</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a>
+      <a href="widerruf.html">Widerrufsbelehrung</a><a href="kuendigen.html">Verträge hier kündigen</a><a href="widerrufen.html">Vertrag widerrufen</a>
+    </nav>
+    <p>Ein Angebot von <span data-feld="dachmarke">Tellerkontor</span>. Nährwerte: Bundeslebensmittelschlüssel 4.0, Max Rubner-Institut (2025), CC BY 4.0. Preise sind Schätzungen. Lagerhinweise nach BfR.</p>
+  </div>
+</footer>
+</body>
+</html>

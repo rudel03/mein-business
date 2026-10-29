@@ -149,7 +149,6 @@
   "mealprep": false,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "schnell",
    "guenstig"
   ],
@@ -414,7 +413,6 @@
   "mealprep": false,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "schnell",
    "guenstig"
   ],
@@ -563,7 +561,6 @@
   "mealprep": false,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "schnell",
    "guenstig"
   ],
@@ -646,7 +643,6 @@
   "mealprep": true,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "schnell",
    "guenstig",
    "box"
@@ -733,7 +729,6 @@
   "mealprep": true,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "guenstig",
    "box",
    "eiweiss"
@@ -752,7 +747,7 @@
   "zutaten": [
    [
     "kartoffelpueree",
-    100
+    60
    ],
    [
     "milch",
@@ -781,8 +776,8 @@
     "aktiv": 5,
     "schritte": [
      "Würstchen in einen hohen Becher oder eine Schüssel legen, mit kochendem Wasser aus dem Wasserkocher bedecken und 8 Minuten ziehen lassen. Nach 4 Minuten das Wasser einmal durch frisch gekochtes ersetzen.",
-     "Währenddessen 250 ml Wasser aufkochen, mit 120 ml H-Milch in eine Schüssel geben.",
-     "Püreeflocken einrühren, 1 Minute quellen lassen und mit der Gabel aufschlagen.",
+     "Währenddessen 300 ml Wasser aufkochen, mit 120 ml H-Milch in eine Schüssel geben.",
+     "60 g Püreeflocken einrühren, 1 Minute quellen lassen und mit der Gabel aufschlagen.",
      "Würstchen abgießen und mit Püree und Senf servieren."
     ]
    },
@@ -790,11 +785,11 @@
     "geraete": [
      "mikrowelle"
     ],
-    "zeit": 8,
+    "zeit": 9,
     "aktiv": 4,
     "schritte": [
-     "250 ml Wasser und 120 ml Milch in einer mikrowellenfesten Schüssel bei 800 Watt 3 Minuten erhitzen, bis es dampft.",
-     "Püreeflocken einrühren und 1 Minute quellen lassen.",
+     "300 ml Wasser und 120 ml Milch in einer mikrowellenfesten Schüssel bei 800 Watt 4 Minuten erhitzen, bis es dampft.",
+     "60 g Püreeflocken einrühren und 1 Minute quellen lassen.",
      "Würstchen in Stücke schneiden, auf einem Teller abgedeckt bei 800 Watt 1,5 Minuten erhitzen, bis sie durch und durch heiß sind.",
      "Mit Senf servieren."
     ]
@@ -810,7 +805,6 @@
   "mealprep": false,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "schnell",
    "guenstig",
    "lkw"
@@ -879,7 +873,6 @@
   "mealprep": true,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "guenstig",
    "eiweiss"
   ],
@@ -901,7 +894,7 @@
    ],
    [
     "gefluegelwiener",
-    2,
+    1,
     "stk"
    ],
    [
@@ -948,7 +941,6 @@
   "mealprep": false,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "schnell",
    "guenstig",
    "lkw",
@@ -1033,7 +1025,7 @@
    "mittag",
    "abend"
   ],
-  "portionen": 1,
+  "portionen": 2,
   "zutaten": [
    [
     "ravioli_dose",
@@ -1041,7 +1033,7 @@
    ],
    [
     "kidney_dose",
-    125
+    250
    ],
    [
     "oregano",
@@ -1053,12 +1045,12 @@
     "geraete": [
      "mikrowelle"
     ],
-    "zeit": 8,
+    "zeit": 12,
     "aktiv": 3,
     "schritte": [
      "Ravioli in eine mikrowellenfeste Schüssel geben (nie in der Dose erhitzen), Bohnen abspülen und dazugeben.",
-     "Abgedeckt bei 800 Watt 3 Minuten erhitzen, umrühren, weitere 2 bis 3 Minuten erhitzen, bis alles durch und durch dampfend heiß ist.",
-     "Mit Oregano bestreuen und direkt aus der Schüssel essen."
+     "Abgedeckt bei 800 Watt 4 Minuten erhitzen, umrühren, weitere 3 bis 4 Minuten erhitzen, bis alles durch und durch dampfend heiß ist.",
+     "Mit Oregano bestreuen und auf zwei Teller verteilen."
     ]
    }
   ],
@@ -1072,12 +1064,11 @@
   "mealprep": false,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "schnell",
    "guenstig",
    "lkw"
   ],
-  "tipp": "Die Kidneybohnen machen die Dose satter. Den Rest der Bohnen am selben Tag in U27 oder U19 verwenden.",
+  "tipp": "Die Dose reicht für zwei Portionen. Die zweite Portion abgekühlt in den Kühlschrank stellen und am nächsten Tag einmal dampfend heiß aufwärmen.",
   "foto": "bowl of ravioli in tomato sauce mixed with kidney beans, sprinkled with oregano"
  },
  {
@@ -1095,7 +1086,7 @@
    ],
    [
     "gefluegelwiener",
-    2,
+    1,
     "stk"
    ],
    [
@@ -1132,7 +1123,6 @@
   "mealprep": false,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "schnell",
    "guenstig",
    "lkw",
@@ -1217,7 +1207,6 @@
   "mealprep": false,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "guenstig",
    "eiweiss"
   ],
@@ -1299,7 +1288,6 @@
   "mealprep": false,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "schnell",
    "guenstig",
    "eiweiss",
@@ -1383,7 +1371,6 @@
   "mealprep": true,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "guenstig",
    "eiweiss",
    "box"
@@ -1451,7 +1438,6 @@
   "mealprep": false,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "guenstig"
   ],
   "tipp": "Eine angeschnittene Avocado mit Kern hält sich bis zum nächsten Tag besser; ohne Kühlschrank lieber ganz aufessen.",
@@ -1596,7 +1582,7 @@
   "zutaten": [
    [
     "gnocchi",
-    350
+    300
    ],
    [
     "passata",
@@ -1609,10 +1595,6 @@
    ],
    [
     "italien_kraeuter",
-    1
-   ],
-   [
-    "salz",
     1
    ],
    [
@@ -1629,7 +1611,7 @@
     "aktiv": 4,
     "schritte": [
      "Gnocchi mit 3 EL Wasser in eine mikrowellenfeste Schüssel geben, abdecken und bei 800 Watt 2 Minuten garen, umrühren, weitere 2 Minuten garen.",
-     "Wasser abgießen. Passata, Kräuter, Salz und Pfeffer unterrühren.",
+     "Wasser abgießen. Passata, Kräuter und Pfeffer unterrühren (Gnocchi und Mozzarella bringen genug Salz mit).",
      "Mozzarella zerzupfen und darauflegen.",
      "Abgedeckt bei 800 Watt 2 Minuten erhitzen, bis der Käse schmilzt und alles dampfend heiß ist."
     ]
@@ -1973,7 +1955,6 @@
   "mealprep": false,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "schnell",
    "guenstig",
    "eiweiss",
@@ -2062,7 +2043,7 @@
    ],
    [
     "putenbrust_aufschnitt",
-    150
+    90
    ],
    [
     "eisberg",
@@ -2799,7 +2780,6 @@
   "mealprep": false,
   "tags": [
    "unterkunft",
-   "ohne_kuehlschrank",
    "schnell",
    "guenstig",
    "lkw"

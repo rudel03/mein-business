@@ -61,7 +61,6 @@
   "mealprep": false,
   "tags": [
    "camping",
-   "ohne_kuehlschrank",
    "schnell",
    "guenstig",
    "wenig_abwasch"
@@ -280,12 +279,11 @@
   "tags": [
    "camping",
    "gas_sparen",
-   "ohne_kuehlschrank",
    "schnell",
    "guenstig",
    "wenig_abwasch"
   ],
-  "tipp": "Alle Zutaten lagern im Vorratsfach; wer das Wasser morgens schon für Kaffee heiß macht, gibt einfach einen Teil davon an die Haferflocken.",
+  "tipp": "Haferflocken, Erdnussmus und Bananen lagern im Vorratsfach; die angebrochene H-Milch gehört danach in die Kühlung. Wer das Wasser morgens schon für Kaffee heiß macht, gibt einfach einen Teil davon an die Haferflocken.",
   "foto": "two enamel bowls of creamy porridge topped with banana slices, a spoonful of peanut butter and cinnamon"
  },
  {
@@ -1080,7 +1078,6 @@
   "tags": [
    "camping",
    "grill",
-   "schnell",
    "eiweiss"
   ],
   "tipp": "Frischen Fisch am Einkaufstag grillen; draußen zubereitet bleibt auch der Fischgeruch nicht im Fahrzeug.",
@@ -1535,7 +1532,6 @@
   "tags": [
    "camping",
    "gas_sparen",
-   "ohne_kuehlschrank",
    "guenstig",
    "wenig_abwasch"
   ],
@@ -1610,7 +1606,6 @@
    "camping",
    "gas_sparen",
    "wenig_abwasch",
-   "ohne_kuehlschrank",
    "guenstig"
   ],
   "tipp": "Gnocchi, Würstchen im Glas und Tomaten sind ein typischer Notvorrat; die restlichen Würstchen im Sud gekühlt aufbewahren und bald verbrauchen.",
@@ -1880,7 +1875,6 @@
   "tags": [
    "camping",
    "gas_sparen",
-   "ohne_kuehlschrank",
    "guenstig",
    "eiweiss",
    "wenig_abwasch"

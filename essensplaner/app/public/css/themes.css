@@ -13,8 +13,8 @@
   --display: 'Bricolage Grotesque', 'Atkinson Hyperlegible', sans-serif; --display-gewicht: 800;
   --grund: #ffffff; --flaeche: #f6f7f4; --flaeche-2: #e8ebe4; --text: #2c3146; --text-leise: #545a70;
   --linie: #dfe2da; --linie-stark: #9aa0ad; --link: #1f6b43;
-  --akzent: #e4572e; --akzent-text: #ffffff; --akzent-dunkel: #2e7d4f;
-  --knopf: #2e7d4f; --knopf-text: #ffffff; --fokus: #e4572e;
+  --akzent: #c4401c; --akzent-text: #ffffff; --akzent-dunkel: #2e7d4f;
+  --knopf: #2e7d4f; --knopf-text: #ffffff; --fokus: #c4401c;
   --kopf: #ffffff; --kopf-text: #2c3146; --tag-kopf: #2e7d4f; --tag-kopf-text: #ffffff;
   --fuss: #2c3146; --fuss-text: #f6f7f4; --kuehl: #2f6c9e; --tk: #5a4f9e; --warn: #c98a00; --fehler: #c0392b;
   --band: repeating-linear-gradient(90deg, #e4572e 0 22px, #ffffff 22px 26px, #2e7d4f 26px 48px, #ffffff 48px 52px);

@@ -6,15 +6,16 @@
 <title>Wochenplan nach deinen Geräten</title>
 <meta name="description" content="Wochenplan, Einkaufsliste mit Kosten und Vorkoch-Ablauf – passend zu deinen Geräten, deinem Laden und deinem Budget. Ohne Konto, deine Daten bleiben auf dem Gerät.">
 <meta name="theme-color" content="#2c3146">
-<link rel="manifest" href="manifest.webmanifest">
+<link rel="manifest" id="manifest" href="manifest-alltag.webmanifest">
 <link rel="icon" href="img/logo-dach.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/themes.css">
-<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/stil.css">
 <script>
   // Variante so früh wie möglich setzen, damit nichts flackert
-  (function () { var v = new URLSearchParams(location.search).get('v'); var t = { montage: 1, fitness: 1, camping: 1, alltag: 1 };
-    document.documentElement.dataset.theme = t[v] ? v : 'alltag'; })();
+  var TEXTE = {"montage": {"name": "Zimmerherd", "claim": "Satt werden mit dem, was dasteht.", "kurz": "Für Monteure, Bau, Außendienst und Fernfahrer in Unterkünften."}, "fitness": {"name": "Kochsatz", "claim": "Deine Makros. Dein Discounter. Dein Plan.", "kurz": "Für Training, Meal-Prep und feste Kalorien- und Proteinziele."}, "camping": {"name": "Zweiflammer", "claim": "Zwei Flammen. Eine Woche. Entspannt.", "kurz": "Für Wohnmobil, Van, Wohnwagen und Dauercamping."}, "alltag": {"name": "Wochenschmaus", "claim": "Die Woche ist geplant. Der Einkauf auch.", "kurz": "Für alle, die nicht jeden Tag neu überlegen wollen, was es gibt."}};
+  (function () { var v = new URLSearchParams(location.search).get('v');
+    document.documentElement.dataset.theme = TEXTE[v] ? v : 'alltag';
+    document.getElementById('manifest').href = 'manifest-' + document.documentElement.dataset.theme + '.webmanifest'; })();
 </script>
 <script type="module" src="js/app.js"></script>
 </head>
@@ -30,6 +31,9 @@
   <section class="intro">
     <h1 id="claim">Dein Wochenplan nach deinen Geräten</h1>
     <p id="kurz"></p>
+    <script>(function () { var t = TEXTE[document.documentElement.dataset.theme]; document.getElementById('claim').textContent = t.claim;
+      document.getElementById('kurz').textContent = t.kurz; document.getElementById('vname').textContent = t.name;
+      document.getElementById('logo').src = 'img/logo-' + document.documentElement.dataset.theme + '.svg'; })();</script>
     <p class="datenhinweis">Kein Konto nötig. Was du hier eingibst, bleibt in diesem Browser und wird nicht an uns gesendet.</p>
   </section>
   <div id="formular"><p>Planer wird geladen …</p></div>
@@ -46,7 +50,7 @@
       <a href="preise.html">Preise</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a>
       <a href="widerruf.html">Widerrufsbelehrung</a><a href="kuendigen.html">Verträge hier kündigen</a><a href="widerrufen.html">Vertrag widerrufen</a>
     </nav>
-    <p>Ein Angebot von Tellerkontor. Nährwerte: Bundeslebensmittelschlüssel 4.0, Max Rubner-Institut (2025), CC BY 4.0. Preise sind Schätzungen. Lagerhinweise nach BfR.</p>
+    <p>Ein Angebot von <span data-feld="dachmarke">Tellerkontor</span>. Nährwerte: Bundeslebensmittelschlüssel 4.0, Max Rubner-Institut (2025), CC BY 4.0. Preise sind Schätzungen. Lagerhinweise nach BfR.</p>
   </div>
 </footer>
 </body>

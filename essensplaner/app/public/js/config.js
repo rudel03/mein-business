@@ -13,8 +13,8 @@ export const CONFIG = {
   preise: {
     monat: { betrag: 6.99, text: '6,99 € im Monat', laufzeit: 'monatlich kündbar' },
     jahr: { betrag: 44.99, text: '44,99 € im Jahr', laufzeit: 'nach dem ersten Jahr monatlich kündbar', standard: true },
-    pass: { betrag: 17.99, text: '17,99 € einmalig für 3 Monate', laufzeit: 'endet automatisch, keine Verlängerung', varianten: ['montage'] },
-    saison: { betrag: 24.99, text: '24,99 € einmalig für 6 Monate', laufzeit: 'endet automatisch, keine Verlängerung', varianten: ['camping'] },
+    pass: { betrag: 17.99, text: '17,99 € einmalig für 3 Monate', laufzeit: 'Endet automatisch, keine Verlängerung', varianten: ['montage'] },
+    saison: { betrag: 24.99, text: '24,99 € einmalig für 6 Monate', laufzeit: 'Endet automatisch, keine Verlängerung', varianten: ['camping'] },
   },
   probeTage: 7,
   kostenlos: { tage: 1 }, // ohne Plus: Tagesplan (1 Tag) mit Einkaufsliste

@@ -407,8 +407,7 @@
   },
   "mealprep": false,
   "tags": [
-   "lowcarb",
-   "schnell"
+   "lowcarb"
   ],
   "tipp": "Mit Reis oder Kartoffeln wird daraus ein Gericht für einen höheren Kalorienbedarf.",
   "foto": "two salmon fillets on roasted zucchini and cherry tomatoes with lemon slices in a baking dish"
@@ -724,23 +723,22 @@
   "titel": "Ei-Muffins mit Spinat und Käse",
   "mahlzeit": [
    "fruehstueck",
-   "snack",
-   "mittag"
+   "snack"
   ],
   "portionen": 4,
   "zutaten": [
    [
     "eier",
-    12,
+    8,
     "stk"
    ],
    [
     "magerquark",
-    250
+    150
    ],
    [
     "tk_spinat",
-    300
+    200
    ],
    [
     "paprika",
@@ -779,7 +777,7 @@
      "Ofen auf 180 °C Ober-/Unterhitze vorheizen. Spinat auftauen lassen und gut ausdrücken.",
      "Ein 12er-Muffinblech mit Öl einfetten oder Silikonförmchen nutzen.",
      "Eier mit Quark, Salz, Pfeffer und Paprikapulver verquirlen. Spinat, gewürfelte Paprika und die Hälfte des Käses unterrühren.",
-     "Masse in die Mulden füllen, restlichen Käse darüberstreuen und 22–25 Minuten backen, bis die Muffins in der Mitte fest sind (Messerprobe: kein flüssiges Ei).",
+     "Masse in die 12 Mulden füllen (höchstens drei Viertel hoch, sie geht auf), restlichen Käse darüberstreuen und 22–25 Minuten backen, bis die Muffins in der Mitte fest sind (Messerprobe: kein flüssiges Ei).",
      "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
     ]
    },
@@ -1397,7 +1395,7 @@
     "zeit": 55,
     "aktiv": 20,
     "schritte": [
-     "Sojaschnetzel mit Brühepulver in 500 ml heißem Wasser 10 Minuten einweichen, dann kräftig ausdrücken.",
+     "Sojaschnetzel mit Brühepulver in 500 ml sehr heißem Leitungswasser 20 Minuten einweichen (mit kochendem Wasser aus dem Wasserkocher reichen 10 Minuten), dann kräftig ausdrücken.",
      "Ofen auf 220 °C Ober-/Unterhitze vorheizen. Kartoffeln in Spalten schneiden, mit 15 ml Öl und Salz auf einem Blech 20 Minuten backen.",
      "Sojaschnetzel mit restlichem Öl, Sojasauce, Paprikapulver, Oregano und Kreuzkümmel mischen, mit Zwiebel- und Paprikastreifen zu den Kartoffeln geben und 15–18 Minuten knusprig backen.",
      "Gurke raspeln, gut ausdrücken, mit Skyr, gepresstem Knoblauch und Salz verrühren.",
@@ -2237,11 +2235,11 @@
      "herd",
      "topf"
     ],
-    "zeit": 55,
+    "zeit": 65,
     "aktiv": 20,
     "schritte": [
      "Reis vorgaren wie beschrieben und mit Hack, Zwiebel und Gewürzen vermengen.",
-     "Paprika füllen und in einer airfryergeeigneten Form mit den Tomaten bei 180 °C 22–25 Minuten garen.",
+     "Paprika füllen und in einer airfryergeeigneten Form mit den Tomaten bei 180 °C 30–35 Minuten garen.",
      "Käse darauf und weitere 5 Minuten garen. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
      "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
     ]

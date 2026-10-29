@@ -54,7 +54,7 @@ legend + * { clear: both; }
 .zeile { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: flex-end; margin-bottom: 10px; }
 .feld { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .feld label, .feld .lbl { font-weight: 700; font-size: 0.98rem; }
-input[type=number], input[type=text], input[type=email], select, textarea {
+input[type=number], input[type=text], input[type=email], input[type=date], select, textarea {
   font: inherit; min-height: 44px; padding: 8px 10px; border: 2px solid var(--linie-stark); border-radius: 8px; background: var(--grund); color: var(--text); max-width: 100%;
 }
 input[type=number] { width: 7.5rem; }
@@ -137,7 +137,7 @@ dialog img.foto { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-ra
 .fuss nav a { min-height: 44px; display: inline-flex; align-items: center; }
 
 /* Rechtstexte */
-.text { padding: 24px 0; }
+.text { padding-top: 24px; padding-bottom: 24px; }
 .text h2 { margin-top: 1.5rem; }
 .text li { margin-bottom: 6px; }
 
@@ -155,3 +155,13 @@ dialog img.foto { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-ra
   .tag h3 { background: #eee !important; color: #000 !important; }
   section.reiterinhalt { display: block !important; }
 }
+.tag .inhalt-box { padding: 12px 14px; }
+textarea { width: 100%; }
+fieldset .feld + .feld { margin-top: 14px; }
+input[type=text], input[type=email], input[type=date] { width: 100%; }
+
+/* Inhalte, die nur zu einer Variante gehören (statisch vorgerendert) */
+[data-nur] { display: none; }
+[data-theme=montage] [data-nur~=montage], [data-theme=fitness] [data-nur~=fitness], [data-theme=camping] [data-nur~=camping], [data-theme=alltag] [data-nur~=alltag] { display: revert; }
+#formular { min-height: 120vh; }
+.tag h2.karte { margin: 0; padding: 10px 14px; background: var(--tag-kopf); color: var(--tag-kopf-text); font-size: 1.12rem; }

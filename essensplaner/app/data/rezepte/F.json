@@ -634,7 +634,7 @@
    "eiweiss",
    "schnell"
   ],
-  "tipp": "Ohne Brot dazu ist das Gericht glutenfrei.",
+  "tipp": "Das Omelett enthält keine glutenhaltigen Zutaten. Bei Zöliakie die Zutatenliste von Brot oder anderen Beilagen prüfen.",
   "foto": "folded vegetable omelette with spinach and red pepper on a plate"
  },
  {
@@ -752,7 +752,7 @@
    "guenstig",
    "unterkunft"
   ],
-  "tipp": "Statt Milch passt auch Haferdrink, dann ist das Frühstück milchfrei.",
+  "tipp": "Statt Milch passt auch Haferdrink. Bei Milchallergie die Zutatenliste des Müslis prüfen, viele Sorten enthalten Milchbestandteile oder Spuren.",
   "foto": "bowl of muesli with milk and fresh apple pieces"
  },
  {
@@ -2394,8 +2394,7 @@
   "tags": [
    "familie",
    "kinder",
-   "guenstig",
-   "schnell"
+   "guenstig"
   ],
   "tipp": "Die Gnocchi musst du nicht vorkochen, sie garen in der Tomatensoße.",
   "foto": "baked gnocchi in tomato sauce with melted mozzarella and zucchini in a baking dish"
@@ -2679,8 +2678,7 @@
   "tags": [
    "familie",
    "kinder",
-   "guenstig",
-   "schnell"
+   "guenstig"
   ],
   "tipp": "Lass die Kinder ihre Toasts selbst belegen. Dazu passen Gurkenscheiben oder Möhrensticks.",
   "foto": "pizza toasts with tomato sauce, melted cheese, sweetcorn and red pepper on a baking tray"
@@ -2733,9 +2731,9 @@
     "zeit": 50,
     "aktiv": 15,
     "schritte": [
+     "Äpfel schälen, würfeln und mit 3 EL Wasser und Zimt im Topf 5 Minuten weich dünsten, in eine Schüssel geben. Den Topf kurz ausspülen.",
      "Milch mit Zucker, Butter und Salz im Topf aufkochen.",
      "Reis einrühren und bei kleinster Hitze mit Deckel 35–40 Minuten quellen lassen, alle 5 Minuten umrühren, damit nichts ansetzt.",
-     "Inzwischen Äpfel schälen, würfeln und mit 3 EL Wasser und Zimt in einer Schüssel in der Mikrowelle 3 Minuten oder im Topf 5 Minuten weich dünsten.",
      "Milchreis mit dem Apfelkompott servieren."
     ]
    }
