@@ -64,6 +64,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
 body {
+  hyphens: auto; overflow-wrap: break-word;
   margin: 0; background: var(--grund); color: var(--text);
   font: 400 1.0625rem/1.55 'Atkinson Hyperlegible', system-ui, sans-serif;
   overflow-x: hidden;
@@ -224,3 +225,26 @@ input[type=text], input[type=email], input[type=date] { width: 100%; }
 [data-theme=montage] [data-nur~=montage], [data-theme=fitness] [data-nur~=fitness], [data-theme=camping] [data-nur~=camping], [data-theme=alltag] [data-nur~=alltag] { display: revert; }
 #formular { min-height: 120vh; }
 .tag h2.karte { margin: 0; padding: 10px 14px; background: var(--tag-kopf); color: var(--tag-kopf-text); font-size: 1.12rem; }
+
+/* Landingpages */
+.held { display: grid; gap: 20px; padding-top: 28px; padding-bottom: 12px; align-items: center; }
+.held-bild { width: 100%; height: auto; border-radius: var(--radius); aspect-ratio: 4 / 5; object-fit: cover; }
+.gross { font-size: 1.15rem; max-width: 36rem; }
+.abschnitt { padding-top: 28px; padding-bottom: 12px; }
+.drei { display: grid; gap: 14px; }
+.drei article { background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); padding: 16px; border-top: 6px solid var(--akzent); }
+.check { background: var(--flaeche); border-radius: var(--radius); border: 2px solid var(--akzent); margin-top: 18px; padding-bottom: 18px; }
+.check-ergebnis { font-family: var(--display); font-weight: var(--display-gewicht, 800); font-size: 1.4rem; margin: 10px 0; }
+.rk-reihe { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin: 12px 0; }
+.rk { margin: 0; }
+.rk img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; }
+.rk figcaption { font-size: 0.92rem; font-weight: 700; margin-top: 4px; }
+.schritte li, .punkte li { margin-bottom: 8px; }
+.marken { display: grid; gap: 14px; margin-top: 18px; }
+.marken-karte { display: flex; gap: 14px; align-items: center; padding: 16px; border-radius: var(--radius); background: var(--flaeche); color: var(--text); text-decoration: none; border: 2px solid var(--linie-stark); }
+.marken-karte b { font-family: var(--display); font-size: 1.3rem; }
+@media (min-width: 800px) {
+  .held { grid-template-columns: minmax(0, 1fr) 420px; }
+  .drei { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .marken { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
