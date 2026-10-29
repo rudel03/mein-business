@@ -39,6 +39,11 @@ def lade_zutaten():
     bls = {r["code"]: r for r in csv.DictReader(open(os.path.join(HIER, "bls_kompakt.csv"), encoding="utf-8"))}
     out = {}
     for (zid, name, code, abt, pack, einheit, preis, stk_g, al, flags, lager) in ns["ZUTATEN"]:
+        # verrutschte Felder früh erkennen (z. B. Preis im Feld Einheit)
+        assert einheit in ("g", "ml", "stk"), f"{zid}: Einheit {einheit!r}"
+        assert isinstance(preis, (int, float)) and 0 < preis < 100, f"{zid}: Preis {preis!r}"
+        assert isinstance(pack, (int, float)) and pack > 0, f"{zid}: Packung {pack!r}"
+        assert lager in ("k", "r", "t"), f"{zid}: Lager {lager!r}"
         n = {k: 0.0 for k in NAEHR}
         if code != "-":
             r = bls[code]

@@ -103,6 +103,7 @@ details.mehr[open] summary::before { content: '−'; }
 
 .gruppe { margin-bottom: 18px; }
 .gruppe h3 { border-bottom: 3px solid var(--akzent); padding-bottom: 4px; }
+.einkauf-titel { font-family: var(--display); margin: 22px 0 4px; font-size: 1.15rem; }
 .posten { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 8px; align-items: start; padding: 9px 0; border-bottom: 1px solid var(--linie); }
 .posten input { width: 22px; height: 22px; margin-top: 2px; accent-color: var(--akzent-dunkel); }
 .posten .preis { font-variant-numeric: tabular-nums; font-weight: 700; white-space: nowrap; }

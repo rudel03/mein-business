@@ -4,7 +4,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { erstellePlan, pruefeMakros, kandidaten, vervollstaendige } from '../public/js/engine/planer.js';
-import { wegMoeglich, zutatLagerbar, zufall, MAHLZEITEN } from '../public/js/engine/grundlagen.js';
+import { wegMoeglich, zutatLagerbar, zufall, MAHLZEITEN, haltbarTage, einkaufVor } from '../public/js/engine/grundlagen.js';
+import { bedarf } from '../public/js/engine/einkauf.js';
 import { LAEDEN } from '../public/js/engine/laeden.js';
 
 const daten = JSON.parse(fs.readFileSync(new URL('../public/data/daten.json', import.meta.url)));
@@ -20,6 +21,21 @@ const MONTAGE = { ...NICHTS, wasserkocher: true, mikrowelle: true, kuehlschrank:
 // Prüft alle Regeln, die für jeden Plan gelten müssen.
 function invarianten(erg) {
   const p = erg.profil;
+  // Frische: jede Zutat wird spätestens nach ihrer Haltbarkeit seit dem letzten Einkauf verarbeitet
+  for (const k of erg.kochen) {
+    const alter = k.kochtag - einkaufVor(k.kochtag, erg.einkaufTage);
+    for (const z of R[k.rezept].zutaten) {
+      if (z[3] === 'opt') continue;
+      assert.ok(alter <= haltbarTage(Z[z[0]], p.geraete), `${k.rezept}: ${Z[z[0]].name} ${alter} Tage nach dem Einkauf (Kochtag ${k.kochtag})`);
+    }
+  }
+  // Einkauf: nichts wird gekauft, bevor es ab diesem Einkaufstag gebraucht wird
+  for (const e of erg.einkauf.einkaeufe) {
+    for (const g of e.gruppen) for (const x of g.posten) {
+      const tage = erg.kochen.filter((k) => R[k.rezept].zutaten.some((z) => z[0] === x.id && z[3] !== 'opt')).map((k) => k.kochtag);
+      assert.ok(tage.some((d) => d >= e.tag), `${x.name}: Einkauf Tag ${e.tag}, gebraucht an ${tage}`);
+    }
+  }
   for (const t of erg.tage) {
     for (const m of t.mahlzeiten) {
       if (!m.rezept) continue;
@@ -209,7 +225,7 @@ test('Zufallstest: 250 zufällige Profile – kein Absturz, alle Regeln eingehal
       budget: rnd() < 0.4 ? Math.round(5 + rnd() * 120) : null,
       makros: rnd() < 0.3 ? { kcal: Math.round(1000 + rnd() * 3500), p: Math.round(rnd() * 250), kh: Math.round(rnd() * 400), f: Math.round(rnd() * 150) } : null,
       kochtage: rnd() < 0.3 ? [0, 1, 2, 3, 4, 5, 6].filter(() => rnd() < 0.3) : null,
-      pause: pick(['zuhause', 'mikrowelle', 'kalt', 'thermo']), seed: i,
+      pause: pick(['zuhause', 'mikrowelle', 'kalt', 'thermo']), einkauf: pick(['woche', 'zweimal', 'taeglich']), seed: i,
     };
     const erg = erstellePlan(daten, profil);
     assert.ok(Array.isArray(erg.meldungen));
@@ -240,4 +256,35 @@ test('Ohne Kühlschrank: keine angebrochene Packung, die nach dem Öffnen geküh
       }
     }
   }
+});
+
+test('Ohne Kühlschrank, einmal pro Woche einkaufen: keine Kühlware nach dem Einkaufstag (z. B. Skyr-Becher)', () => {
+  for (const seed of [1, 2, 3, 4, 5]) {
+    const erg = erstellePlan(daten, { geraete: { ...NICHTS, wasserkocher: true }, einkauf: 'woche', seed });
+    if (!erg.ok) continue;
+    invarianten(erg);
+    for (const k of erg.kochen) for (const z of R[k.rezept].zutaten) {
+      if (z[3] !== 'opt' && Z[z[0]].lager === 'k') assert.ok(erg.einkaufTage.includes(k.kochtag) || k.kochtag < 0, `${Z[z[0]].name} an Tag ${k.kochtag}`);
+    }
+  }
+});
+
+test('14 Tage, einmal pro Woche: Frischfleisch höchstens 2 Tage, Hack höchstens 1 Tag nach dem Einkauf', () => {
+  for (const seed of [1, 2, 3]) {
+    const erg = erstellePlan(daten, { geraete: ALLES, tage: 14, einkauf: 'woche', seed, personen: 2 });
+    assert.ok(erg.ok);
+    invarianten(erg);
+    assert.deepEqual(erg.einkaufTage, [0, 7]);
+  }
+});
+
+test('Angebrochene Dose ohne Kühlschrank wird nicht am nächsten Tag weiterverwendet', () => {
+  const dose = Object.values(Z).find((z) => z.flags.includes('o') && z.einheit !== 'stk' && !z.flags.includes('b'));
+  const zeile = [[dose.id, dose.pack * 0.3, dose.einheit]];
+  const kochen = [{ kochtag: 0, zutaten: zeile, skal: 1 }, { kochtag: 1, zutaten: zeile, skal: 1 }];
+  const ohne = bedarf(kochen, Z, vervollstaendige({ geraete: { ...NICHTS, kuehlschrank: false } }), [0]);
+  const mit = bedarf(kochen, Z, vervollstaendige({ geraete: ALLES }), [0]);
+  const packs = (b) => Object.values(b).reduce((s, x) => s + x.packs, 0);
+  assert.equal(packs(ohne), 2, 'ohne Kühlschrank muss eine zweite Packung gekauft werden');
+  assert.equal(packs(mit), 1, 'mit Kühlschrank reicht die angebrochene Packung');
 });

@@ -55,7 +55,7 @@ export const CONFIG = {
       theme: 'camping',
       profil: {
         geraete: { herd: 2, topf: true, pfanne: true, ofen: false, omnia: true, grill: false, airfryer: false, mikrowelle: false, wasserkocher: false, kuehlschrank: true, gefrier: false },
-        personen: 2, mahlzeiten: ['fruehstueck', 'mittag', 'abend'], pause: 'zuhause', laden: 'lidl', arbeitstage: [],
+        personen: 2, mahlzeiten: ['fruehstueck', 'mittag', 'abend'], pause: 'zuhause', laden: 'lidl', arbeitstage: [], einkauf: 'woche',
       },
       herdName: 'Gasflammen',
     },

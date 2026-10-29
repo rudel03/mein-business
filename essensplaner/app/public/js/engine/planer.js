@@ -10,8 +10,8 @@
 //    Abwechslung, Kochaufwand und Reste in angebrochenen Packungen.
 // 4. Einkaufsliste, Kosten, Nährwerte, Lagerhinweise und Vorkoch-Ablauf ableiten.
 
-import { MAHLZEITEN, zufall, ersterWeg, zutatLagerbar, gramm, packGramm, istOptional, rund } from './grundlagen.js';
-import { einkaufsliste } from './einkauf.js';
+import { MAHLZEITEN, zufall, ersterWeg, zutatLagerbar, gramm, packGramm, istOptional, rund, haltbarTage, einkaufstage, einkaufVor } from './grundlagen.js';
+import { einkaufsliste, bedarf } from './einkauf.js';
 import { vorkochAblauf } from './ablauf.js';
 import { LAEDEN } from './laeden.js';
 
@@ -32,6 +32,7 @@ export const STANDARD_PROFIL = {
   kcalRichtwert: 2000, // ohne Makros: grober Tagesrichtwert je Person
   kochtage: null, // null = täglich frei; sonst Liste von Tagesindizes, an denen gekocht wird (z. B. [0, 3])
   pause: 'zuhause', // zuhause | mikrowelle | kalt | thermo  (wie wird das Mittagessen gegessen?)
+  einkauf: 'zweimal', // woche | zweimal | taeglich  (wie oft wird eingekauft? bestimmt, wie frisch Kühlware ist)
   arbeitstage: [0, 1, 2, 3, 4],
   maxAktivProTag: 60, // Minuten aktive Kochzeit, die pro Tag höchstens geplant werden
   seed: 1,
@@ -186,22 +187,16 @@ function bewerte(plan, ctx) {
     }
   }
   // Kosten über verbrauchte Mengen + Reste angebrochener Kühlware (Verschwendung)
-  const menge = {};
-  for (const e of plan) {
-    const port = e.slots.length * p.personen * e.faktor;
-    for (const z of e.k.r.zutaten) {
-      if (istOptional(z)) continue;
-      menge[z[0]] = (menge[z[0]] || 0) + gramm(ctx.Z[z[0]], z[1], z[2]) * port / e.k.r.portionen;
-    }
-  }
+  const b = bedarf(plan.map((e) => ({ kochtag: e.kochtag, zutaten: e.k.r.zutaten, skal: e.slots.length * p.personen * e.faktor / e.k.r.portionen })),
+    ctx.Z, p, ctx.einkaufTage);
   let kosten = 0, rest = 0;
-  for (const id in menge) {
+  for (const schl in b) {
+    const { id, g, packs } = b[schl];
     const z = ctx.Z[id];
-    if (z.flags.includes('b')) { kosten += menge[id] * ctx.preis[id]; continue; }
-    const pg = z.einheit === 'stk' ? z.pack * (z.stk_g || 1) : z.pack;
-    const packs = Math.ceil(menge[id] / pg - 1e-9);
+    if (z.flags.includes('b')) { kosten += g * ctx.preis[id]; continue; }
+    const pg = packGramm(z);
     kosten += packs * pg * ctx.preis[id];
-    if (z.lager === 'k') rest += (packs * pg - menge[id]) * ctx.preis[id];
+    if (z.lager === 'k' || z.flags.includes('o')) rest += (packs * pg - g) * ctx.preis[id];
   }
   if (p.budget) {
     const ueber = kosten - p.budget;
@@ -240,11 +235,22 @@ function istKurz(k) {
   return k.weg.zeit <= 10;
 }
 
+// Sind alle Zutaten am Kochtag noch frisch genug, gemessen am letzten Einkauf davor?
+function frischGenug(r, kochtag, ctx) {
+  const schl = r.id + '@' + kochtag;
+  if (schl in ctx.frisch) return ctx.frisch[schl];
+  const alter = kochtag - einkaufVor(kochtag, ctx.einkaufTage);
+  const ok = r.zutaten.every((z) => istOptional(z) || alter <= haltbarTage(ctx.Z[z[0]], ctx.p.geraete));
+  ctx.frisch[schl] = ok;
+  return ok;
+}
+
 // Darf Kochvorgang e (Rezept k, Kochtag) den Slot s bedienen?
 function slotErlaubt(k, kochtag, s, ctx) {
   const slot = ctx.slots[s];
   if (!passtSlot(k, slot, ctx.p)) return false;
   if (slot.d < kochtag) return false;
+  if (!frischGenug(k.r, kochtag, ctx)) return false;
   return !!haltbarkeit(k.r, slot.d - kochtag, ctx.p.geraete);
 }
 
@@ -301,6 +307,7 @@ function zug(plan, ctx, rnd) {
     // Rezept tauschen
     const s0 = e.slots[0];
     const pass = ctx.passend[s0];
+    if (!pass.length) return null;
     const k = pass[Math.floor(rnd() * pass.length)];
     const kochtag = kochtagFuer(ctx.slots[s0], ctx.p, istKurz(k));
     const t = { k, kochtag, slots: e.slots, faktor: e.faktor };
@@ -310,6 +317,7 @@ function zug(plan, ctx, rnd) {
       if (!gueltig(t, ctx)) return null;
       for (const s of e.slots.slice(1)) {
         const pp = ctx.passend[s];
+        if (!pp.length) return null;
         const k2 = pp[Math.floor(rnd() * pp.length)];
         const e2 = neuerKochvorgang(k2, s, ctx);
         if (!e2) return null;
@@ -338,6 +346,7 @@ function zug(plan, ctx, rnd) {
     if (e.slots.length < 2) return null;
     const s = e.slots.pop();
     const pp = ctx.passend[s];
+    if (!pp.length) return null;
     const k2 = pp[Math.floor(rnd() * pp.length)];
     const e2 = neuerKochvorgang(k2, s, ctx);
     if (!e2) return null;
@@ -394,7 +403,7 @@ export function erstellePlan(daten, profilEingabe) {
   }
   const ziel = p.makros || { kcal: p.kcalRichtwert, p: 0, kh: 0, f: 0 };
   const { cache: preis, faktor: preisFaktor } = preisJeGramm(daten.zutaten, p.laden, p.eigenmarken);
-  const ctx = { p, Z: daten.zutaten, kand: liste, ziel, preis, slots: slotsBauen(p) };
+  const ctx = { p, Z: daten.zutaten, kand: liste, ziel, preis, slots: slotsBauen(p), einkaufTage: einkaufstage(p), frisch: {} };
   ctx.passend = ctx.slots.map((_, s) => passendeFuer(s, ctx));
   // Mahlzeiten ohne passendes Rezept: verständlich melden und weglassen
   const fehlend = {};
@@ -449,11 +458,17 @@ function ergebnis(bestes, ctx, meldungen, preisFaktor) {
     skal: (e.slots.length * p.personen * e.faktor) / e.k.r.portionen, essen: e.slots.map((s) => ({ d: slots[s].d, m: slots[s].m })),
     lager: lagerHinweise(e, ctx),
   }));
-  const einkauf = einkaufsliste(kochen, ctx.Z, p, preisFaktor);
+  const einkauf = einkaufsliste(kochen, ctx.Z, p, preisFaktor, ctx.einkaufTage);
+  // Wenig Auswahl ehrlich sagen (z. B. nur Wasserkocher ohne Kühlschrank plus Allergien)
+  const gefuellt = tage.flatMap((t) => t.mahlzeiten).filter((m) => m.rezept);
+  const verschieden = new Set(gefuellt.map((m) => m.rezept)).size;
+  if (gefuellt.length >= 7 && verschieden < gefuellt.length * 0.4) {
+    meldungen.push({ art: 'hinweis', text: `Mit deinen Einstellungen passen nur wenige Rezepte, deshalb wiederholen sich Gerichte (${verschieden} verschiedene für ${gefuellt.length} Mahlzeiten). Mehr Auswahl gibt es mit einem weiteren Gerät, einem Kühlschrank, öfter einkaufen oder weniger Ausschlüssen.` });
+  }
   const ablauf = vorkochAblauf(kochen, p);
   const naehr = bestes.wert.tag.map((t) => ({ kcal: Math.round(t.kcal), p: Math.round(t.p), kh: Math.round(t.kh), f: Math.round(t.f) }));
   return {
-    ok: true, profil: p, meldungen, tage, kochen, einkauf, ablauf,
+    ok: true, profil: p, meldungen, tage, kochen, einkauf, ablauf, einkaufTage: ctx.einkaufTage,
     naehrwerte: { jeTag: naehr, ziel: p.makros, richtwert: p.makros ? null : p.kcalRichtwert },
     kosten: { gesamt: einkauf.summe, jeTag: rund(einkauf.summe / p.tage), jePersonUndTag: rund(einkauf.summe / p.tage / p.personen), budget: p.budget },
   };

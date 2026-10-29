@@ -31,6 +31,7 @@ const ABNEIGUNGEN = [['champignon', 'Pilze'], ['kichererbsen_dose', 'Kichererbse
   ['thunfisch,makrele_dose,sardinen_dose,hering_tomate', 'Dosenfisch'], ['leberwurst_dose', 'Leberwurst'], ['quinoa', 'Quinoa'], ['feta,halloumi', 'Schafskäse/Halloumi'], ['rosinen', 'Rosinen']];
 const DIAETEN = [['alles', 'Alles'], ['ohne_schwein', 'Ohne Schweinefleisch'], ['pescetarisch', 'Mit Fisch, ohne Fleisch'], ['vegetarisch', 'Vegetarisch'], ['vegan', 'Vegan']];
 const PAUSEN = [['zuhause', 'Ich esse zu Hause'], ['mikrowelle', 'Box, Mikrowelle da'], ['kalt', 'Box, kalt essen'], ['thermo', 'Box im Thermobehälter']];
+const EINKAUF = [['woche', 'Einmal pro Woche'], ['zweimal', 'Zweimal pro Woche'], ['taeglich', 'Fast jeden Tag']];
 const RICHTWERTE = [[1900, 'Eher wenig Bewegung (ca. 1.900 kcal)'], [2200, 'Normal aktiv (ca. 2.200 kcal)'], [2800, 'Körperlich harte Arbeit (ca. 2.800 kcal)']];
 
 let daten = null;
@@ -115,6 +116,9 @@ function formular(p) {
       ${chips('mahlzeit', Object.entries(MAHLZEIT_NAME), 'checkbox', (m) => p.mahlzeiten.includes(m))}
       <p class="lbl"><b>Mittags unter der Woche</b></p>
       ${chips('pause', PAUSEN, 'radio', (x) => p.pause === x)}
+      <p class="lbl"><b>Wie oft kaufst du ein?</b></p>
+      ${chips('einkauf', EINKAUF, 'radio', (x) => (p.einkauf || 'zweimal') === x)}
+      <p class="hilfe">Frisches Fleisch planen wir höchstens 2 Tage, Hackfleisch 1 Tag nach dem Einkauf. Ohne Kühlschrank kommt Kühlware nur am Einkaufstag auf den Teller.</p>
       <details class="mehr"${p.kochtage?.length ? ' open' : ''}><summary>Feste Kochtage (Vorkochen)</summary>
         <p class="hilfe">Leer lassen = jeden Tag frisch. Mit Kochtagen planen wir Boxen für die Tage danach, nach den Lagerempfehlungen des BfR, teils strenger.</p>
         ${chips('kochtag', TAGE_KURZ.map((t, i) => [String(i), t]), 'checkbox', (i) => (p.kochtage || []).includes(Number(i)))}
@@ -135,7 +139,7 @@ function liesFormular(form) {
     budget: fd.get('budget') ? Math.max(0, Number(String(fd.get('budget')).replace(',', '.'))) || null : null,
     personen: Number(fd.get('personen')), tage: Number(fd.get('tage')), starttag: Number(fd.get('starttag')),
     diaet: fd.get('diaet') || 'alles', allergene: alle('allergen'), abneigungen: alle('abneigung').flatMap((x) => x.split(',')),
-    mahlzeiten: alle('mahlzeit'), pause: fd.get('pause') || 'zuhause',
+    mahlzeiten: alle('mahlzeit'), pause: fd.get('pause') || 'zuhause', einkauf: fd.get('einkauf') || 'zweimal',
     kochtage: alle('kochtag').map(Number), seed: letztes?.profil?.seed || 1,
     arbeitstage: V.profil.arbeitstage ?? STANDARD_PROFIL.arbeitstage,
   };
@@ -154,26 +158,36 @@ function herkunftMarke(m) {
 }
 
 function planHtml(e) {
-  return e.tage.map((t) => `
+  const kalt = e.profil.pause === 'kalt' && e.tage.some((t) => t.mahlzeiten.some((m) => m.box))
+    ? '<p class="meldung" role="note">Boxen für die Pause in einer Kühltasche mit Kühlakku mitnehmen und bis zum Essen kühl halten. Ungekühlt höchstens 2 Stunden.</p>' : '';
+  return kalt + e.tage.map((t) => `
     <article class="tag"><h3>${TAGE[t.wochentag]}</h3>
       ${t.mahlzeiten.map((m) => `<div class="essen"><span class="wann">${MAHLZEIT_NAME[m.m]}</span>
         ${m.rezept ? `<button class="titel" type="button" data-rezept="${m.rezept}" data-faktor="${m.faktor}">${esc(m.titel)}</button>
-          <span class="info">${herkunftMarke(m)}${m.box ? '<span class="marke">Box</span>' : ''}${zahl(m.n.kcal)} kcal · ${zahl(m.n.p)} g Protein${m.faktor !== 1 ? ` · Portion ×${Number(m.faktor).toLocaleString('de-DE', { maximumFractionDigits: 2 })}` : ''}</span>`
+          <span class="info">${herkunftMarke(m)}${m.box ? `<span class="marke">${e.profil.pause === 'kalt' ? 'Box, Kühltasche' : 'Box'}</span>` : ''}${zahl(m.n.kcal)} kcal · ${zahl(m.n.p)} g Protein${m.faktor !== 1 ? ` · Portion ×${Number(m.faktor).toLocaleString('de-DE', { maximumFractionDigits: 2 })}` : ''}</span>`
           : '<span>frei – kein passendes Rezept</span>'}
       </div>`).join('')}
     </article>`).join('');
 }
 
+function einkaufTitel(e, tag) {
+  if (tag < 0) return 'Einkauf am Vortag (vor dem ersten Kochtag)';
+  return `Einkauf am ${TAGE[e.tage[tag].wochentag]}${e.profil.tage > 7 ? ` (Tag ${tag + 1})` : ''}`;
+}
+
 function einkaufHtml(e) {
   const haken = lade('ep_haken', {});
-  const g = e.einkauf.gruppen.map((gr) => `<section class="gruppe"><h3>${esc(gr.name)}</h3>
-    ${gr.posten.map((x) => `<label class="posten"><input type="checkbox" data-haken="${x.id}"${haken[x.id] ? ' checked' : ''}>
+  const mehrere = e.einkauf.einkaeufe.length > 1;
+  const g = e.einkauf.einkaeufe.map((ek) => `${mehrere ? `<h3 class="einkauf-titel">${esc(einkaufTitel(e, ek.tag))} · ca. ${euro(ek.summe)}</h3>` : ''}
+    ${ek.gruppen.map((gr) => `<section class="gruppe"><h3>${esc(gr.name)}</h3>
+    ${gr.posten.map((x) => `<label class="posten"><input type="checkbox" data-haken="${x.id}@${x.tag}"${haken[`${x.id}@${x.tag}`] ? ' checked' : ''}>
       <div><b>${esc(x.name)}</b><small>${x.packungen} × ${esc(x.packung)} · gebraucht ${esc(x.menge)}${x.rest ? ` · Rest ca. ${esc(x.rest)}` : ''}</small></div>
-      <span class="preis">${euro(x.preis)}</span></label>`).join('')}</section>`).join('');
+      <span class="preis">${euro(x.preis)}</span></label>`).join('')}</section>`).join('')}`).join('');
   const v = e.einkauf.vorrat.length ? `<section class="gruppe"><h3>Hast du wahrscheinlich schon</h3>
     <p class="hilfe">Öl, Salz und Gewürze. Wir rechnen nur den verbrauchten Anteil in die Kosten ein.</p>
     ${e.einkauf.vorrat.map((x) => `<label class="posten"><input type="checkbox" data-haken="${x.id}"${haken[x.id] ? ' checked' : ''}><div><b>${esc(x.name)}</b><small>${esc(x.menge)} (Packung ${esc(x.packung)} ca. ${euro(x.packungPreis)})</small></div><span class="preis">${euro(x.preisAnteil)}</span></label>`).join('')}</section>` : '';
-  return `<p class="hilfe">Sortiert wie im ${esc(e.einkauf.laden)}-Markt üblich. Preise sind Schätzungen.</p>${g}${v}
+  const hinweis = mehrere ? ' Frisches kaufst du erst kurz vor dem Kochen, Vorräte gleich beim ersten Einkauf.' : '';
+  return `<p class="hilfe">Nach Abteilungen sortiert, wie es im ${esc(e.einkauf.laden)}-Markt meist liegt. Preise sind Schätzungen.${hinweis}</p>${g}${v}
     <div class="summe"><span>Geschätzt</span><span>${euro(e.einkauf.summe)}</span></div>
     <button class="knopf leise" type="button" id="teilen">Liste teilen oder kopieren</button>`;
 }
@@ -285,7 +299,9 @@ function planen(form, neuerSeed) {
 
 function teilen() {
   const e = letztes;
-  const text = [`Einkauf ${e.einkauf.laden} (ca. ${euro(e.einkauf.summe)})`, ...e.einkauf.gruppen.flatMap((g) => [``, g.name, ...g.posten.map((x) => `- ${x.packungen} × ${x.name} (${x.packung})`)])].join('\n');
+  const text = [`Einkauf ${e.einkauf.laden} (ca. ${euro(e.einkauf.summe)})`, ...e.einkauf.einkaeufe.flatMap((ek) => [
+    ...(e.einkauf.einkaeufe.length > 1 ? [``, `== ${einkaufTitel(e, ek.tag)} ==`] : []),
+    ...ek.gruppen.flatMap((g) => [``, g.name, ...g.posten.map((x) => `- ${x.packungen} × ${x.name} (${x.packung})`)])])].join('\n');
   if (navigator.share) navigator.share({ title: 'Einkaufsliste', text }).catch(() => {});
   else navigator.clipboard?.writeText(text).then(() => { $('#teilen').textContent = 'Liste kopiert'; });
 }
