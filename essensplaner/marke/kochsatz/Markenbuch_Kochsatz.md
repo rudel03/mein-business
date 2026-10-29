@@ -359,6 +359,7 @@ Grundsatz aus `11` Punkt 1: Reichweite ist der Engpass, nicht der Markt. Deshalb
 Grundlage: `07 §5` (HCVO, HWG, UWG), `07 §3` (Abo, Button, Testphase), `07 §4.4` (Tracking, Meta), `07 §9.2` (Alter). Kochsatz ist die Marke mit dem höchsten Werberisiko, weil Fitness nah an Gesundheit und Körperbild liegt. **Arbeitsregel aus `07 §5.1`: so schreiben, als gälte die Health-Claims-VO.**
 
 ### Erlaubt bzw. vertretbar 🟢
+„Nr.“ verweist auf die Formulierungsliste in `07 §5.6` (erlaubte bzw. verbotene Liste).
 1. „Mit Makro-Rechner: Du gibst Kalorien, Protein, Kohlenhydrate und Fett vor, der Plan richtet sich danach.“ (`07 §5.6` Nr. 4)
 2. „Kalorienziel selbst festlegen, Zahlen statt Versprechen.“ (Nr. 15)
 3. „Proteinreich: mind. 20 % der Energie aus Protein“, **nur** am Rezept oder Plan, der das erfüllt (91 von 195 Rezepten, eigene Auswertung; Nr. 5, `07 §5.2`).

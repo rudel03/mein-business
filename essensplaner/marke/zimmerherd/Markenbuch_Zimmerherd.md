@@ -272,7 +272,7 @@ Aus `02`, Abschnitt 6, wörtlich belegt:
 |---|---|---|---|
 | 1 | „Kreuz an, was dasteht.“ | „Personalisiere dein kulinarisches Erlebnis.“ | Werbesprech, kein Monteur redet so |
 | 2 | „Hält im Kühlschrank höchstens 2 Tage (BfR).“ | „Hält locker die ganze Woche.“ | falsch und gefährlich (BfR, ENTSCHEIDUNGEN C9) |
-| 3 | „Geschätzt 4,10 € pro Tag bei Aldi, Preisstand 10/2026.“ (nur mit echtem Planwert) | „Spar dir 200 € Spesen im Monat.“ | unbelegte Ersparnis, § 5 UWG (`07`, 5.6 Verbot 14) |
+| 3 | „Dein Plan: geschätzt [X,XX] € pro Tag bei Aldi, Preisstand [MM/JJJJ].“ (Platzhalter, nur mit dem Wert aus einem echten Plan füllen) | „Spar dir 200 € Spesen im Monat.“ | unbelegte Ersparnis, § 5 UWG (`07`, 5.6 Verbot 14) |
 | 4 | „Zehn Minuten Arbeit, dann Feierabend.“ | „Gesund und fit durch die Montagewoche.“ | Gesundheitsversprechen ohne Beleg (`07`, 5.4) |
 | 5 | „Nur ein Wasserkocher? Reicht für 48 Rezepte.“ | „Unendlich viele Rezepte für jedes Zimmer.“ | Übertreibung, Zahl ist 195 bzw. je Gerät gezählt |
 | 6 | „Frag erst den Vermieter, ob die Kochplatte ins Zimmer darf.“ | „Stell dir einfach eine Platte aufs Nachtschränkchen.“ | Brandschutz, Vermieter-Erlaubnis (`02`, Abschn. 1) |
@@ -384,3 +384,110 @@ Interior of a parked European truck cab at dusk, parking lot lights outside, eng
 8. Vorher-nachher-Körper, Muskeln, Waagen oder Maßband (keine Gesundheits- oder Abnehmbotschaft).
 9. Inhalte, die es im Produkt nicht gibt (Gerichte, die nicht in den 195 Rezepten sind, Funktionen wie Laden-Suche nach Ort). Regel aus DURCHSCHICHT: Produktbilder zeigen nur, was drin ist.
 10. Klischees über Herkunft, unordentliche „Männer-WG“-Witze, Müllberge.
+
+---
+
+## 7. Kanäle
+
+**Reihenfolge (ENTSCHEIDUNGEN A3, A4, P4):** Zimmerherd wird als erste Nische beworben. Vor bezahlter Werbung kommen Warteliste mit Double-Opt-in, 6–8 Interviews und ein Preistest. Bezahlter Test höchstens 150 € mit Abbruchregel: DOI-Lead über 3 € oder Kaufquote unter 1 % je Linkklick = Stopp (`11`, Risiko 1).
+
+**Was nirgends erlaubt ist:** verdeckte Werbung (Beiträge, die so tun, als wäre man ein zufriedener Nutzer), gekaufte Bewertungen, Fake-Konten. Wer im Forum über Zimmerherd schreibt, sagt dazu: „Ich habe das gebaut.“ (§ 5a Abs. 4 UWG). Bezahlte Creator kennzeichnen „Werbung“ oder „Anzeige“ am Anfang (`07`, 5.5).
+
+### 7.1 Partner und Multiplikatoren (organisch, höchste Priorität)
+
+| Ort | Konkret | Was wir anbieten | Was dort erlaubt ist / Regeln | Beleg / Stand |
+|---|---|---|---|---|
+| Unterkunftsportal | **deutschland-monteurzimmer.de** (Ratgeber „Essen auf Montage: schnelle Rezepte“, Erfahrungsberichte von Monteuren) | Gastbeitrag „Kochen mit Wasserkocher und Mikrowelle“, Zimmer-Check als Werkzeug für Gäste, Rezeptdaten fürs Portal | Kein öffentliches Werbeangebot gefunden. Anfrage über `/kontakt`. Interessenkonflikt beachten: Das Portal verkauft Unterkünfte | `02`, Abschn. 5 („Möglicher Partner, Kanal“); Startseite am 29.10.2026 abgerufen |
+| Unterkunftsportal | **monteurzimmer.de** (24.867 Einträge in der Sitemap, 28.10.2026) | Hinweis für Vermieter: „Gastgeber-Service: Zimmer-Check-QR-Code fürs Zimmer“ | Kein Werbeangebot geprüft. Anfrage nötig | `02`, Abschn. 2 |
+| Unterkunftsportal | **monteur-zimmer.info** (Filter „eigene Küche“, 4.186 Unterkünfte) | wie oben | am 29.10.2026 nicht erreichbar, später erneut prüfen | `02`, Abschn. 2 |
+| Vermieter direkt | Monteurzimmer- und Pensionsbetreiber | Aushang/Tischaufsteller mit QR-Code „Was kann ich hier kochen?“, auf Wunsch mit voreingestellten Geräten des Hauses | nur mit Zustimmung des Vermieters; Aushang ist Werbung, also Absender (Impressum) drauf | Hypothese |
+| Montagefirmen | Elektro, SHK, Anlagenbau, Gerüstbau, Industriemontage | **Firmenlizenz** (mehrere Plätze, Rechnung netto) als Benefit für Monteure | B2B-Ansprache: Werbe-**E-Mail nur mit vorheriger Einwilligung**, auch an Firmen (§ 7 Abs. 2 UWG). Erlaubt: Brief, Telefon bei mutmaßlicher Einwilligung, Kontaktformular mit konkretem Anliegen, Messe | `01`, 7 (B2B-Hebel, keine Zahlungsbereitschaftsdaten); `11`, Risiko 1, Test 3 (10 Gespräche, Abbruch unter 2 Absichtserklärungen) |
+| Personaldienstleister | Zeitarbeit mit Unterbringung (Industrie, Logistik, Saison) | Lizenz für Unterkunftsbewohner, später PL/RO | wie oben | `01`, 2.1 (622.000 Leiharbeitnehmende) |
+| Betriebsräte | Betriebsräte in Firmen mit Auswärtsmontage | Info-Blatt für die Belegschaft (Spesen-Fakten mit Quelle, Zimmer-Check) | Betriebsräte verteilen keine Werbung. Nur als neutrales Informationsangebot, Entscheidung liegt beim Gremium | IG Metall/Hans-Böckler: ca. 150 Betriebsvereinbarungen zur Auswärtstätigkeit ausgewertet (`01`, 2.1). Kanal = **Hypothese** |
+| Fahrer-Blog | **gesunde-trucker.com** | Gastbeitrag, Rezept der Woche mit Link | Kooperation anfragen; bei Gegenleistung Kennzeichnung | `02`, Abschn. 5 („Kooperationskanal“) |
+| Fahrer-Medien | **FERNFAHRER / EuroTransport** (Verlag von „Sternköche“), **VerkehrsRundschau** | Presse-Info „Raststättenpreise gegen Discounter-Plan“ mit eigenem, nachvollziehbarem Beispielplan | Redaktionell nur, wenn es eine Nachricht ist. Anzeigen über Mediadaten (Preise nicht geprüft) | `02`, Abschn. 1 und 5 |
+| Creator | **YouTube „German Truck Driver“** (Kai Nußbaum, „mehr als 100.000 Follower“ laut EuroTransport) | Test in der Kabine, ehrliche Meinung | Kennzeichnung „Werbung“ am Anfang, schriftliches Briefing mit erlaubten Aussagen (Abschnitt 9) | `02`, Abschn. 5 (Reichweite nur über Dritte belegt) |
+| Eigene Marken | **DURCHSCHICHT**-Startseite und -Mails, **Honigmama**-Liste | Hinweis-Block „Auf Montage? Zimmerherd“ | nur an Empfänger mit Einwilligung, die Mails dieser Art abdeckt; sonst nur auf der Website | `11`, Risiko 1 (DURCHSCHICHT-Produkt noch Entwurf, also kaum Liste) |
+
+### 7.2 Communities (nur mit Erlaubnis der Moderation)
+
+| Ort | Wer dort ist | Was wir tun | Regeln (Stand) |
+|---|---|---|---|
+| **Brummionline LKW-Forum** (Thread „Kochen im LKW“) | Fernfahrer | Fragen zu Gerichten für 24 V beantworten, Interview-Partner suchen | Forenregeln am 29.10.2026 nicht abrufbar (Seite 404). Vor dem ersten Beitrag Moderation per PN fragen |
+| **Saschas-Fanforum** (Thread „Essen auf LKW-Touren“) | Fernfahrer | wie oben | Regeln nicht geprüft. Moderation fragen |
+| **gutefrage.net** (Threads „Essen auf Montage?“, „Essen ohne Herd und Ofen?“, „Essen im LKW Fernverkehr“) | Monteure, Fahrer, Angehörige | hilfreiche Antworten mit Rezeptidee, **ohne** Produktlink, solange die Regeln das nicht erlauben | Direktabruf blockiert (403). Richtlinien vor dem ersten Beitrag im Browser lesen |
+| **Facebook-Gruppen** „Monteure Deutschland“, „LKW Fahrer Deutschland“ und polnische „Praca w Niemczech“-Gruppen | Monteure, Fahrer, Entsandte | Admin fragen, ob ein Umfrage-Beitrag für Interviews erlaubt ist | Gruppen und Größen **nicht geprüft** (`02`, Abschn. 8). Gruppenregeln beim Beitritt lesen |
+| **Reddit** r/Handwerker, r/Fernfahrer, r/Finanzen (Spesen) | jüngere Handwerker | AMA oder Frage-Beitrag nur, wenn Selbstwerbung erlaubt ist | gesperrt für das Abruf-Werkzeug (`02`, Abschn. 8). Seitenleiste mit Regeln vorher lesen |
+
+### 7.3 Bezahlt (erst nach Validierung)
+
+| Kanal | Ausrichtung | Hinweise |
+|---|---|---|
+| **Meta** (Facebook, Instagram) über den Windsor.ai-Connector | Interessen rund um Montage, Handwerk, Fernverkehr, Berufskraftfahrer; Angehörige-Variante für Angle 9. Ausspielzeiten Mo–Do 19–22 Uhr (Angle 5, 6), So 16–20 Uhr (Angle 8) | **Audience Network aus** (`../CLAUDE.md`). Keine Zielgruppen aus Allergie- oder Gesundheitsdaten, keine Events wie „AllergySelected“ (`07`, 4.4). Pixel nur nach Einwilligung. Zielgruppengrößen sind **MISSING**, in der Anzeigenverwaltung prüfen |
+| **Google Suche** | Suchbegriffe aus den Foren: „essen auf montage“, „kochen im monteurzimmer“, „essen ohne herd und ofen“, „essen im lkw“ | Suchvolumen **MISSING**. Erst SEO-Seiten bauen (Angle 4, 7), dann mit kleinem Budget testen |
+
+### 7.4 Messen und Orte (später, wenn es ein Budget gibt)
+
+| Ort | Warum | Stand |
+|---|---|---|
+| **Autohöfe** | Fahrer und Monteure übernachten dort, Aushang am Schwarzen Brett | Erlaubnis des Betreibers nötig. Interview-Ort laut `02`, Abschn. 8.8 |
+| **IAA Transportation**, Hannover | größte Nutzfahrzeugmesse in DE, viele Fahrer und Speditionen | findet alle zwei Jahre statt, **nächster Termin prüfen**. Eher als Besucher für Interviews als mit eigenem Stand |
+| Regionale Handwerksmessen, Innungsversammlungen | Montagefirmen für die Firmenlizenz | Termine je Region recherchieren |
+
+---
+
+## 8. Lead-Magnet: „Zimmer-Check“
+
+**Idee:** Der Monteur oder seine Partnerin kreuzt auf der Landingpage an, was im Zimmer steht. Sofort und **ohne E-Mail** sieht man: „Mit Wasserkocher und Mikrowelle gehen 64 Rezepte, davon 24 Abendessen. Mit einer Kochplatte dazu werden es 147.“ (Datenzählung, live aus den Rezeptdaten). Wer mehr will, bekommt per Mail das PDF.
+
+**Das PDF „Zimmer-Check · Montagekoffer“ (kostenlos):**
+1. **Geräte-Tabelle:** welches Gerät wie viele Rezepte freischaltet (Wasserkocher allein 48, mit Mikrowelle 64, mit einer Platte 147), je 5 Beispielgerichte.
+2. **Packliste Montagekoffer:** Kochplatte, kleiner Topf, Messer, Brett, Dosenöffner, zwei Boxen, Klebeband und Stift für Etiketten (Belege 02/Nr. 39, 41).
+3. **Frage an den Vermieter** als Textvorlage: „Darf ich im Zimmer eine Kochplatte benutzen?“ (Ratgeber-Hinweis zur Erlaubnis, `02`, Abschn. 1).
+4. **Lagerkarte nach BfR:** Kühlschrank höchstens 2 Tage, Reis, Nudeln, Fisch, Hack, Ei höchstens 1 Tag, ungekühlt höchstens 2 Stunden, Aufwärmen auf 70 °C für 2 Minuten (ENTSCHEIDUNGEN C9).
+5. **Fach-Etiketten** zum Ausdrucken: Name, Datum, „essen bis“.
+6. **Spesen-Fakten** mit Quelle: 14 € / 28 €, Dreimonatsfrist (§ 9 Abs. 4a EStG). Kein Steuerrat, keine Ersparnis-Zahl.
+
+**Ablauf mit Double-Opt-in:**
+1. Formular: nur E-Mail-Adresse, Pflicht-Hinweis auf Datenschutz und Abmeldung. **Keine** Geräte, Allergien oder Ernährungsformen mit der Adresse speichern (Art. 9 DSGVO, `07`, 4.1; Planerdaten bleiben auf dem Gerät, ENTSCHEIDUNGEN C3).
+2. Bestätigungsmail mit Link. Erst nach dem Klick kommt das PDF (BGH I ZR 164/09, `07`, 4.4).
+3. Danach höchstens vier Mails in drei Wochen, jede mit Abmeldelink: (a) PDF und Tagesplan-Link, (b) Sonntagskiste (Angle 8), (c) „Was kostet deine Woche?“ mit echtem Beispielplan und Preisstand, (d) Montage-Pass: 17,99 € für 90 Tage, endet von selbst.
+4. Meta erhält höchstens das Ereignis „Lead“ nach Einwilligung im Banner, ohne Geräte- oder Ernährungsdaten.
+
+**Ziel und Messung:** Kosten je bestätigtem Lead unter 3 € (Abbruchgrenze `11`, Risiko 1). Lead-zu-Kauf-Quote messen, sie gilt als größter Hebel (`08`, 3.10 laut `11`).
+
+**Varianten zum Testen (ab-testing):** Zimmer-Check als reines Werkzeug ohne PDF gegen Werkzeug + PDF. Hypothese: Das PDF bringt mehr bestätigte Leads, weil Packliste und Etiketten offline nützlich sind. Messgröße: DOI-Leads je 100 Besucher.
+
+---
+
+## 9. Rechtliche Leitplanken für Werbetexte (aus `07`)
+
+| Thema | Regel für Zimmerherd | Grundlage |
+|---|---|---|
+| Gesundheit | Kein „gesund“, „fit“, „mehr Energie“, „besser schlafen“. Keine Krankheitsnamen. Zimmerherd wirbt mit Geräten, Zeit, Kosten und Lagerung | HCVO Art. 10, 12; § 11 LFGB; HWG § 1, § 3 (`07`, 5.1–5.4) |
+| Nährwerte | Kein „proteinreich“ in Montage-Texten. Wenn doch, nur bei ≥ 20 % Energie aus Protein und am Rezept gekennzeichnet. Den Kalorien-Richtwert aus dem Profil (2.800 kcal) nicht bewerben | HCVO Anhang (`07`, 5.2) |
+| Zahlen | Jede Zahl mit Quelle (Recherche-Datei) oder als eigene, nachvollziehbare Berechnung mit Laden, Personen und Preisstand. Kein „spart X €“ ohne Messung | § 5 UWG (`07`, 5.5, 5.6 Erlaubt Nr. 8, Verboten Nr. 14) |
+| Preise | Raststättenpreise nur mit Quelle (VerkehrsRundschau 27.03.2026) und Datum. Unsere Kosten immer „geschätzt“ | § 5 UWG; ENTSCHEIDUNGEN C6 |
+| Spesen | Fakten zur Pauschale mit Gesetzesquelle. Keine Steuerberatung, kein „steuerfrei sparen“. Hinweis: Auszahlung regelt der Arbeitgeber | § 9 Abs. 4a EStG; `08`, 4.3 |
+| Kundenstimmen | Keine erfundenen oder umformulierten Stimmen. Forenzitate nur als Recherche, nie als „Kundenstimme“. Echte Bewertungen erst nach Launch, mit Hinweis, wie sie geprüft werden | UWG Anhang Nr. 23b/c, § 5b Abs. 3 UWG (`07`, 5.5) |
+| Creator | „Werbung“/„Anzeige“ am Anfang, auch bei Gratis-Zugang. Schriftliches Briefing mit dieser Tabelle | § 5a Abs. 4 UWG; BGH I ZR 90/20 (`07`, 5.5) |
+| Vergleiche | Kein Name von Wettbewerbern (mise) oder Raststättenbetreibern in Anzeigen ohne rechtliche Prüfung | § 6 UWG (`07`, 5.5) |
+| Händlernamen | Aldi, Lidl usw. nur beschreibend („Einkaufsliste für Aldi“), keine Logos, keine Andeutung einer Partnerschaft | Markenrecht, `marke/Namen_und_Pruefung.md` |
+| „Gratis“ | „Gratis“ nur für den 1-Tages-Plan, der wirklich nichts kostet. Beim Jahresabo: „7 Tage 0 €, danach 44,99 € pro Jahr“ in gleicher Sichtbarkeit | UWG Anhang Nr. 21; § 312j BGB (`07`, 3.3, 3.4) |
+| Bestellknopf | „zahlungspflichtig bestellen“ oder „Jetzt kaufen“, nie „Kostenlos testen“ als Bestellknopf | § 312j Abs. 3 BGB (`07`, 3.3; 5.6 Verboten Nr. 15) |
+| Montage-Pass | „17,99 € für 3 Monate, endet automatisch“ ist wahr und darf gesagt werden. Trotzdem braucht auch der Pass den Knopf „Verträge hier kündigen“ und „Vertrag widerrufen“ ohne Login | BGH I ZR 161/24; § 312k, § 356a BGB (`07`, 3.1; `10`, Korrektur 1) |
+| Widerruf | Der Planer ist eine digitale Dienstleistung: Widerrufsrecht bleibt 14 Tage, bei ausdrücklichem Wunsch nach sofortigem Start anteiliger Wertersatz, Zustimmungs-Checkbox nicht vorangekreuzt. Ein reines PDF wäre digitaler Inhalt (§ 356 Abs. 5 BGB) | § 356 Abs. 4, § 357a BGB (`07`, 3.5) |
+| Datenschutz | „Deine Geräte, Allergien und Pläne bleiben auf deinem Handy.“ ist wahr. Nicht „wir speichern nichts“: für Kauf und Lizenzschlüssel braucht es die E-Mail. „DSGVO-konform“ nur mit Beleg | `07`, 4.3; `11`, Einwand A; `05`, Option 3 |
+| Allergien | „Rezepte ohne Erdnüsse filtern“ ja. „Allergiesicher“ nie | `07`, 5.6 (Erlaubt 3, Verboten 6) |
+| Lagerung | Haltbarkeit nur mit BfR-Quelle und den vorsichtigen Werten aus ENTSCHEIDUNGEN C9 | `07`, 5.6 (Erlaubt 7) |
+| Sicherheit | Keine Tipps, die Hausordnung, Brandschutz oder Lenk- und Ruhezeiten berühren (Kochplatte ohne Erlaubnis, Gas in der Kabine, Essen am Steuer, Motor im Leerlauf) | Haftung, Ratgeber deutschland-monteurzimmer.de (`02`, Abschn. 1) |
+| KI-Bilder | Food-Fotos müssen das echte Rezept realistisch zeigen; Hinweis „Abbildung KI-generiert, Serviervorschlag“ | `07`, 9.4 |
+| Werbemails | nur mit Double-Opt-in, auch an Firmen keine Werbe-Mail ohne Einwilligung | § 7 UWG, BGH I ZR 164/09 (`07`, 4.4) |
+| Tracking | Pixel und CAPI nur nach Einwilligung, ohne sensible Signale | § 25 TDDDG, Art. 9 DSGVO (`07`, 4.4) |
+
+**Freigabe-Check vor jeder Anzeige (5 Fragen):**
+1. Hat jede Zahl eine Quelle oder eine nachvollziehbare Rechnung?
+2. Steht irgendwo „gesund“, „fit“, „abnehmen“ oder eine Krankheit?
+3. Sieht ein Zitat oder Gesicht aus wie eine Kundenstimme?
+4. Zeigt das Bild etwas, das es im Produkt nicht gibt, oder etwas Unsicheres (Gas, Fahrt, rohes Fleisch)?
+5. Ist „gratis“ wirklich gratis, und steht der Preis danach gleich sichtbar daneben?

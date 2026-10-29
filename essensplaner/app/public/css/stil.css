@@ -28,7 +28,7 @@
   --akzent: #ffc72c; --akzent-text: #23262b; --akzent-dunkel: #23262b;
   --knopf: #23262b; --knopf-text: #ffc72c; --fokus: #0059b3;
   --kopf: #23262b; --kopf-text: #ffc72c; --tag-kopf: #23262b; --tag-kopf-text: #ffffff;
-  --fuss: #23262b; --fuss-text: #eeebe4; --kuehl: #0059b3; --tk: #4a3f8f; --warn: #b37400; --fehler: #b3261e;
+  --fuss: #23262b; --fuss-text: #eeebe4; --kuehl: #0059b3; --tk: #4a3f8f; --warn: #925f00; --fehler: #b3261e;
   --band: repeating-linear-gradient(-45deg, #ffc72c 0 14px, #23262b 14px 28px);
   --radius: 4px; --chip-radius: 4px; --knopf-radius: 4px;
 }
@@ -50,9 +50,9 @@
   --grund: #eef1ea; --flaeche: #ffffff; --flaeche-2: #dde4d8; --text: #1d2e26; --text-leise: #46564d;
   --linie: #d2dacd; --linie-stark: #74867b; --link: #1f4d3a;
   --akzent: #1f4d3a; --akzent-text: #ffffff; --akzent-dunkel: #1f4d3a;
-  --knopf: #1f4d3a; --knopf-text: #ffffff; --fokus: #3b7ea1;
-  --kopf: #1f4d3a; --kopf-text: #f2c14e; --tag-kopf: #3b7ea1; --tag-kopf-text: #ffffff;
-  --fuss: #1d2e26; --fuss-text: #eef1ea; --kuehl: #2f6c9e; --tk: #5a4f9e; --warn: #a86b00; --fehler: #b3261e;
+  --knopf: #1f4d3a; --knopf-text: #ffffff; --fokus: #336e8d;
+  --kopf: #1f4d3a; --kopf-text: #f2c14e; --tag-kopf: #336e8d; --tag-kopf-text: #ffffff;
+  --fuss: #1d2e26; --fuss-text: #eef1ea; --kuehl: #2f6c9e; --tk: #5a4f9e; --warn: #976000; --fehler: #b3261e;
   --band: repeating-linear-gradient(90deg, #f2c14e 0 26px, #ffffff 26px 52px);
   --radius: 18px; --chip-radius: 99px; --knopf-radius: 12px;
 }
