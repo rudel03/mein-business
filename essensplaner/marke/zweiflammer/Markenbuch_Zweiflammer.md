@@ -1,6 +1,6 @@
 # Zweiflammer · Markenbuch
 
-Stand: 29.10.2026 · Arbeitsgrundlage für Landingpage, App-Texte, Anzeigen und Kooperationen · ein Produkt vom Tellerkontor
+Stand: 29.10.2026 · **Claim-Freigabe vom 29.10.2026 eingearbeitet** (`marke/Claim_Freigabe.md`, Kürzel F01 ff.) · Arbeitsgrundlage für Landingpage, App-Texte, Anzeigen und Kooperationen · ein Produkt vom Tellerkontor
 
 > **Wie die Belege zu lesen sind:** „04/Nr. 12“ heißt Zitat 12 in Abschnitt 5.2 von `essensplaner/recherche/04_Nischen_Vergleich.md`. „Datenzählung“ heißt: von mir am 29.10.2026 aus `app/data/rezepte/*.json` gezählt (195 Rezepte, davon 30 eigene Camping-Rezepte in `C.json`), mit der Planer-Regel „ein Weg, für den alle Geräte da sind“. Alle Rezepte haben den Status „nicht testgekocht“ (ENTSCHEIDUNGEN C8). Korrekturen aus dem Faktencheck `10` sind eingearbeitet. **Hypothese** = nicht belegt, muss in Interviews oder Tests bestätigt werden.
 
@@ -29,11 +29,12 @@ Camping ist in Deutschland ein Massenhobby mit kleiner Küche.
 5. **Gezahlt wird schon, mit Grenze.** Digitale Camping- und Omnia-Kochbücher kosten 9,99–17,99 € pro Buch (App „mobile cooking“), gedruckte Omnia-Bücher 19,50–30,29 € (`04`, 5.6). Gegenstimme: „Aber in der heutigen Zeit 17,99.- für a digitales Kochbuch zu verlangen ist zu viel.“ (04/Nr. 28, 12/2025).
 
 **Was Zweiflammer damit macht (Produktstand 29.10.2026, Datenzählung):**
-- Mit zwei Gasflammen, Topf, Pfanne und Omnia-Backofen (Standard-Profil in `config.js`) gehen **136 der 195 Rezepte**, davon 92 fürs Abendessen.
-- Mit nur einer Flamme, Topf und Pfanne: **121**. Mit einem Topf auf einer Flamme: **78**.
-- Mit Landstrom (Airfryer, Mikrowelle, Wasserkocher dazu): **192**.
+- Mit zwei Gasflammen, Topf, Pfanne, Omnia-Backofen und Kühlschrank ohne Gefrierfach (Standard-Profil in `config.js`) gehen **107 der 195 Rezepte**, davon 67 fürs Abendessen.
+- Mit nur einer Flamme, Topf und Pfanne: **95**. Mit einem Topf auf einer Flamme: **66**.
+- Mit Landstrom (Airfryer, Mikrowelle, Wasserkocher dazu): **152**.
+- *(Neu gezählt am 29.10.2026 mit der Lagerregel des Planers, wie die Landingpage. Die alte Zählung 136/121/78/192 ließ weg, dass ohne Gefrierfach keine TK-Zutaten geplant werden. Claim-Freigabe N02.)*
 - **8 Omnia-Rezepte** (z. B. Kartoffelgratin, Tortilla-Auflauf, Apfel-Crumble), **6 Rezepte mit Grill-Weg**, **23** mit dem Tag „wenig Abwasch“, **10** mit „Gas sparen“.
-- Einkaufsliste nach Laden sortiert, mit einer Liste „Hast du wahrscheinlich schon“ für den Vorrat. Lagerregeln nach BfR (Kühlschrank höchstens 2 Tage, Reis, Nudeln, Fisch, Hack und Ei 1 Tag, ungekühlt höchstens 2 Stunden; ENTSCHEIDUNGEN C9).
+- Einkaufsliste nach Laden sortiert, mit einer Liste „Hast du wahrscheinlich schon“ für den Vorrat. Lagerregeln nach BfR, bei uns strenger: Gekochtes höchstens 2 Tage im Kühlschrank bei höchstens 7 °C (BfR: 2–3 Tage), Reis 1 Tag (FSA), Nudeln, Fisch, Hack und Ei 1 Tag (eigene Vorsichtsregel), ungekühlt höchstens 2 Stunden (USDA); ENTSCHEIDUNGEN C9. **Absorber-Kühlschränke schaffen bei Hitze und während der Fahrt oft keine 7 °C** (04/Nr. 17). Darum in Texten immer „bei höchstens 7 °C“ und den Thermometer-Tipp.
 
 **Ehrliche Grenzen (aus `11` Advocatus Diaboli):**
 - Der Schmerz ist eher Organisation als Not (`04`, 1.6, Kriterium S). Darum verkaufen wir **Entlastung**, nicht Rettung.
@@ -45,14 +46,14 @@ Camping ist in Deutschland ein Massenhobby mit kleiner Küche.
 
 ## 2. Positionierung
 
-> Für Paare mit Wohnmobil, Kastenwagen oder Wohnwagen, die im Urlaub lieber unter der Markise sitzen als Rezepte aus dem Netz zusammenzusuchen, ist Zweiflammer der Wochenplaner für die Bordküche. Er plant mit dem, was an Bord ist: zwei Flammen oder eine Kartusche, Omnia-Backofen, kleiner Kühlschrank, Strom nur, wenn der Platz ihn hat. Die Einkaufsliste kommt nach Laden sortiert, und Zweiflammer sagt ehrlich, wie lange etwas im Bordkühlschrank hält.
+> Für Paare mit Wohnmobil, Kastenwagen oder Wohnwagen, die im Urlaub lieber unter der Markise sitzen als Rezepte aus dem Netz zusammenzusuchen, ist Zweiflammer der Wochenplaner für die Bordküche. Er plant mit dem, was an Bord ist: zwei Flammen oder eine Kartusche, Omnia-Backofen, kleiner Kühlschrank, Strom nur, wenn der Platz ihn hat. Die Einkaufsliste kommt nach Laden sortiert, und Zweiflammer sagt, wie lange etwas im Bordkühlschrank hält, wenn er höchstens 7 °C schafft.
 
 **Kernversprechen:** *Eine fertige Woche für eure Bordküche, statt jeden Abend neu zu überlegen.*
 
 Drei Belege tragen das Versprechen:
 1. **Bordküche zuerst:** Flammen, Omnia, Kühlschrank, Landstrom werden abgefragt. Das kombiniert kein Planer mit Laden und Budget (`04`, 1.6).
 2. **Fertiger Plan statt Rezeptsammlung:** Der Workaround heute ist das Zusammensuchen (04/Nr. 6, Thread mit 427 Antworten). Wettbewerbsoption 5 „Fertige Woche statt leerer Vorlage“ (`05`, Abschn. 7).
-3. **Ohne Konto, ohne Abo-Falle:** Saisonpass 24,99 € für 6 Monate, endet von selbst (ENTSCHEIDUNGEN P1). Passt zu 2–3 Reisen im Jahr besser als ein Abo (`11`, Einwand D).
+3. **Ohne Konto. Der Saisonpass endet von selbst:** 24,99 € für 6 Monate (F07: „ohne Abo-Falle“ gestrichen, unterstellt anderen Fallen und passt nicht zu Plus) (ENTSCHEIDUNGEN P1). Passt zu 2–3 Reisen im Jahr besser als ein Abo (`11`, Einwand D).
 
 **Was Zweiflammer nicht ist:** kein Stellplatzführer, kein Kochbuch zum Blättern, keine Diät, kein Gaskocher-Ratgeber mit Sicherheitsversprechen.
 
@@ -86,7 +87,7 @@ Die **Kernelemente** (Fahrzeug, Ausstattung, Problem, Workaround, Wortlaut) sind
 | Problem | Kochen soll schnell gehen und wenig Arbeit machen (04/Nr. 1, 8); Rezepte werden zusammengesucht (04/Nr. 6); Essen gehen als „die teurere Variante“ (04/Nr. 21) | will vor der Abfahrt wissen, was mitkommt, und nicht jeden Tag neu einkaufen |
 | Workaround | einige Mahlzeiten von zu Hause mitnehmen (04/Nr. 20), Onepot-Gerichte (`04`, 5.5) | Zettel mit Lieblingsgerichten im Handschuhfach |
 | Will | zügig, herzhaft, wenig Abwasch (04/Nr. 8, 27) | gemeinsam draußen essen |
-| Zahlt, weil | zahlt für Camping-Kochbücher und Komfortgeräte (`04`, 5.6) | Saisonpass kostet weniger als ein gedrucktes Omnia-Buch und ist auf die eigene Küche zugeschnitten |
+| Zahlt, weil | zahlt für Camping-Kochbücher und Komfortgeräte (`04`, 5.6) | Saisonpass kostet weniger als ein gedrucktes Omnia-Buch und ist auf die eigene Küche zugeschnitten (Hypothese, nicht als Preisvergleich bewerben, F09) |
 
 ### Persona B · „Die Dauercamperin im Wohnwagen“
 
@@ -145,16 +146,16 @@ Aus `04`, 5.4, wörtlich belegt:
 | # | Angle | Echtes Problem | Beleg | Einsatz |
 |---|---|---|---|---|
 | 1 | Kühlschrank-Tetris | kleiner Bordkühlschrank, Fahrt ohne Strom | 04/Nr. 12, 17; 5 Kühlschrank-Threads 08–10/2026 (`04`, 5.3 Rang 7) | Anzeige, App-Funktion zeigen |
-| 2 | Wie ist der Platz abgesichert? | Strom nur manchmal | 04/Nr. 9, 13, 14; Datenzählung 136 / 192 | Anzeige, Landingpage-Schalter |
+| 2 | Wie ist der Platz abgesichert? | Strom nur manchmal | 04/Nr. 9, 13, 14; Datenzählung 107 / 152 | Anzeige, Landingpage-Schalter |
 | 3 | Gratin vom Gasherd | kein Backofen an Bord | Omnia-Kultur (`04`, 5.3 Rang 2, 5.5); Datenzählung 8 Rezepte | Anzeige, Pinterest/SEO |
-| 4 | Eine Flamme, ein Topf | Kartuschenkocher, Van, wenig Platz | 04/Nr. 22, 23; Datenzählung 78 | Anzeige an Van-Paare |
+| 4 | Eine Flamme, ein Topf | Kartuschenkocher, Van, wenig Platz | 04/Nr. 22, 23; Datenzählung 66 | Anzeige an Van-Paare |
 | 5 | Weit zum Laden | seltener Einkauf, kein Bäcker | 04/Nr. 4, 15, 25 (`04`, 5.3 Rang 3) | Anzeige, Landingpage |
 | 6 | Die Woche steht vor der Abfahrt | Rezepte aus dem Netz zusammensuchen | 04/Nr. 6; Thread „Schnelles Essen“ mit 427 Antworten (`04`, 5.1) | Hero der Landingpage |
 | 7 | Die Kissen riechen nach Urlaub | Bratgeruch im Wagen | 04/Nr. 19; Camperstyle-Podcast („Kissen noch 3 Tage nach dem Braten“) | Anzeige, Social |
 | 8 | Ein Topf und ein Brett reichen | Abwasch, Wassertank, Müll | 04/Nr. 26, 27; Datenzählung 23 „wenig Abwasch“ | Anzeige, Filter zeigen |
 | 9 | Erste Tour der Saison | Vorrat und Plan vor dem Saisonstart | 04/Nr. 20; Saisonalität (`04`, Abschn. 4); `11`, Einwand D | Lead-Magnet, Messe |
 | 10 | Freitag hin, Sonntag heim | Dauercamping-Wochenende, Reste | 04/Nr. 8, 15, 16; Board „Dauercamping spezial“ (`04`, 1.13) | Anzeige Do/Fr, Platz-Aushang |
-| 11 | Selbst kochen: was kostet die Woche? | Essen gehen und Fertiggerichte teuer | 04/Nr. 18, 21, 24 (`04`, 5.3 Rang 4) | Landingpage-Block, Mail |
+| 11 | Selbst kochen: was kostet die Woche? | Essen gehen und Fertiggerichte teuer | 04/Nr. 18, 21, 24 (`04`, 5.3 Rang 4) | Landingpage-Block, Mail (🔴 Betrag gesperrt bis Beleg) |
 | (12) | Der Plan fährt mit ins Ausland | Lidl und Aldi gibt es auch in vielen Reiseländern | `04`, Abschn. 4 (Risiken) | **Wartestand**: Planer kennt nur deutsche Preise |
 
 ### Angle 1 · Kühlschrank-Tetris
@@ -164,16 +165,17 @@ Aus `04`, 5.4, wörtlich belegt:
 - **Warum noch frei:** Kochbücher sagen, was man kocht, nicht wann. Die Reihenfolge nach Haltbarkeit plant niemand (`05`, Abschn. 5, Punkt 6: Lagerregeln mit Quelle bei keinem Anbieter).
 - **Einsatz:** Anzeige mit Blick in einen aufgeräumten Bordkühlschrank, Landingpage-Block „Was zuerst dran ist“.
 - **Was das Produkt heute kann:** Der Planer legt Gerichte so, dass nichts länger liegt, als die Lagerregel erlaubt (Haltbarkeits-Prüfung in `js/engine/planer.js`), und rechnet Reste angebrochener Kühlware als Verschwendung ein, damit möglichst wenig übrig bleibt. Garantiert ist das nicht. Eine eigene Ansicht „Kühlschrank-Reihenfolge“ ist ein Vorschlag (Backlog).
-- **Headline:** Kühlschrank-Tetris? Der Plan sortiert.
-- **Primärtext:** Kleiner Kühlschrank, kein Gefrierfach, und unterwegs kühlt er nicht immer. Zweiflammer plant eure Woche so, dass Gekochtes nicht länger liegt als 2 Tage (BfR) und möglichst wenig angebrochene Kühlware übrig bleibt.
+- **Headline:** Kühlschrank-Tetris? Der Plan hält die Fristen.
+  - *(Freigabe F10: „Der Plan sortiert“ versprach eine Kühlschrank-Reihenfolge, die nicht gebaut ist.)*
+- **Primärtext:** Kleiner Kühlschrank, kein Gefrierfach, und unterwegs kühlt er nicht immer. Zweiflammer plant eure Woche so, dass Gekochtes höchstens 2 Tage im Kühlschrank liegt (BfR nennt 2–3 Tage, bei höchstens 7 °C) und möglichst wenig angebrochene Kühlware übrig bleibt.
 
 ### Angle 2 · Wie ist der Platz abgesichert?
 
 - **Echtes Problem:** Ob Heißluftfritteuse oder Mikrowelle gehen, entscheidet der Platz, nicht der Camper.
-- **Beleg:** „da ich nicht wusste wie der Platz abgesichert ist“ (04/Nr. 13). „Sicherlich ändert sich die Gerätezusammenstellung auch nach dem Stromverbrauch“ (04/Nr. 9). Die Heißluftfritteuse „bleibt zu Hause, da zu groß, zu schwer, zuviel Leistung“ (04/Nr. 14). Datenzählung: **136 Rezepte** ohne Strom (2 Flammen, Omnia), **192** mit Landstrom-Geräten.
+- **Beleg:** „da ich nicht wusste wie der Platz abgesichert ist“ (04/Nr. 13). „Sicherlich ändert sich die Gerätezusammenstellung auch nach dem Stromverbrauch“ (04/Nr. 9). Die Heißluftfritteuse „bleibt zu Hause, da zu groß, zu schwer, zuviel Leistung“ (04/Nr. 14). Datenzählung (Planer-Regel, 29.10.2026): **107 Rezepte** ohne Strom (2 Flammen, Omnia, Kühlschrank), **152** mit Landstrom-Geräten.
 - **Warum noch frei:** Rezepte für die Heißluftfritteuse und Rezepte für den Gaskocher stehen in getrennten Büchern. Niemand plant eine Reise, auf der beides wechselt.
 - **Einsatz:** Anzeige, auf der Landingpage zwei Knöpfe „mit Landstrom / ohne Landstrom“, die die Rezeptzahl zeigen.
-- **Headline:** Mit Landstrom 192 Rezepte. Ohne 136.
+- **Headline:** Mit Landstrom 152 Rezepte. Ohne 107.
 - **Primärtext:** Am Stellplatz gibt es keinen Strom, auf dem Campingplatz schon? Kreuzt an, was gerade geht: zwei Flammen, Omnia-Backofen, Heißluftfritteuse oder Mikrowelle. Zweiflammer plant nur, was damit klappt.
 - **Hinweis:** Zahlen vor jeder Anzeige neu zählen, sie ändern sich mit jedem neuen Rezept.
 
@@ -191,10 +193,10 @@ Aus `04`, 5.4, wörtlich belegt:
 ### Angle 4 · Eine Flamme, ein Topf
 
 - **Echtes Problem:** Im Van oder beim Kurztrip gibt es oft nur einen Kartuschenkocher.
-- **Beleg:** „Da habe ich normalerweise nur einen Gaskocher (einflammig) mit Kartusche dabei.“ (04/Nr. 22). „abends dann meistens das, was keine Arbeit benötigt“ (04/Nr. 23). Datenzählung: **78 Rezepte** mit einem Topf auf einer Flamme, **121** mit Topf und Pfanne auf einer Flamme.
+- **Beleg:** „Da habe ich normalerweise nur einen Gaskocher (einflammig) mit Kartusche dabei.“ (04/Nr. 22). „abends dann meistens das, was keine Arbeit benötigt“ (04/Nr. 23). Datenzählung (Planer-Regel, 29.10.2026): **66 Rezepte** mit einem Topf auf einer Flamme, **95** mit Topf und Pfanne auf einer Flamme.
 - **Warum noch frei:** Camping-Rezepte gehen meist von zwei Flammen aus. Ein Plan für eine Flamme fehlt.
 - **Einsatz:** Anzeige an Van- und Kastenwagen-Interessen, Ein-Flammen-Profil auf der Landingpage.
-- **Headline:** Eine Flamme, ein Topf: 78 Rezepte.
+- **Headline:** Eine Flamme, ein Topf: 66 Rezepte.
 - **Primärtext:** Nur ein Kartuschenkocher im Van? Stellt bei Zweiflammer eine Flamme und einen Topf ein, und der Plan nimmt nur Gerichte, die damit gehen. Einkaufsliste nach Laden sortiert, Tagesplan gratis.
 
 ### Angle 5 · Weit zum Laden
@@ -204,8 +206,9 @@ Aus `04`, 5.4, wörtlich belegt:
 - **Warum noch frei:** Kochbücher kennen keinen Einkaufsrhythmus. Stellplatz-Apps zeigen den Laden, aber nicht, was man dort braucht.
 - **Einsatz:** Anzeige, Landingpage-Block „Ein Einkauf, eine Liste“.
 - **Was das Produkt heute kann:** Einkaufsliste für den ganzen Plan nach Laden sortiert, Vorrat als „Hast du wahrscheinlich schon“. Frisches mit kurzer Haltbarkeit muss trotzdem nach 1–2 Tagen nachgekauft werden. Das sagen wir.
-- **Headline:** Weit zum Laden? Eine Liste reicht.
-- **Primärtext:** Der Supermarkt ist weit, der Bäcker gar nicht da. Zweiflammer macht aus eurem Wochenplan eine Einkaufsliste in der Reihenfolge des Ladens und zeigt, was ihr aus dem Vorrat schon habt. Frisches planen wir für die ersten Tage.
+- **Headline:** Weit zum Laden? Eine Liste für die Woche.
+  - *(Freigabe F16: „reicht“ widersprach dem Hinweis, dass Frisches nachgekauft werden muss.)*
+- **Primärtext:** Der Supermarkt ist weit, der Bäcker gar nicht da. Zweiflammer macht aus eurem Wochenplan eine Einkaufsliste nach Abteilungen, wie sie im Laden meist liegen, und zeigt, was ihr aus dem Vorrat schon habt. Frisches, das schnell verdirbt, kauft ihr unterwegs nach.
 
 ### Angle 6 · Die Woche steht vor der Abfahrt
 
@@ -214,7 +217,7 @@ Aus `04`, 5.4, wörtlich belegt:
 - **Warum noch frei:** Alle Anbieter verkaufen Rezepte. Eine fertige Reisewoche mit Liste verkauft niemand für die Bordküche (`05`, Option 5).
 - **Einsatz:** Hero der Landingpage, Anzeige in der Planungszeit (Februar bis April).
 - **Headline:** Die Woche steht, bevor der Wagen rollt.
-- **Primärtext:** Statt Rezepte aus dem Netz zu sammeln: Kreuzt an, was an Bord ist, wie viele ihr seid und wo ihr einkauft. Zweiflammer plant die Reisewoche mit Einkaufsliste und Lagerregeln. Den ersten Tag gibt es gratis, ohne Konto.
+- **Primärtext:** Statt Rezepte aus dem Netz zu sammeln: Kreuzt an, was an Bord ist, wie viele ihr seid und wo ihr einkauft. Zweiflammer plant die Reisewoche mit Einkaufsliste und Lagerregeln. Den Tagesplan gibt es gratis, ohne Konto. Die ganze Reisewoche mit dem Saisonpass (24,99 € für 6 Monate).
 
 ### Angle 7 · Die Kissen riechen nach Urlaub
 
@@ -224,7 +227,7 @@ Aus `04`, 5.4, wörtlich belegt:
 - **Einsatz:** Social-Post mit Humor, Anzeige.
 - **Was das Produkt heute kann:** Wer drinnen nicht braten will, nimmt die Pfanne aus den Geräten. Dann plant Zweiflammer ohne Pfannengerichte. Ein eigener Filter „draußen kochen“ ist nicht gebaut.
 - **Headline:** Die Kissen sollen nach Urlaub riechen.
-- **Primärtext:** Bratkartoffeln im Wohnwagen riechen noch Tage später aus den Polstern. Nehmt bei Zweiflammer die Pfanne raus, und der Plan kommt mit Topf und Omnia-Backofen aus. Oder ihr kocht draußen auf dem Kocher.
+- **Primärtext:** Bratkartoffeln im Wohnwagen können noch Tage später aus den Polstern riechen. Nehmt bei Zweiflammer die Pfanne raus, und der Plan kommt mit Topf und Omnia-Backofen aus. Oder ihr kocht draußen auf dem Kocher.
 
 ### Angle 8 · Ein Topf und ein Brett reichen
 
@@ -234,7 +237,7 @@ Aus `04`, 5.4, wörtlich belegt:
 - **Einsatz:** Anzeige, Filter „wenig Abwasch“ auf der Landingpage zeigen.
 - **Recht:** Kein „spart Wasser“ oder „umweltfreundlich“ ohne Messung (Abschnitt 9, Umweltaussagen).
 - **Headline:** Ein Topf und ein Brett reichen.
-- **Primärtext:** Weniger Geschirr heißt weniger Wasser aus dem Tank und mehr Abend vor dem Wagen. Zweiflammer markiert Gerichte mit wenig Abwasch, von Bircher-Müsli bis Omnia-Gratin.
+- **Primärtext:** Weniger Geschirr, weniger Abwasch, mehr Abend vor dem Wagen. Zweiflammer markiert Gerichte mit wenig Abwasch, von Bircher-Müsli bis Omnia-Gratin.
 - **Produktstand:** Der Planer gewichtet „wenig Abwasch“ heute nicht (`js/engine/planer.js`). Darum nur „markiert“ sagen. Eine Vorliebe „wenig Abwasch“ ist Backlog.
 
 ### Angle 9 · Erste Tour der Saison
@@ -244,7 +247,7 @@ Aus `04`, 5.4, wörtlich belegt:
 - **Warum noch frei:** Saisonstart-Checklisten drehen sich um Technik (Gas, Wasser, Reifen). Die Küche fehlt darin.
 - **Einsatz:** Lead-Magnet (Abschnitt 8), Messe-Aktion, Anzeige Februar bis April.
 - **Headline:** Erste Tour der Saison? Vorrat zuerst.
-- **Primärtext:** Bevor der Wagen vom Winterplatz kommt: Packliste für die Bordküche, Vorratskiste für die ersten zwei Tage und ein Plan für die erste Woche. Holt euch den Bordküchen-Check kostenlos per Mail.
+- **Primärtext:** Bevor der Wagen vom Winterplatz kommt: Packliste für die Bordküche, Vorratskiste für die ersten zwei Tage und ein Plan für die erste Woche. Holt euch den Bordküchen-Check gratis, wenn ihr euch für unsere Mails anmeldet.
 
 ### Angle 10 · Freitag hin, Sonntag heim
 
@@ -263,6 +266,7 @@ Aus `04`, 5.4, wörtlich belegt:
 - **Einsatz:** Landingpage-Block mit einem echten Beispielplan (2 Personen, Lidl, Preisstand), Mail in der Willkommensstrecke.
 - **Recht:** Nur der errechnete Wert eines echten Plans, als Schätzung mit Preisstand. Kein Vergleich mit „Essen gehen kostet X“ ohne Quelle (§ 5 UWG).
 - **Headline:** Selbst kochen: was kostet die Woche?
+- 🔴 GESPERRT: Primärtext mit Betrag, bis `zutaten.py` nach `09` §5b korrigiert ist und der Kassenbon-Test bestanden ist. Lidl-Preise sind online nicht belegt (`09`). Bis dahin ohne Betrag (F26).
 - **Primärtext:** Bevor ihr losfahrt, wisst ihr, was die Campingwoche in der Küche ungefähr kostet. Zweiflammer schätzt die Kosten für euren Plan beim Laden eurer Wahl, mit Preisstand. Beispiel: [2 Personen, 7 Tage, Lidl: X,XX €, Preisstand MM/JJJJ].
 
 ### Angle 12 (Wartestand) · Der Plan fährt mit ins Ausland
@@ -294,12 +298,12 @@ Aus `04`, 5.4, wörtlich belegt:
 | # | Do | Don't | Warum |
 |---|---|---|---|
 | 1 | „Kreuzt an, was an Bord ist.“ | „Smarte KI-Küche für dein Camper-Lifestyle.“ | Anglizismen und „KI“: der Planer ist regelbasiert (ENTSCHEIDUNGEN C7), die Zielgruppe redet anders |
-| 2 | „Im Bordkühlschrank hält Gekochtes höchstens 2 Tage (BfR).“ | „Mit Zweiflammer verdirbt nichts mehr.“ | nicht garantierbar, § 5 UWG |
-| 3 | „Gerichte mit kurzer Flammenzeit sind markiert.“ (erst wenn die Minuten am Rezept stehen) | „Spart die Hälfte Gas.“ | nicht gemessen, § 5 UWG |
+| 2 | „Bei höchstens 7 °C planen wir Gekochtes für 2 Tage (BfR: 2–3 Tage). Ein Thermometer im Bordkühlschrank zeigt, ob er das schafft.“ | „Mit Zweiflammer verdirbt nichts mehr.“ | nicht garantierbar, § 5 UWG |
+| 3 | 🔴 GESPERRT bis die Minuten am Rezept stehen: „Gerichte mit kurzer Flammenzeit sind markiert.“ Das Tag `gas_sparen` nie als „Gas sparen“ zeigen (F29) | „Spart die Hälfte Gas.“ | nicht gemessen, § 5 UWG |
 | 4 | „Für den Omnia-Backofen“ (beschreibend) | „Die offizielle Omnia-App“ | fremde Marke, Täuschung über Partnerschaft |
 | 5 | „Saisonpass: 24,99 € für 6 Monate, endet von selbst.“ | „Nur noch 3 Tage: Saisonpass zum Frühbucherpreis.“ | Fake-Verknappung (`08`, 4.4) |
 | 6 | „Mehr Zeit unter der Markise.“ | „Genieße deinen wohlverdienten Ruhestand gesund.“ | Gesundheitsaussage und Alters-Schublade |
-| 7 | „Mit Landstrom 192 Rezepte, ohne 136.“ (mit Datum gezählt) | „Hunderte Rezepte für jede Situation.“ | ungenau, Zahl ist belegbar |
+| 7 | „Mit Landstrom 152 Rezepte, ohne 107.“ (mit Datum gezählt, Planer-Regel) | „Hunderte Rezepte für jede Situation.“ | ungenau, Zahl ist belegbar |
 | 8 | „Kocht draußen oder nehmt die Pfanne raus.“ | „Grillen im Vorzelt geht auch bei Regen.“ | Kohlenmonoxid und Brand, gefährlich |
 
 Zusätzlich gilt: keine Wildcamping-Romantik („einfach irgendwo hinstellen“), keine Aussagen über Gassicherheit („sicher kochen“).
@@ -462,20 +466,20 @@ Straight-on view into an open compact motorhome fridge, neatly stacked reusable 
 
 ## 8. Lead-Magnet: „Bordküchen-Check“
 
-**Idee:** Auf der Landingpage kreuzt man an, was an Bord ist (Flammen, Omnia, Kühlschrank, Landstrom ja/nein). Sofort und **ohne E-Mail** steht da: „Mit zwei Flammen und Omnia gehen 136 Rezepte, davon 92 Abendessen. Mit Landstrom 192.“ (Datenzählung, live aus den Rezeptdaten). Wer mehr will, bekommt das PDF per Mail. Beworben **Januar bis April** (Angle 9).
+**Idee:** Auf der Landingpage kreuzt man an, was an Bord ist (Flammen, Omnia, Kühlschrank, Landstrom ja/nein). Sofort und **ohne E-Mail** steht da: „Mit zwei Flammen und Omnia gehen 107 Rezepte, davon 67 Abendessen. Mit Landstrom 152.“ (Datenzählung, live aus den Rezeptdaten). Wer mehr will, bekommt das PDF per Mail. Beworben **Januar bis April** (Angle 9).
 
-**Das PDF „Bordküchen-Check · Erste Tour der Saison“ (kostenlos):**
-1. **Geräte-Tabelle:** welche Ausstattung wie viele Rezepte möglich macht (eine Flamme mit Topf 78, eine Flamme mit Topf und Pfanne 121, zwei Flammen mit Omnia 136, mit Landstrom 192), je 5 Beispielgerichte.
+**Das PDF „Bordküchen-Check · Erste Tour der Saison“ (gratis, wenn man sich für unsere Mails anmeldet, F31):**
+1. **Geräte-Tabelle:** welche Ausstattung wie viele Rezepte möglich macht (eine Flamme mit Topf 66, eine Flamme mit Topf und Pfanne 95, zwei Flammen mit Omnia 107, mit Landstrom 152; Zählung wie Planer), je 5 Beispielgerichte.
 2. **Packliste Bordküche:** Topf, Pfanne, Omnia-Backofen falls vorhanden, Brett, Messer, Dosenöffner, Boxen, Klebeband und Stift für Etiketten. Mit Hinweis: Schwere Geräte bleiben zu Hause, wenn die Zuladung knapp ist (04/Nr. 14; promobil zur Zuladung, `04`, 5.2).
 3. **Vorratskiste für die ersten zwei Tage:** ungekühlt haltbare Zutaten aus den Rezepten (Datenbasis: Zutaten ohne Kühlpflicht).
-4. **Kühlschrank-Karte für die Tür** nach BfR: Gekochtes höchstens 2 Tage, Reis, Nudeln, Fisch, Hack und Ei 1 Tag, ungekühlt höchstens 2 Stunden, Aufwärmen auf 70 °C für 2 Minuten (ENTSCHEIDUNGEN C9).
-5. **Ein Beispiel-Wochenplan** für 2 Personen mit zwei Flammen und Omnia, Einkaufsliste nach Laden, Kosten geschätzt mit Preisstand.
+4. **Kühlschrank-Karte für die Tür:** Thermometer, höchstens 7 °C, besser 5 °C (BfR). Gekochtes höchstens 2 Tage (BfR: 2–3 Tage), Reis 1 Tag (FSA), Nudeln, Fisch, Hack und Ei 1 Tag (eigene Regel), ungekühlt höchstens 2 Stunden (USDA), Aufwärmen auf mindestens 70 °C für 2 Minuten (BfR) (ENTSCHEIDUNGEN C9, F32).
+5. **Ein Beispiel-Wochenplan** für 2 Personen mit zwei Flammen und Omnia, Einkaufsliste nach Laden, Kosten geschätzt mit Preisstand (🔴 GESPERRT: Betrag bis Preiskorrektur und Kassenbon-Test, sonst „Preisniveau“, F33).
 6. **Etiketten** für Boxen: Gericht, Datum, „essen bis“.
 
 **Ablauf mit Double-Opt-in:**
 1. Formular: nur E-Mail-Adresse, Hinweis auf Datenschutz und Abmeldung. **Keine** Allergien, Ernährungsform oder Geräte zusammen mit der Adresse speichern (Art. 9 DSGVO; ENTSCHEIDUNGEN C3).
 2. Bestätigungsmail, erst nach dem Klick das PDF (BGH I ZR 164/09, `07`, 4.4).
-3. Danach höchstens vier Mails bis zum Saisonstart, jede mit Abmeldelink: (a) PDF und Tagesplan-Link, (b) Omnia-Woche (Angle 3), (c) „Was kostet die Campingwoche?“ mit echtem Beispielplan (Angle 11), (d) Saisonpass: 24,99 € für 6 Monate, endet von selbst.
+3. Danach höchstens vier Mails bis zum Saisonstart, jede mit Abmeldelink: (a) PDF und Tagesplan-Link, (b) Omnia-Woche (Angle 3), (c) „Was kostet die Campingwoche?“ mit echtem Beispielplan (Angle 11; 🔴 GESPERRT bis Beleg, F34), (d) Saisonpass: 24,99 € für 6 Monate, endet von selbst.
 4. Meta bekommt höchstens das Ereignis „Lead“ nach Einwilligung, ohne weitere Daten.
 
 **Ziel und Messung:** Kosten je bestätigtem Lead unter 3 € (`11`, Risiko 1). Vorbestellungen des Saisonpasses bis Mai: mindestens 5 (`11`, Einwand D).
@@ -497,15 +501,15 @@ Straight-on view into an open compact motorhome fridge, neatly stacked reusable 
 | Fremde Marken | „Omnia“ nur beschreibend („für den Omnia-Backofen“), nie im Namen, Logo oder als Partner. Händler- und Herstellernamen ohne Logo, ohne Partnerschafts-Andeutung | Markenrecht; `marke/Namen_und_Pruefung.md`, Abschn. 6 |
 | Kundenstimmen | Keine erfundenen oder umformulierten Stimmen. Forenzitate nur als Recherche. Echte Bewertungen erst nach dem Launch, mit Hinweis zur Prüfung | UWG Anhang Nr. 23b/c, § 5b Abs. 3 UWG (`07`, 5.5) |
 | Creator | „Werbung“/„Anzeige“ am Anfang, auch bei Gratis-Zugang. Schriftliches Briefing mit dieser Tabelle | § 5a Abs. 4 UWG; BGH I ZR 90/20 (`07`, 5.5) |
-| Vergleiche | Kein Name von Wettbewerbern (z. B. „mobile cooking“) ohne rechtliche Prüfung | § 6 UWG |
+| Vergleiche | Kein Name von Wettbewerbern (z. B. „mobile cooking“) ohne rechtliche Prüfung. Keine Alleinstellung („der einzige Planer für die Bordküche“) | § 6 UWG |
 | Saisonpass | „24,99 € für 6 Monate, endet automatisch“ mit Gesamtpreis. Umrechnung („entspricht ca. 4,17 € im Monat“) nur neben dem Gesamtpreis. Kündigungsknopf „Verträge hier kündigen“ und „Vertrag widerrufen“ trotzdem ohne Login | BGH I ZR 161/24; § 312k, § 356a BGB; PAngV (`07`, 3.1, 3.7; `10`, Korrektur 1) |
 | Keine Frühbucher-Tricks | Keine Countdowns, kein „nur bis Sonntag“, keine Streichpreise ohne früheren echten Preis | `08`, 4.4; § 5 UWG |
-| „Gratis“ | „Gratis“ nur für den 1-Tages-Plan. Beim Jahresabo „7 Tage 0 €, danach 44,99 € pro Jahr“ in gleicher Sichtbarkeit | UWG Anhang Nr. 21; § 312j BGB (`07`, 3.3, 3.4) |
+| „Gratis“ | „Gratis“ nur für den 1-Tages-Plan und Lead-Magnete mit dem Zusatz „wenn ihr euch für unsere Mails anmeldet“. Beim Jahresabo „7 Tage 0 €, danach 44,99 € für 12 Monate (Laufzeit 12 Monate, danach monatlich kündbar)“ in gleicher Sichtbarkeit (F35) | UWG Anhang Nr. 21; § 312j BGB (`07`, 3.3, 3.4) |
 | Bestellknopf | „zahlungspflichtig bestellen“ oder „Jetzt kaufen“ | § 312j Abs. 3 BGB (`07`, 3.3) |
 | Widerruf | Planer = digitale Dienstleistung: Widerrufsrecht 14 Tage, bei ausdrücklichem Wunsch nach sofortigem Start anteiliger Wertersatz, Checkbox nicht vorangekreuzt | § 356 Abs. 4, § 357a BGB (`07`, 3.5) |
 | Datenschutz | „Eure Geräte, Allergien und Pläne bleiben auf dem Handy“ ist wahr. Für Kauf und Lizenzschlüssel braucht es die E-Mail. „DSGVO-konform“ nur mit Beleg | `07`, 4.3; `11`, Einwand A |
 | Allergien | „Rezepte ohne Nüsse filtern“ ja, „allergiesicher“ nie | `07`, 5.6 |
-| Lagerung | Haltbarkeit nur mit BfR-Quelle und den Werten aus ENTSCHEIDUNGEN C9 | `07`, 5.6 (Erlaubt 7) |
+| Lagerung | Haltbarkeit nur mit der richtigen Quelle je Regel (BfR 2–3 Tage, FSA Reis, USDA 2 Stunden, sonst „eigene Vorsichtsregel“), immer „bei höchstens 7 °C“. Nie „(BfR)“ hinter eine Zahl, die das BfR nicht nennt | `07`, 5.6 (Erlaubt 7) |
 | Ausland | Keine Preise für Läden im Ausland, solange der Planer sie nicht kennt | § 5 UWG; Angle 12 |
 | KI-Bilder | Fotos zeigen das echte Rezept realistisch, Hinweis „Abbildung KI-generiert, Serviervorschlag“ | `07`, 9.4 |
 | Werbemails | nur mit Double-Opt-in, auch an Händler und Vermieter keine Werbe-Mail ohne Einwilligung | § 7 UWG, BGH I ZR 164/09 (`07`, 4.4) |

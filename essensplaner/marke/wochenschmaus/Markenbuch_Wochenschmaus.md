@@ -1,8 +1,8 @@
 # Wochenschmaus · Markenbuch
 
-Stand: 29.10.2026 · Arbeitsgrundlage für Landingpage, App-Texte, Anzeigen und Inhalte · Nischen-Marke „Alltag“ unter der Dachmarke Tellerkontor
+Stand: 29.10.2026 · **Claim-Freigabe vom 29.10.2026 eingearbeitet** (`marke/Claim_Freigabe.md`, Kürzel W01 ff.) · Arbeitsgrundlage für Landingpage, App-Texte, Anzeigen und Inhalte · Nischen-Marke „Alltag“ unter der Dachmarke Tellerkontor
 
-> **Lesehilfe.** Jede Zahl hat eine Quelle. Kürzel: `03-B4` = Zitat B4 in `recherche/03_Stimmen_Fitness_Allgemein.md`, `01 §5.2` = Abschnitt 5.2 in `recherche/01_Markt_und_Zahlen.md`, `04` = Nischenvergleich, `05` = Wettbewerb, `07` = Recht, `11` = Advocatus Diaboli. **„Eigene Auswertung“** heißt: aus `app/public/data/daten.json` gerechnet (195 Rezepte, 156 Zutaten). Preise darin sind **Schätzungen (Stand 10/2026)**, die Preisstichprobe `recherche/09` fehlt noch (`11` Punkt 4). Mit Kosten oder Ersparnis wird erst nach dem Kassenbon-Test geworben. **[Hypothese]** markiert alles, was noch nicht durch Interviews belegt ist.
+> **Lesehilfe.** Jede Zahl hat eine Quelle. Kürzel: `03-B4` = Zitat B4 in `recherche/03_Stimmen_Fitness_Allgemein.md`, `01 §5.2` = Abschnitt 5.2 in `recherche/01_Markt_und_Zahlen.md`, `04` = Nischenvergleich, `05` = Wettbewerb, `07` = Recht, `11` = Advocatus Diaboli. **„Eigene Auswertung“** heißt: aus `app/public/data/daten.json` gerechnet (195 Rezepte, 156 Zutaten). Preise darin sind **Schätzungen (Stand 10/2026)**. Die Preisstichprobe `recherche/09_Preisstichprobe.md` (29.10.2026) belegt 37 von 56 Zutaten: im Mittel −6 %, aber Fleisch und Fisch 16–32 % zu niedrig, Obst und Gemüse unbelegt. Mit Kosten oder Ersparnis wird erst nach Übernahme der Korrekturliste (`09` §5b) und dem Kassenbon-Test geworben (W05). **[Hypothese]** markiert alles, was noch nicht durch Interviews belegt ist.
 
 ## 1. Warum es diese Marke gibt
 
@@ -35,9 +35,11 @@ Stand: 29.10.2026 · Arbeitsgrundlage für Landingpage, App-Texte, Anzeigen und 
 
 ## 2. Positionierung
 
-> **Für Haushalte, die jeden Tag neu überlegen, was es gibt, und dabei aufs Geld achten, ist Wochenschmaus der Wochenplaner, der aus Laden, Budget, Personen und Küche eine fertige Woche macht: Gerichte, Einkaufsliste in Gang-Reihenfolge und geschätzte Kosten. Er rechnet mit ganzen Packungen und plant angebrochene Reste ins nächste Essen ein.**
+> **Für Haushalte, die jeden Tag neu überlegen, was es gibt, und dabei aufs Geld achten, ist Wochenschmaus der Wochenplaner, der aus Laden, Budget, Personen und Küche eine fertige Woche macht: Gerichte, Einkaufsliste in Gang-Reihenfolge und geschätzte Kosten. Er rechnet mit ganzen Packungen und sucht für angebrochene Packungen weitere Gerichte in der Woche.**
 
-**Kernversprechen:** *Einmal planen, einmal einkaufen, und die Frage „Was essen wir heute?“ ist für die Woche beantwortet.*
+**Kernversprechen:** *Einmal planen, gezielt einkaufen, und die Frage „Was essen wir heute?“ ist für die Woche beantwortet.*
+
+*(Freigabe W07: „einmal einkaufen“ geändert. Rohes Hack, Geflügel und Fisch halten nur bis zum Verbrauchsdatum, Hack meist nur bis zum Kauftag. Der Planer prüft das Kaufdatum roher Zutaten nicht. Bis das gebaut ist: Hinweis „Hack und Fisch am Kauftag verarbeiten oder einfrieren“ in Einkaufsliste und Texten.)*
 
 **Drei Belege fürs Versprechen (alle prüfbar):**
 1. Laden, Budget und Personen eingeben, der Plan kommt in Sekunden (Planer < 0,3 s, Entscheidung C7).
@@ -52,7 +54,7 @@ Stand: 29.10.2026 · Arbeitsgrundlage für Landingpage, App-Texte, Anzeigen und 
 |---|---|---|
 | **Honigmama / BeeQueen** | E-Books für Schwangerschaft und erstes Lebensjahr | Wochenschmaus beginnt, wo die Babyzeit endet: der ganz normale Familienalltag. Keine Baby- oder Schwangerschaftsrezepte. Cross-Selling nur als Hinweis (Buchpreisbindung, Entscheidung P3). |
 | **DURCHSCHICHT** | Essen nach Dienstplan, Nacht und Pausenraum | Wochenschmaus plant den Haushalt, nicht die Schicht. Schichtarbeitende bekommen DURCHSCHICHT. |
-| **mise** (`05 §2.1`) | KI-Pläne, Ladenbezug und Preise laut Nutzern falsch, Mindestbudget 65 €, kein Gratis-Zugang | eigene geprüfte Rezepte, ganze Packungen, Budget ohne Untergrenze, 1-Tages-Plan dauerhaft gratis, kein Konto |
+| **mise** (`05 §2.1`) | KI-Pläne, Ladenbezug und Preise laut Nutzern falsch, Mindestbudget 65 €, kein Gratis-Zugang | eigene, fachlich durchgesehene Rezepte (noch nicht testgekocht, C8), ganze Packungen, Budget ohne Untergrenze, 1-Tages-Plan dauerhaft gratis, kein Konto. *(Tabelle nur intern, nie in Werbung: § 6 UWG, W09)* |
 | **Chefkoch, KptnCook, Kitchen Stories** | Rezeptsammlungen mit Werbung, Konto oder Paywall auf Filtern (`03-B14`, B17, B19) | eine fertige Woche statt vieler Ideen, Allergiefilter gratis, ohne Werbung im Planer, ohne Konto |
 | **Kochboxen** (HelloFresh & Co.) | Lieferung zum Festpreis pro Portion, Rabatt-Einstieg, Verpackungsmüll (`03-B30`–B35) | Plan und Liste wie bei der Box, gekauft wird selbst im eigenen Laden |
 | **MealDeal, Disha, Aldi-Wochenplan** (`04 §1.5`) | Prospekt- oder Händler-Planer | Gerätefilter, Allergien, Reste-Logik, ladenübergreifend |
@@ -85,9 +87,9 @@ Die **Kernelemente** (Problem, Zitat, Zahl) sind belegt. Name, Alter, Alltag und
 | Wir sagen | Wir sagen nicht | Warum |
 |---|---|---|
 | Wochenplan, Wocheneinkauf, Einkaufszettel | Meal-Planning-Lösung | Alltagswörter |
-| satt, schmeckt, unter 20 Minuten | „gesund und lecker“ | „gesund“ ist eine allgemeine Gesundheitsaussage (Art. 10 Abs. 3 HCVO) |
+| satt (nur „satt werden“, nie „macht satt“ an einem Gericht, Art. 13 HCVO), schmeckt, unter 20 Minuten | „gesund und lecker“ | „gesund“ ist eine allgemeine Gesundheitsaussage (Art. 10 Abs. 3 HCVO) |
 | geschätzte Kosten, ca., Preisstand | „garantiert günstig“, „spare X €“ | § 5 UWG |
-| Reste, angebrochene Packung, aufbrauchen | „Zero Waste“, „klimafreundlich“ | allgemeine Umweltaussagen sind heikel (Abschnitt 9) |
+| Reste, angebrochene Packung, aufbrauchen | „Zero Waste“, „klimafreundlich“, „weniger Verschwendung“ | allgemeine und vergleichende Umweltaussagen sind seit 27.09.2026 ohne Beleg verboten (Abschnitt 9) |
 | Allergien und Abneigungen ausschließen | „allergiesicher“ | `07 §5.6` Nr. 6 |
 | allein mit Kindern, 1 Erwachsene:r + Kinder | „arme Familien“, „Sozialfälle“, „Hartz-Rezepte“ | Respekt, kein Mitleid, kein Stigma |
 | Familie, Haushalt, ihr | „Mamas“ als einzige Ansprache | Väter und Paare gehören dazu; Mama-Welt ist Honigmama |
@@ -101,9 +103,9 @@ Zehn Angles. Headlines höchstens 40 Zeichen (Meta), die ersten 125 Zeichen des 
 - **Echtes Problem:** Nicht das Kochen nervt, sondern die tägliche Entscheidung, am Ende eines langen Tages.
 - **Beleg:** `03-B1` „der ständigen Frage: ‚Was essen wir heute?'“, `03-B36`, `03-B37`, `03-B39` „App für Kochen/Koch-Wochenplan?“. Schmerzpunkt Nr. 2 mit hoher Konfidenz (`03 B2`). 57 % wollen „einfach und schnell“ (`01 §5.2`).
 - **Warum noch frei:** Rezept-Apps beantworten die Frage mit noch mehr Auswahl. Eine Uhrzeit-Ansprache („17:30“) mit fertiger Antwort für die Woche nutzt niemand sichtbar (`05 §3.2`).
-- **Einsatz:** Anzeigen Sonntag 18–21 Uhr und werktags 16–18 Uhr, Pinterest-Pin „Wochenplan in 2 Minuten“, SEO „Was koche ich heute“.
+- **Einsatz:** Anzeigen Sonntag 18–21 Uhr und werktags 16–18 Uhr, Pinterest-Pin „Wochenplan für sonntags“ (🔴 GESPERRT: „in 2 Minuten“ bis zur Zeitmessung mit 5 Testpersonen, W12), SEO „Was koche ich heute“.
 - **Headline:** 17:30. Was gibt's heute?
-- **Primärtext:** Die Antwort steht schon fest, wenn du sonntags zwei Minuten planst. Wochenschmaus baut aus Laden, Budget und Personen eure Woche mit Einkaufszettel. Den ersten Tag probierst du gratis, ohne Konto.
+- **Primärtext:** Die Antwort steht schon fest, wenn du sonntags kurz planst. Wochenschmaus baut aus Laden, Budget und Personen eure Woche mit Einkaufszettel. Den Tagesplan gibt es gratis, ohne Konto, die ganze Woche mit Plus.
 
 ### W2 · Die halbe Avocado gibt's nicht
 - **Echtes Problem:** Rezepte rechnen mit Bruchstücken, der Laden verkauft ganze Packungen. Der Rest verdirbt, die Kostenschätzung stimmt nicht.
@@ -111,15 +113,15 @@ Zehn Angles. Headlines höchstens 40 Zeichen (Meta), die ersten 125 Zeichen des 
 - **Warum noch frei:** mise rechnet laut Nutzern halbe Packungen (`05 §2.1`). Reste-Apps (Too Good To Go) planen nicht (`05 §2.19`).
 - **Einsatz:** Lead-Magnet „Reste-Retter-Wochenplan“ (Abschnitt 8), Karussell „Ein Becher Sahne, drei Gerichte“.
 - **Headline:** Die halbe Avocado gibt's nicht
-- **Primärtext:** Wochenschmaus rechnet mit ganzen Packungen, so wie sie im Regal stehen. Den angebrochenen Becher Sahne vom Montag plant es am Mittwoch wieder ein. Auf dem Einkaufszettel steht, was übrig bleibt.
+- **Primärtext:** Wochenschmaus rechnet mit ganzen Packungen, so wie sie im Regal stehen. Für den angebrochenen Becher Sahne sucht es in den nächsten Tagen ein zweites Gericht. Auf dem Einkaufszettel steht, was übrig bleibt. (Konkretes Beispiel nur, wenn ein echter Plan es zeigt, W14.)
 
 ### W3 · Dein Laden, deine Gänge
 - **Echtes Problem:** Pläne schlagen Zutaten vor, die es im eigenen Laden nicht gibt. Danach traut man der ganzen App nicht mehr.
 - **Beleg:** `03-B2` „gibt es bei Aldi gar nicht. (Lüge: Vertrauen verspielt!)“, `03-B3`, `03-B28` (Liste im Supermarkt gelöscht). 54 % schreiben „oft bis immer“ eine Einkaufsliste (YouGov 21.11.2023, `01 §1`, Datum laut `10`). Die Einkaufsliste wird nach den Abteilungen des gewählten Ladens sortiert (`einkauf.js`).
 - **Warum noch frei:** Die Kombination „Plan + Liste in der Gang-Reihenfolge meines Discounters“ bewirbt keiner der 32 Anbieter (`05 §4`).
 - **Einsatz:** Bildmotiv Einkaufszettel mit Abteilungen (Obst & Gemüse, Kühlregal, Trockenware), SEO „Einkaufsliste Aldi Wochenplan“.
-- **Headline:** Der Zettel kennt deinen Laden
-- **Primärtext:** Wähl Aldi, Lidl, Rewe, Edeka, Kaufland, Netto oder Penny. Wochenschmaus sortiert die Einkaufsliste nach den Abteilungen deines Ladens, vom Gemüse bis zur Kasse. Abhaken, fertig.
+- **Headline:** Der Zettel kennt deine Kette
+- **Primärtext:** Wähl Aldi, Lidl, Rewe, Edeka, Kaufland, Netto oder Penny. Wochenschmaus sortiert die Einkaufsliste nach Abteilungen, so wie sie bei deiner Kette meist liegen. Abhaken, fertig.
 - **Sperre:** Vor dem Einsatz das Sortiment je Laden stichprobenartig prüfen (`11` Punkt 4.2). Genau hier ist mise gescheitert.
 
 ### W4 · Budget ohne Untergrenze
@@ -135,6 +137,7 @@ Zehn Angles. Headlines höchstens 40 Zeichen (Meta), die ersten 125 Zeichen des 
 - **Beleg:** 1,7 Mio. Alleinerziehende mit minderjährigen Kindern, Schmerz „sehr hoch“, kein eigenes Produkt gefunden (`04 §1.2`). `03-B10`. 83 Rezepte in höchstens 20 Minuten, 22 mit Tag „kinder“ (eigene Auswertung).
 - **Warum noch frei:** Familien-Kochbücher sprechen „Mamis“ oder Paare an (`04 §1.2`, K). Ein Planer mit Einstellung „1 Erwachsene:r + Kinder“ ist nicht bekannt.
 - **Einsatz:** Elternforen, VAMV-Umfeld (nur mit Erlaubnis), Pinterest „Wochenplan Familie schnell“. Ton: praktisch, nie mitleidig.
+- 🔴 GESPERRT: ganzer Angle W5, bis der Modus gebaut ist und der Abdeckungstest besteht (W18).
 - **Headline:** Eine kocht, drei essen mit
 - **Primärtext:** Stell ein: eine Erwachsene, zwei Kinder, höchstens 20 Minuten am Abend, dein Budget. Wochenschmaus plant die Woche und schreibt den Einkaufszettel. Für alle, die allein den Laden schmeißen.
 - **Sperre:** erst bewerben, wenn der Modus in der App gebaut ist (siehe Abschnitt 2) und der Abdeckungstest mit „kinder“ + „schnell“ besteht (`11` Punkt 5.4).
@@ -145,7 +148,7 @@ Zehn Angles. Headlines höchstens 40 Zeichen (Meta), die ersten 125 Zeichen des 
 - **Warum noch frei:** Die großen Apps machen Filter zur Premium-Funktion.
 - **Einsatz:** FAQ und Vertrauenszeile, Antworten in Allergie- und Elternforen.
 - **Headline:** „Das esse ich nicht“ kostet nichts
-- **Primärtext:** Erdnüsse, Milch, Gluten-Zutaten oder einfach Pilze: Was du ausschließt, kommt im Plan nicht vor. Das gilt schon im kostenlosen Tagesplan. Bitte trotzdem immer die Zutatenliste auf der Packung lesen.
+- **Primärtext:** Erdnüsse, Milch, Gluten-Zutaten oder einfach Pilze: Was du ausschließt, filtert der Planer nach unseren Zutatendaten heraus, schon im kostenlosen Tagesplan. Prüf bei Allergien trotzdem immer die Zutatenliste auf der Packung.
 - **Hinweis:** nie „allergiesicher“ (`07 §5.6` Nr. 6, Haftung `11` Punkt 5).
 
 ### W7 · Ohne Konto, ohne Werbung
@@ -163,8 +166,8 @@ Zehn Angles. Headlines höchstens 40 Zeichen (Meta), die ersten 125 Zeichen des 
 - **Warum noch frei:** Kochboxen und Planer werden getrennt gedacht. „Kochbox-Komfort ohne Box“ verspricht kein Planer sichtbar.
 - **Einsatz:** Anzeigen an P2, SEO „Kochbox Alternative“. Nur allgemein „Kochbox“, keine Markennamen in Anzeigen.
 - **Headline:** Kochbox-Plan, eigener Einkauf
-- **Primärtext:** Rezepte für die Woche, eine fertige Einkaufsliste, die Portion für eure Personenzahl. Eingekauft wird in deinem Laden, so viel ihr wirklich braucht.
-- **Sperre:** Preisvergleich mit Kochboxen erst mit eigener, dokumentierter Warenkorb-Rechnung (`05 §6.5`, § 6 UWG).
+- **Primärtext:** Rezepte für die Woche, eine fertige Einkaufsliste, die Portion für eure Personenzahl. Eingekauft wird in deinem Laden, in ganzen Packungen, und was übrig bleibt, steht auf dem Zettel.
+- 🔴 GESPERRT: Preisvergleich mit Kochboxen, bis eine eigene, dokumentierte Warenkorb-Rechnung vorliegt (`05 §6.5`, § 6 UWG, W24).
 
 ### W9 · Die Airfryer-Woche
 - **Echtes Problem:** Der Airfryer steht in fast jeder zweiten Küche, die Rezepte dafür sind Einzelstücke ohne Plan.
@@ -175,12 +178,12 @@ Zehn Angles. Headlines höchstens 40 Zeichen (Meta), die ersten 125 Zeichen des 
 - **Primärtext:** Kreuz an, was in deiner Küche steht: Airfryer, zwei Platten, Ofen. Wochenschmaus plant die Woche mit Gerichten, die damit gehen, und schreibt den Einkaufszettel dazu.
 
 ### W10 · Tisch für eine Person
-- **Echtes Problem:** Fast jeder zweite Haushalt ist ein Single-Haushalt, Rezepte und Packungen sind für vier.
+- **Echtes Problem:** Gut vier von zehn Haushalten sind Single-Haushalte, Rezepte und Packungen sind für vier.
 - **Beleg:** 41,6 % Einpersonenhaushalte (`01 §5.1`), 64 % der Alleinlebenden wollen „einfach und schnell“, nur 35 % kochen täglich (`01 §5.2`). `03-B20` „Rezepte für eine Person“, `03-B42`.
 - **Warum noch frei:** Apps planen meist für 2–4 Portionen (`04 §1.15`). Singles sind über Meta schwer zu erreichen, deshalb wirbt kaum jemand gezielt.
 - **Einsatz:** SEO („Wochenplan für eine Person“, „Kochen für eine Person Einkaufsliste“), Pinterest. Bezahlt nur über Interessen, nie über Beziehungsstatus.
 - **Headline:** Wochenplan für eine Person
-- **Primärtext:** Eine Person, ein Laden, ein Budget. Wochenschmaus plant so, dass angebrochene Packungen in den nächsten Tagen aufgebraucht werden, und kocht an einem Abend gleich für den nächsten mit.
+- **Primärtext:** Eine Person, ein Laden, ein Budget. Wochenschmaus sucht für angebrochene Packungen weitere Gerichte und plant auf Wunsch an einem Abend gleich für den nächsten mit (Kochtage mit Plus).
 
 ### Test-Reihenfolge (Vorschlag)
 1. W2 als Lead-Magnet (misst Reichweite ohne Kaufhürde) → 2. W1 und W10 über SEO und Pinterest → 3. W8 und W9 als erste bezahlte Tests → 4. W5 nach Bau des Modus.
@@ -199,13 +202,13 @@ Hypothese nach `ad-creative`: „W1 erzielt sonntags 18–21 Uhr eine höhere Kl
 | Do (so klingt Wochenschmaus) | Don't (so nie) |
 |---|---|
 | „Mittwoch gibt's Linsen-Bolognese. Die Sahne vom Montag kommt mit rein.“ | „Zero Waste leicht gemacht!“ |
-| „Woche für 3 Personen bei Aldi: ca. XX € (Schätzung, Preisstand MM/JJJJ).“ | „Spart euch jeden Monat 150 €.“ |
+| „Woche für 3 Personen bei Aldi: ca. XX € (Schätzung, Preisstand MM/JJJJ).“ (🔴 Betrag erst nach Preiskorrektur und Kassenbon-Test) | „Spart euch jeden Monat 150 €.“ |
 | „Trag ein, was die Woche kosten darf.“ | „Endlich sparen wie die Profis!“ |
-| „Was ihr ausschließt, kommt nicht auf den Teller.“ | „100 % allergiesicher.“ |
-| „Den ersten Tag gibt's gratis, ohne Konto.“ | „Komplett kostenlos!“ (die Woche ist Plus) |
+| „Was ihr ausschließt, filtert der Planer heraus.“ | „100 % allergiesicher.“ |
+| „Den Tagesplan gibt's gratis, ohne Konto.“ | „Komplett kostenlos!“ (die Woche ist Plus) |
 | „Für alle, die allein den Laden schmeißen.“ | „Für arme Familien.“ |
-| „Kinder essen mit: 22 Rezepte mit dem Kinder-Tag.“ | „Gesunde Kinderernährung garantiert.“ |
-| „Kündigen ohne Login, zwei Klicks.“ | „Jetzt kostenlos testen“ als Knopf eines Abos |
+| „Für Familien: 22 Rezepte, die wir als kindgeeignet markiert haben.“ | „Gesunde Kinderernährung garantiert.“ |
+| „Kündigen über ‚Verträge hier kündigen‘, ohne Login.“ (nur Preis- und FAQ-Seite) | „Jetzt kostenlos testen“ als Knopf eines Abos |
 
 ## 6. Visueller Stil „Wochenmarkt“
 
@@ -268,7 +271,7 @@ Datei: `essensplaner/app/public/img/logo-alltag.svg`. Ein Teller von oben: Tomat
 ### Markenzeichen
 
 1. **Marktstand-Streifen:** Band aus Tomate, Weiß, Basilikum, Weiß (`--band` in `themes.css`, Streifen 22 px / 4 px). Oben auf der Seite, als Kopf von Karten, als Rahmen im PDF-Plan. Nie hinter Text.
-2. **Preisschild-Form:** Rechteck mit abgerundeter Ecke und Loch wie ein Marktanhänger, Grund Zitrone, Schrift Kohlgrau in Bricolage 700. **Nur mit echten berechneten Werten**, immer mit „ca.“ und Preisstand, nie mit Fantasiepreisen in Werbemotiven.
+2. **Preisschild-Form:** Rechteck mit abgerundeter Ecke und Loch wie ein Marktanhänger, Grund Zitrone, Schrift Kohlgrau in Bricolage 700. **Nur mit echten berechneten Werten**, immer mit „ca.“ und Preisstand, nie mit Fantasiepreisen in Werbemotiven. 🔴 GESPERRT in Werbung bis Preiskorrektur und Kassenbon-Test (W33).
 3. **Wochenleiste:** sieben Punkte wie im Logo, der heutige Tag in Zitrone markiert.
 
 ### Bildstil für Higgsfield
@@ -327,14 +330,14 @@ Grundsatz: Wochenschmaus wird **über Suche und Pinterest** aufgebaut (Entscheid
 
 ## 8. Lead-Magnet: Reste-Retter-Wochenplan
 
-**Idee:** Ein kostenloser 7-Tage-Plan als PDF, gebaut mit dem eigenen Planer, bei dem **jede angebrochene Packung in der Woche aufgebraucht wird**. Drei Fassungen: 1 Person, 2 Personen, 1 Erwachsene:r + 2 Kinder, jeweils für Aldi und Lidl.
+**Idee:** Ein 7-Tage-Plan als PDF, gratis gegen Anmeldung zu unseren Mails, gebaut mit dem eigenen Planer, bei dem **jede angebrochene Packung in der Woche aufgebraucht wird** (vor Versand an allen drei Fassungen nachprüfen; keine Aussage „rettet Lebensmittel“ oder „weniger Verschwendung“, W34). Drei Fassungen: 1 Person, 2 Personen, 1 Erwachsene:r + 2 Kinder, jeweils für Aldi und Lidl.
 
 **Inhalt (je Fassung):**
 - Wochenleiste Mo–So mit Gericht, Zeit und Gerät
 - Einkaufszettel in Gang-Reihenfolge, Mengen in ganzen Packungen
 - **Reste-Fahrplan:** „Sahne: Mo Gemüsepfanne (100 ml) → Mi Linsen-Bolognese (100 ml)“
 - geschätzte Wochenkosten mit Preisstand, Laden und dem Satz „Schätzung, regional abweichend“
-- Lagerkarte für den Kühlschrank nach BfR (gekochte Reste höchstens 2 Tage, Reis und Nudeln höchstens 1 Tag, Entscheidung C9)
+- Lagerkarte für den Kühlschrank: höchstens 7 °C, besser 5 °C (BfR); gekochte Reste höchstens 2 Tage (BfR: 2–3 Tage), Reis 1 Tag (FSA), Nudeln 1 Tag (eigene Regel), Hack und Fisch roh am Kauftag verarbeiten oder einfrieren (Entscheidung C9, W36)
 - Link zum 1-Tages-Plan in der App (gratis, ohne Konto)
 
 **Anmeldung:** E-Mail mit **Double-Opt-in**. Einwilligungstext: „Ja, schickt mir den Reste-Retter-Wochenplan und alle zwei Wochen einen neuen Plan mit Tipps zu Wochenschmaus. Abmelden geht jederzeit über den Link in jeder Mail.“ Kein vorangekreuztes Häkchen, Bestätigungsmail mit Klick (`07 §4.4`).
@@ -359,18 +362,18 @@ Grundlage: `07 §5` (HCVO, UWG), `07 §3` (Abo, Button, Testphase), `07 §4.4` (
 
 ### Erlaubt bzw. vertretbar 🟢
 „Nr.“ verweist auf die Formulierungsliste in `07 §5.6` (erlaubte bzw. verbotene Liste).
-1. „Einkaufsliste nach Laden sortiert, fertig in zwei Minuten.“ (`07 §5.6` Nr. 2, Zeit vorher messen)
+1. „Einkaufsliste nach Laden sortiert.“ (`07 §5.6` Nr. 2). 🔴 GESPERRT: „fertig in zwei Minuten“ bis zur Zeitmessung (W38)
 2. „Weniger Grübeln, was es heute gibt.“ (Nr. 10)
 3. „Vegetarisch, vegan oder mit Fleisch, du entscheidest.“ (Nr. 12)
 4. „Rezepte ohne Erdnüsse, ohne Gluten-Zutaten oder ohne Milch filtern.“ (Nr. 3, Filter, keine Garantie)
 5. „Beispielwoche für 2 Personen bei Aldi: XX,XX € (Preisstand MM/JJJJ, Schätzung, regional abweichend).“ (Nr. 8, **erst nach Kassenbon-Test**)
-6. „Rechnet mit ganzen Packungen und plant angebrochene Reste ein.“ (technisch wahr, `planer.js`)
+6. „Rechnet mit ganzen Packungen und berücksichtigt angebrochene Packungen bei der Rezeptwahl.“ (`planer.js`, W40)
 7. „Budget selbst festlegen. Reicht es nicht, sagt dir der Plan das.“ (technisch wahr)
 8. „Ohne Konto nutzbar, deine Eingaben bleiben auf deinem Gerät.“ (Entscheidung C3; Plus braucht E-Mail, in der FAQ sagen)
 9. „Den 1-Tages-Plan gibt es gratis.“ (zulässig nach UWG Anhang Nr. 21, weil keine Zahlungsdaten nötig sind)
-10. „7 Tage 0 €, danach 44,99 € pro Jahr. Jederzeit kündbar.“ mit Preis in gleicher Größe (`07 §3.4`); Bestellknopf „Zahlungspflichtig bestellen“ (§ 312j BGB)
+10. „7 Tage 0 €, danach 44,99 € für 12 Monate. In den 7 Tagen kostenlos kündbar, danach Laufzeit 12 Monate, anschließend monatlich kündbar.“ mit Preis in gleicher Größe (`07 §3.4`); Bestellknopf „Zahlungspflichtig bestellen“ (§ 312j BGB). „Jederzeit kündbar“ ist beim Jahresabo falsch (W41)
 11. „Nährwerte pro Portion berechnet aus BLS-Daten (Richtwerte).“ (Nr. 13, nur wenn gezeigt)
-12. „Kündbar ohne Login, mit zwei Klicks.“ (Nr. 14, nicht als Besonderheit herausstellen)
+12. „Kündigen über ‚Verträge hier kündigen‘, ohne Login.“ Nur auf Preis-, FAQ- und Kassenseite, nie als Werbevorteil (UWG Anhang Nr. 10). „Zwei Klicks“ ist falsch (W42)
 
 ### Verboten bzw. hochriskant 🔴
 1. „Spare 200 € im Monat“, „halbiere deine Einkaufskosten“ ohne dokumentierte Berechnung (Nr. 14, § 5 UWG)
@@ -384,8 +387,10 @@ Grundlage: `07 §5` (HCVO, UWG), `07 §3` (Abo, Button, Testphase), `07 §4.4` (
 9. „Tausende Familien planen mit Wochenschmaus“ oder erfundene Bewertungen (Nr. 13)
 10. „Von Kinderärzten empfohlen“ (Art. 12 lit. c HCVO, Nr. 7)
 11. Direkte Kaufaufforderung an Kinder („Sag deinen Eltern …“) (UWG Anhang Nr. 28; nicht in `07` behandelt, Standardregel)
-12. „Klimafreundlich“, „nachhaltig“, „umweltfreundlich“ ohne konkreten Beleg. **Nicht in `07` behandelt** [prüfen]: Die EU-Richtlinie (EU) 2024/825 zu Umweltaussagen soll ab dem 27.09.2026 gelten und allgemeine Umweltaussagen ohne anerkannte Spitzenleistung verbieten. Bis zur Prüfung nur konkret und messbar formulieren („plant angebrochene Packungen ein“), nie pauschal.
+12. „Klimafreundlich“, „nachhaltig“, „umweltfreundlich“ ohne konkreten Beleg. **Nicht in `07` behandelt** [prüfen]: Die EU-Richtlinie (EU) 2024/825 zu Umweltaussagen gilt seit dem 27.09.2026 und verbietet allgemeine Umweltaussagen ohne anerkannte hervorragende Umweltleistung (Fundstelle der UWG-Umsetzung von der Anwältin bestätigen lassen, W43). Auch „weniger Lebensmittelverschwendung“ als Vergleichsaussage nur mit Messung. Bis zur Prüfung nur konkret und messbar formulieren („plant angebrochene Packungen ein“), nie pauschal.
 13. Ansprache als „arm“, „bedürftig“, „Hartz IV/Bürgergeld-Rezepte“ (kein Rechtsverbot, aber Markenverbot; Targeting nach Einkommen ist in der EU ohnehin nicht möglich)
+14. „Macht satt“, „sättigend“ an einem Gericht (Art. 13 Abs. 1 lit. c HCVO)
+15. Alleinstellung („der einzige Planer mit …“) ohne Marktübersicht (§ 5 UWG)
 
 ### Tracking und Daten
 - Keine Events, URLs oder Zielgruppen mit Gesundheitsbezug an Meta oder Google: kein `/plan/laktosefrei`, kein `AllergySelected`, keine Allergie-Listen als Custom Audience (`07 §4.4`, Art. 9 DSGVO).

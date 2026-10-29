@@ -328,3 +328,170 @@ Kürzel Datei: **ZH** = Markenbuch Zimmerherd, **ZF** = Zweiflammer, **KS** = Ko
 | N01 | ZH §1, §4, §5, §8 | „Nur Wasserkocher: 48“, „Wasserkocher + Mikrowelle: 64 (24 Abendessen)“, „+ Kochplatte: 147“, „61 Rezepte ≤ 10 Min.“ | 🟡 | Die Markenbuch-Zählung ließ die Lagerregel des Planers weg (ohne Gefrierfach keine TK-Zutaten). Mit derselben Regel wie Planer und Landingpage (Kühlschrank ja, Gefrierfach nein, 29.10.2026): **47** (21 Mittag/Abend), **59** (22 Abendessen), **119**, **56** Rezepte ≤ 10 Min. Arbeit. In den Markenbüchern ersetzt | § 5 UWG |
 | N02 | ZF §1, §4, §5, §8 | „zwei Flammen + Omnia: 136 (92 Abendessen)“, „eine Flamme Topf + Pfanne: 121“, „ein Topf: 78“, „mit Landstrom: 192“ | 🟡 | Planer-Zählweise: **107** (67 Abendessen), **95**, **66**, **152**. Headline Angle 2 wird „Mit Landstrom 152 Rezepte. Ohne 107.“, Angle 4 „Eine Flamme, ein Topf: 66 Rezepte.“ | § 5 UWG |
 | N03 | alle | Zahlen, die die Landingpage live zählt | 🟢 | Regel: Werbung übernimmt nur Zahlen aus `tools/landing.py`-Ausgabe oder Planer, mit Datum | § 5 UWG |
+
+### 2.8 Zusammenfassung
+
+| | geprüfte Zeilen | 🟢 | 🟡 | 🔴 |
+|---|---|---|---|---|
+| Alle Dateien | **241** (einige Zeilen bündeln mehrere gleichartige Sätze) | **104** | **124** | **13** |
+
+Gemischte Zeilen („🟢 intern / 🔴 als Kundenstimme“) sind nach der für Werbung strengeren Ampel gezählt, sofern sie 🟡 enthalten.
+
+---
+
+## 3. Freigegebene Claims je Marke (für Anzeigen nutzbar)
+
+Alle Zahlen vor jeder Schaltung aus `python3 tools/landing.py` übernehmen und mit Zähldatum versehen. Keine Euro-Beträge (Abschnitt 4).
+
+### Zimmerherd
+- Claim: **„Satt werden mit dem, was dasteht.“** · Kurzform: **„Kreuz an, was dasteht.“**
+- „Kreuz an, was dasteht. Wir planen damit.“
+- „Nur ein Wasserkocher? Reicht.“ / „Nur ein Wasserkocher? Reicht für 47 Rezepte.“ (Stand 29.10.2026)
+- „Zwölf Stunden Baustelle. Zehn Minuten Küche.“ + „56 Gerichte brauchen höchstens 10 Minuten Arbeit, mit Wasserkocher oder Mikrowelle.“
+- „21:15, alles zu. Dein Essen ist da.“
+- „Ein Kühlschrank, sechs Mann, dein Fach.“
+- „Was in den Montagekoffer gehört.“ + „Erst den Vermieter fragen, ob die Platte ins Zimmer darf.“
+- „Sonntag kochen, bis Dienstag essen.“ nur mit Primärtext Z28 (Kühltasche, 2 Tage / Reis 1 Tag)
+- „Für ihn auf Montage. Statt Fresspaket.“ + „Der Tagesplan ist gratis, ohne Konto.“
+- „24-V-Mikrowelle und Kühlbox: Das reicht für den Plan.“ + „Die Kühlbox muss unter 7 °C halten.“
+- „28 € Spesen. Was kostet dein Essen?“ mit Pflichtzusatz Z17, **ohne Betrag**
+- „Montage-Pass: 17,99 € einmalig für 3 Monate, endet automatisch.“
+- „Deine Geräte, Allergien und Pläne bleiben auf deinem Handy.“
+
+### Zweiflammer
+- Claim: **„Zwei Flammen. Eine Woche. Entspannt.“** · Kurzform: **„Die Bordküche, fertig geplant.“**
+- „Kühlschrank-Tetris? Der Plan hält die Fristen.“ + Primärtext F11 (2 Tage, BfR 2–3 Tage, ≤ 7 °C)
+- „Mit Landstrom 152 Rezepte. Ohne 107.“ (Stand 29.10.2026)
+- „Gratin vom Gasherd. Steht im Plan.“ (Omnia nur beschreibend)
+- „Eine Flamme, ein Topf: 66 Rezepte.“
+- „Weit zum Laden? Eine Liste für die Woche.“
+- „Die Woche steht, bevor der Wagen rollt.“ + „Den Tagesplan gibt es gratis, ohne Konto.“
+- „Die Kissen sollen nach Urlaub riechen.“
+- „Ein Topf und ein Brett reichen.“ + „Zweiflammer markiert Gerichte mit wenig Abwasch.“
+- „Erste Tour der Saison? Vorrat zuerst.“ + „gratis, wenn ihr euch für unsere Mails anmeldet“
+- „Freitag hin, Sonntag heim, wenig übrig.“
+- „Mehr Zeit unter der Markise.“ · „Saisonpass: 24,99 € für 6 Monate, endet von selbst.“
+- „Selbst kochen: was kostet die Woche?“ nur als Frage, **ohne Betrag**
+
+### Kochsatz
+- Claim: **„Deine Makros. Dein Discounter. Dein Plan.“** · Zweitzeile: **„Wochenplan, Einkaufsliste und Kochtag aus deinen Zahlen.“**
+- „Wie viel Protein gibt's für 1 Euro?“ (Rechner, **ohne konkrete g/€-Werte** bis Preiskorrektur)
+- „20 g gebraucht, 500 g gekauft?“
+- „Hält die Freitagsbox wirklich?“ + Primärtext K18
+- „Gleiche Makros, andere Teller“
+- „Erst planen, dann essen“
+- „Nährwerte aus einer Quelle“ + „Bundeslebensmittelschlüssel 4.0 des Max Rubner-Instituts, Richtwerte“
+- „Kein Mixer? Dann ohne Mixer.“
+- „3.000 kcal, Budget festgelegt“ (Primärtext K26)
+- „Deine Makros gehen nur dich an“
+- „Andere Zahlen? Neue Woche.“ (statt „Neue Phase?“ in Anzeigen)
+- „Kalorienziel selbst festlegen, Zahlen statt Versprechen.“
+- „Proteinreich: mindestens 20 % der Energie aus Protein.“ nur am Rezept/Plan, der es erfüllt
+- **Nicht** in Anzeigen: Muskel-Claim nach VO 432/2012 (nur Rezeptansicht mit Pflichtangaben)
+
+### Wochenschmaus
+- Claim: **„Die Woche ist geplant. Der Einkauf auch.“** · Alternativ: **„Jede Woche gut versorgt.“**
+- Zweitzeile: „Gerichte, Einkaufszettel und geschätzte Kosten für eure Woche, passend zu Laden und Budget.“
+- „17:30. Was gibt's heute?“ + Primärtext W11
+- „Die halbe Avocado gibt's nicht“ + Primärtext W14
+- „Der Zettel kennt deine Kette“ (erst nach Sortiment-Stichprobe, Sperre W3)
+- „Du sagst den Betrag“
+- „‚Das esse ich nicht‘ kostet nichts“ + Primärtext W20 (Etikett-Hinweis)
+- „Planen ohne Anmeldung“ · „Im Planer gibt es keine Werbung.“
+- „Kochbox-Plan, eigener Einkauf“ + Primärtext W23 (ohne Preisvergleich)
+- „Eine Woche aus dem Airfryer“
+- „Wochenplan für eine Person“ + Primärtext W27
+- „Weniger Grübeln, was es heute gibt.“ · „Vegetarisch, vegan oder mit Fleisch, du entscheidest.“
+- „Den Tagesplan gibt's gratis, ohne Konto.“
+
+### Für alle Marken (Preis-/Kassentexte)
+- „Tagesplan gratis erstellen“ (Knopf zum kostenlosen Planer)
+- „7 Tage 0 €, danach 44,99 € für 12 Monate. In den 7 Tagen kostenlos kündbar, danach Laufzeit 12 Monate, anschließend monatlich kündbar.“ / „7 Tage 0 €, danach 6,99 € im Monat. Erste Abbuchung am 8. Tag.“
+- Bestellknöpfe: „Jetzt zahlungspflichtig abonnieren“, „Zahlungspflichtig kaufen“
+- Footer: „Verträge hier kündigen“, „Vertrag widerrufen“ (Knöpfe „Jetzt kündigen“, „Widerruf bestätigen“)
+
+---
+
+## 4. Gesperrt bis Beleg
+
+| Aussage / Inhalt | Marken | Was den Beleg liefert |
+|---|---|---|
+| Jeder konkrete Euro-Betrag in Werbung, Rechner, PDF, Mail, Presse („Woche für 2 Personen: XX €“, „pro Tag X €“, Raststätte gegen Plan) | alle | (1) Korrekturliste `09` §5b in `zutaten.py` übernommen (Fleisch, Fisch, Aufschnitt hoch, Butter, Wraps, Nudeln, Reis runter), Ladenfaktoren nach `09` §6; (2) Kassenbon-Test mit drei echten Einkäufen, mittlere Abweichung ≤ ±15 % (`11` Punkt 4.1) |
+| Jede Spar-Aussage („spart X €“, „günstiger als Kochbox/Imbiss/Raststätte“, „halbiert …“) | alle | zusätzlich gemessene Ersparnis gegen dokumentierten Vergleichskorb, bei Kochbox-Vergleich § 6 UWG-Prüfung |
+| Protein-pro-Euro-Werte (Kochsatz-Rechner, Reels, Aushang) | Kochsatz | wie oben; Preise für Linsen, Tofu, Thunfisch fehlen ganz |
+| Preise für Netto, Penny, Kaufland, Aldi Nord | alle | eigene Stichprobe oder Kassenbon |
+| „Wochenplan in 2 Minuten“, „fertig in zwei Minuten“, „Kochtag in 90 Minuten“ | Wochenschmaus, Kochsatz | Zeitmessung mit 5 Testpersonen bzw. einem echten Kochtag, Median dokumentiert |
+| „Gerichte mit kurzer Flammenzeit“, „Gas sparen“, „spart Wasser“ | Zweiflammer | Flammenminuten je Rezept in den Daten; Messung |
+| „weniger Lebensmittelverschwendung“, „rettet X kg“, „nachhaltig“, „umweltfreundlich“, „klimafreundlich“ | alle (v. a. Wochenschmaus) | Messung gegen Vergleichsbasis; für Pauschalaussagen anerkannte hervorragende Umweltleistung (RL 2024/825) → praktisch nie |
+| Modus „Allein mit Kindern“ (W5) | Wochenschmaus | Funktion gebaut, Abdeckungstest „kinder“ + „schnell“ |
+| Vegan mit viel Protein | Kochsatz | ≥ 20 weitere vegane Rezepte mit ≥ 20 % Energie aus Protein |
+| Länderprofile / Ausland | Zweiflammer | Länderpreise im Planer |
+| Polnisch / Rumänisch | Zimmerherd | Nachfragetest, latin-ext-Schriften |
+| „passt zu deinem Wechselrichter“ | Zimmerherd | Watt je Rezept in den Daten |
+| Alleinstellung („als einziger“, „kein anderer Planer“) | alle | vollständige Marktübersicht, laufend aktuell; besser ganz verzichten |
+| Kundenstimmen, Bewertungen, Nutzerzahlen | alle | echte Bewertungen nach Launch mit Hinweis zur Prüfung (§ 5b Abs. 3 UWG) |
+| „Rezepte testgekocht“ / „geprüfte Rezepte“ | alle | Testkochen (C8); bis dahin „fachlich durchgesehen“ |
+| Kasse freischalten (Plus Jahr) | alle | Preis und Abrechnung nach dem ersten Jahr festgelegt und angezeigt (A02) |
+
+---
+
+## 5. Lebensmittelsicherheit: Stimmen die Lagerregeln mit dem BfR?
+
+| Regel in App/Markenbuch | BfR / Behörde | Bewertung |
+|---|---|---|
+| Kühlschrank ≤ 7 °C, besser ≤ 5 °C | BfR-Verbrauchertipps wörtlich | ✔ (App jetzt mit „besser 5 °C“) |
+| Gegartes höchstens 2 Tage | BfR 2–3 Tage, FSA 48 h | ✔ strenger als BfR; Quelle richtig nennen |
+| Rohkost-Gerichte 1 Tag | BfR-FAQ | ✔ |
+| Reis 1 Tag, in 1 Stunde kühlen, einmal aufwärmen | FSA/NHS (BfR ohne Zahl; Cereulid hitzestabil, BfR 01/2026) | ✔ Tag; Abkühlzeit 1 h stand bisher nicht im Vorkoch-Ablauf → in `ablauf.js` ergänzt |
+| Nudeln, Fisch, Hack, Ei 1 Tag | keine Behördenzahl | ✔ eigene Vorsichtsregel, so benennen |
+| Ungekühlt max. 2 h | USDA (BfR: „innerhalb weniger Stunden unter 7 °C“) | ✔ vorsichtig, Quelle USDA |
+| Aufwärmen ≥ 70 °C, 2 Min. | BfR wörtlich | ✔ |
+| Thermobehälter vorwärmen, kochend heiß einfüllen | BfR 016/2024: ≥ 60 °C bis zum Verzehr | ⚠ → in `app.js` ergänzt: „mindestens 60 °C … lauwarm nicht mehr essen“ |
+| Auftauen in Mikrowelle | BfR-FAQ: Auftauen im Kühlschrank | ⚠ → „… und gleich erhitzen“ ergänzt |
+| Kühlbox = Kühlschrank | BfR setzt ≤ 7 °C voraus | ⚠ thermoelektrische Boxen und Absorber-Kühlschränke schaffen das bei Hitze oft nicht → Hinweis im Planer und in Markenbüchern |
+| Transport vorgekochter Boxen | BfR-FAQ: Kühltasche | ⚠ fehlte in Zimmerherd Angle 8 → ergänzt |
+| Rohes Hack/Fisch eine Woche nach dem Einkauf | Verbrauchsdatum (Art. 24 LMIV), Hack meist Kauftag | ⚠ Planer prüft das nicht (A36) → Backlog, Hinweis in Texten |
+| Risikogruppen (Schwangere, Ältere, Immungeschwächte) | BfR Listerien (L12) | offen: Hinweis im Planer fehlt (nicht zwingend für diese Marken, aber empfohlen) |
+
+---
+
+## 6. Restrisiken
+
+1. **Preisschätzungen** bleiben das größte UWG-Risiko (Wochenschmaus, Zimmerherd Spesen-Angle). Auch die App zeigt „geschätzt“-Beträge, die bei Fleischplänen systematisch zu niedrig sind, bis `zutaten.py` korrigiert ist. App-Hinweis „Schätzwerte“ mindert, heilt aber eine bekannte systematische Abweichung nicht.
+2. **Health-&-Wellness-Einstufung bei Meta** (Kochsatz): Auch korrekte Texte können zur Sperre von Kauf-Events führen. Eigene Domain, neutrale Events.
+3. **HCVO auf Rezept-Apps** ist gerichtlich nicht geklärt (`07` 5.1). Wir schreiben so, als gälte sie; ein Gericht könnte trotzdem „proteinreich“-Labels oder die Protein-pro-Euro-Tabelle als Angabe über Lebensmittel bewerten → Schwellen strikt einhalten.
+4. **„Satt werden“** im Zimmerherd-Claim ist nach unserer Einschätzung keine Sättigungsangabe. Ein strenges Gericht könnte das anders sehen, wenn Anzeigen Gerichte zeigen. Bildsprache: kein „macht satt“ im Bild.
+5. **Allergen-Filter**: Haftung bei falschem Tag (§ 823 BGB, ab 09.12.2026 verschuldensunabhängig nach neuer Produkthaftungsrichtlinie für Software). Disclaimer hilft nur begrenzt; Vier-Augen-Prüfung, Fehler-Meldeknopf, Versicherung.
+6. **Lagerangaben bei Camping und Kabine**: Wir können die Temperatur im Bordkühlschrank oder in der Kühlbox nicht kennen. Hinweis „unter 7 °C“ ist gesetzt, ein Thermometer-Tipp gehört in jede Lagerkarte.
+7. **Kündigungs- und Widerrufsstrecke über MoR**: Wer ist Vertragspartner (AGB: Paddle), wer belehrt, wer erstattet (Widerrufsbelehrung: Inhaber)? Unstimmigkeit → Belehrung kann fehlerhaft sein (Widerrufsfrist verlängert sich bis 12 Monate + 14 Tage, § 356 Abs. 3 BGB).
+8. **Jahresabo nach Monat 12**: Preis und Abrechnung fehlen (A02). Ohne Angabe fehlt eine Pflichtinformation; Kasse nicht freischalten.
+9. **Lead-Magnet „gratis“ gegen Einwilligung**: zulässig, wenn transparent; Kopplungsverbot (Art. 7 Abs. 4 DSGVO) wird von Gerichten unterschiedlich streng gesehen.
+10. **Umweltaussagen nach RL 2024/825**: Die genaue deutsche Umsetzung (Fundstelle, Übergangsregeln) ist in `07` nicht behandelt.
+11. **KI-Rezeptfotos**: Gekennzeichnet. Wenn ein Foto mehr zeigt als das Rezept (Beilagen, Menge), Irreführung möglich → Bildprüfung gegen Rezept.
+12. **Forenzitate und Persona-Texte** sind intern; Risiko nur, wenn jemand sie in Werbung kopiert. Markenbuch-Hinweise sind gesetzt.
+
+---
+
+## 7. Was eine echte Anwältin noch prüfen muss
+
+1. **Kasse komplett** (Paddle-Checkout auf Deutsch): Bestellknopf-Beschriftung, Pflichtinformationen vor dem Knopf (§ 312j Abs. 2 BGB), Testphasen-Darstellung, Preis nach dem ersten Jahr, Bestätigungs-Mail mit Vertragsinhalt.
+2. **Rollen MoR / Inhaber**: Vertragspartner, Widerrufsempfänger, Erstattung, Kündigungsadressat. AGB Nr. 1 und Widerrufsbelehrung angleichen.
+3. **Widerrufsbelehrung und Zustimmungs-Checkbox** für sofortigen Beginn (§ 356 Abs. 4, § 357a Abs. 2 BGB), Wertersatz bei digitalen Dienstleistungen; Pässe mit Einmalzahlung.
+4. **Kündigungs- und Widerrufsstrecke** im Betrieb (Worker): Bestätigung in Textform mit Datum und Uhrzeit, Speichermöglichkeit, Erreichbarkeit ohne Login auf allen Seiten, auch Landingpages (§§ 312k, 356a BGB).
+5. **AGB-Klauseln**: Laufzeit Jahresabo nach § 309 Nr. 9 BGB, Produktänderung § 327r BGB, Haftung.
+6. **Datenschutzerklärung** mit Hoster, Mail-Dienst, Pixel; Einwilligungsbanner; Bewertung, ob Profildaten wirklich nie den Server erreichen (Art. 9 DSGVO).
+7. **HCVO-Einordnung** von Protein-Labels und Protein-pro-Euro-Rechner, Wortlaut des Muskel-Claims und Pflichtangaben Art. 10 Abs. 2.
+8. **Zimmerherd-Claim** „Satt werden mit dem, was dasteht.“ (Art. 13 HCVO) kurz bestätigen lassen.
+9. **Umweltaussagen** nach RL 2024/825 / UWG-Umsetzung (Wochenschmaus „Reste-Retter“).
+10. **Vergleichende Werbung**: jede geplante Nennung von mise, Yazio, HelloFresh, „Kochbox“ als Kategorie.
+11. **Spesen-Texte** (keine unerlaubte Steuerberatung, § 2 StBerG) und Raststättenpreise mit Quellenangabe (Zitatrecht, UWG).
+12. **Markenrecht**: DPMA/EUIPO-Recherche für Zimmerherd, Zweiflammer, Kochsatz, Wochenschmaus, Tellerkontor; „Omnia“ als beschreibende Nennung.
+13. **Impressum** und Verantwortlicher nach § 18 MStV für Ratgeberseiten.
+
+---
+
+## 8. Umgesetzte Änderungen (29.10.2026)
+
+- **Markenbücher:** alle 🟡-Neuformulierungen eingesetzt, 🔴-Stellen mit „🔴 GESPERRT: Grund“ markiert (nichts gelöscht außer den ersetzten Wortlauten), Rezeptzahlen auf die Planer-Zählweise umgestellt, Kopfzeile verweist auf diese Freigabe.
+- **App:** `app.js` (Kühlbox-Hinweis, ärztliche Beratung, BfR „teils strenger“, 5 °C, Thermobehälter ≥ 60 °C), `engine/ablauf.js` (Reis in 1 Stunde kühlen, Mikrowellen-Auftauen + sofort erhitzen), `planer.vorlage.html` (geschätzte Kosten, BfR „teils strenger“), `seiten.py` (Monatsabo: erste Abbuchung, Abrechnungsmonat; AGB Abrechnungsmonat; Impressum Quellen), `landing.py` (16 Textänderungen, siehe L-Zeilen).
+- **Build und Tests:** `python3 tools/landing.py && python3 tools/seiten.py && npm test` → 26 von 26 Tests grün.

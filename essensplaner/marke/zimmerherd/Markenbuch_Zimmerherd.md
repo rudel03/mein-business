@@ -1,6 +1,6 @@
 # Zimmerherd · Markenbuch
 
-Stand: 29.10.2026 · Arbeitsgrundlage für Landingpage, App-Texte, Anzeigen und Kooperationen · ein Produkt vom Tellerkontor
+Stand: 29.10.2026 · **Claim-Freigabe vom 29.10.2026 eingearbeitet** (`marke/Claim_Freigabe.md`, Kürzel Z01 ff.) · Arbeitsgrundlage für Landingpage, App-Texte, Anzeigen und Kooperationen · ein Produkt vom Tellerkontor
 
 > **Wie die Belege zu lesen sind:** „02/Nr. 39“ heißt Zitat Nr. 39 in `essensplaner/recherche/02_Stimmen_Montage.md`. „04/5.2-Nr. 12“ heißt Zitat 12 in Abschnitt 5.2 von `04_Nischen_Vergleich.md`. „Datenzählung“ heißt: von mir am 29.10.2026 aus `app/data/rezepte/*.json` gezählt (195 Rezepte, Regel des Planers „ein Weg, für den alle Geräte da sind“). Alle Rezepte haben den Status „nicht testgekocht“ (ENTSCHEIDUNGEN C8). **Hypothese** = nicht belegt, muss in Interviews oder Tests bestätigt werden.
 
@@ -26,10 +26,10 @@ Wer auf Montage, im Fernverkehr oder in der Leiharbeit wochenweise auswärts woh
 4. **Es gibt kein Werkzeug dafür.** Kein deutsches Planungswerkzeug filtert nach Wasserkocher, Mikrowelle, Kochplatte oder 24-V-Kühlbox und erstellt Einkaufslisten für den Laden am Einsatzort (`02`, Abschnitt 5; `05`, Abschnitt 5, Punkte 1–2). Ein Buch „Monteurküche“ oder „Kochen auf Montage“ wurde nicht gefunden (`05`, 2.23). Das nächste Produkt ist das Fahrerbuch „Sternköche“ mit 40 Rezepten für 12,80 € (`02`, Abschnitt 5).
 
 **Was Zimmerherd damit macht (Produktstand 29.10.2026, Datenzählung):**
-- Nur Wasserkocher: **48 Rezepte** möglich. Wasserkocher + Mikrowelle: **64** (davon 24 fürs Abendessen). Wasserkocher + Mikrowelle + eine Kochplatte mit Topf und Pfanne: **147**.
-- **61 Rezepte** gehen mit Wasserkocher und/oder Mikrowelle in höchstens 10 Minuten aktiver Zeit.
+- Nur Wasserkocher: **47 Rezepte** möglich. Wasserkocher + Mikrowelle: **59** (davon 22 fürs Abendessen). Wasserkocher + Mikrowelle + eine Kochplatte mit Topf und Pfanne: **119**. (Neu gezählt am 29.10.2026 mit der Lagerregel des Planers: Kühlschrank ja, Gefrierfach nein, Claim-Freigabe N01. Die alte Zählung 48/64/147 ließ die Gefrierfach-Regel weg.)
+- **56 Rezepte** gehen mit Wasserkocher und/oder Mikrowelle in höchstens 10 Minuten aktiver Zeit.
 - **20 Rezepte** tragen das Tag „ohne Kühlschrank“, **16** das Tag „LKW“.
-- Lagerregeln nach BfR, bewusst vorsichtig: Kühlschrank höchstens 2 Tage, Reis, Nudeln, Fisch, Hack und Ei höchstens 1 Tag, ungekühlt höchstens 2 Stunden, Aufwärmen auf mindestens 70 °C für 2 Minuten (ENTSCHEIDUNGEN C9).
+- Lagerregeln nach BfR, bei uns strenger: gekocht höchstens 2 Tage im Kühlschrank bei höchstens 7 °C (BfR: 2–3 Tage), Reis 1 Tag (FSA), Nudeln, Fisch, Hack und Ei 1 Tag (eigene Vorsichtsregel), ungekühlt höchstens 2 Stunden (USDA), Aufwärmen auf mindestens 70 °C für 2 Minuten (BfR) (ENTSCHEIDUNGEN C9; Quellen je Regel: `06`, 4.1). Alle Fristen gelten nur, wenn Kühlschrank oder Kühlbox höchstens 7 °C halten.
 
 **Ehrliche Grenze (aus `11` Advocatus Diaboli, Risiko 2):** Der Planer nimmt das Kochen nicht ab, er ordnet es. Ob das Problem der Zielgruppe ein Planungsproblem ist oder nur Müdigkeit, ist nicht gemessen. Darum steht „wenig Aufwand“ in jeder Botschaft vor „gut geplant“, und vor bezahlter Werbung kommen Interviews und Warteliste (ENTSCHEIDUNGEN A4).
 
@@ -37,16 +37,16 @@ Wer auf Montage, im Fernverkehr oder in der Leiharbeit wochenweise auswärts woh
 
 ## 2. Positionierung
 
-> Für alle, die auf Montage, im Fernverkehr oder in der Leiharbeit wochenweise auswärts wohnen und abends nicht schon wieder Döner holen wollen, ist Zimmerherd der Wochenplaner für die Küche, die gerade dasteht. Du kreuzt an, was im Zimmer steht: Wasserkocher, Mikrowelle, Kochplatte oder Kühlbox. Zimmerherd plant nur, was damit wirklich geht, sortiert die Einkaufsliste nach dem Laden am Einsatzort und sagt ehrlich, wie lange etwas hält.
+> Für alle, die auf Montage, im Fernverkehr oder in der Leiharbeit wochenweise auswärts wohnen und abends nicht schon wieder Döner holen wollen, ist Zimmerherd der Wochenplaner für die Küche, die gerade dasteht. Du kreuzt an, was im Zimmer steht: Wasserkocher, Mikrowelle, Kochplatte oder Kühlbox. Zimmerherd plant nur, was damit wirklich geht, sortiert die Einkaufsliste für die Kette, die du am Einsatzort hast, und sagt ehrlich, wie lange etwas hält.
 
 **Kernversprechen:** *Ein Plan, der zu deinem Zimmer passt, nicht zu einer Einbauküche.*
 
 Drei Belege tragen das Versprechen:
-1. **Geräte zuerst:** Gerätefilter über mehrere Geräte bietet kein Planer-Anbieter (`05`, Abschnitt 5, Punkt 1).
+1. **Geräte zuerst:** Gerätefilter über mehrere Geräte bietet kein Planer-Anbieter (`05`, Abschnitt 5, Punkt 1). In Werbung **keine Alleinstellung** („als einziger“, „kein anderer“), nur die Funktion beschreiben (Z08).
 2. **Kosten mit Preisstand:** Wochenkosten werden je Laden geschätzt und als Schätzung gekennzeichnet (ENTSCHEIDUNGEN C6). Nie „spart X €“, solange keine Ersparnis gemessen ist (`08`, 4.3; `07`, 5.5).
 3. **Ohne Konto:** Daten bleiben auf dem Handy, kein Login, Montage-Pass endet von selbst (ENTSCHEIDUNGEN C3, C4, P1).
 
-**Was Zimmerherd nicht ist:** kein Diätplan, kein Fitnessprogramm, kein Gesundheitsversprechen, kein Lieferdienst. Zimmerherd kocht nicht für dich, er sagt dir, was mit deinem Zimmer in 10 Minuten satt macht.
+**Was Zimmerherd nicht ist:** kein Diätplan, kein Fitnessprogramm, kein Gesundheitsversprechen, kein Lieferdienst. Zimmerherd kocht nicht für dich, er sagt dir, was mit deinem Zimmer in 10 Minuten auf dem Teller ist.
 
 ### Abgrenzung
 
@@ -57,7 +57,7 @@ Drei Belege tragen das Versprechen:
 | Ort | eigene Küche zu Hause | Pausenraum, Spind | eigene Küche | Monteurzimmer, Pension, Hotel, Kabine, Bauwagen |
 | Produkt | E-Book, Festpreis (Buchpreisbindung) | E-Book 19,90 €, Festpreis | App, Probeabo-Zwang, 9,99 €/Monat | PWA, 1-Tages-Plan gratis, Montage-Pass 17,99 € / 3 Monate |
 | Stil | warm, illustriert, Honig | Nachtblau, Signalorange, Direktblitz | – | Asphalt, Helmgelb, Absperrband, Arbeitslicht |
-| Schwäche, die wir nicht wiederholen | – | – | Sortiment und Preise stimmen laut Rezensionen nicht, „halbe Avocado“, Hard Paywall (`05`, 2.1) | – |
+| Schwäche, die wir nicht wiederholen (nur intern, nie in Werbung, § 6 UWG, Z11) | – | – | Sortiment und Preise stimmen laut Rezensionen nicht, „halbe Avocado“, Hard Paywall (`05`, 2.1) | – |
 
 **Überschneidung mit DURCHSCHICHT vermeiden:** DURCHSCHICHT spricht über Schichten und Pausenräume, Zimmerherd über Zimmer, Geräte und Einsatzorte. Zimmerherd nutzt nie die Wörter „Schicht“, „Dienstplan“ oder Uhrzeiten-Raster als Markenzeichen. Wer auf Montage im Schichtbetrieb arbeitet, bekommt auf der DURCHSCHICHT-Seite einen Hinweis auf Zimmerherd und umgekehrt (Cross-Selling nur als Link, keine Bundles mit Rabatt wegen Buchpreisbindung, ENTSCHEIDUNGEN P3).
 
@@ -78,7 +78,7 @@ Die **Kernelemente** jeder Persona (Ausstattung, Problem, Workaround, Wortlaut) 
 | Problem | „Nach einem langen Arbeitstag möchte ich häufig nicht mehr selbst kochen.“ (02/Nr. 29); abends Imbiss (02/Nr. 1) | weiß, dass das ins Geld geht, will es aber nicht jeden Abend neu entscheiden |
 | Workaround | Imbiss mit Kollegen, belegte Brötchen, Dosen (`02`, Abschnitt 3) | – |
 | Will | schnell, billig, satt, warm (`02`, Abschnitt 6) | „was Warmes in 10 Minuten, ohne Spülorgie“ |
-| Zahlt, weil | – | Montage-Pass passt zum Einsatz, 17,99 € für 90 Tage ist weniger als ein Raststättenessen |
+| Zahlt, weil | – | Montage-Pass passt zum Einsatz, 17,99 € für 3 Monate ist weniger als ein Raststättenessen (Hypothese, nicht als Preisvergleich bewerben, Z12) |
 
 ### Persona B · „Der Fahrer in der Kabine“
 
@@ -136,10 +136,10 @@ Aus `02`, Abschnitt 6, wörtlich belegt:
 | # | Angle | Echtes Problem | Beleg | Einsatz |
 |---|---|---|---|---|
 | 1 | Was steht im Zimmer? | Ausstattung erst vor Ort klar | 02/Nr. 4, 39; `02` Abschn. 2 (1/3 ohne eigene Küche) | Landingpage-Hero, Lead-Magnet |
-| 2 | 28 € Spesen. Was bleibt? | Raststätte frisst die Pauschale | VerkehrsRundschau 27.03.2026; § 9 Abs. 4a EStG (`02` Abschn. 1) | Anzeige, Landingpage-Rechner |
+| 2 | 28 € Spesen. Was kostet dein Essen? | Raststätte frisst die Pauschale | VerkehrsRundschau 27.03.2026; § 9 Abs. 4a EStG (`02` Abschn. 1) | Anzeige, Landingpage-Rechner |
 | 3 | Ein Kühlschrank, sechs Mann | geteilter Kühlschrank, kein Platz | 02/Nr. 32; Ratgeber „Konflikte“ (`02` Abschn. 2) | Anzeige, App-Funktion „Fach“ |
-| 4 | Hotel nur mit Wasserkocher | keine Küche, nur Heißwasser | 02/Nr. 39, 42; Datenzählung 48 Rezepte | Anzeige, SEO-Seite |
-| 5 | Zehn Minuten, dann Feierabend | zu müde zum Kochen | 02/Nr. 2, 29 (Rang 1, `02` Abschn. 7); Datenzählung 61 Rezepte | Anzeige, Video-Hook |
+| 4 | Hotel nur mit Wasserkocher | keine Küche, nur Heißwasser | 02/Nr. 39, 42; Datenzählung 47 Rezepte | Anzeige, SEO-Seite |
+| 5 | Zehn Minuten, dann Feierabend | zu müde zum Kochen | 02/Nr. 2, 29 (Rang 1, `02` Abschn. 7); Datenzählung 56 Rezepte | Anzeige, Video-Hook |
 | 6 | 21:15, Raststätte zu | Öffnungszeiten, kein Laden in der Nähe | 02/Nr. 9, 28, 30; Datenzählung 17 Rezepte ohne Kühlschrank mit Wasserkocher/Mikrowelle | Anzeige (abends ausgespielt) |
 | 7 | Der Montagekoffer | was muss ich mitnehmen? | 02/Nr. 39, 41; Ratgeber zu Kochgeräten im Zimmer | Lead-Magnet, Partner-Content |
 | 8 | Die Sonntagskiste | Wochenendpendler kochen zu Hause vor | `02` Abschn. 3 (vorkochen, ca. 2 Tage); 02/Nr. 44; BfR-Regel (ENTSCHEIDUNGEN C9) | Anzeige So 16–20 Uhr, Mail |
@@ -156,15 +156,16 @@ Aus `02`, Abschnitt 6, wörtlich belegt:
 - **Headline:** Kreuz an, was dasteht. Wir planen damit.
 - **Primärtext:** Wasserkocher, Mikrowelle, eine Platte oder gar nichts. Du kreuzt an, was im Zimmer steht, Zimmerherd plant nur Gerichte, die damit wirklich gehen. Einkaufsliste nach Laden sortiert. Den Tagesplan bekommst du gratis, ohne Konto.
 
-### Angle 2 · 28 € Spesen. Was bleibt davon?
+### Angle 2 · 28 € Spesen. Was kostet dein Essen?
 
 - **Echtes Problem:** Die Verpflegungspauschale ist das Essensbudget, und an der Autobahn ist sie schnell weg.
 - **Beleg:** 14 € bzw. 28 € pro Tag (§ 9 Abs. 4a EStG, 2026 unverändert, Faktencheck `10` live geprüft). Autobahn: „Ein Gericht für knapp 20 Euro“, „ein Kaffee für 4,50“ (VerkehrsRundschau, 27.03.2026). Nach 3 Monaten am selben Ort entfällt die Pauschale (`01`, 2.2).
 - **Warum noch frei:** Kein Anbieter rechnet in Spesen. mise rechnet in Wochenbudget, und das lässt sich laut Rezension nicht unter 65 € pro Woche einstellen (`05` Abschn. 5, Punkt 4).
-- **Einsatz:** Anzeige, Rechner-Block auf der Landingpage („Dein Plan kostet geschätzt X € pro Tag. Deine Pauschale: 14 € / 28 €.“). **Nur mit dem errechneten Wert aus dem konkreten Plan**, mit Laden und Preisstand. Kein „spart X €“ (`07`, 5.5; `08`, 4.3).
-- **Headline:** 28 € Spesen. Was bleibt davon übrig?
-- **Primärtext:** An der Autobahn kostet ein Gericht knapp 20 €, der Kaffee 4,50 € (VerkehrsRundschau, März 2026). Zimmerherd rechnet dir vor, was deine Woche beim Discounter am Einsatzort kostet. Geschätzt, mit Preisstand und Laden. Den Rest rechnest du selbst.
-- **Pflichtzusatz in der Anzeige oder auf der Zielseite:** „Kosten sind Schätzwerte (Preisstand MM/JJJJ), regional abweichend. Ob und wie viel Pauschale du bekommst, regelt dein Arbeitgeber.“ (`08`, 4.3: Auszahlung hängt vom Arbeitgeber ab.)
+- **Einsatz:** Anzeige, Rechner-Block auf der Landingpage („Dein Plan kostet geschätzt X € pro Tag. Deine Pauschale: 14 € / 28 €.“). **Nur mit dem errechneten Wert aus dem konkreten Plan**, mit Laden und Preisstand. Kein „spart X €“ (`07`, 5.5; `08`, 4.3). 🔴 GESPERRT: konkreter Betrag in Anzeige und Rechner, bis `zutaten.py` nach `09` §5b korrigiert ist (Fleisch und Fisch 16–32 % zu niedrig) und der Kassenbon-Test (±15 %) bestanden ist (Z16, Z34).
+- **Headline:** 28 € Spesen. Was kostet dein Essen?
+  - *(Freigabe Z15: „Was bleibt davon übrig?“ unterstellte eine nicht gemessene Ersparnis.)*
+- **Primärtext:** Laut VerkehrsRundschau (03/2026) zahlt man an der Autobahn für ein Gericht bis knapp 20 €, für den Kaffee 4,50 €. Zimmerherd schätzt, was deine Woche beim Discounter deiner Wahl kostet, mit Preisstand. Den Rest rechnest du selbst.
+- **Pflichtzusatz in der Anzeige oder auf der Zielseite:** „Kosten sind Schätzwerte (Preisstand MM/JJJJ), regional abweichend. Die 14 € / 28 € sind steuerliche Pauschalen (§ 9 Abs. 4a EStG). Ob dein Arbeitgeber sie zahlt, regeln Vertrag oder Tarif, sonst ggf. die Steuererklärung. Keine Steuerberatung.“ (`08`, 4.3; Z17)
 
 ### Angle 3 · Ein Kühlschrank, sechs Mann
 
@@ -179,21 +180,22 @@ Aus `02`, Abschnitt 6, wörtlich belegt:
 ### Angle 4 · Hotel nur mit Wasserkocher
 
 - **Echtes Problem:** Hotel oder Pension ohne Küche. Was bleibt, ist heißes Wasser.
-- **Beleg:** „Einen kleinen Wasserkocher für I- Nudeln oder Bechergerichte.“ (02/Nr. 39, Suchauszug, gegenprüfen). „Dosengerichte wie Ravioli, Tütensuppen, Mie Nudeln“ (02/Nr. 42). Datenzählung: **48 Rezepte** gehen nur mit Wasserkocher (oder ganz ohne Gerät), davon **21** für Mittag oder Abend. Der Rest ist Frühstück und Snacks.
+- **Beleg:** „Einen kleinen Wasserkocher für I- Nudeln oder Bechergerichte.“ (02/Nr. 39, Suchauszug, gegenprüfen). „Dosengerichte wie Ravioli, Tütensuppen, Mie Nudeln“ (02/Nr. 42). Datenzählung (Planer-Regel, 29.10.2026): **47 Rezepte** gehen nur mit Wasserkocher und Kühlschrank (oder ganz ohne Gerät), davon **21** für Mittag oder Abend. Der Rest ist Frühstück und Snacks.
 - **Warum noch frei:** Es gibt ein Wasserkocher-PDF bei Digistore24 für 7,90 € (`10`, Faktencheck 05), aber keinen Plan mit Einkaufsliste dazu.
 - **Einsatz:** Anzeige, SEO-Seite „Essen im Hotelzimmer ohne Küche“ (Suchbegriff aus gutefrage-Threads, `02` Abschn. 8).
 - **Headline:** Nur ein Wasserkocher? Reicht.
-- **Primärtext:** Hotelzimmer ohne Küche, nur ein Wasserkocher auf dem Schrank. Bei Zimmerherd gehen 48 Rezepte genau damit, 21 davon fürs Mittag- oder Abendessen, von Bulgur-Chili bis Kartoffelpüree mit Würstchen. Du kreuzt den Wasserkocher an, der Plan nimmt nur diese. Einkaufsliste dazu.
+- **Primärtext:** Hotelzimmer ohne Küche, nur ein Wasserkocher auf dem Schrank. Bei Zimmerherd gehen 47 Rezepte genau damit, 21 davon fürs Mittag- oder Abendessen, von Bulgur-Chili bis Kartoffelpüree mit Würstchen. Du kreuzt den Wasserkocher an, der Plan nimmt nur diese. Einkaufsliste dazu.
 
 ### Angle 5 · Zehn Minuten, dann Feierabend
 
 - **Echtes Problem:** Nach 10–12 Stunden will keiner mehr in die Küche.
-- **Beleg:** „von 7-19 Uhr geschuftet, … dann noch kochen? nee.“ (02/Nr. 2, Suchauszug, gegenprüfen), „Nach einem langen Arbeitstag möchte ich häufig nicht mehr selbst kochen.“ (02/Nr. 29). Schmerzpunkt Rang 1 mit drei unabhängigen Quellen (`02` Abschn. 7). Datenzählung: **61 Rezepte** mit Wasserkocher oder Mikrowelle und höchstens 10 Minuten aktiver Zeit.
+- **Beleg:** „von 7-19 Uhr geschuftet, … dann noch kochen? nee.“ (02/Nr. 2, Suchauszug, gegenprüfen), „Nach einem langen Arbeitstag möchte ich häufig nicht mehr selbst kochen.“ (02/Nr. 29). Schmerzpunkt Rang 1 mit drei unabhängigen Quellen (`02` Abschn. 7). Datenzählung (Planer-Regel, 29.10.2026): **56 Rezepte** mit Wasserkocher oder Mikrowelle und höchstens 10 Minuten aktiver Zeit.
 - **Warum noch frei:** Koch-Apps verkaufen „schnell“ als 30 Minuten am Herd. Zehn Minuten ohne Herd verkauft niemand.
 - **Einsatz:** Anzeige, 15-Sekunden-Video (Hook: Stoppuhr am Wasserkocher), Filter „höchstens 10 Min. Arbeit“ als Landingpage-Beweis.
 - **Ehrlichkeit:** Der Plan nimmt das Kochen nicht ab (`11`, Risiko 2). Darum nie „ohne Kochen“, sondern „zehn Minuten“.
 - **Headline:** Zwölf Stunden Baustelle. Zehn Minuten Küche.
-- **Primärtext:** Nach Feierabend noch kochen? Nur wenn es schnell geht. 61 Gerichte bei Zimmerherd brauchen höchstens 10 Minuten Arbeit, mit Wasserkocher oder Mikrowelle. Kein Herd nötig, wenig Abwasch. Tagesplan gratis.
+- **Primärtext:** Nach Feierabend noch kochen? Nur wenn es schnell geht. 56 Gerichte bei Zimmerherd brauchen höchstens 10 Minuten Arbeit, mit Wasserkocher oder Mikrowelle. Kein Herd nötig. Tagesplan gratis.
+  - *(Freigabe Z23: „wenig Abwasch“ gestrichen, für diese Gerichte nicht geprüft.)*
 
 ### Angle 6 · 21:15, Raststätte zu
 
@@ -216,11 +218,12 @@ Aus `02`, Abschnitt 6, wörtlich belegt:
 ### Angle 8 · Die Sonntagskiste
 
 - **Echtes Problem:** Wochenendpendler kochen sonntags zu Hause vor und wissen nicht, wie lange es hält.
-- **Beleg:** Workaround „Zu Hause vorkochen und mitnehmen (frisch ca. 2 Tage, danach Dosen)“ (`02` Abschn. 3). „Wenn mein Mann dann unterwegs war hab ich immer zu viel Gekocht“ (02/Nr. 44). Lagerregel: Kühlschrank höchstens 2 Tage, Reis und Nudeln 1 Tag (ENTSCHEIDUNGEN C9, BfR).
+- **Beleg:** Workaround „Zu Hause vorkochen und mitnehmen (frisch ca. 2 Tage, danach Dosen)“ (`02` Abschn. 3). „Wenn mein Mann dann unterwegs war hab ich immer zu viel Gekocht“ (02/Nr. 44). Lagerregel: Kühlschrank höchstens 2 Tage (BfR: 2–3 Tage), Reis 1 Tag (FSA), Nudeln 1 Tag (eigene Regel), Transport in der Kühltasche (BfR-FAQ) (ENTSCHEIDUNGEN C9).
 - **Warum noch frei:** DURCHSCHICHT nutzt „Datum und Uhrzeit“ für Schichtboxen. Für den Montag-bis-Mittwoch-Rhythmus der Pendler gibt es keinen Plan, der den Übergang von Vorgekochtem zu Frischem vor Ort einplant.
 - **Einsatz:** Anzeige Sonntag 16–20 Uhr, Vorkoch-Ablauf als Plus-Funktion zeigen, Mail in der Willkommensstrecke.
 - **Headline:** Sonntag kochen, bis Dienstag essen.
-- **Primärtext:** Was du sonntags vorkochst, hält im Kühlschrank höchstens 2 Tage, mit Reis oder Nudeln nur 1 Tag (BfR). Zimmerherd plant die Sonntagskiste für Montag und Dienstag und ab Mittwoch frisch vor Ort. Mit Boxen, Reihenfolge und Lagerregel.
+- **Primärtext:** Was du sonntags vorkochst, planen wir für höchstens 2 Tage im Kühlschrank (BfR: 2–3 Tage), mit Reis oder Nudeln nur für 1 Tag. Auf der Fahrt in die Kühltasche. Zimmerherd plant die Sonntagskiste für Montag und Dienstag und ab Mittwoch frisch vor Ort. Mit Boxen, Reihenfolge und Lagerregel.
+  - *(Freigabe Z27, Z28: Quellen richtig zugeordnet, Kühlkette ergänzt.)*
 
 ### Angle 9 · Fresspaket 2.0 (Käufer: Angehörige)
 
@@ -238,8 +241,9 @@ Aus `02`, Abschnitt 6, wörtlich belegt:
 - **Beleg:** „nur den Motor lass ich sicherheitshalber laufen damit die Batterie nicht schlapp macht.“ (02/Nr. 12). 24-V-Mikrowelle „nach fast 15 Jahren“ (02/Nr. 13). Polnischer Fahrer: Strafzettel, wenn bei der Kontrolle ein Gaskocher gesehen wird (02/Nr. 34). Datenzählung: **16 Rezepte** mit Tag „LKW“.
 - **Warum noch frei:** „Sternköche“ (12,80 €) ist ein statisches Buch mit 40 Rezepten (`02` Abschn. 5). Ein Plan mit Einkaufsliste für die Kabine fehlt.
 - **Einsatz:** Anzeige an Berufskraftfahrer, Kooperation mit Fahrer-Blogs. **Nie** Kochen mit Gas in der Kabine zeigen oder empfehlen. Nie den Motor im Stand als Tipp erwähnen (Leerlauf ist kein Ratschlag, den wir geben).
-- **Headline:** 24-V-Mikrowelle und Kühlbox reichen.
-- **Primärtext:** In der Kabine kochst du mit dem, was die Batterie hergibt. Zimmerherd plant Gerichte für Mikrowelle, Wasserkocher und Kühlbox, ohne Gaskocher. Einkaufsliste für den nächsten Discounter, Kosten geschätzt.
+- **Headline:** 24-V-Mikrowelle und Kühlbox: Das reicht für den Plan.
+- **Primärtext:** In der Kabine kochst du mit dem, was die Batterie hergibt. Zimmerherd plant Gerichte für Mikrowelle, Wasserkocher und Kühlbox, ohne Gaskocher. Einkaufsliste für den Discounter deiner Wahl, Kosten geschätzt. Die Kühlbox muss unter 7 °C halten.
+  - *(Freigabe Z30, Z31: Thermoelektrische 24-V-Boxen kühlen nur 15–20 K unter Umgebung. Als „Kühlschrank“ zählt nur eine Box, die zuverlässig unter 7 °C hält, z. B. Kompressor-Box mit Thermometer.)*
 - **Offene Produktfrage:** Watt-Angabe je Rezept fehlt. Erst wenn sie da ist, mit „passt zu deinem Wechselrichter“ werben.
 
 ### Angle 11 (Wartestand) · Na polsku / În română
@@ -263,7 +267,7 @@ Aus `02`, Abschnitt 6, wörtlich belegt:
 1. Du-Form, Sätze unter 15 Wörtern. Viele Leser sind müde oder lesen Deutsch als Zweitsprache (`01`, 2.3).
 2. Geräte und Zahlen konkret: „Wasserkocher“, „10 Minuten“, „2 Tage“. Keine Adjektiv-Wolken.
 3. Ironie ja, Spott nein. Über Imbiss und Dosen darf man schmunzeln, über die Leute nicht.
-4. Keine Fitness-, Wellness- oder Gesundheitswörter. „Satt“, „warm“, „deftig“ statt „gesund“, „clean“, „ausgewogen“.
+4. Keine Fitness-, Wellness- oder Gesundheitswörter. „Satt“, „warm“, „deftig“ statt „gesund“, „clean“, „ausgewogen“. „Satt“ nur als „satt werden“ (genug zu essen haben), **nie** „macht satt“, „sättigend“ oder „hält lange satt“ an einem Gericht (Art. 13 Abs. 1 lit. c HCVO, Z37).
 5. Jede Zahl mit Quelle oder als „geschätzt“ gekennzeichnet.
 
 ### Do & Don't (je 8 Beispiele)
@@ -271,12 +275,12 @@ Aus `02`, Abschnitt 6, wörtlich belegt:
 | # | Do | Don't | Warum |
 |---|---|---|---|
 | 1 | „Kreuz an, was dasteht.“ | „Personalisiere dein kulinarisches Erlebnis.“ | Werbesprech, kein Monteur redet so |
-| 2 | „Hält im Kühlschrank höchstens 2 Tage (BfR).“ | „Hält locker die ganze Woche.“ | falsch und gefährlich (BfR, ENTSCHEIDUNGEN C9) |
-| 3 | „Dein Plan: geschätzt [X,XX] € pro Tag bei Aldi, Preisstand [MM/JJJJ].“ (Platzhalter, nur mit dem Wert aus einem echten Plan füllen) | „Spar dir 200 € Spesen im Monat.“ | unbelegte Ersparnis, § 5 UWG (`07`, 5.6 Verbot 14) |
+| 2 | „Hält im Kühlschrank (höchstens 7 °C) 2 Tage. Wir planen vorsichtiger als das BfR (2–3 Tage).“ | „Hält locker die ganze Woche.“ | falsch und gefährlich (BfR, ENTSCHEIDUNGEN C9) |
+| 3 | „Dein Plan: geschätzt [X,XX] € pro Tag bei Aldi, Preisstand [MM/JJJJ].“ (Platzhalter, nur mit dem Wert aus einem echten Plan füllen. 🔴 GESPERRT: Betrag erst nach Preiskorrektur und Kassenbon-Test, Z34) | „Spar dir 200 € Spesen im Monat.“ | unbelegte Ersparnis, § 5 UWG (`07`, 5.6 Verbot 14) |
 | 4 | „Zehn Minuten Arbeit, dann Feierabend.“ | „Gesund und fit durch die Montagewoche.“ | Gesundheitsversprechen ohne Beleg (`07`, 5.4) |
-| 5 | „Nur ein Wasserkocher? Reicht für 48 Rezepte.“ | „Unendlich viele Rezepte für jedes Zimmer.“ | Übertreibung, Zahl ist 195 bzw. je Gerät gezählt |
+| 5 | „Nur ein Wasserkocher? Reicht für 47 Rezepte.“ (mit Zähldatum) | „Unendlich viele Rezepte für jedes Zimmer.“ | Übertreibung, Zahl ist 195 bzw. je Gerät gezählt |
 | 6 | „Frag erst den Vermieter, ob die Kochplatte ins Zimmer darf.“ | „Stell dir einfach eine Platte aufs Nachtschränkchen.“ | Brandschutz, Vermieter-Erlaubnis (`02`, Abschn. 1) |
-| 7 | „Montage-Pass: 17,99 € für 90 Tage, endet von selbst.“ | „Nur heute: Pass zum halben Preis.“ | Fake-Rabatt und Druck, verboten (`08`, 4.4) |
+| 7 | „Montage-Pass: 17,99 € einmalig für 3 Monate, endet automatisch.“ | „Nur heute: Pass zum halben Preis.“ | Fake-Rabatt und Druck, verboten (`08`, 4.4) |
 | 8 | „Deine Allergien bleiben auf deinem Handy.“ | „100 % allergiesicher.“ | nicht beherrschbar (`07`, 5.6 Verbot 6) |
 
 Zusätzlich gilt: kein „Mann, iss mal was Vernünftiges“-Ton. Wir erziehen niemanden. Und keine Witze über Herkunft oder Sprache der Kollegen.
@@ -405,7 +409,7 @@ Interior of a parked European truck cab at dusk, parking lot lights outside, eng
 | Personaldienstleister | Zeitarbeit mit Unterbringung (Industrie, Logistik, Saison) | Lizenz für Unterkunftsbewohner, später PL/RO | wie oben | `01`, 2.1 (622.000 Leiharbeitnehmende) |
 | Betriebsräte | Betriebsräte in Firmen mit Auswärtsmontage | Info-Blatt für die Belegschaft (Spesen-Fakten mit Quelle, Zimmer-Check) | Betriebsräte verteilen keine Werbung. Nur als neutrales Informationsangebot, Entscheidung liegt beim Gremium | IG Metall/Hans-Böckler: ca. 150 Betriebsvereinbarungen zur Auswärtstätigkeit ausgewertet (`01`, 2.1). Kanal = **Hypothese** |
 | Fahrer-Blog | **gesunde-trucker.com** | Gastbeitrag, Rezept der Woche mit Link | Kooperation anfragen; bei Gegenleistung Kennzeichnung | `02`, Abschn. 5 („Kooperationskanal“) |
-| Fahrer-Medien | **FERNFAHRER / EuroTransport** (Verlag von „Sternköche“), **VerkehrsRundschau** | Presse-Info „Raststättenpreise gegen Discounter-Plan“ mit eigenem, nachvollziehbarem Beispielplan | Redaktionell nur, wenn es eine Nachricht ist. Anzeigen über Mediadaten (Preise nicht geprüft) | `02`, Abschn. 1 und 5 |
+| Fahrer-Medien | **FERNFAHRER / EuroTransport** (Verlag von „Sternköche“), **VerkehrsRundschau** | Presse-Info „Raststättenpreise gegen Discounter-Plan“ mit eigenem, nachvollziehbarem Beispielplan. 🔴 GESPERRT: bis Preiskorrektur und Kassenbon-Test, ohne Betreibernamen (Z38) | Redaktionell nur, wenn es eine Nachricht ist. Anzeigen über Mediadaten (Preise nicht geprüft) | `02`, Abschn. 1 und 5 |
 | Creator | **YouTube „German Truck Driver“** (Kai Nußbaum, „mehr als 100.000 Follower“ laut EuroTransport) | Test in der Kabine, ehrliche Meinung | Kennzeichnung „Werbung“ am Anfang, schriftliches Briefing mit erlaubten Aussagen (Abschnitt 9) | `02`, Abschn. 5 (Reichweite nur über Dritte belegt) |
 | Eigene Marken | **DURCHSCHICHT**-Startseite und -Mails, **Honigmama**-Liste | Hinweis-Block „Auf Montage? Zimmerherd“ | nur an Empfänger mit Einwilligung, die Mails dieser Art abdeckt; sonst nur auf der Website | `11`, Risiko 1 (DURCHSCHICHT-Produkt noch Entwurf, also kaum Liste) |
 
@@ -438,20 +442,20 @@ Interior of a parked European truck cab at dusk, parking lot lights outside, eng
 
 ## 8. Lead-Magnet: „Zimmer-Check“
 
-**Idee:** Der Monteur oder seine Partnerin kreuzt auf der Landingpage an, was im Zimmer steht. Sofort und **ohne E-Mail** sieht man: „Mit Wasserkocher und Mikrowelle gehen 64 Rezepte, davon 24 Abendessen. Mit einer Kochplatte dazu werden es 147.“ (Datenzählung, live aus den Rezeptdaten). Wer mehr will, bekommt per Mail das PDF.
+**Idee:** Der Monteur oder seine Partnerin kreuzt auf der Landingpage an, was im Zimmer steht. Sofort und **ohne E-Mail** sieht man: „Mit Wasserkocher und Mikrowelle gehen 59 Rezepte, davon 22 Abendessen. Mit einer Kochplatte dazu werden es 119.“ (Datenzählung, live aus den Rezeptdaten). Wer mehr will, bekommt per Mail das PDF.
 
-**Das PDF „Zimmer-Check · Montagekoffer“ (kostenlos):**
-1. **Geräte-Tabelle:** welches Gerät wie viele Rezepte freischaltet (Wasserkocher allein 48, mit Mikrowelle 64, mit einer Platte 147), je 5 Beispielgerichte.
+**Das PDF „Zimmer-Check · Montagekoffer“ (gratis, wenn man sich für unsere Mails anmeldet, Z40):**
+1. **Geräte-Tabelle:** welches Gerät wie viele Rezepte freischaltet (Wasserkocher allein 47, mit Mikrowelle 59, mit einer Platte 119; Zählung wie Planer), je 5 Beispielgerichte.
 2. **Packliste Montagekoffer:** Kochplatte, kleiner Topf, Messer, Brett, Dosenöffner, zwei Boxen, Klebeband und Stift für Etiketten (Belege 02/Nr. 39, 41).
 3. **Frage an den Vermieter** als Textvorlage: „Darf ich im Zimmer eine Kochplatte benutzen?“ (Ratgeber-Hinweis zur Erlaubnis, `02`, Abschn. 1).
-4. **Lagerkarte nach BfR:** Kühlschrank höchstens 2 Tage, Reis, Nudeln, Fisch, Hack, Ei höchstens 1 Tag, ungekühlt höchstens 2 Stunden, Aufwärmen auf 70 °C für 2 Minuten (ENTSCHEIDUNGEN C9).
+4. **Lagerkarte:** Kühlschrank höchstens 7 °C, besser 5 °C (BfR). Gekochtes höchstens 2 Tage (BfR: 2–3 Tage), Reis 1 Tag (FSA), Nudeln, Fisch, Hack, Ei 1 Tag (eigene Regel), ungekühlt höchstens 2 Stunden (USDA), Aufwärmen auf mindestens 70 °C für 2 Minuten (BfR). Jede Regel mit Quelle drucken (ENTSCHEIDUNGEN C9, Z41).
 5. **Fach-Etiketten** zum Ausdrucken: Name, Datum, „essen bis“.
 6. **Spesen-Fakten** mit Quelle: 14 € / 28 €, Dreimonatsfrist (§ 9 Abs. 4a EStG). Kein Steuerrat, keine Ersparnis-Zahl.
 
 **Ablauf mit Double-Opt-in:**
 1. Formular: nur E-Mail-Adresse, Pflicht-Hinweis auf Datenschutz und Abmeldung. **Keine** Geräte, Allergien oder Ernährungsformen mit der Adresse speichern (Art. 9 DSGVO, `07`, 4.1; Planerdaten bleiben auf dem Gerät, ENTSCHEIDUNGEN C3).
 2. Bestätigungsmail mit Link. Erst nach dem Klick kommt das PDF (BGH I ZR 164/09, `07`, 4.4).
-3. Danach höchstens vier Mails in drei Wochen, jede mit Abmeldelink: (a) PDF und Tagesplan-Link, (b) Sonntagskiste (Angle 8), (c) „Was kostet deine Woche?“ mit echtem Beispielplan und Preisstand, (d) Montage-Pass: 17,99 € für 90 Tage, endet von selbst.
+3. Danach höchstens vier Mails in drei Wochen, jede mit Abmeldelink: (a) PDF und Tagesplan-Link, (b) Sonntagskiste (Angle 8), (c) „Was kostet deine Woche?“ mit echtem Beispielplan und Preisstand (🔴 GESPERRT: bis Preiskorrektur und Kassenbon-Test; bis dahin ohne Betrag, Z42), (d) Montage-Pass: 17,99 € einmalig für 3 Monate, endet automatisch.
 4. Meta erhält höchstens das Ereignis „Lead“ nach Einwilligung im Banner, ohne Geräte- oder Ernährungsdaten.
 
 **Ziel und Messung:** Kosten je bestätigtem Lead unter 3 € (Abbruchgrenze `11`, Risiko 1). Lead-zu-Kauf-Quote messen, sie gilt als größter Hebel (`08`, 3.10 laut `11`).
@@ -471,15 +475,15 @@ Interior of a parked European truck cab at dusk, parking lot lights outside, eng
 | Spesen | Fakten zur Pauschale mit Gesetzesquelle. Keine Steuerberatung, kein „steuerfrei sparen“. Hinweis: Auszahlung regelt der Arbeitgeber | § 9 Abs. 4a EStG; `08`, 4.3 |
 | Kundenstimmen | Keine erfundenen oder umformulierten Stimmen. Forenzitate nur als Recherche, nie als „Kundenstimme“. Echte Bewertungen erst nach Launch, mit Hinweis, wie sie geprüft werden | UWG Anhang Nr. 23b/c, § 5b Abs. 3 UWG (`07`, 5.5) |
 | Creator | „Werbung“/„Anzeige“ am Anfang, auch bei Gratis-Zugang. Schriftliches Briefing mit dieser Tabelle | § 5a Abs. 4 UWG; BGH I ZR 90/20 (`07`, 5.5) |
-| Vergleiche | Kein Name von Wettbewerbern (mise) oder Raststättenbetreibern in Anzeigen ohne rechtliche Prüfung | § 6 UWG (`07`, 5.5) |
+| Vergleiche | Kein Name von Wettbewerbern (mise) oder Raststättenbetreibern in Anzeigen ohne rechtliche Prüfung. Keine Alleinstellung („als einziger“) | § 6 UWG (`07`, 5.5) |
 | Händlernamen | Aldi, Lidl usw. nur beschreibend („Einkaufsliste für Aldi“), keine Logos, keine Andeutung einer Partnerschaft | Markenrecht, `marke/Namen_und_Pruefung.md` |
-| „Gratis“ | „Gratis“ nur für den 1-Tages-Plan, der wirklich nichts kostet. Beim Jahresabo: „7 Tage 0 €, danach 44,99 € pro Jahr“ in gleicher Sichtbarkeit | UWG Anhang Nr. 21; § 312j BGB (`07`, 3.3, 3.4) |
+| „Gratis“ | „Gratis“ nur für den 1-Tages-Plan, der wirklich nichts kostet, und für Lead-Magnete mit dem Zusatz „wenn du dich für unsere Mails anmeldest“. Beim Jahresabo: „7 Tage 0 €, danach 44,99 € für 12 Monate (Laufzeit 12 Monate, danach monatlich kündbar)“ in gleicher Sichtbarkeit (Z44) | UWG Anhang Nr. 21; § 312j BGB (`07`, 3.3, 3.4) |
 | Bestellknopf | „zahlungspflichtig bestellen“ oder „Jetzt kaufen“, nie „Kostenlos testen“ als Bestellknopf | § 312j Abs. 3 BGB (`07`, 3.3; 5.6 Verboten Nr. 15) |
 | Montage-Pass | „17,99 € für 3 Monate, endet automatisch“ ist wahr und darf gesagt werden. Trotzdem braucht auch der Pass den Knopf „Verträge hier kündigen“ und „Vertrag widerrufen“ ohne Login | BGH I ZR 161/24; § 312k, § 356a BGB (`07`, 3.1; `10`, Korrektur 1) |
 | Widerruf | Der Planer ist eine digitale Dienstleistung: Widerrufsrecht bleibt 14 Tage, bei ausdrücklichem Wunsch nach sofortigem Start anteiliger Wertersatz, Zustimmungs-Checkbox nicht vorangekreuzt. Ein reines PDF wäre digitaler Inhalt (§ 356 Abs. 5 BGB) | § 356 Abs. 4, § 357a BGB (`07`, 3.5) |
 | Datenschutz | „Deine Geräte, Allergien und Pläne bleiben auf deinem Handy.“ ist wahr. Nicht „wir speichern nichts“: für Kauf und Lizenzschlüssel braucht es die E-Mail. „DSGVO-konform“ nur mit Beleg | `07`, 4.3; `11`, Einwand A; `05`, Option 3 |
 | Allergien | „Rezepte ohne Erdnüsse filtern“ ja. „Allergiesicher“ nie | `07`, 5.6 (Erlaubt 3, Verboten 6) |
-| Lagerung | Haltbarkeit nur mit BfR-Quelle und den vorsichtigen Werten aus ENTSCHEIDUNGEN C9 | `07`, 5.6 (Erlaubt 7) |
+| Lagerung | Haltbarkeit nur mit der richtigen Quelle je Regel (BfR 2–3 Tage, FSA Reis, USDA 2 Stunden, sonst „eigene Vorsichtsregel“) und den Werten aus ENTSCHEIDUNGEN C9. Immer „bei höchstens 7 °C“. Nie „(BfR)“ hinter eine Zahl, die das BfR nicht nennt | `07`, 5.6 (Erlaubt 7) |
 | Sicherheit | Keine Tipps, die Hausordnung, Brandschutz oder Lenk- und Ruhezeiten berühren (Kochplatte ohne Erlaubnis, Gas in der Kabine, Essen am Steuer, Motor im Leerlauf) | Haftung, Ratgeber deutschland-monteurzimmer.de (`02`, Abschn. 1) |
 | KI-Bilder | Food-Fotos müssen das echte Rezept realistisch zeigen; Hinweis „Abbildung KI-generiert, Serviervorschlag“ | `07`, 9.4 |
 | Werbemails | nur mit Double-Opt-in, auch an Firmen keine Werbe-Mail ohne Einwilligung | § 7 UWG, BGH I ZR 164/09 (`07`, 4.4) |

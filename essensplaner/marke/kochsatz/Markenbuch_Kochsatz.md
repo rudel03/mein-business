@@ -1,8 +1,8 @@
 # Kochsatz · Markenbuch
 
-Stand: 29.10.2026 · Arbeitsgrundlage für Landingpage, App-Texte, Anzeigen und Inhalte · Nischen-Marke unter der Dachmarke Tellerkontor
+Stand: 29.10.2026 · **Claim-Freigabe vom 29.10.2026 eingearbeitet** (`marke/Claim_Freigabe.md`, Kürzel K01 ff.) · Arbeitsgrundlage für Landingpage, App-Texte, Anzeigen und Inhalte · Nischen-Marke unter der Dachmarke Tellerkontor
 
-> **Lesehilfe.** Jede Zahl hat eine Quelle. Kürzel: `03-A15` = Zitat A15 in `recherche/03_Stimmen_Fitness_Allgemein.md`, `01 §3` = Abschnitt 3 in `recherche/01_Markt_und_Zahlen.md`, `05` = Wettbewerb, `07` = Recht, `11` = Advocatus Diaboli. **„Eigene Auswertung“** heißt: aus `app/public/data/daten.json` gerechnet (195 Rezepte, 156 Zutaten). Die Preise darin sind **Schätzungen (Stand 10/2026)**, die Preisstichprobe `recherche/09` gibt es noch nicht (`11` Punkt 4). Mit Kosten wird erst nach dem Kassenbon-Test geworben. **[Hypothese]** markiert alles, was noch nicht durch Interviews belegt ist.
+> **Lesehilfe.** Jede Zahl hat eine Quelle. Kürzel: `03-A15` = Zitat A15 in `recherche/03_Stimmen_Fitness_Allgemein.md`, `01 §3` = Abschnitt 3 in `recherche/01_Markt_und_Zahlen.md`, `05` = Wettbewerb, `07` = Recht, `11` = Advocatus Diaboli. **„Eigene Auswertung“** heißt: aus `app/public/data/daten.json` gerechnet (195 Rezepte, 156 Zutaten). Die Preise darin sind **Schätzungen (Stand 10/2026)**. Die Preisstichprobe `recherche/09_Preisstichprobe.md` (29.10.2026) belegt 37 von 56 geprüften Zutaten: Fleisch und Fisch sind 16–32 % zu niedrig geschätzt, Butter, Nudeln, Reis u. a. zu hoch; Linsen, Tofu, Thunfisch, Obst und Gemüse sind unbelegt. Mit Kosten wird erst nach Übernahme der Korrekturliste (`09` §5b) und dem Kassenbon-Test geworben (K04). **[Hypothese]** markiert alles, was noch nicht durch Interviews belegt ist.
 
 ## 1. Warum es diese Marke gibt
 
@@ -30,14 +30,14 @@ Stand: 29.10.2026 · Arbeitsgrundlage für Landingpage, App-Texte, Anzeigen und 
 
 ## 2. Positionierung
 
-> **Für alle, die mit festen Makrozielen trainieren und beim Discounter einkaufen, ist Kochsatz der Wochenplaner, der aus Zielwerten, Laden und Küche einen fertigen Plan macht: Einkaufsliste nach Gang, Kochtag mit Uhrzeiten, Boxen mit Datum. Er rechnet in Gramm und ganzen Packungen statt in Prozent und sagt mit Quelle, wie lange die Box hält.**
+> **Für alle, die mit festen Makrozielen trainieren und beim Discounter einkaufen, ist Kochsatz der Wochenplaner, der aus Zielwerten, Laden und Küche einen fertigen Plan macht: Einkaufsliste nach Abteilungen, Kochtag mit Uhrzeiten, Boxen mit Datum. Er rechnet in Gramm und ganzen Packungen statt in Prozent und sagt mit Quelle, wie lange die Box hält.**
 
 **Kernversprechen:** *Du gibst die Zahlen vor. Kochsatz gibt dir die Woche, den Einkaufszettel und den Kochtag.*
 
 **Drei Belege fürs Versprechen (alle prüfbar):**
 1. Makroziel in Gramm eingeben (kcal, Protein, Kohlenhydrate, Fett), der Planer richtet die Rezepte danach (`07 §5.6` Nr. 4, erlaubt).
-2. Laden wählen, Einkaufsliste kommt nach Gängen sortiert, Mengen in ganzen Packungen.
-3. Vorkoch-Ablauf mit Boxen, Haltbarkeit nach BfR (Kühlschrank höchstens 2 Tage, Reis/Nudeln/Fisch/Hack/Ei höchstens 1 Tag, Entscheidung C9).
+2. Laden wählen, Einkaufsliste kommt nach Abteilungen sortiert (Schema der Kette), Mengen in ganzen Packungen.
+3. Vorkoch-Ablauf mit Boxen, Haltbarkeit nach BfR, bei uns strenger (gekocht höchstens 2 Tage bei höchstens 7 °C, BfR: 2–3 Tage; Reis 1 Tag nach FSA; Nudeln, Fisch, Hack, Ei 1 Tag als eigene Vorsichtsregel; Entscheidung C9).
 
 **Was Kochsatz ausdrücklich nicht ist:** kein Diät-, Abnehm- oder Muskelprogramm, kein Tracker, kein Coach. Die Zahlen setzt der Nutzer, Kochsatz plant das Essen dazu.
 
@@ -47,7 +47,7 @@ Stand: 29.10.2026 · Arbeitsgrundlage für Landingpage, App-Texte, Anzeigen und 
 |---|---|---|
 | **Honigmama / BeeQueen** | Koch-E-Books für Schwangerschaft und erstes Jahr, warm, gemalt, Honig und Creme | Training und Zahlen, kühle Halle statt Kinderzimmer. Keine Ansprache von Schwangeren oder Müttern als Fitness-Zielgruppe. |
 | **DURCHSCHICHT** | E-Book nach Dienstplan, Nachtblau und Signalorange | Plan nach Makroziel und Laden. Schichtarbeitende, die trainieren, werden nicht aktiv beworben (sonst Kannibalisierung). |
-| **mise** (engster App-Wettbewerber, `05 §2.1`) | Budget und Supermarkt per KI, Preise laut Nutzern falsch („halbe Avocado“, `03-B4`), Hard Paywall, Mindestbudget 65 €/Woche (`03-B6`) | Eigene geprüfte Rezepte, Makros in Gramm, ganze Packungen, 1-Tages-Plan dauerhaft gratis, kein Konto. Gleiche Idee, nachprüfbar gebaut. |
+| **mise** (engster App-Wettbewerber, `05 §2.1`) | Budget und Supermarkt per KI, Preise laut Nutzern falsch („halbe Avocado“, `03-B4`), Hard Paywall, Mindestbudget 65 €/Woche (`03-B6`) | Eigene, fachlich durchgesehene Rezepte (noch nicht testgekocht, C8), Makros in Gramm, ganze Packungen, 1-Tages-Plan dauerhaft gratis, kein Konto. *(Ganze Tabelle nur intern, nie in Werbung: § 6 UWG, K09)* |
 | **Yazio, MyFitnessPal, Lifesum, Fddb** (`05 §2.7–2.10`) | Tracker: Du trägst nachträglich ein, was du gegessen hast | Planer: Du bekommst vorher, was du essen und kaufen kannst. Export zu Trackern höchstens als Zusatz. |
 | **Eat This Much, MealPrepPro** | Makro-Planer aus den USA, US-Produkte und -Einheiten (`03-A24`, A25) | Deutsche Discounter, Gramm, BLS-Nährwerte, Gerätefilter. |
 | **Kochboxen** (HelloFresh & Co.) | Lieferung, Portionen „reicht aber manchmal für eine“ (`03-B33`), Makros nicht steuerbar | Du kaufst selbst beim Discounter, die Portion richtet sich nach deinem Ziel. |
@@ -84,7 +84,7 @@ Die **Kernelemente** (Problem, Zitat, Zahl) sind belegt. Name, Alter, Alltag und
 | Zielwert, deine Zahlen | Traumkörper, Gains, Shredded | keine Körperversprechen (`07 §5.3`) |
 | proteinreich (nur ab 20 % Energie) | High Protein bei jedem Rezept | `07 §5.2` |
 | Phase wechseln = Zahlen ändern | Fettverbrennung, Abnehmphase | Art. 12 lit. b HCVO |
-| hält gekühlt 1–2 Tage (BfR) | „hält die ganze Woche“ | Entscheidung C9 |
+| hält gekühlt 1–2 Tage (wir planen strenger als das BfR mit 2–3 Tagen) | „hält die ganze Woche“ | Entscheidung C9, K07 |
 | Discounter, Aldi, Lidl (als Laden-Auswahl) | „Aldi empfiehlt“ oder Logos | fremde Marken nur als Auswahl, nie als Partner |
 
 ## 4. Nischen-Angles (bisher kaum genutzt)
@@ -93,11 +93,12 @@ Zehn Angles plus einer in Reserve. Jeder Angle bekommt auf der Landingpage einen
 
 ### A1 · Protein pro Euro
 - **Echtes Problem:** Protein ist der teuerste Teil des Einkaufs, und niemand sagt, wo man für einen Euro am meisten bekommt.
-- **Beleg:** `03-A31` „Kein Geld für Proteinreiches essen“, `03-A32` „Billige Proteinquelle für Kraftsport?“, `03-A27` Pläne „way too expensive“ wegen Fleisch und Ei. Fitness-Leute durchsuchen Angebote nach Protein (mydealz „Pumpermarkt x MuskelMarkt“, `03 A3`). Eigene Auswertung (Schätzpreise 10/2026): rote Linsen ≈ 86 g Protein pro €, Magerquark ≈ 54 g, Skyr ≈ 34 g, Tofu ≈ 33 g, Eier ≈ 28 g, Hähnchenbrust ≈ 26 g, Thunfisch ≈ 21 g, Lachs ≈ 12 g.
+- **Beleg:** `03-A31` „Kein Geld für Proteinreiches essen“, `03-A32` „Billige Proteinquelle für Kraftsport?“, `03-A27` Pläne „way too expensive“ wegen Fleisch und Ei. Fitness-Leute durchsuchen Angebote nach Protein (mydealz „Pumpermarkt x MuskelMarkt“, `03 A3`). Eigene Auswertung (Schätzpreise 10/2026, **veraltet**): rote Linsen ≈ 86 g Protein pro €, Magerquark ≈ 54 g, Skyr ≈ 34 g, Tofu ≈ 33 g, Eier ≈ 28 g, Hähnchenbrust ≈ 26 g, Thunfisch ≈ 21 g, Lachs ≈ 12 g. Mit Aldi-Süd-Normalpreisen vom 29.10.2026 (`09`): Magerquark ≈ 50 g, Skyr ≈ 41 g, Hähnchenbrust ≈ 21 g, Lachs ≈ 10 g; Linsen, Tofu, Thunfisch ohne belegten Preis.
 - **Warum noch frei:** Tracker zählen Gramm, Spar-Creator zählen Euro. Die Kombination „Gramm Protein pro Euro im Discounter“ zeigt keiner der 32 Anbieter aus `05`.
-- **Einsatz:** Lead-Magnet (Abschnitt 8), Reel-Serie „Gramm pro Euro“, SEO-Seite „günstige Proteinquellen Aldi/Lidl“.
+- **Einsatz:** Lead-Magnet (Abschnitt 8), Reel-Serie „Gramm pro Euro“, SEO-Seite „günstige Proteinquellen Aldi/Lidl“ („Proteinquelle“ nur für Lebensmittel mit ≥ 12 % Energie aus Protein, nie „die günstigste“, K13).
 - **Headline:** Wie viel Protein gibt's für 1 Euro?
-- **Primärtext:** Linsen, Magerquark, Eier oder Hähnchen: Der kostenlose Kochsatz-Rechner zeigt Gramm Protein pro Euro bei Aldi und Lidl. Mit geschätzten Preisen, Stand 10/2026, und Nährwerten aus dem BLS 4.0. Ohne Konto.
+- **Primärtext:** Linsen, Magerquark, Eier oder Hähnchen: Der kostenlose Kochsatz-Rechner zeigt Gramm Protein pro Euro für Aldi und Lidl, mit geschätzten Preisen (Stand und Quelle je Zutat) und Nährwerten aus dem BLS 4.0. Ohne Konto.
+- 🔴 GESPERRT: konkrete Gramm-pro-Euro-Werte in Anzeigen, bis `zutaten.py` nach `09` §5b korrigiert ist. Hähnchen und Lachs sind laut Stichprobe rund 25 % teurer als geschätzt (K11, K12).
 
 ### A2 · Die ganze Packung
 - **Echtes Problem:** Das Rezept braucht 20 g, im Laden gibt es 500 g. Der Rest verdirbt, und die Kostenrechnung der App stimmt nicht.
@@ -105,15 +106,15 @@ Zehn Angles plus einer in Reserve. Jeder Angle bekommt auf der Landingpage einen
 - **Warum noch frei:** mise rechnet laut Nutzern halbe Packungen, Tracker kennen gar keine Packung.
 - **Einsatz:** Vorher/Nachher-Grafik der **Einkaufsliste** (nie des Körpers): links „20 g Sonnenblumenkerne“, rechts „1 Packung 200 g, Rest in Rezept X und Y“.
 - **Headline:** 20 g gebraucht, 500 g gekauft?
-- **Primärtext:** Kochsatz rechnet mit ganzen Packungen, so wie sie im Regal stehen. Jeder Rest steht auf der Liste, angebrochenen Quark oder Spinat plant der Planer in weitere Rezepte der Woche ein.
+- **Primärtext:** Kochsatz rechnet mit ganzen Packungen, so wie sie im Regal stehen. Jeder Rest steht auf der Liste, für angebrochenen Quark oder Spinat sucht der Planer weitere Rezepte in der Woche.
 
 ### A3 · Zwei Kochtage, Datum auf der Box
 - **Echtes Problem:** Das klassische Meal-Prep heißt „Sonntag kochen, bis Freitag essen“. Die Freitagsbox ist dann fünf Tage alt.
-- **Beleg:** BfR nennt 2–3 Tage für gekühlte Speisen, BZfE und FSA 2 Tage (`durchschicht/brand/Markenbuch_DURCHSCHICHT.md` §1). Kochsatz plant höchstens 2 Tage, Reis, Nudeln, Fisch, Hack und Ei höchstens 1 Tag (Entscheidung C9). Lagerregeln mit Quelle bietet kein Wettbewerber (`05 §5` Punkt 6). Wunsch nach Vorausplanung: `03-A2`, `03-A23`.
+- **Beleg:** BfR nennt 2–3 Tage für gekühlte Speisen, die FSA 48 Stunden (`06` 4.1). Eine BZfE-Tageszahl ist nicht belegt (K16). Kochsatz plant höchstens 2 Tage, Reis, Nudeln, Fisch, Hack und Ei höchstens 1 Tag (Entscheidung C9). Lagerregeln mit Quelle bietet kein Wettbewerber (`05 §5` Punkt 6). Wunsch nach Vorausplanung: `03-A2`, `03-A23`.
 - **Warum noch frei:** Meal-Prep-Inhalte zeigen fast immer „5 Boxen für die Woche“ [Beobachtung, nicht systematisch erfasst]. Ehrlichkeit bei der Haltbarkeit besetzt niemand.
 - **Einsatz:** Etikett-Grafik „Gekocht Sa 17:40 · essen bis So“, Kochtag-Ablauf als Video, Landingpage-Abschnitt „Wie lange hält das?“.
 - **Headline:** Hält die Freitagsbox wirklich?
-- **Primärtext:** Kochsatz plant zwei kurze Kochtage statt einem langen. Auf jeder Box steht, bis wann sie gegessen sein sollte, nach den Lagerregeln des BfR. Was länger halten soll, kommt in den Tiefkühler.
+- **Primärtext:** Kochsatz plant zwei kurze Kochtage statt einem langen. Auf jeder Box steht, bis wann sie gegessen sein sollte, nach den Empfehlungen des BfR, bei Reis, Nudeln, Fisch, Hack und Ei strenger. Was länger halten soll, kommt in den Tiefkühler.
 
 ### A4 · Gleiche Makros, andere Teller
 - **Echtes Problem:** Wer Makros trifft, isst oft wochenlang dasselbe und hört deshalb auf.
@@ -127,9 +128,10 @@ Zehn Angles plus einer in Reserve. Jeder Angle bekommt auf der Landingpage einen
 - **Echtes Problem:** Tracking ist Nacharbeit. Und bei manchen Apps kostet sogar das Planen für morgen extra.
 - **Beleg:** `03-A4`, `03-A5` „the already boring work like putting in calories“, `03-A6` „muss Geld bezahlen um schonmal Mahlzeiten für morgen zu tracken“, `03-A12` jede Zutat von Hand. Tracking-Frust ist Schmerzpunkt Nr. 2 mit hoher Konfidenz (`03 A2`).
 - **Warum noch frei:** Die großen Apps verkaufen das Eintragen. Ein Planer, der die Zahlen vorher erfüllt, wirbt in DE nicht sichtbar (`05 §3.2`).
-- **Einsatz:** Anzeigen an Tracker-Müde (P3), Vergleichstabelle auf der Landingpage ohne Markennamen.
+- **Einsatz:** Anzeigen an Tracker-Müde (P3), Vergleichstabelle auf der Landingpage ohne Markennamen, nur sachliche Funktionsmerkmale, keine Preise, keine Wertung (§ 6 UWG, K22).
 - **Headline:** Erst planen, dann essen
-- **Primärtext:** Bei Kochsatz steht am Sonntag fest, was du die Woche über isst, was du kaufst und wann du kochst. Makros in Gramm, pro Tag und pro Mahlzeit. Nachtragen musst du nur, was du spontan anders machst.
+- **Primärtext:** Bei Kochsatz steht am Sonntag fest, was du die Woche über isst, was du kaufst und wann du kochst. Makros in Gramm, pro Tag und pro Mahlzeit.
+  - *(Freigabe K21: „Nachtragen musst du nur …“ gestrichen, Kochsatz hat keine Tracking-Funktion.)*
 
 ### A6 · Nährwerte aus einer Quelle
 - **Echtes Problem:** In den großen Datenbanken steht derselbe Magerquark fünfmal mit fünf Werten.
@@ -154,7 +156,7 @@ Zehn Angles plus einer in Reserve. Jeder Angle bekommt auf der Landingpage einen
 - **Warum noch frei:** Fitness-Planer kennen kein Budget, Budget-Planer keine Makros (`05 §4`, Matrix).
 - **Einsatz:** P1-Anzeigen zu Semesterstart, Rechner-Beispiel „3.000 kcal, 160 g Protein, Budget X“ (Betrag erst nach Kassenbon-Test zeigen).
 - **Headline:** 3.000 kcal, Budget festgelegt
-- **Primärtext:** Du gibst Kalorien, Protein und dein Wochenbudget vor. Kochsatz sucht die Rezepte, die beides treffen. Reicht das Budget nicht, sagt der Plan dir das und zeigt die günstigste Variante.
+- **Primärtext:** Du gibst Kalorien, Protein und dein Wochenbudget vor. Kochsatz sucht die Rezepte, die beides treffen. Reicht das Budget nicht, sagt der Plan dir das und nennt, was der günstigste gefundene Plan ungefähr kostet.
 
 ### A9 · Deine Zahlen bleiben auf deinem Handy
 - **Echtes Problem:** Ernährungs-Apps wollen Konto, Profil und Daten, bevor sie irgendetwas zeigen.
@@ -170,7 +172,7 @@ Zehn Angles plus einer in Reserve. Jeder Angle bekommt auf der Landingpage einen
 - **Beleg:** `03-A35` „Massephase - was Essen …?“ / „Was essen bei der Definitionsphase?“ (gutefrage-Fragetitel).
 - **Warum noch frei:** Phasenwechsel bedienen heute Coaches und feste PDFs. Ein Plan, der sich aus neuen Zahlen in Minuten neu baut, wird nicht beworben.
 - **Einsatz:** Organisch und SEO zu Phasenwechsel-Zeitpunkten (Januar, Frühjahr). In Anzeigen vorsichtig 🟡: nur über Zahlen und Planung reden, nie über Fett, Gewicht oder Aussehen (Art. 12 lit. b HCVO, Meta-Einstufung `07 §4.4`).
-- **Headline:** Neue Phase? Neue Zahlen.
+- **Headline:** Neue Phase? Neue Zahlen. (organisch). **In Anzeigen:** „Andere Zahlen? Neue Woche.“ (K28)
 - **Primärtext:** Du stellst dein Kalorien- und Proteinziel um, Kochsatz baut die Woche neu: andere Mengen, neue Einkaufsliste, gleicher Kochtag. Welche Zahlen du wählst, entscheidest du.
 
 ### Reserve · Vegan mit viel Protein
@@ -194,11 +196,11 @@ Hypothese je Test nach `ad-creative`: „A3 erzielt eine höhere Klickrate auf d
 |---|---|
 | „160 g Protein, 2.600 kcal, Lidl. Hier ist deine Woche.“ | „Endlich der Traumkörper!“ |
 | „Box 3 · gekocht Sa 17:40 · essen bis So.“ | „Hält locker die ganze Woche.“ |
-| „Magerquark: ca. 54 g Protein pro Euro (Schätzung, Stand 10/2026).“ | „Die günstigste Proteinquelle Deutschlands.“ |
+| „Magerquark: ca. 50 g Protein pro Euro (Aldi Süd 1,19 €/500 g, Stand 29.10.2026).“ | „Die günstigste Proteinquelle Deutschlands.“ |
 | „Kreuz an, was in deiner Küche steht.“ | „Für jede Küche perfekt optimiert.“ |
 | „Dein Budget reicht nicht ganz. Der günstigste Plan kostet etwa X €.“ | „Spare jetzt 200 € im Monat.“ |
 | „Proteinreich: mindestens 20 % der Energie aus Protein.“ | „High Protein“ auf einem Gericht mit 15 % |
-| „Kündigen ohne Login, zwei Klicks.“ | „Jetzt kostenlos testen“ als Knopf eines Abos |
+| „Kündigen über ‚Verträge hier kündigen‘, ohne Login.“ (nur Preis- und FAQ-Seite, nicht als Werbevorteil) | „Jetzt kostenlos testen“ als Knopf eines Abos |
 | „Neue Phase? Zahlen ändern, Plan neu bauen.“ | „Fett weg bis zum Sommer.“ |
 
 ## 6. Visueller Stil „Kreidehalle“
@@ -301,7 +303,7 @@ Grundsatz aus `11` Punkt 1: Reichweite ist der Engpass, nicht der Markt. Deshalb
 | Kanal | Konkrete Orte | Was wir dort tun | Status |
 |---|---|---|---|
 | **Creator** | (1) deutsche Budget-Meal-Prep-Creator auf YouTube und TikTok („Meal Prep für X € die Woche“), (2) Studenten- und Azubi-Kraftsportler mit Alltags-Vlogs, (3) Kraftsport- und Powerlifting-Vereine mit eigenem Kanal, (4) Airfryer-Food-Creator | Kochtag mit Kochsatz nachkochen, echte Einkaufsliste zeigen, Protein-pro-Euro-Rechner verlinken | Creator-Liste fehlt noch, von Hand anlegen (Meta- und TikTok-Bibliothek, `05 §3.3`) |
-| **Studios** | unabhängige Einzelanlagen (Ø-Beitrag 59,24 €, `01 §3`), CrossFit- und Kraftsport-Boxen, Hochschulsport, Kraftsportvereine | Aushang „Protein pro Euro“ mit QR-Code zum Rechner, Gratis-Vortrag „Kochtag in 90 Minuten“ | Hypothese, 5 Studios anfragen |
+| **Studios** | unabhängige Einzelanlagen (Ø-Beitrag 59,24 €, `01 §3`), CrossFit- und Kraftsport-Boxen, Hochschulsport, Kraftsportvereine | Aushang „Protein pro Euro“ mit QR-Code zum Rechner, Gratis-Vortrag „Kochtag planen“ (Minutenangabe erst nach Messung eines echten Kochtags, K38) | Hypothese, 5 Studios anfragen |
 | **Subreddits** | r/de_fitness, r/MealPrepSunday, r/EatCheapAndHealthy, r/Kochen | Fragen nach billigem Protein und Haltbarkeit beantworten, Tabelle teilen, nur mit Erlaubnis der Moderation verlinken | Reddit war in der Recherche gesperrt (`03`, Lücken): Regeln und Größe vorher im Browser prüfen |
 | **Foren** | team-andro.com (Ernährungsbereich), gutefrage.net (Fragen wie `03-A31`–`A35`), mydealz (Serie „Pumpermarkt x MuskelMarkt“) | hilfreiche Antworten mit Rechenweg, Profil offen als Anbieter kennzeichnen | team-andro war nicht erreichbar, von Hand prüfen |
 | **Pinterest** | Boards „Meal Prep Woche“, „Proteinreiche Rezepte günstig“, „Airfryer Meal Prep“ | Rezeptkarten mit Makro-Balken, Link zur Rezeptseite | eher für P2 |
@@ -320,11 +322,11 @@ Grundsatz aus `11` Punkt 1: Reichweite ist der Engpass, nicht der Markt. Deshalb
 
 ## 8. Lead-Magnet: Protein-pro-Euro-Rechner Discounter
 
-**Idee:** Eine kostenlose Seite auf der Kochsatz-Domain. Man wählt Laden (Aldi Nord, Aldi Süd, Lidl, Netto, Penny) und sieht eine sortierte Liste: Gramm Protein pro Euro, dazu kcal pro Euro und der Makro-Balken jeder Zutat. Filter: vegetarisch, vegan, ohne Milch, „ohne Kochen“.
+**Idee:** Eine kostenlose Seite auf der Kochsatz-Domain. Man wählt Laden (Aldi Nord, Aldi Süd, Lidl, Netto, Penny; belegt ist nur Aldi Süd und teils Lidl, Hinweis „Schätzung, nur teilweise per Stichprobe geprüft“, K39) und sieht eine sortierte Liste: Gramm Protein pro Euro, dazu kcal pro Euro und der Makro-Balken jeder Zutat. Filter: vegetarisch, vegan, ohne Milch, „ohne Kochen“.
 
 **Datenbasis:** Preistabelle `app/data/zutaten.py` (156 Zutaten, Schätzung Stand 10/2026) und BLS 4.0. Grundnahrungsmittel wie Mehl, Nudeln und Haferflocken stehen in einer eigenen Spalte „Beilagen“, damit Mehl nicht als „beste Proteinquelle“ oben steht.
 
-| Beispielwerte (eigene Auswertung, Schätzpreise) | Protein pro € |
+| Beispielwerte (eigene Auswertung, Schätzpreise; 🔴 GESPERRT für Werbung bis Preiskorrektur, K12) | Protein pro € |
 |---|---|
 | rote Linsen (500 g, 1,49 €) | ≈ 86 g |
 | Magerquark (500 g, 1,09 €) | ≈ 54 g |
@@ -343,11 +345,11 @@ Grundsatz aus `11` Punkt 1: Reichweite ist der Engpass, nicht der Markt. Deshalb
 **Mail-Folge nach Bestätigung (Entwurf):**
 1. sofort: PDF und Link zum 1-Tages-Plan (gratis, ohne Konto)
 2. Tag 3: „Wie lange hält die Box?“ mit Lagerregeln nach BfR (Angle A3)
-3. Tag 7: Beispielwoche mit Einkaufsliste, Hinweis auf Plus (7 Tage 0 €, danach 44,99 €/Jahr oder 6,99 €/Monat, beides in gleicher Sichtbarkeit)
+3. Tag 7: Beispielwoche mit Einkaufsliste, Hinweis auf Plus (7 Tage 0 €, danach 44,99 € für 12 Monate, danach monatlich kündbar, oder 6,99 € im Monat, beides in gleicher Sichtbarkeit)
 4. monatlich: neue Liste. Keine weiteren Verkaufsmails ohne neuen Inhalt.
 
 **Bevor der Rechner online geht (Sperre):**
-1. Preisstichprobe `recherche/09_Preisstichprobe.md` für mindestens drei Ketten erstellen (`11` Punkt 4.2). Bis dahin trägt jede Zahl den Vermerk „Schätzung“.
+1. Preisstichprobe `recherche/09_Preisstichprobe.md` liegt vor (29.10.2026: Aldi Süd, Lidl und Rewe/Edeka über Sekundärquelle). Offen: Korrekturliste `09` §5b in `zutaten.py` übernehmen, Netto/Penny/Kaufland belegen. Bis dahin trägt jede Zahl den Vermerk „Schätzung“.
 2. Jeder Preis zeigt Laden, Packungsgröße und Stand-Datum. Nutzer können den Preis selbst überschreiben.
 3. Kein Wort über Wirkung: Die Seite vergleicht Gramm und Euro, sie bewertet nicht, was „gut für Muskeln“ ist.
 4. Messung ohne Gesundheitssignale: Meta bekommt höchstens „Lead“ nach bestätigtem DOI, nie die gewählten Filter.
@@ -364,14 +366,14 @@ Grundlage: `07 §5` (HCVO, HWG, UWG), `07 §3` (Abo, Button, Testphase), `07 §4
 2. „Kalorienziel selbst festlegen, Zahlen statt Versprechen.“ (Nr. 15)
 3. „Proteinreich: mind. 20 % der Energie aus Protein“, **nur** am Rezept oder Plan, der das erfüllt (91 von 195 Rezepten, eigene Auswertung; Nr. 5, `07 §5.2`).
 4. „Proteinquelle“ nur ab 12 % der Energie aus Protein.
-5. „Protein trägt zu einer Zunahme an Muskelmasse bei.“ bzw. „… zur Erhaltung von Muskelmasse bei.“ **Nur wörtlich**, nur bei Rezepten ab 12 % Energie aus Protein (VO (EU) Nr. 432/2012, `07 §5.3`). **Markenentscheidung:** diesen Satz nur in der Rezeptansicht verwenden, **nicht** in Anzeigen und Headlines (Meta-Einstufung, Verwechslungsgefahr mit Körperversprechen).
+5. „Protein trägt zu einer Zunahme an Muskelmasse bei.“ bzw. „… zur Erhaltung von Muskelmasse bei.“ **Nur wörtlich**, nur bei Rezepten ab 12 % Energie aus Protein (VO (EU) Nr. 432/2012, `07 §5.3`). **Markenentscheidung:** diesen Satz nur in der Rezeptansicht verwenden, **nicht** in Anzeigen und Headlines (Meta-Einstufung, Verwechslungsgefahr mit Körperversprechen). **Pflichtangaben daneben** (Art. 10 Abs. 2 HCVO): „Wichtig sind eine abwechslungsreiche, ausgewogene Ernährung und eine gesunde Lebensweise.“ plus Portionsmenge und Verzehrmuster. Wortlaut vor Einbau mit der deutschen Fassung im EU-Register abgleichen (K42).
 6. „Nährwerte pro Portion berechnet aus BLS-Daten“ mit Hinweis „Richtwerte“ (Nr. 13).
-7. „Meal-Prep für die Woche, gekühlt höchstens 2 Tage, Reis und Nudeln höchstens 1 Tag (nach BfR)“, mit Quelle (abgeleitet aus Nr. 7, strengere eigene Regel C9).
+7. „Meal-Prep für die Woche, gekühlt höchstens 2 Tage bei höchstens 7 °C (BfR: 2–3 Tage), Reis 1 Tag (FSA), Nudeln 1 Tag (eigene Regel)“ (abgeleitet aus Nr. 7, strengere eigene Regel C9, K07).
 8. „Vegetarisch, vegan oder mit Fleisch, du entscheidest.“ (Nr. 12)
 9. „Rezepte ohne Erdnüsse, ohne Gluten-Zutaten oder ohne Milch filtern.“ (Nr. 3, Filter, keine Sicherheitsgarantie)
-10. „Kündbar ohne Login, mit zwei Klicks.“ (Nr. 14, nur weil wahr; nicht als Besonderheit herausstellen)
-11. Preisangaben nur mit Grundlage: „Beispielwoche: 1 Person, Lidl, 2.600 kcal, Preisstand MM/JJJJ: XX,XX €, Schätzung, regional abweichend.“ (Nr. 8, **erst nach Kassenbon-Test**)
-12. Testphase: „7 Tage 0 €, danach 44,99 € pro Jahr. Jederzeit kündbar.“ Preis in gleicher Größe wie „0 €“ (`07 §3.4`). Bestellknopf: „Zahlungspflichtig bestellen“ bzw. „Jetzt kaufen“ (§ 312j BGB).
+10. „Kündigen über ‚Verträge hier kündigen‘, ohne Login.“ Nur auf Preis-, FAQ- und Kassenseite, nie als Werbevorteil (UWG Anhang Nr. 10). „Zwei Klicks“ ist falsch, die Strecke hat ein Formular (K43).
+11. Preisangaben nur mit Grundlage: „Beispielwoche: 1 Person, Lidl, 2.600 kcal, Preisstand MM/JJJJ: XX,XX €, Schätzung, regional abweichend.“ (Nr. 8, 🔴 Betrag **erst nach Preiskorrektur `09` §5b und Kassenbon-Test**, K44)
+12. Testphase: „7 Tage 0 €, danach 44,99 € für 12 Monate. In den 7 Tagen kostenlos kündbar, danach Laufzeit 12 Monate, anschließend monatlich kündbar.“ Preis in gleicher Größe wie „0 €“ (`07 §3.4`). „Jederzeit kündbar“ ist beim Jahresabo falsch (K45). Bestellknopf: „Zahlungspflichtig bestellen“ bzw. „Jetzt kaufen“ (§ 312j BGB).
 
 ### Verboten bzw. hochriskant 🔴
 1. Jede Abnehm-Aussage mit Dauer oder Menge: „Verliere 5 kg in 4 Wochen.“ (Art. 12 lit. b HCVO, § 5 UWG)
@@ -387,6 +389,8 @@ Grundlage: `07 §5` (HCVO, HWG, UWG), `07 §3` (Abo, Button, Testphase), `07 §4
 11. „Spare 200 € im Monat“, „günstiger als jede Kochbox“ ohne Berechnung (Nr. 14, § 5 UWG; vergleichende Werbung nur sachlich nach § 6 UWG)
 12. „Jetzt kostenlos testen“ als Bestellknopf eines Abos (Nr. 15, § 312j Abs. 3 BGB)
 13. „Gut für deine Fitness“, „stärkt dein Immunsystem“ (Art. 10 Abs. 3 HCVO ohne zugelassene spezielle Angabe, Nr. 8)
+15. „Sättigend“, „macht lange satt“, „hält dich satt bis zum Training“ (Sättigung = gesundheitsbezogene Angabe, Art. 13 Abs. 1 lit. c HCVO, nicht zugelassen)
+16. Alleinstellung: „der einzige Planer mit …“, „kein anderer …“ (§ 5 UWG, nur 32 Anbieter geprüft)
 14. Anzeigen an unter 18-Jährige für das Bezahlabo (`07 §9.2`)
 
 ### Tracking und Daten
