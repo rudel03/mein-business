@@ -1,12 +1,18 @@
 # 08 · Pricing und Unit Economics (Essensplaner)
 
 Stand: 28.10.2026 · Rolle: Finanzanalyse + Pricing (Prüfung durch Steuerberatung/Jurist:in steht aus) · Abrufdatum aller Web-Quellen: **28.10.2026**, sofern nicht anders angegeben.
+> **Korrigiert nach Faktencheck (10) am 29.10.2026:** Eat-This-Much-Webpreis korrigiert, Mealime als Benchmark ergänzt (Preissenkung 2021, Einstellung 21.10.2026), Cookidoo als Stand 07/2024 gekennzeichnet und AS-Preis 69,99 € ergänzt, Preisband geprüft, Stripe Managed Payments mit Primärquelle, OLG Nürnberg um Login-Ausnahme ergänzt. Geänderte Stellen tragen „(korr. 10)“.
+>
+> **Achtung, ersetzt:** Die Szenarien, Netto- und LTV-Werte in den Abschnitten 0, 2.2, 3 und 5 beruhen auf Stripe, alten Fixkosten und ohne Saison-Pass. **Sie sind durch Abschnitt 9 „Aktualisierung 29.10.2026 (Paddle, Pässe, Startkosten)“ ersetzt** und bleiben nur zur Nachvollziehbarkeit stehen.
+
 Kennzeichnung: **[Beleg]** = Quelle verlinkt · **[Annahme]** = frei gesetzt, im Test zu messen · **[Unbekannt]** = nicht prüfbar · **[Prüfen]** = Fachprüfung nötig.
 Methodik: Skills `pricing`, `paywalls`, `marketing-psychology` (US-geprägt; deutsches Recht hat Vorrang, keine Fake-Countdowns, keine versteckte Kündigung). Kalkulationslogik analog `recherche/Schichtkochbuch Markt und Vermarktung.md`, Abschnitt 7. Rechenmodell: Szenario-CSV `essensplaner/finanzen/szenarien.csv`.
 
 ---
 
 ## 0. Kurzfassung (für den Inhaber)
+
+> Stand 28.10.2026, mit Stripe gerechnet. **Aktuelle Zahlen (Paddle, 4 Tarife, Startkosten): Abschnitt 9.**
 
 1. **Empfehlung:** Eine Preisstruktur für alle Varianten (Montage, Fitness, dritte Nische, allgemein), verkauft als **Web-App (PWA) mit Stripe** statt über App-Stores:
    - **Kostenlos:** Gerätefilter + 1 Tagesplan pro Woche (Lead-Magnet, Double-Opt-in für Mails getrennt).
@@ -31,16 +37,16 @@ Hinweis zur Methode: Die App-Store-Seiten listen „In-App-Käufe“ ohne eindeu
 | Yazio PRO | – (nur Laufzeiten) | 23,90 € / 35,90 € / 83,90 € | 3 Monate 35,99 €; 6 Monate 14,99 € | [App Store DE](https://apps.apple.com/de/app/yazio-kalorienz%C3%A4hler-fasten/id946099227) |
 | Lifesum Premium | 9,99 € / 14,99 € | 99,99 € (Probeabo-Angebot 49,99 €) | 3 Monate 21,99–39,99 € | [App Store DE](https://apps.apple.com/de/app/lifesum-kalorien-z%C3%A4hler-ai/id286906691) |
 | MyFitnessPal Premium | 9,99 € / 21,99 € | 49,99 € / 87,99 € (höhere Stufe vermutlich Premium+) | – | [App Store DE](https://apps.apple.com/DE/app/id341232718) |
-| Eat This Much | 8,99–84,99 € (8 Einträge, Laufzeit nicht zugeordnet) | „Winter Sale Yearly“ 55,99 € | Web: Dritte nennen 8,99–14,99 $/Monat | [App Store DE](https://apps.apple.com/de/app/id981637806); [promealplan](https://www.promealplan.com/en/blog/eat-this-much-review-2026) |
-| Mealime Pro | 2,99 $ (bzw. Landespreis) | **kein Jahresabo mehr** | Preissenkung vom Anbieter angekündigt | [mealime.com/lower-prices](https://www.mealime.com/lower-prices) |
+| Eat This Much | 8,99–84,99 € (8 Einträge, Laufzeit nicht zugeordnet) | „Winter Sale Yearly“ 55,99 € | Web: $5/Monat bei Jahreszahlung, $14,99 monatlich (promealplan 2026) (korr. 10) | [App Store DE](https://apps.apple.com/de/app/id981637806); [promealplan](https://www.promealplan.com/en/blog/eat-this-much-review-2026) |
+| Mealime Pro | 2,99 $ (bzw. Landespreis) | **kein Jahresabo mehr** | Preissenkung vom Anbieter angekündigt; Preissenkung auf 2,99 $ war 2021; Mealime wird am 21.10.2026 eingestellt, daher kein aktueller Benchmark (korr. 10) | [mealime.com/lower-prices](https://www.mealime.com/lower-prices) |
 | Samsung Food+ | 6,99 $ (Stand 2024, USA) | [Unbekannt] | DE-Preis nicht gefunden | [Ubergizmo 2024](https://ubergizmo.com/2024/09/samsung-ai-food-platform); [Samsung Newsroom DE](https://news.samsung.com/de/schluss-mit-pesto-pasta-samsung-prasentiert-neue-samsung-food-funktionen-auf-der-ifa-2024) |
 | Plan to Eat | 5,95 $ | 49 $ | 14 Tage Test ohne Karte | [plantoeat.com/pricing](https://www.plantoeat.com/pricing) |
 | KptnCook Premium/Pro | 5,99 € (vermutlich Monat) | Premium 29,99–47,99 €; Pro 39,99–59,90 €; „Wochenplan 1 Jahr“ 59,99 € | „Wochenplaner für Rezepte“ 41,99 € | [App Store DE](https://apps.apple.com/DE/app/id795495986) |
 | Chefkoch PLUS | 5,99 € | 29,99 € / 39,99 € / 49,99 € | Chefkoch PUR (werbefrei) 1,99 €/Monat, 14,99 €/Jahr | [App Store DE](https://apps.apple.com/DE/app/id478618165) |
 | Kitchen Stories Plus | 7,99 € | 79,99 € (Angebote 19,99 € / 39,99 €) | – | [App Store DE](https://apps.apple.com/de/app/id771068291) |
-| (Zusatz) Cookidoo | – | 60 € (Erhöhung von 48 €) | Thermomix-Bindung | [iphone-ticker](https://www.iphone-ticker.de/thermomix-app-preis-fuer-cookidoo-abo-steigt-25-prozent-237796/) |
+| (Zusatz) Cookidoo | – | 60 € (Erhöhung von 48 €), **Stand 07/2024**; App Store DE 2026: **69,99 €/Jahr** (Bericht 05) (korr. 10) | Thermomix-Bindung | [iphone-ticker](https://www.iphone-ticker.de/thermomix-app-preis-fuer-cookidoo-abo-steigt-25-prozent-237796/) |
 
-**[Interpretation]** Der deutsche Markt hat zwei Preisbänder: **Rezept-/Koch-Apps** bei **30–60 €/Jahr bzw. 5,99–7,99 €/Monat** (Chefkoch, KptnCook, Kitchen Stories, Cookidoo) und **Tracker/Diät-Apps** bei **35–100 €/Jahr bzw. 9,99–22 €/Monat** (Yazio, Lifesum, MyFitnessPal). Fast alle zeigen dauerhaft Aktionspreise; der „Listenpreis“ dient als Anker. Mealime zeigt das Gegenrisiko: Preissenkung auf 2,99 $ und Abschaffung des Jahresabos. Ein neuer Planer ohne Markenbekanntheit sollte **im Band der Koch-Apps** starten, nicht bei den Trackern.
+**[Interpretation]** Der deutsche Markt hat zwei Preisbänder: **Rezept-/Koch-Apps** bei **30–60 €/Jahr bzw. 5,99–7,99 €/Monat** (Chefkoch, KptnCook, Kitchen Stories; Cookidoo liegt 2026 mit 69,99 € darüber, Band gilt ohne Cookidoo) (korr. 10) und **Tracker/Diät-Apps** bei **35–100 €/Jahr bzw. 9,99–22 €/Monat** (Yazio, Lifesum, MyFitnessPal). Fast alle zeigen dauerhaft Aktionspreise; der „Listenpreis“ dient als Anker. Mealime zeigt das Gegenrisiko: nicht die Preissenkung (2021), sondern die **Einstellung des Dienstes am 21.10.2026** – ein günstiger Planer ohne tragfähige Erlöse hält sich nicht (korr. 10). Ein neuer Planer ohne Markenbekanntheit sollte **im Band der Koch-Apps** starten, nicht bei den Trackern.
 
 ### 1.2 Benchmarks aus Abo-Apps (RevenueCat u. a.)
 
@@ -100,7 +106,7 @@ Hinweis zur Methode: Die App-Store-Seiten listen „In-App-Käufe“ ohne eindeu
 | **PayPal Checkout** (gewerblich, DE) | **2,99 % + 0,39 €** | **Korrektur zum Auftrag:** 2,49 % + 0,35 € gilt nur für „Waren und Dienstleistungen senden/empfangen“, nicht für den Checkout. Fixgebühr wird bei Erstattung einbehalten. Rückbuchung 16 €, Konfliktgebühr 14 €. Micropayments 4,99 % + 0,09 € (nur nach Freigabe; bei 6,99 € **günstiger** als Standard: 0,44 € statt 0,60 €) | [PayPal Gebühren DE](https://www.paypal.com/de/business/paypal-business-fees) (Stand der Seite 07.09.2026) |
 | **Paddle** (Merchant of Record) | **5 % + 0,50 $** | inkl. USt-Abführung weltweit, Betrug, Rückbuchungen, Käufer-Support; für Produkte < 10 $ individuelle Preise auf Anfrage | [paddle.com/pricing](https://www.paddle.com/pricing) |
 | **Lemon Squeezy** (MoR) | **5 % + 0,50 $** | außerhalb USA „kleine Zusatzgebühren“; gehört inzwischen zu Stripe („Sold through Link, LLC“), Übergang zu **Stripe Managed Payments** | [lemonsqueezy.com/pricing](https://www.lemonsqueezy.com/pricing) |
-| Stripe Managed Payments (MoR) | ca. **+3,5 %** auf die Stripe-Kartengebühr | nur Sekundärquellen, Preisseite nicht erreichbar **[Prüfen]** | [userjot](https://userjot.com/blog/stripe-managed-payments-for-saas); [dodopayments](https://dodopayments.com/blogs/stripe-managed-payments-fees-explained) (Wettbewerber) |
+| Stripe Managed Payments (MoR) | ca. **+3,5 %** auf die Stripe-Kartengebühr | Primärquelle: stripe.com/de/pricing („3,5 % pro erfolgreicher Transaktion mit Managed Payments zusätzlich zu Zahlungsgebühren“) (korr. 10) | [stripe.com/de/pricing](https://stripe.com/de/pricing); [userjot](https://userjot.com/blog/stripe-managed-payments-for-saas); [dodopayments](https://dodopayments.com/blogs/stripe-managed-payments-fees-explained) (Wettbewerber) |
 | **Digistore24** (Reseller/MoR) | **7,9 % + 1 €** | Erstattung kostet 0,60 €/1 € extra; Reserve 10 % für 60 Tage laut Dritten | [Digistore24 Hilfe](https://help.digistore24.com/hc/en-us/articles/23694504392721); [Fastlancer 07/2026](https://www.fastlancer.org/fastlancer-blog/digistore24-review/) |
 | **CopeCart** (Reseller) | **4,9 % + 1 €** vom Brutto | keine Grundgebühr; US-Seiten nennen abweichende Sätze | [CopeCart Hilfe EU](https://help-eu.copecart.com/en/articles/9061163-copecart-fee) |
 | **Apple App Store** (EU, neue Bedingungen ab 01.10.2026) | In-App-Kauf 26 % Standard, **15 %** im Small Business Program und für Abos ab dem 2. Jahr; alternative Zahlung 20 %/10 %; Link-out 15 %/10 % | nur nach Zustimmung zu den neuen EU-Bedingungen; Core Technology Fee entfällt (ob eine 5-%-„Commission“ bleibt, widersprüchlich) **[Prüfen]** | [basic-tutorials.de](https://basic-tutorials.de/news/apple-app-store-eu-neue-gebuehren-und-regeln/); [Daring Fireball 08/2026](https://daringfireball.net/2026/08/apple_eu_business_terms_conceding_little) |
@@ -145,6 +151,8 @@ Optional später: LLM-Funktion. Dann je Plan Kosten in Cent-Bereich, abhängig v
 
 ---
 ## 3. Unit Economics und Szenarien
+
+> Ersetzt durch Abschnitt 9 (Paddle, 4 Tarife, Startkosten). Die Tabellen unten bleiben als Stand 28.10.2026 stehen.
 
 ### 3.1 Begriffe und Formeln
 
@@ -330,7 +338,7 @@ Begründung der Preispunkte:
 
 ### 4.5 Abo-Fallen vermeiden (Pflichten und eigene Regeln)
 
-1. **Kündigungsbutton § 312k BGB** auf der Website gut sichtbar, ohne Login erreichbar (OLG Nürnberg 2024: Button erst nach Login reicht nicht; OLG München 20.03.2025: Verstecken hinter „Weitere Links“ unzulässig – via [haendlerbund](https://www.haendlerbund.de/de/ratgeber/recht/kuendigungsbutton-nach-312k-bgb), [ferner-alsdorf](https://www.ferner-alsdorf.de/versteckter-kuendigungsbutton-ist-unzulaessig/)). Bestätigungsseite ohne Werbung/Halte-Angebote ([finanztip](https://www.finanztip.de/daily/neues-urteil-kuendigungsbutton-muss-werbefrei-sein/); BGH I ZR 200/25 vom 16.07.2026 laut [vzbv](https://www.vzbv.de/urteile/kuendigen-ohne-tricks), nicht im Volltext geprüft **[Prüfen]**).
+1. **Kündigungsbutton § 312k BGB** auf der Website gut sichtbar, ohne Login erreichbar (OLG Nürnberg 2024: Button erst nach Login reicht nicht; Ausnahme denkbar, wenn der Dienst seiner Natur nach ohnehin Login erfordert, höchstrichterlich nicht geklärt, deshalb Button ohne Login bauen (korr. 10); OLG München 20.03.2025: Verstecken hinter „Weitere Links“ unzulässig – via [haendlerbund](https://www.haendlerbund.de/de/ratgeber/recht/kuendigungsbutton-nach-312k-bgb), [ferner-alsdorf](https://www.ferner-alsdorf.de/versteckter-kuendigungsbutton-ist-unzulaessig/)). Bestätigungsseite ohne Werbung/Halte-Angebote ([finanztip](https://www.finanztip.de/daily/neues-urteil-kuendigungsbutton-muss-werbefrei-sein/); BGH I ZR 200/25 vom 16.07.2026 laut [vzbv](https://www.vzbv.de/urteile/kuendigen-ohne-tricks), nicht im Volltext geprüft **[Prüfen]**).
 2. **Auch der Pass braucht den Button:** BGH, Urteil vom 22.05.2025, **I ZR 161/24** („OTTO UP Plus“, Einmalzahlung, endet automatisch) – Dauerschuldverhältnis, außerordentliche Kündigung nicht ausschließbar ([vzbv](https://www.vzbv.de/urteile/bundesgerichtshof-kuendigungsbutton-ist-auch-bei-laufzeitvertraegen-mit-einmalzahlung); [it-recht-kanzlei](https://www.it-recht-kanzlei.de/kuendigungsbutton-bgh-feste-vertragslaufzeit-einmalzahlung.html); [beck-aktuell](https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/bgh-izr16124-online-abo-kuendigung-schaltflaeche-2025-06-13)).
 3. **Verlängerung des Jahresabos:** Bei AGB-Verträgen mit Verbrauchern darf sich ein Vertrag nach der Erstlaufzeit stillschweigend nur **auf unbestimmte Zeit mit höchstens einem Monat Kündigungsfrist** verlängern ([§ 309 Nr. 9 BGB](https://www.gesetze-im-internet.de/bgb/__309.html)). Umsetzung **[Prüfen: Jurist:in]**: entweder nach Jahr 1 monatlich kündbar mit anteiliger Erstattung, oder keine automatische Verlängerung (Erinnerung + 1-Klick-Verlängerung). Das senkt die Verlängerungsquote eher → Annahme 20–40 % ist vorsichtig gewählt.
 4. **Button-Lösung § 312j Abs. 3 BGB:** Bestell-Button eindeutig, z. B. „Zahlungspflichtig abonnieren“; beim Testzeitraum klar „7 Tage gratis, danach 44,99 € pro Jahr“ **[Prüfen]**.
