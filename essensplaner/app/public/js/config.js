@@ -26,6 +26,8 @@ export const CONFIG = {
   kasse: { anbieter: 'Paddle', urls: { monat: '', jahr: '', pass: '', saison: '' } },
   vertragEndpoint: '', // nimmt Kündigung und Widerruf entgegen (server/vertrag-worker.js)
   lizenzSchluessel: 'MCowBQYDK2VwAyEAPLATZHALTER_OEFFENTLICHER_SCHLUESSEL_000000000=', // Ed25519, SPKI Base64 (tools/lizenz.mjs)
+  // Warteliste/Lead-Magnet: Formular-Adresse des Mail-Dienstes mit Double-Opt-in (z. B. Brevo-Formular). Leer = Anmeldung noch nicht offen.
+  warteliste: { url: '' },
   tracking: { metaPixelId: '' }, // leer = kein Pixel, kein Banner (js/einwilligung.js, nur Landingpages + Preisseite)
 
   varianten: {

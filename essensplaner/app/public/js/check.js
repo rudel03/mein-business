@@ -51,3 +51,13 @@ async function proteinProEuro() {
 if (box) (box.querySelector('#check-geraete') ? geraeteCheck() : proteinProEuro()).catch(() => {
   box.insertAdjacentHTML('beforeend', '<p class="meldung">Der Check konnte nicht geladen werden. Der Planer funktioniert trotzdem.</p>');
 });
+
+// Warteliste: Pflichtfelder prüfen; ohne eingetragene Formular-Adresse ist die Anmeldung noch nicht offen
+const lead = document.getElementById('leadform');
+if (lead) lead.addEventListener('submit', (ev) => {
+  const status = document.getElementById('leadstatus');
+  const mail = lead.querySelector('[name=email]');
+  if (!mail.checkValidity()) { ev.preventDefault(); status.textContent = 'Bitte gib eine gültige E-Mail-Adresse ein.'; mail.focus(); return; }
+  if (!lead.querySelector('[name=einwilligung]').checked) { ev.preventDefault(); status.textContent = 'Bitte bestätige, dass wir dir Mails schicken dürfen.'; return; }
+  if (!lead.getAttribute('action')) { ev.preventDefault(); status.textContent = 'Die Anmeldung öffnet in Kürze. Bis dahin kannst du den Tagesplan gratis ausprobieren.'; }
+});

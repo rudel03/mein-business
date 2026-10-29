@@ -191,3 +191,8 @@ input[type=text], input[type=email], input[type=date] { width: 100%; }
   .drei { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .marken { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+/* Warteliste */
+.lead { max-width: 36rem; }
+.lead input[type=email] { width: 100%; }
+.einwilligung { display: flex; gap: 10px; align-items: flex-start; margin: 12px 0; font-size: .95rem; }
+.einwilligung input { width: 22px; height: 22px; flex: none; margin-top: 2px; accent-color: var(--knopf); }

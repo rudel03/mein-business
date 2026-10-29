@@ -31,6 +31,7 @@ Ich habe nichts gekauft, kein Konto angelegt, nichts registriert, nichts veröff
 - [ ] Schlüsselpaar erzeugen: `cd essensplaner/app && node tools/lizenz.mjs neu`. Den **öffentlichen** Schlüssel in `config.js` → `lizenzSchluessel` eintragen. Den **privaten** Schlüssel nur als Secret im Worker speichern, nie ins Repository.
 - [ ] Cloudflare-Konto (gratis), Worker aus `server/` einrichten, Anleitung in `server/README.md`. Danach `vertragEndpoint` in `config.js` eintragen.
 - [ ] Mail-Dienst mit Double-Opt-in (z. B. Brevo, Mailjet, CleverReach; EU-Server, AV-Vertrag abschließen). Absender-Domain mit SPF/DKIM.
+- [ ] Je Marke eine Liste anlegen (Felder `email`, `einwilligung`, `liste`), die Formular-Adresse in `config.js` → `warteliste.url` eintragen, dann `python3 tools/landing.py`. Das Formular steht schon auf allen vier Landingpages, bis dahin zeigt es „Die Anmeldung öffnet in Kürze“. Als Willkommens-PDF die Dateien aus `app/public/pdf/` hinterlegen.
 - [ ] **Testkauf** in der Paddle-Sandbox: kaufen → Mail mit Schlüssel → Planer freigeschaltet → „Verträge hier kündigen“ → Bestätigungsmail → „Vertrag widerrufen“ → Bestätigung. Ergebnis mir geben, ich prüfe es.
 
 ## 5. Recht

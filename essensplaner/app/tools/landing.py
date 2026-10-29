@@ -186,6 +186,22 @@ def faq_ld(faq, name, v, t):
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": f, "acceptedAnswer": {"@type": "Answer", "text": a}} for f, a in faq]}]}, ensure_ascii=False)
 
 
+LEAD = {'montage': ('Zimmer-Check als PDF', 'Die Tabelle „welche Geräte, wie viele Rezepte“, Etiketten für die Boxen, die Lagerkarte und eine Textvorlage für die Frage an den Vermieter. Zum Ausdrucken, falls im Zimmer kein Netz ist.', 'Ja, schickt mir den Zimmer-Check als PDF und in den nächsten zwei Wochen bis zu vier Mails mit Tipps und Angeboten zu Zimmerherd, danach höchstens eine im Monat. Abmelden geht jederzeit über den Link in jeder Mail.', 'Zimmer-Check anfordern'), 'fitness': ('Die Protein-Liste vom Discounter', 'Welche Zutaten im Laden viel Protein bringen, sortiert nach unserer Preisschätzung, dazu ein Meal-Prep-Ablauf für zwei Kochtage.', 'Ja, schickt mir die Protein-Liste, in den nächsten zehn Tagen bis zu fünf Mails mit Tipps und Angeboten zu Kochsatz und danach einmal im Monat die aktualisierte Liste. Abmelden geht jederzeit über den Link in jeder Mail.', 'Liste anfordern'), 'camping': ('Bordküchen-Check als PDF', 'Was mit eurer Ausstattung geht, eine Packliste für die Bordküche und die Lagerkarte für Kühlbox und Kühlschrank.', 'Ja, schickt mir den Bordküchen-Check als PDF und bis zum Saisonstart bis zu vier Mails mit Tipps und Angeboten zu Zweiflammer, danach höchstens eine im Monat. Abmelden geht jederzeit über den Link in jeder Mail.', 'Check anfordern'), 'alltag': ('Ein fertiger Wochenplan', 'Sieben Tage mit Rezepten, Einkaufszettel nach Abteilungen und einem Plan, wo die Reste landen. Für Aldi oder Lidl.', 'Ja, schickt mir den Reste-Retter-Wochenplan, in den nächsten zehn Tagen bis zu fünf Mails mit Tipps und Angeboten zu Wochenschmaus und danach alle zwei Wochen einen neuen Plan. Abmelden geht jederzeit über den Link in jeder Mail.', 'Wochenplan anfordern')}
+
+
+def lead_html(v, name):
+    titel, text, einwilligung, knopf = LEAD[v]
+    url = esc(CONFIG.get("warteliste", {}).get("url", ""))
+    return f"""<section class="wrap abschnitt" id="liste"><h2>{esc(titel)}</h2><p>{esc(text)}</p>
+<form class="lead" id="leadform" method="post" action="{url}" novalidate>
+<div class="feld"><label for="lead-mail">E-Mail-Adresse</label><input id="lead-mail" name="email" type="email" autocomplete="email" required></div>
+<label class="einwilligung"><input type="checkbox" name="einwilligung" value="ja" required><span>{esc(einwilligung)} <a href="datenschutz.html?v={v}">Datenschutz</a></span></label>
+<input type="hidden" name="liste" value="{v}">
+<p><button class="knopf" type="submit">{esc(knopf)}</button></p>
+<p class="hilfe">Du bekommst zuerst eine Mail mit einem Bestätigungslink. Erst nach dem Klick tragen wir dich ein.</p>
+<p id="leadstatus" role="status" aria-live="polite"></p></form></section>"""
+
+
 def seite(v, t):
     V = CONFIG["varianten"][v]
     name = V["name"]
@@ -232,6 +248,7 @@ def seite(v, t):
 <li><b>Gratis:</b> Tagesplan mit Einkaufsliste, so oft du willst</li>
 <li><b>Plus:</b> {P['monat']['text']} oder {P['jahr']['text']}, die ersten {CONFIG['probeTage']} Tage 0 €. Jahr: Laufzeit 12 Monate, danach monatlich kündbar</li>{pass_txt}</ul>
 <p><a href="preise.html?v={v}">Alle Preise und Bedingungen</a> · Kündigen über „Verträge hier kündigen“, ohne Login, wirksam zum Ende der Laufzeit.</p></section>
+{lead_html(v, name)}
 <section class="wrap abschnitt"><h2>Häufige Fragen zu {esc(name)}</h2>{''.join(f'<details class="mehr"><summary>{esc(f)}</summary><p>{esc(a)}</p></details>' for f, a in t['faq'])}</section>
 </main>
 <footer class="fuss"><div class="wrap"><nav aria-label="Rechtliches">
