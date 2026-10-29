@@ -320,3 +320,11 @@ Kürzel Datei: **ZH** = Markenbuch Zimmerherd, **ZF** = Zweiflammer, **KS** = Ko
 | L26 | alltag, Problem 3 | „… Was nicht passt, kommt nicht in den Plan.“ | 🟡 | ✔ „Was du ausschließt, filtert der Planer nach unseren Zutatendaten heraus. Prüf bei Allergien immer das Etikett.“ | § 5 UWG; `07` 8.2 |
 | L27 | alltag, Punkte | „195 Rezepte, alle mit Foto“, „Ohne Konto und ohne Werbung im Planer“ | 🟢 | 195 Fotos vorhanden (KI, gekennzeichnet) | – |
 | L28 | Startseite | „Alle vier planen mit denselben 195 Rezepten und Lagerregeln.“ | 🟢 | – | – |
+
+### 2.7 Rezeptzahlen (alle Marken)
+
+| Nr | Datei | Aussage | Ampel | Neuformulierung / Begründung | Norm |
+|---|---|---|---|---|---|
+| N01 | ZH §1, §4, §5, §8 | „Nur Wasserkocher: 48“, „Wasserkocher + Mikrowelle: 64 (24 Abendessen)“, „+ Kochplatte: 147“, „61 Rezepte ≤ 10 Min.“ | 🟡 | Die Markenbuch-Zählung ließ die Lagerregel des Planers weg (ohne Gefrierfach keine TK-Zutaten). Mit derselben Regel wie Planer und Landingpage (Kühlschrank ja, Gefrierfach nein, 29.10.2026): **47** (21 Mittag/Abend), **59** (22 Abendessen), **119**, **56** Rezepte ≤ 10 Min. Arbeit. In den Markenbüchern ersetzt | § 5 UWG |
+| N02 | ZF §1, §4, §5, §8 | „zwei Flammen + Omnia: 136 (92 Abendessen)“, „eine Flamme Topf + Pfanne: 121“, „ein Topf: 78“, „mit Landstrom: 192“ | 🟡 | Planer-Zählweise: **107** (67 Abendessen), **95**, **66**, **152**. Headline Angle 2 wird „Mit Landstrom 152 Rezepte. Ohne 107.“, Angle 4 „Eine Flamme, ein Topf: 66 Rezepte.“ | § 5 UWG |
+| N03 | alle | Zahlen, die die Landingpage live zählt | 🟢 | Regel: Werbung übernimmt nur Zahlen aus `tools/landing.py`-Ausgabe oder Planer, mit Datum | § 5 UWG |

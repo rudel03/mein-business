@@ -148,7 +148,7 @@ Dazu den passenden **Folgen-Block**:
 Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder erfolgreichen Abbuchung braucht der Kunde einen neuen Schlüssel, sonst meldet die App „abgelaufen“.
 
 - **Absender:** {{MARKE}} <hallo@{{DOMAIN}}> · **Art:** T · **Auslöser:** Paddle meldet erfolgreiche Verlängerungszahlung
-- **Betreff:** Dein neuer Plus-Schlüssel bis {{LIZENZ_BIS}} (39 Zeichen mit Datum)
+- **Betreff:** Dein neuer Plus-Schlüssel bis {{LIZENZ_BIS}} (40 mit Datum)
 - **Vorschau:** Einmal einfügen, dann läuft Plus weiter. Dein alter Schlüssel gilt noch bis {{LIZENZ_BIS_ALT}}.
 - **Text:**
   > Hallo,
@@ -176,7 +176,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 - **Auslöser:** sofort nach Absenden des Formulars. Link gilt 7 Tage. Ohne Klick: keine weitere Mail, Adresse nach 30 Tagen löschen.
 - **Absender:** Zimmerherd <hallo@…>
-- **Betreff:** Bitte bestätigen: dein Zimmer-Check (40)
+- **Betreff:** Bitte bestätigen: dein Zimmer-Check (35)
 - **Vorschau:** Ein Klick, dann kommt das PDF. Warst du das nicht? Dann ignorier diese Mail einfach.
 - **Text:**
   > Hallo,
@@ -197,7 +197,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### Z-L1 · Tag 0: Dein Zimmer-Check ist da (W)
 
 - **Auslöser:** sofort nach dem DOI-Klick
-- **Betreff:** Dein Zimmer-Check ist da (25)
+- **Betreff:** Dein Zimmer-Check ist da (24)
 - **Vorschau:** Drei Dinge für den nächsten Einsatz: Geräte ankreuzen, Vermieter fragen, Lagerkarte ins Fach.
 - **Text:**
   > Hallo,
@@ -249,7 +249,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### Z-L3 · Tag 6: Nur ein Wasserkocher (W)
 
 - **Auslöser:** 6 Tage nach Z-L1, Versand Mo–Do 18 Uhr
-- **Betreff:** Nur ein Wasserkocher? Reicht. (31)
+- **Betreff:** Nur ein Wasserkocher? Reicht. (29)
 - **Vorschau:** 21 warme Mittag- und Abendessen gehen nur mit heißem Wasser. Zwei davon in 5 Minuten Arbeit.
 - **Text:**
   > Hallo,
@@ -273,7 +273,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### Z-L4 · Tag 10: Montage-Pass und Plus (W)
 
 - **Auslöser:** 10 Tage nach Z-L1. Nicht senden, wenn die Adresse schon Kunde ist.
-- **Betreff:** Ein Pass für den Einsatz: 17,99 € (31)
+- **Betreff:** Ein Pass für den Einsatz: 17,99 € (33)
 - **Vorschau:** 3 Monate Plus, endet von selbst. Oder Plus im Abo. Beide Preise auf einen Blick.
 - **Text:**
   > Hallo,
@@ -304,7 +304,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 - **Auslöser:** sofort, wenn Paddle die Bestellung meldet (Webhook). Für Abo und Pass.
 - **Absender:** Zimmerherd <hallo@…>
-- **Betreff:** Dein Zimmerherd-Schlüssel ist da (33)
+- **Betreff:** Dein Zimmerherd-Schlüssel ist da (32)
 - **Vorschau:** Einmal einfügen, dann läuft Plus. So geht's in drei Schritten.
 - **Text:**
   > Hallo {{NAME}},
@@ -339,7 +339,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 - **Auslöser:** sofort nach Z-K1, spätestens vor Beginn der Leistung (§ 312f Abs. 2 BGB). **Anhänge:** AGB, Widerrufsbelehrung, Muster-Widerrufsformular als PDF.
 - **Absender:** Zimmerherd Verträge <vertrag@…>
-- **Betreff:** Deine Vertragsbestätigung: {{PRODUKT}} (bei „Montage-Pass“ 38)
+- **Betreff:** Deine Vertragsbestätigung: {{PRODUKT}} (Montage-Pass: 39)
 - **Vorschau:** Laufzeit, Preis, Kündigung und Widerruf auf einen Blick. Bitte aufheben.
 - **Text:**
   > Hallo {{NAME}},
@@ -361,7 +361,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 - **Auslöser:** 2 Tage nach Kauf, 17 Uhr. Für alle Käufer.
 - **Absender:** Zimmerherd <hallo@…>
-- **Betreff:** Dein erster Vorkochtag in 4 Schritten (36)
+- **Betreff:** Dein erster Vorkochtag in 4 Schritten (37)
 - **Vorschau:** Plan auf zwei Tage, Boxen beschriften, Reihenfolge nach Haltbarkeit. Zehn Minuten Planung.
 - **Text:**
   > Hallo,
@@ -412,7 +412,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 - **Auslöser:** sofort nach „Jetzt kündigen“
 - **Absender:** Zimmerherd Verträge <vertrag@…>
-- **Betreff:** Deine Kündigung ist angekommen (31)
+- **Betreff:** Deine Kündigung ist angekommen (30)
 - **Vorschau:** Eingang {{EINGANG_DATUM}}, {{EINGANG_UHRZEIT}} Uhr. Wirksam zum {{WIRKDATUM}}. Alle Angaben im Überblick.
 - **Text:**
   > Hallo {{KUEND_NAME}},
@@ -452,7 +452,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 - **Auslöser:** 7 Tage vor {{PASS_ENDE}}, 18 Uhr
 - **Absender:** Zimmerherd <hallo@…>
-- **Betreff:** Dein Montage-Pass läuft am {{PASS_ENDE}} aus (39 mit Datum)
+- **Betreff:** Dein Montage-Pass läuft am {{PASS_ENDE}} aus (41 mit Datum)
 - **Vorschau:** Er endet von selbst. Es wird nichts abgebucht. Was danach bleibt, steht hier.
 - **Text:**
   > Hallo {{NAME}},
@@ -473,7 +473,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### Z-R1 · Rückgewinnung, 30 Tage nach Ende (W)
 
 - **Auslöser:** 30 Tage nach Wirkzeitpunkt der Kündigung bzw. nach Pass-Ende. **Nur** mit bestätigter Werbeeinwilligung, nicht abgemeldet, nicht wieder Kunde.
-- **Betreff:** Neuer Einsatz, neues Zimmer? (29)
+- **Betreff:** Neuer Einsatz, neues Zimmer? (28)
 - **Vorschau:** Der Tagesplan ist weiter gratis. Und ein Tipp für Zimmer mit Mikrowelle.
 - **Text:**
   > Hallo,
@@ -524,7 +524,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### K-0 · Double-Opt-in (T)
 
 - **Auslöser:** sofort nach dem Formular. Link gilt 7 Tage. Ohne Klick keine weitere Mail, Löschung nach 30 Tagen.
-- **Betreff:** Bitte bestätigen: deine Protein-pro-Euro-Liste (45)
+- **Betreff:** Bitte bestätigen: Protein-pro-Euro-Liste (40)
 - **Vorschau:** Ein Klick, dann kommt das PDF. Nicht angefordert? Dann ignorier die Mail.
 - **Text:**
   > Hallo,
@@ -538,7 +538,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
   > Der Link gilt 7 Tage. Du hast nichts angefordert? Dann musst du nichts tun. Ohne Klick bekommst du keine weitere Mail.
   >
   > Datenschutz: {{URL_DATENSCHUTZ}}
-- **Variante Warteliste:** Satz 1: „du willst wissen, wann Kochsatz Plus zu kaufen ist.“ Satz 3: „Danach schreiben wir dir einmal zum Start und bis dahin höchstens eine Mail im Monat.“ Betreff: „Bitte bestätigen: Kochsatz-Warteliste“ (36).
+- **Variante Warteliste:** Satz 1: „du willst wissen, wann Kochsatz Plus zu kaufen ist.“ Satz 3: „Danach schreiben wir dir einmal zum Start und bis dahin höchstens eine Mail im Monat.“ Betreff: „Bitte bestätigen: Kochsatz-Warteliste“ (37).
 - **Pflichtangaben:** B1. Keine Werbung.
 
 ### K-L1 · Tag 0: Die Liste (W)
@@ -626,7 +626,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### K-L4 · Tag 7: Erst planen, dann essen (W)
 
 - **Auslöser:** 7 Tage nach K-L1, Sonntag 17 Uhr bevorzugt
-- **Betreff:** Erst planen, dann essen (22)
+- **Betreff:** Erst planen, dann essen (23)
 - **Vorschau:** Makroziel rein, Laden wählen, Küche ankreuzen. Raus kommen Einkaufsliste und Kochtag.
 - **Text:**
   > Hallo,
@@ -656,7 +656,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### K-L5 · Tag 10: Plus vorstellen (W)
 
 - **Auslöser:** 10 Tage nach K-L1. Nicht an Kunden.
-- **Betreff:** Plus: 14 Tage Plan, zwei Kochtage (32)
+- **Betreff:** Plus: 14 Tage Plan, zwei Kochtage (33)
 - **Vorschau:** 7 Tage 0 €, danach 44,99 € im Jahr oder 6,99 € im Monat. Kündigen ohne Login.
 - **Text:**
   > Hallo,
@@ -717,7 +717,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 - **Auslöser, Anhänge, Aufbau:** wie Z-K2 (B3 mit Laufzeit-Block Monat oder Jahr, Kündigungsweg, B4, PDF-Anhänge)
 - **Absender:** Kochsatz Verträge <vertrag@…>
-- **Betreff:** Deine Vertragsbestätigung: {{PRODUKT}} (Plus Jahr: 35)
+- **Betreff:** Deine Vertragsbestätigung: {{PRODUKT}} (Plus Jahr: 36)
 - **Vorschau:** Laufzeit, Preis, Kündigung und Widerruf auf einen Blick. Bitte aufheben.
 - **Text:**
   > Hallo {{NAME}},
@@ -736,7 +736,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### K-K3 · Tag 2: Dein erster Kochtag (S)
 
 - **Auslöser:** 2 Tage nach Kauf. Läge Tag 2 nicht auf einem Wochenende, trotzdem senden, der Kochtag ist frei wählbar.
-- **Betreff:** Dein erster Kochtag: 90 Minuten, 6 Boxen (39)
+- **Betreff:** Dein erster Kochtag in 4 Schritten (34)
 - **Vorschau:** Plan auf 3 Tage, Ablauf mit Uhrzeiten, Boxen mit Datum. So nutzt du den Reiter Vorkochen.
 - **Text:**
   > Hallo,
@@ -748,7 +748,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
   > 3. **Boxen beschriften:** Gericht, gekocht am, essen bis. Die Reisgerichte sind am nächsten Tag dran, Eintöpfe und Blechgerichte am übernächsten.
   > 4. **Tag 3 aus dem Tiefkühler** oder am zweiten Kochtag frisch kochen.
   >
-  > Wie lange so ein Kochtag dauert, hängt von deiner Küche ab. Der Ablauf zeigt die Zeiten je Schritt. *(Die „90 Minuten“ im Betreff nur verwenden, wenn ein echter Beispielplan das zeigt. Sonst Betreff: „Dein erster Kochtag in 4 Schritten“, 34 Zeichen.)*
+  > Wie lange so ein Kochtag dauert, hängt von deiner Küche ab. Der Ablauf zeigt die Zeiten je Schritt.
   >
   > **[Plan auf 3 Tage stellen]** → {{URL_PLANER}}?v=fitness
   >
@@ -761,7 +761,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 - **Auslöser:** Tag 5, nur wenn nicht gekündigt
 - **Absender:** Kochsatz Verträge <vertrag@…>
-- **Betreff:** Deine Testphase endet am {{DATUM}} (35)
+- **Betreff:** Deine Testphase endet am {{DATUM}} (35 mit Datum)
 - **Vorschau:** Danach {{PREIS}}. Wenn das passt, musst du nichts tun. Kündigen geht ohne Login.
 - **Text:**
   > Hallo {{NAME}},
@@ -781,7 +781,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 ### K-E1 · Kündigungsbestätigung (T)
 
-- **Betreff:** Deine Kündigung ist angekommen (31)
+- **Betreff:** Deine Kündigung ist angekommen (30)
 - **Vorschau:** Eingang {{EINGANG_DATUM}}, {{EINGANG_UHRZEIT}} Uhr. Wirksam zum {{WIRKDATUM}}.
 - **Text:**
   > Hallo {{KUEND_NAME}},
@@ -807,7 +807,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### K-R1 · Rückgewinnung, 30 Tage nach Ende (W)
 
 - **Auslöser:** 30 Tage nach Wirkzeitpunkt, nur mit Werbeeinwilligung
-- **Betreff:** Neue Phase, neue Zahlen? (25)
+- **Betreff:** Neue Phase, neue Zahlen? (24)
 - **Vorschau:** Der Tagesplan rechnet weiter gratis mit deinem Ziel. Ein Tipp zum Umstellen.
 - **Text:**
   > Hallo,
@@ -826,7 +826,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 ### K-R2 · Rückgewinnung, 90 Tage nach Ende (W)
 
-- **Betreff:** Liste weiter bekommen oder austragen? (36)
+- **Betreff:** Liste weiter bekommen oder austragen? (37)
 - **Vorschau:** Einmal im Monat neue Preise, oder Ruhe. Du entscheidest mit einem Klick.
 - **Text:**
   > Hallo,
@@ -855,7 +855,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### F-0 · Double-Opt-in (T)
 
 - **Auslöser:** sofort. Link gilt 7 Tage, ohne Klick keine weitere Mail, Löschung nach 30 Tagen.
-- **Betreff:** Bitte bestätigen: dein Bordküchen-Check (40)
+- **Betreff:** Bitte bestätigen: dein Bordküchen-Check (39)
 - **Vorschau:** Ein Klick, dann kommt das PDF. Nicht angefordert? Dann einfach ignorieren.
 - **Text:**
   > Hallo,
@@ -875,7 +875,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### F-L1 · Tag 0: Bordküchen-Check (W)
 
 - **Auslöser:** sofort nach DOI-Klick
-- **Betreff:** Dein Bordküchen-Check ist da (29)
+- **Betreff:** Dein Bordküchen-Check ist da (28)
 - **Vorschau:** Wie viele Gerichte eure Bordküche schafft, was in die Vorratskiste kommt und die Karte für die Kühlschranktür.
 - **Text:**
   > Hallo,
@@ -1011,7 +1011,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### F-K2 · Vertragsbestätigung (T, Textform)
 
 - **Absender:** Zweiflammer Verträge <vertrag@…>
-- **Betreff:** Deine Vertragsbestätigung: {{PRODUKT}} (Saison-Pass: 37)
+- **Betreff:** Deine Vertragsbestätigung: {{PRODUKT}} (Saison-Pass: 38)
 - **Vorschau:** Laufzeit, Preis, Kündigung und Widerruf auf einen Blick. Bitte aufheben.
 - **Text:**
   > Hallo {{NAME}},
@@ -1056,7 +1056,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 - **Auslöser:** Tag 5, nur Abo, nur wenn nicht gekündigt
 - **Absender:** Zweiflammer Verträge <vertrag@…>
-- **Betreff:** Deine Testphase endet am {{DATUM}} (35)
+- **Betreff:** Deine Testphase endet am {{DATUM}} (35 mit Datum)
 - **Vorschau:** Danach {{PREIS}}. Passt es, musst du nichts tun. Kündigen geht ohne Login.
 - **Text:**
   > Hallo {{NAME}},
@@ -1078,7 +1078,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 ### F-E1 · Kündigungsbestätigung (T)
 
-- **Betreff:** Deine Kündigung ist angekommen (31)
+- **Betreff:** Deine Kündigung ist angekommen (30)
 - **Vorschau:** Eingang {{EINGANG_DATUM}}, {{EINGANG_UHRZEIT}} Uhr. Wirksam zum {{WIRKDATUM}}.
 - **Text:**
   > Hallo {{KUEND_NAME}},
@@ -1105,7 +1105,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 - **Auslöser:** 7 Tage vor {{PASS_ENDE}}, 18 Uhr
 - **Absender:** Zweiflammer <hallo@…>
-- **Betreff:** Dein Saisonpass läuft am {{PASS_ENDE}} aus (38 mit Datum)
+- **Betreff:** Dein Saisonpass läuft am {{PASS_ENDE}} aus (39 mit Datum)
 - **Vorschau:** Er endet von selbst, es wird nichts abgebucht. Was danach bleibt, steht hier.
 - **Text:**
   > Hallo {{NAME}},
@@ -1125,14 +1125,14 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### F-R1 · Rückgewinnung, 30 Tage nach Ende (W)
 
 - **Auslöser:** 30 Tage nach Kündigungs-Wirkzeitpunkt oder Pass-Ende, nur mit Werbeeinwilligung
-- **Betreff:** Wie war die Saison in der Bordküche? (35)
+- **Betreff:** Wie war die Saison in der Bordküche? (36)
 - **Vorschau:** Ein Tipp für die nächste Tour und was gratis bleibt. Mehr nicht.
 - **Text:**
   > Hallo,
   >
   > die Saison ist für dich vorbei, der Plan ruht. Der erste Reisetag bleibt gratis.
   >
-  > Ein Tipp für die nächste Tour: Schreibt nach der Reise auf, welche Geräte ihr wirklich benutzt habt. Was nie aus dem Schrank kam, bleibt nächstes Mal zu Hause. Das spart Zuladung, und der Plan wird genauer.
+  > Ein Tipp für die nächste Tour: Schreibt nach der Reise auf, welche Geräte ihr wirklich benutzt habt. Was nie aus dem Schrank kam, bleibt nächstes Mal zu Hause. Dann bleibt mehr Zuladung frei, und der Plan passt besser zu eurer Küche.
   >
   > {{NEU_SEIT_ENDE}} *(nur echte Neuerungen, sonst streichen)*
   >
@@ -1144,7 +1144,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### F-R2 · Rückgewinnung, 90 Tage nach Ende (W)
 
 - **Auslöser:** 90 Tage nach Ende. **Saisonregel:** Fällt der Termin in November oder Dezember, auf den ersten Dienstag im Februar verschieben (Planungszeit, Markenbuch Abschnitt 1). Letzte Rückgewinnungsmail.
-- **Betreff:** Erste Tour geplant? Vorrat zuerst. (33)
+- **Betreff:** Erste Tour geplant? Vorrat zuerst. (34)
 - **Vorschau:** Packliste für die Bordküche und eine Frage: weiter Post von uns oder nicht?
 - **Text:**
   > Hallo,
@@ -1172,7 +1172,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### W-0 · Double-Opt-in (T)
 
 - **Auslöser:** sofort. Link gilt 7 Tage, ohne Klick keine weitere Mail, Löschung nach 30 Tagen.
-- **Betreff:** Bitte bestätigen: dein Reste-Retter-Plan (39)
+- **Betreff:** Bitte bestätigen: dein Reste-Retter-Plan (40)
 - **Vorschau:** Ein Klick, dann kommt der Wochenplan als PDF. Nicht angefordert? Einfach ignorieren.
 - **Text:**
   > Hallo,
@@ -1288,7 +1288,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### W-L5 · Tag 10: Plus vorstellen (W)
 
 - **Auslöser:** 10 Tage nach W-L1. Nicht an Kunden.
-- **Betreff:** Die ganze Woche planen: so geht Plus (35)
+- **Betreff:** Die ganze Woche planen: so geht Plus (36)
 - **Vorschau:** 7 Tage 0 €, danach 44,99 € im Jahr oder 6,99 € im Monat. Der Tagesplan bleibt gratis.
 - **Text:**
   > Hallo,
@@ -1350,7 +1350,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### W-K2 · Vertragsbestätigung (T, Textform)
 
 - **Absender:** Wochenschmaus Verträge <vertrag@…>
-- **Betreff:** Deine Vertragsbestätigung: {{PRODUKT}} (Plus Jahr: 35)
+- **Betreff:** Deine Vertragsbestätigung: {{PRODUKT}} (Plus Jahr: 36)
 - **Vorschau:** Laufzeit, Preis, Kündigung und Widerruf auf einen Blick. Bitte aufheben.
 - **Text:**
   > Hallo {{NAME}},
@@ -1369,7 +1369,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 ### W-K3 · Tag 2: Dein erster Vorkochabend (S)
 
 - **Auslöser:** 2 Tage nach Kauf, 17 Uhr
-- **Betreff:** Einmal kochen, zweimal essen (27)
+- **Betreff:** Einmal kochen, zweimal essen (28)
 - **Vorschau:** Am Sonntag planen, am Montag doppelt kochen. So nutzt du den Vorkoch-Ablauf.
 - **Text:**
   > Hallo,
@@ -1397,7 +1397,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 - **Auslöser:** Tag 5, nur wenn nicht gekündigt
 - **Absender:** Wochenschmaus Verträge <vertrag@…>
-- **Betreff:** Deine Testphase endet am {{DATUM}} (35)
+- **Betreff:** Deine Testphase endet am {{DATUM}} (35 mit Datum)
 - **Vorschau:** Danach {{PREIS}}. Wenn das passt, musst du nichts tun. Kündigen geht ohne Login.
 - **Text:**
   > Hallo {{NAME}},
@@ -1418,7 +1418,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
 
 ### W-E1 · Kündigungsbestätigung (T)
 
-- **Betreff:** Deine Kündigung ist angekommen (31)
+- **Betreff:** Deine Kündigung ist angekommen (30)
 - **Vorschau:** Eingang {{EINGANG_DATUM}}, {{EINGANG_UHRZEIT}} Uhr. Wirksam zum {{WIRKDATUM}}.
 - **Text:**
   > Hallo {{KUEND_NAME}},
