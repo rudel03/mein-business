@@ -358,7 +358,14 @@ async function start() {
     const h = lade('ep_haken', {}); h[id] = ev.target.checked; speichere('ep_haken', h);
   });
   $('#rezept .schliessen button').addEventListener('click', () => $('#rezept').close());
-  if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
+  // iPhone/iPad: Safari löscht Website-Daten nach 7 Tagen ohne Besuch, außer die App liegt auf dem Home-Bildschirm
+  if (/iPhone|iPad|iPod/.test(navigator.userAgent) && !navigator.standalone) {
+    const h = document.createElement('p');
+    h.className = 'hilfe';
+    h.textContent = 'Tipp fürs iPhone: Über „Teilen“ → „Zum Home-Bildschirm“ bleibt der Planer offline nutzbar und Safari löscht deine Einstellungen nicht. Den Plus-Schlüssel findest du jederzeit in deiner Kauf-Mail.';
+    document.querySelector('.intro')?.append(h);
+  }
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) navigator.serviceWorker.register('sw.js').catch(() => {});
 }
 
 start();
