@@ -19,6 +19,9 @@ export const CONFIG = {
   probeTage: 7,
   kostenlos: { tage: 1 }, // ohne Plus: Tagesplan (1 Tag) mit Einkaufsliste
 
+  // Basis-URL für Canonical, og:image, Sitemap. Platzhalter, bis die Domain entschieden ist (FUER_DICH.md)
+  basisUrl: 'https://tellerkontor.de/',
+
   // Kasse und Verträge – vom Inhaber nach Kontoeröffnung einzutragen (FUER_DICH.md). Leer = Kasse noch nicht aktiv.
   kasse: { anbieter: 'Paddle', urls: { monat: '', jahr: '', pass: '', saison: '' } },
   vertragEndpoint: '', // nimmt Kündigung und Widerruf entgegen (server/vertrag-worker.js)

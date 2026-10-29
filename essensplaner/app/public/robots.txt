@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /planer.html
+
+Sitemap: https://tellerkontor.de/sitemap.xml

@@ -171,6 +171,7 @@ input[type=text], input[type=email], input[type=date] { width: 100%; }
 .held { display: grid; gap: 20px; padding-top: 28px; padding-bottom: 12px; align-items: center; }
 .held-bild { width: 100%; height: auto; border-radius: var(--radius); aspect-ratio: 4 / 5; object-fit: cover; }
 .gross { font-size: 1.15rem; max-width: 36rem; }
+.dachzeile { font-family: var(--display); font-weight: var(--display-gewicht); font-size: 1.05rem; color: var(--text-leise); margin: 0 0 .25rem; letter-spacing: .01em; }
 .abschnitt { padding-top: 28px; padding-bottom: 12px; }
 .drei { display: grid; gap: 14px; }
 .drei article { background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); padding: 16px; border-top: 6px solid var(--akzent); }
