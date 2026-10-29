@@ -1203,7 +1203,7 @@ Der Schlüssel trägt ein Ablaufdatum („bis“, `tools/lizenz.mjs`). Bei jeder
   > - **[2 Personen]** → {{LINK_PDF_2}}
   > - **[1 Erwachsene:r und 2 Kinder]** → {{LINK_PDF_3}}
   >
-  > Jede Fassung gibt es für Aldi und Lidl. Drin sind die Gerichte von Montag bis Sonntag, der Einkaufszettel in Gang-Reihenfolge und der Reste-Fahrplan. Da steht zum Beispiel, in welchem Gericht die zweite Hälfte vom Sahnebecher landet.
+  > Jede Fassung gibt es für Aldi und Lidl. Drin sind die Gerichte von Montag bis Sonntag, der Einkaufszettel nach Abteilungen sortiert und der Reste-Fahrplan. Da steht zum Beispiel, in welchem Gericht die zweite Hälfte vom Sahnebecher landet.
   >
   > Auf der letzten Seite ist die Lagerkarte für den Kühlschrank: gekochte Reste höchstens 2 Tage, Reis und Nudeln höchstens 1 Tag.
   >

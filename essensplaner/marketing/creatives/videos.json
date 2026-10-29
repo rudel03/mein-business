@@ -1,14 +1,86 @@
 [
- {"marke":"montage","clip":"clip1.mp4","datei":"V1_was-steht-im-zimmer.mp4","hook":"Was steht im Zimmer?","ende":"Kreuz an, was dasteht.<br>Der Plan macht den Rest."},
- {"marke":"montage","clip":"clip2.mp4","datei":"V2_nur-wasserkocher.mp4","hook":"Nur ein Wasserkocher?<br>Reicht.","ende":"47 Rezepte mit Wasserkocher<br>und Kühlschrank."},
- {"marke":"montage","clip":"clip3.mp4","datei":"V3_sonntagskiste.mp4","hook":"Sonntag vorkochen.<br>Montag losfahren.","ende":"Boxen mit Datum,<br>nach den Lagerregeln des BfR."},
- {"marke":"fitness","clip":"clip1.mp4","datei":"V1_die-ganze-packung.mp4","hook":"Ein Kilo Hähnchen.<br>Sechs Boxen.","ende":"Meal-Prep nach deinen Makros,<br>mit Einkaufsliste."},
- {"marke":"fitness","clip":"clip2.mp4","datei":"V2_airfryer-oder-ofen.mp4","hook":"Airfryer oder Ofen?<br>Beides geht.","ende":"Rezepte mit zwei Wegen."},
- {"marke":"fitness","clip":"clip3.mp4","datei":"V3_datum-auf-der-box.mp4","hook":"Zwei Kochtage.<br>Datum auf der Box.","ende":"Kalorien und Makros eingeben.<br>Die Woche steht."},
- {"marke":"camping","clip":"clip1.mp4","datei":"V1_gratin-vom-gasherd.mp4","hook":"Gratin vom Gasherd.","ende":"Rezepte für Omnia,<br>Flamme und Kühlbox."},
- {"marke":"camping","clip":"clip2.mp4","datei":"V2_eine-flamme.mp4","hook":"Eine Flamme.<br>Ein Topf.","ende":"95 Rezepte mit einer Flamme,<br>Topf und Pfanne."},
- {"marke":"camping","clip":"clip3.mp4","datei":"V3_vor-der-abfahrt.mp4","hook":"Die Woche steht<br>vor der Abfahrt.","ende":"Plan und Einkaufsliste<br>für die ganze Tour."},
- {"marke":"alltag","clip":"clip1.mp4","datei":"V1_die-frage-um-1730.mp4","hook":"17:30.<br>Was gibt es heute?","ende":"Die Woche ist geplant.<br>Der Einkauf auch."},
- {"marke":"alltag","clip":"clip2.mp4","datei":"V2_dein-laden.mp4","hook":"Dein Laden.<br>Deine Gänge.","ende":"Einkaufsliste in der<br>Reihenfolge deines Markts."},
- {"marke":"alltag","clip":"clip3.mp4","datei":"V3_airfryer-woche.mp4","hook":"Die Airfryer-Woche.","ende":"Kreuz an, was in<br>deiner Küche steht."}
+ {
+  "marke": "montage",
+  "clip": "clip1.mp4",
+  "datei": "V1_was-steht-im-zimmer.mp4",
+  "hook": "Was steht im Zimmer?",
+  "ende": "Kreuz an, was dasteht.<br>Der Plan macht den Rest."
+ },
+ {
+  "marke": "montage",
+  "clip": "clip2.mp4",
+  "datei": "V2_nur-wasserkocher.mp4",
+  "hook": "Nur ein Wasserkocher?<br>Reicht.",
+  "ende": "47 Rezepte mit Wasserkocher<br>und Kühlschrank."
+ },
+ {
+  "marke": "montage",
+  "clip": "clip3.mp4",
+  "datei": "V3_sonntagskiste.mp4",
+  "hook": "Sonntag vorkochen.<br>Montag losfahren.",
+  "ende": "Boxen mit Datum,<br>nach den Lagerregeln des BfR."
+ },
+ {
+  "marke": "fitness",
+  "clip": "clip1.mp4",
+  "datei": "V1_die-ganze-packung.mp4",
+  "hook": "Ein Kilo Hähnchen.<br>Sechs Boxen.",
+  "ende": "Meal-Prep nach deinen Makros,<br>mit Einkaufsliste."
+ },
+ {
+  "marke": "fitness",
+  "clip": "clip2.mp4",
+  "datei": "V2_airfryer-oder-ofen.mp4",
+  "hook": "Airfryer oder Ofen?<br>Beides geht.",
+  "ende": "Rezepte mit zwei Wegen."
+ },
+ {
+  "marke": "fitness",
+  "clip": "clip3.mp4",
+  "datei": "V3_datum-auf-der-box.mp4",
+  "hook": "Zwei Kochtage.<br>Datum auf der Box.",
+  "ende": "Kalorien und Makros eingeben.<br>Die Woche steht."
+ },
+ {
+  "marke": "camping",
+  "clip": "clip1.mp4",
+  "datei": "V1_gratin-vom-gasherd.mp4",
+  "hook": "Gratin vom Gasherd.",
+  "ende": "Rezepte für Omnia,<br>Flamme und Kühlbox."
+ },
+ {
+  "marke": "camping",
+  "clip": "clip2.mp4",
+  "datei": "V2_eine-flamme.mp4",
+  "hook": "Eine Flamme.<br>Ein Topf.",
+  "ende": "95 Rezepte mit einer Flamme,<br>Topf und Pfanne."
+ },
+ {
+  "marke": "camping",
+  "clip": "clip3.mp4",
+  "datei": "V3_vor-der-abfahrt.mp4",
+  "hook": "Die Woche steht<br>vor der Abfahrt.",
+  "ende": "Plan und Einkaufsliste<br>für die ganze Tour."
+ },
+ {
+  "marke": "alltag",
+  "clip": "clip1.mp4",
+  "datei": "V1_die-frage-um-1730.mp4",
+  "hook": "17:30.<br>Was gibt es heute?",
+  "ende": "Die Woche ist geplant.<br>Der Einkauf auch."
+ },
+ {
+  "marke": "alltag",
+  "clip": "clip2.mp4",
+  "datei": "V2_dein-laden.mp4",
+  "hook": "Dein Laden.<br>Deine Gänge.",
+  "ende": "Einkaufsliste nach<br>Abteilungen sortiert."
+ },
+ {
+  "marke": "alltag",
+  "clip": "clip3.mp4",
+  "datei": "V3_airfryer-woche.mp4",
+  "hook": "Die Airfryer-Woche.",
+  "ende": "Kreuz an, was in<br>deiner Küche steht."
+ }
 ]

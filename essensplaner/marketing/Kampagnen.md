@@ -77,7 +77,7 @@ Zielgruppe Meta: DE, 25–55, Broad. Schwerpunkt SEO und Pinterest (organisch), 
 |---|---|---|---|---|
 | 1 | Die Frage um 17:30 | `creatives/alltag/01_die-frage-um-1730.jpg`, Video V1 | Die Frage um 17:30 | Was gibt es heute? Mit Wochenschmaus ist die Woche geplant und der Einkauf auch. |
 | 2 | Die halbe Avocado | `02_halbe-avocado.jpg` | Die halbe Avocado gibt's nicht | Wir rechnen mit ganzen Packungen und zeigen, was übrig bleibt. |
-| 3 | Dein Laden, deine Gänge | `03_dein-laden.jpg`, Video V2 | Dein Laden. Deine Gänge. | Die Einkaufsliste in der Reihenfolge deines Markts: Aldi, Lidl, Rewe, Edeka und mehr. |
+| 3 | Dein Laden, deine Gänge | `03_dein-laden.jpg`, Video V2 | Dein Laden. Deine Gänge. | Die Einkaufsliste nach Abteilungen sortiert, passend zur Kette: Aldi, Lidl, Rewe, Edeka und mehr. |
 | 4 | Allergien | `04_allergien.jpg` | Allergien sind kein Extra | Filter für die 14 Hauptallergene in jedem Plan, auch gratis. |
 | 5 | Ohne Konto | `05_ohne-konto.jpg` | Ohne Konto. Ohne Werbung. | Im Planer gibt es keine Werbung und kein Konto. Deine Eingaben bleiben auf deinem Gerät. |
 | 6 | Planen wie die Kochbox | `06_kochbox-plan.jpg` | Planen wie die Kochbox | Wochenplan mit Rezepten wie bei der Kochbox, Einkauf im Laden deiner Wahl. |
