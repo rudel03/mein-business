@@ -401,3 +401,99 @@ Begründung der Preispunkte:
 **Recht/Steuer:** [§ 309 BGB](https://www.gesetze-im-internet.de/bgb/__309.html) · [§ 5 BuchPrG](https://lxgesetze.de/buchprg/5) · [VLB-Webinar Preisbindung](https://vlb.de/assets/images/Webinar_Preisbindung_20200326.pdf) · [it-recht-kanzlei: Gratisabgabe Bücher](https://www.it-recht-kanzlei.de/gratisabgabe-preisgebundene-buecher-buchpreisbindung.html) · [vzbv: BGH I ZR 161/24](https://www.vzbv.de/urteile/bundesgerichtshof-kuendigungsbutton-ist-auch-bei-laufzeitvertraegen-mit-einmalzahlung) · [it-recht-kanzlei: BGH Einmalzahlung](https://www.it-recht-kanzlei.de/kuendigungsbutton-bgh-feste-vertragslaufzeit-einmalzahlung.html) · [beck-aktuell](https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/bgh-izr16124-online-abo-kuendigung-schaltflaeche-2025-06-13) · [vzbv: Kündigen ohne Tricks](https://www.vzbv.de/urteile/kuendigen-ohne-tricks) · [Händlerbund § 312k](https://www.haendlerbund.de/de/ratgeber/recht/kuendigungsbutton-nach-312k-bgb) · [Ferner Alsdorf](https://www.ferner-alsdorf.de/versteckter-kuendigungsbutton-ist-unzulaessig/) · [Finanztip: werbefrei](https://www.finanztip.de/daily/neues-urteil-kuendigungsbutton-muss-werbefrei-sein/) · [teltarif: fraenk](https://www.teltarif.de/arch/2026/kw28/s104573.html) · [Verpflegungspauschale (steuerschroeder)](https://www.steuerschroeder.de/Werbungskosten_Verpflegung.html) · [finom](https://finom.co/de-de/blog/verpflegungspauschale/)
 
 **Nicht erneut abgerufen (Projektwissen):** Kalkulationsvorlage `recherche/Schichtkochbuch Markt und Vermarktung.md`, Abschnitt 7.
+
+---
+
+## 9. Aktualisierung 29.10.2026 (Paddle, Pässe, Startkosten)
+
+Ersetzt die Netto-, LTV-, Fixkosten- und Szenario-Werte aus 0, 2.2, 2.3, 3 und 5. Grundlage: `ENTSCHEIDUNGEN.md` P1 (Tarife), P2 (Paddle), P4 (Werbetest), C3/C4 (kein Konto, Lizenzschlüssel, Cloudflare-Worker statt Supabase). **[S]** = Annahme/Schätzung, im Test zu messen.
+
+### 9.1 Paddle-Gebühr (geprüft)
+
+- **5 % + 0,50 $ je Checkout-Transaktion.** Laut Seite enthalten: Zahlungen, Checkout, Abo-Abrechnung, Steuer- und Regelkonformität (USt-Abführung als Merchant of Record), Betrugsschutz, Rückbuchungen, Käufer-Support; „No monthly fees, migration fees, or hidden extras“. **Für Produkte unter 10 $ nennt Paddle individuelle Preise auf Anfrage**: das betrifft Plus Monat (6,99 € ≈ 8 $). Währungsumrechnung und Auszahlungsgebühren nennt die Seite nicht. Quelle: [paddle.com/pricing](https://www.paddle.com/pricing), abgerufen am **29.10.2026** (WebFetch).
+- Umrechnung 0,50 $ ≈ **0,43 €** [S] (Kurs ca. 1,16 $/€). Gebühr gerechnet auf den **Bruttopreis** (Paddle berechnet den Prozentsatz vom Kundenpreis inkl. USt) [S, im Paddle-Konto prüfen].
+
+### 9.2 Netto je Tarif nach USt und Gebühr
+
+USt: **Paddle ist Verkäufer an den Endkunden** und führt die USt des Kundenlands ab (DE 19 %, AT 20 %, CH 8,1 % MWST). Gerechnet mit DE 19 % [S, Kundschaft überwiegend DE]. Der Inhaber verkauft seine Leistung an Paddle (UK, B2B): in DE nicht steuerbar (§ 3a Abs. 2 UStG, siehe 07 §1.6), Auszahlung per Gutschrift ohne USt.
+
+**Kleinunternehmer-Hinweis:** Die Kleinunternehmerregelung (§ 19 UStG) **senkt die Preise nicht und erhöht die Auszahlung nicht**, weil Paddle als Verkäufer die USt vom Kunden ohnehin erhebt. Sie betrifft nur die eigenen inländischen Umsätze (E-Books) und den Vorsteuerabzug. Ob die nicht steuerbaren Paddle-Umsätze in den Gesamtumsatz nach § 19 Abs. 2 UStG zählen, klärt die Steuerberatung **[Prüfen]**.
+
+| Tarif | Brutto | darin USt 19 % | Netto | Paddle-Gebühr (5 % + 0,43 €) | Gebühr in % vom Brutto | **Auszahlung** | DB je Zahlung¹ |
+|---|---|---|---|---|---|---|---|
+| Plus Monat | 6,99 € | 1,12 € | 5,87 € | 0,78 € | 11,2 % | **5,09 €** | 4,74 € |
+| Plus Jahr | 44,99 € | 7,18 € | 37,81 € | 2,68 € | 6,0 % | **35,13 €** | 32,17 € |
+| Montage-Pass 3 Monate | 17,99 € | 2,87 € | 15,12 € | 1,33 € | 7,4 % | **13,79 €** | 12,80 € |
+| Camping-Saisonpass 6 Monate | 24,99 € | 3,99 € | 21,00 € | 1,68 € | 6,7 % | **19,32 €** | 17,75 € |
+
+¹ DB = Auszahlung × (1 − 5 % Erstattung [S]) − 0,10 € je Nutzer-Monat Laufzeit [S] (Monat 1, Jahr 12, Montage 3, Saison 6 Monate).
+Zum Vergleich der alte Stripe-Mix (2.2): Monat 5,37 €, Jahr 36,24 €, Pass 14,43 €. Paddle kostet also 0,28 €/1,11 €/0,64 € mehr je Zahlung und spart dafür OSS, Schweizer MWST und Rechnungsstellung (Entscheidung P2).
+
+### 9.3 LTV grob
+
+| Annahme [S] | Konservativ | Realistisch | Optimistisch |
+|---|---|---|---|
+| Kündigung Monatsabo je Monat | 20 % | 15 % | 10 % |
+| Verlängerung Jahresabo | 20 % | 30 % | 40 % |
+| Wiederkauf Montage-Pass | 10 % | 20 % | 30 % |
+| Wiederkauf Saisonpass (nächste Saison) | 20 % | 35 % | 50 % |
+| Mix Monat / Jahr / Montage / Saison | 45 / 30 / 15 / 10 % | 40 / 35 / 15 / 10 % | 35 / 45 / 10 / 10 % |
+
+| Tarif | LTV kons. | LTV real. | LTV opt. |
+|---|---|---|---|
+| Plus Monat (DB ÷ Kündigung) | 23,70 € | 31,60 € | 47,40 € |
+| Plus Jahr (DB ÷ (1 − Verlängerung)) | 40,21 € | 45,96 € | 53,62 € |
+| Montage-Pass (DB × (1 + Wiederkauf)) | 14,08 € | 15,36 € | 16,64 € |
+| Saisonpass (DB × (1 + Wiederkauf)) | 21,31 € | 23,97 € | 26,63 € |
+| **Mix** | **26,97 €** | **33,43 €** | **45,04 €** |
+| Ziel-CAC (LTV ÷ 3) | 8,99 € | 11,14 € | 15,01 € |
+
+Die Werte liegen etwas unter den Stripe-Werten aus 3.2 (Mix real. 36,28 €). Bezahlte Werbung bleibt damit ein gedeckelter Test (P4).
+
+### 9.4 Kosten im ersten Jahr
+
+| Posten | Konservativ | Realistisch | Optimistisch | Status |
+|---|---|---|---|---|
+| **Einmalig:** Anwaltsprüfung (AGB, Datenschutz, Kündigen/Widerrufen, Pässe) | 2.000 € | 1.400 € | 800 € | Vorgabe 800–2.000 €, Wert je Szenario [S] |
+| Einmalig: sonstiges (Testkochen, Kassenbon-Test) | 300 € | 200 € | 100 € | [S] |
+| Einmalig: Werbetest (max. 4 × 150 €, P4) | 600 € | 600 € | 300 € | opt.: Tests früh abgebrochen oder nur 2 Nischen [S] |
+| **Summe einmalig** | **2.900 €** | **2.200 €** | **1.200 €** | |
+| Betriebshaftpflicht | 600 €/Jahr | 400 €/Jahr | 200 €/Jahr | Vorgabe 200–600 €/Jahr |
+| Domains (ca. 5 × 10 €) | 50 €/Jahr | 50 €/Jahr | 50 €/Jahr | Vorgabe |
+| Hosting + Worker (Cloudflare Free, ggf. Workers Paid ≈ 5 $) | 5 €/Monat | 0 €/Monat | 0 €/Monat | `server/README.md`: Free-Tarif reicht anfangs |
+| Supabase | 0 € | 0 € | 0 € | **entfällt** (C3/C4: kein Konto) |
+| E-Mail-Tool mit Double-Opt-in | 16 €/Monat | 7 €/Monat | 0 €/Monat | wie 2.3 |
+| Rechtstexte-Pflege | 25 €/Monat | 15 €/Monat | 10 €/Monat | wie 2.3 [S] |
+| Steuerberatung (Mehraufwand) | 70 €/Monat | 50 €/Monat | 40 €/Monat | wie 2.3 [S] |
+| Analyse/Monitoring | 10 €/Monat | 9 €/Monat | 0 €/Monat | wie 2.3 [S] |
+| **Laufend gesamt** | **2.162 €/Jahr (≈ 180 €/Monat)** | **1.422 €/Jahr (≈ 118 €/Monat)** | **850 €/Jahr (≈ 71 €/Monat)** | |
+| **Gesamtkosten Jahr 1** | **5.062 €** | **3.622 €** | **2.050 €** | |
+
+### 9.5 Break-even in zahlenden Nutzern (Jahr 1)
+
+Zwei Sichten:
+- **A – laufender Betrieb:** Wie viele **gleichzeitig aktive Zahlende** decken die laufenden Monatskosten? DB je aktivem Nutzer-Monat im Mix: 3,87 € / 3,77 € / 3,59 € (Monat 4,74 €; Jahr 32,17 € ÷ 12; Montage 12,80 € ÷ 3; Saison 17,75 € ÷ 6).
+- **B – erstes Jahr komplett:** Wie viele **Neukunden im Jahr 1** decken alle Kosten des ersten Jahres einschließlich Anwalt, Haftpflicht, Domains und Werbetest? DB je Neukunde **im Jahr 1** im Mix: 21,31 € / 23,02 € / 25,50 € [S]. Annahmen: Neukunden verteilen sich gleichmäßig aufs Jahr, Monatsabos zahlen dann im Schnitt 3,7 / 4,2 / 4,7 Monate im Jahr 1; Jahresverlängerungen und Saison-Wiederkäufe fallen erst ins Jahr 2; die Hälfte der Montage-Wiederkäufe fällt ins Jahr 1.
+
+| | Konservativ | Realistisch | Optimistisch |
+|---|---|---|---|
+| A: aktive Zahlende für laufende Kosten | **≈ 47** | **≈ 31** | **≈ 20** |
+| B: Neukunden Jahr 1 nur für laufende Kosten | ≈ 101 | ≈ 62 | ≈ 33 |
+| **B: Neukunden Jahr 1 für alle Kosten Jahr 1** | **≈ 238** | **≈ 157** | **≈ 80** |
+| zum Vergleich: Käufe im alten 12-Monats-Funnel (3.7–3.9, mit mehr Werbebudget) | ≈ 18 | ≈ 114 | ≈ 559 |
+
+**[Interpretation]**
+- Realistisch reichen die Käufe des alten Funnels (≈ 114) **nicht** für den Break-even im ersten Jahr (≈ 157 nötig). Die Startkosten (vor allem der Anwalt) kommen frühestens im Jahr 2 zurück, wenn die ersten Jahresabos verlängern und Camper die nächste Saison kaufen.
+- Konservativ ist der Abstand groß (≈ 18 statt ≈ 238): Dann gilt das Abbruchkriterium aus 3.10 bzw. dem Launchplan.
+- Optimistisch ist der Break-even im ersten Jahr klar erreichbar (≈ 80 nötig).
+- Größter Kostenblock ist die einmalige Anwaltsprüfung. Ein Festpreisangebot ab etwa 800 € senkt den Break-even (realistisch) um ≈ 26 Neukunden je 600 € Ersparnis.
+- Paddle-Sonderpreis für Produkte unter 10 $ (Plus Monat) beim Kontoanlegen erfragen. Schon 0,20 € weniger je Monatszahlung bringen ≈ 4 % mehr DB im Monatsabo.
+
+### 9.6 Offene Prüfpunkte zu Abschnitt 9
+
+| Punkt | Wer | Status |
+|---|---|---|
+| Paddle: Gebühr auf Brutto oder Netto, Sonderpreis < 10 $, Auszahlungs- und Währungskosten in EUR | Inhaber (beim Kontoanlegen) | **[Prüfen]** |
+| Paddle-Gutschriften: nicht steuerbar, Wirkung auf § 19 UStG (Gesamtumsatz), ZM/USt-Erklärung | Steuerberatung | **[Prüfen]** |
+| Angebote Anwalt (Festpreis) und Betriebshaftpflicht | Inhaber | **[Prüfen]** |
+| Kündigungs-, Verlängerungs- und Wiederkaufquoten, Tarif-Mix | nach Launch messen | [S] |
