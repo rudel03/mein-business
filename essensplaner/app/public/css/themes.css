@@ -1,0 +1,58 @@
+/* Vier Nischen-Stile. Jede Variante hat eine eigene Display-Schrift, eigene Farben und ein prägendes Element (--band). */
+@font-face { font-family: 'Archivo'; src: url('../fonts/archivo-latin-800-normal.woff2') format('woff2'); font-weight: 800; font-display: swap; }
+@font-face { font-family: 'Archivo'; src: url('../fonts/archivo-latin-600-normal.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Space Grotesk'; src: url('../fonts/space-grotesk-latin-700-normal.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Space Grotesk'; src: url('../fonts/space-grotesk-latin-500-normal.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Zilla Slab'; src: url('../fonts/zilla-slab-latin-700-normal.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Zilla Slab'; src: url('../fonts/zilla-slab-latin-600-normal.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Bricolage Grotesque'; src: url('../fonts/bricolage-grotesque-latin-800-normal.woff2') format('woff2'); font-weight: 800; font-display: swap; }
+@font-face { font-family: 'Bricolage Grotesque'; src: url('../fonts/bricolage-grotesque-latin-700-normal.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+
+:root, [data-theme=alltag] {
+  /* Wochenmarkt: weißes Papier, Tomate, Basilikum, Kohlgrau */
+  --display: 'Bricolage Grotesque', 'Atkinson Hyperlegible', sans-serif; --display-gewicht: 800;
+  --grund: #ffffff; --flaeche: #f6f7f4; --flaeche-2: #e8ebe4; --text: #2c3146; --text-leise: #545a70;
+  --linie: #dfe2da; --linie-stark: #9aa0ad; --link: #1f6b43;
+  --akzent: #e4572e; --akzent-text: #ffffff; --akzent-dunkel: #2e7d4f;
+  --knopf: #2e7d4f; --knopf-text: #ffffff; --fokus: #e4572e;
+  --kopf: #ffffff; --kopf-text: #2c3146; --tag-kopf: #2e7d4f; --tag-kopf-text: #ffffff;
+  --fuss: #2c3146; --fuss-text: #f6f7f4; --kuehl: #2f6c9e; --tk: #5a4f9e; --warn: #c98a00; --fehler: #c0392b;
+  --band: repeating-linear-gradient(90deg, #e4572e 0 22px, #ffffff 22px 26px, #2e7d4f 26px 48px, #ffffff 48px 52px);
+  --radius: 14px; --chip-radius: 99px; --knopf-radius: 99px;
+}
+[data-theme=montage] {
+  /* Baustellenlicht: Asphalt, Helmgelb, Beton – Absperrband als Markenzeichen */
+  --display: 'Archivo', 'Atkinson Hyperlegible', sans-serif; --display-gewicht: 800; --display-spacing: -0.01em;
+  --grund: #eeebe4; --flaeche: #ffffff; --flaeche-2: #dedad1; --text: #23262b; --text-leise: #4b4f57;
+  --linie: #d3cfc6; --linie-stark: #6e727a; --link: #23262b;
+  --akzent: #ffc72c; --akzent-text: #23262b; --akzent-dunkel: #23262b;
+  --knopf: #23262b; --knopf-text: #ffc72c; --fokus: #0059b3;
+  --kopf: #23262b; --kopf-text: #ffc72c; --tag-kopf: #23262b; --tag-kopf-text: #ffffff;
+  --fuss: #23262b; --fuss-text: #eeebe4; --kuehl: #0059b3; --tk: #4a3f8f; --warn: #b37400; --fehler: #b3261e;
+  --band: repeating-linear-gradient(-45deg, #ffc72c 0 14px, #23262b 14px 28px);
+  --radius: 4px; --chip-radius: 4px; --knopf-radius: 4px;
+}
+[data-theme=fitness] {
+  /* Kreidehalle: Kalkweiß, Hantelgrau, Eisblau – Makro-Balken wie Hantelscheiben */
+  --display: 'Space Grotesk', 'Atkinson Hyperlegible', sans-serif; --display-gewicht: 700; --display-spacing: -0.02em;
+  --grund: #f5f6f3; --flaeche: #ffffff; --flaeche-2: #e3e6ea; --text: #2b2f36; --text-leise: #545b66;
+  --linie: #dde1e6; --linie-stark: #8a929e; --link: #1f4fd1;
+  --akzent: #2f6bff; --akzent-text: #ffffff; --akzent-dunkel: #1f4fd1;
+  --knopf: #2b2f36; --knopf-text: #ffffff; --fokus: #2f6bff;
+  --kopf: #2b2f36; --kopf-text: #ffffff; --tag-kopf: #e3e6ea; --tag-kopf-text: #2b2f36;
+  --fuss: #2b2f36; --fuss-text: #f5f6f3; --kuehl: #1f4fd1; --tk: #6b46c1; --warn: #b26a00; --fehler: #c0392b;
+  --band: linear-gradient(90deg, #2f6bff 0 46%, #f2a33a 46% 78%, #8b5cf6 78% 100%);
+  --radius: 10px; --chip-radius: 10px; --knopf-radius: 10px;
+}
+[data-theme=camping] {
+  /* Stellplatz: Kiefer, Seeblau, Markisengelb – Markisenstreifen */
+  --display: 'Zilla Slab', Georgia, serif; --display-gewicht: 700;
+  --grund: #eef1ea; --flaeche: #ffffff; --flaeche-2: #dde4d8; --text: #1d2e26; --text-leise: #46564d;
+  --linie: #d2dacd; --linie-stark: #74867b; --link: #1f4d3a;
+  --akzent: #1f4d3a; --akzent-text: #ffffff; --akzent-dunkel: #1f4d3a;
+  --knopf: #1f4d3a; --knopf-text: #ffffff; --fokus: #3b7ea1;
+  --kopf: #1f4d3a; --kopf-text: #f2c14e; --tag-kopf: #3b7ea1; --tag-kopf-text: #ffffff;
+  --fuss: #1d2e26; --fuss-text: #eef1ea; --kuehl: #2f6c9e; --tk: #5a4f9e; --warn: #a86b00; --fehler: #b3261e;
+  --band: repeating-linear-gradient(90deg, #f2c14e 0 26px, #ffffff 26px 52px);
+  --radius: 18px; --chip-radius: 99px; --knopf-radius: 12px;
+}

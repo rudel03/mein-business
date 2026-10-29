@@ -102,7 +102,7 @@ def pruefe(rezepte, Z, datei=""):
                 f("Weg ohne Schritte")
             if not (0 < w.get("zeit", 0) <= 240) or not (0 < w.get("aktiv", 0) <= w.get("zeit", 0)):
                 f(f"zeit/aktiv unplausibel: {w.get('zeit')}/{w.get('aktiv')}")
-            if ("herd" in w.get("geraete", []) or "herd2" in w.get("geraete", [])) and not ({"topf", "pfanne"} & set(w.get("geraete", []))):
+            if ("herd" in w.get("geraete", []) or "herd2" in w.get("geraete", [])) and not ({"topf", "pfanne", "omnia"} & set(w.get("geraete", []))):
                 f("Herd ohne Topf/Pfanne")
         L = r.get("lager", {})
         for key in ["kuehl_tage", "einfrierbar", "ungekuehlt_h", "kalt_essbar", "aufwaermen"]:

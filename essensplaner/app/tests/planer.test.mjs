@@ -3,9 +3,9 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { erstellePlan, pruefeMakros, kandidaten, vervollstaendige } from '../src/engine/planer.js';
-import { wegMoeglich, zutatLagerbar, zufall, MAHLZEITEN } from '../src/engine/grundlagen.js';
-import { LAEDEN } from '../src/engine/laeden.js';
+import { erstellePlan, pruefeMakros, kandidaten, vervollstaendige } from '../public/js/engine/planer.js';
+import { wegMoeglich, zutatLagerbar, zufall, MAHLZEITEN } from '../public/js/engine/grundlagen.js';
+import { LAEDEN } from '../public/js/engine/laeden.js';
 
 const daten = JSON.parse(fs.readFileSync(new URL('../public/data/daten.json', import.meta.url)));
 const R = Object.fromEntries(daten.rezepte.map((r) => [r.id, r]));
@@ -222,4 +222,22 @@ test('Kandidatenfilter: Geräte und Lagerung', () => {
   const p = vervollstaendige({ geraete: MONTAGE });
   const { liste } = kandidaten(daten, p);
   for (const { weg } of liste) assert.ok(weg.geraete.every((g) => ['wasserkocher', 'mikrowelle'].includes(g)));
+});
+
+test('Ohne Kühlschrank: keine angebrochene Packung, die nach dem Öffnen gekühlt werden müsste', () => {
+  for (const seed of [1, 2, 3, 4]) {
+    const erg = erstellePlan(daten, { geraete: { ...MONTAGE, kuehlschrank: false }, seed, personen: 1 + (seed % 2) });
+    if (!erg.ok) continue;
+    invarianten(erg);
+    for (const k of erg.kochen) {
+      for (const z of R[k.rezept].zutaten) {
+        const zi = Z[z[0]];
+        if (z[3] === 'opt' || !zi.flags.includes('o')) continue;
+        const pg = zi.einheit === 'stk' ? zi.pack * zi.stk_g : zi.pack;
+        const g = (z[2] === 'stk' ? z[1] * zi.stk_g : z[1]) * erg.profil.personen / R[k.rezept].portionen;
+        const rest = (Math.ceil(g / pg - 1e-9) * pg - g) / pg;
+        assert.ok(rest <= 0.2, `${k.rezept}: Rest ${Math.round(rest * 100)} % von ${zi.name}`);
+      }
+    }
+  }
 });

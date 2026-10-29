@@ -1,0 +1,2481 @@
+[
+ {
+  "id": "C01",
+  "titel": "Schnelles Bircher-Müsli mit Apfel und Walnüssen",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "haferflocken",
+    100
+   ],
+   [
+    "milch",
+    300
+   ],
+   [
+    "apfel",
+    1,
+    "stk"
+   ],
+   [
+    "rosinen",
+    30
+   ],
+   [
+    "walnuesse",
+    20
+   ],
+   [
+    "honig",
+    10
+   ],
+   [
+    "zimt",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 15,
+    "aktiv": 5,
+    "schritte": [
+     "Haferflocken, Rosinen und Zimt in eine Schüssel geben und mit 300 ml H-Milch übergießen.",
+     "Den Apfel mit Schale direkt über der Schüssel grob raspeln oder klein schneiden und unterrühren.",
+     "10 Minuten quellen lassen, in der Zeit Kaffee kochen oder den Tisch draußen decken.",
+     "Walnüsse mit der Hand zerbrechen, darüberstreuen und mit Honig beträufeln.",
+     "Aus derselben Schüssel essen oder auf zwei Becher verteilen: ein Gefäß, ein Löffel pro Person."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "wenig_abwasch"
+  ],
+  "tipp": "Geöffnete H-Milch gehört in die Kühlung; ohne Kühlschrank lieber kleine Packungen kaufen oder den Rest am selben Tag für Kaffee und Porridge aufbrauchen.",
+  "foto": "bowl of bircher muesli with grated apple, raisins and broken walnuts, drizzled with honey, on a camping table outdoors"
+ },
+ {
+  "id": "C02",
+  "titel": "Rührei mit Tomaten und Schnittlauch",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "eier",
+    4,
+    "stk"
+   ],
+   [
+    "tomate",
+    160
+   ],
+   [
+    "schnittlauch",
+    10
+   ],
+   [
+    "butter",
+    10
+   ],
+   [
+    "salz",
+    2
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "mischbrot",
+    4,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 10,
+    "aktiv": 10,
+    "schritte": [
+     "Tomaten würfeln, Schnittlauch mit dem Messer in Röllchen schneiden (oder mit der Küchenschere direkt über die Pfanne).",
+     "Eier direkt in der Pfanne aufschlagen, salzen, pfeffern und mit der Gabel verquirlen – so sparst du eine Schüssel.",
+     "Butter dazugeben und die Pfanne auf mittlere Flamme stellen.",
+     "Unter Rühren 3–4 Minuten stocken lassen, nach 2 Minuten die Tomaten unterheben.",
+     "Garen, bis kein flüssiges Ei mehr zu sehen ist, dann Flamme aus und Schnittlauch darüberstreuen.",
+     "Direkt aus der Pfanne auf die Brotscheiben geben. Die Pfanne mit einem Stück Brot oder Küchenpapier auswischen, dann reicht wenig Spülwasser."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "schnell",
+   "gas_sparen",
+   "wenig_abwasch",
+   "guenstig",
+   "eiweiss"
+  ],
+  "tipp": "Eier gehören auch unterwegs in die Kühlung; in der Kühlbox oben einräumen, damit sie nicht zerdrückt werden.",
+  "foto": "small camping pan with fluffy scrambled eggs, diced tomatoes and chives, two slices of rye bread beside it"
+ },
+ {
+  "id": "C03",
+  "titel": "Aufbackbrötchen aus dem Omnia mit Käse und Konfitüre",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "broetchen",
+    4,
+    "stk"
+   ],
+   [
+    "butter",
+    20
+   ],
+   [
+    "gouda",
+    2,
+    "stk"
+   ],
+   [
+    "marmelade",
+    40
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "omnia"
+    ],
+    "zeit": 18,
+    "aktiv": 5,
+    "schritte": [
+     "Omnia-Unterteil auf die Flamme stellen, Form mit Deckel aufsetzen und 3 Minuten auf hoher Flamme vorheizen.",
+     "Brötchen in die Form legen, Deckel schließen und die Flamme auf klein bis mittel stellen.",
+     "8 Minuten backen, dann die Brötchen wenden (Topflappen!) und weitere 3–4 Minuten backen, bis sie rundum knusprig sind.",
+     "Flamme aus. Brötchen kurz ausdampfen lassen und mit Butter, Gouda und Konfitüre belegen.",
+     "Die Form ist nur trocken benutzt: Krümel ausschütteln, Abwasch entfällt."
+    ]
+   },
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 15,
+    "aktiv": 3,
+    "schritte": [
+     "Backofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Brötchen auf dem Rost 8–10 Minuten aufbacken.",
+     "Mit Butter, Gouda und Konfitüre belegen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "omnia",
+   "wenig_abwasch"
+  ],
+  "tipp": "Aufbackbrötchen lagern ungekühlt und sind die Antwort auf den Stellplatz ohne Bäcker; eine Packung im Vorrat fährt einfach mit.",
+  "foto": "golden crusty bread rolls in a ring-shaped stovetop camping oven, butter, cheese slices and jam on a wooden board"
+ },
+ {
+  "id": "C04",
+  "titel": "Porridge mit Banane und Erdnussmus",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "haferflocken",
+    100
+   ],
+   [
+    "milch",
+    250
+   ],
+   [
+    "banane",
+    2,
+    "stk"
+   ],
+   [
+    "erdnussmus",
+    30
+   ],
+   [
+    "zimt",
+    1
+   ],
+   [
+    "salz",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 10,
+    "aktiv": 6,
+    "schritte": [
+     "Haferflocken, 250 ml H-Milch, 150 ml Wasser und eine Prise Salz in den Topf geben.",
+     "Auf mittlerer Flamme unter Rühren aufkochen und 1 Minute köcheln lassen.",
+     "Flamme aus, Deckel auf den Topf und 3 Minuten nachquellen lassen – das spart Gas.",
+     "Inzwischen die Bananen in Scheiben schneiden.",
+     "Porridge auf zwei Schalen verteilen, Bananen, je einen Löffel Erdnussmus und Zimt darauf.",
+     "Den Topf sofort mit etwas kaltem Wasser füllen, dann löst sich der Rest später fast von allein."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "topf"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "gas_sparen",
+   "ohne_kuehlschrank",
+   "schnell",
+   "guenstig",
+   "wenig_abwasch"
+  ],
+  "tipp": "Alle Zutaten lagern im Vorratsfach; wer das Wasser morgens schon für Kaffee heiß macht, gibt einfach einen Teil davon an die Haferflocken.",
+  "foto": "two enamel bowls of creamy porridge topped with banana slices, a spoonful of peanut butter and cinnamon"
+ },
+ {
+  "id": "C05",
+  "titel": "Skyr-Becher mit Banane, Haferflocken und Mandeln",
+  "mahlzeit": [
+   "fruehstueck"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "skyr_becher",
+    2,
+    "stk"
+   ],
+   [
+    "banane",
+    2,
+    "stk"
+   ],
+   [
+    "haferflocken",
+    60
+   ],
+   [
+    "mandeln",
+    20
+   ],
+   [
+    "honig",
+    15
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 5,
+    "aktiv": 5,
+    "schritte": [
+     "Je einen Skyr-Becher öffnen und mit dem Löffel glatt rühren.",
+     "Banane mit der Gabel direkt auf dem Deckel oder einem Teller grob zerdrücken und in die Becher geben.",
+     "Haferflocken und Mandeln darüberstreuen, mit Honig beträufeln.",
+     "Direkt aus dem Becher essen – kein Geschirr, kein Spülwasser."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "schnell",
+   "ohne_kuehlschrank",
+   "wenig_abwasch",
+   "eiweiss"
+  ],
+  "tipp": "Einzelbecher brauchen nach dem Einkauf nur bis zum nächsten Morgen einen Platz in der Kühlbox und werden dann ganz aufgegessen; so bleibt keine angebrochene Packung übrig.",
+  "foto": "two skyr cups topped with mashed banana, rolled oats, almonds and honey on a folding camping table"
+ },
+ {
+  "id": "C06",
+  "titel": "Omnia-Ofenhafer mit Apfel und Rosinen",
+  "mahlzeit": [
+   "fruehstueck",
+   "snack"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "haferflocken",
+    120
+   ],
+   [
+    "milch",
+    250
+   ],
+   [
+    "eier",
+    2,
+    "stk"
+   ],
+   [
+    "apfel",
+    1,
+    "stk"
+   ],
+   [
+    "rosinen",
+    20
+   ],
+   [
+    "honig",
+    15
+   ],
+   [
+    "zimt",
+    2
+   ],
+   [
+    "rapsoel",
+    5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "omnia"
+    ],
+    "zeit": 35,
+    "aktiv": 8,
+    "schritte": [
+     "Omnia-Unterteil auf die Flamme stellen, Form mit Deckel aufsetzen und 3 Minuten auf hoher Flamme vorheizen.",
+     "Inzwischen die Form kurz abnehmen und mit dem Öl auspinseln.",
+     "In einer Schüssel Eier, H-Milch, Honig und Zimt verquirlen, Haferflocken und Rosinen unterrühren.",
+     "Apfel klein würfeln und unterheben, Masse in die Form füllen und glatt streichen.",
+     "Deckel auf, Flamme auf die kleinste Stufe stellen und 25 Minuten backen, bis die Oberfläche fest ist und beim Einstechen kein flüssiges Ei austritt.",
+     "5 Minuten ruhen lassen, in Stücke schneiden und warm oder kalt essen."
+    ]
+   },
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 35,
+    "aktiv": 8,
+    "schritte": [
+     "Backofen auf 180 °C Ober-/Unterhitze vorheizen und eine kleine Auflaufform einölen.",
+     "Masse wie beschrieben anrühren, einfüllen und 25–30 Minuten backen, bis sie fest ist."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "omnia",
+   "guenstig"
+  ],
+  "tipp": "Abends gebacken, wenn das Omnia ohnehin auf der Flamme steht, gibt es morgens ohne Kochen ein warmes Gefühl; dann aber über Nacht kühl lagern.",
+  "foto": "ring-shaped stovetop oven tin with golden baked oats studded with apple pieces and raisins, one slice cut out"
+ },
+ {
+  "id": "C07",
+  "titel": "Omnia-Kartoffelgratin mit Schinken",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "kartoffel",
+    500
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "kochschinken",
+    100
+   ],
+   [
+    "schmand",
+    200
+   ],
+   [
+    "milch",
+    100
+   ],
+   [
+    "reibekaese",
+    60
+   ],
+   [
+    "rapsoel",
+    5
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "omnia"
+    ],
+    "zeit": 55,
+    "aktiv": 15,
+    "schritte": [
+     "Kartoffeln schälen und in dünne Scheiben (ca. 3 mm) schneiden, Zwiebel in feine Ringe, Schinken in Streifen.",
+     "Schmand, H-Milch, Salz und Pfeffer direkt im Schmandbecher oder einer Tasse glatt rühren.",
+     "Omnia-Form mit dem Öl auspinseln und Kartoffeln, Zwiebeln und Schinken in Schichten einlegen, die Schmandmischung darübergießen.",
+     "Omnia-Unterteil 3 Minuten auf hoher Flamme vorheizen, Form mit Deckel aufsetzen und die Flamme auf klein stellen.",
+     "40 Minuten backen, bis die Kartoffeln beim Einstechen weich sind.",
+     "Käse darüberstreuen, Deckel wieder auf und noch 5 Minuten weiterbacken, bis er geschmolzen ist."
+    ]
+   },
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 55,
+    "aktiv": 15,
+    "schritte": [
+     "Backofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Gratin wie beschrieben in einer kleinen Auflaufform schichten.",
+     "40 Minuten backen, Käse darüber und weitere 5–10 Minuten goldbraun backen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "omnia",
+   "wenig_abwasch"
+  ],
+  "tipp": "Je dünner die Kartoffelscheiben, desto kürzer brennt die Flamme; im Omnia wird nur eine Form schmutzig.",
+  "foto": "creamy potato gratin with ham and melted golden cheese in a ring-shaped stovetop oven, on a camping stove outdoors"
+ },
+ {
+  "id": "C08",
+  "titel": "Omnia-Tortilla-Auflauf mit Bohnen und Mais",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "tortilla",
+    4,
+    "stk"
+   ],
+   [
+    "kidney_dose",
+    250
+   ],
+   [
+    "mais_dose",
+    285
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "paprikapulver",
+    2
+   ],
+   [
+    "kreuzkuemmel",
+    2
+   ],
+   [
+    "salz",
+    2
+   ],
+   [
+    "reibekaese",
+    80
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "omnia"
+    ],
+    "zeit": 35,
+    "aktiv": 10,
+    "schritte": [
+     "Bohnen und Mais abgießen und kurz abspülen, Zwiebel fein würfeln.",
+     "Tomaten direkt in der Dose mit Paprikapulver, Kreuzkümmel und Salz verrühren.",
+     "Tortillas in Streifen reißen. In der Omnia-Form abwechselnd Tortillas, Bohnen, Mais, Zwiebel und Tomaten schichten, mit Tomaten abschließen.",
+     "Käse darüberstreuen.",
+     "Omnia-Unterteil 3 Minuten auf hoher Flamme vorheizen, Form mit Deckel aufsetzen und auf kleiner Flamme 25 Minuten backen, bis alles heiß und der Käse geschmolzen ist."
+    ]
+   },
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 35,
+    "aktiv": 10,
+    "schritte": [
+     "Backofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Auflauf wie beschrieben in einer kleinen Form schichten und 20–25 Minuten backen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "omnia",
+   "guenstig",
+   "wenig_abwasch"
+  ],
+  "tipp": "Bis auf den Käse liegt alles im Vorratsfach; als Notreserve für Tage ohne Einkauf eignen sich die Dosen besonders gut.",
+  "foto": "layered tortilla bake with kidney beans, corn and tomato under melted cheese in a ring-shaped camping oven"
+ },
+ {
+  "id": "C09",
+  "titel": "Omnia-Gnocchi in Tomatensoße mit Mozzarella",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "gnocchi",
+    500
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "knoblauch",
+    5
+   ],
+   [
+    "olivenoel",
+    10
+   ],
+   [
+    "italien_kraeuter",
+    2
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "mozzarella",
+    1,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "omnia"
+    ],
+    "zeit": 30,
+    "aktiv": 8,
+    "schritte": [
+     "Zwiebel und Knoblauch fein würfeln.",
+     "In der Omnia-Form die Tomaten mit 50 ml Wasser, Olivenöl, Kräutern, Salz, Zwiebel und Knoblauch verrühren und die rohen Gnocchi untermischen.",
+     "Mozzarella in Scheiben zupfen und obenauf legen.",
+     "Omnia-Unterteil 3 Minuten auf hoher Flamme vorheizen, Form mit Deckel aufsetzen und auf kleiner Flamme 22–25 Minuten backen, bis die Gnocchi weich sind und die Soße blubbert.",
+     "Direkt aus der Form servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 30,
+    "aktiv": 8,
+    "schritte": [
+     "Backofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Alles wie beschrieben in einer Auflaufform mischen und 20–25 Minuten backen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "omnia",
+   "guenstig",
+   "wenig_abwasch"
+  ],
+  "tipp": "Die Gnocchi garen direkt in der Soße, du brauchst also kein Kochwasser und keinen zweiten Topf.",
+  "foto": "gnocchi baked in rich tomato sauce with melted mozzarella and herbs in a ring-shaped stovetop oven"
+ },
+ {
+  "id": "C10",
+  "titel": "Omnia-Hähnchen mit Kartoffeln und Paprika",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "haehnchenbrust",
+    300
+   ],
+   [
+    "kartoffel",
+    500
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "paprikapulver",
+    3
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "joghurt_becher",
+    1,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "omnia"
+    ],
+    "zeit": 50,
+    "aktiv": 15,
+    "schritte": [
+     "Kartoffeln ungeschält in 2-cm-Würfel schneiden und in der Omnia-Form mit der Hälfte von Öl, Salz und Paprikapulver mischen.",
+     "Omnia-Unterteil 3 Minuten auf hoher Flamme vorheizen, Form mit Deckel aufsetzen und auf kleiner bis mittlerer Flamme 15 Minuten backen.",
+     "Inzwischen Hähnchen in 2-cm-Würfel, Paprika und Zwiebel in Streifen schneiden und mit restlichem Öl und Gewürzen mischen (Brett danach gründlich abwaschen).",
+     "Hähnchen und Gemüse auf die Kartoffeln geben, umrühren und weitere 25 Minuten backen. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Joghurt mit einer Prise Salz verrühren und als Dip direkt aus dem Becher dazu essen."
+    ]
+   },
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Backofen auf 220 °C vorheizen, Kartoffeln mit Öl und Gewürzen 15 Minuten backen.",
+     "Hähnchen und Gemüse dazugeben und 20–25 Minuten weiterbacken, bis das Fleisch durchgegart ist (Kerntemperatur mind. 72 °C)."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "omnia",
+   "eiweiss",
+   "wenig_abwasch"
+  ],
+  "tipp": "Frisches Hähnchen am Einkaufstag verbrauchen; das Gericht passt deshalb gut auf den ersten Abend nach dem Supermarkt.",
+  "foto": "roasted potato cubes with golden chicken pieces and red pepper strips in a ring-shaped camping oven, small cup of yogurt dip"
+ },
+ {
+  "id": "C11",
+  "titel": "Halloumi-Gemüse-Spieße mit Fladenbrot",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "halloumi",
+    225
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "rote_zwiebel",
+    80
+   ],
+   [
+    "cherrytomate",
+    150
+   ],
+   [
+    "olivenoel",
+    15
+   ],
+   [
+    "oregano",
+    1
+   ],
+   [
+    "zitrone",
+    50
+   ],
+   [
+    "fladenbrot",
+    200
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "grill"
+    ],
+    "zeit": 25,
+    "aktiv": 15,
+    "schritte": [
+     "Grill anheizen (mittlere direkte Hitze).",
+     "Halloumi in 2-cm-Würfel, Zucchini in dicke Scheiben, Paprika und Zwiebel in grobe Stücke schneiden.",
+     "Alles mit den Cherrytomaten abwechselnd auf Metall- oder gewässerte Holzspieße stecken, mit Olivenöl bepinseln und mit Oregano bestreuen.",
+     "Spieße 8–10 Minuten grillen und dabei mehrmals wenden, bis der Halloumi goldene Streifen hat.",
+     "Fladenbrot in den letzten 2 Minuten kurz auf dem Rost wärmen.",
+     "Mit Zitronensaft beträufeln und mit dem Brot servieren – gegessen wird vom Brett."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 20,
+    "aktiv": 15,
+    "schritte": [
+     "Halloumi und Gemüse wie beschrieben würfeln (ohne Spieße).",
+     "Öl in der Pfanne auf mittlerer Flamme erhitzen, zuerst Zucchini, Paprika und Zwiebel 5 Minuten braten.",
+     "Halloumi und Tomaten dazugeben und weitere 4–5 Minuten braten, bis der Käse goldbraun ist.",
+     "Mit Oregano und Zitronensaft abschmecken, Fladenbrot zum Auftunken dazu."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "grill",
+   "wenig_abwasch"
+  ],
+  "tipp": "Draußen gegrillt bleibt der Bratgeruch nicht in Polstern und Vorhängen hängen.",
+  "foto": "skewers with grilled halloumi cubes, zucchini, red pepper, red onion and cherry tomatoes on a camping grill, flatbread beside"
+ },
+ {
+  "id": "C12",
+  "titel": "Hähnchenspieße mit Joghurt-Knoblauch-Dip",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "haehnchenbrust",
+    300
+   ],
+   [
+    "olivenoel",
+    15
+   ],
+   [
+    "paprikapulver",
+    3
+   ],
+   [
+    "zitrone",
+    50
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "joghurt_becher",
+    1,
+    "stk"
+   ],
+   [
+    "knoblauch",
+    5
+   ],
+   [
+    "gurke",
+    200
+   ],
+   [
+    "fladenbrot",
+    200
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "grill"
+    ],
+    "zeit": 30,
+    "aktiv": 15,
+    "schritte": [
+     "Hähnchen in 3-cm-Würfel schneiden und in einer Schüssel mit Öl, Paprikapulver, der Hälfte Zitronensaft, Salz und Pfeffer mischen. 10 Minuten ziehen lassen, in der Zeit den Grill anheizen.",
+     "Brett und Messer nach dem rohen Fleisch gründlich abwaschen, bevor du das Gemüse schneidest.",
+     "Knoblauch fein hacken und direkt in den Joghurtbecher rühren, mit restlichem Zitronensaft und einer Prise Salz abschmecken.",
+     "Gurke in Scheiben schneiden.",
+     "Hähnchen auf Spieße stecken und 10–12 Minuten bei mittlerer Hitze grillen, dabei mehrmals wenden. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Fladenbrot kurz auf dem Rost wärmen und mit Spießen, Gurke und Dip servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 25,
+    "aktiv": 15,
+    "schritte": [
+     "Hähnchen wie beschrieben würfeln und marinieren.",
+     "Pfanne ohne zusätzliches Öl auf mittlerer bis hoher Flamme erhitzen und die Würfel 8–10 Minuten rundum braten. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C.",
+     "Dip und Gurke wie beschrieben vorbereiten und mit dem Brot servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "grill",
+   "eiweiss"
+  ],
+  "tipp": "Den Dip im Joghurtbecher anrühren spart eine Schüssel; der Becher geht danach direkt in den Verpackungsmüll.",
+  "foto": "grilled chicken skewers with paprika crust, cucumber slices, garlic yogurt dip and warm flatbread on a wooden board outdoors"
+ },
+ {
+  "id": "C13",
+  "titel": "Lachs vom Grill mit Zitronen-Zucchini",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "lachs",
+    2,
+    "stk"
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "zitrone",
+    1,
+    "stk"
+   ],
+   [
+    "olivenoel",
+    15
+   ],
+   [
+    "salz",
+    2
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "broetchen",
+    2,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "grill"
+    ],
+    "zeit": 20,
+    "aktiv": 12,
+    "schritte": [
+     "Grill anheizen (mittlere direkte Hitze). Rost gut sauber bürsten und mit etwas Öl einreiben, damit der Fisch nicht kleben bleibt.",
+     "Zucchini längs in 1 cm dicke Scheiben schneiden, mit der Hälfte Öl bepinseln, salzen und pfeffern.",
+     "Lachs auf der Fleischseite mit restlichem Öl bepinseln und salzen.",
+     "Lachs mit der Hautseite nach unten 6–8 Minuten grillen, dann kurz 1–2 Minuten wenden, bis er innen nicht mehr glasig ist und sich leicht zerteilen lässt. Zucchini daneben 3 Minuten je Seite grillen.",
+     "Brötchen in den letzten 3 Minuten auf dem Rost aufbacken.",
+     "Mit Zitronensaft beträufeln und servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 20,
+    "aktiv": 15,
+    "schritte": [
+     "Zucchini in Scheiben schneiden.",
+     "Öl in der Pfanne auf mittlerer Flamme erhitzen, Lachs auf der Hautseite 5 Minuten braten, wenden und weitere 3 Minuten garen, bis er nicht mehr glasig ist.",
+     "Lachs herausnehmen und die Zucchini im Bratfett 4–5 Minuten braten, salzen und pfeffern.",
+     "Mit Zitronensaft und den Brötchen servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "grill",
+   "schnell",
+   "eiweiss"
+  ],
+  "tipp": "Frischen Fisch am Einkaufstag grillen; draußen zubereitet bleibt auch der Fischgeruch nicht im Fahrzeug.",
+  "foto": "two grilled salmon fillets with char marks next to grilled zucchini slices and lemon halves on a camping grill"
+ },
+ {
+  "id": "C14",
+  "titel": "Camping-Burger mit Käse und Salat",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "rinderhack",
+    300
+   ],
+   [
+    "zwiebel",
+    40
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "broetchen",
+    2,
+    "stk"
+   ],
+   [
+    "gouda",
+    2,
+    "stk"
+   ],
+   [
+    "tomate",
+    80
+   ],
+   [
+    "eisberg",
+    60
+   ],
+   [
+    "ketchup",
+    20
+   ],
+   [
+    "senf",
+    10
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "grill"
+    ],
+    "zeit": 25,
+    "aktiv": 15,
+    "schritte": [
+     "Grill anheizen (mittlere bis hohe direkte Hitze).",
+     "Zwiebel sehr fein würfeln, mit Hackfleisch, Salz und Pfeffer verkneten und zu 2 flachen Patties (ca. 1,5 cm dick) formen. Danach Hände und Brett gründlich waschen.",
+     "Tomate in Scheiben schneiden, Salatblätter abzupfen.",
+     "Patties 4–5 Minuten je Seite grillen. Hackfleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "In der letzten Minute je eine Scheibe Gouda auflegen und die aufgeschnittenen Brötchen mit der Schnittfläche nach unten kurz rösten.",
+     "Brötchen mit Ketchup und Senf bestreichen, mit Salat, Patty und Tomate belegen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 25,
+    "aktiv": 15,
+    "schritte": [
+     "Patties wie beschrieben formen.",
+     "Pfanne ohne Öl auf mittlerer bis hoher Flamme erhitzen und die Patties 4–5 Minuten je Seite braten. Hackfleisch vollständig durchgaren: Kerntemperatur mind. 72 °C.",
+     "Käse auflegen, Deckel oder Teller kurz drauf, bis er schmilzt. Danach die Brötchenhälften im Bratfett kurz anrösten.",
+     "Burger wie beschrieben belegen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "grill",
+   "eiweiss"
+  ],
+  "tipp": "Hackfleisch am Einkaufstag verarbeiten und bis zum Grillen in der kältesten Ecke der Kühlbox lagern.",
+  "foto": "two cheeseburgers with grilled beef patties, melted gouda, lettuce and tomato in toasted rolls on a camping table"
+ },
+ {
+  "id": "C15",
+  "titel": "Schnitzel vom Grill mit Krautsalat",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "schweineschnitzel",
+    300
+   ],
+   [
+    "weisskohl",
+    300
+   ],
+   [
+    "moehre",
+    100
+   ],
+   [
+    "essig",
+    20
+   ],
+   [
+    "rapsoel",
+    25
+   ],
+   [
+    "zucker",
+    5
+   ],
+   [
+    "senf",
+    10
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "paprikapulver",
+    2
+   ],
+   [
+    "mischbrot",
+    4,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "grill"
+    ],
+    "zeit": 30,
+    "aktiv": 20,
+    "schritte": [
+     "Weißkohl in feine Streifen schneiden oder hobeln, Möhre grob raspeln. In einer Schüssel mit 2 g Salz kräftig mit den Händen durchkneten.",
+     "Essig, 15 ml Öl, Zucker und Pfeffer unterrühren und den Salat 15 Minuten ziehen lassen. In der Zeit den Grill anheizen.",
+     "Schnitzel mit Senf, restlichem Öl, Paprikapulver und Salz einreiben.",
+     "Auf dem Grill bei mittlerer bis hoher Hitze 3–4 Minuten je Seite grillen. Schweinefleisch vollständig durchgaren: innen nicht mehr rosa, kein roter Fleischsaft.",
+     "Mit Krautsalat und Brot servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 30,
+    "aktiv": 20,
+    "schritte": [
+     "Krautsalat wie beschrieben anmachen und ziehen lassen.",
+     "Schnitzel würzen und in der Pfanne auf mittlerer bis hoher Flamme 3–4 Minuten je Seite braten, bis sie durchgegart sind.",
+     "Mit Krautsalat und Brot servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "grill",
+   "guenstig",
+   "eiweiss"
+  ],
+  "tipp": "Ein Weißkohl hält ungeschnitten lange und braucht wenig Platz in der Kühlung; den Rest gibt es am nächsten Tag als Beilage.",
+  "foto": "two grilled pork escalopes with grill marks, a bowl of fresh coleslaw with carrot and slices of rye bread"
+ },
+ {
+  "id": "C16",
+  "titel": "Bauernsalat mit Feta und Fladenbrot",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "gurke",
+    200
+   ],
+   [
+    "tomate",
+    240
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "rote_zwiebel",
+    40
+   ],
+   [
+    "feta",
+    150
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "essig",
+    10
+   ],
+   [
+    "oregano",
+    1
+   ],
+   [
+    "salz",
+    2
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "fladenbrot",
+    200
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 15,
+    "aktiv": 15,
+    "schritte": [
+     "Gurke, Tomaten und Paprika in mundgerechte Stücke schneiden, rote Zwiebel in feine Ringe.",
+     "Alles in einer großen Schüssel mit Olivenöl, Essig, Salz und Pfeffer mischen.",
+     "Feta mit den Fingern darüberbröseln und mit Oregano bestreuen.",
+     "Fladenbrot in Stücke reißen und dazu essen, mit dem Brot den Saft aus der Schüssel auftunken – das spart das Abspülen fast ganz."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "schnell",
+   "wenig_abwasch"
+  ],
+  "tipp": "Ideal für heiße Tage: Die Flamme bleibt aus, und Tomaten, Zwiebel und Fladenbrot brauchen keinen Platz im Kühlschrank.",
+  "foto": "rustic greek-style salad with cucumber, tomato, red pepper, red onion rings and crumbled feta, torn flatbread beside"
+ },
+ {
+  "id": "C17",
+  "titel": "One-Pot-Nudeln mit Thunfisch-Tomatensoße",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "nudeln",
+    200
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "thunfisch",
+    140
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "knoblauch",
+    5
+   ],
+   [
+    "olivenoel",
+    10
+   ],
+   [
+    "gemuesebruehe",
+    5
+   ],
+   [
+    "oregano",
+    1
+   ],
+   [
+    "salz",
+    1
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 20,
+    "aktiv": 10,
+    "schritte": [
+     "Zwiebel und Knoblauch fein würfeln und im Topf mit dem Öl auf mittlerer Flamme 2 Minuten andünsten.",
+     "Tomaten, 400 ml Wasser, Brühpulver und Oregano dazugeben und aufkochen.",
+     "Nudeln roh hineingeben, Deckel halb auflegen und 10–12 Minuten köcheln lassen. Alle 2 Minuten umrühren, damit nichts ansetzt.",
+     "Wenn die Nudeln bissfest sind und die Flüssigkeit fast aufgesogen ist, Flamme aus.",
+     "Thunfisch abtropfen lassen, zerzupfen und unterheben, mit Salz und Pfeffer abschmecken.",
+     "Kein Abgießen, kein Nudelwasser: Die Stärke bindet die Soße, und es bleibt nur ein Topf."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "topf"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "gas_sparen",
+   "wenig_abwasch",
+   "ohne_kuehlschrank",
+   "guenstig"
+  ],
+  "tipp": "Alle Zutaten liegen ungekühlt im Vorrat; weil kein Nudelwasser gekocht und abgegossen wird, sparst du Frischwasser, Abwasser und Gas.",
+  "foto": "one pot of short pasta in tomato sauce with flaked tuna and oregano on a single-burner camping stove"
+ },
+ {
+  "id": "C18",
+  "titel": "Rote-Linsen-Curry mit Kokosmilch",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "rote_linsen",
+    150
+   ],
+   [
+    "kokosmilch",
+    200
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "knoblauch",
+    5
+   ],
+   [
+    "ingwer",
+    10
+   ],
+   [
+    "currypulver",
+    5
+   ],
+   [
+    "gemuesebruehe",
+    4
+   ],
+   [
+    "salz",
+    1
+   ],
+   [
+    "fladenbrot",
+    150
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 25,
+    "aktiv": 10,
+    "schritte": [
+     "Zwiebel, Knoblauch und Ingwer fein würfeln.",
+     "Alles mit Currypulver in den Topf geben, 1 Minute ohne Öl unter Rühren anrösten.",
+     "Linsen trocken einrühren, dann Tomaten, Kokosmilch, 250 ml Wasser und Brühpulver dazugeben und aufkochen.",
+     "Auf kleiner Flamme 10 Minuten köcheln lassen, gelegentlich umrühren.",
+     "Flamme aus, Deckel drauf und 5 Minuten nachziehen lassen, bis die Linsen ganz weich sind. Mit Salz abschmecken.",
+     "Mit Fladenbrot direkt aus dem Topf oder aus Schalen essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "topf"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "gas_sparen",
+   "ohne_kuehlschrank",
+   "guenstig",
+   "wenig_abwasch"
+  ],
+  "tipp": "Rote Linsen müssen nicht eingeweicht werden und garen kurz; die restliche Kokosmilch umgefüllt kühlen und am nächsten Morgen in den Porridge rühren.",
+  "foto": "pot of creamy red lentil curry with coconut milk and tomato, torn flatbread on the side, outdoor camping setting"
+ },
+ {
+  "id": "C19",
+  "titel": "Gnocchi-Würstchen-Pfanne in Tomate",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "gnocchi",
+    500
+   ],
+   [
+    "gefluegelwiener",
+    4,
+    "stk"
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "rapsoel",
+    10
+   ],
+   [
+    "paprikapulver",
+    2
+   ],
+   [
+    "salz",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 20,
+    "aktiv": 15,
+    "schritte": [
+     "Zwiebel würfeln, Würstchen in Scheiben schneiden.",
+     "Öl in der Pfanne auf mittlerer Flamme erhitzen und die rohen Gnocchi darin 6–7 Minuten braten, bis sie leicht goldbraun sind – vorkochen ist nicht nötig.",
+     "Zwiebel und Würstchen dazugeben und 2 Minuten mitbraten.",
+     "Tomaten, 50 ml Wasser und Paprikapulver einrühren und 4–5 Minuten köcheln lassen, bis alles heiß ist.",
+     "Mit Salz abschmecken und direkt aus der Pfanne servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "gas_sparen",
+   "wenig_abwasch",
+   "ohne_kuehlschrank",
+   "guenstig"
+  ],
+  "tipp": "Gnocchi, Würstchen im Glas und Tomaten sind ein typischer Notvorrat; die restlichen Würstchen im Sud gekühlt aufbewahren und bald verbrauchen.",
+  "foto": "pan of golden fried gnocchi with sliced sausages in tomato sauce, sprinkled with paprika, on a camping stove"
+ },
+ {
+  "id": "C20",
+  "titel": "Couscous-Gemüsepfanne mit Kichererbsen",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "couscous",
+    120
+   ],
+   [
+    "kichererbsen_dose",
+    240
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "olivenoel",
+    15
+   ],
+   [
+    "kreuzkuemmel",
+    2
+   ],
+   [
+    "paprikapulver",
+    2
+   ],
+   [
+    "gemuesebruehe",
+    4
+   ],
+   [
+    "zitrone",
+    50
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 18,
+    "aktiv": 12,
+    "schritte": [
+     "Zucchini, Paprika und Zwiebel klein würfeln, Kichererbsen abgießen.",
+     "Öl in der Pfanne auf mittlerer Flamme erhitzen und das Gemüse 5 Minuten braten.",
+     "Kichererbsen, Kreuzkümmel und Paprikapulver dazugeben und 1 Minute mitbraten.",
+     "200 ml Wasser und Brühpulver angießen und aufkochen lassen.",
+     "Couscous einstreuen, umrühren, Flamme sofort aus und Deckel oder einen Teller auflegen. 5 Minuten quellen lassen.",
+     "Mit einer Gabel auflockern, mit Zitronensaft abschmecken und aus der Pfanne servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "gas_sparen",
+   "wenig_abwasch",
+   "guenstig"
+  ],
+  "tipp": "Couscous gart ohne Flamme nur im heißen Wasser; so brennt der Kocher nur für das Gemüse.",
+  "foto": "pan of fluffy couscous with chickpeas, zucchini and red pepper cubes, lemon wedge on top, outdoor table"
+ },
+ {
+  "id": "C21",
+  "titel": "Schneller Linseneintopf mit Würstchen",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "linsen_dose",
+    400
+   ],
+   [
+    "kartoffel",
+    300
+   ],
+   [
+    "moehre",
+    100
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "wiener",
+    4,
+    "stk"
+   ],
+   [
+    "rapsoel",
+    5
+   ],
+   [
+    "gemuesebruehe",
+    6
+   ],
+   [
+    "essig",
+    10
+   ],
+   [
+    "salz",
+    1
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 25,
+    "aktiv": 10,
+    "schritte": [
+     "Kartoffeln schälen und in 1-cm-Würfel schneiden (kleine Würfel garen schneller), Möhre in Scheiben, Zwiebel würfeln.",
+     "Zwiebel im Topf mit dem Öl 2 Minuten andünsten.",
+     "Kartoffeln, Möhre, 400 ml Wasser und Brühpulver dazugeben, Deckel auf und 12 Minuten auf mittlerer Flamme köcheln lassen.",
+     "Linsen mit Flüssigkeit und die Würstchen in Scheiben dazugeben und 3 Minuten heiß werden lassen.",
+     "Flamme aus, mit Essig, Salz und Pfeffer abschmecken und aus Tassen oder Schalen löffeln."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "topf"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "gas_sparen",
+   "wenig_abwasch",
+   "guenstig"
+  ],
+  "tipp": "Linsen aus der Dose sind schon gar und müssen nur heiß werden; die Flamme brennt damit nur so lange, wie die Kartoffeln brauchen.",
+  "foto": "hearty lentil stew with potato cubes, carrot slices and sausage pieces in an enamel pot on a camping stove"
+ },
+ {
+  "id": "C22",
+  "titel": "Chili mit Sojaschnetzeln und Tortillas",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "sojagranulat",
+    50
+   ],
+   [
+    "kidney_dose",
+    250
+   ],
+   [
+    "mais_dose",
+    285
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "knoblauch",
+    5
+   ],
+   [
+    "tomatenmark",
+    20
+   ],
+   [
+    "rapsoel",
+    10
+   ],
+   [
+    "paprikapulver",
+    3
+   ],
+   [
+    "kreuzkuemmel",
+    2
+   ],
+   [
+    "chiliflocken",
+    1
+   ],
+   [
+    "salz",
+    2
+   ],
+   [
+    "tortilla",
+    4,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 25,
+    "aktiv": 10,
+    "schritte": [
+     "Zwiebel und Knoblauch würfeln und im Topf mit dem Öl 2 Minuten andünsten.",
+     "Tomatenmark, Paprikapulver, Kreuzkümmel und Chiliflocken kurz mitrösten.",
+     "Sojaschnetzel trocken dazugeben, Tomaten und 250 ml Wasser angießen und aufkochen.",
+     "Bohnen und Mais abgießen, dazugeben und alles 10 Minuten auf kleiner Flamme köcheln lassen, bis die Schnetzel weich sind. Mit Salz abschmecken.",
+     "Flamme aus, die Tortillas einzeln kurz auf den heißen Topfdeckel legen, damit sie warm werden.",
+     "Chili in die Tortillas löffeln, einrollen und aus der Hand essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "topf"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "gas_sparen",
+   "ohne_kuehlschrank",
+   "guenstig",
+   "eiweiss",
+   "wenig_abwasch"
+  ],
+  "tipp": "Sojaschnetzel sind leicht und lange haltbar, damit sparen sie Zuladung und Kühlschrankplatz im Vergleich zu frischem Hack.",
+  "foto": "pot of thick chili with soy mince, kidney beans and corn, rolled tortillas filled with chili beside it"
+ },
+ {
+  "id": "C23",
+  "titel": "Brotzeit-Box für den Ausflug",
+  "mahlzeit": [
+   "mittag"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "vollkornbrot",
+    4,
+    "stk"
+   ],
+   [
+    "butter",
+    15
+   ],
+   [
+    "gouda",
+    4,
+    "stk"
+   ],
+   [
+    "kochschinken",
+    60
+   ],
+   [
+    "gurke",
+    200
+   ],
+   [
+    "cherrytomate",
+    150
+   ],
+   [
+    "apfel",
+    2,
+    "stk"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 10,
+    "aktiv": 10,
+    "schritte": [
+     "Brotscheiben mit Butter bestreichen, mit Gouda und Schinken belegen und je zwei Scheiben zusammenklappen.",
+     "Gurke in Stifte schneiden, Cherrytomaten ganz lassen (so bleiben sie fester).",
+     "Brote, Gemüse und Äpfel in eine Box schichten, die Brote unten.",
+     "Box bis zum Losfahren kühl lagern und unterwegs innerhalb von 2 Stunden essen, oder in einer Kühltasche mitnehmen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "box",
+   "schnell",
+   "wenig_abwasch"
+  ],
+  "tipp": "Eine Box für zwei spart Verpackung; das Messer für Gurke und Brot wird nur einmal gebraucht.",
+  "foto": "lunch box with rye bread sandwiches with cheese and ham, cucumber sticks, cherry tomatoes and two apples, on a picnic blanket"
+ },
+ {
+  "id": "C24",
+  "titel": "Couscous-Salat mit Kichererbsen und Feta",
+  "mahlzeit": [
+   "mittag"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "couscous",
+    120
+   ],
+   [
+    "gemuesebruehe",
+    4
+   ],
+   [
+    "kichererbsen_dose",
+    240
+   ],
+   [
+    "gurke",
+    200
+   ],
+   [
+    "cherrytomate",
+    150
+   ],
+   [
+    "feta",
+    100
+   ],
+   [
+    "petersilie",
+    15
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "zitrone",
+    50
+   ],
+   [
+    "salz",
+    1
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 20,
+    "aktiv": 12,
+    "schritte": [
+     "200 ml Wasser mit Brühpulver im Topf aufkochen.",
+     "Flamme aus, Couscous einrühren, Deckel auf und 5 Minuten quellen lassen. Dann mit der Gabel auflockern und offen abkühlen lassen.",
+     "Inzwischen Kichererbsen abgießen, Gurke würfeln, Tomaten halbieren, Petersilie hacken.",
+     "Alles direkt im Topf mit Öl, Zitronensaft, Salz und Pfeffer mischen, Feta darüberbröseln.",
+     "In eine Box füllen, kühl lagern und unterwegs innerhalb von 2 Stunden essen."
+    ]
+   },
+   {
+    "geraete": [
+     "wasserkocher"
+    ],
+    "zeit": 20,
+    "aktiv": 12,
+    "schritte": [
+     "Couscous und Brühpulver in eine Schüssel geben, 200 ml kochendes Wasser aus dem Wasserkocher darübergießen, abdecken und 5 Minuten quellen lassen.",
+     "Auflockern, abkühlen lassen und wie beschrieben mit den übrigen Zutaten mischen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "box",
+   "gas_sparen",
+   "wenig_abwasch"
+  ],
+  "tipp": "Der Couscous gart nur im heißen Wasser; den Salat im selben Topf mischen spart eine Schüssel beim Abwasch.",
+  "foto": "couscous salad with chickpeas, cucumber, halved cherry tomatoes, parsley and crumbled feta in a lunch box"
+ },
+ {
+  "id": "C25",
+  "titel": "Pesto-Nudelsalat mit Tomaten und Mozzarella",
+  "mahlzeit": [
+   "mittag"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "nudeln",
+    180
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pesto",
+    60
+   ],
+   [
+    "cherrytomate",
+    250
+   ],
+   [
+    "mozzarella",
+    1,
+    "stk"
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 25,
+    "aktiv": 10,
+    "schritte": [
+     "800 ml Wasser mit Salz im Topf mit Deckel aufkochen.",
+     "Nudeln hineingeben, 2 Minuten sprudelnd kochen lassen, dann Flamme aus, Deckel fest auflegen und die Nudeln 10–12 Minuten im heißen Wasser ziehen lassen, bis sie bissfest sind.",
+     "2 EL Nudelwasser abnehmen und mit dem Pesto verrühren, das restliche Wasser abgießen (zum Vorspülen der Teller verwenden).",
+     "Nudeln im Topf mit dem Pesto mischen und offen abkühlen lassen.",
+     "Tomaten halbieren, Mozzarella in Würfel zupfen und unterheben, pfeffern.",
+     "In eine Box füllen, kühl lagern und unterwegs innerhalb von 2 Stunden essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "box",
+   "gas_sparen",
+   "wenig_abwasch",
+   "guenstig"
+  ],
+  "tipp": "Beim Restwärme-Verfahren brennt die Flamme nur bis zum Aufkochen und 2 Minuten danach; mit wenig Wasser geht es schneller.",
+  "foto": "pasta salad with green pesto, halved cherry tomatoes and mozzarella pieces in a lunch box on a picnic table"
+ },
+ {
+  "id": "C26",
+  "titel": "Thunfisch-Wraps mit Frischkäse und Paprika",
+  "mahlzeit": [
+   "mittag"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "tortilla",
+    4,
+    "stk"
+   ],
+   [
+    "frischkaese",
+    100
+   ],
+   [
+    "thunfisch",
+    140
+   ],
+   [
+    "zitrone",
+    20
+   ],
+   [
+    "eisberg",
+    100
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "salz",
+    1
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 10,
+    "aktiv": 10,
+    "schritte": [
+     "Thunfisch abtropfen lassen und direkt in der Dose mit 2 EL Frischkäse, Zitronensaft, Salz und Pfeffer mit der Gabel verrühren.",
+     "Tortillas mit dem restlichen Frischkäse bestreichen.",
+     "Salat in Streifen, Paprika in feine Streifen schneiden.",
+     "Thunfischcreme, Salat und Paprika auf die Tortillas verteilen, die Seiten einschlagen und fest aufrollen.",
+     "Halbieren, in eine Box legen, kühl lagern und unterwegs innerhalb von 2 Stunden essen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "box",
+   "schnell",
+   "wenig_abwasch",
+   "eiweiss"
+  ],
+  "tipp": "Die Thunfischcreme in der Dose anrühren spart eine Schüssel; Tortillas und Thunfisch lagern bis zum Gebrauch ungekühlt.",
+  "foto": "four halved tortilla wraps filled with tuna cream, lettuce and red pepper strips in a lunch box"
+ },
+ {
+  "id": "C27",
+  "titel": "Omnia-Apfel-Crumble mit Haferflocken",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "apfel",
+    4,
+    "stk"
+   ],
+   [
+    "zimt",
+    2
+   ],
+   [
+    "zucker",
+    60
+   ],
+   [
+    "mehl",
+    100
+   ],
+   [
+    "haferflocken",
+    50
+   ],
+   [
+    "butter",
+    70
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "omnia"
+    ],
+    "zeit": 45,
+    "aktiv": 12,
+    "schritte": [
+     "Äpfel vierteln, entkernen und in dünne Spalten schneiden, direkt in der Omnia-Form mit Zimt und 10 g Zucker mischen.",
+     "Mehl, Haferflocken, restlichen Zucker und die weiche Butter in einer Schüssel mit den Fingern zu Streuseln verkrümeln und über die Äpfel geben.",
+     "Omnia-Unterteil 3 Minuten auf hoher Flamme vorheizen, Form mit Deckel aufsetzen und die Flamme auf klein stellen.",
+     "30–35 Minuten backen, bis die Äpfel weich sind und die Streusel fest werden.",
+     "10 Minuten abkühlen lassen und lauwarm zum Kaffee servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 45,
+    "aktiv": 12,
+    "schritte": [
+     "Backofen auf 190 °C Ober-/Unterhitze vorheizen.",
+     "Crumble wie beschrieben in einer kleinen Auflaufform schichten und 30 Minuten goldbraun backen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "omnia",
+   "guenstig"
+  ],
+  "tipp": "Ein Kuchen ganz ohne Backpulver und ohne Rührgerät; Äpfel lagern ungekühlt und eignen sich gut für den Vorrat.",
+  "foto": "apple crumble with golden oat streusel in a ring-shaped stovetop camping oven, steaming coffee mug beside it"
+ },
+ {
+  "id": "C28",
+  "titel": "Omnia-Kaiserschmarrn mit Apfelmark",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "eier",
+    2,
+    "stk"
+   ],
+   [
+    "mehl",
+    60
+   ],
+   [
+    "milch",
+    125
+   ],
+   [
+    "zucker",
+    10
+   ],
+   [
+    "butter",
+    10
+   ],
+   [
+    "rosinen",
+    15
+   ],
+   [
+    "apfelmark",
+    100
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "herd",
+     "omnia"
+    ],
+    "zeit": 35,
+    "aktiv": 10,
+    "schritte": [
+     "Eier, Mehl, H-Milch und 5 g Zucker in einer Schüssel mit der Gabel kräftig zu einem glatten Teig verquirlen, 5 Minuten ruhen lassen.",
+     "Omnia-Unterteil 3 Minuten auf hoher Flamme vorheizen. Die Form mit der Butter ausstreichen.",
+     "Teig in die Form gießen, Rosinen daraufstreuen, Deckel auf und die Flamme auf klein stellen.",
+     "20 Minuten backen, bis der Teig aufgegangen und fest ist.",
+     "Deckel abnehmen, den Schmarrn mit zwei Gabeln in Stücke reißen, restlichen Zucker darüberstreuen, Deckel wieder auf und 3 Minuten weiterbacken. Innen darf kein flüssiger Teig mehr sein.",
+     "Mit Apfelmark aus dem Glas servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "pfanne"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "omnia",
+   "guenstig"
+  ],
+  "tipp": "Im Omnia gelingt der Kaiserschmarrn ohne Wenden in der Pfanne, und es spritzt kein Fett ins Fahrzeug.",
+  "foto": "torn fluffy kaiserschmarrn pancake pieces with raisins and sugar in a ring-shaped camping oven, small bowl of apple sauce"
+ },
+ {
+  "id": "C29",
+  "titel": "Grillbananen mit Schokolade",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "banane",
+    2,
+    "stk"
+   ],
+   [
+    "zartbitter",
+    40
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "grill"
+    ],
+    "zeit": 12,
+    "aktiv": 3,
+    "schritte": [
+     "Bananen mit Schale längs an der Innenseite einschneiden, nicht durchschneiden.",
+     "Schokolade in Stücke brechen und in den Schlitz stecken.",
+     "Bananen mit der Schnittseite nach oben 8–10 Minuten an den Rand des Grills legen, bis die Schale dunkel ist und die Schokolade geschmolzen ist.",
+     "Direkt aus der Schale löffeln – die Schale ist der Teller."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 12,
+    "aktiv": 3,
+    "schritte": [
+     "Bananen wie beschrieben einschneiden und mit Schokolade füllen.",
+     "In die Pfanne legen, Deckel auf und auf kleiner Flamme 8–10 Minuten erwärmen, bis die Schokolade geschmolzen ist.",
+     "Aus der Schale löffeln; die Pfanne bleibt fast sauber."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "grill",
+   "ohne_kuehlschrank",
+   "schnell",
+   "wenig_abwasch",
+   "guenstig"
+  ],
+  "tipp": "Die Restglut nach dem Grillen reicht für die Bananen, es wird also nichts extra angeheizt.",
+  "foto": "two grilled bananas in blackened peel, slit open with melted dark chocolate, on the edge of a campfire grill"
+ },
+ {
+  "id": "C30",
+  "titel": "Knäckebrot mit Erdnussmus und Apfel",
+  "mahlzeit": [
+   "snack"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "knaeckebrot",
+    4,
+    "stk"
+   ],
+   [
+    "erdnussmus",
+    30
+   ],
+   [
+    "apfel",
+    1,
+    "stk"
+   ],
+   [
+    "honig",
+    10
+   ],
+   [
+    "zimt",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [],
+    "zeit": 5,
+    "aktiv": 5,
+    "schritte": [
+     "Knäckebrot dünn mit Erdnussmus bestreichen.",
+     "Apfel in dünne Scheiben schneiden und darauflegen.",
+     "Mit Honig beträufeln und mit Zimt bestäuben.",
+     "Sofort essen, damit das Knäckebrot knusprig bleibt."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 24,
+   "kalt_essbar": true,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "camping",
+   "ohne_kuehlschrank",
+   "schnell",
+   "wenig_abwasch",
+   "guenstig"
+  ],
+  "tipp": "Alles lagert ungekühlt im Vorratsfach und ist auch an Fahrtagen ohne Kühlung in fünf Minuten fertig.",
+  "foto": "crispbread slices spread with peanut butter, topped with thin apple slices, honey drizzle and cinnamon"
+ }
+]

@@ -10,7 +10,7 @@
 //    Abwechslung, Kochaufwand und Reste in angebrochenen Packungen.
 // 4. Einkaufsliste, Kosten, Nährwerte, Lagerhinweise und Vorkoch-Ablauf ableiten.
 
-import { MAHLZEITEN, zufall, ersterWeg, zutatLagerbar, gramm, istOptional, rund } from './grundlagen.js';
+import { MAHLZEITEN, zufall, ersterWeg, zutatLagerbar, gramm, packGramm, istOptional, rund } from './grundlagen.js';
 import { einkaufsliste } from './einkauf.js';
 import { vorkochAblauf } from './ablauf.js';
 import { LAEDEN } from './laeden.js';
@@ -78,6 +78,18 @@ function passtDiaet(r, diaet) {
     (diaet === 'ohne_schwein' && r.diaet.includes('pescetarisch'));
 }
 
+// Ohne Kühlschrank: Zutaten, die nach dem Öffnen gekühlt werden müssen (Flag o), nur wenn die Packung
+// beim Kochen fast ganz verbraucht wird – sonst bliebe ein Rest, der nicht sicher gelagert werden kann.
+function angebrochen(r, Z, personen) {
+  return r.zutaten.some((z) => {
+    if (istOptional(z) || !Z[z[0]].flags.includes('o')) return false;
+    const pg = packGramm(Z[z[0]]);
+    const bedarf = gramm(Z[z[0]], z[1], z[2]) * personen / r.portionen;
+    const rest = (Math.ceil(bedarf / pg - 1e-9) * pg - bedarf) / pg;
+    return rest > 0.2;
+  });
+}
+
 export function kandidaten(daten, p) {
   const Z = daten.zutaten;
   const grund = { diaet: 0, allergie: 0, abneigung: 0, geraet: 0, lager: 0 };
@@ -89,6 +101,7 @@ export function kandidaten(daten, p) {
     const weg = ersterWeg(r, p.geraete);
     if (!weg) { grund.geraet++; continue; }
     if (r.zutaten.some((z) => !istOptional(z) && !zutatLagerbar(Z[z[0]], p.geraete))) { grund.lager++; continue; }
+    if (!p.geraete.kuehlschrank && angebrochen(r, Z, p.personen)) { grund.lager++; continue; }
     liste.push({ r, weg });
   }
   return { liste, grund };
@@ -272,6 +285,9 @@ function kopie(plan) {
 
 function gueltig(e, ctx) {
   if (e.slots.length > MAX_SLOTS_JE_KOCHEN) return false;
+  // dasselbe Gericht nicht zweimal am selben Tag
+  const tage = e.slots.map((s) => ctx.slots[s].d);
+  if (new Set(tage).size !== tage.length) return false;
   if (e.slots.length > 1 && !e.k.r.mealprep && !(e.k.r.lager.ungekuehlt_h >= 24)) return false;
   return e.slots.every((s) => slotErlaubt(e.k, e.kochtag, s, ctx));
 }
