@@ -1,0 +1,20 @@
+# Tellerkontor
+
+> Vier Essensplaner als Web-App (PWA, Deutsch, ohne Konto): Geräte ankreuzen, Laden und Budget wählen, Wochenplan mit Einkaufsliste und geschätzten Kosten bekommen. Eingaben bleiben im Browser.
+
+## Fakten (Stand 2026-10-29)
+- 195 Rezepte. Nur Wasserkocher und Kühlschrank: 47; Wasserkocher, Mikrowelle und Kühlschrank: 59; eine Kochplatte mit Topf und Pfanne: 95; zwei Flammen, Omnia und Kühlbox: 107; ohne Gerät: 18
+- Nährwerte: Bundeslebensmittelschlüssel 4.0 (Max Rubner-Institut, CC BY 4.0). Preise: eigene Schätzung je Laden, keine Tagespreise
+- Lagerfristen nach BfR, teils strenger: Kühlschrank (höchstens 7 °C) bis 2 Tage, Reis, Nudeln, Fisch, Hack und Eiergerichte 1 Tag
+- Preise: Tagesplan gratis; Plus 6,99 € im Monat oder 44,99 € im Jahr (Laufzeit 12 Monate); Montage-Pass 17,99 € einmalig für 3 Monate; Saison-Pass 24,99 € einmalig für 6 Monate; Pässe enden automatisch
+
+## Planer
+- [Zimmerherd](https://tellerkontor.de/montage.html): Für Monteure, Bau, Außendienst und Fernfahrer in Unterkünften.
+- [Kochsatz](https://tellerkontor.de/fitness.html): Für Training, Meal-Prep und feste Kalorien- und Proteinziele.
+- [Zweiflammer](https://tellerkontor.de/camping.html): Für Wohnmobil, Van, Wohnwagen und Dauercamping.
+- [Wochenschmaus](https://tellerkontor.de/alltag.html): Für alle, die nicht jeden Tag neu überlegen wollen, was es gibt.
+
+## Rechtliches
+- [Preise](https://tellerkontor.de/preise.html)
+- [Impressum](https://tellerkontor.de/impressum.html)
+- [Datenschutz](https://tellerkontor.de/datenschutz.html)

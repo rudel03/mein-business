@@ -1,0 +1,23 @@
+{
+ "name": "Wochenschmaus – Wochenplan",
+ "short_name": "Wochenschmaus",
+ "lang": "de",
+ "start_url": "planer.html?v=alltag",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#2C3146",
+ "icons": [
+  {
+   "src": "img/icon-alltag-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "img/icon-alltag-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ]
+}

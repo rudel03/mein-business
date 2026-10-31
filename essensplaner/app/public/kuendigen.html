@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verträge hier kündigen</title>
+<meta name="description" content="Plus-Vertrag kündigen, ohne Login.">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="img/logo-dach.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/stil.css">
+<script>(function(){var v=new URLSearchParams(location.search).get('v');var t={montage:1,fitness:1,camping:1,alltag:1};document.documentElement.dataset.theme=t[v]?v:'alltag';})();</script>
+<script type="module" src="js/seiten.js"></script>
+</head>
+<body>
+<header class="kopf"><div class="wrap">
+<a href="planer.html" id="heimlink"><img class="logo" id="logo" src="img/logo-dach.svg" alt="" width="36" height="36"><span class="name" id="vname">Tellerkontor</span></a>
+<span class="rechts"><a href="planer.html" data-v>Zum Planer</a></span>
+</div></header>
+<div class="markenband" aria-hidden="true"></div>
+<main class="wrap text">
+<h1>Verträge hier kündigen</h1>
+<div id="vertragbereich" tabindex="-1">
+<p>Du brauchst kein Konto und kein Passwort. Fülle die Felder aus und bestätige mit „Jetzt kündigen“.</p>
+<form id="vertragform" data-typ="kuendigung" novalidate>
+<fieldset><legend>Deine Kündigung</legend>
+<p class="lbl"><b>Art der Kündigung</b></p>
+<div class="chips"><label class="chip"><input type="radio" name="art" value="ordentlich" checked><span>Ordentliche Kündigung</span></label>
+<label class="chip"><input type="radio" name="art" value="ausserordentlich"><span>Außerordentliche Kündigung</span></label></div>
+<div class="feld" id="grund-feld" hidden><label for="grund">Grund der außerordentlichen Kündigung</label><textarea id="grund" name="grund" rows="3"></textarea></div>
+<div class="feld"><label for="name">Vor- und Nachname</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+<div class="feld"><label for="email">E-Mail-Adresse für die Kündigungsbestätigung</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+<div class="feld"><label for="vertrag">Vertrag (z. B. „Plus Jahr“) und, falls zur Hand, Bestell- oder Lizenznummer</label><input id="vertrag" name="vertrag" type="text" required></div>
+<div class="feld"><label for="zum">Kündigen zum (leer lassen = frühestmöglicher Termin)</label><input id="zum" name="zum" type="date"></div>
+</fieldset>
+<button class="knopf" type="submit">Jetzt kündigen</button>
+<p id="vertragstatus" role="status" aria-live="polite"></p>
+</form>
+</div>
+</main>
+<footer class="fuss"><div class="wrap">
+<nav aria-label="Rechtliches">
+<a href="preise.html">Preise</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a>
+<a href="widerruf.html">Widerrufsbelehrung</a><a href="kuendigen.html">Verträge hier kündigen</a><a href="widerrufen.html">Vertrag widerrufen</a>
+</nav>
+<p>Ein Angebot von <span data-feld="dachmarke">Tellerkontor</span>. Nährwerte: Bundeslebensmittelschlüssel 4.0, Max Rubner-Institut (2025), CC BY 4.0.</p>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,4186 @@
+[
+ {
+  "id": "O01",
+  "titel": "Hähnchen-Kartoffel-Blech mit Paprika",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "haehnchenbrust",
+    700
+   ],
+   [
+    "kartoffel",
+    1000
+   ],
+   [
+    "paprika",
+    3,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "olivenoel",
+    30
+   ],
+   [
+    "paprikapulver",
+    4
+   ],
+   [
+    "salz",
+    5
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "skyr",
+    250
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 50,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 220 °C Ober-/Unterhitze vorheizen.",
+     "Kartoffeln waschen und ungeschält in Spalten schneiden, mit 20 ml Öl, Salz und der Hälfte Paprikapulver auf einem Backblech mischen.",
+     "Kartoffeln 20 Minuten backen.",
+     "Inzwischen Hähnchen in 3 cm große Würfel schneiden, Paprika und Zwiebeln in Streifen. Mit restlichem Öl, Paprikapulver, Salz und Pfeffer mischen.",
+     "Hähnchen und Gemüse zu den Kartoffeln geben und alles weitere 20–25 Minuten backen, bis das Hähnchen durchgegart ist. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Skyr mit einer Prise Salz und Pfeffer als Dip verrühren und dazu servieren.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 50,
+    "aktiv": 15,
+    "schritte": [
+     "Kartoffelspalten mit 15 ml Öl, Salz und Paprikapulver mischen und in 2 Durchgängen bei 200 °C je 18 Minuten garen, nach der Hälfte schütteln.",
+     "Hähnchenwürfel, Paprika und Zwiebel mit restlichem Öl und Gewürzen mischen und in 2 Durchgängen bei 190 °C je 12–14 Minuten garen, einmal wenden. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Alles mischen und mit dem Skyr-Dip servieren.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "mealprep",
+   "box",
+   "kochtag",
+   "familie"
+  ],
+  "tipp": "Kartoffeln und Hähnchen getrennt in die Box legen, dann bleiben die Kartoffeln knuspriger.",
+  "foto": "sheet pan with roasted potato wedges, golden chicken cubes and red pepper strips, small bowl of white herb dip"
+ },
+ {
+  "id": "O02",
+  "titel": "Hähnchen-Brokkoli-Blech mit Feta",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "haehnchenbrust",
+    700
+   ],
+   [
+    "brokkoli",
+    2,
+    "stk"
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "feta",
+    200
+   ],
+   [
+    "olivenoel",
+    30
+   ],
+   [
+    "knoblauch",
+    1,
+    "stk"
+   ],
+   [
+    "oregano",
+    2
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "zitrone",
+    1,
+    "stk",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 35,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Brokkoli in Röschen teilen, Paprika würfeln, Hähnchen in 3 cm große Stücke schneiden, Knoblauch fein hacken.",
+     "Alles mit Öl, Oregano, Salz und Pfeffer auf einem Backblech mischen.",
+     "20 Minuten backen, dann den Feta darüberbröseln und weitere 5–8 Minuten backen. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Nach Belieben mit Zitronensaft beträufeln.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 35,
+    "aktiv": 15,
+    "schritte": [
+     "Brokkoli, Paprika und Hähnchen wie beschrieben schneiden und mit Öl und Gewürzen mischen.",
+     "In 2 Durchgängen bei 190 °C je 14 Minuten garen, nach 7 Minuten schütteln. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Feta darüberbröseln und im letzten Durchgang 2 Minuten mitgaren.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 25,
+    "aktiv": 20,
+    "schritte": [
+     "Hähnchenstücke in 15 ml Öl in der Pfanne bei mittlerer bis starker Hitze 6–8 Minuten rundum braten. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Brokkoli, Paprika, Knoblauch und restliches Öl zugeben, 2 EL Wasser dazu, abgedeckt 6 Minuten garen.",
+     "Würzen und den Feta darüberbröseln.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "lowcarb",
+   "mealprep",
+   "box"
+  ],
+  "tipp": "Wer mehr Kohlenhydrate braucht, ergänzt pro Box eine Scheibe Vollkornbrot oder etwas Reis.",
+  "foto": "baking tray with roasted broccoli florets, chicken pieces, red pepper and crumbled feta, lemon wedge"
+ },
+ {
+  "id": "O03",
+  "titel": "Hähnchen-Reis-Box aus dem Ofen",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "reis",
+    400
+   ],
+   [
+    "haehnchenbrust",
+    600
+   ],
+   [
+    "tk_erbsen",
+    300
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "sojasauce",
+    40
+   ],
+   [
+    "gemuesebruehe",
+    8
+   ],
+   [
+    "currypulver",
+    3
+   ],
+   [
+    "rapsoel",
+    15
+   ],
+   [
+    "salz",
+    2
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 60,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Reis in einer großen Auflaufform mit Brühepulver und Curry mischen, 900 ml Wasser angießen.",
+     "Hähnchen in Würfel schneiden, Paprika und Zwiebel würfeln, mit Öl und Sojasauce mischen und auf dem Reis verteilen.",
+     "Form fest mit Alufolie abdecken und 40 Minuten garen.",
+     "Folie abnehmen, TK-Erbsen unterrühren und offen weitere 10 Minuten garen, bis der Reis weich und das Hähnchen durchgegart ist. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Reis sofort auf flache Boxen verteilen, zügig abkühlen und innerhalb von 2 Stunden in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer",
+     "herd",
+     "topf"
+    ],
+    "zeit": 35,
+    "aktiv": 15,
+    "schritte": [
+     "Reis mit Brühepulver und 800 ml Wasser im Topf aufkochen, abgedeckt bei kleiner Hitze 15 Minuten quellen lassen, Erbsen die letzten 4 Minuten mitgaren.",
+     "Hähnchenwürfel, Paprika und Zwiebel mit Öl, Sojasauce und Curry mischen und in 2 Durchgängen bei 190 °C je 12 Minuten im Airfryer garen, einmal schütteln. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Mit dem Reis mischen, auf flache Boxen verteilen und zügig abkühlen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "aufbau",
+   "mealprep",
+   "box",
+   "kochtag",
+   "guenstig"
+  ],
+  "tipp": "Reisboxen direkt nach dem Abkühlen einfrieren, wenn sie nicht am nächsten Tag gegessen werden.",
+  "foto": "meal prep containers with yellow curry rice, peas, red pepper and chicken cubes"
+ },
+ {
+  "id": "O04",
+  "titel": "Ofenlachs mit Zucchini und Kirschtomaten",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "lachs",
+    2,
+    "stk"
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "cherrytomate",
+    250
+   ],
+   [
+    "rote_zwiebel",
+    80
+   ],
+   [
+    "olivenoel",
+    15
+   ],
+   [
+    "zitrone",
+    1,
+    "stk"
+   ],
+   [
+    "italien_kraeuter",
+    2
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 30,
+    "aktiv": 10,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Zucchini in Halbmonde schneiden, Zwiebel in Spalten, Tomaten ganz lassen. Mit Öl, Kräutern, Salz und Pfeffer in einer Auflaufform mischen und 10 Minuten backen.",
+     "Lachsfilets salzen, auf das Gemüse legen, mit Zitronenscheiben belegen und 12–15 Minuten backen, bis der Lachs innen nicht mehr glasig ist und sich leicht zerteilen lässt."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 25,
+    "aktiv": 10,
+    "schritte": [
+     "Gemüse mit Öl und Gewürzen mischen und bei 190 °C 8 Minuten im Airfryer garen.",
+     "Lachs salzen, auf das Gemüse legen und bei 180 °C 9–11 Minuten garen, bis er innen nicht mehr glasig ist."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 20,
+    "aktiv": 15,
+    "schritte": [
+     "Lachs in 5 ml Öl bei mittlerer Hitze auf der Hautseite 5 Minuten braten, wenden und 3–4 Minuten weiterbraten, bis er durchgegart ist. Herausnehmen.",
+     "Gemüse im restlichen Öl 6–8 Minuten braten, würzen und mit Zitronensaft abschmecken."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "lowcarb"
+  ],
+  "tipp": "Mit Reis oder Kartoffeln wird daraus ein Gericht für einen höheren Kalorienbedarf.",
+  "foto": "two salmon fillets on roasted zucchini and cherry tomatoes with lemon slices in a baking dish"
+ },
+ {
+  "id": "O05",
+  "titel": "Seelachs-Kartoffel-Blech mit Senf-Skyr",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "tk_seelachs",
+    400
+   ],
+   [
+    "kartoffel",
+    600
+   ],
+   [
+    "tk_brokkoli",
+    300
+   ],
+   [
+    "rapsoel",
+    15
+   ],
+   [
+    "skyr",
+    150
+   ],
+   [
+    "senf",
+    15
+   ],
+   [
+    "paprikapulver",
+    2
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "zitrone",
+    1,
+    "stk",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 45,
+    "aktiv": 12,
+    "schritte": [
+     "Seelachs über Nacht im Kühlschrank auftauen lassen. Ofen auf 220 °C Ober-/Unterhitze vorheizen.",
+     "Kartoffeln in Spalten schneiden, mit Öl, Salz und Paprikapulver auf dem Blech mischen und 20 Minuten backen.",
+     "Brokkoli und Seelachs zugeben, Fisch salzen. Skyr mit Senf verrühren und die Hälfte auf den Fisch streichen.",
+     "Ofen auf 200 °C zurückschalten und 15 Minuten backen, bis der Fisch sich leicht zerteilen lässt und innen nicht mehr glasig ist.",
+     "Mit dem restlichen Senf-Skyr servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 40,
+    "aktiv": 12,
+    "schritte": [
+     "Seelachs im Kühlschrank auftauen lassen. Kartoffelspalten mit Öl und Gewürzen bei 200 °C 18 Minuten im Airfryer garen, einmal schütteln.",
+     "Brokkoli dazugeben, Seelachs mit der Hälfte Senf-Skyr bestreichen und auf ein Stück Backpapier darauflegen.",
+     "Bei 180 °C 10–12 Minuten garen, bis der Fisch durchgegart ist. Mit restlichem Dip servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "eiweiss",
+   "guenstig"
+  ],
+  "tipp": "TK-Seelachs ist eine günstige Eiweißquelle; über Nacht im Kühlschrank aufgetaut gart er gleichmäßiger.",
+  "foto": "white fish fillet with mustard glaze, potato wedges and broccoli on a baking tray"
+ },
+ {
+  "id": "O06",
+  "titel": "Tofu-Süßkartoffel-Blech mit Sojasauce",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "tofu",
+    800
+   ],
+   [
+    "suesskartoffel",
+    800
+   ],
+   [
+    "brokkoli",
+    1,
+    "stk"
+   ],
+   [
+    "sojasauce",
+    40
+   ],
+   [
+    "rapsoel",
+    30
+   ],
+   [
+    "knoblauch",
+    1,
+    "stk"
+   ],
+   [
+    "ingwer",
+    10
+   ],
+   [
+    "paprikapulver",
+    3
+   ],
+   [
+    "salz",
+    2
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 210 °C Ober-/Unterhitze vorheizen.",
+     "Tofu gut ausdrücken und in 2 cm Würfel schneiden. Mit Sojasauce, geriebenem Ingwer, Knoblauch und 15 ml Öl mischen.",
+     "Süßkartoffeln in 2 cm Würfel schneiden, mit restlichem Öl, Paprikapulver und Salz auf einem Blech verteilen, Tofu auf ein zweites Blech.",
+     "Beide Bleche 15 Minuten backen, dann Brokkoliröschen zu den Süßkartoffeln geben und alles weitere 15 Minuten backen, bis der Tofu knusprig ist.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Tofu wie beschrieben marinieren, Süßkartoffeln würfeln und mit Öl und Gewürzen mischen.",
+     "Süßkartoffeln in 2 Durchgängen bei 200 °C je 15 Minuten garen, im zweiten Durchgang den Brokkoli die letzten 6 Minuten mitgaren.",
+     "Tofu in 2 Durchgängen bei 200 °C je 12 Minuten knusprig garen, einmal schütteln.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "mealprep",
+   "box",
+   "kochtag"
+  ],
+  "tipp": "Tofu wird knuspriger, wenn er vorher 10 Minuten zwischen Küchenpapier gepresst wird.",
+  "foto": "crispy tofu cubes with roasted sweet potato and broccoli on a baking sheet"
+ },
+ {
+  "id": "O07",
+  "titel": "Linsen-Gemüse-Auflauf mit Feta",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "rote_linsen",
+    350
+   ],
+   [
+    "passata",
+    500
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "feta",
+    200
+   ],
+   [
+    "skyr",
+    300
+   ],
+   [
+    "gemuesebruehe",
+    8
+   ],
+   [
+    "kreuzkuemmel",
+    2
+   ],
+   [
+    "paprikapulver",
+    3
+   ],
+   [
+    "salz",
+    2
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 55,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Zwiebel, Zucchini und Paprika würfeln. In einer großen Auflaufform mit Linsen, Passata, Brühepulver, Gewürzen und 600 ml Wasser verrühren.",
+     "Mit Alufolie abgedeckt 30 Minuten backen, umrühren, Feta darüberbröseln und offen weitere 10–15 Minuten backen, bis die Linsen weich sind.",
+     "Skyr mit einer Prise Salz verrühren und als Klecks auf jede Portion geben.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 55,
+    "aktiv": 15,
+    "schritte": [
+     "Gemüse würfeln und mit Linsen, Passata, Gewürzen und 550 ml Wasser in einer airfryergeeigneten Form (ca. 20 cm) verrühren; bei kleinen Geräten in 2 Durchgängen.",
+     "Mit Alufolie abgedeckt bei 180 °C 25 Minuten garen, umrühren, Feta darüber und offen weitere 8–10 Minuten garen, bis die Linsen weich sind.",
+     "Mit Skyr servieren.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 30,
+    "aktiv": 12,
+    "schritte": [
+     "Zwiebel und Gemüse würfeln, mit Linsen, Passata, Gewürzen und 600 ml Wasser im Topf aufkochen.",
+     "Bei kleiner Hitze 15–18 Minuten köcheln, bis die Linsen weich sind, gelegentlich umrühren.",
+     "Feta darüberbröseln und mit Skyr servieren.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "mealprep",
+   "kochtag",
+   "guenstig",
+   "box"
+  ],
+  "tipp": "Den Skyr erst nach dem Aufwärmen dazugeben.",
+  "foto": "baked red lentil and vegetable casserole with crumbled feta and a dollop of white yogurt"
+ },
+ {
+  "id": "O08",
+  "titel": "Ei-Muffins mit Spinat und Käse",
+  "mahlzeit": [
+   "fruehstueck",
+   "snack"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "eier",
+    8,
+    "stk"
+   ],
+   [
+    "magerquark",
+    150
+   ],
+   [
+    "tk_spinat",
+    200
+   ],
+   [
+    "paprika",
+    1,
+    "stk"
+   ],
+   [
+    "reibekaese",
+    100
+   ],
+   [
+    "rapsoel",
+    5
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "paprikapulver",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 35,
+    "aktiv": 12,
+    "schritte": [
+     "Ofen auf 180 °C Ober-/Unterhitze vorheizen. Spinat auftauen lassen und gut ausdrücken.",
+     "Ein 12er-Muffinblech mit Öl einfetten oder Silikonförmchen nutzen.",
+     "Eier mit Quark, Salz, Pfeffer und Paprikapulver verquirlen. Spinat, gewürfelte Paprika und die Hälfte des Käses unterrühren.",
+     "Masse in die 12 Mulden füllen (höchstens drei Viertel hoch, sie geht auf), restlichen Käse darüberstreuen und 22–25 Minuten backen, bis die Muffins in der Mitte fest sind (Messerprobe: kein flüssiges Ei).",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 35,
+    "aktiv": 12,
+    "schritte": [
+     "Masse wie beschrieben anrühren und in Silikon-Muffinförmchen füllen.",
+     "In 2 Durchgängen bei 160 °C je 14–16 Minuten garen, bis die Mitte fest ist und kein flüssiges Ei mehr austritt.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "lowcarb",
+   "mealprep",
+   "box",
+   "kochtag"
+  ],
+  "tipp": "Eingefroren lassen sich einzelne Muffins in der Mikrowelle in etwa 2 Minuten dampfend heiß aufwärmen.",
+  "foto": "twelve golden baked egg muffins with spinach and red pepper on a cooling rack"
+ },
+ {
+  "id": "O09",
+  "titel": "Hack-Bowl mit Ofenkartoffeln und Skyr-Dip",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "rinderhack",
+    500
+   ],
+   [
+    "kartoffel",
+    800
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "skyr",
+    300
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "paprikapulver",
+    4
+   ],
+   [
+    "kreuzkuemmel",
+    2
+   ],
+   [
+    "salz",
+    5
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 50,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 220 °C Ober-/Unterhitze vorheizen.",
+     "Kartoffeln in 2 cm Würfel schneiden, mit Öl, Salz und 2 g Paprikapulver auf einem Blech mischen und 20 Minuten backen.",
+     "Hack mit Zwiebelwürfeln, Gewürzen und Salz grob vermengen und in walnussgroßen Stücken auf das Blech zupfen, Paprikastreifen dazugeben.",
+     "Weitere 18–20 Minuten backen, bis das Hack innen nicht mehr rosa ist. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Skyr mit Salz und Pfeffer verrühren und auf die Bowls geben.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Kartoffelwürfel mit Öl und Gewürzen in 2 Durchgängen bei 200 °C je 16 Minuten garen.",
+     "Hackstücke und Paprika in 2 Durchgängen bei 190 °C je 10–12 Minuten garen, einmal schütteln. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "In Bowls anrichten und mit Skyr-Dip servieren.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 35,
+    "aktiv": 25,
+    "schritte": [
+     "Kartoffelwürfel in 15 ml Öl abgedeckt bei mittlerer Hitze 15 Minuten braten, dann offen 5 Minuten bräunen. Herausnehmen.",
+     "Hack in der Pfanne krümelig braten, bis es nicht mehr rosa ist, Zwiebel und Paprika 4 Minuten mitbraten und würzen.",
+     "Mit den Kartoffeln und Skyr-Dip anrichten.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "mealprep",
+   "box",
+   "familie"
+  ],
+  "tipp": "Den Skyr-Dip getrennt einpacken und erst nach dem Aufwärmen auf die Bowl geben.",
+  "foto": "bowl with roasted potato cubes, browned minced beef, red pepper strips and a white yogurt dip"
+ },
+ {
+  "id": "O10",
+  "titel": "Hähnchenunterschenkel mit Paprika-Kartoffeln",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "haehnchen_unterschenkel",
+    8,
+    "stk"
+   ],
+   [
+    "kartoffel",
+    1000
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "paprikapulver",
+    6
+   ],
+   [
+    "knoblauch",
+    1,
+    "stk"
+   ],
+   [
+    "salz",
+    6
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 60,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Unterschenkel trocken tupfen und mit 10 ml Öl, 4 g Paprikapulver, gepresstem Knoblauch und Salz einreiben.",
+     "Kartoffeln in Spalten, Paprika und Zwiebeln in Streifen schneiden, mit restlichem Öl und Gewürzen auf dem Blech verteilen, Unterschenkel daraufsetzen.",
+     "45–50 Minuten backen, nach der Hälfte wenden, bis die Haut knusprig ist und am Knochen kein rosa Fleischsaft mehr austritt. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 60,
+    "aktiv": 15,
+    "schritte": [
+     "Unterschenkel würzen wie beschrieben und in 2 Durchgängen bei 190 °C je 22–25 Minuten garen, nach der Hälfte wenden. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Kartoffelspalten, Paprika und Zwiebeln mit Öl und Gewürzen in 2 Durchgängen bei 200 °C je 18 Minuten garen.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "mealprep",
+   "guenstig",
+   "familie",
+   "kochtag"
+  ],
+  "tipp": "Unterschenkel sind meist deutlich günstiger als Brustfilet; das Fleisch bleibt beim Aufwärmen saftig.",
+  "foto": "crispy paprika chicken drumsticks on a tray with potato wedges and red peppers"
+ },
+ {
+  "id": "O11",
+  "titel": "Puten-Kürbis-Blech mit roten Zwiebeln",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "putenbrust",
+    700
+   ],
+   [
+    "kuerbis",
+    1,
+    "stk"
+   ],
+   [
+    "rote_zwiebel",
+    160
+   ],
+   [
+    "olivenoel",
+    30
+   ],
+   [
+    "rucola",
+    125
+   ],
+   [
+    "paprikapulver",
+    3
+   ],
+   [
+    "zimt",
+    1
+   ],
+   [
+    "salz",
+    5
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Hokkaido waschen, entkernen und mit Schale in 2 cm Spalten schneiden. Zwiebeln in Spalten schneiden. Mit 20 ml Öl, Salz, Zimt und Paprikapulver auf dem Blech mischen und 15 Minuten backen.",
+     "Pute in 3 cm Würfel schneiden, mit restlichem Öl, Salz und Pfeffer mischen und dazugeben.",
+     "Weitere 15–18 Minuten backen, bis die Pute durchgegart ist. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Rucola erst beim Servieren dazugeben.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Kürbis und Zwiebeln mit Öl und Gewürzen in 2 Durchgängen bei 190 °C je 14 Minuten garen.",
+     "Putenwürfel mit Öl und Gewürzen in 2 Durchgängen bei 190 °C je 10–12 Minuten garen, einmal schütteln. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Mischen und mit Rucola servieren.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "lowcarb",
+   "mealprep",
+   "box"
+  ],
+  "tipp": "Rucola getrennt einpacken, dann bleibt er frisch.",
+  "foto": "roasted hokkaido pumpkin wedges with turkey cubes, red onion and fresh rocket on a baking tray"
+ },
+ {
+  "id": "O12",
+  "titel": "Kartoffel-Quark-Gratin mit Lauch",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "kartoffel",
+    1000
+   ],
+   [
+    "magerquark",
+    750
+   ],
+   [
+    "eier",
+    4,
+    "stk"
+   ],
+   [
+    "lauch",
+    1,
+    "stk"
+   ],
+   [
+    "reibekaese",
+    100
+   ],
+   [
+    "salz",
+    6
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "paprikapulver",
+    2
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 65,
+    "aktiv": 20,
+    "schritte": [
+     "Ofen auf 190 °C Ober-/Unterhitze vorheizen.",
+     "Kartoffeln schälen und in 3 mm dünne Scheiben schneiden. Lauch in feine Ringe schneiden und waschen.",
+     "Quark mit Eiern, Salz, Pfeffer und Paprikapulver glatt rühren.",
+     "Kartoffeln, Lauch und Quarkmasse abwechselnd in eine Auflaufform schichten, mit Käse bestreuen.",
+     "Mit Alufolie abgedeckt 30 Minuten backen, dann offen 15–20 Minuten, bis die Kartoffeln weich sind und die Masse vollständig gestockt ist.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 60,
+    "aktiv": 20,
+    "schritte": [
+     "Gratin wie beschrieben in einer airfryergeeigneten Form (ca. 20 cm) schichten; bei kleinen Geräten in 2 Formen nacheinander.",
+     "Mit Alufolie abgedeckt bei 170 °C 25 Minuten garen, dann offen 10–12 Minuten, bis die Kartoffeln weich sind und die Eimasse fest ist.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "mealprep",
+   "guenstig",
+   "familie",
+   "kochtag"
+  ],
+  "tipp": "Kartoffelscheiben möglichst gleich dünn schneiden, dann garen sie gleichmäßig.",
+  "foto": "golden potato gratin with leek in a rectangular baking dish, one portion cut out"
+ },
+ {
+  "id": "O13",
+  "titel": "Ofen-Nudelauflauf mit Rinderhack",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "vollkornnudeln",
+    500
+   ],
+   [
+    "rinderhack",
+    400
+   ],
+   [
+    "passata",
+    500
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "mozzarella",
+    1,
+    "stk"
+   ],
+   [
+    "gemuesebruehe",
+    6
+   ],
+   [
+    "italien_kraeuter",
+    3
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 55,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Zucchini und Zwiebel klein würfeln. Ungekochte Nudeln in einer großen Auflaufform mit Passata, 700 ml Wasser, Brühepulver, Kräutern, Salz und Gemüse mischen.",
+     "Hack in kleinen Stücken darauf verteilen und leicht unterheben.",
+     "Mit Alufolie abgedeckt 30 Minuten backen, umrühren, dann zerzupften Mozzarella darauf und offen 10–12 Minuten backen, bis die Nudeln weich sind und das Hack nicht mehr rosa ist.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 55,
+    "aktiv": 15,
+    "schritte": [
+     "Alle Zutaten wie beschrieben in 2 airfryergeeignete Formen (ca. 20 cm) verteilen, je Form 350 ml Wasser.",
+     "Nacheinander mit Alufolie abgedeckt bei 180 °C 20 Minuten garen, umrühren, Mozzarella darauf und offen 6–8 Minuten garen. Hack muss innen durchgegart sein.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd2",
+     "topf",
+     "pfanne",
+     "ofen"
+    ],
+    "zeit": 40,
+    "aktiv": 20,
+    "schritte": [
+     "Nudeln im Topf 2 Minuten kürzer als angegeben kochen und abgießen.",
+     "Hack in der Pfanne krümelig braten, bis es nicht mehr rosa ist, Zwiebel und Zucchini 3 Minuten mitbraten, Passata und Gewürze zugeben.",
+     "Mit den Nudeln mischen, in eine Auflaufform füllen, Mozzarella darauf und bei 200 °C 15 Minuten überbacken.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "aufbau",
+   "mealprep",
+   "familie",
+   "kochtag"
+  ],
+  "tipp": "Lässt sich mit einer größeren Portion an einen höheren Kalorienbedarf anpassen.",
+  "foto": "baked wholewheat pasta casserole with tomato beef sauce and melted mozzarella in a baking dish"
+ },
+ {
+  "id": "O14",
+  "titel": "Soja-Gyros vom Blech mit Skyr-Tzatziki",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "sojagranulat",
+    150
+   ],
+   [
+    "kartoffel",
+    1000
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "rapsoel",
+    40
+   ],
+   [
+    "sojasauce",
+    30
+   ],
+   [
+    "skyr",
+    450
+   ],
+   [
+    "gurke",
+    1,
+    "stk"
+   ],
+   [
+    "knoblauch",
+    1,
+    "stk"
+   ],
+   [
+    "gemuesebruehe",
+    8
+   ],
+   [
+    "paprikapulver",
+    5
+   ],
+   [
+    "oregano",
+    3
+   ],
+   [
+    "kreuzkuemmel",
+    2
+   ],
+   [
+    "salz",
+    5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 55,
+    "aktiv": 20,
+    "schritte": [
+     "Sojaschnetzel mit Brühepulver in 500 ml sehr heißem Leitungswasser 20 Minuten einweichen (mit kochendem Wasser aus dem Wasserkocher reichen 10 Minuten), dann kräftig ausdrücken.",
+     "Ofen auf 220 °C Ober-/Unterhitze vorheizen. Kartoffeln in Spalten schneiden, mit 15 ml Öl und Salz auf einem Blech 20 Minuten backen.",
+     "Sojaschnetzel mit restlichem Öl, Sojasauce, Paprikapulver, Oregano und Kreuzkümmel mischen, mit Zwiebel- und Paprikastreifen zu den Kartoffeln geben und 15–18 Minuten knusprig backen.",
+     "Gurke raspeln, gut ausdrücken, mit Skyr, gepresstem Knoblauch und Salz verrühren.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 50,
+    "aktiv": 20,
+    "schritte": [
+     "Sojaschnetzel einweichen und ausdrücken wie beschrieben, dann würzen.",
+     "Kartoffelspalten mit Öl und Salz in 2 Durchgängen bei 200 °C je 18 Minuten garen.",
+     "Gyros mit Zwiebel und Paprika in 2 Durchgängen bei 190 °C je 10 Minuten knusprig garen, einmal schütteln.",
+     "Tzatziki anrühren wie beschrieben.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "mealprep",
+   "guenstig",
+   "box",
+   "kochtag"
+  ],
+  "tipp": "Das Tzatziki getrennt in einer kleinen Dose lagern und kalt zum aufgewärmten Gyros essen.",
+  "foto": "crispy soy gyros strips with potato wedges, peppers and a bowl of cucumber yogurt dip"
+ },
+ {
+  "id": "O15",
+  "titel": "Lachs mit Süßkartoffel und Brokkoli",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "lachs",
+    2,
+    "stk"
+   ],
+   [
+    "suesskartoffel",
+    500
+   ],
+   [
+    "brokkoli",
+    1,
+    "stk"
+   ],
+   [
+    "olivenoel",
+    15
+   ],
+   [
+    "zitrone",
+    1,
+    "stk"
+   ],
+   [
+    "paprikapulver",
+    2
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 40,
+    "aktiv": 10,
+    "schritte": [
+     "Ofen auf 210 °C Ober-/Unterhitze vorheizen.",
+     "Süßkartoffeln in 2 cm Würfel schneiden, mit 10 ml Öl, Salz und Paprikapulver auf dem Blech 15 Minuten backen.",
+     "Brokkoliröschen mit restlichem Öl dazugeben, Lachs salzen und mit Zitronenscheiben auflegen.",
+     "Ofen auf 200 °C stellen und 12–15 Minuten backen, bis der Lachs innen nicht mehr glasig ist."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 35,
+    "aktiv": 10,
+    "schritte": [
+     "Süßkartoffelwürfel mit Öl und Gewürzen bei 200 °C 14 Minuten im Airfryer garen.",
+     "Brokkoli dazugeben, Lachs darauflegen und bei 180 °C 10–12 Minuten garen, bis der Fisch durchgegart ist."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "box",
+   "sportnach"
+  ],
+  "tipp": "Den Lachs mit der Hautseite nach unten garen, dann bleibt er saftiger.",
+  "foto": "salmon fillets with roasted sweet potato cubes and broccoli, lemon slices, on a dark baking tray"
+ },
+ {
+  "id": "O16",
+  "titel": "Hähnchen-Fajita-Blech mit Tortillas",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "haehnchenbrust",
+    600
+   ],
+   [
+    "paprika",
+    3,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "mais_dose",
+    285
+   ],
+   [
+    "kidney_dose",
+    250
+   ],
+   [
+    "tortilla",
+    12,
+    "stk"
+   ],
+   [
+    "skyr",
+    300
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "paprikapulver",
+    5
+   ],
+   [
+    "kreuzkuemmel",
+    3
+   ],
+   [
+    "chiliflocken",
+    1
+   ],
+   [
+    "salz",
+    5
+   ],
+   [
+    "zitrone",
+    1,
+    "stk",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 35,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 220 °C Ober-/Unterhitze vorheizen.",
+     "Hähnchen in Streifen, Paprika und Zwiebeln in Streifen schneiden. Mit Öl, Paprikapulver, Kreuzkümmel, Chili und Salz auf dem Blech mischen.",
+     "20 Minuten backen, dann abgetropften Mais und Kidneybohnen untermischen und 5 Minuten weiterbacken. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Tortillas die letzten 2 Minuten in Alufolie gewickelt im Ofen erwärmen.",
+     "Füllung mit Skyr in die Tortillas geben.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 35,
+    "aktiv": 15,
+    "schritte": [
+     "Hähnchen- und Gemüsestreifen würzen wie beschrieben.",
+     "In 2 Durchgängen bei 200 °C je 12–14 Minuten garen, einmal schütteln, im zweiten Durchgang Mais und Bohnen die letzten 3 Minuten mitgaren. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Tortillas kurz einzeln 1 Minute bei 180 °C erwärmen und füllen.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 25,
+    "aktiv": 20,
+    "schritte": [
+     "Hähnchenstreifen in 10 ml Öl bei starker Hitze 6–7 Minuten braten, bis sie durchgegart sind. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Gemüse im restlichen Öl 5 Minuten braten, Mais, Bohnen und Gewürze zugeben, 2 Minuten erhitzen.",
+     "Tortillas in der trockenen Pfanne kurz erwärmen und füllen.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "aufbau",
+   "mealprep",
+   "familie",
+   "box"
+  ],
+  "tipp": "Füllung in Boxen vorbereiten und die Tortillas erst beim Essen füllen, dann weichen sie nicht durch.",
+  "foto": "sheet pan fajitas with chicken strips, colorful peppers, corn and kidney beans, warm tortillas on the side"
+ },
+ {
+  "id": "O17",
+  "titel": "Seelachs in Tomaten-Zucchini-Sauce",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "tk_seelachs",
+    400
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "feta",
+    100
+   ],
+   [
+    "olivenoel",
+    15
+   ],
+   [
+    "knoblauch",
+    1,
+    "stk"
+   ],
+   [
+    "oregano",
+    2
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 35,
+    "aktiv": 10,
+    "schritte": [
+     "Seelachs über Nacht im Kühlschrank auftauen lassen. Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Zucchini würfeln, mit Tomaten, gehacktem Knoblauch, Öl, Oregano, Salz und Pfeffer in einer Auflaufform mischen und 10 Minuten backen.",
+     "Seelachs in die Sauce legen, Feta darüberbröseln und 15–18 Minuten backen, bis der Fisch sich leicht zerteilen lässt und innen nicht mehr glasig ist."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 30,
+    "aktiv": 10,
+    "schritte": [
+     "Seelachs auftauen. Sauce wie beschrieben in einer airfryergeeigneten Form mischen und bei 180 °C 8 Minuten garen.",
+     "Fisch einlegen, Feta darüber und bei 170 °C 12–14 Minuten garen, bis der Fisch durchgegart ist."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 25,
+    "aktiv": 10,
+    "schritte": [
+     "Zucchini in Öl 3 Minuten braten, Tomaten, Knoblauch und Gewürze zugeben und 5 Minuten köcheln.",
+     "Seelachs einlegen, abgedeckt bei kleiner Hitze 10–12 Minuten ziehen lassen, bis er durchgegart ist. Feta darüberbröseln."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "eiweiss",
+   "lowcarb",
+   "guenstig"
+  ],
+  "tipp": "Dazu passt Brot, Reis oder Kartoffeln, wenn eine sättigendere Mahlzeit gewünscht ist.",
+  "foto": "white fish fillets baked in chunky tomato zucchini sauce with crumbled feta in a ceramic dish"
+ },
+ {
+  "id": "O18",
+  "titel": "Knusper-Hähnchen-Nuggets mit Kartoffelspalten",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "haehnchenbrust",
+    600
+   ],
+   [
+    "haferflocken",
+    100
+   ],
+   [
+    "eier",
+    2,
+    "stk"
+   ],
+   [
+    "parmesan",
+    30
+   ],
+   [
+    "kartoffel",
+    800
+   ],
+   [
+    "rapsoel",
+    25
+   ],
+   [
+    "paprikapulver",
+    4
+   ],
+   [
+    "salz",
+    5
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "ketchup",
+    60,
+    "",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 45,
+    "aktiv": 20,
+    "schritte": [
+     "Ofen auf 220 °C Ober-/Unterhitze vorheizen.",
+     "Kartoffeln in Spalten schneiden, mit 15 ml Öl und Salz auf einem Blech 15 Minuten backen.",
+     "Haferflocken mit Parmesan, Paprikapulver und Salz grob zerdrücken. Eier verquirlen. Hähnchen in 3 cm Stücke schneiden, durch Ei ziehen und in der Panade wenden.",
+     "Nuggets auf ein zweites Blech mit Backpapier legen, mit restlichem Öl beträufeln und mit den Kartoffeln 18–20 Minuten backen, nach der Hälfte wenden. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 45,
+    "aktiv": 20,
+    "schritte": [
+     "Kartoffelspalten mit Öl und Salz in 2 Durchgängen bei 200 °C je 18 Minuten garen.",
+     "Nuggets panieren wie beschrieben, leicht mit Öl besprühen und in 2 Durchgängen bei 190 °C je 10–12 Minuten garen, einmal wenden. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "eiweiss",
+   "familie"
+  ],
+  "tipp": "Die Panade aus Haferflocken wird knuspriger, wenn die Nuggets nicht übereinander liegen.",
+  "foto": "golden oat-crusted chicken nuggets with potato wedges and a small bowl of ketchup"
+ },
+ {
+  "id": "O19",
+  "titel": "Zucchini-Schiffchen mit Rinderhack",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "zucchini",
+    2,
+    "stk"
+   ],
+   [
+    "rinderhack",
+    300
+   ],
+   [
+    "tomaten_dose",
+    200
+   ],
+   [
+    "zwiebel",
+    40
+   ],
+   [
+    "reibekaese",
+    60
+   ],
+   [
+    "oregano",
+    2
+   ],
+   [
+    "paprikapulver",
+    2
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Zucchini längs halbieren, mit einem Löffel aushöhlen, das Innere klein hacken.",
+     "Hack mit Zucchinifleisch, Zwiebelwürfeln, Tomaten, Gewürzen und Salz roh vermengen und in die Zucchinihälften füllen.",
+     "In einer Auflaufform 20 Minuten backen, Käse darüberstreuen und weitere 8–10 Minuten backen, bis das Hack innen nicht mehr rosa ist. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 35,
+    "aktiv": 15,
+    "schritte": [
+     "Zucchini wie beschrieben füllen.",
+     "Bei 180 °C 16–18 Minuten im Airfryer garen, Käse darüber und weitere 4 Minuten garen. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne",
+     "ofen"
+    ],
+    "zeit": 35,
+    "aktiv": 20,
+    "schritte": [
+     "Hack in der Pfanne krümelig braten, bis es nicht mehr rosa ist, Zwiebel, Zucchinifleisch, Tomaten und Gewürze 5 Minuten mitgaren.",
+     "In die Zucchinihälften füllen, Käse darüber und im Ofen bei 200 °C 15 Minuten backen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "eiweiss",
+   "lowcarb"
+  ],
+  "tipp": "Die ausgehöhlten Zucchini nicht wegwerfen: Das Fruchtfleisch kommt mit in die Füllung.",
+  "foto": "stuffed zucchini boats with minced beef and tomato filling topped with melted cheese"
+ },
+ {
+  "id": "O20",
+  "titel": "Hähnchen-Blumenkohl-Curry vom Blech",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "haehnchenbrust",
+    650
+   ],
+   [
+    "blumenkohl",
+    1,
+    "stk"
+   ],
+   [
+    "kokosmilch",
+    200
+   ],
+   [
+    "tomatenmark",
+    30
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "currypulver",
+    8
+   ],
+   [
+    "rapsoel",
+    15
+   ],
+   [
+    "ingwer",
+    10
+   ],
+   [
+    "salz",
+    5
+   ],
+   [
+    "spinat_frisch",
+    100
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Blumenkohl in Röschen teilen, Zwiebel in Spalten. Mit Öl, 4 g Curry und Salz in einer großen Auflaufform 15 Minuten backen.",
+     "Kokosmilch mit Tomatenmark, geriebenem Ingwer und restlichem Curry verrühren. Hähnchen würfeln, mit der Sauce unter den Blumenkohl mischen.",
+     "Weitere 18–20 Minuten backen, bis das Hähnchen durchgegart ist. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Spinat unterheben, er fällt in der Hitze zusammen.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Blumenkohl und Zwiebel mit Öl, Curry und Salz in 2 Durchgängen bei 190 °C je 12 Minuten garen.",
+     "Hähnchenwürfel mit der Currysauce in einer airfryergeeigneten Form bei 180 °C 14–16 Minuten garen, einmal umrühren. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Mit Blumenkohl und Spinat mischen.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 30,
+    "aktiv": 20,
+    "schritte": [
+     "Hähnchenwürfel in Öl 5 Minuten anbraten, Blumenkohl und Zwiebel zugeben, 3 Minuten mitbraten.",
+     "Kokosmilch, Tomatenmark, Gewürze und 100 ml Wasser zugeben, abgedeckt 10–12 Minuten köcheln, bis Blumenkohl weich und das Hähnchen durchgegart ist.",
+     "Spinat unterheben.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "lowcarb",
+   "mealprep",
+   "box",
+   "kochtag"
+  ],
+  "tipp": "Mit Reis oder Fladenbrot lässt sich die Portion an einen höheren Kalorienbedarf anpassen.",
+  "foto": "creamy chicken cauliflower curry in a baking dish with wilted spinach"
+ },
+ {
+  "id": "O21",
+  "titel": "Süßkartoffel-Kichererbsen-Blech mit Tahin",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "suesskartoffel",
+    1000
+   ],
+   [
+    "kichererbsen_dose",
+    480
+   ],
+   [
+    "rote_zwiebel",
+    160
+   ],
+   [
+    "spinat_frisch",
+    200
+   ],
+   [
+    "olivenoel",
+    30
+   ],
+   [
+    "tahin",
+    40
+   ],
+   [
+    "zitrone",
+    1,
+    "stk"
+   ],
+   [
+    "kreuzkuemmel",
+    3
+   ],
+   [
+    "paprikapulver",
+    4
+   ],
+   [
+    "salz",
+    5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 210 °C Ober-/Unterhitze vorheizen.",
+     "Süßkartoffeln in 2 cm Würfel, Zwiebeln in Spalten schneiden. Kichererbsen abtropfen und trocken tupfen.",
+     "Alles mit Öl, Kreuzkümmel, Paprikapulver und Salz auf einem großen Blech mischen und 30–35 Minuten backen, nach der Hälfte wenden.",
+     "Tahin mit Zitronensaft, 40 ml Wasser und einer Prise Salz verrühren. Spinat unter das heiße Gemüse heben und mit der Sauce beträufeln.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Süßkartoffeln, Zwiebeln und Kichererbsen würzen wie beschrieben.",
+     "In 2 Durchgängen bei 200 °C je 18–20 Minuten garen, zwischendurch schütteln.",
+     "Spinat unterheben und mit Tahinsauce beträufeln.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "aufbau",
+   "mealprep",
+   "box",
+   "kochtag",
+   "guenstig"
+  ],
+  "tipp": "Die Tahinsauce getrennt aufbewahren und erst nach dem Aufwärmen darübergeben.",
+  "foto": "roasted sweet potato cubes and crispy chickpeas with spinach and tahini drizzle on a sheet pan"
+ },
+ {
+  "id": "O22",
+  "titel": "Gefüllte Paprika mit Reis und Hack",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "paprika",
+    4,
+    "stk"
+   ],
+   [
+    "rinderhack",
+    500
+   ],
+   [
+    "reis",
+    200
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "reibekaese",
+    80
+   ],
+   [
+    "gemuesebruehe",
+    5
+   ],
+   [
+    "paprikapulver",
+    3
+   ],
+   [
+    "oregano",
+    2
+   ],
+   [
+    "salz",
+    5
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen",
+     "herd",
+     "topf"
+    ],
+    "zeit": 60,
+    "aktiv": 20,
+    "schritte": [
+     "Reis mit Brühepulver und 400 ml Wasser im Topf aufkochen und abgedeckt bei kleiner Hitze 12 Minuten quellen lassen.",
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen. Paprika oben aufschneiden und entkernen.",
+     "Reis mit rohem Hack, Zwiebelwürfeln, Gewürzen und Salz vermengen und in die Paprika füllen.",
+     "Tomaten in eine Auflaufform geben, Paprika hineinsetzen, Deckel aufsetzen und 30 Minuten backen.",
+     "Deckel abnehmen, Käse auf die Füllung streuen und weitere 10–15 Minuten backen, bis die Füllung durchgegart ist. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer",
+     "herd",
+     "topf"
+    ],
+    "zeit": 65,
+    "aktiv": 20,
+    "schritte": [
+     "Reis vorgaren wie beschrieben und mit Hack, Zwiebel und Gewürzen vermengen.",
+     "Paprika füllen und in einer airfryergeeigneten Form mit den Tomaten bei 180 °C 30–35 Minuten garen.",
+     "Käse darauf und weitere 5 Minuten garen. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "mealprep",
+   "familie",
+   "kochtag"
+  ],
+  "tipp": "Zum Einfrieren einzeln verpacken und direkt nach dem Abkühlen ins Gefrierfach geben.",
+  "foto": "four stuffed red bell peppers with rice and beef filling, melted cheese, tomato sauce in baking dish"
+ },
+ {
+  "id": "O23",
+  "titel": "Hähnchen-Gnocchi-Blech mit Pesto",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "gnocchi",
+    1000
+   ],
+   [
+    "haehnchenbrust",
+    500
+   ],
+   [
+    "cherrytomate",
+    500
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "pesto",
+    60
+   ],
+   [
+    "mozzarella",
+    1,
+    "stk"
+   ],
+   [
+    "olivenoel",
+    15
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 35,
+    "aktiv": 10,
+    "schritte": [
+     "Ofen auf 220 °C Ober-/Unterhitze vorheizen.",
+     "Hähnchen würfeln, Zucchini in Halbmonde schneiden. Mit Gnocchi, Tomaten, Öl, Salz und Pfeffer auf einem großen Blech mischen.",
+     "20 Minuten backen, wenden, Pesto unterheben, Mozzarella zerzupfen und darauf verteilen, weitere 6–8 Minuten backen. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 40,
+    "aktiv": 10,
+    "schritte": [
+     "Alle Zutaten außer Pesto und Mozzarella wie beschrieben mischen.",
+     "In 2 Durchgängen bei 200 °C je 15–16 Minuten garen, nach der Hälfte schütteln. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Pesto unterheben, Mozzarella darauf und je 2 Minuten nachgaren.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "aufbau",
+   "mealprep",
+   "familie"
+  ],
+  "tipp": "Gnocchi direkt ungekocht aufs Blech geben, sie werden außen knusprig und innen weich.",
+  "foto": "crispy baked gnocchi with chicken, blistered cherry tomatoes, pesto and torn mozzarella on a sheet pan"
+ },
+ {
+  "id": "O24",
+  "titel": "Lachs-Brokkoli-Auflauf mit Quark",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "lachs",
+    2,
+    "stk"
+   ],
+   [
+    "brokkoli",
+    1,
+    "stk"
+   ],
+   [
+    "magerquark",
+    250
+   ],
+   [
+    "eier",
+    2,
+    "stk"
+   ],
+   [
+    "reibekaese",
+    40
+   ],
+   [
+    "zitrone",
+    1,
+    "stk"
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "tk_kraeuter",
+    10
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 40,
+    "aktiv": 12,
+    "schritte": [
+     "Ofen auf 190 °C Ober-/Unterhitze vorheizen.",
+     "Brokkoli in kleine Röschen teilen und in eine Auflaufform geben. Lachs in 3 cm Würfel schneiden und dazwischen verteilen.",
+     "Quark mit Eiern, Kräutern, etwas Zitronenschale, Salz und Pfeffer verquirlen und darübergießen, Käse aufstreuen.",
+     "25–30 Minuten backen, bis die Eimasse vollständig gestockt und der Lachs durchgegart ist."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 35,
+    "aktiv": 12,
+    "schritte": [
+     "Auflauf wie beschrieben in einer airfryergeeigneten Form (ca. 20 cm) schichten.",
+     "Mit Alufolie abgedeckt bei 170 °C 15 Minuten, dann offen 8–10 Minuten garen, bis die Eimasse fest ist."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "eiweiss",
+   "lowcarb"
+  ],
+  "tipp": "TK-Brokkoli funktioniert auch; dann vorher auftauen und gut abtropfen lassen.",
+  "foto": "baked salmon and broccoli casserole with golden cheese crust in an oval dish"
+ },
+ {
+  "id": "O25",
+  "titel": "Puten-Gyros mit Ofenreis und Tzatziki",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "putenbrust",
+    600
+   ],
+   [
+    "reis",
+    400
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "skyr",
+    450
+   ],
+   [
+    "gurke",
+    1,
+    "stk"
+   ],
+   [
+    "knoblauch",
+    1,
+    "stk"
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "gemuesebruehe",
+    8
+   ],
+   [
+    "paprikapulver",
+    5
+   ],
+   [
+    "oregano",
+    3
+   ],
+   [
+    "kreuzkuemmel",
+    2
+   ],
+   [
+    "salz",
+    5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 60,
+    "aktiv": 20,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Reis mit Brühepulver und 900 ml Wasser in einer Auflaufform mischen, fest mit Alufolie abdecken und 45 Minuten garen.",
+     "Pute in dünne Streifen schneiden, mit Öl, Gewürzen, Zwiebel- und Paprikastreifen mischen und nach 20 Minuten auf einem Blech mit in den Ofen geben.",
+     "20–25 Minuten mitbacken, einmal wenden. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Gurke raspeln, ausdrücken, mit Skyr, gepresstem Knoblauch und Salz verrühren.",
+     "Reis sofort in flache Boxen verteilen, zügig abkühlen und innerhalb von 2 Stunden in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer",
+     "herd",
+     "topf"
+    ],
+    "zeit": 40,
+    "aktiv": 20,
+    "schritte": [
+     "Reis mit Brühepulver und 800 ml Wasser aufkochen und abgedeckt bei kleiner Hitze 15 Minuten quellen lassen.",
+     "Gewürzte Putenstreifen mit Zwiebel und Paprika in 2 Durchgängen bei 190 °C je 10–12 Minuten garen, einmal schütteln. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Tzatziki anrühren und alles in Boxen verteilen, Reis zügig abkühlen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "aufbau",
+   "mealprep",
+   "box",
+   "kochtag"
+  ],
+  "tipp": "Tzatziki getrennt lagern und kalt dazu essen; die Menge Reis lässt sich je nach Bedarf anpassen.",
+  "foto": "meal prep boxes with turkey gyros strips, rice, peppers and a cucumber yogurt dip"
+ },
+ {
+  "id": "O26",
+  "titel": "Kartoffel-Schinken-Frittata vom Blech",
+  "mahlzeit": [
+   "fruehstueck",
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "eier",
+    10,
+    "stk"
+   ],
+   [
+    "kartoffel",
+    600
+   ],
+   [
+    "kochschinken",
+    200
+   ],
+   [
+    "milch",
+    100
+   ],
+   [
+    "reibekaese",
+    60
+   ],
+   [
+    "fruehlingszwiebel",
+    1,
+    "stk"
+   ],
+   [
+    "rapsoel",
+    10
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 50,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Kartoffeln in 1 cm Würfel schneiden, mit Öl und Salz in einer gefetteten Auflaufform (ca. 20 × 30 cm) 20 Minuten vorbacken.",
+     "Eier mit Milch, Salz und Pfeffer verquirlen. Schinken und Frühlingszwiebeln klein schneiden und zu den Kartoffeln geben.",
+     "Eimasse darübergießen, Käse aufstreuen. Ofen auf 180 °C stellen und 20–22 Minuten backen, bis die Frittata in der Mitte fest ist.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Kartoffelwürfel mit Öl und Salz bei 200 °C 15 Minuten im Airfryer garen.",
+     "In eine gefettete airfryergeeignete Form geben, Schinken, Frühlingszwiebeln und Eimasse dazu; bei kleinen Geräten in 2 Formen.",
+     "Bei 160 °C 18–20 Minuten garen, bis die Mitte fest ist und kein flüssiges Ei mehr austritt.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "mealprep",
+   "box",
+   "familie"
+  ],
+  "tipp": "In Stücke geschnitten passt die Frittata kalt oder warm in die Box.",
+  "foto": "thick potato and ham frittata baked in a rectangular dish, cut into squares"
+ },
+ {
+  "id": "O27",
+  "titel": "Senf-Schnitzel vom Blech mit Kartoffeln",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "schweineschnitzel",
+    400
+   ],
+   [
+    "kartoffel",
+    600
+   ],
+   [
+    "tk_brokkoli",
+    300
+   ],
+   [
+    "senf",
+    20
+   ],
+   [
+    "honig",
+    10
+   ],
+   [
+    "rapsoel",
+    15
+   ],
+   [
+    "paprikapulver",
+    2
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 45,
+    "aktiv": 12,
+    "schritte": [
+     "Ofen auf 220 °C Ober-/Unterhitze vorheizen.",
+     "Kartoffeln in Spalten schneiden, mit 10 ml Öl, Salz und Paprikapulver auf dem Blech 20 Minuten backen.",
+     "Senf mit Honig und restlichem Öl verrühren, Schnitzel salzen und damit bestreichen.",
+     "Schnitzel und Brokkoli aufs Blech geben und 12–15 Minuten backen, bis das Fleisch durchgegart ist. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 40,
+    "aktiv": 12,
+    "schritte": [
+     "Kartoffelspalten mit Öl und Gewürzen bei 200 °C 18 Minuten im Airfryer garen und warm stellen.",
+     "Bestrichene Schnitzel und Brokkoli bei 190 °C 10–12 Minuten garen, nach der Hälfte wenden. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 30,
+    "aktiv": 20,
+    "schritte": [
+     "Kartoffelspalten in 10 ml Öl abgedeckt 15 Minuten braten, dann offen 5 Minuten bräunen.",
+     "Schnitzel je Seite 3–4 Minuten braten, mit Senf-Honig bestreichen. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Brokkoli mit 3 EL Wasser abgedeckt 5 Minuten dünsten."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "eiweiss"
+  ],
+  "tipp": "Dünne Schnitzel garen gleichmäßiger; dicke Stücke vorher flach drücken.",
+  "foto": "mustard glazed pork escalopes with potato wedges and broccoli on a baking tray"
+ },
+ {
+  "id": "O28",
+  "titel": "Ofen-Haferflocken mit Quark und Beeren",
+  "mahlzeit": [
+   "fruehstueck",
+   "snack"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "haferflocken",
+    400
+   ],
+   [
+    "magerquark",
+    500
+   ],
+   [
+    "milch",
+    400
+   ],
+   [
+    "banane",
+    2,
+    "stk"
+   ],
+   [
+    "tk_beeren",
+    300
+   ],
+   [
+    "eier",
+    2,
+    "stk"
+   ],
+   [
+    "honig",
+    40
+   ],
+   [
+    "zimt",
+    2
+   ],
+   [
+    "salz",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 40,
+    "aktiv": 10,
+    "schritte": [
+     "Ofen auf 180 °C Ober-/Unterhitze vorheizen.",
+     "Bananen zerdrücken und mit Quark, Milch, Eiern, Honig, Zimt und Salz verrühren, Haferflocken untermischen.",
+     "Masse in eine Auflaufform (ca. 20 × 30 cm) streichen und die gefrorenen Beeren darauf verteilen.",
+     "30 Minuten backen, bis die Masse in der Mitte fest ist. In 4 Stücke schneiden.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 40,
+    "aktiv": 10,
+    "schritte": [
+     "Masse wie beschrieben anrühren und in eine airfryergeeignete Form füllen, Beeren darauf; bei kleinen Geräten in 2 Formen.",
+     "Bei 160 °C 22–25 Minuten garen, bis die Mitte fest ist.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "aufbau",
+   "mealprep",
+   "kochtag"
+  ],
+  "tipp": "Kalt aus dem Kühlschrank oder kurz in der Mikrowelle erwärmt essen; mit mehr Haferflocken sättigender.",
+  "foto": "baked oatmeal with berries in a rectangular dish, cut into squares, golden top"
+ },
+ {
+  "id": "O29",
+  "titel": "Halloumi-Ofengemüse mit Kräuter-Joghurt",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "halloumi",
+    225
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "aubergine",
+    1,
+    "stk"
+   ],
+   [
+    "rote_zwiebel",
+    80
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "joghurt",
+    150
+   ],
+   [
+    "tk_kraeuter",
+    10
+   ],
+   [
+    "oregano",
+    2
+   ],
+   [
+    "salz",
+    2
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 40,
+    "aktiv": 12,
+    "schritte": [
+     "Ofen auf 210 °C Ober-/Unterhitze vorheizen.",
+     "Zucchini, Paprika und Aubergine in 2 cm Stücke, Zwiebel in Spalten schneiden. Mit Öl, Oregano, wenig Salz und Pfeffer auf dem Blech mischen und 20 Minuten backen.",
+     "Halloumi in 1 cm Scheiben schneiden, aufs Gemüse legen und 10–12 Minuten backen, bis er goldbraun ist.",
+     "Joghurt mit Kräutern verrühren und dazu servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 35,
+    "aktiv": 12,
+    "schritte": [
+     "Gemüse mit Öl und Gewürzen bei 200 °C 15 Minuten im Airfryer garen, einmal schütteln.",
+     "Halloumischeiben darauflegen und bei 200 °C 6–8 Minuten garen.",
+     "Mit Kräuter-Joghurt servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 25,
+    "aktiv": 20,
+    "schritte": [
+     "Gemüse in 15 ml Öl bei mittlerer bis starker Hitze 10 Minuten braten und würzen. Herausnehmen.",
+     "Halloumi im restlichen Öl je Seite 2 Minuten goldbraun braten.",
+     "Mit Kräuter-Joghurt servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "lowcarb"
+  ],
+  "tipp": "Halloumi ist schon salzig, deshalb das Gemüse nur sparsam salzen.",
+  "foto": "golden grilled halloumi slices on roasted zucchini, aubergine and peppers with a herb yogurt dip"
+ },
+ {
+  "id": "O30",
+  "titel": "Linsen-Bolognese-Nudelauflauf",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "vollkornnudeln",
+    400
+   ],
+   [
+    "rote_linsen",
+    250
+   ],
+   [
+    "sojagranulat",
+    50
+   ],
+   [
+    "passata",
+    700
+   ],
+   [
+    "moehre",
+    200
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "olivenoel",
+    20
+   ],
+   [
+    "tomatenmark",
+    30
+   ],
+   [
+    "gemuesebruehe",
+    10
+   ],
+   [
+    "italien_kraeuter",
+    3
+   ],
+   [
+    "salz",
+    3
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 60,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Möhren und Zwiebel fein würfeln. In einer großen Auflaufform mit ungekochten Nudeln, Linsen, Sojaschnetzeln, Passata, Tomatenmark, Brühepulver, Öl, Kräutern und 1 l Wasser verrühren.",
+     "Mit Alufolie fest abgedeckt 35 Minuten backen, umrühren und offen weitere 10–15 Minuten backen, bis Nudeln und Linsen weich sind. Bei Bedarf etwas Wasser nachgießen.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 55,
+    "aktiv": 15,
+    "schritte": [
+     "Zutaten wie beschrieben auf 2 airfryergeeignete Formen (ca. 20 cm) verteilen, je Form 500 ml Wasser.",
+     "Nacheinander mit Alufolie abgedeckt bei 180 °C 22 Minuten garen, umrühren und offen 6–8 Minuten garen, bis die Nudeln weich sind.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd2",
+     "topf"
+    ],
+    "zeit": 30,
+    "aktiv": 15,
+    "schritte": [
+     "Nudeln im Topf nach Packungsangabe kochen und abgießen.",
+     "Zwiebel und Möhren in Öl 3 Minuten anschwitzen, Linsen, Sojaschnetzel, Passata, Tomatenmark, Brühe und 500 ml Wasser zugeben und 15 Minuten köcheln.",
+     "Sauce würzen und mit den Nudeln mischen.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "aufbau",
+   "mealprep",
+   "guenstig",
+   "familie",
+   "kochtag"
+  ],
+  "tipp": "Rote Linsen und Sojaschnetzel sind günstige Eiweißquellen und zerfallen in der Sauce fast unsichtbar.",
+  "foto": "baked wholewheat pasta with thick red lentil bolognese sauce in a large casserole dish"
+ },
+ {
+  "id": "O31",
+  "titel": "Knusper-Tofu-Bowl mit Reis und Erdnusssauce",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "tofu",
+    800
+   ],
+   [
+    "reis",
+    400
+   ],
+   [
+    "brokkoli",
+    1,
+    "stk"
+   ],
+   [
+    "moehre",
+    200
+   ],
+   [
+    "sojasauce",
+    50
+   ],
+   [
+    "erdnussmus",
+    60
+   ],
+   [
+    "rapsoel",
+    15
+   ],
+   [
+    "ingwer",
+    10
+   ],
+   [
+    "zitrone",
+    1,
+    "stk"
+   ],
+   [
+    "chiliflocken",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen",
+     "herd",
+     "topf"
+    ],
+    "zeit": 50,
+    "aktiv": 20,
+    "schritte": [
+     "Ofen auf 210 °C Ober-/Unterhitze vorheizen. Tofu ausdrücken, würfeln und mit 25 ml Sojasauce und Öl mischen.",
+     "Tofu auf einem Blech 15 Minuten backen, dann Brokkoliröschen und Möhrenscheiben dazugeben und weitere 15 Minuten backen.",
+     "Inzwischen Reis mit 800 ml Wasser im Topf aufkochen und abgedeckt bei kleiner Hitze 15 Minuten quellen lassen.",
+     "Erdnussmus mit restlicher Sojasauce, geriebenem Ingwer, Zitronensaft, Chili und 60 ml heißem Wasser glatt rühren.",
+     "Reis sofort in flache Boxen verteilen, Tofu und Gemüse daraufgeben, zügig abkühlen und innerhalb von 2 Stunden kühlen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer",
+     "herd",
+     "topf"
+    ],
+    "zeit": 45,
+    "aktiv": 20,
+    "schritte": [
+     "Reis im Topf garen wie beschrieben.",
+     "Marinierten Tofu in 2 Durchgängen bei 200 °C je 12 Minuten knusprig garen, im zweiten Durchgang Brokkoli und Möhren die letzten 8 Minuten mitgaren.",
+     "Erdnusssauce anrühren und alles in Boxen verteilen, Reis zügig abkühlen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "aufbau",
+   "mealprep",
+   "box",
+   "kochtag"
+  ],
+  "tipp": "Die Erdnusssauce in einem kleinen Glas getrennt aufbewahren; mit weniger Reis wird die Bowl leichter.",
+  "foto": "bowl with crispy tofu cubes, white rice, broccoli and carrots drizzled with peanut sauce"
+ },
+ {
+  "id": "O32",
+  "titel": "Parmesan-Seelachs mit Kartoffelspalten",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "tk_seelachs",
+    400
+   ],
+   [
+    "parmesan",
+    40
+   ],
+   [
+    "eier",
+    1,
+    "stk"
+   ],
+   [
+    "kartoffel",
+    600
+   ],
+   [
+    "gurke",
+    1,
+    "stk"
+   ],
+   [
+    "rapsoel",
+    15
+   ],
+   [
+    "zitrone",
+    1,
+    "stk"
+   ],
+   [
+    "paprikapulver",
+    2
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Seelachs über Nacht im Kühlschrank auftauen lassen und trocken tupfen. Ofen auf 220 °C Ober-/Unterhitze vorheizen.",
+     "Kartoffelspalten mit Öl, Salz und Paprikapulver auf dem Blech 20 Minuten backen.",
+     "Ei verquirlen, Fisch salzen, durch das Ei ziehen und in Parmesan wenden. Zu den Kartoffeln legen.",
+     "Weitere 15 Minuten backen, bis die Kruste goldbraun und der Fisch innen nicht mehr glasig ist.",
+     "Gurke in Scheiben schneiden und mit Zitronensaft und Salz als Salat dazu servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Seelachs auftauen. Kartoffelspalten mit Öl und Gewürzen bei 200 °C 18 Minuten im Airfryer garen und warm stellen.",
+     "Fisch panieren wie beschrieben, auf Backpapier legen und bei 190 °C 10–12 Minuten garen, bis er durchgegart ist.",
+     "Mit Gurkensalat servieren."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 0,
+   "einfrierbar": false,
+   "ungekuehlt_h": 0,
+   "kalt_essbar": false,
+   "aufwaermen": "nein"
+  },
+  "mealprep": false,
+  "tags": [
+   "eiweiss",
+   "guenstig"
+  ],
+  "tipp": "Die Parmesankruste wird am knusprigsten, wenn der aufgetaute Fisch gut trocken getupft ist.",
+  "foto": "parmesan crusted white fish fillets with potato wedges and cucumber salad, lemon wedge"
+ },
+ {
+  "id": "O33",
+  "titel": "Hähnchen-Kichererbsen-Blech mit Joghurt",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "haehnchenbrust",
+    600
+   ],
+   [
+    "kichererbsen_dose",
+    480
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "zucchini",
+    1,
+    "stk"
+   ],
+   [
+    "rote_zwiebel",
+    80
+   ],
+   [
+    "olivenoel",
+    30
+   ],
+   [
+    "joghurt",
+    300
+   ],
+   [
+    "knoblauch",
+    1,
+    "stk"
+   ],
+   [
+    "kreuzkuemmel",
+    3
+   ],
+   [
+    "paprikapulver",
+    4
+   ],
+   [
+    "salz",
+    5
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 210 °C Ober-/Unterhitze vorheizen.",
+     "Kichererbsen abtropfen und trocken tupfen, Paprika, Zucchini und Zwiebel in Stücke schneiden. Mit 20 ml Öl, Kreuzkümmel, Paprikapulver und Salz auf dem Blech mischen und 15 Minuten backen.",
+     "Hähnchen würfeln, mit restlichem Öl und Gewürzen mischen und dazugeben, 18–20 Minuten backen. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Joghurt mit gepresstem Knoblauch und Salz verrühren und dazu servieren.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Kichererbsen und Gemüse würzen wie beschrieben und in 2 Durchgängen bei 200 °C je 12 Minuten garen.",
+     "Hähnchenwürfel in 2 Durchgängen bei 190 °C je 10–12 Minuten garen. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Alles mischen und mit Knoblauch-Joghurt servieren.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "mealprep",
+   "box",
+   "kochtag"
+  ],
+  "tipp": "Den Joghurt getrennt einpacken und kalt zur aufgewärmten Box essen.",
+  "foto": "sheet pan with chicken cubes, crispy chickpeas, zucchini and peppers, bowl of garlic yogurt"
+ },
+ {
+  "id": "O34",
+  "titel": "Hack-Süßkartoffel-Auflauf mit Erbsen",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "rinderhack",
+    600
+   ],
+   [
+    "suesskartoffel",
+    1000
+   ],
+   [
+    "tk_erbsen",
+    300
+   ],
+   [
+    "moehre",
+    200
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "tomatenmark",
+    40
+   ],
+   [
+    "milch",
+    100
+   ],
+   [
+    "gemuesebruehe",
+    6
+   ],
+   [
+    "paprikapulver",
+    3
+   ],
+   [
+    "salz",
+    6
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen",
+     "herd",
+     "topf"
+    ],
+    "zeit": 60,
+    "aktiv": 25,
+    "schritte": [
+     "Süßkartoffeln schälen, würfeln und im Topf in Salzwasser 15 Minuten weich kochen, abgießen und mit Milch und Salz zerstampfen.",
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen. Rohes Hack mit Zwiebel- und Möhrenwürfeln, Tomatenmark, Brühepulver, Paprikapulver, 100 ml Wasser und TK-Erbsen in einer Auflaufform vermengen.",
+     "15 Minuten backen, umrühren, Süßkartoffelpüree daraufstreichen und weitere 20 Minuten backen, bis das Hack nicht mehr rosa ist. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer",
+     "herd",
+     "topf"
+    ],
+    "zeit": 55,
+    "aktiv": 25,
+    "schritte": [
+     "Süßkartoffelpüree im Topf zubereiten wie beschrieben.",
+     "Hackmischung auf 2 airfryergeeignete Formen verteilen und nacheinander bei 180 °C 12 Minuten garen, umrühren.",
+     "Püree daraufstreichen und weitere 10–12 Minuten garen. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd2",
+     "topf",
+     "pfanne"
+    ],
+    "zeit": 35,
+    "aktiv": 25,
+    "schritte": [
+     "Süßkartoffeln wie beschrieben kochen und zerstampfen.",
+     "Hack in der Pfanne krümelig braten, bis es nicht mehr rosa ist, Zwiebel, Möhren, Tomatenmark, Erbsen, Gewürze und 100 ml Wasser zugeben und 8 Minuten köcheln.",
+     "Mit dem Püree anrichten.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "mealprep",
+   "familie",
+   "kochtag"
+  ],
+  "tipp": "Portionsweise eingefroren lässt sich der Auflauf gut in der Mikrowelle aufwärmen.",
+  "foto": "shepherds pie style casserole with orange sweet potato mash topping over minced beef and peas"
+ },
+ {
+  "id": "O35",
+  "titel": "Puten-Champignon-Auflauf mit Spinat",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "putenbrust",
+    700
+   ],
+   [
+    "champignon",
+    400
+   ],
+   [
+    "tk_spinat",
+    450
+   ],
+   [
+    "frischkaese",
+    150
+   ],
+   [
+    "reibekaese",
+    80
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "knoblauch",
+    1,
+    "stk"
+   ],
+   [
+    "salz",
+    5
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "paprikapulver",
+    2
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 45,
+    "aktiv": 15,
+    "schritte": [
+     "Spinat auftauen lassen und gut ausdrücken. Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Pute in 2 cm Würfel, Champignons in Scheiben, Zwiebel und Knoblauch fein schneiden.",
+     "Alles mit Spinat, Frischkäse, Salz, Pfeffer und Paprikapulver in einer Auflaufform vermengen, Käse darüberstreuen.",
+     "25–30 Minuten backen, bis die Pute durchgegart ist. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Auflauf wie beschrieben in 2 airfryergeeigneten Formen vorbereiten.",
+     "Nacheinander bei 180 °C 16–18 Minuten garen, bis die Pute durchgegart ist. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 25,
+    "aktiv": 20,
+    "schritte": [
+     "Putenwürfel in einer großen Pfanne in 10 ml Öl 5–6 Minuten anbraten.",
+     "Champignons, Zwiebel und Knoblauch 4 Minuten mitbraten, Spinat und Frischkäse zugeben und 3 Minuten köcheln. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Mit Käse bestreuen und abgedeckt schmelzen lassen.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "lowcarb",
+   "mealprep",
+   "box",
+   "kochtag"
+  ],
+  "tipp": "Mit Reis, Kartoffeln oder Brot lässt sich die Portion an einen höheren Kalorienbedarf anpassen.",
+  "foto": "creamy turkey mushroom spinach casserole with golden melted cheese in a baking dish"
+ },
+ {
+  "id": "O36",
+  "titel": "Ofen-Ratatouille mit weißen Bohnen",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "zucchini",
+    2,
+    "stk"
+   ],
+   [
+    "aubergine",
+    1,
+    "stk"
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    160
+   ],
+   [
+    "tomaten_dose",
+    400
+   ],
+   [
+    "weisse_bohnen_tomate",
+    840
+   ],
+   [
+    "olivenoel",
+    30
+   ],
+   [
+    "knoblauch",
+    1,
+    "stk"
+   ],
+   [
+    "italien_kraeuter",
+    4
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "vollkornbrot",
+    400
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 55,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Zucchini, Aubergine, Paprika und Zwiebeln in 2 cm Stücke schneiden. Mit Öl, Knoblauch, Kräutern, Salz und Pfeffer in einer großen Auflaufform mischen und 25 Minuten backen.",
+     "Tomaten und weiße Bohnen unterrühren und weitere 20 Minuten backen, bis das Gemüse weich ist.",
+     "Mit Vollkornbrot servieren.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 50,
+    "aktiv": 15,
+    "schritte": [
+     "Gemüse würzen wie beschrieben und in 2 Durchgängen bei 190 °C je 15 Minuten garen.",
+     "In einer airfryergeeigneten Form portionsweise mit Tomaten und Bohnen bei 180 °C 10 Minuten erhitzen, bis alles dampfend heiß ist.",
+     "Mit Brot servieren.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "topf"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Zwiebel und Knoblauch in Öl 3 Minuten anschwitzen, restliches Gemüse 8 Minuten mitbraten.",
+     "Tomaten, Bohnen und Gewürze zugeben und abgedeckt 15 Minuten köcheln.",
+     "Mit Brot servieren.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 2,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "mealprep",
+   "guenstig",
+   "box",
+   "kochtag"
+  ],
+  "tipp": "Das Brot getrennt aufbewahren; das Ratatouille schmeckt auch kalt.",
+  "foto": "rustic baked ratatouille with white beans in tomato sauce, slices of dark wholegrain bread"
+ },
+ {
+  "id": "O37",
+  "titel": "Hähnchen-Brokkoli-Nudelauflauf",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "nudeln",
+    500
+   ],
+   [
+    "haehnchenbrust",
+    500
+   ],
+   [
+    "tk_brokkoli",
+    450
+   ],
+   [
+    "milch",
+    500
+   ],
+   [
+    "reibekaese",
+    100
+   ],
+   [
+    "gemuesebruehe",
+    8
+   ],
+   [
+    "mehl",
+    20
+   ],
+   [
+    "salz",
+    4
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "paprikapulver",
+    2
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 55,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Milch mit Mehl, Brühepulver, 400 ml Wasser, Salz und Pfeffer in einer großen Auflaufform glatt verrühren.",
+     "Ungekochte Nudeln, gewürfeltes Hähnchen und gefrorenen Brokkoli untermischen, sodass alles mit Flüssigkeit bedeckt ist.",
+     "Mit Alufolie abgedeckt 30 Minuten backen, umrühren, Käse und Paprikapulver darüberstreuen und offen 12–15 Minuten backen, bis die Nudeln weich sind. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 55,
+    "aktiv": 15,
+    "schritte": [
+     "Zutaten wie beschrieben auf 2 airfryergeeignete Formen verteilen.",
+     "Nacheinander mit Alufolie abgedeckt bei 180 °C 20 Minuten garen, umrühren, Käse darüber und offen 6–8 Minuten garen. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd2",
+     "topf",
+     "pfanne"
+    ],
+    "zeit": 30,
+    "aktiv": 20,
+    "schritte": [
+     "Nudeln nach Packungsangabe kochen, Brokkoli die letzten 4 Minuten mitkochen, abgießen.",
+     "Hähnchenwürfel in der Pfanne 6 Minuten braten, Mehl darüberstäuben, Milch und Brühe einrühren und 3 Minuten köcheln. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Mit Nudeln, Brokkoli und Käse mischen.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "aufbau",
+   "mealprep",
+   "familie",
+   "kochtag"
+  ],
+  "tipp": "Lässt sich mit einer größeren Portion an einen höheren Kalorienbedarf anpassen.",
+  "foto": "creamy chicken broccoli pasta bake with golden cheese crust in a casserole dish"
+ },
+ {
+  "id": "O38",
+  "titel": "Teriyaki-Lachs mit Reis und Asiagemüse",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 2,
+  "zutaten": [
+   [
+    "lachs",
+    2,
+    "stk"
+   ],
+   [
+    "reis",
+    200
+   ],
+   [
+    "tk_asiagemuese",
+    300
+   ],
+   [
+    "sojasauce",
+    30
+   ],
+   [
+    "honig",
+    20
+   ],
+   [
+    "ingwer",
+    10
+   ],
+   [
+    "knoblauch",
+    1,
+    "stk"
+   ],
+   [
+    "rapsoel",
+    5
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen",
+     "herd",
+     "topf"
+    ],
+    "zeit": 35,
+    "aktiv": 12,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen. Reis mit 400 ml Wasser im Topf aufkochen und abgedeckt bei kleiner Hitze 15 Minuten quellen lassen.",
+     "Sojasauce mit Honig, geriebenem Ingwer und gepresstem Knoblauch verrühren.",
+     "Asiagemüse mit Öl auf einem Blech 10 Minuten backen, Lachs dazulegen, mit der Hälfte der Sauce bestreichen und 12–15 Minuten backen, bis er innen nicht mehr glasig ist.",
+     "Mit Reis und restlicher Sauce servieren."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer",
+     "herd",
+     "topf"
+    ],
+    "zeit": 30,
+    "aktiv": 12,
+    "schritte": [
+     "Reis im Topf garen wie beschrieben.",
+     "Asiagemüse bei 190 °C 8 Minuten im Airfryer garen, Lachs mit Sauce bestreichen, dazulegen und bei 180 °C 9–11 Minuten garen, bis er durchgegart ist."
+    ]
+   },
+   {
+    "geraete": [
+     "herd2",
+     "topf",
+     "pfanne"
+    ],
+    "zeit": 25,
+    "aktiv": 15,
+    "schritte": [
+     "Reis im Topf garen wie beschrieben.",
+     "Lachs in Öl je Seite 3–4 Minuten braten, Gemüse dazu 5 Minuten mitbraten, Sauce angießen und kurz einkochen, bis der Lachs durchgegart ist."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": false,
+  "tags": [
+   "eiweiss",
+   "aufbau",
+   "sportnach"
+  ],
+  "tipp": "Die Reismenge lässt sich je nach Kalorienbedarf erhöhen oder reduzieren.",
+  "foto": "glazed teriyaki salmon fillets with steamed white rice and stir-fried asian vegetables"
+ },
+ {
+  "id": "O39",
+  "titel": "Ofen-Frikadellen mit Möhren und Kartoffeln",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "gemischtes_hack",
+    600
+   ],
+   [
+    "eier",
+    1,
+    "stk"
+   ],
+   [
+    "haferflocken",
+    40
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "senf",
+    10
+   ],
+   [
+    "kartoffel",
+    800
+   ],
+   [
+    "moehre",
+    400
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "paprikapulver",
+    3
+   ],
+   [
+    "salz",
+    6
+   ],
+   [
+    "pfeffer",
+    1
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 50,
+    "aktiv": 20,
+    "schritte": [
+     "Ofen auf 200 °C Ober-/Unterhitze vorheizen.",
+     "Kartoffeln und Möhren in Spalten schneiden, mit Öl, Salz und Paprikapulver auf einem Blech mischen und 15 Minuten backen.",
+     "Hack mit Ei, Haferflocken, fein gehackter Zwiebel, Senf, Salz und Pfeffer verkneten und 12 flache Frikadellen formen.",
+     "Frikadellen aufs Blech legen und 22–25 Minuten backen, nach der Hälfte wenden, bis sie innen nicht mehr rosa sind. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 50,
+    "aktiv": 20,
+    "schritte": [
+     "Kartoffeln und Möhren mit Öl und Gewürzen in 2 Durchgängen bei 200 °C je 18 Minuten garen.",
+     "Frikadellen formen wie beschrieben und in 2 Durchgängen bei 180 °C je 12–14 Minuten garen, einmal wenden. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 40,
+    "aktiv": 30,
+    "schritte": [
+     "Kartoffel- und Möhrenspalten in 10 ml Öl abgedeckt 15 Minuten braten, dann offen 5 Minuten bräunen. Herausnehmen.",
+     "Frikadellen im restlichen Öl bei mittlerer Hitze je Seite 5–6 Minuten braten. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": true,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": true,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "mealprep",
+   "familie",
+   "box",
+   "kochtag"
+  ],
+  "tipp": "Frikadellen lassen sich einzeln einfrieren und schmecken auch kalt in der Box.",
+  "foto": "golden meatballs patties with roasted potato and carrot wedges on a baking tray"
+ },
+ {
+  "id": "O40",
+  "titel": "Hack-Bowl mit Ofen-Blumenkohl",
+  "mahlzeit": [
+   "mittag",
+   "abend"
+  ],
+  "portionen": 4,
+  "zutaten": [
+   [
+    "rinderhack",
+    500
+   ],
+   [
+    "blumenkohl",
+    1,
+    "stk"
+   ],
+   [
+    "paprika",
+    2,
+    "stk"
+   ],
+   [
+    "zwiebel",
+    80
+   ],
+   [
+    "skyr",
+    300
+   ],
+   [
+    "rapsoel",
+    20
+   ],
+   [
+    "currypulver",
+    3
+   ],
+   [
+    "paprikapulver",
+    4
+   ],
+   [
+    "kreuzkuemmel",
+    2
+   ],
+   [
+    "salz",
+    6
+   ],
+   [
+    "pfeffer",
+    1
+   ],
+   [
+    "petersilie",
+    1,
+    "stk",
+    "opt"
+   ]
+  ],
+  "wege": [
+   {
+    "geraete": [
+     "ofen"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Ofen auf 220 °C Ober-/Unterhitze vorheizen.",
+     "Blumenkohl in kleine Röschen teilen, mit Öl, Curry und Salz auf dem Blech mischen und 15 Minuten backen.",
+     "Hack mit Zwiebelwürfeln, Paprikapulver, Kreuzkümmel und Salz vermengen, in kleinen Stücken dazuzupfen, Paprikastreifen dazugeben.",
+     "Weitere 15–18 Minuten backen, bis das Hack innen nicht mehr rosa ist. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Mit gewürztem Skyr und Petersilie in Bowls anrichten.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "airfryer"
+    ],
+    "zeit": 40,
+    "aktiv": 15,
+    "schritte": [
+     "Blumenkohl mit Öl und Gewürzen in 2 Durchgängen bei 200 °C je 12 Minuten garen.",
+     "Hackstücke und Paprika in 2 Durchgängen bei 190 °C je 10–12 Minuten garen. Fleisch vollständig durchgaren: Kerntemperatur mind. 72 °C, innen nicht mehr rosa.",
+     "Mit Skyr anrichten.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   },
+   {
+    "geraete": [
+     "herd",
+     "pfanne"
+    ],
+    "zeit": 30,
+    "aktiv": 20,
+    "schritte": [
+     "Blumenkohlröschen in 15 ml Öl abgedeckt 8 Minuten braten, dann offen 4 Minuten bräunen. Herausnehmen.",
+     "Hack krümelig braten, bis es nicht mehr rosa ist, Zwiebel, Paprika und Gewürze 4 Minuten mitbraten.",
+     "Mit Blumenkohl und Skyr anrichten.",
+     "Reste zügig abkühlen lassen und innerhalb von 2 Stunden in Boxen in den Kühlschrank stellen."
+    ]
+   }
+  ],
+  "lager": {
+   "kuehl_tage": 1,
+   "einfrierbar": false,
+   "ungekuehlt_h": 2,
+   "kalt_essbar": false,
+   "aufwaermen": "mikrowelle"
+  },
+  "mealprep": true,
+  "tags": [
+   "eiweiss",
+   "lowcarb",
+   "mealprep",
+   "box"
+  ],
+  "tipp": "Mit Reis oder Kartoffeln wird die Bowl kohlenhydratreicher.",
+  "foto": "low carb bowl with roasted curry cauliflower, browned minced beef, peppers and a dollop of yogurt"
+ }
+]
