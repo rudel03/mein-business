@@ -10,7 +10,7 @@ let ok = 0, nok = 0;
 const pruef = (bed, text) => { if (bed) ok++; else { nok++; console.log('FEHLER:', text); } };
 for (const v of ['montage', 'fitness', 'camping', 'alltag']) {
   await page.goto(B + 'planer.html?v=' + v, { waitUntil: 'networkidle' });
-  await page.click('button[type=submit]');
+  // der Plan ist ohne Klick sofort da
   await page.waitForSelector('.tag');
   pruef(await page.locator('.essen button.titel').count() > 0, v + ': keine Gerichte');
   await page.locator('.essen button.titel').first().click();
@@ -18,8 +18,11 @@ for (const v of ['montage', 'fitness', 'camping', 'alltag']) {
   await page.click('dialog .schliessen button');
   await page.click('[data-reiter=einkauf]');
   pruef(await page.locator('.posten').count() > 3, v + ': Einkaufsliste');
-  await page.click('[data-reiter=naehr]');
-  pruef(await page.locator('.nw-tabelle tbody tr').count() >= 1, v + ': Nährwerte');
+  if (v === 'fitness') {
+    await page.click('[data-reiter=naehr]');
+    pruef(await page.locator('.nw-tabelle tbody tr').count() >= 1, v + ': Nährwerte');
+  }
+  pruef(await page.locator('#planform > details.anpassen:not([open])').count() === 1, v + ': Feineinstellungen eingeklappt');
   const breite = await page.evaluate(() => document.documentElement.scrollWidth);
   pruef(breite <= 390, v + ': horizontaler Scroll ' + breite);
 }
@@ -36,12 +39,14 @@ for (const v of ['montage', 'fitness', 'camping', 'alltag']) {
   pruef(vorher > 0 && nachher < vorher, `Treffer-Zähler reagiert (${vorher} → ${nachher})`);
   pruef((await page.textContent('#treffer-tipp')).startsWith('Mit '), 'Treffer-Zähler nennt den nächsten Schritt');
   await page.click('label.chip:has(input[value=mikrowelle])');
-  await page.click('button[type=submit]:has-text("Plan erstellen")');
+  await page.waitForTimeout(1500); // Plan passt sich ohne Knopf an
   await page.waitForSelector('.tag');
   pruef(await page.locator('.vorschau .vorschau-essen').count() > 3, 'Gratis-Vorschau der übrigen Tage');
-  const herz = page.locator('[data-merken]').first();
+  await page.locator('.essen button.titel').first().click();
+  const herz = page.locator('dialog[open] [data-merken]');
   await herz.click();
-  pruef(await herz.getAttribute('aria-pressed') === 'true', 'Merken schaltet um');
+  pruef(await herz.getAttribute('aria-pressed') === 'true', 'Merken im Rezept schaltet um');
+  await page.click('dialog .schliessen button');
   await page.locator('[data-gekocht]').first().click();
   pruef(/Erster Teller/.test(await page.textContent('#toast')), 'Abzeichen-Meldung nach dem ersten Gekocht');
   const titel = await page.locator('.essen button.titel').first().textContent();

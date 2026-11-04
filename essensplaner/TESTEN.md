@@ -66,14 +66,15 @@ Du siehst die Startseite von Tellerkontor mit den vier Planern.
 Probier auf jeder Seite den **Check** aus: Geräte antippen, dann zählt die Seite live, wie viele Rezepte gehen. Bei Kochsatz zeigt der Check „Protein pro Euro“ je Laden.
 
 ### Schritt 7 – Den Planer benutzen
-1. Klicke auf **„Tagesplan gratis erstellen“**.
-2. Kreuze an, was du hast: Geräte, Kühlschrank ja/nein, Laden, Budget, Personen, Allergien.
-3. Klicke unten auf **„Plan erstellen“**.
-4. Sieh dir an:
-   - den **Plan** mit den Mahlzeiten (Rezept antippen öffnet Zutaten und Schritte),
-   - die **Einkaufsliste** nach Abteilungen mit geschätzten Kosten,
-   - den **Vorkoch-Ablauf** mit Uhrzeiten und „essen bis“.
-5. Ohne Plus gibt es nur **1 Tag**. Das ist so gewollt (Gratis-Version).
+1. Klicke auf **„Tagesplan gratis erstellen“**. Der Plan ist sofort fertig, ohne dass du etwas ausfüllen musst.
+2. Oben stehen nur drei Fragen: **Was steht da?** (Geräte antippen), **Personen** und **Essen**. Bei jeder Änderung passt sich der Plan von selbst an, und die Zahl darüber zeigt, wie viele Rezepte passen.
+3. Alles Weitere (Laden, Allergien, Tage, Mahlzeiten, Kalorien) steckt unter **„Mehr anpassen“**. Nur aufklappen, wenn du es brauchst.
+4. Probier an einem Gericht:
+   - **Tauschen**: ein anderes Gericht statt diesem,
+   - **Gekocht**: abhaken, danach erscheint der Reiter **Küchenbuch** mit Abzeichen,
+   - Rezept antippen: Zutaten, Schritte und **Merken** (der Planer nimmt es dann öfter).
+5. Im Reiter **Einkauf** zählt ein Balken mit, was schon im Wagen liegt.
+6. Ohne Plus gibt es **1 Tag** voll. Darunter siehst du als Vorschau, wie der Rest der Woche aussehen würde.
 
 Tipp: Eine andere Marke testest du mit `?v=...` am Ende, z. B. http://localhost:8765/planer.html?v=camping (oder `montage`, `fitness`, `alltag`).
 

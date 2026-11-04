@@ -37,7 +37,7 @@ const RICHTWERTE = [[1900, 'Eher wenig Bewegung (ca. 1.900 kcal)'], [2200, 'Norm
 let daten = null;
 let plus = false;
 let letztes = null;
-let ausschluss = []; // getauschte Gerichte, gelten bis zum nächsten „Plan erstellen“
+let ausschluss = []; // getauschte Gerichte, gelten bis zur nächsten Änderung der Einstellungen
 
 const IKON = {
   herz: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.3C1.6 7.9 3.8 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.4 0 5.6 3.4 4.4 6.7-1.7 4.7-9.2 9.3-9.2 9.3z"/></svg>',
@@ -83,38 +83,75 @@ function stepper(name, wert, min, max, label) {
     <input type="hidden" name="${name}" value="${wert}" data-min="${min}" data-max="${max}"></div>`;
 }
 
+// Kurzwahl: nur die Geräte, die in dieser Lebenslage den Unterschied machen. Alles andere steckt unter „Mehr anpassen“.
+const KURZ = {
+  montage: ['wasserkocher', 'mikrowelle', 'herdan', 'kuehlschrank'],
+  fitness: ['herdan', 'ofen', 'airfryer', 'mikrowelle', 'kuehlschrank'],
+  camping: ['herdan', 'omnia', 'grill', 'kuehlschrank'],
+  alltag: ['herdan', 'ofen', 'airfryer', 'mikrowelle', 'kuehlschrank'],
+}[VARIANTE];
+const HERD = { montage: 'Kochplatte', camping: 'Gasherd' }[VARIANTE] || 'Herd';
+const HERD_STANDARD = { montage: 1, camping: 2 }[VARIANTE] || 4;
+// Topf und Pfanne setzen wir bei einem Herd voraus, darum fragen wir sie nicht ab.
+const OHNE_FRAGE = ['topf', 'pfanne'];
+
 function formular(p) {
   const laeden = Object.entries(LAEDEN).map(([k, l]) => [k, l.name]);
   const abn = (w) => w.split(',').every((id) => p.abneigungen.includes(id));
   const eigeneMakros = !!p.makros;
+  const name = (g) => (g === 'herdan' ? HERD : GERAETE.find((x) => x[0] === g)[1]);
+  const an = (g) => (g === 'herdan' ? p.geraete.herd >= 1 : p.geraete[g]);
+  const kurz = KURZ.map((g) => [g, name(g)]);
+  const rest = GERAETE.filter(([g]) => !KURZ.includes(g) && !OHNE_FRAGE.includes(g) && (VARIANTE === 'camping' || !['omnia', 'grill'].includes(g)));
+  const kurzDiaet = DIAETEN.filter(([d]) => ['alles', 'vegetarisch', 'vegan'].includes(d));
   return `
   <form id="planform" novalidate>
-    <fieldset><legend>Was steht dir zur Verfügung?</legend>
-      <p class="hilfe">Kreuz an, was es dort gibt, wo du kochst. Wir planen nur Rezepte, die damit klappen. Eine Kühlbox zählt als Kühlschrank nur, wenn sie zuverlässig unter 7 °C kühlt.</p>
-      <div class="zeile">${stepper('herd', p.geraete.herd, 0, 4, V.herdName)}</div>
-      ${chips('geraet', GERAETE.filter(([g]) => VARIANTE === 'camping' || !['omnia', 'grill'].includes(g)), 'checkbox', (g) => p.geraete[g])}
+    <div class="kurzwahl">
+      <fieldset><legend>Was steht da?</legend>
+        <div class="chips">${kurz.map(([g, t]) => `<label class="chip"><input type="checkbox" name="${g === 'herdan' ? 'herdan' : 'geraet'}" value="${g}"${an(g) ? ' checked' : ''}><span>${esc(t)}</span></label>`).join('')}</div>
+        <p class="treffer" id="treffer"><b class="treffer-zahl" id="treffer-zahl">…</b> <span id="treffer-text">Rezepte werden gezählt</span> <span class="treffer-tipp" id="treffer-tipp"></span></p>
+      </fieldset>
+      <div class="kurz-zeile">
+        ${stepper('personen', p.personen, 1, 8, 'Personen')}
+        <fieldset class="kurz-diaet"><legend>Essen</legend>${chips('diaet', kurzDiaet, 'radio', (d) => p.diaet === d)}</fieldset>
+      </div>
+    </div>
+
+    <details class="mehr anpassen"><summary>Mehr anpassen <small>Laden, Allergien, Tage, Mahlzeiten, Kalorien</small></summary>
+    <fieldset><legend>Weitere Geräte</legend>
+      ${chips('geraet', rest, 'checkbox', (g) => p.geraete[g])}
+      <div class="zeile">${stepper('herd', Math.max(1, p.geraete.herd || HERD_STANDARD), 1, 4, V.herdName)}</div>
+      <p class="hilfe">Topf und Pfanne setzen wir beim ${esc(HERD)} voraus. Eine Kühlbox zählt als Kühlschrank nur, wenn sie zuverlässig unter 7 °C kühlt.</p>
     </fieldset>
 
-    <fieldset><legend>Wo kaufst du ein?</legend>
+    <fieldset><legend>Allergien und Abneigungen</legend>
+      ${chips('allergen', ALLERGENE, 'checkbox', (a) => p.allergene.includes(a))}
+      <p class="hilfe">Wir filtern nach den 14 Hauptallergenen. Spuren können wir nicht erkennen: Prüf bei Allergien immer das Etikett. Der Planer ersetzt keine ärztliche Beratung.</p>
+      <p class="lbl"><b>Das mag ich nicht</b></p>
+      ${chips('abneigung', ABNEIGUNGEN, 'checkbox', abn)}
+      <p class="lbl"><b>Weitere Ernährungsformen</b></p>
+      ${chips('diaet', DIAETEN.filter(([d]) => !kurzDiaet.some(([x]) => x === d)), 'radio', (d) => p.diaet === d)}
+    </fieldset>
+
+    <fieldset><legend>Einkauf</legend>
       ${chips('laden', laeden, 'radio', (l) => p.laden === l)}
       <div class="zeile">
         <div class="feld"><label for="budget">Budget für den ganzen Plan (€)</label><input id="budget" name="budget" type="number" inputmode="decimal" min="0" step="1" placeholder="egal" value="${p.budget ?? ''}"></div>
         <label class="chip"><input type="checkbox" name="eigenmarken"${p.eigenmarken ? ' checked' : ''}><span>Eigenmarken bevorzugen</span></label>
       </div>
-      <p class="hilfe">Preise sind Schätzwerte je Laden (Stand 10/2026), keine Tagespreise.</p>
+      <p class="lbl"><b>Wie oft kaufst du ein?</b></p>
+      ${chips('einkauf', EINKAUF, 'radio', (x) => (p.einkauf || 'zweimal') === x)}
+      <p class="hilfe">Preise sind Schätzwerte je Laden (Stand 10/2026). Frisches Fleisch planen wir höchstens 2 Tage nach dem Einkauf, Hack 1 Tag.</p>
     </fieldset>
 
-    <fieldset><legend>Für wen kochst du?</legend>
-      <div class="zeile">${stepper('personen', p.personen, 1, 8, 'Personen')}</div>
-      <p class="lbl"><b>Ernährungsform</b></p>
-      ${chips('diaet', DIAETEN, 'radio', (d) => p.diaet === d)}
-      <details class="mehr"${p.allergene.length ? ' open' : ''}><summary>Allergien und Unverträglichkeiten</summary>
-        ${chips('allergen', ALLERGENE, 'checkbox', (a) => p.allergene.includes(a))}
-        <p class="hilfe">Wir filtern nach den 14 Hauptallergenen. Spuren können wir nicht erkennen: Prüf bei Allergien immer das Etikett. Der Planer ersetzt keine ärztliche Beratung.</p>
-      </details>
-      <details class="mehr"${p.abneigungen.length ? ' open' : ''}><summary>Das mag ich nicht</summary>
-        ${chips('abneigung', ABNEIGUNGEN, 'checkbox', abn)}
-      </details>
+    <fieldset><legend>Woche und Mahlzeiten</legend>
+      <div class="zeile">${stepper('tage', p.tage, 1, 14, 'Tage')}
+        <div class="feld"><label for="starttag">Start am</label><select id="starttag" name="starttag">${TAGE.map((t, i) => `<option value="${i}"${p.starttag === i ? ' selected' : ''}>${t}</option>`).join('')}</select></div></div>
+      ${chips('mahlzeit', Object.entries(MAHLZEIT_NAME), 'checkbox', (m) => p.mahlzeiten.includes(m))}
+      <p class="lbl"><b>Mittags unter der Woche</b></p>
+      ${chips('pause', PAUSEN, 'radio', (x) => p.pause === x)}
+      <p class="lbl"><b>Feste Kochtage</b> <small>leer = jeden Tag frisch</small></p>
+      ${chips('kochtag', TAGE_KURZ.map((t, i) => [String(i), t]), 'checkbox', (i) => (p.kochtage || []).includes(Number(i)))}
     </fieldset>
 
     <fieldset><legend>Wie viel brauchst du?</legend>
@@ -127,33 +164,17 @@ function formular(p) {
       </div>
       <p class="hilfe">Je Person und Tag. Diese Angaben bleiben auf deinem Gerät. Der Planer ist kein Diät- oder Therapieprogramm.</p>
     </fieldset>
-
-    <fieldset><legend>Deine Woche</legend>
-      <div class="zeile">${stepper('tage', p.tage, 1, 14, 'Tage')}
-        <div class="feld"><label for="starttag">Start am</label><select id="starttag" name="starttag">${TAGE.map((t, i) => `<option value="${i}"${p.starttag === i ? ' selected' : ''}>${t}</option>`).join('')}</select></div></div>
-      <p class="lbl"><b>Mahlzeiten</b></p>
-      ${chips('mahlzeit', Object.entries(MAHLZEIT_NAME), 'checkbox', (m) => p.mahlzeiten.includes(m))}
-      <p class="lbl"><b>Mittags unter der Woche</b></p>
-      ${chips('pause', PAUSEN, 'radio', (x) => p.pause === x)}
-      <p class="lbl"><b>Wie oft kaufst du ein?</b></p>
-      ${chips('einkauf', EINKAUF, 'radio', (x) => (p.einkauf || 'zweimal') === x)}
-      <p class="hilfe">Frisches Fleisch planen wir höchstens 2 Tage, Hackfleisch 1 Tag nach dem Einkauf. Ohne Kühlschrank kommt Kühlware nur am Einkaufstag auf den Teller.</p>
-      <details class="mehr"${p.kochtage?.length ? ' open' : ''}><summary>Feste Kochtage (Vorkochen)</summary>
-        <p class="hilfe">Leer lassen = jeden Tag frisch. Mit Kochtagen planen wir Boxen für die Tage danach, nach den Lagerempfehlungen des BfR, teils strenger.</p>
-        ${chips('kochtag', TAGE_KURZ.map((t, i) => [String(i), t]), 'checkbox', (i) => (p.kochtage || []).includes(Number(i)))}
-      </details>
-    </fieldset>
-    <div class="aktion">
-      <div class="treffer" id="treffer"><b class="treffer-zahl" id="treffer-zahl">…</b><span class="treffer-text"><span id="treffer-text">Rezepte werden gezählt</span><small id="treffer-tipp"></small></span></div>
-      <button class="knopf" type="submit">Plan erstellen</button></div>
+    </details>
   </form>`;
 }
 
 function liesFormular(form) {
   const fd = new FormData(form);
   const alle = (n) => fd.getAll(n);
-  const geraete = { herd: Number(fd.get('herd')) };
+  const herdAn = !!fd.get('herdan');
+  const geraete = { herd: herdAn ? Math.max(1, Number(fd.get('herd')) || HERD_STANDARD) : 0 };
   for (const [g] of GERAETE) geraete[g] = alle('geraet').includes(g);
+  geraete.topf = geraete.pfanne = herdAn;
   const rw = fd.get('richtwert');
   const p = {
     geraete, laden: fd.get('laden') || 'aldi', eigenmarken: !!fd.get('eigenmarken'),
@@ -197,9 +218,8 @@ function essenHtml(e, t, m, lieblinge, gekocht) {
     <img class="mini" src="img/rezepte/klein/${m.rezept}.jpg" alt="" width="120" height="90" loading="lazy" onerror="this.style.visibility='hidden'">
     <div class="essen-text"><span class="wann">${MAHLZEIT_NAME[m.m]}</span>
       <button class="titel" type="button" data-rezept="${m.rezept}" data-faktor="${m.faktor}">${esc(m.titel)}</button>
-      <span class="info">${herkunftMarke(m)}${m.box ? `<span class="marke">${e.profil.pause === 'kalt' ? 'Box, Kühltasche' : 'Box'}</span>` : ''}${zahl(m.n.kcal)} kcal · ${zahl(m.n.p)} g Protein${m.faktor !== 1 ? ` · Portion ×${Number(m.faktor).toLocaleString('de-DE', { maximumFractionDigits: 2 })}` : ''}</span></div>
+      <span class="info">${herkunftMarke(m)}${m.box ? `<span class="marke">${e.profil.pause === 'kalt' ? 'Box, Kühltasche' : 'Box'}</span>` : ''}${e.profil.makros ? `${zahl(m.n.kcal)} kcal · ${zahl(m.n.p)} g Protein` : ''}${lieb ? '<span class="marke lieb">gemerkt</span>' : ''}</span></div>
     <div class="essen-aktion">
-      <button class="ikon merken" type="button" data-merken="${m.rezept}" aria-pressed="${lieb}" title="Merken">${IKON.herz}<span>Merken</span></button>
       <button class="ikon" type="button" data-tauschen="${m.rezept}" title="Anderes Gericht">${IKON.tauschen}<span>Tauschen</span></button>
       <button class="ikon gekocht-knopf" type="button" data-gekocht="${schl}" data-herkunft="${m.herkunft || ''}" aria-pressed="${fertig}" title="Gekocht">${IKON.haken}<span>Gekocht</span></button>
     </div></div>`;
@@ -207,7 +227,7 @@ function essenHtml(e, t, m, lieblinge, gekocht) {
 
 function planHtml(e) {
   const kalt = e.profil.pause === 'kalt' && e.tage.some((t) => t.mahlzeiten.some((m) => m.box))
-    ? '<p class="meldung" role="note">Boxen für die Pause in einer Kühltasche mit Kühlakku mitnehmen und bis zum Essen kühl halten. Ungekühlt höchstens 2 Stunden.</p>' : '';
+    ? '<p class="meldung" role="note">Boxen in der Kühltasche mit Kühlakku mitnehmen. Ungekühlt höchstens 2 Stunden.</p>' : '';
   const lieblinge = lade('ep_lieblinge', []);
   const gekocht = lade('ep_gekocht', {});
   const tage = e.tage.map((t) => `
@@ -291,20 +311,22 @@ function ergebnisHtml(e) {
   const sperre = !plus && !e.vorschau?.length ? `<div class="sperre"><h3>Die ganze Woche planen</h3>
     <p>Ohne Plus planst du einen Tag. Mit Plus bis zu 14 Tage, mit Vorkoch-Ablauf und PDF.</p>
     <a class="knopf" href="preise.html?v=${VARIANTE}">Plus ansehen</a></div>` : '';
+  const reiter = [['plan', 'Plan'], ['einkauf', 'Einkauf']];
+  if (e.ablauf.length) reiter.push(['vorkochen', 'Vorkochen']);
+  if (e.profil.makros) reiter.push(['naehr', 'Nährwerte']);
+  const s0 = statistik();
+  if (s0.anzahl || s0.lieblinge) reiter.push(['buch', 'Küchenbuch']);
+  const zeigeReiter = (k) => reiter.some(([x]) => x === k);
   return `${m}
-    <div class="zusammenfassung">
-      <div class="kennzahl"><b>${euro(e.kosten.gesamt)}</b><small>geschätzt für ${e.profil.tage} ${e.profil.tage === 1 ? 'Tag' : 'Tage'}</small></div>
-      <div class="kennzahl"><b>${euro(e.kosten.jePersonUndTag)}</b><small>je Person und Tag</small></div>
-      <div class="kennzahl"><b>${zahl(kcal)}</b><small>kcal am Tag (Ø)</small></div>
-    </div>
+    <p class="kurzfazit"><b>Dein Plan für ${e.profil.tage === 1 ? 'heute' : `${e.profil.tage} Tage`}</b>Einkauf ca. ${euro(e.kosten.gesamt)}${e.profil.personen > 1 ? ` für ${e.profil.personen} Personen` : ''}${e.profil.makros ? `, im Schnitt ${zahl(kcal)} kcal am Tag` : ''}</p>
     <div class="reiter" role="tablist" aria-label="Ansicht">
-      ${[['plan', 'Plan'], ['einkauf', 'Einkauf'], ['vorkochen', 'Vorkochen'], ['naehr', 'Nährwerte'], ['buch', 'Küchenbuch']].map(([k, t], i) => `<button role="tab" id="t-${k}" aria-controls="r-${k}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-reiter="${k}">${t}</button>`).join('')}
+      ${reiter.map(([k, t], i) => `<button role="tab" id="t-${k}" aria-controls="r-${k}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-reiter="${k}">${t}</button>`).join('')}
     </div>
     <section class="reiterinhalt" id="r-plan" role="tabpanel" aria-labelledby="t-plan">${planHtml(e)}</section>
     <section class="reiterinhalt" id="r-einkauf" role="tabpanel" aria-labelledby="t-einkauf" hidden>${einkaufHtml(e)}</section>
-    <section class="reiterinhalt" id="r-vorkochen" role="tabpanel" aria-labelledby="t-vorkochen" hidden>${plus ? ablaufHtml(e) : '<p>Der Vorkoch-Ablauf gehört zu Plus.</p>'}</section>
-    <section class="reiterinhalt" id="r-naehr" role="tabpanel" aria-labelledby="t-naehr" hidden>${naehrHtml(e)}</section>
-    <section class="reiterinhalt" id="r-buch" role="tabpanel" aria-labelledby="t-buch" hidden>${buchHtml()}</section>
+    ${zeigeReiter('vorkochen') ? `<section class="reiterinhalt" id="r-vorkochen" role="tabpanel" aria-labelledby="t-vorkochen" hidden>${plus ? ablaufHtml(e) : '<p>Der Vorkoch-Ablauf gehört zu Plus.</p>'}</section>` : ''}
+    ${zeigeReiter('naehr') ? `<section class="reiterinhalt" id="r-naehr" role="tabpanel" aria-labelledby="t-naehr" hidden>${naehrHtml(e)}</section>` : ''}
+    <section class="reiterinhalt" id="r-buch" role="tabpanel" aria-labelledby="t-buch" hidden>${zeigeReiter('buch') ? buchHtml() : ''}</section>
     ${sperre}
     <div class="zeile" style="margin-top:16px">
       <button class="knopf leise" type="button" id="neu">Andere Gerichte vorschlagen</button>
@@ -344,6 +366,13 @@ function buchHtml() {
   </div>`;
 }
 
+function buchReiterZeigen() {
+  if ($('#t-buch')) return;
+  const leiste = $('.reiter');
+  if (!leiste) return;
+  leiste.insertAdjacentHTML('beforeend', '<button role="tab" id="t-buch" aria-controls="r-buch" aria-selected="false" tabindex="-1" data-reiter="buch">Küchenbuch</button>');
+}
+
 function meldeKurz(text) {
   const t = $('#toast');
   t.textContent = text;
@@ -369,6 +398,7 @@ function gekochtUmschalten(knopf) {
   knopf.closest('.essen').classList.toggle('gekocht', an);
   const neu = erreicht(statistik()).filter((id) => !vorher.includes(id));
   if (neu.length) meldeKurz(`Neues Abzeichen: ${ABZEICHEN.find((x) => x[0] === neu[0])[1]}. Steht im Küchenbuch.`);
+  buchReiterZeigen();
   $('#r-buch').innerHTML = buchHtml();
 }
 
@@ -380,7 +410,8 @@ function merkenUmschalten(id) {
   document.querySelectorAll(`[data-merken="${id}"]`).forEach((b) => b.setAttribute('aria-pressed', an));
   if (an) meldeKurz('Gemerkt. Der Planer nimmt das Gericht öfter.');
   if (an && neu.length === 3) meldeKurz('Neues Abzeichen: Geschmack gefunden. Steht im Küchenbuch.');
-  $('#r-buch').innerHTML = buchHtml();
+  buchReiterZeigen();
+  if ($('#r-buch')) $('#r-buch').innerHTML = buchHtml();
 }
 
 // ---------------------------------------------------------------- Treffer-Zähler
@@ -395,17 +426,16 @@ function zaehleTreffer(form) {
     let best = null;
     // nur Vorschläge, die in diese Lebenslage passen (im Monteurzimmer kein Backofen, im Camper kein Ofen)
     const TIPP = {
-      montage: ['wasserkocher', 'mikrowelle', 'sandwichmaker', 'airfryer', 'kuehlschrank', 'topf', 'pfanne'],
-      camping: ['omnia', 'grill', 'topf', 'pfanne', 'wasserkocher', 'kuehlschrank'],
+      montage: ['wasserkocher', 'mikrowelle', 'sandwichmaker', 'airfryer', 'kuehlschrank'],
+      camping: ['omnia', 'grill', 'wasserkocher', 'kuehlschrank'],
     }[VARIANTE] || GERAETE.map(([g]) => g).filter((g) => !['thermo', 'gefrier'].includes(g));
-    const proben = TIPP.filter((g) => !p.geraete[g]).map((g) => [GERAET_NAME[g], { ...p.geraete, [g]: true }]);
-    const platte = V.herdName === 'Gasflammen' ? 'einer Gasflamme' : 'einer Kochplatte';
-    if (!(p.geraete.herd >= 1)) proben.push([`${platte}${p.geraete.topf && p.geraete.pfanne ? '' : ', Topf und Pfanne'}`, { ...p.geraete, herd: 1, topf: true, pfanne: true }]);
+    const proben = TIPP.filter((g) => !p.geraete[g] && !OHNE_FRAGE.includes(g)).map((g) => [GERAET_NAME[g], { ...p.geraete, [g]: true }]);
+    if (!(p.geraete.herd >= 1)) proben.push([{ montage: 'einer Kochplatte', camping: 'einem Gasherd' }[VARIANTE] || 'einem Herd', { ...p.geraete, herd: HERD_STANDARD, topf: true, pfanne: true }]);
     for (const [name, g] of proben) {
       const mehr = kandidaten(daten, { ...p, geraete: g }).liste.length - n;
       if (mehr > 0 && (!best || mehr > best[1])) best = [name, mehr];
     }
-    if (best) tipp = `Mit ${best[0]} kämen ${best[1]} dazu.`;
+    if (best && best[1] >= 5) tipp = `Mit ${best[0]} kämen ${best[1]} dazu.`;
   }
   const zahlEl = $('#treffer-zahl');
   rollen(zahlEl, Number(zahlEl.dataset.wert) || 0, n);
@@ -456,6 +486,7 @@ function rezeptDialog(id, faktor) {
   $('.inhalt', dlg).innerHTML = `
     <img class="foto" src="img/rezepte/${r.id}.jpg" alt="" width="800" height="600" loading="lazy" onerror="this.remove()">
     <h2 id="rezept-titel">${esc(r.titel)}</h2>
+    <p><button class="ikon merken" type="button" data-merken="${r.id}" aria-pressed="${lade('ep_lieblinge', []).includes(r.id)}">${IKON.herz}<span>Merken, der Planer nimmt es öfter</span></button></p>
     <p>${zahl(portionen, 2)} ${portionen === 1 ? 'Portion' : 'Portionen'} · ${weg.zeit} Min. (${weg.aktiv} Min. Arbeit) · ${esc(weg.geraete.length ? weg.geraete.map((g) => (g === 'herd' ? '1 Platte' : g === 'herd2' ? '2 Platten' : (GERAETE.find((x) => x[0] === g) || [g, g])[1])).join(', ') : 'ohne Gerät')}</p>
     <h3>Zutaten</h3><ul class="zutaten">${zut}</ul>
     <h3>So geht's</h3><ol>${weg.schritte.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>
@@ -477,20 +508,47 @@ function zeige(e, ruhig) {
   $('#ergebnis-titel').focus({ preventScroll: true });
 }
 
-function planen(form, neuerSeed, ruhig) {
+// Planen im Hintergrund (Web Worker); ohne Worker-Unterstützung direkt auf der Seite
+let werker = null;
+let auftrag = 0;
+const offen = new Map();
+function werkerStarten() {
+  try {
+    werker = new Worker('js/planer-worker.js', { type: 'module' });
+    werker.onmessage = (ev) => { const f = offen.get(ev.data.nr); offen.delete(ev.data.nr); if (f) f(ev.data); };
+    werker.onerror = () => { werker = null; for (const [nr, f] of offen) { offen.delete(nr); f(null); } };
+    werker.postMessage({ art: 'daten', daten });
+  } catch { werker = null; }
+}
+function rechne(profil, ganz) {
+  const direkt = () => {
+    const e = erstellePlan(daten, profil);
+    const g = ganz && e.ok ? erstellePlan(daten, ganz) : null;
+    return { e, vorschau: g?.ok ? g.tage.slice(profil.tage) : null };
+  };
+  if (!werker) return Promise.resolve(direkt());
+  return new Promise((ok) => {
+    const nr = ++rechne.nr || (rechne.nr = 1);
+    offen.set(nr, (antwort) => ok(antwort || direkt()));
+    werker.postMessage({ art: 'plan', nr, profil, ganz });
+  });
+}
+
+async function planen(form, neuerSeed, ruhig) {
   const p = liesFormular(form);
   if (neuerSeed) p.seed = (p.seed || 1) + 1;
   const { ausschluss: _a, lieblinge: _l, ...merken } = p;
   speichere('ep_profil_' + VARIANTE, merken);
   const lauf = { ...p };
   if (!plus) lauf.tage = Math.min(p.tage, CONFIG.kostenlos.tage);
-  const e = erstellePlan(daten, lauf);
-  e.profil.seed = p.seed;
+  const nr = ++auftrag;
+  $('#ergebnis').classList.add('rechnet');
   // Gratis: Rest der Woche als ehrliche Vorschau (gleiche Einstellungen, nur Namen und Fotos)
-  if (!plus && e.ok && p.tage > lauf.tage) {
-    const ganz = erstellePlan(daten, p);
-    if (ganz.ok) e.vorschau = ganz.tage.slice(lauf.tage);
-  }
+  const { e, vorschau } = await rechne(lauf, !plus && p.tage > lauf.tage ? p : null);
+  if (nr !== auftrag) return; // inzwischen wurde wieder etwas geändert
+  $('#ergebnis').classList.remove('rechnet');
+  e.profil.seed = p.seed;
+  if (vorschau) e.vorschau = vorschau;
   zeige(e, ruhig);
 }
 
@@ -518,19 +576,25 @@ async function start() {
   const schl = gespeicherteLizenz();
   const lizenz = schl ? pruefeLizenz(schl).then((r) => { plus = r.ok; }) : Promise.resolve();
   lizenz.then(() => { $('#status').innerHTML = plus ? 'Plus aktiv' : `<a href="preise.html?v=${VARIANTE}">Plus</a>`; });
-  form.addEventListener('submit', async (ev) => { ev.preventDefault(); await Promise.all([laden, lizenz]); ausschluss = []; planen(form); });
-  laden.then(() => zaehleTreffer(form));
+  form.addEventListener('submit', (ev) => ev.preventDefault());
+  // Der Plan ist sofort da; jede Änderung oben passt ihn an, ohne extra Knopf
+  let warte = null;
+  const neuPlanen = () => { clearTimeout(warte); warte = setTimeout(() => { ausschluss = []; planen(form, false, true); }, 450); };
+  $('#ergebnis').hidden = false;
+  $('#ergebnis').innerHTML = '<p class="kurzfazit"><b>Dein Plan wird zusammengestellt …</b></p>';
+  Promise.all([laden, lizenz]).then(() => { werkerStarten(); zaehleTreffer(form); planen(form, false, true); });
   form.addEventListener('click', (ev) => {
     const b = ev.target.closest('[data-step]');
     if (!b) return;
     const inp = form.elements[b.dataset.step];
     const w = Math.max(Number(inp.dataset.min), Math.min(Number(inp.dataset.max), Number(inp.value) + Number(b.dataset.d)));
     inp.value = w; $('#o-' + b.dataset.step).textContent = w;
-    zaehleTreffer(form);
+    zaehleTreffer(form); neuPlanen();
   });
   form.addEventListener('change', (ev) => {
     if (ev.target.name === 'richtwert') $('#makrofelder').hidden = ev.target.value !== 'makros';
-    zaehleTreffer(form);
+    if (ev.target.name === 'herdan' && ev.target.checked && !(Number(form.elements.herd.value) >= 1)) form.elements.herd.value = HERD_STANDARD;
+    zaehleTreffer(form); neuPlanen();
   });
   $('#ergebnis').addEventListener('click', (ev) => {
     const t = ev.target;
@@ -544,8 +608,8 @@ async function start() {
     if (w) {
       const titel = daten.rezepte.find((x) => x.id === w.dataset.tauschen)?.titel || 'Das Gericht';
       ausschluss = [...new Set([...ausschluss, w.dataset.tauschen])];
-      planen(form, false, true);
-      return meldeKurz(`„${titel}“ getauscht. Es kommt in diesem Plan nicht mehr vor.`);
+      planen(form, false, true).then(() => meldeKurz(`„${titel}“ getauscht. Es kommt in diesem Plan nicht mehr vor.`));
+      return;
     }
     if (t.id === 'buch-leeren') {
       if (!confirm('Küchenbuch leeren? Gekochte Gerichte und Abzeichen werden auf diesem Gerät gelöscht. Deine Lieblinge bleiben.')) return;
@@ -558,7 +622,7 @@ async function start() {
       document.querySelectorAll('[data-reiter]').forEach((b) => { const an = b === tab; b.setAttribute('aria-selected', an); b.tabIndex = an ? 0 : -1; $('#r-' + b.dataset.reiter).hidden = !an; });
       return;
     }
-    if (t.id === 'neu') return planen(form, true);
+    if (t.id === 'neu') return planen(form, true, true);
     if (t.id === 'drucken') return window.print();
     if (t.id === 'teilen') return teilen();
   });
@@ -583,6 +647,7 @@ async function start() {
     }
   });
   $('#rezept .schliessen button').addEventListener('click', () => $('#rezept').close());
+  $('#rezept').addEventListener('click', (ev) => { const m = ev.target.closest('[data-merken]'); if (m) merkenUmschalten(m.dataset.merken); });
   // iPhone/iPad: Safari löscht Website-Daten nach 7 Tagen ohne Besuch, außer die App liegt auf dem Home-Bildschirm
   if (/iPhone|iPad|iPod/.test(navigator.userAgent) && !navigator.standalone) {
     const h = document.createElement('p');

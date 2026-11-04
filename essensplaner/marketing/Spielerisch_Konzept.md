@@ -6,7 +6,7 @@ Stand 04.11.2026. Ziel: Der Planer soll Spaß machen, seinen Nutzen sofort zeige
 Das Spielerische entsteht aus **echtem Nutzen, den man sieht**, nicht aus Punkten um der Punkte willen. Drei Momente tragen alles:
 
 1. **Der Treffer-Zähler.** Während man Geräte, Ernährung und Allergien ankreuzt, zählt eine große Zahl live mit: „59 Rezepte passen zu deiner Küche“. Darunter der nächste sinnvolle Schritt: „Mit Pfanne kämen 23 dazu.“ Das ist der eine auffällige, bewegte Moment (die Zahl rollt bei jeder Änderung). Er beantwortet die Kernfrage jeder Marke: Was geht mit dem, was dasteht?
-2. **Die Wochenkarte.** Der Plan zeigt Fotos statt Textlisten. An jedem Gericht drei Knöpfe: **Merken** (Herz, der Planer nimmt gemerkte Gerichte öfter), **Tauschen** (neuer Plan ohne dieses Gericht), **Gekocht** (zählt fürs Küchenbuch).
+2. **Die Wochenkarte.** Der Plan zeigt Fotos statt Textlisten. An jedem Gericht zwei Knöpfe: **Tauschen** (neuer Plan ohne dieses Gericht) und **Gekocht** (zählt fürs Küchenbuch). **Merken** (Herz, der Planer nimmt gemerkte Gerichte öfter) steht im Rezept. Seit 04.11. (C16) ist der Plan beim Öffnen schon fertig, siehe unten.
 3. **Das Küchenbuch.** Gekochte Gerichte sammeln sich: wie viele der 195 Rezepte entdeckt sind, Abzeichen für echte Taten (erster Teller, fünf verschiedene Gerichte, ohne Herd gekocht, vorgekocht …), die gemerkten Lieblinge. Alles bleibt auf dem Gerät.
 
 Dazu: Fortschrittsbalken beim Abhaken der Einkaufsliste („9 von 14 im Wagen“) und eine **ehrliche Vorschau** für Gratis-Nutzer: Die übrigen Tage der Woche werden mit Foto und Namen gezeigt, Rezepte, Einkauf und Vorkoch-Ablauf dafür gibt es mit Plus.
@@ -31,3 +31,6 @@ Dazu: Fortschrittsbalken beim Abhaken der Einkaufsliste („9 von 14 im Wagen“
 - Punkte und Ranglisten mit anderen Nutzern: bräuchte Konto und Server, widerspricht „ohne Konto“.
 - Tägliche Erinnerungen per Push: nervt, braucht Einwilligung, wenig Nutzen.
 - Glücksrad für Rabatte: Rabattcodes sind für Abos rechtlich möglich, wirken aber billig; bei den E-Book-Projekten gilt ohnehin Buchpreisbindung. Nicht nötig.
+
+## Nachtrag 04.11.2026: Einfachheit vor Spiel (C16)
+Vorgabe des Inhabers: Der Planer soll Arbeit und Entscheidungen abnehmen. Darum ist der Plan beim Öffnen schon fertig, oben stehen nur drei Fragen, alles andere ist eingeklappt, und jede Änderung plant sofort neu. Je Gericht nur noch zwei Knöpfe, Reiter erscheinen erst, wenn sie etwas zeigen. Der Treffer-Zähler bleibt als einziger auffälliger Moment, Tipps erscheinen nur, wenn ein Gerät mindestens 5 Rezepte dazubringt.

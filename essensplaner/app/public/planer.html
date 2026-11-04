@@ -31,15 +31,14 @@
 <main class="wrap">
   <section class="intro">
     <h1 id="claim">Dein Wochenplan nach deinen Geräten</h1>
-    <p id="kurz"></p>
     <script>(function () { var t = TEXTE[document.documentElement.dataset.theme]; document.getElementById('claim').textContent = t.claim;
-      document.getElementById('kurz').textContent = t.kurz; document.getElementById('vname').textContent = t.name;
+      document.getElementById('vname').textContent = t.name;
       document.getElementById('logo').src = 'img/logo-' + document.documentElement.dataset.theme + '.svg'; })();</script>
     <p class="datenhinweis">Kein Konto nötig. Was du hier eingibst, bleibt in diesem Browser und wird nicht an uns gesendet.</p>
   </section>
   <div id="formular"><p>Planer wird geladen …</p></div>
-  <section id="ergebnis" hidden aria-labelledby="ergebnis-titel"></section>
   <h2 id="ergebnis-titel" class="sr" tabindex="-1">Dein Plan</h2>
+  <section id="ergebnis" hidden aria-labelledby="ergebnis-titel"></section>
 </main>
 <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
 <dialog id="rezept" aria-labelledby="rezept-titel">
