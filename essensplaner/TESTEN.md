@@ -55,28 +55,16 @@ Du siehst die Startseite von Tellerkontor mit den vier Planern.
 
 ## Teil 3: Was du testen kannst
 
-### Schritt 6 – Die vier Landingpages
-| Marke | Adresse |
-|---|---|
-| Zimmerherd (Montage) | http://localhost:8765/montage.html |
-| Kochsatz (Fitness) | http://localhost:8765/fitness.html |
-| Zweiflammer (Camping) | http://localhost:8765/camping.html |
-| Wochenschmaus (Alltag) | http://localhost:8765/alltag.html |
-
-Probier auf jeder Seite den **Check** aus: Geräte antippen, dann zählt die Seite live, wie viele Rezepte gehen. Bei Kochsatz zeigt der Check „Protein pro Euro“ je Laden.
+### Schritt 6 – Die Startseite
+Öffne **http://localhost:8765/**. Rechts (am Handy darunter) steht ein Beispiel-Bon: Tipp auf 1, 2, 3 oder 4 Personen, und der Bon wechselt. Euro-Beträge erscheinen dort erst nach deinem Kassenbon-Test (Schalter `preiseInWerbung` in `config.js`).
 
 ### Schritt 7 – Den Planer benutzen
-1. Klicke auf **„Tagesplan gratis erstellen“**. Der Plan ist sofort fertig, ohne dass du etwas ausfüllen musst.
-2. Oben stehen nur drei Fragen: **Was steht da?** (Geräte antippen), **Personen** und **Essen**. Bei jeder Änderung passt sich der Plan von selbst an, und die Zahl darüber zeigt, wie viele Rezepte passen.
-3. Alles Weitere (Laden, Allergien, Tage, Mahlzeiten, Kalorien) steckt unter **„Mehr anpassen“**. Nur aufklappen, wenn du es brauchst.
-4. Probier an einem Gericht:
-   - **Tauschen**: ein anderes Gericht statt diesem,
-   - **Gekocht**: abhaken, danach erscheint der Reiter **Küchenbuch** mit Abzeichen,
-   - Rezept antippen: Zutaten, Schritte und **Merken** (der Planer nimmt es dann öfter).
-5. Im Reiter **Einkauf** zählt ein Balken mit, was schon im Wagen liegt.
-6. Ohne Plus gibt es **1 Tag** voll. Darunter siehst du als Vorschau, wie der Rest der Woche aussehen würde.
-
-Tipp: Eine andere Marke testest du mit `?v=...` am Ende, z. B. http://localhost:8765/planer.html?v=camping (oder `montage`, `fitness`, `alltag`).
+1. Tipp auf **„Woche planen“**. Der Plan ist sofort da, du musst nichts ausfüllen.
+2. Oben stehen fünf Schalter: **Küche**, **Personen**, **Laden**, **Essen**, **Woche**. Jeder öffnet ein Blatt von unten. Was du dort antippst, ändert den Plan sofort. Mit **Fertig** schließt du das Blatt.
+3. Unter **Küche** wählst du eine Situation (z. B. „Nur Wasserkocher und Mikrowelle“). Die gelbe Zahl zeigt, wie viele Rezepte passen.
+4. Die Tagesleiste antippen oder auf den Gerichten nach links und rechts wischen. Tage mit Schloss sind die Vorschau für Plus.
+5. An jedem Gericht: **Tauschen** (anderes Gericht) und **Gekocht** (zählt fürs Küchenbuch). Auf das Gericht tippen öffnet das Rezept mit **Merken**.
+6. Unten in der Leiste: **Einkauf** ist der Bon zum Abhaken mit Summe, **Küchenbuch** sammelt Gekochtes, Abzeichen und Lieblinge.
 
 ### Schritt 8 – Die Rechtsseiten ansehen
 Unten auf jeder Seite stehen Links zu Preise, Impressum, Datenschutz, AGB, Widerrufsbelehrung, „Verträge hier kündigen“ und „Vertrag widerrufen“. Die Formulare zum Kündigen und Widerrufen kannst du ausfüllen, **absenden geht noch nicht**, weil der Server dafür noch nicht eingerichtet ist (FUER_DICH.md, Schritt 4). In Impressum und Datenschutz stehen noch Platzhalter wie `[Vorname Nachname]`.
