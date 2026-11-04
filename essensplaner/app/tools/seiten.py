@@ -210,6 +210,8 @@ Bestellt am (*)/erhalten am (*)<br>Name des/der Verbraucher(s)<br>Anschrift des/
 
 for datei, (titel, beschreibung, robots, inhalt) in SEITEN.items():
     html = KOPF.format(titel=titel, beschreibung=beschreibung, robots=robots) + inhalt.strip().replace("{PREISKARTEN}", preiskarten()) + "\n" + FUSS
+    if datei == "preise.html":  # Meta Pixel nur mit Einwilligung, nur Startseite und Preisseite (marketing/Meta_Strategie.md)
+        html = html.replace('<script type="module" src="js/seiten.js"></script>', '<script type="module" src="js/seiten.js"></script>\n<script type="module" src="js/einwilligung.js"></script>')
     html = fuelle(html)
     open(os.path.join(ZIEL, datei), "w", encoding="utf-8").write(html)
     print("geschrieben:", datei)

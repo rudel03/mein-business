@@ -1,18 +1,19 @@
-// Einwilligungsbanner für den Meta Pixel (TDDDG § 25, DSGVO Art. 6 Abs. 1 lit. a). VORLAGE – noch nirgends eingebunden.
+// Einwilligungsbanner für den Meta Pixel (TDDDG § 25, DSGVO Art. 6 Abs. 1 lit. a). Eingebunden auf index.html und preise.html.
 //
-// Einbinden NUR auf Landingpages (index/montage/fitness/camping/alltag.html) und preise.html, NIE im Planer
+// Einbinden NUR auf der Startseite (index.html) und preise.html, NIE im Planer
 // (dort stehen Allergien und Ziele). Im <head> nach den übrigen Skripten:
 //   <script type="module" src="js/einwilligung.js"></script>
 // Pixel-ID in config.js: tracking: { metaPixelId: '…' } – leer oder fehlend = es wird nichts geladen, kein Banner.
 // Vorher: Datenschutzerklärung um Meta Pixel ergänzen (Empfänger, Drittland, Widerruf), Meta: Audience Network aus.
 //
 // Ablauf: ohne Entscheidung lädt nichts. „Akzeptieren“ und „Ablehnen“ sind gleich groß und gleich gestaltet.
-// Nach „Akzeptieren“: Pixel laden, PageView; Klick auf einen Kauf-Knopf (Kassen-URL aus config oder [data-kauf]) → InitiateCheckout.
-// Widerruf jederzeit über „Einwilligung ändern“ in der Fußzeile. Gespeichert wird nur die Entscheidung (ep_einwilligung).
+// Nach „Akzeptieren“: Pixel laden, PageView; Klick auf „Woche planen“ (Link zum Planer) → PlanerStart (eigenes Ereignis,
+// Optimierungsziel, marketing/Meta_Strategie.md); Klick auf einen Kauf-Knopf (Kassen-URL aus config oder [data-kauf]) → InitiateCheckout.
+// Widerruf jederzeit über „Einwilligung ändern“ in der Fußzeile. Gespeichert wird nur die Entscheidung (wb_einwilligung).
 
 import { CONFIG } from './config.js';
 
-const SPEICHER = 'ep_einwilligung';
+const SPEICHER = 'wb_einwilligung';
 const VERSION = 1; // erhöhen, wenn sich Zweck oder Anbieter ändern → alle werden neu gefragt
 const PIXEL_ID = String(CONFIG.tracking?.metaPixelId || '').trim();
 const IM_PLANER = /planer(\.html)?$/.test(location.pathname) || !!document.querySelector('#planer, [data-planer]');
@@ -48,6 +49,8 @@ const KASSEN = Object.entries(CONFIG.kasse?.urls || {}).filter(([, u]) => u);
 function kaufKlick(e) {
   const a = e.target.closest?.('a[href], [data-kauf]');
   if (!a || !window.fbq) return;
+  // Planer-Start: ohne Parameter, der Planer selbst sendet nie etwas
+  if (/(^|\/)planer\.html(\?|#|$)/.test(a.getAttribute('href') || '')) { window.fbq('trackCustom', 'PlanerStart'); return; }
   const tarif = a.dataset.kauf || KASSEN.find(([, u]) => a.href === u || a.getAttribute('href') === u)?.[0];
   if (!tarif) return;
   const preis = CONFIG.preise[tarif]?.betrag;
@@ -73,7 +76,7 @@ function zeigeBanner() {
   box.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--grund,#fff);color:var(--text,#111);border-top:2px solid var(--linie-stark,#555);padding:16px 0;box-shadow:0 -4px 16px rgba(0,0,0,.15)';
   box.innerHTML = `<div class="wrap">
     <h2 id="einwilligung-titel" style="font-size:1.15rem">Darf Meta messen, ob unsere Anzeigen wirken?</h2>
-    <p>Mit deiner Einwilligung laden wir auf dieser Seite den Meta Pixel (Meta Platforms Ireland Ltd.). Er setzt Cookies und übermittelt Seitenaufruf und Klick auf „Kaufen“ an Meta, auch in die USA. Im Planer wird nie etwas an Meta gesendet. Ohne Einwilligung funktioniert alles genauso. Du kannst deine Wahl jederzeit über „Einwilligung ändern“ unten auf der Seite widerrufen. Mehr in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    <p>Mit deiner Einwilligung laden wir auf dieser Seite den Meta Pixel (Meta Platforms Ireland Ltd.). Er setzt Cookies und übermittelt Seitenaufruf sowie Klicks auf „Woche planen“ und „Kaufen“ an Meta, auch in die USA. Im Planer wird nie etwas an Meta gesendet. Ohne Einwilligung funktioniert alles genauso. Du kannst deine Wahl jederzeit über „Einwilligung ändern“ unten auf der Seite widerrufen. Mehr in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
       <button class="knopf" type="button" data-wahl="nein">Ablehnen</button>
       <button class="knopf" type="button" data-wahl="ja">Akzeptieren</button>

@@ -215,6 +215,7 @@ seite = f"""<!doctype html>
 <p>Wochenbon. Nährwerte: Bundeslebensmittelschlüssel 4.0, Max Rubner-Institut (2025), CC BY 4.0. Preise sind Schätzungen, Stand 10/2026, keine Tagespreise.</p></div></footer>
 <script>window.WB_DEMO = {json.dumps(DEMO_HTML, ensure_ascii=False)};</script>
 <script type="module" src="js/start.js"></script>
+<script type="module" src="js/einwilligung.js"></script>
 </body></html>
 """
 open(os.path.join(ZIEL, "index.html"), "w", encoding="utf-8").write(seite)

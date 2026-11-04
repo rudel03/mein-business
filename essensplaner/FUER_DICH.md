@@ -62,7 +62,10 @@ Ich habe nichts gekauft, kein Konto angelegt, nichts registriert, nichts veröff
 - [ ] Search Console und Bing Webmaster Tools je Domain, `sitemap.xml` einreichen.
 - [ ] Cookieloses Statistik-Tool wählen (oder nur Server-Logs).
 
-## 9. Werbung (erst nach Validierung, Launchplan Phase 2)
+## 9. Werbung (Plan: `marketing/Meta_Strategie.md`, Start Januar 2027)
+- [ ] Abschnitt 10 der Meta-Strategie abarbeiten: Business-Manager, Werbekonto, Pixel-ID an mich, Domain bestätigen, Windsor.ai verbinden, Budget Test 1 (Vorschlag höchstens 300 €) freigeben, Gründer-Video drehen.
+
+### Alte Liste (vier Marken, überholt)
 - [ ] Meta Business Manager, Werbekonto, Zahlungsmittel.
 - [ ] Pixel-ID in die Vorlage `app/public/js/einwilligung.js` eintragen und auf Landingpages und Preisseite einbinden (nie im Planer). Ich helfe beim Einbau.
 - [ ] Kampagne nach `marketing/Kampagnen.md`: max. 150 € je Nische, **Audience Network aus**, 18+, keine sensiblen Zielgruppen.
