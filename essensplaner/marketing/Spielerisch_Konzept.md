@@ -1,5 +1,8 @@
 # Spielerischer Planer – Konzept und Prüfung
 
+> Gilt weiter für Wochenbon (C17): Treffer-Zähler im Blatt „Küche“, Tauschen/Gekocht an jeder Karte, Küchenbuch, Vorschau gesperrter Tage.
+
+
 Stand 04.11.2026. Ziel: Der Planer soll Spaß machen, seinen Nutzen sofort zeigen und so zum Kauf von Plus führen, **ohne** Druck, Täuschung oder Schuldgefühle (UWG, § 5a, DSA Art. 25, Projektregeln).
 
 ## Grundidee

@@ -1,5 +1,8 @@
 # Launchplan Essensplaner (Tellerkontor)
 
+> **Veraltet seit 04.11.2026 (ENTSCHEIDUNGEN C17):** Dieses Material gehört zu den vier früheren Nischen-Marken. Die neue Marke ist **Wochenbon**. Inhalte (Angles, Regeln, Teststruktur) bleiben als Vorlage nützlich, Namen, Motive und Preise (Pässe) gelten nicht mehr.
+
+
 Stand 29.10.2026. Grundlage: Entscheidungen A3, A4, P4 (`ENTSCHEIDUNGEN.md`), Abbruchkriterien (`recherche/Entscheidungsvorlage.md`), Kampagnen (`marketing/Kampagnen.md`). **Nichts davon ist gestartet.** Jeder Schritt mit „Inhaber“ ist für dich, weil er Geld kostet, ein Konto braucht oder etwas veröffentlicht.
 
 ## Grundsatz

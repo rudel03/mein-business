@@ -1,20 +1,11 @@
-// Gemeinsames für Preis-, Rechts- und Vertragsseiten: Variante (Stil/Name), Lizenz eingeben,
+// Gemeinsames für Preis-, Rechts- und Vertragsseiten: Platzhalter füllen, Lizenz eingeben,
 // Kündigung und Widerruf ohne Login (§ 312k BGB, Widerrufsfunktion seit 19.06.2026).
 
 import { CONFIG } from './config.js';
 import { pruefeLizenz, speichereLizenz } from './lizenz.js';
 
 const $ = (s) => document.querySelector(s);
-const v = new URLSearchParams(location.search).get('v');
-const VARIANTE = CONFIG.varianten[v] ? v : 'alltag';
-const V = CONFIG.varianten[VARIANTE];
-document.documentElement.dataset.theme = V.theme;
-
 function setze() {
-  const n = $('#vname'); if (n) n.textContent = V.name;
-  const l = $('#logo'); if (l) l.src = `img/logo-${VARIANTE}.svg`;
-  const h = $('#heimlink'); if (h) h.href = `planer.html?v=${VARIANTE}`;
-  document.querySelectorAll('.fuss nav a, a[data-v]').forEach((a) => { const u = new URL(a.href, location.href); u.searchParams.set('v', VARIANTE); a.href = u.pathname.split('/').pop() + u.search; });
   document.querySelectorAll('[data-feld]').forEach((el) => {
     const pfad = el.dataset.feld.split('.');
     let w = CONFIG; for (const k of pfad) w = w?.[k];
@@ -32,7 +23,7 @@ function lizenzFormular() {
     const out = $('#lizenzstatus');
     if (r.ok) {
       speichereLizenz(s.trim());
-      out.innerHTML = `Plus ist freigeschaltet${r.info.bis ? ` bis ${r.info.bis.split('-').reverse().join('.')}` : ''}. <a href="planer.html?v=${VARIANTE}">Zum Planer</a>`;
+      out.innerHTML = `Plus ist freigeschaltet${r.info.bis ? ` bis ${r.info.bis.split('-').reverse().join('.')}` : ''}. <a href="planer.html">Zum Planer</a>`;
     } else out.textContent = r.grund;
   });
 }

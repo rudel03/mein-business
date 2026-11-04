@@ -1,5 +1,8 @@
 # SEO: Keywords, Seitenstruktur und Technik für die vier Marken
 
+> **Veraltet seit 04.11.2026 (ENTSCHEIDUNGEN C17):** Dieses Material gehört zu den vier früheren Nischen-Marken. Die neue Marke ist **Wochenbon**. Inhalte (Angles, Regeln, Teststruktur) bleiben als Vorlage nützlich, Namen, Motive und Preise (Pässe) gelten nicht mehr.
+
+
 Stand: 29.10.2026 · Erstellt von Claude (SEO-Rolle) · Methodik nach den Skills `seo-audit`, `programmatic-seo` und `ai-seo` (gesponserte ◆-Tools nicht verwendet)
 
 **Kurz gesagt**

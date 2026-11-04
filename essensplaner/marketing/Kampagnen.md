@@ -1,5 +1,8 @@
 # Kampagnen – alle vier Marken
 
+> **Veraltet seit 04.11.2026 (ENTSCHEIDUNGEN C17):** Dieses Material gehört zu den vier früheren Nischen-Marken. Die neue Marke ist **Wochenbon**. Inhalte (Angles, Regeln, Teststruktur) bleiben als Vorlage nützlich, Namen, Motive und Preise (Pässe) gelten nicht mehr.
+
+
 Stand 29.10.2026 · Grundlage: Markenbücher (`marke/*/Markenbuch_*.md`), Claim-Freigabe (`marke/Claim_Freigabe.md`), Pricing (`recherche/08`), Recht (`recherche/07` Abschnitt 5). **Nichts davon ist gestartet** – Start nur durch dich (FUER_DICH.md).
 
 ## Regeln für alle Anzeigen

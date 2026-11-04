@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /planer.html
 
-Sitemap: https://tellerkontor.de/sitemap.xml
+Sitemap: https://wochenbon.de/sitemap.xml

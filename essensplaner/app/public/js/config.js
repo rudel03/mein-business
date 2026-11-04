@@ -1,8 +1,11 @@
-// Zentrale Einstellungen. Name, Preise, Texte und Voreinstellungen der Varianten werden NUR hier geändert.
-// Begründungen und Alternativen: ../../ENTSCHEIDUNGEN.md
+// Zentrale Einstellungen. Name, Preise, Texte und Küchen-Situationen werden NUR hier geändert.
+// Begründungen und Alternativen: ../../ENTSCHEIDUNGEN.md (C17: eine Marke Wochenbon)
 
 export const CONFIG = {
-  dachmarke: 'Tellerkontor',            // ENTSCHEIDUNGEN.md #B1 – erscheint klein in Fußzeile, Impressum, Kasse
+  marke: 'Wochenbon',                   // ENTSCHEIDUNGEN.md #C17 – DPMA/EUIPO-Prüfung offen (FUER_DICH.md)
+  dachmarke: 'Wochenbon',               // erscheint in Fußzeile, Impressum, Kasse
+  claim: 'Weißt du, was deine Woche kostet?',
+  kurz: 'Wochenplan, Einkaufszettel und geschätzter Preis für deinen Discounter.',
   betreiber: {
     // Platzhalter: der Inhaber trägt seine Daten ein (FUER_DICH.md)
     name: '[Vorname Nachname]', strasse: '[Straße Nr.]', ort: '[PLZ Ort]', email: '[kontakt@domain.de]', telefon: '[Telefon]',
@@ -13,63 +16,34 @@ export const CONFIG = {
   preise: {
     monat: { betrag: 6.99, text: '6,99 € im Monat', laufzeit: 'monatlich kündbar' },
     jahr: { betrag: 44.99, text: '44,99 € im Jahr', laufzeit: 'nach dem ersten Jahr monatlich kündbar', standard: true },
-    pass: { betrag: 17.99, text: '17,99 € einmalig für 3 Monate', laufzeit: 'Endet automatisch, keine Verlängerung', varianten: ['montage'] },
-    saison: { betrag: 24.99, text: '24,99 € einmalig für 6 Monate', laufzeit: 'Endet automatisch, keine Verlängerung', varianten: ['camping'] },
   },
   probeTage: 7,
   kostenlos: { tage: 1 }, // ohne Plus: Tagesplan (1 Tag) mit Einkaufsliste
 
-  // Basis-URL für Canonical, og:image, Sitemap. Platzhalter, bis die Domain entschieden ist (FUER_DICH.md)
-  basisUrl: 'https://tellerkontor.de/',
+  // Euro-Beträge in Werbung und auf der Startseite erst nach bestandenem Kassenbon-Test (Claim-Freigabe).
+  // Im Planer selbst stehen die Schätzungen immer, deutlich als „ca.“ und „geschätzt“ markiert.
+  preiseInWerbung: false,
+
+  // Basis-URL für Canonical, og:image, Sitemap. Platzhalter, bis die Domain gekauft ist (FUER_DICH.md)
+  basisUrl: 'https://wochenbon.de/',
 
   // Kasse und Verträge – vom Inhaber nach Kontoeröffnung einzutragen (FUER_DICH.md). Leer = Kasse noch nicht aktiv.
-  kasse: { anbieter: 'Paddle', urls: { monat: '', jahr: '', pass: '', saison: '' } },
+  kasse: { anbieter: 'Paddle', urls: { monat: '', jahr: '' } },
   vertragEndpoint: '', // nimmt Kündigung und Widerruf entgegen (server/vertrag-worker.js)
   lizenzSchluessel: 'MCowBQYDK2VwAyEAPLATZHALTER_OEFFENTLICHER_SCHLUESSEL_000000000=', // Ed25519, SPKI Base64 (tools/lizenz.mjs)
-  // Warteliste/Lead-Magnet: Formular-Adresse des Mail-Dienstes mit Double-Opt-in (z. B. Brevo-Formular). Leer = Anmeldung noch nicht offen.
+  // Warteliste: Formular-Adresse des Mail-Dienstes mit Double-Opt-in (z. B. Brevo-Formular). Leer = Anmeldung noch nicht offen.
   warteliste: { url: '' },
-  tracking: { metaPixelId: '' }, // leer = kein Pixel, kein Banner (js/einwilligung.js, nur Landingpages + Preisseite)
+  tracking: { metaPixelId: '' }, // leer = kein Pixel, kein Banner (js/einwilligung.js, nur Startseite + Preisseite)
 
-  varianten: {
-    montage: {
-      name: 'Zimmerherd', claim: 'Satt werden mit dem, was dasteht.',
-      kurz: 'Für Monteure, Bau, Außendienst und Fernfahrer in Unterkünften.',
-      theme: 'montage',
-      profil: {
-        geraete: { herd: 0, topf: false, pfanne: false, ofen: false, airfryer: false, mikrowelle: true, wasserkocher: true, kuehlschrank: true, gefrier: false },
-        pause: 'kalt', kcalRichtwert: 2800, mahlzeiten: ['fruehstueck', 'mittag', 'abend'], laden: 'aldi', personen: 1,
-      },
-      herdName: 'Kochplatten',
-    },
-    fitness: {
-      name: 'Kochsatz', claim: 'Deine Makros. Dein Discounter. Dein Plan.',
-      kurz: 'Für Training, Meal-Prep und feste Kalorien- und Proteinziele.',
-      theme: 'fitness',
-      profil: {
-        geraete: { herd: 2, topf: true, pfanne: true, ofen: true, airfryer: true, mikrowelle: true, wasserkocher: true, kuehlschrank: true, gefrier: true },
-        makros: { kcal: 2600, p: 160, kh: 290, f: 80 }, kochtage: [6, 2], pause: 'mikrowelle', mahlzeiten: ['fruehstueck', 'mittag', 'abend', 'snack'], laden: 'lidl',
-      },
-      herdName: 'Herdplatten',
-    },
-    camping: {
-      name: 'Zweiflammer', claim: 'Zwei Flammen. Eine Woche. Entspannt.',
-      kurz: 'Für Wohnmobil, Van, Wohnwagen und Dauercamping.',
-      theme: 'camping',
-      profil: {
-        geraete: { herd: 2, topf: true, pfanne: true, ofen: false, omnia: true, grill: false, airfryer: false, mikrowelle: false, wasserkocher: false, kuehlschrank: true, gefrier: false },
-        personen: 2, mahlzeiten: ['fruehstueck', 'mittag', 'abend'], pause: 'zuhause', laden: 'lidl', arbeitstage: [], einkauf: 'woche',
-      },
-      herdName: 'Gasflammen',
-    },
-    alltag: {
-      name: 'Wochenschmaus', claim: 'Die Woche ist geplant. Der Einkauf auch.',
-      kurz: 'Für alle, die nicht jeden Tag neu überlegen wollen, was es gibt.',
-      theme: 'alltag',
-      profil: {
-        geraete: { herd: 4, topf: true, pfanne: true, ofen: true, airfryer: false, mikrowelle: true, wasserkocher: true, kuehlschrank: true, gefrier: true },
-        personen: 2, mahlzeiten: ['fruehstueck', 'mittag', 'abend'], pause: 'zuhause', laden: 'aldi',
-      },
-      herdName: 'Herdplatten',
-    },
+  // Voreinstellung beim ersten Öffnen
+  profil: { situation: 'normal', personen: 2, laden: 'aldi', mahlzeiten: ['fruehstueck', 'mittag', 'abend'], pause: 'zuhause' },
+
+  // Küchen-Situationen: ein Tipp stellt alle Geräte ein (früher vier Marken, jetzt Filter)
+  situationen: {
+    normal: { name: 'Normale Küche', kurz: 'Herd, Backofen, Kühlschrank', geraete: { herd: 4, topf: true, pfanne: true, ofen: true, mikrowelle: true, wasserkocher: true, kuehlschrank: true, gefrier: true } },
+    airfryer: { name: 'Küche mit Airfryer', kurz: 'wie normal, plus Heißluftfritteuse', geraete: { herd: 4, topf: true, pfanne: true, ofen: true, airfryer: true, mikrowelle: true, wasserkocher: true, kuehlschrank: true, gefrier: true } },
+    klein: { name: 'Kleine Küche', kurz: 'zwei Platten, kein Backofen', geraete: { herd: 2, topf: true, pfanne: true, mikrowelle: true, wasserkocher: true, kuehlschrank: true, gefrier: true } },
+    zimmer: { name: 'Nur Wasserkocher und Mikrowelle', kurz: 'Wohnheim, Büro, Monteurzimmer', geraete: { wasserkocher: true, mikrowelle: true, kuehlschrank: true }, pause: 'kalt' },
+    camper: { name: 'Camper mit Gasherd', kurz: 'zwei Flammen, Kühlbox', geraete: { herd: 2, topf: true, pfanne: true, omnia: true, kuehlschrank: true }, einkauf: 'woche' },
   },
 };

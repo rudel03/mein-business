@@ -2,57 +2,59 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wochenplan nach deinen Geräten</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Deine Woche – Wochenbon</title>
 <meta name="robots" content="noindex, follow">
-<meta name="description" content="Wochenplan, Einkaufsliste mit geschätzten Kosten und Vorkoch-Ablauf – passend zu deinen Geräten, deinem Laden und deinem Budget. Ohne Konto, deine Daten bleiben auf dem Gerät.">
-<meta name="theme-color" content="#2c3146">
-<link rel="manifest" id="manifest" href="manifest-alltag.webmanifest">
-<link rel="icon" href="img/logo-dach.svg" type="image/svg+xml">
+<meta name="description" content="Wochenplan, Einkaufszettel nach Abteilungen und geschätzter Preis für deinen Discounter. Ohne Konto, deine Daten bleiben auf dem Gerät.">
+<meta name="theme-color" content="#ECEFF4">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="img/logo-wochenbon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/icon-192.png">
 <link rel="preload" href="fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/stil.css">
-<script>
-  // Variante so früh wie möglich setzen, damit nichts flackert
-  var TEXTE = {"montage": {"name": "Zimmerherd", "claim": "Satt werden mit dem, was dasteht.", "kurz": "Für Monteure, Bau, Außendienst und Fernfahrer in Unterkünften."}, "fitness": {"name": "Kochsatz", "claim": "Deine Makros. Dein Discounter. Dein Plan.", "kurz": "Für Training, Meal-Prep und feste Kalorien- und Proteinziele."}, "camping": {"name": "Zweiflammer", "claim": "Zwei Flammen. Eine Woche. Entspannt.", "kurz": "Für Wohnmobil, Van, Wohnwagen und Dauercamping."}, "alltag": {"name": "Wochenschmaus", "claim": "Die Woche ist geplant. Der Einkauf auch.", "kurz": "Für alle, die nicht jeden Tag neu überlegen wollen, was es gibt."}};
-  (function () { var v = new URLSearchParams(location.search).get('v');
-    document.documentElement.dataset.theme = TEXTE[v] ? v : 'alltag';
-    document.getElementById('manifest').href = 'manifest-' + document.documentElement.dataset.theme + '.webmanifest'; })();
-</script>
 <script type="module" src="js/app.js"></script>
 </head>
-<body>
+<body class="app">
 <header class="kopf">
-  <div class="wrap">
-    <a href="./" id="heimlink"><img class="logo" id="logo" src="img/logo-dach.svg" alt="" width="36" height="36"><span class="name" id="vname">Planer</span></a>
-    <span class="rechts" id="status"></span>
+  <div class="wrap schmal">
+    <a class="marke" href="./"><img src="img/logo-wochenbon.svg" alt="" width="34" height="34">Wochenbon</a>
+    <span class="rechts" id="status"><a class="plus-schild" href="preise.html">Plus</a></span>
   </div>
 </header>
-<div class="markenband" aria-hidden="true"></div>
-<main class="wrap">
-  <section class="intro">
-    <h1 id="claim">Dein Wochenplan nach deinen Geräten</h1>
-    <script>(function () { var t = TEXTE[document.documentElement.dataset.theme]; document.getElementById('claim').textContent = t.claim;
-      document.getElementById('vname').textContent = t.name;
-      document.getElementById('logo').src = 'img/logo-' + document.documentElement.dataset.theme + '.svg'; })();</script>
-    <p class="datenhinweis">Kein Konto nötig. Was du hier eingibst, bleibt in diesem Browser und wird nicht an uns gesendet.</p>
+<main class="wrap schmal" id="inhalt">
+  <section class="app-kopf">
+    <h1 id="titel">Deine Woche</h1>
+    <p id="untertitel">Der Plan steht. Tipp oben, wenn etwas nicht passt.</p>
+    <div class="schalter" id="schalter" role="group" aria-label="Einstellungen"></div>
+    <div class="meldungen" id="meldungen"></div>
   </section>
-  <div id="formular"><p>Planer wird geladen …</p></div>
-  <h2 id="ergebnis-titel" class="sr" tabindex="-1">Dein Plan</h2>
-  <section id="ergebnis" hidden aria-labelledby="ergebnis-titel"></section>
-</main>
-<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
-<dialog id="rezept" aria-labelledby="rezept-titel">
-  <div class="schliessen"><button class="knopf leise" type="button">Schließen</button></div>
-  <div class="inhalt"></div>
-</dialog>
-<footer class="fuss">
-  <div class="wrap">
+  <section id="ansicht-woche" aria-label="Woche"><div class="tage platzhalter-tage" aria-hidden="true"></div><div class="tag-ansicht"><div class="tag-titel"><h2>Plan wird zusammengestellt …</h2></div><div class="gerichte"><div class="gericht platzhalter"><div class="foto"></div><div class="koerper"><h3>&nbsp;</h3><div class="merkmale"><span class="merkmal">&nbsp;</span></div><div class="aktionen"><span class="aktion">&nbsp;</span></div></div></div><div class="gericht platzhalter"><div class="foto"></div><div class="koerper"><h3>&nbsp;</h3><div class="merkmale"><span class="merkmal">&nbsp;</span></div><div class="aktionen"><span class="aktion">&nbsp;</span></div></div></div><div class="gericht platzhalter"><div class="foto"></div><div class="koerper"><h3>&nbsp;</h3><div class="merkmale"><span class="merkmal">&nbsp;</span></div><div class="aktionen"><span class="aktion">&nbsp;</span></div></div></div></div></div></section>
+  <section id="ansicht-einkauf" aria-label="Einkauf" hidden></section>
+  <section id="ansicht-buch" aria-label="Küchenbuch" hidden></section>
+  <footer class="app-fuss">
     <nav aria-label="Rechtliches">
       <a href="preise.html">Preise</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a>
       <a href="widerruf.html">Widerrufsbelehrung</a><a href="kuendigen.html">Verträge hier kündigen</a><a href="widerrufen.html">Vertrag widerrufen</a>
     </nav>
-    <p>Ein Angebot von <span data-feld="dachmarke">Tellerkontor</span>. Nährwerte: Bundeslebensmittelschlüssel 4.0, Max Rubner-Institut (2025), CC BY 4.0. Preise sind Schätzungen. Lagerhinweise nach BfR, teils strenger.</p>
+    <p>Kein Konto nötig. Was du hier einstellst, bleibt in diesem Browser. Nährwerte: Bundeslebensmittelschlüssel 4.0, Max Rubner-Institut (2025), CC BY 4.0. Preise sind Schätzungen, Stand 10/2026. Lagerhinweise nach BfR, FSA und USDA, teils strenger. Rezeptfotos: KI-generiert, zeigen die Gerichte beispielhaft.</p>
+  </footer>
+</main>
+<nav class="leiste" aria-label="Bereiche">
+  <div class="leiste-innen">
+    <button type="button" data-ansicht="woche" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Woche</button>
+    <button type="button" data-ansicht="einkauf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v17l-2-1.5-2 1.5-2-1.5-2 1.5-2-1.5L6 20z"/><path d="M9 8h6M9 12h6"/></svg><span>Einkauf <span class="zahl" id="einkauf-zahl" hidden></span></span></button>
+    <button type="button" data-ansicht="buch"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5h10a4 4 0 0 1 4 4V20H9a4 4 0 0 1-4-4z"/><path d="M9 9h6M9 13h4"/></svg>Küchenbuch</button>
   </div>
-</footer>
+</nav>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+<dialog id="blatt" class="blatt" aria-labelledby="blatt-titel">
+  <div class="blatt-kopf"><h2 id="blatt-titel"></h2><button class="knopf zweit" type="button" data-zu>Fertig</button></div>
+  <div class="blatt-inhalt" id="blatt-inhalt"></div>
+</dialog>
+<dialog id="rezept" class="blatt rezept" aria-labelledby="rezept-titel">
+  <div class="blatt-kopf"><h2 id="rezept-titel"></h2><button class="knopf zweit" type="button" data-zu>Schließen</button></div>
+  <div class="blatt-inhalt" id="rezept-inhalt"></div>
+</dialog>
 </body>
 </html>

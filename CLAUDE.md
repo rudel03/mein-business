@@ -7,7 +7,7 @@ Wird beim Start jeder Sitzung gelesen. Ein Repository, ein Ordner pro Projekt. P
 |---|---|---|---|
 | Honigmama / BeeQueen (Koch-E-Books Schwangerschaft & erstes Jahr) | `honigmama/` | jctx4r-bu.myshopify.com | live; Entwurf mit Verbesserungen wartet aufs Veröffentlichen |
 | DURCHSCHICHT (E-Book für Schichtarbeit) | `durchschicht/` | mystore (`q2e8xh-pz.myshopify.com`) | Theme live, Produkt als Entwurf; offen: PDF anhängen, Impressum, bezahlter Plan |
-| Essensplaner (Tellerkontor: Zimmerherd, Kochsatz, Zweiflammer, Wochenschmaus) | `essensplaner/` | – (PWA, Paddle geplant) | Phasen A–D vorbereitet, nichts live; Schritte für den Inhaber in `essensplaner/FUER_DICH.md` |
+| Essensplaner **Wochenbon** (Discounter-Wochenplan, eine Marke seit 04.11.2026) | `essensplaner/` | – (PWA, Paddle geplant) | App und Startseite neu, nichts live; Kassenbon-Test vor jeder Werbung; Schritte in `essensplaner/FUER_DICH.md` |
 
 ## Arbeitsweise
 - **Eine Sitzung pro Projekt** (der Kontext bleibt sauber). Andere Projektordner nur lesen, wenn sie relevant sind.

@@ -2,7 +2,10 @@
 
 Wird beim Start jeder Sitzung gelesen. Auftrag: `AUFTRAG.md`. Entscheidungen: `ENTSCHEIDUNGEN.md`. Risiken: `RISIKEN.md`. Aufgaben für den Inhaber: `FUER_DICH.md`. Übergreifende Regeln: `../CLAUDE.md`.
 
-## Stand (29.10.2026, nach der ersten Nachtschicht)
+## Stand (04.11.2026)
+- **Seit 04.11.: eine Marke Wochenbon** (ENTSCHEIDUNGEN C17, `recherche/14`, `marke/wochenbon/Gestaltung.md`). Discounter-Wochenplan für alle, Kassenbon als Leitmotiv, neue App-Bedienung (Schalter oben, Blätter, Tagesleiste, Bon, untere Leiste), eine Startseite `index.html`. Die vier Nischen-Marken unten sind überholt; ihr Marketing-Material ist als veraltet markiert.
+
+### Verlauf (29.10.2026, erste Nachtschicht)
 - **Phase A Recherche:** fertig, „bestanden mit Auflagen“ (`recherche/00_Gesamtbericht_Phase_A.md` + PDF, Faktencheck 27 %, Advocatus Diaboli 11). Offen: Interviews, Zahlungsbereitschaft (Inhaber).
 - **Phase B Marke:** fertig. Dachmarke **Tellerkontor**, Marken **Zimmerherd** (Montage), **Kochsatz** (Fitness), **Zweiflammer** (Camping, gewählte Nische), **Wochenschmaus** (Alltag). Markenbücher, Logos, Beispielbilder, Claim-Freigabe (241 Aussagen, 13 gesperrt). Offen: DPMA/EUIPO (Inhaber).
 - **Phase C Produkt:** PWA fertig, 30 Unit-Tests + 37 E2E grün, einfache Oberfläche (Plan sofort fertig, 3 Kurzfragen, Rest eingeklappt; C16) mit Treffer-Zähler, Tauschen/Gekocht, Küchenbuch, Wochen-Vorschau (C15); Planen im Web Worker (Frische über die Tage mit Einkaufstagen seit Gegenprüfung 13), Server-Vorlage `server/` mit 13 Tests, Lighthouse Landingpages 97–100 in allen Kategorien (Planer SEO 66, weil absichtlich noindex). Offen: Paddle, Schlüsselpaar, Worker-Deployment, Impressum-Daten, Anwaltsprüfung, Testkochen, Kassenbon-Test (alles Inhaber).
@@ -23,9 +26,10 @@ Wird beim Start jeder Sitzung gelesen. Auftrag: `AUFTRAG.md`. Entscheidungen: `E
 - Tests: `npm test` · E2E: `node tools/server.mjs 8765 &` dann `node tools/ablauf-test.mjs`
 - Screenshots + Scroll-Prüfung: `node tools/shot.mjs <seite.html> <name>` → `shots/`
 - Lighthouse: `CHROME_PATH=/opt/pw-browsers/chromium-1243/chrome-linux64/chrome npx lighthouse <url> --chrome-flags="--headless --no-sandbox"`
-- Anzeigen: `node tools/creative.mjs` (aus `marketing/creatives/creatives.json`), Videos: `node tools/video.mjs` (aus `videos.json`, braucht `clipN.mp4` je Marke; Rohclips danach löschen)
+- Anzeigen/Videos (`tools/creative.mjs`, `tools/video.mjs`): Werkzeuge noch für die alten Marken, Material veraltet (C17).
 - Lizenz: `node tools/lizenz.mjs neu` / `signieren`
-- Lead-Magnet-PDFs (Zimmer-Check, Protein-Liste, Bordküchen-Check, Wochenpläne 1/2/3 Personen): `node tools/leadmagnete.mjs [montage|fitness|camping|alltag]` → `public/pdf/`. Prüft Überlauf je Seite und < 2 MB; Zahlen wie `landing.py`. Ohne Euro-Beträge bis Kassenbon-Test.
+- Lead-Magnet-PDFs: `tools/leadmagnete.mjs` stammt aus der Vier-Marken-Zeit (Logos gelöscht) und muss für Wochenbon umgebaut werden; die alten PDFs in `public/pdf/` tragen noch die alten Marken.
+- Startseite inkl. Beispiel-Bons (`tools/demo.mjs`), robots, sitemap, llms: `python3 tools/landing.py`. Icons: `node tools/icons.mjs` (Server auf 8765).
 
 ## Fallstricke
 - Rezeptzahlen in Texten **immer aus `landing.py` (zaehle)** nehmen: sie berücksichtigen die Lagerregel (ohne Gefrierfach keine TK-Zutaten). Handzählungen lagen falsch.
@@ -39,3 +43,6 @@ Wird beim Start jeder Sitzung gelesen. Auftrag: `AUFTRAG.md`. Entscheidungen: `E
 - Frische: Jede neue Zutat braucht korrektes `lager` (k/r/t) und `abt` – daraus folgt `haltbarTage`. Neue Lagerlogik immer mit dem Zufallstest prüfen (Invariante in `tests/planer.test.mjs`).
 - Anleitung zum lokalen Testen für den Inhaber: `TESTEN.md`.
 - Spielerisches nur ohne Dark Patterns (keine Serien/Fristen/Beschämung, keine Euro-Ersparnis im Küchenbuch). Daten: `ep_gekocht`, `ep_lieblinge`, `ep_haken` im localStorage. Mini-Fotos: `public/img/rezepte/klein/` (240 × 180, bei neuen Rezepten mit PIL erzeugen).
+- Wochenbon: Euro-Beträge auf der Startseite erst mit `preiseInWerbung: true` in `config.js` (nach Kassenbon-Test), danach `python3 tools/landing.py`. Im Planer stehen Schätzungen immer mit „ca.“.
+- Profil im Browser unter `wb_profil`, Küchenbuch `wb_gekocht`, Lieblinge `wb_lieblinge`, Haken `wb_haken`. Situationen in `config.js` → `situationen`.
+- Platzhalter-Karten in `tools/planer.vorlage.html` halten die Layout-Verschiebung klein (CLS), bei Änderungen an der Karte mit anpassen.

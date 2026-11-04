@@ -2,6 +2,13 @@
 
 Ich habe nichts gekauft, kein Konto angelegt, nichts registriert, nichts veröffentlicht und keine Anzeige gestartet. Ausgegeben habe ich nur Higgsfield-Credits für Bilder und Videos. Die Reihenfolge unten ist die empfohlene. Hake ab, was erledigt ist.
 
+## Neu seit 04.11.2026: eine Marke Wochenbon
+- [ ] **Kassenbon-Test zuerst** (Abschnitt 6): Der Angle „Du weißt, was deine Woche kostet“ braucht Euro-Beträge. Danach in `app/public/js/config.js` `preiseInWerbung: true` setzen und `python3 tools/landing.py` ausführen, dann zeigt die Startseite echte Beträge.
+- [ ] DPMA/EUIPO-Recherche für **Wochenbon** (Klassen 9, 35, 41, 43), danach `wochenbon.de` und `.com` kaufen (am 04.11.2026 frei laut RDAP). Ausweichnamen: Korbplan, Planzettel, Plankoch (`recherche/14` Abschnitt 7).
+- [ ] Google-Trends-Vergleich in 5 Minuten (Anleitung `recherche/14` Abschnitt 8).
+- [ ] Die alten Nischen-Namen (Tellerkontor, Zimmerherd, Kochsatz, Zweiflammer, Wochenschmaus) brauchst du nicht mehr zu prüfen oder zu kaufen.
+- [ ] Werbematerial für Wochenbon fehlt noch (die 32 Anzeigen und 12 Videos zeigen die alten Marken). Sobald Higgsfield wieder verbunden ist, erstelle ich neue.
+
 ## 0. Zuerst entscheiden (je 5 Minuten, Details in `ENTSCHEIDUNGEN.md`)
 - [ ] Namen behalten? Dachmarke **Tellerkontor**, Marken **Zimmerherd** (Montage), **Kochsatz** (Fitness), **Zweiflammer** (Camping), **Wochenschmaus** (Alltag).
 - [ ] Domain-Modell: eine Domain je Marke (Vorschlag SEO-Bericht) oder zuerst alles unter `tellerkontor.de`. Danach `basisUrl` in `app/public/js/config.js` setzen und `python3 tools/seiten.py && python3 tools/landing.py` ausführen (oder mich bitten).

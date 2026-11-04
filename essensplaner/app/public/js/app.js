@@ -1,48 +1,41 @@
-// Oberfläche des Planers: Formular → Plan, Einkaufsliste, Vorkochen, Nährwerte, Rezeptansicht, Export.
-// Alle Eingaben (auch Allergien, Ziele) bleiben im Browser (localStorage). Es wird nichts gesendet.
+// Wochenbon – Oberfläche des Planers.
+// Kein Formular: Der Plan steht beim Öffnen. Vier Schalter (Küche, Personen, Laden, Essen) öffnen je ein Blatt;
+// jede Wahl plant sofort neu. Unten drei Bereiche: Woche, Einkauf (der Bon), Küchenbuch.
+// Alle Eingaben bleiben im Browser (localStorage). Es wird nichts gesendet.
 
 import { CONFIG } from './config.js';
-import { erstellePlan, STANDARD_PROFIL, kandidaten, vervollstaendige } from './engine/planer.js';
+import { erstellePlan, kandidaten, vervollstaendige, STANDARD_PROFIL } from './engine/planer.js';
 import { MAHLZEIT_NAME, TAGE, TAGE_KURZ, euro, gramm, istOptional, ersterWeg, rund } from './engine/grundlagen.js';
 import { LAEDEN } from './engine/laeden.js';
-import { lagerText } from './engine/ablauf.js';
-import { pruefeLizenz, gespeicherteLizenz, speichereLizenz } from './lizenz.js';
+import { pruefeLizenz, gespeicherteLizenz } from './lizenz.js';
 
 const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const zahl = (x, st = 0) => Number(x).toLocaleString('de-DE', { maximumFractionDigits: st, minimumFractionDigits: st });
-
-const VARIANTE = (() => {
-  const v = new URLSearchParams(location.search).get('v') || document.documentElement.dataset.variante || 'alltag';
-  return CONFIG.varianten[v] ? v : 'alltag';
-})();
-const V = CONFIG.varianten[VARIANTE];
-document.documentElement.dataset.theme = V.theme;
+const ruhigeBewegung = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const GERAETE = [
-  ['wasserkocher', 'Wasserkocher'], ['mikrowelle', 'Mikrowelle'], ['topf', 'Topf'], ['pfanne', 'Pfanne'], ['ofen', 'Backofen'],
-  ['airfryer', 'Heißluftfritteuse'], ['omnia', 'Omnia-Backofen'], ['grill', 'Grill'], ['toaster', 'Toaster'], ['sandwichmaker', 'Sandwichmaker'],
-  ['puerierstab', 'Pürierstab'], ['kuehlschrank', 'Kühlschrank'], ['gefrier', 'Gefrierfach'], ['thermo', 'Thermobehälter'],
+  ['herd', 'Herd'], ['ofen', 'Backofen'], ['airfryer', 'Heißluftfritteuse'], ['mikrowelle', 'Mikrowelle'], ['wasserkocher', 'Wasserkocher'],
+  ['kuehlschrank', 'Kühlschrank'], ['gefrier', 'Gefrierfach'], ['omnia', 'Omnia-Backofen'], ['grill', 'Grill'], ['toaster', 'Toaster'],
+  ['sandwichmaker', 'Sandwichmaker'], ['puerierstab', 'Pürierstab'], ['thermo', 'Thermobehälter'],
 ];
+const OHNE_GERAETE = Object.fromEntries(GERAETE.map(([g]) => [g, g === 'herd' ? 0 : false]));
 const ALLERGENE = [['gl', 'Gluten'], ['mi', 'Milch/Laktose'], ['ei', 'Ei'], ['fi', 'Fisch'], ['kr', 'Krebstiere'], ['wt', 'Weichtiere'], ['er', 'Erdnüsse'],
   ['nu', 'Schalenfrüchte (Nüsse)'], ['so', 'Soja'], ['se', 'Sellerie'], ['sf', 'Senf'], ['ss', 'Sesam'], ['sw', 'Sulfite'], ['lu', 'Lupinen']];
 const ABNEIGUNGEN = [['champignon', 'Pilze'], ['kichererbsen_dose', 'Kichererbsen'], ['rote_linsen,tellerlinsen,linsen_dose', 'Linsen'], ['kidney_dose,weisse_bohnen_tomate', 'Bohnen'],
   ['tofu', 'Tofu'], ['sojagranulat', 'Sojaschnetzel'], ['aubergine', 'Aubergine'], ['zucchini', 'Zucchini'], ['brokkoli,tk_brokkoli', 'Brokkoli'], ['kokosmilch', 'Kokosmilch'],
   ['thunfisch,makrele_dose,sardinen_dose,hering_tomate', 'Dosenfisch'], ['leberwurst_dose', 'Leberwurst'], ['quinoa', 'Quinoa'], ['feta,halloumi', 'Schafskäse/Halloumi'], ['rosinen', 'Rosinen']];
-const DIAETEN = [['alles', 'Alles'], ['ohne_schwein', 'Ohne Schweinefleisch'], ['pescetarisch', 'Mit Fisch, ohne Fleisch'], ['vegetarisch', 'Vegetarisch'], ['vegan', 'Vegan']];
+const DIAETEN = [['alles', 'Alles', 'Fleisch, Fisch, Gemüse'], ['ohne_schwein', 'Ohne Schweinefleisch', ''], ['pescetarisch', 'Mit Fisch, ohne Fleisch', ''], ['vegetarisch', 'Vegetarisch', ''], ['vegan', 'Vegan', '']];
 const PAUSEN = [['zuhause', 'Ich esse zu Hause'], ['mikrowelle', 'Box, Mikrowelle da'], ['kalt', 'Box, kalt essen'], ['thermo', 'Box im Thermobehälter']];
 const EINKAUF = [['woche', 'Einmal pro Woche'], ['zweimal', 'Zweimal pro Woche'], ['taeglich', 'Fast jeden Tag']];
-const RICHTWERTE = [[1900, 'Eher wenig Bewegung (ca. 1.900 kcal)'], [2200, 'Normal aktiv (ca. 2.200 kcal)'], [2800, 'Körperlich harte Arbeit (ca. 2.800 kcal)']];
-
-let daten = null;
-let plus = false;
-let letztes = null;
-let ausschluss = []; // getauschte Gerichte, gelten bis zur nächsten Änderung der Einstellungen
+const SIT = CONFIG.situationen;
 
 const IKON = {
-  herz: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.3C1.6 7.9 3.8 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.4 0 5.6 3.4 4.4 6.7-1.7 4.7-9.2 9.3-9.2 9.3z"/></svg>',
   tauschen: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13l-3.5-3.5M20 16H7l3.5 3.5"/></svg>',
   haken: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12.5l5 5 10-11"/></svg>',
+  herz: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.3C1.6 7.9 3.8 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.4 0 5.6 3.4 4.4 6.7-1.7 4.7-9.2 9.3-9.2 9.3z"/></svg>',
+  schloss: '<svg class="schloss" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
 };
 
 // Abzeichen für echte Taten. Nichts verfällt, nichts wird verglichen, alles bleibt auf dem Gerät.
@@ -57,6 +50,13 @@ const ABZEICHEN = [
   ['geschmack', 'Geschmack gefunden', 'Drei Lieblingsgerichte gemerkt', (s) => s.lieblinge >= 3],
 ];
 
+let daten = null;
+let plus = false;
+let plan = null; // letztes Ergebnis
+let ansicht = 'woche';
+let tagAuswahl = 0;
+let ausschluss = []; // getauschte Gerichte, gelten bis zur nächsten Änderung der Einstellungen
+
 // ---------------------------------------------------------------- Speicher
 function lade(schl, fallback) {
   try { const x = localStorage.getItem(schl); return x ? JSON.parse(x) : fallback; } catch { return fallback; }
@@ -65,389 +65,386 @@ function speichere(schl, wert) {
   try { localStorage.setItem(schl, JSON.stringify(wert)); } catch { /* ohne Speicher geht es trotzdem */ }
 }
 
-function startProfil() {
-  const p = structuredClone({ ...STANDARD_PROFIL, ...V.profil, geraete: { ...STANDARD_PROFIL.geraete, ...V.profil.geraete } });
-  const gespeichert = lade('ep_profil_' + VARIANTE, null);
-  return gespeichert ? { ...p, ...gespeichert, geraete: { ...p.geraete, ...gespeichert.geraete } } : p;
-}
+const heuteWochentag = () => (new Date().getDay() + 6) % 7;
+let profil = {
+  ...STANDARD_PROFIL, ...CONFIG.profil, starttag: heuteWochentag(), extra: {}, eiweiss: false, kcalRichtwert: 2200, diaet: 'alles',
+  ...lade('wb_profil', {}),
+};
+function profilSpeichern() { const { seed, ...rest } = profil; speichere('wb_profil', rest); }
 
-// ---------------------------------------------------------------- Formular
-function chips(name, liste, typ, aktiv) {
-  return `<div class="chips">${liste.map(([w, t]) => `<label class="chip"><input type="${typ}" name="${name}" value="${esc(w)}"${aktiv(w) ? ' checked' : ''}><span>${esc(t)}</span></label>`).join('')}</div>`;
-}
-function stepper(name, wert, min, max, label) {
-  return `<div class="feld"><span class="lbl" id="l-${name}">${label}</span><div class="stepper" role="group" aria-labelledby="l-${name}">
-    <button type="button" data-step="${name}" data-d="-1" aria-label="${label}: weniger">−</button>
-    <output id="o-${name}" aria-live="polite">${wert}</output>
-    <button type="button" data-step="${name}" data-d="1" aria-label="${label}: mehr">+</button></div>
-    <input type="hidden" name="${name}" value="${wert}" data-min="${min}" data-max="${max}"></div>`;
-}
-
-// Kurzwahl: nur die Geräte, die in dieser Lebenslage den Unterschied machen. Alles andere steckt unter „Mehr anpassen“.
-const KURZ = {
-  montage: ['wasserkocher', 'mikrowelle', 'herdan', 'kuehlschrank'],
-  fitness: ['herdan', 'ofen', 'airfryer', 'mikrowelle', 'kuehlschrank'],
-  camping: ['herdan', 'omnia', 'grill', 'kuehlschrank'],
-  alltag: ['herdan', 'ofen', 'airfryer', 'mikrowelle', 'kuehlschrank'],
-}[VARIANTE];
-const HERD = { montage: 'Kochplatte', camping: 'Gasherd' }[VARIANTE] || 'Herd';
-const HERD_STANDARD = { montage: 1, camping: 2 }[VARIANTE] || 4;
-// Topf und Pfanne setzen wir bei einem Herd voraus, darum fragen wir sie nicht ab.
-const OHNE_FRAGE = ['topf', 'pfanne'];
-
-function formular(p) {
-  const laeden = Object.entries(LAEDEN).map(([k, l]) => [k, l.name]);
-  const abn = (w) => w.split(',').every((id) => p.abneigungen.includes(id));
-  const eigeneMakros = !!p.makros;
-  const name = (g) => (g === 'herdan' ? HERD : GERAETE.find((x) => x[0] === g)[1]);
-  const an = (g) => (g === 'herdan' ? p.geraete.herd >= 1 : p.geraete[g]);
-  const kurz = KURZ.map((g) => [g, name(g)]);
-  const rest = GERAETE.filter(([g]) => !KURZ.includes(g) && !OHNE_FRAGE.includes(g) && (VARIANTE === 'camping' || !['omnia', 'grill'].includes(g)));
-  const kurzDiaet = DIAETEN.filter(([d]) => ['alles', 'vegetarisch', 'vegan'].includes(d));
-  return `
-  <form id="planform" novalidate>
-    <div class="kurzwahl">
-      <fieldset><legend>Was steht da?</legend>
-        <div class="chips">${kurz.map(([g, t]) => `<label class="chip"><input type="checkbox" name="${g === 'herdan' ? 'herdan' : 'geraet'}" value="${g}"${an(g) ? ' checked' : ''}><span>${esc(t)}</span></label>`).join('')}</div>
-        <p class="treffer" id="treffer"><b class="treffer-zahl" id="treffer-zahl">…</b> <span id="treffer-text">Rezepte werden gezählt</span> <span class="treffer-tipp" id="treffer-tipp"></span></p>
-      </fieldset>
-      <div class="kurz-zeile">
-        ${stepper('personen', p.personen, 1, 8, 'Personen')}
-        <fieldset class="kurz-diaet"><legend>Essen</legend>${chips('diaet', kurzDiaet, 'radio', (d) => p.diaet === d)}</fieldset>
-      </div>
-    </div>
-
-    <details class="mehr anpassen"><summary>Mehr anpassen <small>Laden, Allergien, Tage, Mahlzeiten, Kalorien</small></summary>
-    <fieldset><legend>Weitere Geräte</legend>
-      ${chips('geraet', rest, 'checkbox', (g) => p.geraete[g])}
-      <div class="zeile">${stepper('herd', Math.max(1, p.geraete.herd || HERD_STANDARD), 1, 4, V.herdName)}</div>
-      <p class="hilfe">Topf und Pfanne setzen wir beim ${esc(HERD)} voraus. Eine Kühlbox zählt als Kühlschrank nur, wenn sie zuverlässig unter 7 °C kühlt.</p>
-    </fieldset>
-
-    <fieldset><legend>Allergien und Abneigungen</legend>
-      ${chips('allergen', ALLERGENE, 'checkbox', (a) => p.allergene.includes(a))}
-      <p class="hilfe">Wir filtern nach den 14 Hauptallergenen. Spuren können wir nicht erkennen: Prüf bei Allergien immer das Etikett. Der Planer ersetzt keine ärztliche Beratung.</p>
-      <p class="lbl"><b>Das mag ich nicht</b></p>
-      ${chips('abneigung', ABNEIGUNGEN, 'checkbox', abn)}
-      <p class="lbl"><b>Weitere Ernährungsformen</b></p>
-      ${chips('diaet', DIAETEN.filter(([d]) => !kurzDiaet.some(([x]) => x === d)), 'radio', (d) => p.diaet === d)}
-    </fieldset>
-
-    <fieldset><legend>Einkauf</legend>
-      ${chips('laden', laeden, 'radio', (l) => p.laden === l)}
-      <div class="zeile">
-        <div class="feld"><label for="budget">Budget für den ganzen Plan (€)</label><input id="budget" name="budget" type="number" inputmode="decimal" min="0" step="1" placeholder="egal" value="${p.budget ?? ''}"></div>
-        <label class="chip"><input type="checkbox" name="eigenmarken"${p.eigenmarken ? ' checked' : ''}><span>Eigenmarken bevorzugen</span></label>
-      </div>
-      <p class="lbl"><b>Wie oft kaufst du ein?</b></p>
-      ${chips('einkauf', EINKAUF, 'radio', (x) => (p.einkauf || 'zweimal') === x)}
-      <p class="hilfe">Preise sind Schätzwerte je Laden (Stand 10/2026). Frisches Fleisch planen wir höchstens 2 Tage nach dem Einkauf, Hack 1 Tag.</p>
-    </fieldset>
-
-    <fieldset><legend>Woche und Mahlzeiten</legend>
-      <div class="zeile">${stepper('tage', p.tage, 1, 14, 'Tage')}
-        <div class="feld"><label for="starttag">Start am</label><select id="starttag" name="starttag">${TAGE.map((t, i) => `<option value="${i}"${p.starttag === i ? ' selected' : ''}>${t}</option>`).join('')}</select></div></div>
-      ${chips('mahlzeit', Object.entries(MAHLZEIT_NAME), 'checkbox', (m) => p.mahlzeiten.includes(m))}
-      <p class="lbl"><b>Mittags unter der Woche</b></p>
-      ${chips('pause', PAUSEN, 'radio', (x) => p.pause === x)}
-      <p class="lbl"><b>Feste Kochtage</b> <small>leer = jeden Tag frisch</small></p>
-      ${chips('kochtag', TAGE_KURZ.map((t, i) => [String(i), t]), 'checkbox', (i) => (p.kochtage || []).includes(Number(i)))}
-    </fieldset>
-
-    <fieldset><legend>Wie viel brauchst du?</legend>
-      ${chips('richtwert', [...RICHTWERTE.map(([k, t]) => [String(k), t]), ['makros', 'Eigene Kalorien und Makros']], 'radio', (w) => (eigeneMakros ? w === 'makros' : String(p.kcalRichtwert) === w))}
-      <div class="makros" id="makrofelder"${eigeneMakros ? '' : ' hidden'}>
-        <div class="feld"><label for="kcal">Kalorien (kcal)</label><input id="kcal" name="kcal" type="number" inputmode="numeric" min="1200" max="6000" value="${p.makros?.kcal ?? 2400}"></div>
-        <div class="feld"><label for="p">Protein (g)</label><input id="p" name="p" type="number" inputmode="numeric" min="0" value="${p.makros?.p ?? 140}"></div>
-        <div class="feld"><label for="kh">Kohlenhydrate (g)</label><input id="kh" name="kh" type="number" inputmode="numeric" min="0" value="${p.makros?.kh ?? 260}"></div>
-        <div class="feld"><label for="f">Fett (g)</label><input id="f" name="f" type="number" inputmode="numeric" min="0" value="${p.makros?.f ?? 80}"></div>
-      </div>
-      <p class="hilfe">Je Person und Tag. Diese Angaben bleiben auf deinem Gerät. Der Planer ist kein Diät- oder Therapieprogramm.</p>
-    </fieldset>
-    </details>
-  </form>`;
-}
-
-function liesFormular(form) {
-  const fd = new FormData(form);
-  const alle = (n) => fd.getAll(n);
-  const herdAn = !!fd.get('herdan');
-  const geraete = { herd: herdAn ? Math.max(1, Number(fd.get('herd')) || HERD_STANDARD) : 0 };
-  for (const [g] of GERAETE) geraete[g] = alle('geraet').includes(g);
-  geraete.topf = geraete.pfanne = herdAn;
-  const rw = fd.get('richtwert');
-  const p = {
-    geraete, laden: fd.get('laden') || 'aldi', eigenmarken: !!fd.get('eigenmarken'),
-    budget: fd.get('budget') ? Math.max(0, Number(String(fd.get('budget')).replace(',', '.'))) || null : null,
-    personen: Number(fd.get('personen')), tage: Number(fd.get('tage')), starttag: Number(fd.get('starttag')),
-    diaet: fd.get('diaet') || 'alles', allergene: alle('allergen'), abneigungen: alle('abneigung').flatMap((x) => x.split(',')),
-    mahlzeiten: alle('mahlzeit'), pause: fd.get('pause') || 'zuhause', einkauf: fd.get('einkauf') || 'zweimal',
-    kochtage: alle('kochtag').map(Number), seed: letztes?.profil?.seed || 1,
-    lieblinge: lade('ep_lieblinge', []), ausschluss,
-    arbeitstage: V.profil.arbeitstage ?? STANDARD_PROFIL.arbeitstage,
+// Aus dem gespeicherten Profil das Planer-Profil machen (Situation + einzelne Geräte, Eiweiß-Schalter)
+function planerProfil(p = profil) {
+  const s = SIT[p.situation] || SIT.normal;
+  const geraete = { ...OHNE_GERAETE, ...s.geraete, ...p.extra };
+  if (geraete.herd >= 1) { geraete.topf = true; geraete.pfanne = true; }
+  const kcal = p.kcalRichtwert || 2200;
+  // Eiweißreich: 25 % der Energie aus Eiweiß, Rest ausgewogen (Kohlenhydrate und Fett passen sich an)
+  const makros = p.makros || (p.eiweiss ? { kcal, p: Math.round((kcal * 0.25) / 4), kh: Math.round((kcal * 0.45) / 4), f: Math.round((kcal * 0.3) / 9) } : null);
+  return {
+    ...p, geraete, makros, pause: p.pause ?? s.pause ?? 'zuhause', einkauf: p.einkauf ?? s.einkauf ?? 'zweimal',
+    lieblinge: lade('wb_lieblinge', []), ausschluss,
   };
-  if (!p.kochtage.length) p.kochtage = null;
-  if (rw === 'makros') p.makros = { kcal: Number(fd.get('kcal')), p: Number(fd.get('p')), kh: Number(fd.get('kh')), f: Number(fd.get('f')) };
-  else { p.makros = null; p.kcalRichtwert = Number(rw) || 2200; }
-  return p;
 }
 
-// ---------------------------------------------------------------- Ergebnis
-function herkunftMarke(m) {
-  if (m.herkunft === 'kuehl') return `<span class="marke kuehl">aus dem Kühlschrank</span>`;
-  if (m.herkunft === 'tk') return `<span class="marke tk">aus dem Gefrierfach</span>`;
-  if (m.herkunft === 'ungekuehlt') return `<span class="marke">vorbereitet</span>`;
-  return '';
+// ---------------------------------------------------------------- Planen im Hintergrund (Web Worker)
+let werker = null;
+const offen = new Map();
+let nrZaehler = 0;
+let auftrag = 0;
+function werkerStarten() {
+  try {
+    werker = new Worker('js/planer-worker.js', { type: 'module' });
+    werker.onmessage = (ev) => { const f = offen.get(ev.data.nr); offen.delete(ev.data.nr); if (f) f(ev.data); };
+    werker.onerror = () => { werker = null; for (const [nr, f] of offen) { offen.delete(nr); f(null); } };
+    werker.postMessage({ art: 'daten', daten });
+  } catch { werker = null; }
+}
+function rechne(p, ganz) {
+  const direkt = () => {
+    const e = erstellePlan(daten, p);
+    const g = ganz && e.ok ? erstellePlan(daten, ganz) : null;
+    return { e, vorschau: g?.ok ? g.tage.slice(p.tage) : null };
+  };
+  if (!werker) return Promise.resolve(direkt());
+  return new Promise((ok) => {
+    const nr = ++nrZaehler;
+    offen.set(nr, (antwort) => ok(antwort || direkt()));
+    werker.postMessage({ art: 'plan', nr, profil: p, ganz });
+  });
 }
 
-// Datum eines Plantags: der nächste gewählte Starttag ab heute
-function planDatum(e, d) {
+async function planen({ neuerSeed = false } = {}) {
+  if (!daten) return;
+  if (neuerSeed) profil.seed = (profil.seed || 1) + 1;
+  const p = planerProfil();
+  const lauf = { ...p };
+  if (!plus) lauf.tage = Math.min(p.tage, CONFIG.kostenlos.tage);
+  const nr = ++auftrag;
+  $('#inhalt').setAttribute('aria-busy', 'true');
+  // Gratis: der Rest der Woche als ehrliche Vorschau (nur Namen und Fotos)
+  const { e, vorschau } = await rechne(lauf, !plus && p.tage > lauf.tage ? p : null);
+  if (nr !== auftrag) return; // inzwischen wurde wieder etwas geändert
+  $('#inhalt').setAttribute('aria-busy', 'false');
+  if (vorschau) e.vorschau = vorschau;
+  plan = e;
+  if (tagAuswahl >= (e.tage?.length || 0) + (e.vorschau?.length || 0)) tagAuswahl = 0;
+  zeichne();
+}
+
+let warte = null;
+function neuPlanen() {
+  profilSpeichern();
+  schalterZeichnen();
+  clearTimeout(warte);
+  warte = setTimeout(() => { ausschluss = []; planen(); }, 350);
+}
+
+// ---------------------------------------------------------------- Schalter oben
+function schalterZeichnen() {
+  const s = SIT[profil.situation] || SIT.normal;
+  const extra = Object.values(profil.extra || {}).filter(Boolean).length;
+  const diaet = DIAETEN.find(([d]) => d === profil.diaet)?.[1] || 'Alles';
+  const zusatz = [profil.eiweiss && 'eiweißreich', profil.allergene?.length && `${profil.allergene.length} Allergene`].filter(Boolean).join(', ');
+  $('#schalter').innerHTML = [
+    ['kueche', 'Küche', s.name + (extra ? ` +${extra}` : '')],
+    ['personen', 'Personen', `${profil.personen} ${profil.personen === 1 ? 'Person' : 'Personen'}`],
+    ['laden', 'Laden', LAEDEN[profil.laden]?.name || 'Aldi'],
+    ['essen', 'Essen', diaet + (zusatz ? `, ${zusatz}` : '')],
+    ['mehr', 'Woche', `${profil.tage} Tage, ab ${TAGE[profil.starttag]}`],
+  ].map(([k, l, w]) => `<button class="pille" type="button" data-blatt="${k}"><small>${l}</small>${esc(w)}</button>`).join('');
+}
+
+// ---------------------------------------------------------------- Woche
+function planDatum(d) {
   const heute = new Date(); heute.setHours(12, 0, 0, 0);
-  const wt = (heute.getDay() + 6) % 7;
-  const start = new Date(heute); start.setDate(heute.getDate() + ((e.profil.starttag - wt + 7) % 7));
-  start.setDate(start.getDate() + d);
-  return start.toISOString().slice(0, 10);
+  const start = new Date(heute); start.setDate(heute.getDate() + ((profil.starttag - heuteWochentag() + 7) % 7) + d);
+  return start;
+}
+const iso = (d) => planDatum(d).toISOString().slice(0, 10);
+
+function alleTage() {
+  return [...(plan.tage || []).map((t) => ({ ...t, frei: true })), ...(plan.vorschau || []).map((t) => ({ ...t, frei: false }))];
 }
 
-function essenHtml(e, t, m, lieblinge, gekocht) {
-  if (!m.rezept) return `<div class="essen leer"><span class="wann">${MAHLZEIT_NAME[m.m]}</span><span>frei – kein passendes Rezept</span></div>`;
-  const schl = `${planDatum(e, t.d)}|${m.m}|${m.rezept}`;
-  const lieb = lieblinge.includes(m.rezept);
+function wocheZeichnen() {
+  const ziel = $('#ansicht-woche');
+  if (!plan.ok) { ziel.innerHTML = ''; return; }
+  const tage = alleTage();
+  const gekocht = lade('wb_gekocht', {});
+  const leiste = `<div class="tage" role="tablist" aria-label="Tage">${tage.map((t, i) => {
+    const fertig = t.frei && t.mahlzeiten.length && t.mahlzeiten.every((m) => !m.rezept || gekocht[`${iso(t.d)}|${m.m}|${m.rezept}`]);
+    return `<button class="tag-knopf${fertig ? ' fertig' : ''}" type="button" role="tab" aria-selected="${i === tagAuswahl}" data-tag="${i}" aria-label="${TAGE[t.wochentag]}${t.frei ? '' : ', mit Plus'}">${TAGE_KURZ[t.wochentag]}<b>${planDatum(t.d).getDate()}</b>${t.frei ? '' : IKON.schloss}</button>`;
+  }).join('')}</div>`;
+  const t = tage[tagAuswahl];
+  const datum = planDatum(t.d).toLocaleDateString('de-DE', { day: 'numeric', month: 'long' });
+  const nw = plan.naehrwerte?.jeTag?.[t.d];
+  const kopf = `<div class="tag-titel"><h2>${TAGE[t.wochentag]}, ${datum}</h2>${t.frei && nw && plan.profil.makros ? `<small>${zahl(nw.kcal)} kcal · ${zahl(nw.p)} g Eiweiß je Person</small>` : ''}</div>`;
+  let inhalt;
+  if (t.frei) {
+    const kalt = plan.profil.pause === 'kalt' && t.mahlzeiten.some((m) => m.box)
+      ? '<p class="meldung">Boxen in der Kühltasche mit Kühlakku mitnehmen. Ungekühlt höchstens 2 Stunden.</p>' : '';
+    inhalt = kalt + `<div class="gerichte">${t.mahlzeiten.map((m) => gerichtHtml(t, m, gekocht)).join('')}</div>`;
+  } else {
+    inhalt = `<div class="vorschau-gerichte">${t.mahlzeiten.filter((m) => m.rezept).map((m) => `<figure><img src="img/rezepte/klein/${m.rezept}.jpg" alt="" width="240" height="180" loading="lazy"><figcaption><small>${MAHLZEIT_NAME[m.m]}</small>${esc(m.titel)}</figcaption></figure>`).join('')}</div>${plusKarte()}`;
+  }
+  const unten = `<div class="mehr-unten"><button class="knopf zweit" type="button" id="neu">Andere Gerichte vorschlagen</button>
+    ${plus && plan.ablauf.length ? '<button class="knopf zweit" type="button" data-blatt="vorkochen">Vorkoch-Ablauf</button>' : ''}
+    ${plus ? '<button class="knopf zweit" type="button" id="drucken">Als PDF speichern</button>' : ''}</div>`;
+  ziel.innerHTML = leiste + `<div class="tag-ansicht" id="tag-ansicht">${kopf}${inhalt}</div>` + (plus || tage.length === 1 ? '' : (t.frei ? plusHinweis() : '')) + unten;
+}
+
+function gerichtHtml(t, m, gekocht) {
+  if (!m.rezept) return `<div class="gericht leer"><b>${MAHLZEIT_NAME[m.m]}</b>: frei, kein passendes Rezept mit deinen Einstellungen.</div>`;
+  const schl = `${iso(t.d)}|${m.m}|${m.rezept}`;
   const fertig = !!gekocht[schl];
-  return `<div class="essen${fertig ? ' gekocht' : ''}">
-    <img class="mini" src="img/rezepte/klein/${m.rezept}.jpg" alt="" width="120" height="90" loading="lazy" onerror="this.style.visibility='hidden'">
-    <div class="essen-text"><span class="wann">${MAHLZEIT_NAME[m.m]}</span>
-      <button class="titel" type="button" data-rezept="${m.rezept}" data-faktor="${m.faktor}">${esc(m.titel)}</button>
-      <span class="info">${herkunftMarke(m)}${m.box ? `<span class="marke">${e.profil.pause === 'kalt' ? 'Box, Kühltasche' : 'Box'}</span>` : ''}${e.profil.makros ? `${zahl(m.n.kcal)} kcal · ${zahl(m.n.p)} g Protein` : ''}${lieb ? '<span class="marke lieb">gemerkt</span>' : ''}</span></div>
-    <div class="essen-aktion">
-      <button class="ikon" type="button" data-tauschen="${m.rezept}" title="Anderes Gericht">${IKON.tauschen}<span>Tauschen</span></button>
-      <button class="ikon gekocht-knopf" type="button" data-gekocht="${schl}" data-herkunft="${m.herkunft || ''}" aria-pressed="${fertig}" title="Gekocht">${IKON.haken}<span>Gekocht</span></button>
-    </div></div>`;
+  const r = daten.rezepte.find((x) => x.id === m.rezept);
+  const weg = ersterWeg(r, plan.profil.geraete) || r.wege[0];
+  const lieb = lade('wb_lieblinge', []).includes(m.rezept);
+  const merkmale = [
+    `<span class="merkmal">${weg.zeit} Min.</span>`,
+    m.herkunft === 'kuehl' ? '<span class="merkmal kuehl">aus dem Kühlschrank</span>' : '',
+    m.herkunft === 'tk' ? '<span class="merkmal tk">aus dem Gefrierfach</span>' : '',
+    m.box ? `<span class="merkmal">${plan.profil.pause === 'kalt' ? 'Box, Kühltasche' : 'Box'}</span>` : '',
+    lieb ? '<span class="merkmal lieb">gemerkt</span>' : '',
+    plan.profil.makros ? `<span>${zahl(m.n.kcal)} kcal · ${zahl(m.n.p)} g Eiweiß</span>` : '',
+  ].join('');
+  const erstes = t.mahlzeiten.find((x) => x.rezept) === m;
+  return `<article class="gericht${fertig ? ' gekocht' : ''}">
+    <div class="foto"><img src="img/rezepte/${m.rezept}.jpg" alt="" width="800" height="600"${erstes ? ' fetchpriority="high"' : ' loading="lazy"'}><span class="wann">${MAHLZEIT_NAME[m.m]}</span></div>
+    <div class="koerper">
+      <h3><button type="button" data-rezept="${m.rezept}" data-faktor="${m.faktor}">${esc(m.titel)}</button></h3>
+      <div class="merkmale">${merkmale}</div>
+      <div class="aktionen">
+        <button class="aktion" type="button" data-tauschen="${m.rezept}">${IKON.tauschen}Tauschen</button>
+        <button class="aktion" type="button" data-gekocht="${schl}" data-herkunft="${m.herkunft || ''}" aria-pressed="${fertig}">${IKON.haken}Gekocht</button>
+      </div>
+    </div></article>`;
 }
 
-function planHtml(e) {
-  const kalt = e.profil.pause === 'kalt' && e.tage.some((t) => t.mahlzeiten.some((m) => m.box))
-    ? '<p class="meldung" role="note">Boxen in der Kühltasche mit Kühlakku mitnehmen. Ungekühlt höchstens 2 Stunden.</p>' : '';
-  const lieblinge = lade('ep_lieblinge', []);
-  const gekocht = lade('ep_gekocht', {});
-  const tage = e.tage.map((t) => `
-    <article class="tag"><h3>${TAGE[t.wochentag]}</h3>
-      ${t.mahlzeiten.map((m) => essenHtml(e, t, m, lieblinge, gekocht)).join('')}
-    </article>`).join('');
-  return kalt + `<div class="woche${e.tage.length === 1 ? ' einzeln' : ''}">${tage}</div>` + vorschauHtml(e);
-}
-
-// Gratis: die übrigen Tage als Vorschau mit Foto und Namen. Rezepte, Einkauf und Ablauf gibt es mit Plus.
-function vorschauHtml(e) {
-  if (!e.vorschau?.length) return '';
-  const tage = e.vorschau.map((t) => `<li class="vorschau-tag"><b>${TAGE[t.wochentag]}</b>
-    <span class="vorschau-bilder">${t.mahlzeiten.filter((m) => m.rezept).map((m) => `<span class="vorschau-essen"><img src="img/rezepte/klein/${m.rezept}.jpg" alt="" width="120" height="90" loading="lazy"><small>${esc(m.titel)}</small></span>`).join('')}</span></li>`).join('');
+function plusAngebot() {
   const P = CONFIG.preise;
-  const angebot = P.pass.varianten.includes(VARIANTE) ? `Montage-Pass: ${P.pass.text}, endet automatisch.`
-    : P.saison.varianten.includes(VARIANTE) ? `Saison-Pass: ${P.saison.text}, endet automatisch.`
-    : `Plus: ${P.monat.text} oder ${P.jahr.text}, die ersten ${CONFIG.probeTage} Tage 0 €.`;
-  return `<section class="vorschau" aria-labelledby="vorschau-titel">
-    <h3 id="vorschau-titel">So geht deine Woche weiter</h3>
-    <p>Die übrigen ${e.vorschau.length} Tage hat der Planer schon zusammengestellt. Mit Plus bekommst du die Rezepte, die Einkaufsliste und den Vorkoch-Ablauf dafür.</p>
-    <ol class="vorschau-liste">${tage}</ol>
-    <p class="vorschau-angebot">${angebot}</p>
-    <a class="knopf" href="preise.html?v=${VARIANTE}">Ganze Woche freischalten</a>
-  </section>`;
+  return `Plus: ${P.monat.text} oder ${P.jahr.text}, die ersten ${CONFIG.probeTage} Tage 0 €.`;
+}
+function plusHinweis() {
+  const n = plan.vorschau?.length || 0;
+  return n ? `<p class="hilfe" style="margin-top:14px">Die übrigen ${n} Tage stehen schon fest. Tipp oben auf einen Tag mit Schloss, um sie anzusehen.</p>` : '';
+}
+function plusKarte() {
+  return `<div class="plus-karte"><h3>Die ganze Woche ist schon geplant</h3>
+    <p>Mit Plus bekommst du für alle Tage die Rezepte, den Einkaufszettel und den Vorkoch-Ablauf.</p>
+    <div class="preis-zeile"><span class="preisschild">${CONFIG.preise.monat.betrag.toFixed(2).replace('.', ',')} €</span><span>${esc(plusAngebot())}</span></div>
+    <a class="knopf" href="preise.html">Ganze Woche freischalten</a></div>`;
 }
 
-function wagenText(drin, gesamt) {
-  return drin >= gesamt ? 'Alles im Wagen.' : `${drin} von ${gesamt} im Wagen`;
+// ---------------------------------------------------------------- Einkauf (der Bon)
+function einkaufTitel(tag) {
+  if (tag < 0) return 'Einkauf am Vortag';
+  const d = planDatum(tag);
+  return `Einkauf ${TAGE[(d.getDay() + 6) % 7]}, ${d.toLocaleDateString('de-DE', { day: 'numeric', month: 'numeric' })}`;
 }
+function wagenText(drin, gesamt) { return drin >= gesamt ? 'Alles im Wagen.' : `${drin} von ${gesamt} im Wagen`; }
 
-function einkaufTitel(e, tag) {
-  if (tag < 0) return 'Einkauf am Vortag (vor dem ersten Kochtag)';
-  return `Einkauf am ${TAGE[e.tage[tag].wochentag]}${e.profil.tage > 7 ? ` (Tag ${tag + 1})` : ''}`;
-}
-
-function einkaufHtml(e) {
-  const haken = lade('ep_haken', {});
-  const mehrere = e.einkauf.einkaeufe.length > 1;
-  const alle = e.einkauf.einkaeufe.flatMap((ek) => ek.gruppen.flatMap((g) => g.posten));
+function einkaufZeichnen() {
+  const ziel = $('#ansicht-einkauf');
+  if (!plan.ok) { ziel.innerHTML = ''; return; }
+  const E = plan.einkauf;
+  const haken = lade('wb_haken', {});
+  const alle = E.einkaeufe.flatMap((ek) => ek.gruppen.flatMap((g) => g.posten));
   const drin = alle.filter((x) => haken[`${x.id}@${x.tag}`]).length;
-  const wagen = `<div class="wagen${drin === alle.length ? ' voll' : ''}" id="wagen" data-gesamt="${alle.length}"><div class="balken"><i style="width:${alle.length ? (100 * drin) / alle.length : 0}%"></i></div>
-    <span id="wagen-text">${wagenText(drin, alle.length)}</span></div>`;
-  const g = e.einkauf.einkaeufe.map((ek) => `${mehrere ? `<h3 class="einkauf-titel">${esc(einkaufTitel(e, ek.tag))} · ca. ${euro(ek.summe)}</h3>` : ''}
-    ${ek.gruppen.map((gr) => `<section class="gruppe"><h3>${esc(gr.name)}</h3>
-    ${gr.posten.map((x) => `<label class="posten"><input type="checkbox" data-haken="${x.id}@${x.tag}"${haken[`${x.id}@${x.tag}`] ? ' checked' : ''}>
-      <div><b>${esc(x.name)}</b><small>${x.packungen} × ${esc(x.packung)} · gebraucht ${esc(x.menge)}${x.rest ? ` · Rest ca. ${esc(x.rest)}` : ''}</small></div>
-      <span class="preis">${euro(x.preis)}</span></label>`).join('')}</section>`).join('')}`).join('');
-  const v = e.einkauf.vorrat.length ? `<section class="gruppe vorrat"><h3>Hast du wahrscheinlich schon</h3>
-    <p class="hilfe">Öl, Salz und Gewürze. Wir rechnen nur den verbrauchten Anteil in die Kosten ein.</p>
-    ${e.einkauf.vorrat.map((x) => `<label class="posten"><input type="checkbox" data-haken="${x.id}"${haken[x.id] ? ' checked' : ''}><div><b>${esc(x.name)}</b><small>${esc(x.menge)} (Packung ${esc(x.packung)} ca. ${euro(x.packungPreis)})</small></div><span class="preis">${euro(x.preisAnteil)}</span></label>`).join('')}</section>` : '';
-  const hinweis = mehrere ? ' Frisches kaufst du erst kurz vor dem Kochen, Vorräte gleich beim ersten Einkauf.' : '';
-  return `${wagen}<p class="hilfe">Nach Abteilungen sortiert, wie es im ${esc(e.einkauf.laden)}-Markt meist liegt. Preise sind Schätzungen.${hinweis}</p>${g}${v}
-    <div class="summe"><span>Geschätzt</span><span>${euro(e.einkauf.summe)}</span></div>
-    <button class="knopf leise" type="button" id="teilen">Liste teilen oder kopieren</button>`;
+  const von = planDatum(0).toLocaleDateString('de-DE', { day: 'numeric', month: 'numeric' });
+  const bis = planDatum(plan.profil.tage - 1).toLocaleDateString('de-DE', { day: 'numeric', month: 'numeric' });
+  const mehrere = E.einkaeufe.length > 1;
+  const zeilen = E.einkaeufe.map((ek) => `${mehrere ? `<div class="bon-einkauf">${esc(einkaufTitel(ek.tag))}</div>` : ''}
+    ${ek.gruppen.map((g) => `<div class="bon-gang">${esc(g.name)}</div>${g.posten.map((x) => `<label class="bon-zeile"><input type="checkbox" data-haken="${x.id}@${x.tag}"${haken[`${x.id}@${x.tag}`] ? ' checked' : ''}>
+      <span><b>${x.packungen} × ${esc(x.name)}</b><small>${esc(x.packung)} · gebraucht ${esc(x.menge)}${x.rest ? `, Rest ca. ${esc(x.rest)}` : ''}</small></span>
+      <span class="betrag">${euro(x.preis)}</span></label>`).join('')}`).join('')}`).join('');
+  const vorrat = E.vorrat.length ? `<div class="bon-gang">Hast du wahrscheinlich schon (nur Anteil gerechnet)</div>${E.vorrat.map((x) => `<label class="bon-zeile vorrat"><input type="checkbox" data-haken="${x.id}"${haken[x.id] ? ' checked' : ''}>
+      <span><b>${esc(x.name)}</b><small>${esc(x.menge)}</small></span><span class="betrag">${euro(x.preisAnteil)}</span></label>`).join('')}` : '';
+  ziel.innerHTML = `<div class="bon" id="bon">
+    <div class="bon-kopf"><b>Wochenbon</b><small>${esc(E.laden)} · ${plan.profil.tage === 1 ? von : `${von} bis ${bis}`} · ${plan.profil.personen} ${plan.profil.personen === 1 ? 'Person' : 'Personen'}</small></div>
+    <div class="bon-wagen${drin >= alle.length ? ' voll' : ''}" id="wagen" data-gesamt="${alle.length}"><span id="wagen-text">${wagenText(drin, alle.length)}</span><div class="balken"><i style="width:${alle.length ? (100 * drin) / alle.length : 0}%"></i></div></div>
+    ${zeilen}${vorrat}
+    <div class="bon-summe"><span>Summe ca.</span><span class="preisschild">${euro(E.summe)}</span></div>
+    <p class="bon-fuss">Geschätzt nach Packungspreisen bei ${esc(E.laden)}, Stand 10/2026. Nach Abteilungen sortiert, wie es im Markt meist liegt.${mehrere ? ' Frisches kaufst du kurz vor dem Kochen, Vorräte beim ersten Einkauf.' : ''}</p>
+  </div>
+  <div class="mehr-unten" style="justify-content:center"><button class="knopf zweit" type="button" id="teilen">Liste teilen oder kopieren</button></div>
+  ${!plus && plan.vorschau?.length ? plusKarte() : ''}`;
+  $('#einkauf-zahl').hidden = !alle.length;
+  $('#einkauf-zahl').textContent = alle.length - drin;
 }
 
-function ablaufHtml(e) {
-  if (!e.ablauf.length) return '<p>In diesem Plan wird alles frisch gekocht. Mit festen Kochtagen planen wir Boxen zum Vorkochen.</p>';
-  return e.ablauf.map((a) => `<section class="ablauf gruppe"><h3>${esc(a.wochentag)}: etwa ${a.dauer} Minuten, davon ${a.aktiv} Minuten Arbeit</h3>
-    <ol>${a.schritte.map((s) => `<li><span class="zeit">${Math.floor(s.start / 60)}:${String(s.start % 60).padStart(2, '0')}</span> ${esc(s.titel)} (${zahl(s.portionen, 1)} Portionen, ${s.aktiv} Min. Arbeit, fertig nach ${s.ende} Min.) – <button class="titel knopf-link" type="button" data-rezept="${s.rezept}" data-faktor="1">Rezept</button></li>`).join('')}</ol>
-    <h3>Boxen</h3><ul class="box-liste">${a.boxen.map((b) => `<li><b>${b.anzahl} × ${esc(b.titel)}</b> für ${esc(b.fuer)} – ${esc(b.lager)}</li>`).join('')}</ul>
-    <ul>${a.abschluss.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></section>`).join('');
-}
-
-function naehrHtml(e) {
-  const z = e.naehrwerte.ziel;
-  const ref = z || { kcal: e.naehrwerte.richtwert };
-  const zeilen = e.naehrwerte.jeTag.map((t, i) => `<tr><td>${TAGE_KURZ[e.tage[i].wochentag]}</td><td>${zahl(t.kcal)}</td><td>${zahl(t.p)}</td><td>${zahl(t.kh)}</td><td>${zahl(t.f)}</td></tr>`).join('');
-  const schnitt = (k) => e.naehrwerte.jeTag.reduce((s, t) => s + t[k], 0) / e.naehrwerte.jeTag.length;
-  const balken = (k, name) => (z && z[k] ? `<div><b>${name}</b>: ${zahl(schnitt(k))} von ${zahl(z[k])} ${k === 'kcal' ? 'kcal' : 'g'}<div class="balken"><i style="width:${Math.min(100, (100 * schnitt(k)) / z[k])}%"></i></div></div>` : '');
-  return `${z ? balken('kcal', 'Kalorien') + balken('p', 'Protein') + balken('kh', 'Kohlenhydrate') + balken('f', 'Fett') : `<p>Richtwert: ${zahl(ref.kcal)} kcal je Person und Tag. Durchschnitt im Plan: ${zahl(schnitt('kcal'))} kcal.</p>`}
-    <table class="nw-tabelle"><thead><tr><th>Tag</th><th>kcal</th><th>Protein g</th><th>KH g</th><th>Fett g</th></tr></thead><tbody>${zeilen}</tbody></table>
-    <p class="hilfe">Je Person. Berechnet aus dem Bundeslebensmittelschlüssel (BLS 4.0, Max Rubner-Institut, CC BY 4.0). Echte Produkte weichen ab.</p>`;
-}
-
-function ergebnisHtml(e) {
-  const m = e.meldungen.map((x) => `<p class="meldung${x.art === 'fehler' ? ' fehler' : ''}" role="status">${esc(x.text)}</p>`).join('');
-  if (!e.ok) return m;
-  const kcal = Math.round(e.naehrwerte.jeTag.reduce((s, t) => s + t.kcal, 0) / e.naehrwerte.jeTag.length);
-  const sperre = !plus && !e.vorschau?.length ? `<div class="sperre"><h3>Die ganze Woche planen</h3>
-    <p>Ohne Plus planst du einen Tag. Mit Plus bis zu 14 Tage, mit Vorkoch-Ablauf und PDF.</p>
-    <a class="knopf" href="preise.html?v=${VARIANTE}">Plus ansehen</a></div>` : '';
-  const reiter = [['plan', 'Plan'], ['einkauf', 'Einkauf']];
-  if (e.ablauf.length) reiter.push(['vorkochen', 'Vorkochen']);
-  if (e.profil.makros) reiter.push(['naehr', 'Nährwerte']);
-  const s0 = statistik();
-  if (s0.anzahl || s0.lieblinge) reiter.push(['buch', 'Küchenbuch']);
-  const zeigeReiter = (k) => reiter.some(([x]) => x === k);
-  return `${m}
-    <p class="kurzfazit"><b>Dein Plan für ${e.profil.tage === 1 ? 'heute' : `${e.profil.tage} Tage`}</b>Einkauf ca. ${euro(e.kosten.gesamt)}${e.profil.personen > 1 ? ` für ${e.profil.personen} Personen` : ''}${e.profil.makros ? `, im Schnitt ${zahl(kcal)} kcal am Tag` : ''}</p>
-    <div class="reiter" role="tablist" aria-label="Ansicht">
-      ${reiter.map(([k, t], i) => `<button role="tab" id="t-${k}" aria-controls="r-${k}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-reiter="${k}">${t}</button>`).join('')}
-    </div>
-    <section class="reiterinhalt" id="r-plan" role="tabpanel" aria-labelledby="t-plan">${planHtml(e)}</section>
-    <section class="reiterinhalt" id="r-einkauf" role="tabpanel" aria-labelledby="t-einkauf" hidden>${einkaufHtml(e)}</section>
-    ${zeigeReiter('vorkochen') ? `<section class="reiterinhalt" id="r-vorkochen" role="tabpanel" aria-labelledby="t-vorkochen" hidden>${plus ? ablaufHtml(e) : '<p>Der Vorkoch-Ablauf gehört zu Plus.</p>'}</section>` : ''}
-    ${zeigeReiter('naehr') ? `<section class="reiterinhalt" id="r-naehr" role="tabpanel" aria-labelledby="t-naehr" hidden>${naehrHtml(e)}</section>` : ''}
-    <section class="reiterinhalt" id="r-buch" role="tabpanel" aria-labelledby="t-buch" hidden>${zeigeReiter('buch') ? buchHtml() : ''}</section>
-    ${sperre}
-    <div class="zeile" style="margin-top:16px">
-      <button class="knopf leise" type="button" id="neu">Andere Gerichte vorschlagen</button>
-      ${plus ? '<button class="knopf leise" type="button" id="drucken">Als PDF speichern oder drucken</button>' : ''}
-    </div>`;
+function teilen() {
+  const E = plan.einkauf;
+  const text = [`Wochenbon ${E.laden} (ca. ${euro(E.summe)})`, ...E.einkaeufe.flatMap((ek) => [
+    ...(E.einkaeufe.length > 1 ? ['', `== ${einkaufTitel(ek.tag)} ==`] : []),
+    ...ek.gruppen.flatMap((g) => ['', g.name, ...g.posten.map((x) => `- ${x.packungen} × ${x.name} (${x.packung})`)])])].join('\n');
+  if (navigator.share) navigator.share({ title: 'Einkaufszettel', text }).catch(() => {});
+  else navigator.clipboard?.writeText(text).then(() => meldeKurz('Liste kopiert.'));
 }
 
 // ---------------------------------------------------------------- Küchenbuch
 function statistik() {
-  const g = Object.values(lade('ep_gekocht', {}));
+  const g = Object.values(lade('wb_gekocht', {}));
   return {
     anzahl: g.length, verschieden: new Set(g.map((x) => x.r)).size, ohneHerd: g.filter((x) => x.ohneHerd).length,
-    vor: g.filter((x) => x.vor).length, tage: new Set(g.map((x) => x.d)).size, lieblinge: lade('ep_lieblinge', []).length,
-    liste: g,
+    vor: g.filter((x) => x.vor).length, tage: new Set(g.map((x) => x.d)).size, lieblinge: lade('wb_lieblinge', []).length,
   };
 }
 function erreicht(s) { return ABZEICHEN.filter(([, , , bed]) => bed(s)).map(([id]) => id); }
 
-function buchHtml() {
+function buchZeichnen() {
   const s = statistik();
   const gesamt = daten?.rezepte.length || 195;
   const hat = erreicht(s);
-  const lieb = lade('ep_lieblinge', []).map((id) => daten?.rezepte.find((r) => r.id === id)).filter(Boolean);
-  if (!s.anzahl && !lieb.length) {
-    return `<div class="buch-leer"><p><b>Dein Küchenbuch ist noch leer.</b></p>
-      <p>Tipp im Plan bei einem Gericht auf „Gekocht“, sobald es auf dem Teller war. Hier sammeln sich dann deine Gerichte, Abzeichen und Lieblinge. Alles bleibt auf diesem Gerät.</p></div>`;
-  }
-  return `<div class="buch">
+  const lieb = lade('wb_lieblinge', []).map((id) => daten?.rezepte.find((r) => r.id === id)).filter(Boolean);
+  const leer = !s.anzahl && !lieb.length ? `<div class="leer-karte"><h3>Noch leer</h3><p>Tipp im Plan bei einem Gericht auf „Gekocht“, sobald es auf dem Teller war. Hier sammeln sich dann deine Gerichte, Abzeichen und Lieblinge. Alles bleibt auf diesem Gerät.</p></div>` : '';
+  $('#ansicht-buch').innerHTML = `<div class="buch">${leer}
     <div class="sammlung"><b>${s.verschieden}</b><span>von ${gesamt} Rezepten entdeckt</span>
       <div class="balken"><i style="width:${(100 * s.verschieden) / gesamt}%"></i></div>
       <small>${s.anzahl} ${s.anzahl === 1 ? 'Gericht' : 'Gerichte'} gekocht, an ${s.tage} ${s.tage === 1 ? 'Tag' : 'Tagen'}</small></div>
-    <h3>Abzeichen</h3>
+    <h2>Abzeichen</h2>
     <ul class="abzeichen">${ABZEICHEN.map(([id, name, wie]) => `<li class="${hat.includes(id) ? 'hat' : ''}"><span class="plakette" aria-hidden="true">${IKON.haken}</span><b>${esc(name)}</b><small>${esc(wie)}</small><span class="sr">${hat.includes(id) ? 'erreicht' : 'noch offen'}</span></li>`).join('')}</ul>
-    ${lieb.length ? `<h3>Deine Lieblinge</h3><p class="hilfe">Gemerkte Gerichte plant der Planer öfter ein.</p>
-      <ul class="lieblinge">${lieb.map((r) => `<li><button class="titel" type="button" data-rezept="${r.id}" data-faktor="1"><img src="img/rezepte/klein/${r.id}.jpg" alt="" width="120" height="90" loading="lazy"><span>${esc(r.titel)}</span></button></li>`).join('')}</ul>` : ''}
-    <p><button class="knopf leise" type="button" id="buch-leeren">Küchenbuch leeren</button></p>
+    ${lieb.length ? `<h2>Deine Lieblinge</h2><p class="hilfe">Gemerkte Gerichte plant Wochenbon öfter ein. Merken geht im Rezept.</p>
+      <ul class="lieblinge">${lieb.map((r) => `<li><button type="button" data-rezept="${r.id}" data-faktor="1"><img src="img/rezepte/klein/${r.id}.jpg" alt="" width="240" height="180" loading="lazy">${esc(r.titel)}</button></li>`).join('')}</ul>` : ''}
+    ${s.anzahl ? '<p><button class="knopf zweit" type="button" id="buch-leeren">Küchenbuch leeren</button></p>' : ''}
   </div>`;
-}
-
-function buchReiterZeigen() {
-  if ($('#t-buch')) return;
-  const leiste = $('.reiter');
-  if (!leiste) return;
-  leiste.insertAdjacentHTML('beforeend', '<button role="tab" id="t-buch" aria-controls="r-buch" aria-selected="false" tabindex="-1" data-reiter="buch">Küchenbuch</button>');
-}
-
-function meldeKurz(text) {
-  const t = $('#toast');
-  t.textContent = text;
-  t.hidden = false;
-  clearTimeout(meldeKurz.zeit);
-  meldeKurz.zeit = setTimeout(() => { t.hidden = true; }, 3600);
 }
 
 function gekochtUmschalten(knopf) {
   const schl = knopf.dataset.gekocht;
-  const g = lade('ep_gekocht', {});
+  const g = lade('wb_gekocht', {});
   const vorher = erreicht(statistik());
   if (g[schl]) delete g[schl];
   else {
     const [d, , r] = schl.split('|');
     const rz = daten.rezepte.find((x) => x.id === r);
-    const weg = ersterWeg(rz, letztes.profil.geraete) || rz.wege[0];
+    const weg = ersterWeg(rz, plan.profil.geraete) || rz.wege[0];
     g[schl] = { r, d, ohneHerd: weg.geraete.every((x) => ['wasserkocher', 'mikrowelle'].includes(x)), vor: ['kuehl', 'tk'].includes(knopf.dataset.herkunft) };
   }
-  speichere('ep_gekocht', g);
+  speichere('wb_gekocht', g);
   const an = !!g[schl];
   knopf.setAttribute('aria-pressed', an);
-  knopf.closest('.essen').classList.toggle('gekocht', an);
+  knopf.closest('.gericht').classList.toggle('gekocht', an);
   const neu = erreicht(statistik()).filter((id) => !vorher.includes(id));
   if (neu.length) meldeKurz(`Neues Abzeichen: ${ABZEICHEN.find((x) => x[0] === neu[0])[1]}. Steht im Küchenbuch.`);
-  buchReiterZeigen();
-  $('#r-buch').innerHTML = buchHtml();
+  buchZeichnen();
+  // Tagesleiste: Punkt, wenn alle Gerichte des Tages gekocht sind
+  const t = alleTage()[tagAuswahl];
+  const alleFertig = t.mahlzeiten.every((m) => !m.rezept || g[`${iso(t.d)}|${m.m}|${m.rezept}`]);
+  $(`.tag-knopf[data-tag="${tagAuswahl}"]`)?.classList.toggle('fertig', alleFertig);
 }
 
-function merkenUmschalten(id) {
-  const l = lade('ep_lieblinge', []);
+function merkenUmschalten(knopf) {
+  const id = knopf.dataset.merken;
+  const l = lade('wb_lieblinge', []);
   const an = !l.includes(id);
   const neu = an ? [...l, id] : l.filter((x) => x !== id);
-  speichere('ep_lieblinge', neu);
-  document.querySelectorAll(`[data-merken="${id}"]`).forEach((b) => b.setAttribute('aria-pressed', an));
-  if (an) meldeKurz('Gemerkt. Der Planer nimmt das Gericht öfter.');
-  if (an && neu.length === 3) meldeKurz('Neues Abzeichen: Geschmack gefunden. Steht im Küchenbuch.');
-  buchReiterZeigen();
-  if ($('#r-buch')) $('#r-buch').innerHTML = buchHtml();
+  speichere('wb_lieblinge', neu);
+  knopf.setAttribute('aria-pressed', an);
+  meldeKurz(an ? (neu.length === 3 ? 'Neues Abzeichen: Geschmack gefunden.' : 'Gemerkt. Wochenbon plant es öfter ein.') : 'Nicht mehr gemerkt.');
+  buchZeichnen();
 }
 
-// ---------------------------------------------------------------- Treffer-Zähler
-const GERAET_NAME = Object.fromEntries(GERAETE);
-function zaehleTreffer(form) {
-  if (!daten) return;
-  const p = vervollstaendige({ ...liesFormular(form), ausschluss: [] });
-  const n = kandidaten(daten, p).liste.length;
-  // nächster sinnvoller Schritt: welches fehlende Gerät bringt die meisten Rezepte dazu?
-  let tipp = '';
-  if (n > 0) {
-    let best = null;
-    // nur Vorschläge, die in diese Lebenslage passen (im Monteurzimmer kein Backofen, im Camper kein Ofen)
-    const TIPP = {
-      montage: ['wasserkocher', 'mikrowelle', 'sandwichmaker', 'airfryer', 'kuehlschrank'],
-      camping: ['omnia', 'grill', 'wasserkocher', 'kuehlschrank'],
-    }[VARIANTE] || GERAETE.map(([g]) => g).filter((g) => !['thermo', 'gefrier'].includes(g));
-    const proben = TIPP.filter((g) => !p.geraete[g] && !OHNE_FRAGE.includes(g)).map((g) => [GERAET_NAME[g], { ...p.geraete, [g]: true }]);
-    if (!(p.geraete.herd >= 1)) proben.push([{ montage: 'einer Kochplatte', camping: 'einem Gasherd' }[VARIANTE] || 'einem Herd', { ...p.geraete, herd: HERD_STANDARD, topf: true, pfanne: true }]);
-    for (const [name, g] of proben) {
-      const mehr = kandidaten(daten, { ...p, geraete: g }).liste.length - n;
-      if (mehr > 0 && (!best || mehr > best[1])) best = [name, mehr];
-    }
-    if (best && best[1] >= 5) tipp = `Mit ${best[0]} kämen ${best[1]} dazu.`;
+// ---------------------------------------------------------------- Blätter (Einstellungen von unten)
+function wahl(name, wert, titel, kurz, an, typ = 'radio') {
+  return `<label class="wahl"><input type="${typ}" name="${name}" value="${esc(wert)}"${an ? ' checked' : ''}><span><b>${esc(titel)}</b>${kurz ? `<small>${esc(kurz)}</small>` : ''}</span><span class="punkt" aria-hidden="true"></span></label>`;
+}
+function chips(name, liste, an, typ = 'checkbox') {
+  return `<div class="chips">${liste.map(([w, t]) => `<label class="chip"><input type="${typ}" name="${name}" value="${esc(w)}"${an(w) ? ' checked' : ''}><span>${esc(t)}</span></label>`).join('')}</div>`;
+}
+function schalter(name, titel, kurz, an) {
+  return `<label class="schalter-zeile"><span><b>${esc(titel)}</b>${kurz ? `<br><small class="hilfe">${esc(kurz)}</small>` : ''}</span><input type="checkbox" role="switch" name="${name}"${an ? ' checked' : ''}></label>`;
+}
+
+const BLAETTER = {
+  kueche: () => ['Deine Küche', `<p class="treffer" id="treffer"><b id="treffer-zahl">…</b><span id="treffer-text">Rezepte passen</span></p>
+    <div class="wahl-liste">${Object.entries(SIT).map(([k, s]) => wahl('situation', k, s.name, s.kurz, profil.situation === k)).join('')}</div>
+    <h3>Einzelne Geräte dazu</h3>
+    ${chips('extra', GERAETE.filter(([g]) => !(SIT[profil.situation] || SIT.normal).geraete[g]), (g) => profil.extra?.[g])}
+    <p class="hilfe">Topf und Pfanne setzen wir beim Herd voraus. Eine Kühlbox zählt als Kühlschrank nur, wenn sie zuverlässig unter 7 °C kühlt.</p>`],
+  personen: () => ['Für wie viele?', `<div class="zahlen-wahl">${[1, 2, 3, 4, 5, 6, 7, 8].map((n) => `<label class="chip"><input type="radio" name="personen" value="${n}"${profil.personen === n ? ' checked' : ''}><span>${n}</span></label>`).join('')}</div>
+    <p class="hilfe">Mengen und Einkauf werden umgerechnet.</p>`],
+  laden: () => ['Wo kaufst du ein?', `<div class="wahl-liste">${Object.entries(LAEDEN).map(([k, l]) => wahl('laden', k, l.name, '', profil.laden === k)).join('')}</div>
+    <h3>Feinheiten</h3>
+    ${schalter('eigenmarken', 'Eigenmarken bevorzugen', 'günstigere Hausmarken des Ladens', profil.eigenmarken)}
+    <div class="feld" style="margin-top:12px"><label for="budget">Budget für den ganzen Plan (€)</label><input id="budget" name="budget" type="number" inputmode="decimal" min="0" step="1" placeholder="egal" value="${profil.budget ?? ''}"></div>
+    <p class="hilfe">Preise sind Schätzwerte je Laden, Stand 10/2026, keine Tagespreise.</p>`],
+  essen: () => ['Was isst du?', `<div class="wahl-liste">${DIAETEN.map(([d, t, k]) => wahl('diaet', d, t, k, profil.diaet === d)).join('')}</div>
+    <h3>Mehr Eiweiß</h3>
+    ${schalter('eiweiss', 'Eiweißreich planen', 'etwa ein Viertel der Energie aus Eiweiß, aus dem normalen Regal', profil.eiweiss)}
+    <h3>Allergien und Unverträglichkeiten</h3>
+    ${chips('allergen', ALLERGENE, (a) => profil.allergene?.includes(a))}
+    <p class="hilfe">Wir filtern nach den 14 Hauptallergenen laut unseren Zutatendaten. Spuren erkennen wir nicht: Prüf bei Allergien immer das Etikett. Wochenbon ersetzt keine ärztliche Beratung.</p>
+    <h3>Das mag ich nicht</h3>
+    ${chips('abneigung', ABNEIGUNGEN, (w) => w.split(',').every((id) => profil.abneigungen?.includes(id)))}`],
+  mehr: () => ['Deine Woche', `<h3 style="margin-top:4px">Wie viele Tage?</h3>
+    <div class="zahlen-wahl">${[3, 5, 7, 14].map((n) => `<label class="chip"><input type="radio" name="tage" value="${n}"${profil.tage === n ? ' checked' : ''}><span>${n}</span></label>`).join('')}</div>
+    <div class="feld" style="margin-top:12px"><label for="starttag">Los geht’s am</label><select id="starttag" name="starttag">${TAGE.map((t, i) => `<option value="${i}"${profil.starttag === i ? ' selected' : ''}>${t}${i === heuteWochentag() ? ' (heute)' : ''}</option>`).join('')}</select></div>
+    <h3>Mahlzeiten</h3>
+    ${chips('mahlzeit', Object.entries(MAHLZEIT_NAME), (m) => profil.mahlzeiten.includes(m))}
+    <h3>Mittags unter der Woche</h3>
+    <div class="wahl-liste">${PAUSEN.map(([k, t]) => wahl('pause', k, t, '', (profil.pause ?? SIT[profil.situation]?.pause ?? 'zuhause') === k)).join('')}</div>
+    <h3>Wie oft kaufst du ein?</h3>
+    <div class="wahl-liste">${EINKAUF.map(([k, t]) => wahl('einkauf', k, t, '', (profil.einkauf ?? SIT[profil.situation]?.einkauf ?? 'zweimal') === k)).join('')}</div>
+    <p class="hilfe">Frisches Fleisch planen wir höchstens 2 Tage nach dem Einkauf, Hackfleisch 1 Tag.</p>
+    <h3>Feste Kochtage</h3>
+    ${chips('kochtag', TAGE_KURZ.map((t, i) => [String(i), t]), (i) => (profil.kochtage || []).includes(Number(i)))}
+    <p class="hilfe">Leer lassen heißt: jeden Tag frisch. Mit Kochtagen plant Wochenbon Boxen für die Tage danach.</p>
+    <h3>Wie viel brauchst du?</h3>
+    <div class="wahl-liste">${[[1900, 'Eher wenig Bewegung', 'ca. 1.900 kcal'], [2200, 'Normal aktiv', 'ca. 2.200 kcal'], [2800, 'Körperlich harte Arbeit', 'ca. 2.800 kcal']].map(([k, t, z]) => wahl('kcal', String(k), t, z, (profil.kcalRichtwert || 2200) === k)).join('')}</div>
+    <p class="hilfe">Je Person und Tag. Wochenbon ist kein Diät- oder Therapieprogramm.</p>`],
+  vorkochen: () => ['Vorkoch-Ablauf', ablaufHtml()],
+};
+
+function blattOeffnen(art) {
+  const [titel, html] = BLAETTER[art]();
+  $('#blatt-titel').textContent = titel;
+  $('#blatt-inhalt').innerHTML = html;
+  $('#blatt').dataset.art = art;
+  $('#blatt').showModal();
+  if (art === 'kueche') zaehleTreffer();
+}
+
+function blattAenderung(ev) {
+  const el = ev.target;
+  const f = $('#blatt-inhalt');
+  const alle = (n) => $$(`[name="${n}"]:checked`, f).map((x) => x.value);
+  switch (el.name) {
+    case 'situation': profil.situation = el.value; profil.extra = {}; profil.pause = undefined; profil.einkauf = undefined;
+      blattOeffnen('kueche'); break; // Geräteliste passt sich der Situation an
+    case 'extra': profil.extra = Object.fromEntries(alle('extra').map((g) => [g, g === 'herd' ? 2 : true])); zaehleTreffer(); break;
+    case 'personen': profil.personen = Number(el.value); break;
+    case 'laden': profil.laden = el.value; break;
+    case 'eigenmarken': profil.eigenmarken = el.checked; break;
+    case 'budget': profil.budget = el.value ? Math.max(0, Number(String(el.value).replace(',', '.'))) || null : null; break;
+    case 'diaet': profil.diaet = el.value; break;
+    case 'eiweiss': profil.eiweiss = el.checked; break;
+    case 'allergen': profil.allergene = alle('allergen'); break;
+    case 'abneigung': profil.abneigungen = alle('abneigung').flatMap((x) => x.split(',')); break;
+    case 'tage': profil.tage = Number(el.value); break;
+    case 'starttag': profil.starttag = Number(el.value); break;
+    case 'mahlzeit': profil.mahlzeiten = alle('mahlzeit'); if (!profil.mahlzeiten.length) { el.checked = true; profil.mahlzeiten = [el.value]; } break;
+    case 'pause': profil.pause = el.value; break;
+    case 'einkauf': profil.einkauf = el.value; break;
+    case 'kochtag': { const k = alle('kochtag').map(Number); profil.kochtage = k.length ? k : null; break; }
+    case 'kcal': profil.kcalRichtwert = Number(el.value); break;
+    default: return;
   }
-  const zahlEl = $('#treffer-zahl');
-  rollen(zahlEl, Number(zahlEl.dataset.wert) || 0, n);
-  zahlEl.dataset.wert = n;
-  $('#treffer').classList.toggle('null', n === 0);
-  $('#treffer-text').textContent = n === 0 ? 'Rezepte passen. Lockere zuerst Allergien, Abneigungen oder die Ernährungsform.'
-    : n === 1 ? 'Rezept passt zu deiner Küche' : 'Rezepte passen zu deiner Küche';
-  $('#treffer-tipp').textContent = tipp;
+  neuPlanen();
 }
 
+// Treffer-Zähler im Küchen-Blatt: wie viele Rezepte passen zur gewählten Küche?
+function zaehleTreffer() {
+  const el = $('#treffer-zahl');
+  if (!el || !daten) return;
+  const n = kandidaten(daten, vervollstaendige(planerProfil())).liste.length;
+  rollen(el, Number(el.dataset.wert) || 0, n);
+  el.dataset.wert = n;
+  $('#treffer').classList.toggle('null', n === 0);
+  $('#treffer-text').textContent = n === 0 ? 'Rezepte passen. Lockere Allergien oder Abneigungen.' : n === 1 ? 'Rezept passt zu deiner Küche' : 'Rezepte passen zu deiner Küche';
+}
 function rollen(el, von, bis) {
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches || von === bis) { el.textContent = bis; return; }
+  if (ruhigeBewegung() || von === bis) { el.textContent = bis; return; }
   const t0 = performance.now();
   const schritt = (t) => {
     const x = Math.min(1, (t - t0) / 380);
@@ -458,11 +455,11 @@ function rollen(el, von, bis) {
   el.classList.remove('stoss'); void el.offsetWidth; el.classList.add('stoss');
 }
 
-// ---------------------------------------------------------------- Rezeptansicht
-function rezeptDialog(id, faktor) {
+// ---------------------------------------------------------------- Rezept und Vorkochen
+function rezeptOeffnen(id, faktor) {
   const r = daten.rezepte.find((x) => x.id === id);
   if (!r) return;
-  const p = letztes.profil;
+  const p = plan.profil;
   const weg = ersterWeg(r, p.geraete) || r.wege[0];
   const portionen = p.personen * faktor;
   const skal = portionen / r.portionen;
@@ -482,178 +479,133 @@ function rezeptDialog(id, faktor) {
     L.aufwaermen !== 'nein' && L.aufwaermen !== 'thermo' ? 'Zum Aufwärmen durch und durch erhitzen (dampfend heiß, mindestens 70 °C für 2 Minuten).' : '',
     L.aufwaermen === 'thermo' ? 'Für den Thermobehälter: Behälter mit kochendem Wasser vorwärmen, Essen kochend heiß einfüllen. Bis zum Essen muss es mindestens 60 °C heiß bleiben. Ist es nur noch lauwarm, nicht mehr essen.' : '',
   ].filter(Boolean).map((x) => `<li>${x}</li>`).join('');
-  const dlg = $('#rezept');
-  $('.inhalt', dlg).innerHTML = `
-    <img class="foto" src="img/rezepte/${r.id}.jpg" alt="" width="800" height="600" loading="lazy" onerror="this.remove()">
-    <h2 id="rezept-titel">${esc(r.titel)}</h2>
-    <p><button class="ikon merken" type="button" data-merken="${r.id}" aria-pressed="${lade('ep_lieblinge', []).includes(r.id)}">${IKON.herz}<span>Merken, der Planer nimmt es öfter</span></button></p>
-    <p>${zahl(portionen, 2)} ${portionen === 1 ? 'Portion' : 'Portionen'} · ${weg.zeit} Min. (${weg.aktiv} Min. Arbeit) · ${esc(weg.geraete.length ? weg.geraete.map((g) => (g === 'herd' ? '1 Platte' : g === 'herd2' ? '2 Platten' : (GERAETE.find((x) => x[0] === g) || [g, g])[1])).join(', ') : 'ohne Gerät')}</p>
+  const geraete = weg.geraete.map((g) => (g === 'herd' ? '1 Platte' : g === 'herd2' ? '2 Platten' : GERAETE.find((x) => x[0] === g)?.[1] || g)).join(', ') || 'ohne Gerät';
+  const lieb = lade('wb_lieblinge', []).includes(r.id);
+  $('#rezept-titel').textContent = r.titel;
+  $('#rezept-inhalt').innerHTML = `
+    <img class="foto" src="img/rezepte/${r.id}.jpg" alt="" width="800" height="600" onerror="this.remove()">
+    <p class="merkmale"><span class="merkmal">${zahl(portionen, 2)} ${portionen === 1 ? 'Portion' : 'Portionen'}</span><span class="merkmal">${weg.zeit} Min., davon ${weg.aktiv} Min. Arbeit</span><span class="merkmal">${esc(geraete)}</span></p>
+    <p><button class="merken" type="button" data-merken="${r.id}" aria-pressed="${lieb}">${IKON.herz}Merken, Wochenbon plant es öfter ein</button></p>
     <h3>Zutaten</h3><ul class="zutaten">${zut}</ul>
-    <h3>So geht's</h3><ol>${weg.schritte.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>
+    <h3>So geht’s</h3><ol>${weg.schritte.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>
     <h3>Lagern</h3><ul>${lager}</ul>
-    <p><b>Je Portion:</b> ${zahl(r.n.kcal)} kcal · ${zahl(r.n.p)} g Protein · ${zahl(r.n.kh)} g Kohlenhydrate · ${zahl(r.n.f)} g Fett</p>
+    <p><b>Je Portion:</b> ${zahl(r.n.kcal)} kcal, ${zahl(r.n.p)} g Eiweiß, ${zahl(r.n.kh)} g Kohlenhydrate, ${zahl(r.n.f)} g Fett.</p>
     <p><b>Enthält:</b> ${r.al.length ? r.al.map((a) => AL[a] || a).join(', ') : 'keines der 14 Hauptallergene laut unseren Zutatendaten'}. Prüf bei Allergien immer das Etikett deiner Produkte.</p>
     ${r.tipp ? `<p><b>Tipp:</b> ${esc(r.tipp)}</p>` : ''}`;
-  dlg.showModal();
+  $('#rezept').showModal();
 }
 
-// ---------------------------------------------------------------- Ablauf
-function zeige(e, ruhig) {
-  letztes = e;
-  const ziel = $('#ergebnis');
-  ziel.innerHTML = ergebnisHtml(e);
-  ziel.hidden = false;
-  if (ruhig) return;
-  ziel.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
-  $('#ergebnis-titel').focus({ preventScroll: true });
+function ablaufHtml() {
+  if (!plan?.ablauf?.length) return '<p>In diesem Plan wird alles frisch gekocht. Mit festen Kochtagen (unter „Woche“) plant Wochenbon Boxen zum Vorkochen.</p>';
+  return plan.ablauf.map((a) => `<section class="ablauf"><h3>${esc(a.wochentag)}: etwa ${a.dauer} Minuten, davon ${a.aktiv} Minuten Arbeit</h3>
+    <ol>${a.schritte.map((s) => `<li><span class="zeit">${Math.floor(s.start / 60)}:${String(s.start % 60).padStart(2, '0')}</span> ${esc(s.titel)} (${zahl(s.portionen, 1)} Portionen, ${s.aktiv} Min. Arbeit, fertig nach ${s.ende} Min.)</li>`).join('')}</ol>
+    <h3>Boxen</h3><ul class="box-liste">${a.boxen.map((b) => `<li><b>${b.anzahl} × ${esc(b.titel)}</b> für ${esc(b.fuer)}, ${esc(b.lager)}</li>`).join('')}</ul>
+    <ul>${a.abschluss.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></section>`).join('');
 }
 
-// Planen im Hintergrund (Web Worker); ohne Worker-Unterstützung direkt auf der Seite
-let werker = null;
-let auftrag = 0;
-const offen = new Map();
-function werkerStarten() {
-  try {
-    werker = new Worker('js/planer-worker.js', { type: 'module' });
-    werker.onmessage = (ev) => { const f = offen.get(ev.data.nr); offen.delete(ev.data.nr); if (f) f(ev.data); };
-    werker.onerror = () => { werker = null; for (const [nr, f] of offen) { offen.delete(nr); f(null); } };
-    werker.postMessage({ art: 'daten', daten });
-  } catch { werker = null; }
-}
-function rechne(profil, ganz) {
-  const direkt = () => {
-    const e = erstellePlan(daten, profil);
-    const g = ganz && e.ok ? erstellePlan(daten, ganz) : null;
-    return { e, vorschau: g?.ok ? g.tage.slice(profil.tage) : null };
-  };
-  if (!werker) return Promise.resolve(direkt());
-  return new Promise((ok) => {
-    const nr = ++rechne.nr || (rechne.nr = 1);
-    offen.set(nr, (antwort) => ok(antwort || direkt()));
-    werker.postMessage({ art: 'plan', nr, profil, ganz });
-  });
+// ---------------------------------------------------------------- Zeichnen und Navigation
+function zeichne() {
+  $('#meldungen').innerHTML = (plan.meldungen || []).map((m) => `<p class="meldung${m.art === 'fehler' ? ' fehler' : ''}" role="status">${esc(m.text)}</p>`).join('');
+  const kurz = plan.ok ? `${plan.profil.tage === 1 ? 'Heute' : `${plan.profil.tage} Tage`} geplant, Einkauf ca. ${euro(plan.kosten.gesamt)} bei ${plan.einkauf.laden}.` : '';
+  $('#untertitel').textContent = plan.ok ? `${kurz} Tipp oben, wenn etwas nicht passt.` : 'Mit diesen Einstellungen klappt es noch nicht.';
+  wocheZeichnen();
+  einkaufZeichnen();
+  buchZeichnen();
 }
 
-async function planen(form, neuerSeed, ruhig) {
-  const p = liesFormular(form);
-  if (neuerSeed) p.seed = (p.seed || 1) + 1;
-  const { ausschluss: _a, lieblinge: _l, ...merken } = p;
-  speichere('ep_profil_' + VARIANTE, merken);
-  const lauf = { ...p };
-  if (!plus) lauf.tage = Math.min(p.tage, CONFIG.kostenlos.tage);
-  const nr = ++auftrag;
-  $('#ergebnis').classList.add('rechnet');
-  // Gratis: Rest der Woche als ehrliche Vorschau (gleiche Einstellungen, nur Namen und Fotos)
-  const { e, vorschau } = await rechne(lauf, !plus && p.tage > lauf.tage ? p : null);
-  if (nr !== auftrag) return; // inzwischen wurde wieder etwas geändert
-  $('#ergebnis').classList.remove('rechnet');
-  e.profil.seed = p.seed;
-  if (vorschau) e.vorschau = vorschau;
-  zeige(e, ruhig);
+function zeigeAnsicht(a) {
+  ansicht = a;
+  for (const k of ['woche', 'einkauf', 'buch']) $(`#ansicht-${k}`).hidden = k !== a;
+  $$('.leiste [data-ansicht]').forEach((b) => (b.dataset.ansicht === a ? b.setAttribute('aria-current', 'page') : b.removeAttribute('aria-current')));
+  $('#titel').textContent = { woche: 'Deine Woche', einkauf: 'Dein Einkauf', buch: 'Dein Küchenbuch' }[a];
+  $('.app-kopf .schalter').hidden = a === 'buch';
+  window.scrollTo({ top: 0, behavior: ruhigeBewegung() ? 'auto' : 'smooth' });
 }
 
-function teilen() {
-  const e = letztes;
-  const text = [`Einkauf ${e.einkauf.laden} (ca. ${euro(e.einkauf.summe)})`, ...e.einkauf.einkaeufe.flatMap((ek) => [
-    ...(e.einkauf.einkaeufe.length > 1 ? [``, `== ${einkaufTitel(e, ek.tag)} ==`] : []),
-    ...ek.gruppen.flatMap((g) => [``, g.name, ...g.posten.map((x) => `- ${x.packungen} × ${x.name} (${x.packung})`)])])].join('\n');
-  if (navigator.share) navigator.share({ title: 'Einkaufsliste', text }).catch(() => {});
-  else navigator.clipboard?.writeText(text).then(() => { $('#teilen').textContent = 'Liste kopiert'; });
+function tagWaehlen(i) {
+  const n = alleTage().length;
+  tagAuswahl = Math.max(0, Math.min(n - 1, i));
+  wocheZeichnen();
+  $(`.tag-knopf[data-tag="${tagAuswahl}"]`)?.scrollIntoView({ inline: 'center', block: 'nearest', behavior: ruhigeBewegung() ? 'auto' : 'smooth' });
+}
+
+function meldeKurz(text) {
+  const t = $('#toast');
+  t.textContent = text;
+  t.hidden = false;
+  clearTimeout(meldeKurz.zeit);
+  meldeKurz.zeit = setTimeout(() => { t.hidden = true; }, 3400);
 }
 
 async function start() {
-  $('#vname').textContent = V.name;
-  $('#logo').src = `img/logo-${VARIANTE}.svg`;
-  $('#heimlink').href = `${VARIANTE}.html`; // Landingpage der Variante
-  document.querySelectorAll('.fuss nav a').forEach((a) => { a.href += `?v=${VARIANTE}`; });
-  document.title = `${V.name} – Wochenplan nach deinen Geräten`;
-  // Formular sofort zeigen, Rezeptdaten parallel laden (vermeidet Layout-Sprünge)
+  schalterZeichnen();
   const laden = fetch('data/daten.json').then((r) => r.json()).then((d) => { daten = d; });
-  const p = startProfil();
-  $('#formular').innerHTML = formular(p);
-  $('#formular').style.minHeight = 'auto';
-  const form = $('#planform');
   const schl = gespeicherteLizenz();
   const lizenz = schl ? pruefeLizenz(schl).then((r) => { plus = r.ok; }) : Promise.resolve();
-  lizenz.then(() => { $('#status').innerHTML = plus ? 'Plus aktiv' : `<a href="preise.html?v=${VARIANTE}">Plus</a>`; });
-  form.addEventListener('submit', (ev) => ev.preventDefault());
-  // Der Plan ist sofort da; jede Änderung oben passt ihn an, ohne extra Knopf
-  let warte = null;
-  const neuPlanen = () => { clearTimeout(warte); warte = setTimeout(() => { ausschluss = []; planen(form, false, true); }, 450); };
-  $('#ergebnis').hidden = false;
-  $('#ergebnis').innerHTML = '<p class="kurzfazit"><b>Dein Plan wird zusammengestellt …</b></p>';
-  Promise.all([laden, lizenz]).then(() => { werkerStarten(); zaehleTreffer(form); planen(form, false, true); });
-  form.addEventListener('click', (ev) => {
-    const b = ev.target.closest('[data-step]');
-    if (!b) return;
-    const inp = form.elements[b.dataset.step];
-    const w = Math.max(Number(inp.dataset.min), Math.min(Number(inp.dataset.max), Number(inp.value) + Number(b.dataset.d)));
-    inp.value = w; $('#o-' + b.dataset.step).textContent = w;
-    zaehleTreffer(form); neuPlanen();
-  });
-  form.addEventListener('change', (ev) => {
-    if (ev.target.name === 'richtwert') $('#makrofelder').hidden = ev.target.value !== 'makros';
-    if (ev.target.name === 'herdan' && ev.target.checked && !(Number(form.elements.herd.value) >= 1)) form.elements.herd.value = HERD_STANDARD;
-    zaehleTreffer(form); neuPlanen();
-  });
-  $('#ergebnis').addEventListener('click', (ev) => {
+  lizenz.then(() => { if (plus) $('#status').innerHTML = '<span class="plus-schild">Plus aktiv</span>'; });
+  if (plus || profil.tage === undefined) profil.tage = 7;
+
+  document.addEventListener('click', (ev) => {
     const t = ev.target;
-    const r = t.closest('[data-rezept]');
-    if (r) return rezeptDialog(r.dataset.rezept, Number(r.dataset.faktor) || 1);
-    const m = t.closest('[data-merken]');
-    if (m) return merkenUmschalten(m.dataset.merken);
-    const g = t.closest('[data-gekocht]');
-    if (g) return gekochtUmschalten(g);
+    const b = t.closest('[data-blatt]'); if (b) return blattOeffnen(b.dataset.blatt);
+    const zu = t.closest('[data-zu]'); if (zu) return zu.closest('dialog').close();
+    const a = t.closest('[data-ansicht]'); if (a) return zeigeAnsicht(a.dataset.ansicht);
+    const tag = t.closest('[data-tag]'); if (tag) return tagWaehlen(Number(tag.dataset.tag));
+    const r = t.closest('[data-rezept]'); if (r) return rezeptOeffnen(r.dataset.rezept, Number(r.dataset.faktor) || 1);
+    const m = t.closest('[data-merken]'); if (m) return merkenUmschalten(m);
+    const g = t.closest('[data-gekocht]'); if (g) return gekochtUmschalten(g);
     const w = t.closest('[data-tauschen]');
     if (w) {
       const titel = daten.rezepte.find((x) => x.id === w.dataset.tauschen)?.titel || 'Das Gericht';
       ausschluss = [...new Set([...ausschluss, w.dataset.tauschen])];
-      planen(form, false, true).then(() => meldeKurz(`„${titel}“ getauscht. Es kommt in diesem Plan nicht mehr vor.`));
+      planen().then(() => meldeKurz(`„${titel}“ getauscht.`));
       return;
     }
-    if (t.id === 'buch-leeren') {
-      if (!confirm('Küchenbuch leeren? Gekochte Gerichte und Abzeichen werden auf diesem Gerät gelöscht. Deine Lieblinge bleiben.')) return;
-      speichere('ep_gekocht', {});
-      $('#r-buch').innerHTML = buchHtml();
-      return;
-    }
-    const tab = t.closest('[data-reiter]');
-    if (tab) {
-      document.querySelectorAll('[data-reiter]').forEach((b) => { const an = b === tab; b.setAttribute('aria-selected', an); b.tabIndex = an ? 0 : -1; $('#r-' + b.dataset.reiter).hidden = !an; });
-      return;
-    }
-    if (t.id === 'neu') return planen(form, true, true);
+    if (t.id === 'neu') { ausschluss = []; return planen({ neuerSeed: true }).then(() => meldeKurz('Neue Gerichte, gleiche Einstellungen.')); }
     if (t.id === 'drucken') return window.print();
     if (t.id === 'teilen') return teilen();
-  });
-  $('#ergebnis').addEventListener('keydown', (ev) => {
-    const tab = ev.target.closest('[data-reiter]');
-    if (!tab || !['ArrowRight', 'ArrowLeft'].includes(ev.key)) return;
-    const alle = [...document.querySelectorAll('[data-reiter]')];
-    const n = alle[(alle.indexOf(tab) + (ev.key === 'ArrowRight' ? 1 : alle.length - 1)) % alle.length];
-    n.focus(); n.click();
-  });
-  $('#ergebnis').addEventListener('change', (ev) => {
-    const id = ev.target.dataset?.haken;
-    if (!id) return;
-    const h = lade('ep_haken', {}); h[id] = ev.target.checked; speichere('ep_haken', h);
-    const box = $('#wagen');
-    if (box && !ev.target.closest('.vorrat')) {
-      const gesamt = Number(box.dataset.gesamt);
-      const drin = [...document.querySelectorAll('#r-einkauf .gruppe:not(.vorrat) [data-haken]')].filter((x) => x.checked).length;
-      box.querySelector('i').style.width = `${(100 * drin) / Math.max(gesamt, 1)}%`;
-      $('#wagen-text').textContent = wagenText(drin, gesamt);
-      box.classList.toggle('voll', drin >= gesamt);
+    if (t.id === 'buch-leeren') {
+      if (!confirm('Küchenbuch leeren? Gekochte Gerichte und Abzeichen werden auf diesem Gerät gelöscht. Deine Lieblinge bleiben.')) return;
+      speichere('wb_gekocht', {}); buchZeichnen(); wocheZeichnen();
     }
   });
-  $('#rezept .schliessen button').addEventListener('click', () => $('#rezept').close());
-  $('#rezept').addEventListener('click', (ev) => { const m = ev.target.closest('[data-merken]'); if (m) merkenUmschalten(m.dataset.merken); });
-  // iPhone/iPad: Safari löscht Website-Daten nach 7 Tagen ohne Besuch, außer die App liegt auf dem Home-Bildschirm
-  if (/iPhone|iPad|iPod/.test(navigator.userAgent) && !navigator.standalone) {
-    const h = document.createElement('p');
-    h.className = 'hilfe';
-    h.textContent = 'Tipp fürs iPhone: Über „Teilen“ → „Zum Home-Bildschirm“ bleibt der Planer offline nutzbar und Safari löscht deine Einstellungen nicht. Den Plus-Schlüssel findest du jederzeit in deiner Kauf-Mail.';
-    document.querySelector('.intro')?.append(h);
+  // Dialoge schließen beim Tippen auf den abgedunkelten Rand
+  $$('dialog').forEach((d) => d.addEventListener('click', (ev) => { if (ev.target === d) d.close(); }));
+  $('#blatt').addEventListener('change', blattAenderung);
+  $('#ansicht-einkauf').addEventListener('change', (ev) => {
+    const id = ev.target.dataset?.haken;
+    if (!id) return;
+    const h = lade('wb_haken', {}); h[id] = ev.target.checked; speichere('wb_haken', h);
+    const box = $('#wagen');
+    const gesamt = Number(box.dataset.gesamt);
+    const drin = $$('#bon .bon-zeile:not(.vorrat) input').filter((x) => x.checked).length;
+    box.querySelector('i').style.width = `${(100 * drin) / Math.max(gesamt, 1)}%`;
+    $('#wagen-text').textContent = wagenText(drin, gesamt);
+    box.classList.toggle('voll', drin >= gesamt);
+    $('#einkauf-zahl').textContent = gesamt - drin;
+    if (drin === gesamt && ev.target.checked) meldeKurz('Alles im Wagen.');
+  });
+  // Tage wischen
+  let x0 = null;
+  $('#ansicht-woche').addEventListener('pointerdown', (ev) => { if (ev.target.closest('#tag-ansicht')) x0 = [ev.clientX, ev.clientY]; });
+  $('#ansicht-woche').addEventListener('pointerup', (ev) => {
+    if (!x0) return;
+    const dx = ev.clientX - x0[0], dy = ev.clientY - x0[1];
+    x0 = null;
+    if (Math.abs(dx) > 70 && Math.abs(dx) > 2 * Math.abs(dy)) tagWaehlen(tagAuswahl + (dx < 0 ? 1 : -1));
+  });
+  $('#ansicht-woche').addEventListener('keydown', (ev) => {
+    if (!ev.target.closest('.tage') || !['ArrowRight', 'ArrowLeft'].includes(ev.key)) return;
+    tagWaehlen(tagAuswahl + (ev.key === 'ArrowRight' ? 1 : -1));
+    $(`.tag-knopf[data-tag="${tagAuswahl}"]`)?.focus();
+  });
+
+  await Promise.all([laden, lizenz]);
+  werkerStarten();
+  planen();
+  if (/iPhone|iPad|iPod/.test(navigator.userAgent) && !navigator.standalone && !lade('wb_ios_hinweis', false)) {
+    speichere('wb_ios_hinweis', true);
+    setTimeout(() => meldeKurz('Tipp: Über „Teilen“ → „Zum Home-Bildschirm“ bleibt Wochenbon offline nutzbar.'), 2500);
   }
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) navigator.serviceWorker.register('sw.js').catch(() => {});
 }

@@ -12,9 +12,8 @@ ZIEL = os.path.join(HIER, "..", "public")
 # Einstellungen direkt aus public/js/config.js lesen (eine Quelle für Namen, Preise, Betreiberdaten)
 CONFIG = json.loads(subprocess.check_output(
     ["node", "-e", "import('./js/config.js').then(m=>process.stdout.write(JSON.stringify(m.CONFIG)))"], cwd=ZIEL))
-# Ein Stylesheet statt zwei (weniger blockierende Anfragen)
-open(os.path.join(ZIEL, "css", "stil.css"), "w", encoding="utf-8").write(
-    open(os.path.join(ZIEL, "css", "themes.css"), encoding="utf-8").read() + "\n" + open(os.path.join(ZIEL, "css", "app.css"), encoding="utf-8").read())
+# Ein Stylesheet für alle Seiten (ein Thema, Wochenbon)
+open(os.path.join(ZIEL, "css", "stil.css"), "w", encoding="utf-8").write(open(os.path.join(ZIEL, "css", "app.css"), encoding="utf-8").read())
 
 
 def feld(pfad):
@@ -33,10 +32,8 @@ def preiskarten():
     P = CONFIG["preise"]
     t = CONFIG["probeTage"]
     karten = [
-        ("jahr", "Plus Jahr (empfohlen)", f"{P['jahr']['text']}. Die ersten {t} Tage kosten 0 €. Erste Abbuchung am {t + 1}. Tag. Laufzeit 12 Monate, danach monatlich kündbar.", "", "Jetzt zahlungspflichtig abonnieren"),
-        ("monat", "Plus Monat", f"{P['monat']['text']}. Die ersten {t} Tage kosten 0 €. Erste Abbuchung am {t + 1}. Tag. Kündbar zum Ende des laufenden Abrechnungsmonats.", "", "Jetzt zahlungspflichtig abonnieren"),
-        ("pass", "Montage-Pass", f"{P['pass']['text']}. {P['pass']['laufzeit']}.", " ".join(P["pass"]["varianten"]), "Zahlungspflichtig kaufen"),
-        ("saison", "Saison-Pass", f"{P['saison']['text']}. {P['saison']['laufzeit']}.", " ".join(P["saison"]["varianten"]), "Zahlungspflichtig kaufen"),
+        ("jahr", "Plus Jahr (empfohlen)", f"{P['jahr']['text']}. Die ersten {t} Tage kosten 0 €. Erste Abbuchung am {t + 1}. Tag. Laufzeit 12 Monate, danach monatlich kündbar.", "", "Jetzt zahlungspflichtig bestellen"),
+        ("monat", "Plus Monat", f"{P['monat']['text']}. Die ersten {t} Tage kosten 0 €. Erste Abbuchung am {t + 1}. Tag. Kündbar zum Ende des laufenden Abrechnungsmonats.", "", "Jetzt zahlungspflichtig bestellen"),
     ]
     out = []
     for k, titel, text, nur, knopf in karten:
@@ -51,30 +48,28 @@ KOPF = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{titel}</title>
+<title>{titel} – Wochenbon</title>
 <meta name="description" content="{beschreibung}">
 <meta name="robots" content="{robots}">
-<link rel="icon" href="img/logo-dach.svg" type="image/svg+xml">
+<link rel="icon" href="img/logo-wochenbon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/stil.css">
-<script>(function(){{var v=new URLSearchParams(location.search).get('v');var t={{montage:1,fitness:1,camping:1,alltag:1}};document.documentElement.dataset.theme=t[v]?v:'alltag';}})();</script>
 <script type="module" src="js/seiten.js"></script>
 </head>
 <body>
-<header class="kopf"><div class="wrap">
-<a href="planer.html" id="heimlink"><img class="logo" id="logo" src="img/logo-dach.svg" alt="" width="36" height="36"><span class="name" id="vname">Tellerkontor</span></a>
-<span class="rechts"><a href="planer.html" data-v>Zum Planer</a></span>
+<header class="kopf"><div class="wrap schmal">
+<a class="marke" href="./"><img src="img/logo-wochenbon.svg" alt="" width="34" height="34">Wochenbon</a>
+<span class="rechts"><a href="planer.html">Zum Planer</a></span>
 </div></header>
-<div class="markenband" aria-hidden="true"></div>
-<main class="wrap text">
+<main class="wrap schmal text">
 """
 
 FUSS = """</main>
-<footer class="fuss"><div class="wrap">
+<footer class="fuss"><div class="wrap schmal">
 <nav aria-label="Rechtliches">
 <a href="preise.html">Preise</a><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a><a href="agb.html">AGB</a>
 <a href="widerruf.html">Widerrufsbelehrung</a><a href="kuendigen.html">Verträge hier kündigen</a><a href="widerrufen.html">Vertrag widerrufen</a>
 </nav>
-<p>Ein Angebot von <span data-feld="dachmarke">Tellerkontor</span>. Nährwerte: Bundeslebensmittelschlüssel 4.0, Max Rubner-Institut (2025), CC BY 4.0.</p>
+<p>Wochenbon. Nährwerte: Bundeslebensmittelschlüssel 4.0, Max Rubner-Institut (2025), CC BY 4.0. Preise sind Schätzungen.</p>
 </div></footer>
 </body>
 </html>
@@ -182,7 +177,6 @@ SEITEN = {
 <ul>
 <li><b>Plus Monat:</b> Laufzeit ein Monat, verlängert sich jeweils um einen Monat, jederzeit zum Ende des laufenden Abrechnungsmonats kündbar.</li>
 <li><b>Plus Jahr:</b> Erstlaufzeit 12 Monate. Danach läuft der Vertrag auf unbestimmte Zeit weiter und ist jederzeit mit einer Frist von einem Monat kündbar.</li>
-<li><b>Montage-Pass / Saison-Pass:</b> feste Laufzeit (3 bzw. 6 Monate), endet automatisch ohne Kündigung.</li>
 <li><b>Testphase:</b> Die ersten <span data-feld="probeTage">7</span> Tage eines Abos kosten 0 €. Kündigst du in dieser Zeit, zahlst du nichts.</li>
 <li>Kündigen kannst du jederzeit über <a href="kuendigen.html">Verträge hier kündigen</a> – ohne Login – oder in Textform per E-Mail.</li>
 </ul>
@@ -220,8 +214,7 @@ for datei, (titel, beschreibung, robots, inhalt) in SEITEN.items():
     open(os.path.join(ZIEL, datei), "w", encoding="utf-8").write(html)
     print("geschrieben:", datei)
 
-# Planer-Seite: Texte aller Varianten eingebettet, damit Name und Claim ohne Nachladen erscheinen
-texte = {k: {"name": v["name"], "claim": v["claim"], "kurz": v["kurz"]} for k, v in CONFIG["varianten"].items()}
+# Planer-Seite
 vorlage = open(os.path.join(HIER, "planer.vorlage.html"), encoding="utf-8").read()
-open(os.path.join(ZIEL, "planer.html"), "w", encoding="utf-8").write(fuelle(vorlage.replace("/*TEXTE*/{}", json.dumps(texte, ensure_ascii=False))))
+open(os.path.join(ZIEL, "planer.html"), "w", encoding="utf-8").write(fuelle(vorlage))
 print("geschrieben: planer.html")

@@ -1,5 +1,8 @@
 # E-Mail-Strecken · alle vier Marken
 
+> **Veraltet seit 04.11.2026 (ENTSCHEIDUNGEN C17):** Dieses Material gehört zu den vier früheren Nischen-Marken. Die neue Marke ist **Wochenbon**. Inhalte (Angles, Regeln, Teststruktur) bleiben als Vorlage nützlich, Namen, Motive und Preise (Pässe) gelten nicht mehr.
+
+
 Stand: 29.10.2026 · Entwurf zur Freigabe durch den Inhaber, **vor dem Versand anwaltlich prüfen lassen** (Vertrags-, Kündigungs- und Widerrufsmails) · Marken: Zimmerherd (Montage), Kochsatz (Fitness), Zweiflammer (Camping), Wochenschmaus (Alltag) · Dachmarke Tellerkontor
 
 **Grundlagen:** Skills `emails`, `churn-prevention`, `onboarding`, `copywriting` (US-Taktiken nur, wo deutsches Recht sie erlaubt), Markenbücher `marke/*/Markenbuch_*.md`, Recht `recherche/07_Recht_und_Steuern.md` (§ 3, § 4.4, § 4.5, § 5.6), Entscheidungen C3, C4, C9, P1, P2, R2. Produktstand aus `app/` (Plus: bis zu 14 Tage, Vorkoch-Ablauf, Boxen-Plan, PDF; gratis: 1-Tages-Plan mit Einkaufsliste, so oft man will; Freischalten unter Preise → „Schon gekauft? Plus freischalten“).
