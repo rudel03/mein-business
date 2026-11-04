@@ -23,6 +23,39 @@ for (const v of ['montage', 'fitness', 'camping', 'alltag']) {
   const breite = await page.evaluate(() => document.documentElement.scrollWidth);
   pruef(breite <= 390, v + ': horizontaler Scroll ' + breite);
 }
+// Spielerisches: Treffer-Zähler, Merken, Gekocht, Tauschen, Einkaufswagen, Küchenbuch, Vorschau
+{
+  await page.goto(B + 'planer.html?v=montage', { waitUntil: 'networkidle' });
+  await page.evaluate(() => localStorage.clear());
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForFunction(() => /\d/.test(document.querySelector('#treffer-zahl')?.textContent || ''));
+  const vorher = Number(await page.textContent('#treffer-zahl'));
+  await page.click('label.chip:has(input[value=mikrowelle])');
+  await page.waitForTimeout(600);
+  const nachher = Number(await page.textContent('#treffer-zahl'));
+  pruef(vorher > 0 && nachher < vorher, `Treffer-Zähler reagiert (${vorher} → ${nachher})`);
+  pruef((await page.textContent('#treffer-tipp')).startsWith('Mit '), 'Treffer-Zähler nennt den nächsten Schritt');
+  await page.click('label.chip:has(input[value=mikrowelle])');
+  await page.click('button[type=submit]:has-text("Plan erstellen")');
+  await page.waitForSelector('.tag');
+  pruef(await page.locator('.vorschau .vorschau-essen').count() > 3, 'Gratis-Vorschau der übrigen Tage');
+  const herz = page.locator('[data-merken]').first();
+  await herz.click();
+  pruef(await herz.getAttribute('aria-pressed') === 'true', 'Merken schaltet um');
+  await page.locator('[data-gekocht]').first().click();
+  pruef(/Erster Teller/.test(await page.textContent('#toast')), 'Abzeichen-Meldung nach dem ersten Gekocht');
+  const titel = await page.locator('.essen button.titel').first().textContent();
+  await page.locator('[data-tauschen]').first().click();
+  await page.waitForTimeout(800);
+  pruef(!(await page.locator('.essen button.titel').allTextContents()).includes(titel), 'Tauschen entfernt das Gericht aus dem Plan');
+  await page.click('[data-reiter=einkauf]');
+  await page.locator('#r-einkauf .gruppe:not(.vorrat) [data-haken]').first().check();
+  pruef(/^1 von \d+ im Wagen$/.test(await page.textContent('#wagen-text')), 'Einkaufswagen zählt mit');
+  await page.click('[data-reiter=buch]');
+  pruef(/1\s*von 195/.test(await page.textContent('#r-buch .sammlung')), 'Küchenbuch zählt das gekochte Gericht');
+  pruef(await page.locator('#r-buch .abzeichen li.hat').count() === 1, 'genau ein Abzeichen erreicht');
+  await page.evaluate(() => localStorage.clear());
+}
 for (const [seite, knopf] of [['kuendigen.html', 'Jetzt kündigen'], ['widerrufen.html', 'Widerruf bestätigen']]) {
   await page.goto(B + seite, { waitUntil: 'networkidle' });
   await page.click(`button[type=submit]:has-text("${knopf}")`);

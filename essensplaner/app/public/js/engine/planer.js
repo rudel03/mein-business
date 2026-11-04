@@ -28,6 +28,8 @@ export const STANDARD_PROFIL = {
   diaet: 'alles', // alles | vegetarisch | vegan | pescetarisch | ohne_schwein
   allergene: [], // LMIV-Codes, z. B. ['gl', 'mi']
   abneigungen: [], // Zutaten-IDs
+  ausschluss: [], // Rezept-IDs, die in diesem Plan nicht vorkommen sollen (Tauschen)
+  lieblinge: [], // Rezept-IDs, die der Planer bevorzugt (Merken)
   makros: null, // { kcal, p, kh, f } je Person und Tag
   kcalRichtwert: 2000, // ohne Makros: grober Tagesrichtwert je Person
   kochtage: null, // null = täglich frei; sonst Liste von Tagesindizes, an denen gekocht wird (z. B. [0, 3])
@@ -96,6 +98,7 @@ export function kandidaten(daten, p) {
   const grund = { diaet: 0, allergie: 0, abneigung: 0, geraet: 0, lager: 0 };
   const liste = [];
   for (const r of daten.rezepte) {
+    if ((p.ausschluss || []).includes(r.id)) continue;
     if (!passtDiaet(r, p.diaet)) { grund.diaet++; continue; }
     if (r.al.some((a) => p.allergene.includes(a))) { grund.allergie++; continue; }
     if (r.zutaten.some((z) => !istOptional(z) && p.abneigungen.includes(z[0]))) { grund.abneigung++; continue; }
@@ -211,6 +214,8 @@ function bewerte(plan, ctx) {
   for (const e of plan) zaehl[e.k.r.id] = (zaehl[e.k.r.id] || 0) + 1;
   for (const id in zaehl) if (zaehl[id] > 1) strafe += 6 * (zaehl[id] - 1) * (zaehl[id] - 1);
   for (const e of plan) if (e.slots.length > 2) strafe += 2 * (e.slots.length - 2);
+  // gemerkte Lieblingsgerichte bevorzugen (einmal je Kochvorgang, Abwechslung bleibt über die Strafe oben)
+  if (p.lieblinge?.length) for (const e of plan) if (p.lieblinge.includes(e.k.r.id)) strafe -= 3;
   // Kochaufwand je Kochtag
   const aufwand = {};
   for (const e of plan) aufwand[e.kochtag] = (aufwand[e.kochtag] || 0) + e.k.weg.aktiv;

@@ -1,6 +1,6 @@
 // Offline-Fähigkeit: Seiten, Skripte, Schriften und Rezeptdaten werden zwischengespeichert.
 // Bei neuer Version CACHE hochzählen.
-const CACHE = 'planer-v2';
+const CACHE = 'planer-v3';
 const DATEIEN = ['planer.html', 'preise.html', 'kuendigen.html', 'widerrufen.html', 'impressum.html', 'datenschutz.html', 'agb.html', 'widerruf.html',
   'css/stil.css', 'js/app.js', 'js/check.js', 'js/seiten.js', 'js/config.js', 'js/lizenz.js',
   'js/engine/planer.js', 'js/engine/grundlagen.js', 'js/engine/einkauf.js', 'js/engine/ablauf.js', 'js/engine/laeden.js', 'data/daten.json',

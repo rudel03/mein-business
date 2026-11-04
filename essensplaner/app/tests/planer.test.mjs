@@ -288,3 +288,17 @@ test('Angebrochene Dose ohne Kühlschrank wird nicht am nächsten Tag weiterverw
   assert.equal(packs(ohne), 2, 'ohne Kühlschrank muss eine zweite Packung gekauft werden');
   assert.equal(packs(mit), 1, 'mit Kühlschrank reicht die angebrochene Packung');
 });
+
+test('Tauschen: ausgeschlossenes Rezept kommt nicht vor; Lieblinge werden bevorzugt', () => {
+  const a = erstellePlan(daten, { seed: 3 });
+  const weg = a.kochen[0].rezept;
+  const b = erstellePlan(daten, { seed: 3, ausschluss: [weg] });
+  assert.ok(b.ok && !b.kochen.some((k) => k.rezept === weg));
+  invarianten(b);
+  // Liebling: ein Frühstück, das im Standardplan nicht vorkommt, wird mit Merken eingeplant
+  const kand = kandidaten(daten, vervollstaendige({})).liste.map((x) => x.r).filter((r) => r.mahlzeit.includes('fruehstueck'));
+  const fehlt = kand.find((r) => !a.kochen.some((k) => k.rezept === r.id));
+  const c = erstellePlan(daten, { seed: 3, lieblinge: [fehlt.id] });
+  assert.ok(c.kochen.some((k) => k.rezept === fehlt.id), `${fehlt.id} wurde trotz Merken nicht geplant`);
+  invarianten(c);
+});

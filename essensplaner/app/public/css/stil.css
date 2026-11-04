@@ -255,3 +255,68 @@ input[type=text], input[type=email], input[type=date] { width: 100%; }
 .lead input[type=email] { width: 100%; }
 .einwilligung { display: flex; gap: 10px; align-items: flex-start; margin: 12px 0; font-size: .95rem; }
 .einwilligung input { width: 22px; height: 22px; flex: none; margin-top: 2px; accent-color: var(--knopf); }
+
+/* ---------------------------------------------------------------- Spielerisch: Treffer-Zähler */
+.treffer { display: flex; align-items: center; gap: 14px; margin-bottom: 10px; padding: 10px 14px 10px; background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); position: relative; overflow: hidden; }
+.treffer::before { content: ''; position: absolute; inset: 0 0 auto; height: 5px; background: var(--band); }
+.treffer-zahl { font-family: var(--display); font-weight: var(--display-gewicht); font-size: 2.6rem; line-height: 1; letter-spacing: var(--display-spacing, 0); min-width: 2.4ch; text-align: right; font-variant-numeric: tabular-nums; }
+.treffer-text { display: grid; gap: 2px; font-weight: 700; line-height: 1.25; }
+.treffer-text small { font-weight: 400; color: var(--text-leise); }
+.treffer.null .treffer-zahl { color: var(--fehler); }
+.stoss { animation: stoss 240ms ease-out; }
+@keyframes stoss { 40% { transform: scale(1.12); } }
+
+/* Wochenkarte */
+.essen { grid-template-columns: 76px minmax(0, 1fr); gap: 6px 12px; }
+.essen.leer { grid-template-columns: 5.6rem minmax(0, 1fr); color: var(--text-leise); }
+.essen .mini { width: 76px; height: 57px; object-fit: cover; border-radius: 6px; background: var(--flaeche-2); }
+.essen-text { display: grid; gap: 2px; min-width: 0; }
+.essen-text .info { grid-column: auto; }
+.essen-aktion { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; }
+.ikon { display: inline-flex; align-items: center; gap: 5px; min-height: 40px; padding: 6px 10px; border: 1.5px solid var(--linie-stark); border-radius: var(--chip-radius); background: transparent; color: var(--text); font: 700 0.86rem 'Atkinson Hyperlegible', sans-serif; cursor: pointer; }
+.ikon svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; transition: transform 160ms; }
+.ikon:focus-visible { outline: 3px solid var(--fokus); outline-offset: 2px; }
+.ikon.merken[aria-pressed=true] svg { fill: var(--fehler); stroke: var(--fehler); transform: scale(1.12); }
+.ikon.gekocht-knopf[aria-pressed=true] { background: var(--knopf); border-color: var(--knopf); color: var(--knopf-text); }
+.essen.gekocht { background: var(--flaeche-2); }
+@media (min-width: 900px) { .woche:not(.einzeln) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; align-items: start; } }
+
+/* Ehrliche Vorschau für Gratis-Nutzer */
+.vorschau { margin: 20px 0; padding: 16px; border: 2px dashed var(--linie-stark); border-radius: var(--radius); }
+.vorschau h3 { margin-top: 0; font-family: var(--display); }
+.vorschau-liste { list-style: none; padding: 0; margin: 12px 0; display: grid; gap: 12px; }
+.vorschau-tag b { display: block; margin-bottom: 6px; }
+.vorschau-bilder { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+.vorschau-essen { flex: none; width: 104px; }
+.vorschau-essen img { width: 104px; height: 78px; object-fit: cover; border-radius: 6px; display: block; }
+.vorschau-essen small { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 0.8rem; line-height: 1.25; margin-top: 4px; color: var(--text-leise); }
+.vorschau-angebot { font-weight: 700; }
+
+/* Einkaufswagen */
+.wagen { display: grid; gap: 4px; margin-bottom: 10px; font-weight: 700; }
+.wagen .balken { margin: 0; }
+.wagen .balken i { transition: width 300ms ease-out; }
+.wagen.voll { color: var(--akzent-dunkel); }
+
+/* Küchenbuch */
+.sammlung { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: baseline; gap: 4px 12px; padding: 14px 16px; background: var(--flaeche); border: 1px solid var(--linie); border-radius: var(--radius); }
+.sammlung b { font-family: var(--display); font-weight: var(--display-gewicht); font-size: 3rem; line-height: 1; }
+.sammlung .balken, .sammlung small { grid-column: 1 / -1; }
+.sammlung small { color: var(--text-leise); }
+.abzeichen { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); gap: 10px; }
+.abzeichen li { display: grid; gap: 4px; justify-items: start; padding: 12px; border: 1px solid var(--linie); border-radius: var(--radius); color: var(--text-leise); }
+.abzeichen small { font-size: 0.82rem; line-height: 1.3; }
+.plakette { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; border: 2.5px dashed var(--linie-stark); color: transparent; }
+.plakette svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.abzeichen li.hat { color: var(--text); background: var(--flaeche); border-color: var(--linie-stark); }
+.abzeichen li.hat .plakette { border: 0; background: var(--akzent); color: var(--akzent-text); }
+.lieblinge { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
+.lieblinge button.titel { all: unset; cursor: pointer; display: grid; gap: 4px; font-weight: 700; font-size: 0.9rem; line-height: 1.25; }
+.lieblinge button.titel:focus-visible { outline: 3px solid var(--fokus); }
+.lieblinge img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; }
+.buch-leer { padding: 16px; border: 2px dashed var(--linie-stark); border-radius: var(--radius); }
+
+/* Kurzmeldung */
+.toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); z-index: 30; width: max-content; max-width: calc(100vw - 32px); padding: 12px 18px; border-radius: var(--radius); background: var(--text); color: var(--grund); font-weight: 700; box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25); }
+
+@media (prefers-reduced-motion: reduce) { .stoss { animation: none; } .ikon svg, .wagen .balken i { transition: none; } }

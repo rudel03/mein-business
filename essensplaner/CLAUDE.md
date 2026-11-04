@@ -5,7 +5,7 @@ Wird beim Start jeder Sitzung gelesen. Auftrag: `AUFTRAG.md`. Entscheidungen: `E
 ## Stand (29.10.2026, nach der ersten Nachtschicht)
 - **Phase A Recherche:** fertig, „bestanden mit Auflagen“ (`recherche/00_Gesamtbericht_Phase_A.md` + PDF, Faktencheck 27 %, Advocatus Diaboli 11). Offen: Interviews, Zahlungsbereitschaft (Inhaber).
 - **Phase B Marke:** fertig. Dachmarke **Tellerkontor**, Marken **Zimmerherd** (Montage), **Kochsatz** (Fitness), **Zweiflammer** (Camping, gewählte Nische), **Wochenschmaus** (Alltag). Markenbücher, Logos, Beispielbilder, Claim-Freigabe (241 Aussagen, 13 gesperrt). Offen: DPMA/EUIPO (Inhaber).
-- **Phase C Produkt:** PWA fertig, 29 Unit-Tests + 27 E2E grün (Frische über die Tage mit Einkaufstagen seit Gegenprüfung 13), Server-Vorlage `server/` mit 13 Tests, Lighthouse Landingpages 97–100 in allen Kategorien (Planer SEO 66, weil absichtlich noindex). Offen: Paddle, Schlüsselpaar, Worker-Deployment, Impressum-Daten, Anwaltsprüfung, Testkochen, Kassenbon-Test (alles Inhaber).
+- **Phase C Produkt:** PWA fertig, 30 Unit-Tests + 36 E2E grün, spielerische Oberfläche (Treffer-Zähler, Merken/Tauschen/Gekocht, Küchenbuch, Vorschau; C15) (Frische über die Tage mit Einkaufstagen seit Gegenprüfung 13), Server-Vorlage `server/` mit 13 Tests, Lighthouse Landingpages 97–100 in allen Kategorien (Planer SEO 66, weil absichtlich noindex). Offen: Paddle, Schlüsselpaar, Worker-Deployment, Impressum-Daten, Anwaltsprüfung, Testkochen, Kassenbon-Test (alles Inhaber).
 - **Phase D Launch:** 4 Landingpages mit Wartelisten-Formular (inaktiv bis Mail-Dienst), 6 Lead-Magnet-PDFs, 32 Bild-Anzeigen, 12 Videos, 57 Mails, Kampagnen, Launchplan, SEO (robots, sitemap, llms.txt). Nichts gestartet. Testkauf blockiert bis Paddle-Konto.
 
 ## Ordner
@@ -38,3 +38,4 @@ Wird beim Start jeder Sitzung gelesen. Auftrag: `AUFTRAG.md`. Entscheidungen: `E
 - `basisUrl` in `config.js` ist ein Platzhalter (`https://tellerkontor.de/`), bis der Inhaber die Domains entschieden hat.
 - Frische: Jede neue Zutat braucht korrektes `lager` (k/r/t) und `abt` – daraus folgt `haltbarTage`. Neue Lagerlogik immer mit dem Zufallstest prüfen (Invariante in `tests/planer.test.mjs`).
 - Anleitung zum lokalen Testen für den Inhaber: `TESTEN.md`.
+- Spielerisches nur ohne Dark Patterns (keine Serien/Fristen/Beschämung, keine Euro-Ersparnis im Küchenbuch). Daten: `ep_gekocht`, `ep_lieblinge`, `ep_haken` im localStorage. Mini-Fotos: `public/img/rezepte/klein/` (240 × 180, bei neuen Rezepten mit PIL erzeugen).

@@ -2,7 +2,7 @@
 // Alle Eingaben (auch Allergien, Ziele) bleiben im Browser (localStorage). Es wird nichts gesendet.
 
 import { CONFIG } from './config.js';
-import { erstellePlan, STANDARD_PROFIL } from './engine/planer.js';
+import { erstellePlan, STANDARD_PROFIL, kandidaten, vervollstaendige } from './engine/planer.js';
 import { MAHLZEIT_NAME, TAGE, TAGE_KURZ, euro, gramm, istOptional, ersterWeg, rund } from './engine/grundlagen.js';
 import { LAEDEN } from './engine/laeden.js';
 import { lagerText } from './engine/ablauf.js';
@@ -37,6 +37,25 @@ const RICHTWERTE = [[1900, 'Eher wenig Bewegung (ca. 1.900 kcal)'], [2200, 'Norm
 let daten = null;
 let plus = false;
 let letztes = null;
+let ausschluss = []; // getauschte Gerichte, gelten bis zum nächsten „Plan erstellen“
+
+const IKON = {
+  herz: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.2-9.3C1.6 7.9 3.8 4.5 7.2 4.5c2 0 3.6 1.1 4.8 2.8 1.2-1.7 2.8-2.8 4.8-2.8 3.4 0 5.6 3.4 4.4 6.7-1.7 4.7-9.2 9.3-9.2 9.3z"/></svg>',
+  tauschen: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h13l-3.5-3.5M20 16H7l3.5 3.5"/></svg>',
+  haken: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12.5l5 5 10-11"/></svg>',
+};
+
+// Abzeichen für echte Taten. Nichts verfällt, nichts wird verglichen, alles bleibt auf dem Gerät.
+const ABZEICHEN = [
+  ['erster', 'Erster Teller', 'Ein Gericht aus dem Plan gekocht', (s) => s.anzahl >= 1],
+  ['fuenf', 'Fünf Teller', 'Fünf Gerichte gekocht', (s) => s.anzahl >= 5],
+  ['entdecker', 'Entdecker', 'Zehn verschiedene Rezepte probiert', (s) => s.verschieden >= 10],
+  ['sammler', 'Sammler', '25 verschiedene Rezepte probiert', (s) => s.verschieden >= 25],
+  ['ohneherd', 'Ohne Herd', 'Fünf Gerichte nur mit Wasserkocher, Mikrowelle oder ganz ohne Gerät', (s) => s.ohneHerd >= 5],
+  ['vorgekocht', 'Vorgekocht', 'Drei Mahlzeiten aus dem Kühlschrank oder Gefrierfach gegessen', (s) => s.vor >= 3],
+  ['woche', 'Volle Woche', 'An sieben verschiedenen Tagen gekocht', (s) => s.tage >= 7],
+  ['geschmack', 'Geschmack gefunden', 'Drei Lieblingsgerichte gemerkt', (s) => s.lieblinge >= 3],
+];
 
 // ---------------------------------------------------------------- Speicher
 function lade(schl, fallback) {
@@ -124,7 +143,9 @@ function formular(p) {
         ${chips('kochtag', TAGE_KURZ.map((t, i) => [String(i), t]), 'checkbox', (i) => (p.kochtage || []).includes(Number(i)))}
       </details>
     </fieldset>
-    <div class="aktion"><button class="knopf" type="submit">Plan erstellen</button></div>
+    <div class="aktion">
+      <div class="treffer" id="treffer"><b class="treffer-zahl" id="treffer-zahl">…</b><span class="treffer-text"><span id="treffer-text">Rezepte werden gezählt</span><small id="treffer-tipp"></small></span></div>
+      <button class="knopf" type="submit">Plan erstellen</button></div>
   </form>`;
 }
 
@@ -141,6 +162,7 @@ function liesFormular(form) {
     diaet: fd.get('diaet') || 'alles', allergene: alle('allergen'), abneigungen: alle('abneigung').flatMap((x) => x.split(',')),
     mahlzeiten: alle('mahlzeit'), pause: fd.get('pause') || 'zuhause', einkauf: fd.get('einkauf') || 'zweimal',
     kochtage: alle('kochtag').map(Number), seed: letztes?.profil?.seed || 1,
+    lieblinge: lade('ep_lieblinge', []), ausschluss,
     arbeitstage: V.profil.arbeitstage ?? STANDARD_PROFIL.arbeitstage,
   };
   if (!p.kochtage.length) p.kochtage = null;
@@ -157,17 +179,64 @@ function herkunftMarke(m) {
   return '';
 }
 
+// Datum eines Plantags: der nächste gewählte Starttag ab heute
+function planDatum(e, d) {
+  const heute = new Date(); heute.setHours(12, 0, 0, 0);
+  const wt = (heute.getDay() + 6) % 7;
+  const start = new Date(heute); start.setDate(heute.getDate() + ((e.profil.starttag - wt + 7) % 7));
+  start.setDate(start.getDate() + d);
+  return start.toISOString().slice(0, 10);
+}
+
+function essenHtml(e, t, m, lieblinge, gekocht) {
+  if (!m.rezept) return `<div class="essen leer"><span class="wann">${MAHLZEIT_NAME[m.m]}</span><span>frei – kein passendes Rezept</span></div>`;
+  const schl = `${planDatum(e, t.d)}|${m.m}|${m.rezept}`;
+  const lieb = lieblinge.includes(m.rezept);
+  const fertig = !!gekocht[schl];
+  return `<div class="essen${fertig ? ' gekocht' : ''}">
+    <img class="mini" src="img/rezepte/klein/${m.rezept}.jpg" alt="" width="120" height="90" loading="lazy" onerror="this.style.visibility='hidden'">
+    <div class="essen-text"><span class="wann">${MAHLZEIT_NAME[m.m]}</span>
+      <button class="titel" type="button" data-rezept="${m.rezept}" data-faktor="${m.faktor}">${esc(m.titel)}</button>
+      <span class="info">${herkunftMarke(m)}${m.box ? `<span class="marke">${e.profil.pause === 'kalt' ? 'Box, Kühltasche' : 'Box'}</span>` : ''}${zahl(m.n.kcal)} kcal · ${zahl(m.n.p)} g Protein${m.faktor !== 1 ? ` · Portion ×${Number(m.faktor).toLocaleString('de-DE', { maximumFractionDigits: 2 })}` : ''}</span></div>
+    <div class="essen-aktion">
+      <button class="ikon merken" type="button" data-merken="${m.rezept}" aria-pressed="${lieb}" title="Merken">${IKON.herz}<span>Merken</span></button>
+      <button class="ikon" type="button" data-tauschen="${m.rezept}" title="Anderes Gericht">${IKON.tauschen}<span>Tauschen</span></button>
+      <button class="ikon gekocht-knopf" type="button" data-gekocht="${schl}" data-herkunft="${m.herkunft || ''}" aria-pressed="${fertig}" title="Gekocht">${IKON.haken}<span>Gekocht</span></button>
+    </div></div>`;
+}
+
 function planHtml(e) {
   const kalt = e.profil.pause === 'kalt' && e.tage.some((t) => t.mahlzeiten.some((m) => m.box))
     ? '<p class="meldung" role="note">Boxen für die Pause in einer Kühltasche mit Kühlakku mitnehmen und bis zum Essen kühl halten. Ungekühlt höchstens 2 Stunden.</p>' : '';
-  return kalt + e.tage.map((t) => `
+  const lieblinge = lade('ep_lieblinge', []);
+  const gekocht = lade('ep_gekocht', {});
+  const tage = e.tage.map((t) => `
     <article class="tag"><h3>${TAGE[t.wochentag]}</h3>
-      ${t.mahlzeiten.map((m) => `<div class="essen"><span class="wann">${MAHLZEIT_NAME[m.m]}</span>
-        ${m.rezept ? `<button class="titel" type="button" data-rezept="${m.rezept}" data-faktor="${m.faktor}">${esc(m.titel)}</button>
-          <span class="info">${herkunftMarke(m)}${m.box ? `<span class="marke">${e.profil.pause === 'kalt' ? 'Box, Kühltasche' : 'Box'}</span>` : ''}${zahl(m.n.kcal)} kcal · ${zahl(m.n.p)} g Protein${m.faktor !== 1 ? ` · Portion ×${Number(m.faktor).toLocaleString('de-DE', { maximumFractionDigits: 2 })}` : ''}</span>`
-          : '<span>frei – kein passendes Rezept</span>'}
-      </div>`).join('')}
+      ${t.mahlzeiten.map((m) => essenHtml(e, t, m, lieblinge, gekocht)).join('')}
     </article>`).join('');
+  return kalt + `<div class="woche${e.tage.length === 1 ? ' einzeln' : ''}">${tage}</div>` + vorschauHtml(e);
+}
+
+// Gratis: die übrigen Tage als Vorschau mit Foto und Namen. Rezepte, Einkauf und Ablauf gibt es mit Plus.
+function vorschauHtml(e) {
+  if (!e.vorschau?.length) return '';
+  const tage = e.vorschau.map((t) => `<li class="vorschau-tag"><b>${TAGE[t.wochentag]}</b>
+    <span class="vorschau-bilder">${t.mahlzeiten.filter((m) => m.rezept).map((m) => `<span class="vorschau-essen"><img src="img/rezepte/klein/${m.rezept}.jpg" alt="" width="120" height="90" loading="lazy"><small>${esc(m.titel)}</small></span>`).join('')}</span></li>`).join('');
+  const P = CONFIG.preise;
+  const angebot = P.pass.varianten.includes(VARIANTE) ? `Montage-Pass: ${P.pass.text}, endet automatisch.`
+    : P.saison.varianten.includes(VARIANTE) ? `Saison-Pass: ${P.saison.text}, endet automatisch.`
+    : `Plus: ${P.monat.text} oder ${P.jahr.text}, die ersten ${CONFIG.probeTage} Tage 0 €.`;
+  return `<section class="vorschau" aria-labelledby="vorschau-titel">
+    <h3 id="vorschau-titel">So geht deine Woche weiter</h3>
+    <p>Die übrigen ${e.vorschau.length} Tage hat der Planer schon zusammengestellt. Mit Plus bekommst du die Rezepte, die Einkaufsliste und den Vorkoch-Ablauf dafür.</p>
+    <ol class="vorschau-liste">${tage}</ol>
+    <p class="vorschau-angebot">${angebot}</p>
+    <a class="knopf" href="preise.html?v=${VARIANTE}">Ganze Woche freischalten</a>
+  </section>`;
+}
+
+function wagenText(drin, gesamt) {
+  return drin >= gesamt ? 'Alles im Wagen.' : `${drin} von ${gesamt} im Wagen`;
 }
 
 function einkaufTitel(e, tag) {
@@ -178,16 +247,20 @@ function einkaufTitel(e, tag) {
 function einkaufHtml(e) {
   const haken = lade('ep_haken', {});
   const mehrere = e.einkauf.einkaeufe.length > 1;
+  const alle = e.einkauf.einkaeufe.flatMap((ek) => ek.gruppen.flatMap((g) => g.posten));
+  const drin = alle.filter((x) => haken[`${x.id}@${x.tag}`]).length;
+  const wagen = `<div class="wagen${drin === alle.length ? ' voll' : ''}" id="wagen" data-gesamt="${alle.length}"><div class="balken"><i style="width:${alle.length ? (100 * drin) / alle.length : 0}%"></i></div>
+    <span id="wagen-text">${wagenText(drin, alle.length)}</span></div>`;
   const g = e.einkauf.einkaeufe.map((ek) => `${mehrere ? `<h3 class="einkauf-titel">${esc(einkaufTitel(e, ek.tag))} · ca. ${euro(ek.summe)}</h3>` : ''}
     ${ek.gruppen.map((gr) => `<section class="gruppe"><h3>${esc(gr.name)}</h3>
     ${gr.posten.map((x) => `<label class="posten"><input type="checkbox" data-haken="${x.id}@${x.tag}"${haken[`${x.id}@${x.tag}`] ? ' checked' : ''}>
       <div><b>${esc(x.name)}</b><small>${x.packungen} × ${esc(x.packung)} · gebraucht ${esc(x.menge)}${x.rest ? ` · Rest ca. ${esc(x.rest)}` : ''}</small></div>
       <span class="preis">${euro(x.preis)}</span></label>`).join('')}</section>`).join('')}`).join('');
-  const v = e.einkauf.vorrat.length ? `<section class="gruppe"><h3>Hast du wahrscheinlich schon</h3>
+  const v = e.einkauf.vorrat.length ? `<section class="gruppe vorrat"><h3>Hast du wahrscheinlich schon</h3>
     <p class="hilfe">Öl, Salz und Gewürze. Wir rechnen nur den verbrauchten Anteil in die Kosten ein.</p>
     ${e.einkauf.vorrat.map((x) => `<label class="posten"><input type="checkbox" data-haken="${x.id}"${haken[x.id] ? ' checked' : ''}><div><b>${esc(x.name)}</b><small>${esc(x.menge)} (Packung ${esc(x.packung)} ca. ${euro(x.packungPreis)})</small></div><span class="preis">${euro(x.preisAnteil)}</span></label>`).join('')}</section>` : '';
   const hinweis = mehrere ? ' Frisches kaufst du erst kurz vor dem Kochen, Vorräte gleich beim ersten Einkauf.' : '';
-  return `<p class="hilfe">Nach Abteilungen sortiert, wie es im ${esc(e.einkauf.laden)}-Markt meist liegt. Preise sind Schätzungen.${hinweis}</p>${g}${v}
+  return `${wagen}<p class="hilfe">Nach Abteilungen sortiert, wie es im ${esc(e.einkauf.laden)}-Markt meist liegt. Preise sind Schätzungen.${hinweis}</p>${g}${v}
     <div class="summe"><span>Geschätzt</span><span>${euro(e.einkauf.summe)}</span></div>
     <button class="knopf leise" type="button" id="teilen">Liste teilen oder kopieren</button>`;
 }
@@ -215,7 +288,7 @@ function ergebnisHtml(e) {
   const m = e.meldungen.map((x) => `<p class="meldung${x.art === 'fehler' ? ' fehler' : ''}" role="status">${esc(x.text)}</p>`).join('');
   if (!e.ok) return m;
   const kcal = Math.round(e.naehrwerte.jeTag.reduce((s, t) => s + t.kcal, 0) / e.naehrwerte.jeTag.length);
-  const sperre = !plus ? `<div class="sperre"><h3>Die ganze Woche planen</h3>
+  const sperre = !plus && !e.vorschau?.length ? `<div class="sperre"><h3>Die ganze Woche planen</h3>
     <p>Ohne Plus planst du einen Tag. Mit Plus bis zu 14 Tage, mit Vorkoch-Ablauf und PDF.</p>
     <a class="knopf" href="preise.html?v=${VARIANTE}">Plus ansehen</a></div>` : '';
   return `${m}
@@ -225,17 +298,134 @@ function ergebnisHtml(e) {
       <div class="kennzahl"><b>${zahl(kcal)}</b><small>kcal am Tag (Ø)</small></div>
     </div>
     <div class="reiter" role="tablist" aria-label="Ansicht">
-      ${[['plan', 'Plan'], ['einkauf', 'Einkauf'], ['vorkochen', 'Vorkochen'], ['naehr', 'Nährwerte']].map(([k, t], i) => `<button role="tab" id="t-${k}" aria-controls="r-${k}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-reiter="${k}">${t}</button>`).join('')}
+      ${[['plan', 'Plan'], ['einkauf', 'Einkauf'], ['vorkochen', 'Vorkochen'], ['naehr', 'Nährwerte'], ['buch', 'Küchenbuch']].map(([k, t], i) => `<button role="tab" id="t-${k}" aria-controls="r-${k}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-reiter="${k}">${t}</button>`).join('')}
     </div>
     <section class="reiterinhalt" id="r-plan" role="tabpanel" aria-labelledby="t-plan">${planHtml(e)}</section>
     <section class="reiterinhalt" id="r-einkauf" role="tabpanel" aria-labelledby="t-einkauf" hidden>${einkaufHtml(e)}</section>
     <section class="reiterinhalt" id="r-vorkochen" role="tabpanel" aria-labelledby="t-vorkochen" hidden>${plus ? ablaufHtml(e) : '<p>Der Vorkoch-Ablauf gehört zu Plus.</p>'}</section>
     <section class="reiterinhalt" id="r-naehr" role="tabpanel" aria-labelledby="t-naehr" hidden>${naehrHtml(e)}</section>
+    <section class="reiterinhalt" id="r-buch" role="tabpanel" aria-labelledby="t-buch" hidden>${buchHtml()}</section>
     ${sperre}
     <div class="zeile" style="margin-top:16px">
       <button class="knopf leise" type="button" id="neu">Andere Gerichte vorschlagen</button>
       ${plus ? '<button class="knopf leise" type="button" id="drucken">Als PDF speichern oder drucken</button>' : ''}
     </div>`;
+}
+
+// ---------------------------------------------------------------- Küchenbuch
+function statistik() {
+  const g = Object.values(lade('ep_gekocht', {}));
+  return {
+    anzahl: g.length, verschieden: new Set(g.map((x) => x.r)).size, ohneHerd: g.filter((x) => x.ohneHerd).length,
+    vor: g.filter((x) => x.vor).length, tage: new Set(g.map((x) => x.d)).size, lieblinge: lade('ep_lieblinge', []).length,
+    liste: g,
+  };
+}
+function erreicht(s) { return ABZEICHEN.filter(([, , , bed]) => bed(s)).map(([id]) => id); }
+
+function buchHtml() {
+  const s = statistik();
+  const gesamt = daten?.rezepte.length || 195;
+  const hat = erreicht(s);
+  const lieb = lade('ep_lieblinge', []).map((id) => daten?.rezepte.find((r) => r.id === id)).filter(Boolean);
+  if (!s.anzahl && !lieb.length) {
+    return `<div class="buch-leer"><p><b>Dein Küchenbuch ist noch leer.</b></p>
+      <p>Tipp im Plan bei einem Gericht auf „Gekocht“, sobald es auf dem Teller war. Hier sammeln sich dann deine Gerichte, Abzeichen und Lieblinge. Alles bleibt auf diesem Gerät.</p></div>`;
+  }
+  return `<div class="buch">
+    <div class="sammlung"><b>${s.verschieden}</b><span>von ${gesamt} Rezepten entdeckt</span>
+      <div class="balken"><i style="width:${(100 * s.verschieden) / gesamt}%"></i></div>
+      <small>${s.anzahl} ${s.anzahl === 1 ? 'Gericht' : 'Gerichte'} gekocht, an ${s.tage} ${s.tage === 1 ? 'Tag' : 'Tagen'}</small></div>
+    <h3>Abzeichen</h3>
+    <ul class="abzeichen">${ABZEICHEN.map(([id, name, wie]) => `<li class="${hat.includes(id) ? 'hat' : ''}"><span class="plakette" aria-hidden="true">${IKON.haken}</span><b>${esc(name)}</b><small>${esc(wie)}</small><span class="sr">${hat.includes(id) ? 'erreicht' : 'noch offen'}</span></li>`).join('')}</ul>
+    ${lieb.length ? `<h3>Deine Lieblinge</h3><p class="hilfe">Gemerkte Gerichte plant der Planer öfter ein.</p>
+      <ul class="lieblinge">${lieb.map((r) => `<li><button class="titel" type="button" data-rezept="${r.id}" data-faktor="1"><img src="img/rezepte/klein/${r.id}.jpg" alt="" width="120" height="90" loading="lazy"><span>${esc(r.titel)}</span></button></li>`).join('')}</ul>` : ''}
+    <p><button class="knopf leise" type="button" id="buch-leeren">Küchenbuch leeren</button></p>
+  </div>`;
+}
+
+function meldeKurz(text) {
+  const t = $('#toast');
+  t.textContent = text;
+  t.hidden = false;
+  clearTimeout(meldeKurz.zeit);
+  meldeKurz.zeit = setTimeout(() => { t.hidden = true; }, 3600);
+}
+
+function gekochtUmschalten(knopf) {
+  const schl = knopf.dataset.gekocht;
+  const g = lade('ep_gekocht', {});
+  const vorher = erreicht(statistik());
+  if (g[schl]) delete g[schl];
+  else {
+    const [d, , r] = schl.split('|');
+    const rz = daten.rezepte.find((x) => x.id === r);
+    const weg = ersterWeg(rz, letztes.profil.geraete) || rz.wege[0];
+    g[schl] = { r, d, ohneHerd: weg.geraete.every((x) => ['wasserkocher', 'mikrowelle'].includes(x)), vor: ['kuehl', 'tk'].includes(knopf.dataset.herkunft) };
+  }
+  speichere('ep_gekocht', g);
+  const an = !!g[schl];
+  knopf.setAttribute('aria-pressed', an);
+  knopf.closest('.essen').classList.toggle('gekocht', an);
+  const neu = erreicht(statistik()).filter((id) => !vorher.includes(id));
+  if (neu.length) meldeKurz(`Neues Abzeichen: ${ABZEICHEN.find((x) => x[0] === neu[0])[1]}. Steht im Küchenbuch.`);
+  $('#r-buch').innerHTML = buchHtml();
+}
+
+function merkenUmschalten(id) {
+  const l = lade('ep_lieblinge', []);
+  const an = !l.includes(id);
+  const neu = an ? [...l, id] : l.filter((x) => x !== id);
+  speichere('ep_lieblinge', neu);
+  document.querySelectorAll(`[data-merken="${id}"]`).forEach((b) => b.setAttribute('aria-pressed', an));
+  if (an) meldeKurz('Gemerkt. Der Planer nimmt das Gericht öfter.');
+  if (an && neu.length === 3) meldeKurz('Neues Abzeichen: Geschmack gefunden. Steht im Küchenbuch.');
+  $('#r-buch').innerHTML = buchHtml();
+}
+
+// ---------------------------------------------------------------- Treffer-Zähler
+const GERAET_NAME = Object.fromEntries(GERAETE);
+function zaehleTreffer(form) {
+  if (!daten) return;
+  const p = vervollstaendige({ ...liesFormular(form), ausschluss: [] });
+  const n = kandidaten(daten, p).liste.length;
+  // nächster sinnvoller Schritt: welches fehlende Gerät bringt die meisten Rezepte dazu?
+  let tipp = '';
+  if (n > 0) {
+    let best = null;
+    // nur Vorschläge, die in diese Lebenslage passen (im Monteurzimmer kein Backofen, im Camper kein Ofen)
+    const TIPP = {
+      montage: ['wasserkocher', 'mikrowelle', 'sandwichmaker', 'airfryer', 'kuehlschrank', 'topf', 'pfanne'],
+      camping: ['omnia', 'grill', 'topf', 'pfanne', 'wasserkocher', 'kuehlschrank'],
+    }[VARIANTE] || GERAETE.map(([g]) => g).filter((g) => !['thermo', 'gefrier'].includes(g));
+    const proben = TIPP.filter((g) => !p.geraete[g]).map((g) => [GERAET_NAME[g], { ...p.geraete, [g]: true }]);
+    const platte = V.herdName === 'Gasflammen' ? 'einer Gasflamme' : 'einer Kochplatte';
+    if (!(p.geraete.herd >= 1)) proben.push([`${platte}${p.geraete.topf && p.geraete.pfanne ? '' : ', Topf und Pfanne'}`, { ...p.geraete, herd: 1, topf: true, pfanne: true }]);
+    for (const [name, g] of proben) {
+      const mehr = kandidaten(daten, { ...p, geraete: g }).liste.length - n;
+      if (mehr > 0 && (!best || mehr > best[1])) best = [name, mehr];
+    }
+    if (best) tipp = `Mit ${best[0]} kämen ${best[1]} dazu.`;
+  }
+  const zahlEl = $('#treffer-zahl');
+  rollen(zahlEl, Number(zahlEl.dataset.wert) || 0, n);
+  zahlEl.dataset.wert = n;
+  $('#treffer').classList.toggle('null', n === 0);
+  $('#treffer-text').textContent = n === 0 ? 'Rezepte passen. Lockere zuerst Allergien, Abneigungen oder die Ernährungsform.'
+    : n === 1 ? 'Rezept passt zu deiner Küche' : 'Rezepte passen zu deiner Küche';
+  $('#treffer-tipp').textContent = tipp;
+}
+
+function rollen(el, von, bis) {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || von === bis) { el.textContent = bis; return; }
+  const t0 = performance.now();
+  const schritt = (t) => {
+    const x = Math.min(1, (t - t0) / 380);
+    el.textContent = Math.round(von + (bis - von) * (1 - (1 - x) ** 3));
+    if (x < 1) requestAnimationFrame(schritt);
+  };
+  requestAnimationFrame(schritt);
+  el.classList.remove('stoss'); void el.offsetWidth; el.classList.add('stoss');
 }
 
 // ---------------------------------------------------------------- Rezeptansicht
@@ -277,24 +467,31 @@ function rezeptDialog(id, faktor) {
 }
 
 // ---------------------------------------------------------------- Ablauf
-function zeige(e) {
+function zeige(e, ruhig) {
   letztes = e;
   const ziel = $('#ergebnis');
   ziel.innerHTML = ergebnisHtml(e);
   ziel.hidden = false;
-  ziel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (ruhig) return;
+  ziel.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
   $('#ergebnis-titel').focus({ preventScroll: true });
 }
 
-function planen(form, neuerSeed) {
+function planen(form, neuerSeed, ruhig) {
   const p = liesFormular(form);
   if (neuerSeed) p.seed = (p.seed || 1) + 1;
-  speichere('ep_profil_' + VARIANTE, p);
+  const { ausschluss: _a, lieblinge: _l, ...merken } = p;
+  speichere('ep_profil_' + VARIANTE, merken);
   const lauf = { ...p };
   if (!plus) lauf.tage = Math.min(p.tage, CONFIG.kostenlos.tage);
   const e = erstellePlan(daten, lauf);
   e.profil.seed = p.seed;
-  zeige(e);
+  // Gratis: Rest der Woche als ehrliche Vorschau (gleiche Einstellungen, nur Namen und Fotos)
+  if (!plus && e.ok && p.tage > lauf.tage) {
+    const ganz = erstellePlan(daten, p);
+    if (ganz.ok) e.vorschau = ganz.tage.slice(lauf.tage);
+  }
+  zeige(e, ruhig);
 }
 
 function teilen() {
@@ -321,21 +518,41 @@ async function start() {
   const schl = gespeicherteLizenz();
   const lizenz = schl ? pruefeLizenz(schl).then((r) => { plus = r.ok; }) : Promise.resolve();
   lizenz.then(() => { $('#status').innerHTML = plus ? 'Plus aktiv' : `<a href="preise.html?v=${VARIANTE}">Plus</a>`; });
-  form.addEventListener('submit', async (ev) => { ev.preventDefault(); await Promise.all([laden, lizenz]); planen(form); });
+  form.addEventListener('submit', async (ev) => { ev.preventDefault(); await Promise.all([laden, lizenz]); ausschluss = []; planen(form); });
+  laden.then(() => zaehleTreffer(form));
   form.addEventListener('click', (ev) => {
     const b = ev.target.closest('[data-step]');
     if (!b) return;
     const inp = form.elements[b.dataset.step];
     const w = Math.max(Number(inp.dataset.min), Math.min(Number(inp.dataset.max), Number(inp.value) + Number(b.dataset.d)));
     inp.value = w; $('#o-' + b.dataset.step).textContent = w;
+    zaehleTreffer(form);
   });
   form.addEventListener('change', (ev) => {
     if (ev.target.name === 'richtwert') $('#makrofelder').hidden = ev.target.value !== 'makros';
+    zaehleTreffer(form);
   });
   $('#ergebnis').addEventListener('click', (ev) => {
     const t = ev.target;
     const r = t.closest('[data-rezept]');
     if (r) return rezeptDialog(r.dataset.rezept, Number(r.dataset.faktor) || 1);
+    const m = t.closest('[data-merken]');
+    if (m) return merkenUmschalten(m.dataset.merken);
+    const g = t.closest('[data-gekocht]');
+    if (g) return gekochtUmschalten(g);
+    const w = t.closest('[data-tauschen]');
+    if (w) {
+      const titel = daten.rezepte.find((x) => x.id === w.dataset.tauschen)?.titel || 'Das Gericht';
+      ausschluss = [...new Set([...ausschluss, w.dataset.tauschen])];
+      planen(form, false, true);
+      return meldeKurz(`„${titel}“ getauscht. Es kommt in diesem Plan nicht mehr vor.`);
+    }
+    if (t.id === 'buch-leeren') {
+      if (!confirm('Küchenbuch leeren? Gekochte Gerichte und Abzeichen werden auf diesem Gerät gelöscht. Deine Lieblinge bleiben.')) return;
+      speichere('ep_gekocht', {});
+      $('#r-buch').innerHTML = buchHtml();
+      return;
+    }
     const tab = t.closest('[data-reiter]');
     if (tab) {
       document.querySelectorAll('[data-reiter]').forEach((b) => { const an = b === tab; b.setAttribute('aria-selected', an); b.tabIndex = an ? 0 : -1; $('#r-' + b.dataset.reiter).hidden = !an; });
@@ -356,6 +573,14 @@ async function start() {
     const id = ev.target.dataset?.haken;
     if (!id) return;
     const h = lade('ep_haken', {}); h[id] = ev.target.checked; speichere('ep_haken', h);
+    const box = $('#wagen');
+    if (box && !ev.target.closest('.vorrat')) {
+      const gesamt = Number(box.dataset.gesamt);
+      const drin = [...document.querySelectorAll('#r-einkauf .gruppe:not(.vorrat) [data-haken]')].filter((x) => x.checked).length;
+      box.querySelector('i').style.width = `${(100 * drin) / Math.max(gesamt, 1)}%`;
+      $('#wagen-text').textContent = wagenText(drin, gesamt);
+      box.classList.toggle('voll', drin >= gesamt);
+    }
   });
   $('#rezept .schliessen button').addEventListener('click', () => $('#rezept').close());
   // iPhone/iPad: Safari löscht Website-Daten nach 7 Tagen ohne Besuch, außer die App liegt auf dem Home-Bildschirm
