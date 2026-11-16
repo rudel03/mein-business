@@ -1,0 +1,34 @@
+# Vorlage: kopieren nach wrangler.toml (ist in .gitignore) und Platzhalter ersetzen. Anleitung: README.md
+name = "tellerkontor-vertrag"
+main = "vertrag-worker.js"
+compatibility_date = "2025-09-01"
+
+# Speicher für Eingänge (Kündigung/Widerruf), Lizenz-Zuordnung, Rate-Limit.
+# Anlegen: npx wrangler kv namespace create VERTRAG_KV  → die ausgegebene id hier eintragen
+[[kv_namespaces]]
+binding = "VERTRAG_KV"
+id = "HIER_KV_ID_EINTRAGEN"
+
+[vars]
+# Eigene Website (ohne / am Ende). Mehrere Origins mit Komma trennen, z. B. auch https://www.tellerkontor.de
+ERLAUBTE_ORIGIN = "https://tellerkontor.de"
+SEITE_URL = "https://tellerkontor.de"
+ABSENDER_NAME = "Tellerkontor"
+MAIL_ABSENDER = "plus@tellerkontor.de"      # beim Mail-Dienst als Absender bestätigen (SPF/DKIM)
+INHABER_EMAIL = "kontakt@tellerkontor.de"   # bekommt jede Kündigung/jeden Widerruf
+MAIL_ANBIETER = "log"                       # log (nur Konsole) | postmark | brevo | generisch
+# MAIL_URL = "https://…"                    # nur bei generisch: Endpunkt, Body {from, fromName, to, subject, text, replyTo}
+# MAIL_STREAM = "outbound"                  # nur Postmark: Transaktions-Stream
+PADDLE_UMGEBUNG = "sandbox"                 # erst nach erfolgreichem Testkauf auf "live" stellen
+# Tarif je Paddle-Preis, falls nicht als custom_data {"tarif":"jahr"} am Preis hinterlegt:
+PADDLE_PREISE = '{"pri_MONAT":"monat","pri_JAHR":"jahr","pri_PASS":"pass","pri_SAISON":"saison"}'
+KULANZ_TAGE = "3"                           # Abo-Schlüssel gilt bis Periodenende + 3 Tage
+RATE_LIMIT_STUNDE = "10"                    # Formulare je IP und Stunde
+AUFBEWAHRUNG_TAGE = "1095"                  # Nachweis Kündigung/Widerruf (3 Jahre), dann automatisch gelöscht
+
+# Secrets NICHT hier eintragen, sondern: npx wrangler secret put <NAME>
+#   PADDLE_WEBHOOK_SECRET   Paddle → Developer Tools → Notifications → Ziel → Secret key
+#   PADDLE_API_KEY          Paddle → Developer Tools → Authentication (Rechte: customers lesen, subscriptions lesen/schreiben)
+#   LIZENZ_PRIVAT           privater Schlüssel aus: node ../app/tools/lizenz.mjs neu  (Base64 PKCS8 oder JWK)
+#   MAIL_TOKEN              API-Token des Mail-Dienstes
+# Für wrangler dev dieselben Namen in die Datei .dev.vars schreiben (NAME=wert, eine Zeile je Secret).

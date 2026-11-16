@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /planer.html
+
+Sitemap: https://wochenbon.de/sitemap.xml

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tellerkontor"><title>Tellerkontor</title>
+<rect x="2" y="2" width="60" height="60" rx="12" fill="#2C3146"/>
+<circle cx="32" cy="32" r="20" fill="none" stroke="#F6F7F4" stroke-width="4"/>
+<path d="M22 26h20M22 32h20M22 38h12" stroke="#F6F7F4" stroke-width="3" stroke-linecap="round"/>
+</svg>

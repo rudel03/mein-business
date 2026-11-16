@@ -1,0 +1,250 @@
+[
+ {
+  "marke": "montage",
+  "bild": "1.jpg",
+  "datei": "01_was-steht-im-zimmer.jpg",
+  "titel": "Was steht im Zimmer?",
+  "unter": "Ankreuzen. Wochenplan kriegen. Einkaufszettel dazu."
+ },
+ {
+  "marke": "montage",
+  "bild": "2.jpg",
+  "datei": "02_ein-kuehlschrank-sechs-mann.jpg",
+  "titel": "Ein Kühlschrank, sechs Mann.",
+  "unter": "Der Plan weiß, was rein muss und wie lange es hält."
+ },
+ {
+  "marke": "montage",
+  "bild": "3.jpg",
+  "datei": "03_nur-wasserkocher.jpg",
+  "titel": "Nur ein Wasserkocher?",
+  "unter": "Mit Kühlschrank reicht er für 47 Rezepte. Mit Mikrowelle für 59."
+ },
+ {
+  "marke": "montage",
+  "bild": "4.jpg",
+  "datei": "04_zehn-minuten.jpg",
+  "titel": "Zehn Minuten. Dann Feierabend.",
+  "unter": "Viele Gerichte brauchen nicht mehr Arbeit."
+ },
+ {
+  "marke": "montage",
+  "bild": "5.jpg",
+  "datei": "05_raststaette-zu.jpg",
+  "titel": "21:15. Raststätte zu.",
+  "unter": "Die Box für heute Abend steht schon im Plan."
+ },
+ {
+  "marke": "montage",
+  "bild": "6.jpg",
+  "datei": "06_montagekoffer.jpg",
+  "titel": "Der Montagekoffer.",
+  "unter": "Was mit muss, damit du im Zimmer kochen kannst."
+ },
+ {
+  "marke": "montage",
+  "bild": "7.jpg",
+  "datei": "07_sonntagskiste.jpg",
+  "titel": "Die Sonntagskiste.",
+  "unter": "Zu Hause vorkochen. Boxen mit Datum. Ab auf Montage."
+ },
+ {
+  "marke": "montage",
+  "bild": "8.jpg",
+  "datei": "08_kabine-24-volt.jpg",
+  "titel": "Kabine statt Küche.",
+  "unter": "Rezepte für 24-Volt-Box, Wasserkocher oder ganz ohne Gerät."
+ },
+ {
+  "marke": "fitness",
+  "bild": "1.jpg",
+  "datei": "01_protein-pro-euro.jpg",
+  "titel": "Protein pro Euro.",
+  "unter": "Welche Zutat beim Discounter am meisten bringt. Nachrechnen im Rechner.",
+  "gross": 84
+ },
+ {
+  "marke": "fitness",
+  "bild": "2.jpg",
+  "datei": "02_die-ganze-packung.jpg",
+  "titel": "Die ganze Packung.",
+  "unter": "Ein Kilo Hähnchen, sechs Boxen. Der Plan nutzt Packungen ganz.",
+  "gross": 84
+ },
+ {
+  "marke": "fitness",
+  "bild": "3.jpg",
+  "datei": "03_datum-auf-der-box.jpg",
+  "titel": "Zwei Kochtage. Datum auf der Box.",
+  "unter": "Was wann gegessen wird. Fristen teils strenger als vom BfR empfohlen.",
+  "gross": 74
+ },
+ {
+  "marke": "fitness",
+  "bild": "4.jpg",
+  "datei": "04_gleiche-makros.jpg",
+  "titel": "Gleiche Makros. Andere Teller.",
+  "unter": "Der Plan wechselt die Gerichte, die Zahlen bleiben.",
+  "gross": 84
+ },
+ {
+  "marke": "fitness",
+  "bild": "5.jpg",
+  "datei": "05_vorher-planen.jpg",
+  "titel": "Vorher planen statt nachher eintragen.",
+  "unter": "Kalorien und Makros eingeben. Die Woche steht.",
+  "gross": 74
+ },
+ {
+  "marke": "fitness",
+  "bild": "6.jpg",
+  "datei": "06_airfryer-oder-ofen.jpg",
+  "titel": "Airfryer oder Ofen.",
+  "unter": "Die meisten Rezepte haben beide Wege.",
+  "gross": 84
+ },
+ {
+  "marke": "fitness",
+  "bild": "7.jpg",
+  "datei": "07_deine-zahlen.jpg",
+  "titel": "Deine Zahlen bleiben bei dir.",
+  "unter": "Kein Konto. Ziele und Allergien bleiben auf deinem Handy.",
+  "gross": 84
+ },
+ {
+  "marke": "fitness",
+  "bild": "8.jpg",
+  "datei": "08_ohne-mixer.jpg",
+  "titel": "Kein Mixer? Dann ohne Mixer.",
+  "unter": "Kreuz an, was du hast. Der Plan nimmt nur, was damit geht.",
+  "gross": 84
+ },
+ {
+  "marke": "camping",
+  "bild": "1.jpg",
+  "datei": "01_kuehlschrank-tetris.jpg",
+  "titel": "Kühlschrank-Tetris.",
+  "unter": "Der Plan bevorzugt, was ungekühlt lagert.",
+  "gross": 84
+ },
+ {
+  "marke": "camping",
+  "bild": "2.jpg",
+  "datei": "02_gratin-vom-gasherd.jpg",
+  "titel": "Gratin vom Gasherd.",
+  "unter": "Rezepte für den Omnia-Backofen, Schritt für Schritt.",
+  "gross": 84
+ },
+ {
+  "marke": "camping",
+  "bild": "3.jpg",
+  "datei": "03_eine-flamme.jpg",
+  "titel": "Eine Flamme. Ein Topf.",
+  "unter": "95 Rezepte gehen mit einer Flamme, Topf und Pfanne.",
+  "gross": 84
+ },
+ {
+  "marke": "camping",
+  "bild": "4.jpg",
+  "datei": "04_weit-zum-laden.jpg",
+  "titel": "Weit zum nächsten Laden?",
+  "unter": "Einkauf für mehrere Tage, nach Abteilungen sortiert.",
+  "gross": 84
+ },
+ {
+  "marke": "camping",
+  "bild": "5.jpg",
+  "datei": "05_vor-der-abfahrt.jpg",
+  "titel": "Die Woche steht vor der Abfahrt.",
+  "unter": "Plan und Einkaufsliste für die ganze Tour.",
+  "gross": 74
+ },
+ {
+  "marke": "camping",
+  "bild": "6.jpg",
+  "datei": "06_ein-topf-ein-brett.jpg",
+  "titel": "Ein Topf und ein Brett.",
+  "unter": "Viel mehr braucht es für die meisten Gerichte nicht.",
+  "gross": 84
+ },
+ {
+  "marke": "camping",
+  "bild": "7.jpg",
+  "datei": "07_erste-tour.jpg",
+  "titel": "Erste Tour der Saison.",
+  "unter": "Der Saison-Pass gilt 6 Monate und endet von selbst.",
+  "gross": 84
+ },
+ {
+  "marke": "camping",
+  "bild": "8.jpg",
+  "datei": "08_freitag-hin.jpg",
+  "titel": "Freitag hin. Sonntag heim.",
+  "unter": "Plan für 2 bis 14 Tage, für 2 Personen voreingestellt.",
+  "gross": 84
+ },
+ {
+  "marke": "alltag",
+  "bild": "1.jpg",
+  "datei": "01_die-frage-um-1730.jpg",
+  "titel": "Die Frage um 17:30.",
+  "unter": "Was gibt es heute? Die Woche ist schon geplant.",
+  "gross": 84
+ },
+ {
+  "marke": "alltag",
+  "bild": "2.jpg",
+  "datei": "02_halbe-avocado.jpg",
+  "titel": "Die halbe Avocado gibt's nicht.",
+  "unter": "Wir rechnen mit ganzen Packungen und zeigen, was übrig bleibt.",
+  "gross": 74
+ },
+ {
+  "marke": "alltag",
+  "bild": "3.jpg",
+  "datei": "03_dein-laden.jpg",
+  "titel": "Dein Laden. Deine Gänge.",
+  "unter": "Die Einkaufsliste nach Abteilungen sortiert, für Aldi, Lidl, Rewe, Edeka und mehr.",
+  "gross": 84
+ },
+ {
+  "marke": "alltag",
+  "bild": "4.jpg",
+  "datei": "04_allergien.jpg",
+  "titel": "Allergien sind kein Extra.",
+  "unter": "Filter für die 14 Hauptallergene in jedem Plan.",
+  "gross": 84
+ },
+ {
+  "marke": "alltag",
+  "bild": "5.jpg",
+  "datei": "05_ohne-konto.jpg",
+  "titel": "Ohne Konto. Ohne Werbung im Planer.",
+  "unter": "Deine Eingaben bleiben auf deinem Gerät.",
+  "gross": 74
+ },
+ {
+  "marke": "alltag",
+  "bild": "6.jpg",
+  "datei": "06_kochbox-plan.jpg",
+  "titel": "Planen wie die Kochbox. Einkaufen beim Discounter.",
+  "unter": "Wochenplan mit Rezepten, Einkauf im Laden deiner Wahl.",
+  "gross": 74
+ },
+ {
+  "marke": "alltag",
+  "bild": "7.jpg",
+  "datei": "07_airfryer-woche.jpg",
+  "titel": "Die Airfryer-Woche.",
+  "unter": "Kreuz die Heißluftfritteuse an. Der Plan nutzt sie.",
+  "gross": 84
+ },
+ {
+  "marke": "alltag",
+  "bild": "8.jpg",
+  "datei": "08_tisch-fuer-einen.jpg",
+  "titel": "Tisch für eine Person.",
+  "unter": "Mengen für 1 bis 8 Personen, ohne Reste-Berge.",
+  "gross": 84
+ }
+]

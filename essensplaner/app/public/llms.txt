@@ -1,0 +1,15 @@
+# Wochenbon
+
+> Wochenplaner fürs Essen als Web-App (PWA, Deutsch, ohne Konto): Wochenplan, Einkaufszettel nach Abteilungen und geschätzter Preis für Aldi, Lidl, Netto, Penny, Kaufland, Rewe und Edeka. Passt sich Küche, Personen, Ernährung und Allergien an. Eingaben bleiben im Browser.
+
+## Fakten (Stand 2026-11-04)
+- 195 Rezepte; mit Wasserkocher, Mikrowelle und Kühlschrank 59; mit mindestens 30 g Eiweiß je Portion 80
+- Nährwerte: Bundeslebensmittelschlüssel 4.0 (Max Rubner-Institut, CC BY 4.0). Preise: eigene Schätzung je Laden, keine Tagespreise
+- Lagerfristen nach BfR, FSA und USDA, teils strenger, bei höchstens 7 °C
+- Preise: Tagesplan gratis; Plus 6,99 € im Monat oder 44,99 € im Jahr (Laufzeit 12 Monate), die ersten 7 Tage 0 €
+
+## Seiten
+- [Planer](https://wochenbon.de/planer.html)
+- [Preise](https://wochenbon.de/preise.html)
+- [Impressum](https://wochenbon.de/impressum.html)
+- [Datenschutz](https://wochenbon.de/datenschutz.html)
