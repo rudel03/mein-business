@@ -14,6 +14,12 @@ Dienstleistung für kleine lokale Betriebe (Start: Friseure/Kosmetik, später Ha
 - Einstieg mit Friseuren/Kosmetik, **nicht** mit Arzt-/Physio-Praxen (Gesundheitsdaten, Art. 9 DSGVO).
 - Türöffner: Erreichbarkeits-Test (3–5 echte Anrufe zu Stoßzeiten), dann Brief mit QR-Code zur persönlichen Demo oder Besuch vor Ort.
 
+## Zielbranchen (Einschätzung, nicht gemessen)
+- Am besten: Friseure/Barbershops, Kosmetik/Nagel/Wimpern, Massage/Wellness (nicht medizinisch), Tattoo/Piercing, Hundesalons, Fahrschulen, Fotostudios, Kfz-Werkstätten/Reifenwechsel, Personal Trainer/kleine Studios, Nachhilfe/Musikschulen.
+- Vorsicht: Arzt/Zahnarzt/Physio/Therapie (Art. 9 DSGVO, starke Branchen-Konkurrenz wie Doctolib).
+- Eher anderes Angebot: Handwerk (Anfragen/Angebote statt Termine), Restaurants (OpenTable & Co.).
+- Gute Signale: „Termine nur telefonisch“, Google-Bewertungen „nie erreichbar“, Inhaber arbeitet selbst mit, keine Rezeption, 1–10 Mitarbeitende.
+
 ## Recherche (Kurzfassung, Quellen meist Anbieterseiten)
 - Marktpreise DE: Freelancer 80–150 €/h, einzelner Workflow 2.000–6.000 €, KI-Agent ab ca. 3.000 €, Retainer kleine Anbieter ab ca. 500 €/Monat, Mittelstand 1.500–8.000 €/Monat.
 - Fertige KI-Telefonassistenten: VITAS 40–245 €/Monat, Fonio ab 99 €, Placetel AI ab 40 € + Minutenpreis → bei Kleinbetrieben verkauft man Einrichtung und Betreuung, nicht die Software.
