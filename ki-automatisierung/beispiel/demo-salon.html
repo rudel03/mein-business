@@ -1,0 +1,291 @@
+<title>Salon Lieblingsschnitt Demo</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: schmale Salon-Seite (eine Spalte), Buchung als Herzstück, darunter KI-Assistent und Ablauf für den Inhaber */
+:root {
+  --bg: #F4F6F5;
+  --surface: #FFFFFF;
+  --fg: #16201E;
+  --muted: #5C6B68;
+  --line: #DCE3E1;
+  --accent: #0F5C55;
+  --accent-fg: #FFFFFF;
+  --soft: #E3EFEC;
+  --blush: #F3DCD5;
+  --taken: #EEF1F0;
+  --demo: #2B2F36;
+  --demo-fg: #F4F6F5;
+  --font-display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1514; --surface: #17201E; --fg: #E8EEEC; --muted: #9AABA7; --line: #2A3735;
+    --accent: #5FC2B5; --accent-fg: #06201D; --soft: #1C3330; --blush: #3A2A27; --taken: #1D2725;
+    --demo: #E8EEEC; --demo-fg: #0F1514; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1514; --surface: #17201E; --fg: #E8EEEC; --muted: #9AABA7; --line: #2A3735;
+  --accent: #5FC2B5; --accent-fg: #06201D; --soft: #1C3330; --blush: #3A2A27; --taken: #1D2725;
+  --demo: #E8EEEC; --demo-fg: #0F1514; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+.demo-bar { background: var(--demo); color: var(--demo-fg); font-size: 13px; padding-block: 10px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.demo-bar .in { max-width: 720px; margin: 0 auto; }
+.wrap { max-width: 720px; margin: 0 auto; padding-block: 28px 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 28px; }
+header { display: grid; gap: 6px; }
+h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(30px, 6vw, 42px); line-height: 1.1; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--font-display); font-weight: 400; font-size: 24px; margin: 0; text-wrap: balance; }
+.sub { color: var(--muted); margin: 0; }
+.facts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.chip { background: var(--soft); color: var(--fg); border-radius: 999px; padding: 4px 12px; font-size: 13px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; display: grid; gap: 18px; min-width: 0; }
+.step-label { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0 0 8px; }
+.services { display: grid; gap: 8px; }
+.opt { display: flex; justify-content: space-between; gap: 12px; align-items: center; width: 100%; text-align: left;
+  font: inherit; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; cursor: pointer; }
+.opt:hover { border-color: var(--accent); }
+.opt[aria-pressed="true"] { border-color: var(--accent); background: var(--soft); box-shadow: inset 0 0 0 1px var(--accent); }
+.opt small { color: var(--muted); display: block; font-size: 13px; }
+.price { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+.days { display: grid; grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); gap: 8px; }
+.day, .slot { font: inherit; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 8px 6px; cursor: pointer; text-align: center; }
+.day b { display: block; font-size: 18px; font-variant-numeric: tabular-nums; }
+.day span { font-size: 12px; color: var(--muted); }
+.day[aria-pressed="true"], .slot[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.day[aria-pressed="true"] span { color: var(--accent-fg); }
+.slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px, 1fr)); gap: 8px; }
+.slot { font-variant-numeric: tabular-nums; }
+.slot:disabled { background: var(--taken); color: var(--muted); text-decoration: line-through; cursor: not-allowed; border-color: transparent; }
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 520px) { .fields { grid-template-columns: 1fr; } }
+label.f { display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+input[type=text], input[type=tel] { font: inherit; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; width: 100%; }
+.check { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; }
+.check input { margin-top: 4px; accent-color: var(--accent); }
+.btn { font: inherit; font-weight: 600; background: var(--accent); color: var(--accent-fg); border: 0; border-radius: 10px; padding: 13px 18px; cursor: pointer; }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.hint { font-size: 13px; color: var(--muted); margin: 0; }
+.err { color: #B3261E; font-size: 13px; margin: 0; }
+.confirm { background: var(--soft); border-radius: 12px; padding: 18px; display: grid; gap: 12px; }
+.sms { background: var(--surface); border: 1px solid var(--line); border-radius: 14px 14px 14px 4px; padding: 12px 14px; font-size: 14px; max-width: 420px; }
+.sms .meta { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+.chat { display: grid; gap: 10px; max-height: 340px; overflow-y: auto; padding-right: 4px; }
+.msg { padding: 10px 14px; border-radius: 14px; max-width: 85%; font-size: 14px; }
+.msg.bot { background: var(--soft); border-bottom-left-radius: 4px; }
+.msg.me { background: var(--accent); color: var(--accent-fg); justify-self: end; border-bottom-right-radius: 4px; }
+.quick { display: flex; flex-wrap: wrap; gap: 8px; }
+.quick button { font: inherit; font-size: 13px; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+.ask { display: flex; gap: 8px; }
+.ask input { flex: 1; min-width: 0; }
+.ai-tag { display: inline-block; font-size: 12px; background: var(--blush); color: var(--fg); border-radius: 6px; padding: 2px 8px; margin-left: 6px; vertical-align: middle; font-family: var(--font-body); }
+.flow { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; counter-reset: s; }
+.flow li { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; counter-increment: s; }
+.flow li::before { content: counter(s); display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--soft); color: var(--accent); font-weight: 600; font-variant-numeric: tabular-nums; }
+.flow b { display: block; }
+.flow span { color: var(--muted); font-size: 14px; }
+footer { font-size: 12px; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) { .chat { scroll-behavior: smooth; } }
+</style>
+
+<div class="demo-bar"><div class="in"><strong>Beispiel-Demo.</strong> Fiktiver Betrieb, so könnte Ihre Online-Buchung aussehen. Es werden keine Daten gespeichert oder versendet.</div></div>
+
+<main class="wrap">
+  <header>
+    <h1>Salon Lieblingsschnitt</h1>
+    <p class="sub">Damen, Herren, Kinder · Musterstraße 12, 12345 Musterstadt</p>
+    <div class="facts">
+      <span class="chip">Di–Fr 9–18 Uhr</span>
+      <span class="chip">Sa 9–14 Uhr</span>
+      <span class="chip">Termin online in 1 Minute</span>
+    </div>
+  </header>
+
+  <section class="card" aria-labelledby="h-book">
+    <h2 id="h-book">Termin buchen</h2>
+
+    <div>
+      <p class="step-label">1 · Leistung</p>
+      <div class="services" id="services"></div>
+    </div>
+
+    <div>
+      <p class="step-label">2 · Tag</p>
+      <div class="days" id="days"></div>
+    </div>
+
+    <div>
+      <p class="step-label">3 · Uhrzeit</p>
+      <div class="slots" id="slots"></div>
+      <p class="hint" id="slot-hint">Bitte zuerst einen Tag wählen.</p>
+    </div>
+
+    <form id="form" novalidate style="display:grid;gap:14px">
+      <p class="step-label" style="margin:0">4 · Ihre Angaben</p>
+      <div class="fields">
+        <label class="f" for="name">Vorname und Name<input type="text" id="name" autocomplete="name" value="Anna Beispiel"></label>
+        <label class="f" for="tel">Handynummer<input type="tel" id="tel" autocomplete="tel" value="0151 0000000"></label>
+      </div>
+      <label class="check" for="consent"><input type="checkbox" id="consent">
+        <span>Ja, erinnern Sie mich 24 Stunden vorher per SMS an meinen Termin. Ich kann das jederzeit abbestellen. <a href="#datenschutz" style="color:var(--accent)">Datenschutz</a></span></label>
+      <p class="err" id="err" hidden></p>
+      <button class="btn" type="submit" id="submit">Termin verbindlich buchen</button>
+    </form>
+
+    <div class="confirm" id="confirm" hidden>
+      <strong id="conf-text"></strong>
+      <div>
+        <p class="step-label">So sieht die Erinnerung am Vortag aus</p>
+        <div class="sms"><div class="meta" id="sms-meta"></div><div id="sms-text"></div></div>
+      </div>
+      <button class="btn ghost" type="button" id="again">Weiteren Termin buchen</button>
+    </div>
+  </section>
+
+  <section class="card" aria-labelledby="h-chat">
+    <h2 id="h-chat">Fragen? <span class="ai-tag">KI-Assistent</span></h2>
+    <p class="hint">Sie schreiben mit einem automatischen KI-Assistenten. Er beantwortet Fragen zu Öffnungszeiten, Preisen und Terminen. Bei allem anderen meldet sich das Team.</p>
+    <div class="chat" id="chat" aria-live="polite"></div>
+    <div class="quick" id="quick"></div>
+    <form class="ask" id="ask">
+      <input type="text" id="q" placeholder="Ihre Frage, z. B. Was kostet Strähnchen?" aria-label="Ihre Frage">
+      <button class="btn" type="submit">Senden</button>
+    </form>
+  </section>
+
+  <section class="card" aria-labelledby="h-flow">
+    <h2 id="h-flow">Für Inhaber: Was im Hintergrund passiert</h2>
+    <ol class="flow">
+      <li><div><b>Kundin bucht online, auch nachts</b><span>Der Termin steht sofort im Kalender. Kein Telefonat, keine Doppelbuchung.</span></div></li>
+      <li><div><b>24 Stunden vorher: Erinnerung per SMS</b><span>Nur mit Einwilligung. Absagen geht mit einem Klick, der Platz wird frei.</span></div></li>
+      <li><div><b>Freier Platz geht an die Warteliste</b><span>Wer auf der Warteliste steht, bekommt den Termin automatisch angeboten.</span></div></li>
+      <li><div><b>Nach dem Besuch: Bitte um eine Google-Bewertung</b><span>Freundlich, einmalig, ohne Belohnung (das wäre unzulässig).</span></div></li>
+      <li><div><b>Niemand geht ans Telefon? Der KI-Assistent übernimmt</b><span>Er beantwortet Standardfragen und nimmt Terminwünsche auf. Er gibt sich immer als KI zu erkennen.</span></div></li>
+    </ol>
+  </section>
+
+  <footer id="datenschutz">Demo-Seite eines fiktiven Salons. Preise, Zeiten und Adresse sind Beispielwerte. In der echten Version stehen hier Impressum und Datenschutzerklärung des Betriebs.</footer>
+</main>
+
+<script>
+const SERVICES = [
+  { id: "damen", name: "Damenhaarschnitt", info: "Waschen, Schneiden, Föhnen · ca. 60 Min.", price: 52 },
+  { id: "herren", name: "Herrenhaarschnitt", info: "Waschen, Schneiden · ca. 30 Min.", price: 29 },
+  { id: "kinder", name: "Kinderhaarschnitt", info: "bis 12 Jahre · ca. 20 Min.", price: 18 },
+  { id: "farbe", name: "Farbe & Schnitt", info: "Ansatzfarbe, Schnitt, Föhnen · ca. 120 Min.", price: 89 },
+  { id: "straehnen", name: "Strähnchen (Folie)", info: "inkl. Schnitt · ca. 150 Min.", price: 119 }
+];
+const WD = ["So","Mo","Di","Mi","Do","Fr","Sa"];
+const MON = ["Jan.","Feb.","März","Apr.","Mai","Juni","Juli","Aug.","Sep.","Okt.","Nov.","Dez."];
+const state = { service: "damen", day: null, time: null };
+
+const $ = (id) => document.getElementById(id);
+const euro = (n) => n.toLocaleString("de-DE") + " €";
+
+function renderServices() {
+  $("services").innerHTML = "";
+  SERVICES.forEach(s => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "opt"; b.setAttribute("aria-pressed", String(state.service === s.id));
+    b.innerHTML = `<span>${s.name}<small>${s.info}</small></span><span class="price">${euro(s.price)}</span>`;
+    b.onclick = () => { state.service = s.id; renderServices(); };
+    $("services").appendChild(b);
+  });
+}
+
+function openDays() {
+  const out = []; const d = new Date(); d.setHours(0,0,0,0);
+  while (out.length < 8) { d.setDate(d.getDate() + 1); if (d.getDay() >= 2) out.push(new Date(d)); }
+  return out;
+}
+function renderDays() {
+  $("days").innerHTML = "";
+  openDays().forEach(d => {
+    const key = d.toDateString();
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "day"; b.setAttribute("aria-pressed", String(state.day === key));
+    b.innerHTML = `<span>${WD[d.getDay()]}</span><b>${d.getDate()}.</b><span>${MON[d.getMonth()]}</span>`;
+    b.onclick = () => { state.day = key; state.time = null; renderDays(); renderSlots(); };
+    $("days").appendChild(b);
+  });
+}
+function seed(str) { let h = 0; for (const c of str) h = (h * 31 + c.charCodeAt(0)) >>> 0; return h; }
+function renderSlots() {
+  $("slots").innerHTML = "";
+  if (!state.day) { $("slot-hint").hidden = false; return; }
+  $("slot-hint").hidden = true;
+  const d = new Date(state.day); const end = d.getDay() === 6 ? 13 : 17;
+  let h = seed(state.day);
+  for (let t = 9; t <= end; t += 0.5) {
+    const label = `${String(Math.floor(t)).padStart(2,"0")}:${t % 1 ? "30" : "00"}`;
+    h = (h * 1103515245 + 12345) >>> 0;
+    const taken = (h % 100) < 45;
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "slot"; b.textContent = label; b.disabled = taken;
+    b.setAttribute("aria-pressed", String(state.time === label));
+    if (taken) b.setAttribute("aria-label", label + " belegt");
+    b.onclick = () => { state.time = label; renderSlots(); };
+    $("slots").appendChild(b);
+  }
+}
+
+$("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const name = $("name").value.trim();
+  const err = [];
+  if (!state.day || !state.time) err.push("Bitte Tag und Uhrzeit wählen.");
+  if (!name) err.push("Bitte Ihren Namen eintragen.");
+  if (!$("tel").value.trim()) err.push("Bitte eine Handynummer eintragen.");
+  if (err.length) { $("err").textContent = err.join(" "); $("err").hidden = false; return; }
+  $("err").hidden = true;
+  const s = SERVICES.find(x => x.id === state.service);
+  const d = new Date(state.day);
+  const dateTxt = `${WD[d.getDay()]}, ${d.getDate()}. ${MON[d.getMonth()]}`;
+  const first = name.split(" ")[0];
+  $("conf-text").textContent = `Gebucht: ${s.name} am ${dateTxt} um ${state.time} Uhr (${euro(s.price)}). Die Bestätigung kommt per SMS.`;
+  if ($("consent").checked) {
+    $("sms-meta").textContent = "SMS von Lieblingsschnitt · am Vortag";
+    $("sms-text").textContent = `Hallo ${first}, wir freuen uns auf dich: morgen um ${state.time} Uhr, ${s.name}. Du kannst nicht? Hier mit einem Klick absagen: lieblingsschnitt.de/a/7K2 · Salon Lieblingsschnitt`;
+  } else {
+    $("sms-meta").textContent = "Keine Erinnerung";
+    $("sms-text").textContent = "Ohne Häkchen bei der Einwilligung wird keine Erinnerung verschickt. Die Kundin bekommt nur die Buchungsbestätigung.";
+  }
+  $("form").hidden = true; $("confirm").hidden = false;
+});
+$("again").onclick = () => { state.day = null; state.time = null; $("form").hidden = false; $("confirm").hidden = true; renderDays(); renderSlots(); };
+
+const FAQ = [
+  { k: ["öffnung","geöffnet","offen","uhr","wann"], q: "Wann habt ihr geöffnet?", a: "Wir haben Dienstag bis Freitag von 9 bis 18 Uhr und samstags von 9 bis 14 Uhr geöffnet. Sonntag und Montag ist geschlossen." },
+  { k: ["sträh","folie"], q: "Was kosten Strähnchen?", a: "Strähnchen mit Folie inklusive Schnitt kosten 119 € und dauern etwa 2,5 Stunden. Den genauen Preis bespricht die Friseurin vorher mit Ihnen, er hängt von der Haarlänge ab." },
+  { k: ["preis","kost","teuer"], q: "Was kostet ein Damenhaarschnitt?", a: "Ein Damenhaarschnitt mit Waschen und Föhnen kostet 52 €, ein Herrenhaarschnitt 29 €, Kinder bis 12 Jahre 18 €." },
+  { k: ["park","auto"], q: "Gibt es Parkplätze?", a: "Direkt vor dem Salon gibt es zwei Kundenparkplätze, außerdem ein Parkhaus etwa 200 Meter entfernt." },
+  { k: ["heute","spontan","frei","termin"], q: "Habt ihr heute noch was frei?", a: "Freie Termine sehen Sie oben in der Buchung, sie sind immer aktuell. Wenn nichts passt, kann ich Sie auf die Warteliste setzen." },
+  { k: ["absag","verschieb","storn"], q: "Wie sage ich ab?", a: "In Ihrer Bestätigungs-SMS ist ein Link zum Absagen. Bitte sagen Sie spätestens 24 Stunden vorher ab, dann bekommt jemand von der Warteliste Ihren Platz." }
+];
+function say(text, who) { const m = document.createElement("div"); m.className = "msg " + who; m.textContent = text; $("chat").appendChild(m); $("chat").scrollTop = $("chat").scrollHeight; }
+function answer(q) {
+  say(q, "me");
+  const l = q.toLowerCase();
+  const hit = FAQ.find(f => f.k.some(k => l.includes(k)));
+  setTimeout(() => say(hit ? hit.a : "Das kann ich leider nicht sicher beantworten. Ich gebe Ihre Frage an das Team weiter, es meldet sich innerhalb der Öffnungszeiten.", "bot"), 350);
+}
+say("Hallo, ich bin der KI-Assistent von Salon Lieblingsschnitt. Wobei kann ich helfen?", "bot");
+FAQ.slice(0,5).forEach(f => { const b = document.createElement("button"); b.type = "button"; b.textContent = f.q; b.onclick = () => answer(f.q); $("quick").appendChild(b); });
+$("ask").addEventListener("submit", (e) => { e.preventDefault(); const v = $("q").value.trim(); if (v) { answer(v); $("q").value = ""; } });
+
+renderServices(); renderDays(); renderSlots();
+// Beispielzustand: ersten Tag und einen freien Platz vorauswählen
+(function preselect() {
+  const first = openDays()[0]; state.day = first.toDateString(); renderDays(); renderSlots();
+  const free = [...document.querySelectorAll(".slot")].find(b => !b.disabled); if (free) free.click();
+})();
+</script>
