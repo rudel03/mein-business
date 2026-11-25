@@ -9,6 +9,7 @@ Wird beim Start jeder Sitzung gelesen. Ein Repository, ein Ordner pro Projekt. P
 | DURCHSCHICHT (E-Book für Schichtarbeit) | `durchschicht/` | mystore (`q2e8xh-pz.myshopify.com`) | Theme live, Produkt als Entwurf; offen: PDF anhängen, Impressum, bezahlter Plan |
 | Essensplaner | `essensplaner/` | – | Auftrag steht in `essensplaner/AUFTRAG.md`, Recherche noch nicht begonnen |
 | Dubai-Verwaltung (Holiday-Home-Management) | `dubai-verwaltung/` | – | Recherche fertig, Partner-Leads gesammelt; offen: Lead-Pipeline einrichten, Partner anfragen |
+| Ferienvermietung Europa (Verwaltung nahe Ruhrgebiet) | `ferienvermietung-europa/` | – | Marktdaten von 492 Orten ausgewertet; Favoriten: belgische Ardennen, Eifel; offen: Regeln pro Ort, Steuerberater |
 
 ## Arbeitsweise
 - **Eine Sitzung pro Projekt** (der Kontext bleibt sauber). Andere Projektordner nur lesen, wenn sie relevant sind.
