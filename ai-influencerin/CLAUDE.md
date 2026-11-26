@@ -19,7 +19,8 @@ Eine fotorealistische, klar als KI gekennzeichnete Influencerin auf Instagram (+
 - Persona-Vorschläge (Steckbrief, Charakter, Kleiderschrank, Orte, Stimme, Baukasten-Einstellungen) sind in `persona/PERSONA.md` vorbereitet; Startvorrat 40 Inhalte in `content/plan/vorrat.md`, Rezepte in `content/rezepte.md`, Caption-/Hook-/Hashtag-Vorlagen in `content/vorlagen.md`, Kosten in `system/11-kosten.md`.
 - Verbunden: Higgsfield, Canva, Windsor.ai, Shopify. Keine zusätzlichen Plugins aktiviert (nicht nötig für den Start).
 - Phase: **0 – Vorbereitung**. Start-Datum Account: –
-- **Modus A läuft (26.11.2026):** A0 erledigt (Guthaben 1.000, Higgsfield-Projekt „KI-Influencerin“ angelegt, folder_id `863d01bd-e756-40c7-9f8d-14845e0680c3`, steht in PERSONA.md). A1 (Briefing: Name, Haare, Typ, Stadt, Merkmal) an den Inhaber gestellt, Antwort offen. .de-Domains per RDAP frei: romyeats, romyprotein, miraprotein, nelekocht, nelefit (Instagram/TikTok-Handles muss der Inhaber in der App prüfen).
+- Higgsfield-Projekt „KI-Influencerin“, folder_id `863d01bd-e756-40c7-9f8d-14845e0680c3`.
+- **Posting-Plan KW 49–52 (Start Mo 30.11.2026) erstellt: `content/plan/2026-KW49-52.md`** – wartet auf Freigabe; enthält Bild-Kürzel → Job-IDs, 9 noch zu produzierende Winter-Selfies + 2 Videos final (~125 Credits). Vor Tag 1: Entscheidung KI-Kennzeichnung + Account anlegen.
 
 ## Entscheidungen
 - **Persona-Änderungen des Inhabers (26.11.2026) ersetzen den START-PROMPT-Punkt „wirkt 25–27“:** 19 Jahre (klar erwachsen), Albanerin, kurvig ca. 1,60 m, Bildstil GPT Image 2.6 im unbearbeiteten Handy-Look. Details `persona/PERSONA.md`.
