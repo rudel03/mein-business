@@ -6,7 +6,7 @@ Wird beim Start jeder Sitzung zu diesem Projekt gelesen. Übergreifende Regeln: 
 Eine fotorealistische, klar als KI gekennzeichnete Influencerin auf Instagram (+ TikTok) aufbauen. Der Inhaber gibt kurze Beschreibungen, Claude erstellt detaillierte Prompts, Bilder, Videos, Captions, Pläne und Auswertungen. Möglichst viel Automatisierung, ohne Qualität zu verlieren und ohne gegen Plattformregeln zu verstoßen.
 
 ## Stand (26.11.2026)
-- System angelegt: Recherche, Account-Aufbau, Content-Strategie, Prompt-System, Recht, Workflow, Skills `influencer-prompt` + `influencer-redaktion`.
+- System angelegt (ergänzt um `system/07-aufbau-playbook.md` = Fallstudien, Algorithmus 2026, Wochenrhythmus, Content-Ideen, Storyline; `system/08-werkzeuge.md` = alle Tools/Skills/Plugins): Recherche, Account-Aufbau, Content-Strategie, Prompt-System, Recht, Workflow, Skills `influencer-prompt` + `influencer-redaktion`.
 - **Offen (nächste Schritte, in dieser Reihenfolge):**
   1. ~~Nische entscheiden~~ → **Entschieden 26.11.2026: Frau, „High-Protein-Küche + Gym-Alltag + Athleisure/Mode“** (Details `system/03-content-strategie.md`, Abschnitt „Gewählte Nische“). Offen: Grundtyp/Aussehen der Persona.
   2. Persona anlegen (`system/06-workflow.md`): AI Influencer Builder → Element → 30 Porträts → Soul ID → Identitätsblock in `persona/PERSONA.md`.
@@ -22,6 +22,7 @@ Eine fotorealistische, klar als KI gekennzeichnete Influencerin auf Instagram (+
 - Higgsfield als einziges Generierungswerkzeug (Repo-Regel). Konsistenz über Element + Soul ID + Identitätsblock.
 
 ## Fallstricke
+- Originalitätsregel Instagram (seit 30.04.2026): keine fremden Inhalte reposten, sonst keine Empfehlungen (bewertet über 30 Tage).
 - **Fansly verbietet fotorealistische KI-Inhalte, auch mit Label** (Help-Artikel 08.07.2026: https://help.fansly.com/en/articles/12315578-ai-generated-content-on-fansly). Fanvue erlaubt realistische KI-Figuren mit klarer Kennzeichnung + KYC des Inhabers (https://help.fanvue.com/en/articles/9538738-is-ai-content-allowed-on-fanvue, Stand 16.10.2026).
 - Higgsfield verbietet sexuell explizite Inhalte (Nutzungsbedingungen, Abschnitt 5) → Claude erstellt nur SFW-Content.
 - Instagram: Link/Verweis auf Erotik-Abo-Seiten + anzüglicher Content wird als „sexual solicitation“ gewertet (Sperrrisiko). JMStV § 6: Werbung für pornografische Angebote nur unter denselben Bedingungen wie das Angebot selbst (Altersverifikation) → nicht auf Instagram bewerben.
