@@ -2,6 +2,7 @@
 
 Vom Inhaber genannt: ✅/▶ Entrümpelung (004) · ☐ Umzugsfirma · ☐ Callcenter · ☐ Folierer (Autofolierung)
 Weitere Ideen (unterschätzt, viele Details, Plotwist-Potenzial):
+- ▶ Golfball-Taucher (009)
 - ☐ Schlüsseldienst (Anfahrt, Nachtzuschlag, warum manche 400 € nehmen)
 - ☐ Tatortreiniger / Leichenfundortreinigung (heikel → respektvoll)
 - ☐ Fahrradkurier / Lieferdienst-Subunternehmer

@@ -12,6 +12,7 @@ Inhaber: **„Das ist perfekt, das gefällt mir sehr. Genau diesen Style festhal
 ## Stand (26.11.2026)
 - Nische: **Geschäftsmodelle, auf die keiner kommt**. Themen: `skripte/themen.md`.
 - ✅ 005-umzug-v2 = freigegeben (Referenz).
+- ✅ **009 Golfball-Taucher** (26.11.2026, „Geschäft, auf das niemals einer kommt“) im freigegebenen Stil: `ausgabe/009-golfball-taucher.mp4`, 78 s, Orion, ≈ 6 Credits. Plotwist: Golfer seit 2009 im Teich kauft seinen Ball zurück (2,50 € + 10 Cent Ablöse). Neue Szenen `engine/scenes/golftaucher.js`, neue Bausteine: pond, flag, golfBall, ballField, golfer/swing, diver, netBag, oldGolfer, sortTable, Himmel `underwater`. Wartet auf Feedback.
 - ⏳ **Nächster Schritt:** 006 Callcenter, 007 Folierer, 008 Schlüsseldienst im freigegebenen Stil neu schreiben (frecher, Rechnung zum Mitrechnen) und mit Orion neu sprechen. Szenen/Plotwists existieren schon (`engine/scenes/callcenter.js`, `folierer.js`, `schluesseldienst.js`), Quellen in `skripte/00x-*/skript.md`. Alte Fassungen (Dylan, alter Ton) liegen in `ausgabe/006–008*.mp4` und gelten als überholt.
 - 004 Entrümpelung: alter Ton/Stimme (Dylan) → bei Bedarf ebenfalls im neuen Stil neu machen.
 - **Offen:** Kanalname · Konten (YouTube, Instagram-Creator, TikTok) · Postiz verbinden + API-Key · danach Vollautomatik als geplante Aufgabe (Inhaber will voll automatisch posten).

@@ -38,12 +38,13 @@ export function setupWorld(scene, renderer, { sky = 'sunset' } = {}) {
   const cv = document.createElement('canvas'); cv.width = 4; cv.height = 256;
   const g = cv.getContext('2d'); const gr = g.createLinearGradient(0, 0, 0, 256);
   if (sky === 'indoor') { gr.addColorStop(0, '#d9dde3'); gr.addColorStop(1, '#f2efe8'); }
+  else if (sky === 'underwater') { gr.addColorStop(0, '#2fa6c9'); gr.addColorStop(1, '#0b3a52'); }
   else if (sky === 'night') { gr.addColorStop(0, '#0b1030'); gr.addColorStop(1, '#2a3570'); }
   else { gr.addColorStop(0, '#6f7fd6'); gr.addColorStop(0.55, '#f2a3a0'); gr.addColorStop(1, '#ffd08a'); }
   g.fillStyle = gr; g.fillRect(0, 0, 4, 256);
   const tex = new THREE.CanvasTexture(cv); tex.colorSpace = THREE.SRGBColorSpace;
   scene.background = tex;
-  scene.fog = new THREE.Fog(sky === 'indoor' ? 0xe8e6e0 : 0xf6c79a, 60, 190);
+  scene.fog = sky === 'underwater' ? new THREE.Fog(0x1d6f8c, 4, 26) : new THREE.Fog(sky === 'indoor' ? 0xe8e6e0 : 0xf6c79a, 60, 190);
   scene.add(new THREE.HemisphereLight(0xfff1dc, 0x6a7a5a, sky === 'indoor' ? 2.2 : 1.9));
   const sun = new THREE.DirectionalLight(sky === 'indoor' ? 0xffffff : 0xffd2a0, sky === 'indoor' ? 1.8 : 2.8);
   sun.position.set(-30, 40, 25); sun.castShadow = true;
@@ -485,4 +486,65 @@ export function chromeify(obj, scene, renderer) { // alles in Chrom verwandeln (
     chromeMat.envMap = pm.fromScene(s).texture; envDone = true;
   }
   obj.traverse(o => { if (o.isMesh && !o.userData.keep) o.material = chromeMat; });
+}
+
+// ---------- Golfplatz / Taucher (009) ----------
+export function pond(r = 9) {
+  const g = new THREE.Group();
+  const w = new THREE.Mesh(new THREE.CircleGeometry(r, 28), M(0x2b8fbf, { transparent: true, opacity: 0.85, emissive: 0x0d4f73, emissiveIntensity: 0.3 }));
+  w.rotation.x = -Math.PI / 2; w.position.y = 0.05; w.receiveShadow = true; g.add(w);
+  const rim = new THREE.Mesh(new THREE.RingGeometry(r, r + 0.6, 28), M(0xc9b27a)); rim.rotation.x = -Math.PI / 2; rim.position.y = 0.04; g.add(rim);
+  g.userData.water = w; return g;
+}
+export function flag() {
+  const g = new THREE.Group();
+  g.add(at(cyl(0.04, 0.04, 2.6, 0xffffff, 6), 0, 1.3, 0));
+  g.add(at(box(0.8, 0.5, 0.03, C.red), 0.4, 2.3, 0));
+  const hole = new THREE.Mesh(new THREE.CircleGeometry(0.25, 12), M(0x111111)); hole.rotation.x = -Math.PI / 2; hole.position.y = 0.03; g.add(hole);
+  return g;
+}
+export function golfBall() { const b = new THREE.Mesh(new THREE.IcosahedronGeometry(0.11, 1), M(0xffffff)); b.castShadow = true; return b; }
+export function ballField(n = 400, spread = 8, seed = 3, y = 0.1) {
+  const m = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(0.11, 1), M(0xf4f4f0), n); const d = new THREE.Object3D();
+  let r = seed; const rnd = () => (r = (r * 9301 + 49297) % 233280) / 233280;
+  for (let i = 0; i < n; i++) { const a = rnd() * Math.PI * 2, rr = Math.sqrt(rnd()) * spread; d.position.set(Math.cos(a) * rr, y + rnd() * 0.06, Math.sin(a) * rr); d.updateMatrix(); m.setMatrixAt(i, d.matrix); }
+  m.castShadow = true; return m;
+}
+export function golfer(shirt = 0xffffff, pants = 0x2f3b55) {
+  const p = person({ shirt, pants, cap: 0xffffff, hat: 'cap' });
+  const club = new THREE.Group(); club.add(at(cyl(0.02, 0.02, 1.1, 0x333333, 5), 0, -0.55, 0)); club.add(at(box(0.18, 0.08, 0.06, 0x9aa3ad), 0.05, -1.1, 0));
+  club.position.set(0, -0.62, 0); p.userData.armR.add(club); p.userData.club = club; return p;
+}
+export function swing(p, k) { // k: 0..1 Ausholen -> Durchschwung
+  const u = p.userData, a = k < 0.5 ? -k * 2 * 2.2 : -2.2 + (k - 0.5) * 2 * 4.4;
+  u.armR.rotation.set(0, 0, 0); u.armL.rotation.set(0, 0, 0);
+  u.armR.rotation.z = a * 0.6; u.armL.rotation.z = a * 0.6; u.armR.rotation.x = -0.6; u.armL.rotation.x = -0.6; u.hip.rotation.y = a * 0.15;
+}
+export function diver() {
+  const p = person({ shirt: 0x111418, pants: 0x111418, skin: 0xffd2b0, cap: 0x111418, hat: 'cap' });
+  const h = p.userData.head;
+  h.add(at(box(0.42, 0.16, 0.1, 0x3fd0ff, { emissive: 0x1a7fa0, emissiveIntensity: 0.5, transparent: true, opacity: 0.85 }), 0, 0.16, 0.25));
+  const tube = at(cyl(0.03, 0.03, 0.45, 0xffd400, 6), 0.28, 0.3, 0.05); h.add(tube);
+  for (const l of [p.userData.legL, p.userData.legR]) l.add(at(box(0.3, 0.05, 0.6, 0xffd400), 0, -0.95, 0.25));
+  p.userData.body = p; return p;
+}
+export function netBag(n = 60) {
+  const g = new THREE.Group();
+  const bag = new THREE.Mesh(new THREE.IcosahedronGeometry(0.45, 1), M(0xff8a1f, { wireframe: true })); bag.scale.set(1, 1.3, 1); g.add(bag);
+  g.add(ballField(n, 0.32, 9, -0.25));
+  return g;
+}
+export function oldGolfer() { // seit 2009 unter Wasser: langer weißer Bart, Karohose
+  const p = golfer(0xd7c27a, 0x8b3a2b);
+  const h = p.userData.head;
+  const beard = at(box(0.36, 0.9, 0.12, 0xf2f2f2), 0, -0.35, 0.2); h.add(beard);
+  h.add(at(box(0.3, 0.06, 0.05, 0xf2f2f2), 0, 0.07, 0.26));
+  return p;
+}
+export function sortTable() {
+  const g = new THREE.Group();
+  g.add(at(box(4.4, 0.1, 1.2, 0xd8c3a0), 0, 0.9, 0));
+  for (const [x, z] of [[-2.1, -0.5], [2.1, -0.5], [-2.1, 0.5], [2.1, 0.5]]) g.add(at(box(0.08, 0.9, 0.08, 0x8a5a33), x, 0.45, z));
+  g.userData.bins = [-1.6, -0.55, 0.55, 1.6].map((x, i) => { const b = at(box(0.9, 0.35, 0.9, [0x9aa3ad, 0x3b82f6, 0x2ecc71, C.gold][i]), x, 1.12, 0); g.add(b); return b; });
+  return g;
 }
