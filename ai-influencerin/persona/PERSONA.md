@@ -27,6 +27,10 @@ a [age]-year-old woman with [face shape], [eye colour] [eye shape] eyes, [brows]
 ```
 
 ## Stil-Regeln
+- **Ausstrahlung (festgelegt 26.11.2026):** attraktiv, natürlich, sportlich. Outfits betonen die Figur dezent (Leggings + Crop-Top im Gym, figurnahe Kleider, Jeans + Body), aber mit Niveau.
+  - Bademode nur im passenden Zusammenhang (Strand, Pool, Urlaub), nicht als Selbstzweck.
+  - Kein Kamerafokus auf einzelne Körperteile, keine anzüglichen Posen, keine zweideutigen Captions. Die Figur steht im Mittelpunkt, nicht der Körper.
+  - Grund: Instagram drosselt „grenzwertig anzügliche“ Inhalte in den Empfehlungen, und Marken (Supplements, Mode) achten aufs Image.
 - Bildlook: z. B. „Handyfotos, natürliches Licht, leicht warm, nie Studio“
 - Farbwelt: …
 - Was nie vorkommt: …
