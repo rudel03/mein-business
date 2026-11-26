@@ -1,0 +1,36 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000;overflow:hidden}</style>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js"}}</script>
+</head><body>
+<script type="module">
+import * as THREE from 'three';
+import { setupWorld } from './world.js';
+let R, cam, cur = -1, scene, ctx, mod, plan;
+function disposeScene(s) { s?.traverse(o => { o.geometry?.dispose?.(); }); }
+window.init = async (p) => {
+  plan = p;
+  mod = await import(`./scenes/${p.scene}.js`);
+  R = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
+  R.setPixelRatio(1); R.setSize(p.W, p.H);
+  R.shadowMap.enabled = true; R.shadowMap.type = THREE.PCFSoftShadowMap;
+  R.outputColorSpace = THREE.SRGBColorSpace;
+  document.body.appendChild(R.domElement);
+  cam = new THREE.PerspectiveCamera(p.fov || 55, p.W / p.H, 0.1, 400);
+  return Object.keys(mod.shots);
+};
+window.frame = (t) => {
+  let i = plan.shots.findIndex(s => t >= s.start && t < s.start + s.dur);
+  if (i < 0) i = plan.shots.length - 1;
+  const s = plan.shots[i];
+  if (i !== cur) {
+    disposeScene(scene);
+    scene = new THREE.Scene(); ctx = {};
+    setupWorld(scene, R, { sky: (mod.sky || {})[s.name] || 'sunset' });
+    mod.shots[s.name].setup(scene, ctx);
+    cur = i;
+  }
+  mod.shots[s.name].update(Math.min(t - s.start, s.dur), s.dur, cam, ctx);
+  R.render(scene, cam);
+  return R.domElement.toDataURL('image/jpeg', 0.92);
+};
+</script></body></html>
