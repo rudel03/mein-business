@@ -1,0 +1,21 @@
+{
+  "voice": "voice.mp3",
+  "images": ["img/1.png","img/2.png","img/3.png","img/4.png","img/5.png","img/6.png","img/7.png"],
+  "scene_starts": [0, 1, 3, 6, 8, 9, 11],
+  "phrases": [
+    "Costco verkauft seine Waren extrem knapp kalkuliert.",
+    "Und macht trotzdem Milliarden Gewinn.",
+    "Wie geht das?",
+    "Der Trick:",
+    "Einkaufen darf nur, wer Mitglied ist.",
+    "Und dafür zahlt man jedes Jahr eine Gebühr.",
+    "Im Geschäftsjahr 2025 kamen so über 5 Milliarden Dollar an Mitgliedsbeiträgen zusammen.",
+    "Der gesamte Gewinn lag bei rund 8 Milliarden.",
+    "Und fast 9 von 10 Mitgliedern verlängern jedes Jahr.",
+    "Die günstigen Waren sind also der Köder.",
+    "Das eigentliche Produkt ist die Mitgliedskarte.",
+    "Würdest du Eintritt zahlen, um im Supermarkt einzukaufen?"
+  ],
+  "title": "Wie verdient Costco\neigentlich Geld?",
+  "out": "costco.mp4"
+}

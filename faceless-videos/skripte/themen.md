@@ -3,7 +3,7 @@
 Status: ☐ offen · ▶ in Arbeit · ✅ gepostet. Zahlen werden erst beim Skript aus Primärquellen recherchiert (Quelle + Jahr ins Skript).
 
 ## Serie A: „Wie verdient … eigentlich Geld?“
-- ☐ Costco – warum die Mitgliedsgebühr das eigentliche Geschäft ist
+- ▶ Costco – warum die Mitgliedsgebühr das eigentliche Geschäft ist (Testvideo 001 fertig, nicht gepostet)
 - ☐ IKEA – Selbstabholung, Labyrinth-Laden, Restaurant
 - ☐ Aldi/Lidl – wenige Artikel, Eigenmarken, Effizienz
 - ☐ McDonald's – Immobilien statt Burger
