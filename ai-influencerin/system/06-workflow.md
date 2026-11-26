@@ -41,7 +41,11 @@ Inhaber: Freigabe ◄── Vorschau + Caption (Skill influencer-redaktion) ◄�
 6. **Soul ID** trainieren (Higgsfield-Oberfläche „Soul → Train new character“, 20–80 Bilder ≥ 960 px). Soul-ID in PERSONA.md eintragen.
 7. **Identitätsblock** final schreiben (englisch, 40–70 Wörter, nur unveränderliche Merkmale) → PERSONA.md.
 8. **Stimme** (optional, für Reels): `create_voice` mit einer eigens erstellten/lizenzierten Stimme → Voice-ID in PERSONA.md.
-9. **Testshooting:** 10 Bilder in 10 Situationen → Qualitätscheck → Learnings in PERSONA.md („Nano Banana Pro trifft das Muttermal besser“ usw.).
+9. **Charakter-Entwicklung** (Praxis: „nicht nur ein hübsches Gesicht“): Hobbys, 5 Meinungen, 3 Macken, Running Gags, Sprachstil (direkt, mit Humor), Lieblingsessen, Trainingsplan-Vorlieben, Ziel für das Jahr → PERSONA.md.
+10. **Testshooting:** 10 Bilder in 10 Situationen → Qualitätscheck → Learnings in PERSONA.md („Nano Banana Pro trifft das Muttermal besser“ usw.).
+
+## Notfall-Paket (monatlich)
+Instagram-Datenexport anstoßen, alle Originale/Prompts/Captions/Referenzbilder sichern (Higgsfield + Repo für kleine Dateien), Voice-ID notieren, E-Mail-Liste (Double-Opt-in) pflegen.
 
 ## Kosten im Blick
 - Vor jedem großen Batch `estimate_image_cost` / `estimate_video_cost`, Guthaben mit `balance`.

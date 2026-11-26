@@ -6,7 +6,8 @@ Grundsatz: **Ein Account pro Plattform, auf dem eigenen Handy, von Hand bedient.
 - [ ] Persona fertig (`persona/PERSONA.md`), Element + Soul ID trainiert, 30 Porträts geprüft.
 - [ ] Name prüfen: Benutzername auf Instagram/TikTok frei, ≤ 15 Zeichen, gleich auf allen Plattformen. Keine Ähnlichkeit zu Promis/Marken. Optional Domain per RDAP prüfen (`rdap.denic.de/domain/<name>.de`, 404 = frei).
 - [ ] Eigene E-Mail-Adresse für die Persona (nicht die private), 2-Faktor-Authentifizierung.
-- [ ] **12 Feed-Posts + 10 Stories vorproduziert** (Raster soll beim ersten Besuch „voll“ wirken). Reihenfolge so planen, dass das 3er-Raster harmoniert.
+- [ ] **30–40 fertige Inhalte vorproduziert** (12 Raster-Posts + ~10 Reels, davon die Hälfte günstige Slideshow-/Text-Reels + ~15 Stories), damit in Woche 1–3 viel getestet werden kann (Praxis: virale Ausreißer kommen meist früh). Raster-Reihenfolge so planen, dass das 3er-Raster harmoniert.
+- [ ] **Kein Facebook-Profil für die Persona** anlegen oder verknüpfen (dokumentierter Fall: alle Meta-Konten gleichzeitig gesperrt, siehe `10-praxis-von-betreibern.md`).
 - [ ] Profilbild: Kopf/Schulter, Gesicht gut erkennbar, ruhiger Hintergrund, 1:1.
 - [ ] Bio (≤ 150 Zeichen) mit KI-Hinweis, z. B.:
   `Lena · KI-Figur aus München 🤖✨ | Herbstspaziergänge, Kaffee & Ordnung im Kopf | echte Tipps, virtuelles Gesicht`
@@ -30,7 +31,7 @@ Obergrenzen in Woche 1–4 (bewusst unter Anbieter-Angaben): ≤ 20 Follows, ≤
 TikTok parallel: gleiches Schema, Tag 1–3 nur schauen/liken (For-You-Seite auf die Nische trainieren), ab Tag 4 erstes Video, Schalter **„AI-generated content“ bei jedem Video**.
 
 ## Phase 2 – Aufbau (Woche 2–6)
-- **Instagram:** 3–4 Feed-Posts/Woche (2 Carousels, 1–2 Reels), täglich 2–5 Stories (Umfragen, Fragen-Sticker = Interaktion).
+- **Instagram:** Woche 2–4 täglich 1 Feed-Post (Carousel oder Reel im Wechsel), ab Woche 5 testweise 2/Tag (zweiter Post = günstiges Slideshow-Reel), nur wenn die Qualität hält. Täglich 2–5 Stories (Umfragen, Fragen-Sticker = Interaktion).
 - **TikTok:** 1 Video/Tag ist möglich, 4–5/Woche reicht.
 - Feste Uhrzeiten testen (z. B. 7:30, 12:30, 19:00) und nach 3 Wochen in den Insights die besten wählen.
 - Täglich 15 Min. Community: auf jeden Kommentar in der ersten Stunde antworten, 5–10 sinnvolle Kommentare bei passenden Accounts (selbe Nische, ähnliche Größe).
