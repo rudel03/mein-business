@@ -19,7 +19,8 @@ Vorgabe des Inhabers: unterschätzte Geschäftsmodelle (Entrümpelung, Umzug, Ca
 - Keine Begrüßung, kein „Heute erkläre ich…“, kein Abo-Aufruf am Anfang.
 
 ## Sprache
-- **Feedback 26.11.: weniger Umgangssprache** – höchstens 1–2 lockere Wörter pro Video, sonst normales, lockeres Deutsch.
+- **Feedback 26.11. (spät, gilt): MEHR Umgangssprache + oft Kraftausdrücke als Adjektive** („verfickt“, „scheiß“, „geil“, „krass“, „Digga“, „Bruder“, „safe“, „null Bock“) – in fast jeder Zeile eins. (Zwischenstand „weniger Umgangssprache“ ist überholt.)
+- **Für Dumme erklären:** „Pass auf, ganz easy:“, Alltagssituation des Zuschauers, dann **Rechnung zum Mitrechnen** (z. B. 3 Jungs × 8 Std × 42 € = 1.008 € an 1 Tag; Lohn dagegenrechnen; was bleibt). Dazu ein Detail, das den Einstieg leicht wirken lässt (z. B. „Transporter bis 3,5 t fährst du mit normalem Führerschein“). Ziel: Zuschauer denkt „warum macht das nicht jeder?“. Ehrlich bleiben: Kosten (Lkw, Sprit, Versicherung, Abgaben) nennen, keine Einkommensversprechen.
 - Natürlich: „Digga“, „Bro“, „lowkey“, „safe“, „wild“, „komplett lost“, „Bude“, „nem“, „aufm“, „kassieren“. Sparsam dosieren (2–4 pro Video), nicht in jedem Satz.
 - Kraftausdrücke als Füllwörter erlaubt („verfickt“, „Scheiß“), **nie gegen echte Firmen, Personen oder Gruppen**.
 - Vom Inhaber genannt: „Gundi“, „zirto“ → Bedeutung/Verwendung vom Inhaber bestätigen lassen, bevor sie eingesetzt werden.
@@ -31,6 +32,6 @@ Vorgabe des Inhabers: unterschätzte Geschäftsmodelle (Entrümpelung, Umzug, Ca
 
 ## Produktion
 1. Skript schreiben → `skripte/<nr>-<thema>/video.json` (+ `skript.md` mit Quellen).
-2. Stimme: Higgsfield `generate_audio_batch`, `text2speech_v2`, `variant:"elevenlabs"`, Stimme **Dylan** `b847bc29-f184-583a-8ad9-d1f1e16d1a60`, in video.json `"voice": {"tempo": 1.2, "pitch": -2}` (tiefer); max. 6 gleichzeitig; Zahlen im Prompt ausschreiben. Dateien nach `audio/01.mp3 …` laden. ≈ 0,45 Credits/Zeile.
+2. Stimme: Higgsfield `generate_audio_batch`, `text2speech_v2`, `variant:"elevenlabs"`, Stimme **Orion** `ed69c516-92d2-4b30-a967-617737a342e5` (tief, ~103 Hz), in video.json `"voice": {"tempo": 1.15, "tight": true}` (Pausen auf 0,1 s); **kein `pitch`** – Tonhöhen-Filter klingt „gedoppelt“; max. 6 gleichzeitig; Zahlen im Prompt ausschreiben. Dateien nach `audio/01.mp3 …` laden. ≈ 0,45 Credits/Zeile.
 3. Szenen: `engine/scenes/<thema>.js` (Baukasten `engine/world.js`). Vorschau: `node engine/render3d.mjs plan.json st --stills 1,4,7`.
 4. `python3 -I pipeline/make_video.py skripte/<nr>/video.json` (≈ 9 min für 70 s).

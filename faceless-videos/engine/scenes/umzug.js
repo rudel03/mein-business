@@ -35,6 +35,26 @@ export const shots = {
       camMove(cam, [-9, 4, 19], [-7, 4, 16], [0, 1.5, 6], [1, 1.6, 6], p);
     },
   },
+  // Du sitzt zwischen Kartons und rufst die Jungs an
+  call: {
+    setup(scene, ctx) { scene.add(W.ground(200, 0x9a9a9a)); scene.add(W.room(10, 8)); ctx.hero = W.person(); ctx.hero.position.set(0, 0, 1); scene.add(ctx.hero); ctx.ph = W.phone(); ctx.ph.scale.setScalar(0.22); scene.add(ctx.ph);
+      let r = 5; const rnd = () => (r = (r * 9301 + 49297) % 233280) / 233280; for (let i = 0; i < 18; i++) { const b = W.cardbox(0.5 + rnd() * 0.3); b.position.set(-3.5 + rnd() * 7, 0.25 + (i % 3) * 0.5, -2.5 + rnd() * 3); b.rotation.y = rnd(); scene.add(b); } },
+    update(t, d, cam, ctx) { const p = t / d; pose.reset(ctx.hero); pose2.phoneUp(ctx.hero, clamp01(p * 3)); ctx.ph.position.set(0.36, 1.98, 1.05); ctx.ph.rotation.set(0, 0.4, 0); ctx.ph.visible = p > 0.25;
+      camMove(cam, [2.5, 2.2, 6], [1.2, 1.9, 4.2], [0, 1.4, 0], [0, 1.7, 1], p); },
+  },
+  // 3 Jungs à 8 Stunden: drei Münztürme wachsen, Uhr rast
+  math: {
+    setup(scene, ctx) { street(scene); ctx.ws = [-2.4, 0, 2.4].map(x => { const w = W.worker(); w.position.set(x, 0, 5); scene.add(w); return w; }); ctx.tw = [-2.4, 0, 2.4].map(x => { const t = W.coinTower(40); t.position.set(x, 0, 3.2); scene.add(t); return t; }); ctx.clk = W.clock(); ctx.clk.position.set(0, 6.5, 2); ctx.clk.scale.setScalar(1.2); scene.add(ctx.clk); },
+    update(t, d, cam, ctx) { const p = t / d; ctx.clk.userData.mh.rotation.z = -t * 14; ctx.clk.userData.hh.rotation.z = -t * 1.2;
+      ctx.tw.forEach((tw, i) => tw.count = Math.round(40 * ease(clamp01(p * 1.3 - i * 0.1)))); ctx.ws.forEach((w, i) => { pose.reset(w); pose.armsUp(w, clamp01(p * 2 - 1), t + i); });
+      camMove(cam, [0, 3, 15], [0, 5, 16], [0, 2.5, 3], [0, 4, 3], p); },
+  },
+  // Führerschein reicht: Held fährt selbst den Transporter
+  license: {
+    setup(scene, ctx) { street(scene); ctx.van = W.van(); ctx.van.rotation.y = Math.PI / 2; scene.add(ctx.van); ctx.hero = W.person(); ctx.hero.scale.setScalar(0.9); scene.add(ctx.hero); },
+    update(t, d, cam, ctx) { const p = t / d, x = lerp(-14, 10, p); ctx.van.position.set(x, 0, 7.5); ctx.hero.position.set(x + 1.6, 0.85, 7.0); ctx.hero.rotation.y = Math.PI / 2; pose.reset(ctx.hero); ctx.hero.userData.armR.rotation.set(-2.6, 0, 0.3);
+      camMove(cam, [x + 5, 2.2, 13], [x + 2, 2.4, 12], [x, 1.5, 7.5], [x + 1, 1.5, 7.5], p); },
+  },
   price: towersShot(83, 0, {}),
   hourly: {
     setup(scene, ctx) { street(scene); carrier(scene, ctx, 2); ctx.clk = W.clock(); ctx.clk.position.set(0, 5.5, 3); ctx.clk.scale.setScalar(1.3); scene.add(ctx.clk); ctx.coins = []; for (let i = 0; i < 12; i++) { const c = W.coin(); scene.add(c); ctx.coins.push(c); } },
@@ -46,6 +66,7 @@ export const shots = {
     },
   },
   wage: towersShot(42, 14, { scale: 2.2 }),
+  rest: towersShot(100, 33, { scale: 1.3 }),
   halteverbot: {
     setup(scene, ctx) { street(scene); ctx.signs = [-4, 4].map(x => { const s = W.noParkingSign(); s.position.set(x, 0, 5); scene.add(s); return s; }); ctx.tr = W.truck(); ctx.tr.rotation.y = Math.PI / 2; scene.add(ctx.tr); ctx.car = W.car(0xe94b3c); ctx.car.rotation.y = Math.PI / 2; scene.add(ctx.car); },
     update(t, d, cam, ctx) {

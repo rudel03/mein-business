@@ -56,6 +56,8 @@ def main(cfg_path):
             semis = v.get("pitch", 0)  # Halbtöne, negativ = tiefer (Formanten bleiben erhalten -> klingt natürlich)
             fx = (f"rubberband=tempo={tempo}:pitch={2 ** (semis / 12):.4f}:formant=preserved:pitchq=quality"
                   if semis else f"atempo={tempo}")
+            if v.get("tight", False):  # Sprechpausen im Satz auf ~0,1 s kürzen (knackiger, ohne die Stimme zu verändern)
+                fx = "silenceremove=stop_periods=-1:stop_duration=0.14:stop_threshold=-40dB:stop_silence=0.09," + fx
             subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", src, "-af",
                             f"{fx},silenceremove=start_periods=1:start_threshold=-45dB,areverse,"
                             "silenceremove=start_periods=1:start_threshold=-45dB,areverse", "-ar", "44100", wav], check=True)
