@@ -8,7 +8,7 @@ Wird beim Start jeder Sitzung gelesen. Ein Repository, ein Ordner pro Projekt. P
 | Honigmama / BeeQueen (Koch-E-Books Schwangerschaft & erstes Jahr) | `honigmama/` | jctx4r-bu.myshopify.com | live; Entwurf mit Verbesserungen wartet aufs Veröffentlichen |
 | DURCHSCHICHT (E-Book für Schichtarbeit) | `durchschicht/` | mystore (`q2e8xh-pz.myshopify.com`) | Theme live, Produkt als Entwurf; offen: PDF anhängen, Impressum, bezahlter Plan |
 | Essensplaner | `essensplaner/` | – | Auftrag steht in `essensplaner/AUFTRAG.md`, Recherche noch nicht begonnen |
-| KI-Influencerin (virtuelle Instagram/TikTok-Persona) | `ai-influencerin/` | – | System + Skills angelegt; offen: Nische wählen, Persona anlegen. Start: `ai-influencerin/START-PROMPT.md` |
+| KI-Influencerin (virtuelle Instagram/TikTok-Persona) | `ai-influencerin/` | – | Nische: High-Protein-Küche + Gym + Athleisure; offen: Higgsfield-Plan buchen (0 Credits), Persona anlegen. Start: `ai-influencerin/START-PROMPT.md` |
 
 ## Arbeitsweise
 - **Eine Sitzung pro Projekt** (der Kontext bleibt sauber). Andere Projektordner nur lesen, wenn sie relevant sind.
