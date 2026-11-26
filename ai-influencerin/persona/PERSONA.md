@@ -69,13 +69,17 @@ Startpunkt für `ai_influencer_prepare` (Tier **`normal`** = realistisch; bei `r
 - Voice-ID (`create_voice`, optional): …
 - Bestes Modell laut Tests: …
 
-## Identitätsblock (EN, wortgleich verwenden – nach Wahl der Variante final schreiben)
-Vorlage (40–70 Wörter, nur unveränderliche Merkmale, keine Kleidung/Frisur-Stylings):
+## Identitätsblock (EN, FINAL 26.11.2026 – wortgleich in jeden Prompt, hinter `<<<d5f71ebe-1744-41f9-84bd-595c2c73def1>>>`)
 ```
-a 26-year-old woman with an oval face and soft defined jawline, hazel almond-shaped eyes, naturally full
-medium-brown brows, a straight slim nose, natural medium-full lips, light warm skin with subtle natural
-texture, long dark-brown hair with a soft middle part, athletic toned build of average height
+the same woman: a 19-year-old Albanian woman, clearly an adult, light olive-beige skin with natural texture, an oval face with high cheekbones, thick dark natural brows, dark brown almond eyes, a straight nose with a slight bump, natural full lips, long thick dark brown hair, petite and curvy with realistic natural proportions
 ```
+(62 Wörter. Frisur – offen / Dutt / Pferdeschwanz – und Kleidung immer separat angeben, sonst setzt das Element automatisch einen hohen Pferdeschwanz.)
+
+**Fester Stil-Block für den Handy-Look (ans Ende jedes Prompts):**
+```
+Natural unedited phone photo straight from the camera roll, not posed: slightly tilted framing, focus a touch soft in places, normal phone noise, real skin texture, no retouching, no filter, no text, no logos.
+```
+Bei Selfies „front-camera selfie“, bei Fremdperspektive „taken by a friend/roommate“. Für Posts: „modest neckline“ ergänzen.
 
 ## Stil-Regeln
 - **Ausstrahlung (festgelegt):** attraktiv, natürlich, sportlich. Outfits betonen die Figur dezent (Leggings + Crop-Top im Gym, figurnahe Kleider, Jeans + Body), aber mit Niveau.
