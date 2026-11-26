@@ -4,9 +4,10 @@
 > Was hier steht, ist verbindlich. Der Identitätsblock wird **wortgleich** in jeden Prompt kopiert.
 
 ## Steckbrief (VORSCHLAG)
-- **Name:** offen. Kriterien: kurz, in DE und international aussprechbar, Benutzername ≤ 15 Zeichen, auf Instagram + TikTok frei, keine Ähnlichkeit zu Promis/Marken. Beispiele zum Prüfen: Mira, Lia, Nele, Ella, Jana, Romy + Nische („mira.kocht.protein“ ist zu lang; besser „miraprotein“, „romyeats“).
+- **Name:** **Platzhalter „[Name]“** (Inhaber 26.11.2026, Entscheidung später). Technische Namen bis dahin: Element/Soul „Persona01“. Kriterien für später: Kriterien: kurz, in DE und international aussprechbar, Benutzername ≤ 15 Zeichen, auf Instagram + TikTok frei, keine Ähnlichkeit zu Promis/Marken. Beispiele zum Prüfen: Mira, Lia, Nele, Ella, Jana, Romy + Nische („mira.kocht.protein“ ist zu lang; besser „miraprotein“, „romyeats“).
 - **Wirkt wie:** 25–27 Jahre (klar erwachsen).
-- **Wohnort:** fiktive Altbauwohnung in einer deutschen Großstadt (VORSCHLAG: Köln-Ehrenfeld oder Leipzig-Plagwitz – urban, Cafés, Rhein/Park, sportlich, nicht protzig).
+- **Wohnort:** fiktive Altbauwohnung in **Köln-Ehrenfeld** (entschieden 26.11.2026) – urban, Cafés, Rhein/Park, sportlich, nicht protzig.
+- **Aussehen (entschieden 26.11.2026):** lange **dunkelbraune** Haare, Typ **sportlich-natürlich**, **kein** künstliches Wiedererkennungsmerkmal (kein Muttermal, keine Grübchen, keine Sommersprossen-Vorgabe).
 - **Nische:** High-Protein-Küche 50 % · Gym-Alltag 25 % · Athleisure/Mode 25 %.
 - **Charakter in 3 Worten:** bodenständig, witzig, diszipliniert-aber-nicht-verbissen.
 - **Hintergrund:** hat vor ca. 3 Jahren mit Krafttraining angefangen, kocht seitdem eiweißreich, weil sie „keine Lust auf trockene Hähnchenbrust“ hatte. Arbeitet „irgendwas im Büro“ (bewusst vage, Alltag bleibt nahbar).
@@ -17,7 +18,10 @@
 - **Jahresziel (Story-Bogen):** „52 Wochen, 52 High-Protein-Rezepte“ + erster sauberer Klimmzug (Fortschritt über Gewohnheiten, nie über Körperveränderung).
 - **Antwort auf „Bist du echt?“:** ehrlich – „Ich bin eine KI-Figur. Hinter mir steht ein kleines Team, die Rezepte sind echt nachgekocht.“ Die Figur behauptet nie, ein Mensch zu sein.
 
-## Wiedererkennungsmerkmal (VORSCHLAG – Narbe in der Augenbraue ist ausgeschlossen)
+## Wiedererkennungsmerkmal – ENTSCHIEDEN: keins (Inhaber 26.11.2026)
+Wiedererkennung allein über Gesicht (Soul ID + Element + Identitätsblock), Haare und wiederkehrende Outfits/Orte. Folge: Im Qualitätscheck Punkt 1 auf Augenfarbe, Nasen-/Kinnform, Brauen und Haaransatz achten statt aufs Muttermal. Tabelle unten nur noch als Archiv.
+
+### Archiv: geprüfte Optionen
 | Option | Wirkung | KI-Stabilität | Empfehlung |
 |---|---|---|---|
 | **Kleines Muttermal am rechten Wangenknochen** (knapp unter dem äußeren Augenwinkel) | klassisch attraktiv, sofort wiedererkennbar | gut (Baukasten-Option „Beauty mark“ `fn_mole`) | **✅ Hauptmerkmal** |
@@ -27,7 +31,7 @@
 | Kleine Lücke zwischen den Schneidezähnen | sehr charakteristisch | schwach (Zähne werden von KI oft „korrigiert“) | ❌ |
 | Pigmentstörung, Heterochromie, Narbe | – | schwach / unsensibel / ausgeschlossen | ❌ |
 - Prompt-Text (EN) für Empfehlung: `a small dark beauty mark on her right cheekbone just below the outer corner of her eye` + bei Lachen `a dimple on her left cheek when she smiles`.
-- **Spiegel-Selfies:** Muttermal erscheint dort physikalisch korrekt **links**. Im Qualitätscheck bewusst prüfen.
+- **Spiegel-Selfies:** Scheitel und Haarfall erscheinen seitenverkehrt – im Qualitätscheck prüfen.
 
 ## Higgsfield-Baukasten-Einstellungen (geprüft per Probelauf 26.11.2026)
 Startpunkt für `ai_influencer_prepare` (Tier **`normal`** = realistisch; bei `randomize=false` IMMER `tier: "normal"` setzen, sonst nimmt der Baukasten `freak`):
@@ -37,17 +41,18 @@ Startpunkt für `ai_influencer_prepare` (Tier **`normal`** = realistisch; bei `r
   "randomize": false,
   "selection": {
     "gender": ["female"], "age": ["adult"], "body_type": ["body_athletic"], "height": ["h_average"],
-    "hair": ["hair_long"], "hair_colour": ["hc_chestnut"], "aesthetic": ["sporty"],
+    "hair": ["hair_long"], "hair_colour": ["hc_darkbrown"], "aesthetic": ["sporty"],
     "ethnicity_origin_base": ["european"], "skin_tone": ["st_light"],
     "eye_shape": ["es_almond"], "eye_color": ["eye_hazel"],
-    "freak_face": ["fn_mole", "fn_dimples"], "accessory": ["acc_jewelry"]
+    "accessory": ["acc_jewelry"]
   },
-  "brief": "Photorealistic woman in her mid twenties, natural athletic build from regular strength training, warm confident expression, minimal makeup, natural skin texture with subtle pores, small beauty mark on her right cheekbone, dimple on the left cheek when smiling, attractive but realistic and approachable, not doll-like, no heavy retouching.",
+  "brief": "Photorealistic woman in her mid twenties, long dark brown hair, natural athletic build from regular strength training, warm confident expression, minimal makeup, natural skin texture with subtle pores, attractive but realistic and approachable, not doll-like, no heavy retouching.",
   "medias": []
 }
 ```
 - **Kosten:** ca. 1,4 Credits pro Character Sheet (Probelauf). 3 Varianten ≈ 4–5 Credits.
 - **Fallstricke:** `fn_mole` + `fn_freckles` gleichzeitig → Fehler (beide Slot „marks“). Keine `facial_hair`-Angabe bei Frauen. Haar/Augen/Merkmale je nach Inhaber-Wunsch anpassen (Optionen: `ai_influencer_get_options`).
+- Runde 1 (26.11.2026): Achse = Augenfarbe (`eye_hazel` / `eye_brown` / `eye_green`), Quote je 1,375 Credits.
 - Für 3 unterschiedliche Varianten: gleiche Basis, je 1 Achse ändern (z. B. Haarfarbe `hc_chestnut` / `hc_darkbrown` / `hc_blonde` oder Aesthetic `sporty` / `casual` / `streetstyle`).
 
 ## Higgsfield-IDs (werden in Modus A eingetragen)
@@ -63,8 +68,7 @@ Vorlage (40–70 Wörter, nur unveränderliche Merkmale, keine Kleidung/Frisur-S
 ```
 a 26-year-old woman with an oval face and soft defined jawline, hazel almond-shaped eyes, naturally full
 medium-brown brows, a straight slim nose, natural medium-full lips, light warm skin with subtle natural
-texture, a small dark beauty mark on her right cheekbone just below the outer corner of her eye,
-long chestnut-brown hair with a soft middle part, athletic toned build of average height
+texture, long dark-brown hair with a soft middle part, athletic toned build of average height
 ```
 
 ## Stil-Regeln
