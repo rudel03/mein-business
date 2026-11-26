@@ -8,6 +8,7 @@ Wird beim Start jeder Sitzung gelesen. Ein Repository, ein Ordner pro Projekt. P
 | Honigmama / BeeQueen (Koch-E-Books Schwangerschaft & erstes Jahr) | `honigmama/` | jctx4r-bu.myshopify.com | live; Entwurf mit Verbesserungen wartet aufs Veröffentlichen |
 | DURCHSCHICHT (E-Book für Schichtarbeit) | `durchschicht/` | mystore (`q2e8xh-pz.myshopify.com`) | Theme live, Produkt als Entwurf; offen: PDF anhängen, Impressum, bezahlter Plan |
 | Essensplaner | `essensplaner/` | – | Auftrag steht in `essensplaner/AUFTRAG.md`, Recherche noch nicht begonnen |
+| KI-Influencerin (virtuelle Instagram/TikTok-Persona) | `ai-influencerin/` | – | System + Skills angelegt; offen: Nische wählen, Persona anlegen. Start: `ai-influencerin/START-PROMPT.md` |
 
 ## Arbeitsweise
 - **Eine Sitzung pro Projekt** (der Kontext bleibt sauber). Andere Projektordner nur lesen, wenn sie relevant sind.
@@ -31,7 +32,7 @@ Wird beim Start jeder Sitzung gelesen. Ein Repository, ein Ordner pro Projekt. P
 - Domains prüfen per RDAP: `rdap.denic.de/domain/<name>.de`; 404 bedeutet frei.
 
 ## Skills (`.claude/skills/`)
-- 33 geprüfte Marketing-, Design- und Test-Skills, siehe `.claude/skills/README.md`. Bei passenden Aufgaben nutzen: Texte → copywriting/copy-editing, Anzeigen → ad-creative/ads, Preise → pricing/paywalls, App/Landingpage → frontend-design + cro, Abo → onboarding/churn-prevention, Recherche → customer-research/competitor-profiling.
+- 33 geprüfte Marketing-, Design- und Test-Skills plus 2 eigene (`influencer-prompt`, `influencer-redaktion`), siehe `.claude/skills/README.md`. Bei passenden Aufgaben nutzen: Texte → copywriting/copy-editing, Anzeigen → ad-creative/ads, Preise → pricing/paywalls, App/Landingpage → frontend-design + cro, Abo → onboarding/churn-prevention, Recherche → customer-research/competitor-profiling.
 - Die Skills sind US-geprägt. **Deutsches/EU-Recht hat Vorrang** (Buchpreisbindung, UWG, HWG, DSGVO, § 312k BGB Kündigungsbutton, Double-Opt-in). Keine US-Taktiken wie Fake-Countdowns, versteckte Kündigung oder erfundene Zahlen.
 - Werkzeuge mit ◆ in marketingskills sind **gesponserte Partner**. Nicht bevorzugen, neutral vergleichen.
 - Mehrere Skills lesen eine Produktkontext-Datei `.agents/product-marketing.md`. Pro Projekt eine anlegen (z. B. `durchschicht/.agents/product-marketing.md`) mit Zielgruppe, Positionierung, Belegen und Learnings aus Tests.
