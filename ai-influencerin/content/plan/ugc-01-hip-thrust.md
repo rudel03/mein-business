@@ -126,3 +126,12 @@ Guthaben vorher prüfen (zuletzt ~610 Credits).
 - Inhaber wollte nur **einen** Entwurf → ein Seedance-2.5-Clip mit 15 s und 5 Schnitten in einem Prompt (480p, Startbild `5edff574…`). Job `95559f81-1ddf-4df0-b413-4667ef353139`.
 - Gesichtet (Standbilder): Hook seitlich ✓, Fußshot tief ✓, Halten oben ✓, Outro frontal mit Stirnwischen ✓. Abweichungen: **weiße statt schwarzer Schuhe**, seitliche Shots zeigen vor allem den Oberkörper (Hüfte/Po teils von der Hantel verdeckt) → beim nächsten Mal Kamera weiter weg und etwas höher, Schuhfarbe doppelt nennen.
 - Ton und Lippensynchronität: Inhaber prüft.
+
+## 10. Stil-Referenz des Inhabers (26.11.2026)
+Referenz-Video (68 s, TikTok eines fremden Creators über „Claude editiert meine Videos“, nur **Schnittstil** übernommen, nicht Person oder Inhalt):
+- Talking Head nah am Mikro, dunkler, warmer Raum; Sprecher füllt das Bild.
+- **Kinetische Typo**: Wort für Wort, Mischung aus fetter Sans + kursiver Serif in Gold/Beige („*plain english.*“, „*hard work*“), Schlüsselwort groß.
+- Schnelle Layoutwechsel statt Zooms: Bild-in-Bild, Split „vorher/nachher“, Vollbild-Einblender (Screens, Karten, Logos), Motion-Graphic-Rahmen um den Sprecher.
+- B-Roll und Einblender ca. alle 2–3 s, Musik + Soundeffekte (Whoosh, Klick).
+- Genau dieser Stil = **Higgsfield Shorts Studio (`/shorts`)**: generierter Sprecher in 1080p/720p, Captions, Motion Design, SFX, Musik, Render im Higgsfield-Sandbox. Kosten vor allem durch die Sprecher-Takes.
+- Plan: 30 s, 720p, 4–5 Takes (~200–250 Credits); Guthaben 557 Credits (26.11.2026).
