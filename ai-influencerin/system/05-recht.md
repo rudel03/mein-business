@@ -1,6 +1,8 @@
 # Recht & Plattformregeln (keine Rechtsberatung, Stand 26.11.2026)
 
 ## Pflichten-Checkliste
+> Ausführlich und mit Verbandsleitfäden (Wettbewerbszentrale, ZAW, Medienanstalten): `09-profi-wissen.md`, Abschnitte F und G. **Unser Standard: Plattform-Label + Bio + sichtbares „KI“-Kürzel/EU-Icon auf jedem Bild bzw. am Anfang jedes Reels.**
+
 - [ ] **Instagram:** „AI-generated profile“ im Profil aktiv (sonst Reichweitenverlust, nicht empfehlbar). Quelle: [Instagram](https://creators.instagram.com/blog/ai-generated-profile-label)
 - [ ] **TikTok:** Schalter „AI-generated content“ bei jedem realistischen KI-Video/-Bild. Quelle: [TikTok](https://support.tiktok.com/en/using-tiktok/creating-videos/ai-generated-content)
 - [ ] **EU AI Act Art. 50 Abs. 4:** Offenlegung, dass Bilder/Videos KI-generiert sind → Bio-Hinweis + Plattform-Label; bei Werbeanzeigen zusätzlich im Creative/Text. Quelle: [Art. 50 Leitfaden](https://artificialintelligenceact.eu/transparency-rules-article-50/)

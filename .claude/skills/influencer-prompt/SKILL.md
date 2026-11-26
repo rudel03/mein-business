@@ -79,6 +79,9 @@ Fehler → **eine** Variable ändern und neu generieren (oder lokal bearbeiten m
 ## 5. Video / Reels
 Siehe `references/video.md`. Grundprinzip: **erst das perfekte Standbild, dann animieren** (start_image), Prompt beschreibt nur Bewegung + Kamera, nicht das Gesicht. Sprechende Clips: Higgsfield `intone` (Charakterbild + Sprachaufnahme), Stimme einmal mit `create_voice` festlegen und immer gleich verwenden.
 
+## 5b. Formate
+Feed/Carousel **3:4** (1080 × 1440; über Postiz/API 4:5), Reels/Stories **9:16**, danach `upscale_image`. Bei Carousels alle Bilder im selben Format. Wichtiges im Reel in der Mitte (UI-Ränder oben/unten frei). Das „KI“-Kürzel kommt nachträglich (Canva), nie im Generator.
+
 ## 6. Ausgabe an den Inhaber
 Kurz auf Deutsch: welche Bilder (Vorschau), welcher Prompt (aufklappbar/als Datei), Vorschlag für Caption + Hashtags (Skill `influencer-redaktion`), Hinweis „KI-Label beim Posten aktivieren“. Gewählte Bilder unter `ai-influencerin/content/bilder/JJJJ-MM-TT_kurzname.png` ablegen (keine Dateien > 50 MB committen) und Prompt + Job-ID in `ai-influencerin/content/LOG.md` eintragen.
 

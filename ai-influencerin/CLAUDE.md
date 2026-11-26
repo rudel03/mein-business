@@ -6,7 +6,7 @@ Wird beim Start jeder Sitzung zu diesem Projekt gelesen. Übergreifende Regeln: 
 Eine fotorealistische, klar als KI gekennzeichnete Influencerin auf Instagram (+ TikTok) aufbauen. Der Inhaber gibt kurze Beschreibungen, Claude erstellt detaillierte Prompts, Bilder, Videos, Captions, Pläne und Auswertungen. Möglichst viel Automatisierung, ohne Qualität zu verlieren und ohne gegen Plattformregeln zu verstoßen.
 
 ## Stand (26.11.2026)
-- System angelegt (ergänzt um `system/07-aufbau-playbook.md` = Fallstudien, Algorithmus 2026, Wochenrhythmus, Content-Ideen, Storyline; `system/08-werkzeuge.md` = alle Tools/Skills/Plugins): Recherche, Account-Aufbau, Content-Strategie, Prompt-System, Recht, Workflow, Skills `influencer-prompt` + `influencer-redaktion`.
+- System angelegt (ergänzt um `system/07-aufbau-playbook.md` = Fallstudien, Algorithmus 2026, Wochenrhythmus, Content-Ideen, Storyline; `system/08-werkzeuge.md` = alle Tools/Skills/Plugins; `system/09-profi-wissen.md` = 12 Fehler, Algorithmus, Maße, Formate, Routinen, Checkliste vor jedem Post, KI-/Werbekennzeichnung nach Wettbewerbszentrale/ZAW/Medienanstalten): Recherche, Account-Aufbau, Content-Strategie, Prompt-System, Recht, Workflow, Skills `influencer-prompt` + `influencer-redaktion`.
 - **Offen (nächste Schritte, in dieser Reihenfolge):**
   1. ~~Nische entscheiden~~ → **Entschieden 26.11.2026: Frau, „High-Protein-Küche + Gym-Alltag + Athleisure/Mode“** (Details `system/03-content-strategie.md`, Abschnitt „Gewählte Nische“). Offen: Grundtyp/Aussehen der Persona.
   2. Persona anlegen (`system/06-workflow.md`): AI Influencer Builder → Element → 30 Porträts → Soul ID → Identitätsblock in `persona/PERSONA.md`.
@@ -19,6 +19,7 @@ Eine fotorealistische, klar als KI gekennzeichnete Influencerin auf Instagram (+
 - Phase: **0 – Vorbereitung**. Start-Datum Account: –
 
 ## Entscheidungen
+- KI-Kennzeichnung je Post zusätzlich zum Plattform-Label: „KI“-Kürzel/EU-Icon im Bild bzw. am Reel-Anfang + „KI-generiert“ in der Caption (Wettbewerbszentrale: Plattform-Label evtl. nicht ausreichend, deutsch bevorzugt).
 - Transparenz statt Versteckspiel: Label „AI-generated profile“ ab Tag 1, KI-Hinweis in der Bio (Instagram drosselt sonst die Reichweite; EU AI Act Art. 50).
 - Engagement bei anderen (Folgen/Liken/Kommentieren) macht der Inhaber von Hand. Keine Bots, keine Warm-up-Dienste, kein VPN.
 - Higgsfield als einziges Generierungswerkzeug (Repo-Regel). Konsistenz über Element + Soul ID + Identitätsblock.

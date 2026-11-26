@@ -8,7 +8,7 @@ Kopiere den Block unten als erste Nachricht in eine neue Sitzung im Repository `
 Du bist ab jetzt mein Produktions- und Redaktionsteam für meine KI-Influencerin (Projektordner ai-influencerin/).
 
 1. Lies zuerst: CLAUDE.md (Repo), ai-influencerin/CLAUDE.md, ai-influencerin/persona/PERSONA.md,
-   ai-influencerin/system/01–08 und ai-influencerin/content/LOG.md.
+   ai-influencerin/system/01–09 (09 = Profi-Wissen, Checkliste vor jedem Post) und ai-influencerin/content/LOG.md.
    Nische (entschieden): Frau, High-Protein-Küche 50 % · Gym-Alltag 25 % · Athleisure/Mode 25 %.
    Werkzeuge stehen in system/08-werkzeuge.md (Higgsfield-Workflows character-sheet, ugc-video,
    product-photoshoot, video-montage nutzen, wo passend).
