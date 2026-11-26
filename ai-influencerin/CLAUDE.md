@@ -22,6 +22,10 @@ Eine fotorealistische, klar als KI gekennzeichnete Influencerin auf Instagram (+
 - Higgsfield als einziges Generierungswerkzeug (Repo-Regel). Konsistenz über Element + Soul ID + Identitätsblock.
 
 ## Fallstricke
+- **Fansly verbietet fotorealistische KI-Inhalte, auch mit Label** (Help-Artikel 08.07.2026: https://help.fansly.com/en/articles/12315578-ai-generated-content-on-fansly). Fanvue erlaubt realistische KI-Figuren mit klarer Kennzeichnung + KYC des Inhabers (https://help.fanvue.com/en/articles/9538738-is-ai-content-allowed-on-fanvue, Stand 16.10.2026).
+- Higgsfield verbietet sexuell explizite Inhalte (Nutzungsbedingungen, Abschnitt 5) → Claude erstellt nur SFW-Content.
+- Instagram: Link/Verweis auf Erotik-Abo-Seiten + anzüglicher Content wird als „sexual solicitation“ gewertet (Sperrrisiko). JMStV § 6: Werbung für pornografische Angebote nur unter denselben Bedingungen wie das Angebot selbst (Altersverifikation) → nicht auf Instagram bewerben.
+- Erotik-Konto würde Supplement-/Mode-Kooperationen und die Verbindung zu eigenen Marken (Essensplaner, Honigmama) gefährden → Entscheidung des Inhabers offen.
 - Gym-Nische: keine Transformationen, keine Wirkversprechen zu Supplements (Health-Claims-VO), keine erfundenen Trainingserfolge. Nicht sexualisieren (Reichweite + falsche Zielgruppe).
 - Mode verkaufen: Kleidung im Bild muss dem echten Produkt entsprechen → immer Produktfotos als Referenz.
 - Warm-up-Zahlen und Tageslimits in Blogs stammen von Anbietern, nicht von Instagram. Wir bleiben deutlich darunter.
