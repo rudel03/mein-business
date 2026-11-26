@@ -1,5 +1,25 @@
-# Themenvorrat – Business-Modelle leicht erklärt
+# Themenvorrat – „Geschäftsmodelle, auf die keiner kommt“ (ab 26.11.2026)
 
+Vom Inhaber genannt: ✅/▶ Entrümpelung (004) · ☐ Umzugsfirma · ☐ Callcenter · ☐ Folierer (Autofolierung)
+Weitere Ideen (unterschätzt, viele Details, Plotwist-Potenzial):
+- ☐ Schlüsseldienst (Anfahrt, Nachtzuschlag, warum manche 400 € nehmen)
+- ☐ Tatortreiniger / Leichenfundortreinigung (heikel → respektvoll)
+- ☐ Fahrradkurier / Lieferdienst-Subunternehmer
+- ☐ Autoaufbereitung / Smart Repair
+- ☐ Kaugummi-/Graffitientfernung für Städte
+- ☐ Automatenaufsteller (Snack-/Kaffeeautomaten)
+- ☐ Waschsalon
+- ☐ Abschleppdienst (Privatparkplätze)
+- ☐ Hausmeisterservice / Winterdienst
+- ☐ Bestatter
+- ☐ Gerüstbauer
+- ☐ Mobile Reifenwechsel
+- ☐ Pfandsammel-/Leergut-Logistik
+- ☐ Hochzeits-DJ / Fotobox-Vermietung
+- ☐ Haushaltsauflösung vs. Entrümpelung (Folge 2)
+
+---
+## Alter Vorrat (Konzern-Geschäftsmodelle, nur noch Reserve)
 Status: ☐ offen · ▶ in Arbeit · ✅ gepostet. Zahlen werden erst beim Skript aus Primärquellen recherchiert (Quelle + Jahr ins Skript).
 
 ## Serie A: „Wie verdient … eigentlich Geld?“

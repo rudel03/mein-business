@@ -3,6 +3,7 @@
 Wird beim Start jeder Sitzung zu diesem Projekt gelesen. Übergreifende Regeln: `../CLAUDE.md`. Gesamtplan: `PLAN.md`.
 
 ## Ziel
+**Neues Format (26.11.2026): „Geschäftsmodelle, auf die keiner kommt“ → Regeln in `FORMAT.md` (Pflichtlektüre vor jedem Video).**
 Ein **neuer, eigenständiger Faceless-Kanal** (kein Gesicht, keine Persona). Claude produziert automatisch Kurzvideos (9:16, 20–45 s) aus **KI-Bildern + KI-Sprecherstimme + eingebrannten Untertiteln** und veröffentlicht sie **voll automatisch** auf YouTube Shorts, Instagram Reels und TikTok.
 
 ## Stand (26.11.2026)
@@ -17,7 +18,9 @@ Ein **neuer, eigenständiger Faceless-Kanal** (kein Gesicht, keine Persona). Cla
 - ❌ Testvideo 001 (Standbilder + Zoom, seed_audio-Stimme) vom Inhaber **abgelehnt**: „Sprecher hat Akzent, sieht kacke aus“. `pipeline/render.py` nur noch als Billig-Variante.
 - **Neuer Stil = Referenz des Inhabers** (TikTok @ai_cliipz-artig, Thema dort Nachbarrecht): animierte **Low-Poly-3D-Spielegrafik**, echte Bewegung, ~2-s-Schnitte, **Ein-Wort-Untertitel** (weiß, schwarzer Rand, Schlüsselwörter gelb), **Etiketten/Pills** („5 cm“, „max. 30 m²“), rote Kreise/Icons, **frecher Ton mit Sprüchen** an den Zuschauer. Wir machen es ähnlich, aber nicht 1:1: eigene Hauptfigur (gelber Hoodie, schwarze Cap rückwärts), Abendsonne statt Mittag.
 - ❌ Testvideo 002 (Higgsfield-Clips + ElevenLabs „Bram“, 46 Credits) vom Inhaber abgelehnt: Sprecher „schlimm, zu langsam“, Sprüche unlustig. Inhaber will **ohne Higgsfield, per Code** (wie andere Creator).
-- ✅ **Testvideo 003 komplett per Code** (26.11.2026): `ausgabe/003-costco-code-test.mp4`, 30 s, **0 Credits, ~4 min Rechenzeit**. Wartet auf Feedback. Stimmproben `ausgabe/stimmproben-piper.mp3` (Reihenfolge: 1 Thorsten high, 2 Thorsten amüsiert, 3 Thorsten wütend, 4 Thorsten überrascht, 5 Karlsson, 6 Pavoque).
+- ✅ **Testvideo 004 Entrümpelung** (26.11.2026): neues Format (Hook → Details mit Zahlen → Pro-Tipp → Plotwist „kaufst deine eigene Couch zurück“), Stimme ElevenLabs **Dylan** über Higgsfield (≈ 6 Credits), Video per Code. `ausgabe/004-entruempelung-test.mp4`. Wartet auf Feedback.
+- ❌ Testvideo 003: Piper-Stimme „grauenhaft, alt und gelangweilt“; Slang klang wie „30-Jähriger, der auf jung macht“. Piper nur noch Notlösung.
+- (alt) Testvideo 003 komplett per Code (26.11.2026): `ausgabe/003-costco-code-test.mp4`, 30 s, **0 Credits, ~4 min Rechenzeit**. Wartet auf Feedback. Stimmproben `ausgabe/stimmproben-piper.mp3` (Reihenfolge: 1 Thorsten high, 2 Thorsten amüsiert, 3 Thorsten wütend, 4 Thorsten überrascht, 5 Karlsson, 6 Pavoque).
 - (alt) Testvideo 002 Costco im Game-Stil (26.11.2026): `ausgabe/002-costco-gamestyle-test.mp4`, 41,7 s. Skript/Belege/Config in `skripte/002-costco-gamestyle/`. **≈ 46 Credits**. Wartet auf Feedback des Inhabers. Stimmproben (5 ElevenLabs-Stimmen) in `ausgabe/stimmproben.mp3`, Reihenfolge Cillian, Marcus, Brooks, Bram, Max (Pieps davor, Ton steigt).
 - ✅ Pipeline `pipeline/render_blocks.py`: 10-s-Clips + 1 Sprecherzeile je Clip → Ein-Wort-Untertitel per faster-whisper (Modell small) an Skripttext ausgerichtet, Pills per Wort ausgelöst, Quellenzeile, −14 LUFS. Ist eine Zeile länger als der Clip, wird der Clip verlangsamt (max. 20 %), nie die Stimme.
 - Werkzeuge im Container geprüft: ffmpeg 6.1, ffprobe, Node 22, jq vorhanden. Postiz-CLI noch nicht installiert (`npm i -g postiz`).
@@ -25,7 +28,8 @@ Ein **neuer, eigenständiger Faceless-Kanal** (kein Gesicht, keine Persona). Cla
 ## Entscheidungen
 - **26.11.2026: Produktion OHNE Higgsfield** (ausdrücklicher Wunsch des Inhabers, Ausnahme von der Repo-Regel). Ablauf: `pipeline/make_video.py video.json` → Piper-Stimme je Zeile → `engine/render3d.mjs` nimmt Three.js-Szenen im Headless-Chromium auf (SwiftShader, 1080×1920, 30 fps, ~0,3 s/Bild) → Ein-Wort-Untertitel per faster-whisper → ffmpeg. Neue Sitzung: zuerst `bash pipeline/setup.sh`.
 - 3D-Baukasten `engine/world.js` (Figuren mit Posen walk/armsUp/handsOnHead/stop/holdUp/push/shrug/jawDrop, Auto, Lagerhalle, Drehkreuz mit Ampel, Einkaufswagen, Münze/Münzturm, Karte, Chipstüte, Angelhaken, Regale, Kasse, Tresor). Pro Video eine Szenendatei `engine/scenes/<name>.js` mit `shots` {setup, update(t,d,cam,ctx)}. Look: Abendhimmel lila→orange, Lambert-Flat-Shading, Held = gelber Hoodie + schwarze Cap.
-- **Stimme: Piper (lokal, kostenlos)** `de_DE-thorsten-high`, `speed` 0.78. edge-tts geht im Container nicht (WebSocket über Proxy blockiert). Beste Qualität wäre ElevenLabs-API direkt mit deutscher Stimme (kostenpflichtig) oder Stimmklon.
+- **Stimme: ElevenLabs „Dylan“** über Higgsfield `text2speech_v2`/`elevenlabs` (`b847bc29-f184-583a-8ad9-d1f1e16d1a60`), Tempo ×1,25 per atempo in `make_video.py` (`voice.tempo`, Beat-Feld `audio`). Getestet: Cody (Fehler), Kevin/Benji (hängen in Warteschlange), minimax-Varianten. Piper (`de_DE-thorsten-high`) klingt alt → nur Notlösung. edge-tts geht im Container nicht (WebSocket über Proxy blockiert). Beste Qualität wäre ElevenLabs-API direkt mit deutscher Stimme (kostenpflichtig) oder Stimmklon.
+- **Thema: unterschätzte Geschäftsmodelle** (Entrümpelung, Umzug, Callcenter, Folierer …), jedes Detail + Mehrwert, Plotwist am Ende. Themenliste `skripte/themen.md`.
 - **Ton: Kraftausdrücke als Füllwörter** („verfickte“, „scheiß“, „Bruder“) – Wunsch des Inhabers. Nie gegen echte Firmen/Personen/Gruppen richten (z. B. nicht „Scheißladen Costco“). Hinweis: starke Flüche → YouTube schränkt Werbung ein; TikTok/IG ok.
 - ~~Stil 001: Standbilder + seed_audio „Julian“~~ → abgelehnt (Akzent).
 - Untertitel: Schrift Inter Display Black (im Container vorhanden). Zahlen im Sprechertext als Ziffern in `phrases` schreiben, damit sie gelb werden.
@@ -41,6 +45,8 @@ Ein **neuer, eigenständiger Faceless-Kanal** (kein Gesicht, keine Persona). Cla
 ## Fallstricke
 - `render.py`: Bilder nicht auf 2× hochskalieren (zoompan wird >10 min langsam); 1,25× reicht.
 - faster-whisper: `av.open(... metadata_errors)`-Fehler → Audio per ffmpeg als numpy-Array übergeben (so in render_blocks.py).
+- Higgsfield: max. 6 gleichzeitige Jobs (sonst `submission_failed`). Hängende `queued`-Jobs blockieren Plätze.
+- Regionale Gebühren immer an der Quelle prüfen (lrasha.de = LK Schwäbisch Hall, nicht Hohenlohe!). PDF lesen: `pdftotext -layout`.
 - Costco-Zahlen: aktuell **Geschäftsjahr 2026** (nicht 2025). Immer das neueste Geschäftsjahr prüfen.
 - `phrases` an den Satzpausen trennen (jeder Satz und „Der Trick:“ einzeln). Passt die Zahl der Sprechpausen nicht, verteilt das Skript proportional (ungenauer).
 - **Marken & Logos:** Firmennamen dürfen sachlich genannt werden, aber **keine Logos, Markenprodukte oder Maskottchen in KI-Bildern** nachbauen (Markenrecht) und nie den Eindruck einer Kooperation erwecken. Bilder zeigen generische Szenen (Lager, Kasse, Fabrik).

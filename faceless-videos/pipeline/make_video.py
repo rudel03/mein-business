@@ -4,7 +4,8 @@
 Aufruf:  python3 -I make_video.py video.json
 {
   "scene": "costco",                      # engine/scenes/<scene>.js
-  "voice": {"model": "de_DE-thorsten-high", "speed": 0.8},   # speed = Piper length_scale (kleiner = schneller)
+  "voice": {"model": "de_DE-thorsten-high", "speed": 0.8, "tempo": 1.0},  # Piper length_scale / atempo für fertige Dateien
+  # pro Beat optional: "audio": "datei.mp3" (fertige Stimme) oder "say": "Text für die Stimme" (Zahlen ausgeschrieben)
   "beats": [                               # eine Sprecherzeile pro Einstellung
     {"shot": "approach", "text": "Stell dir vor ...",
      "labels": [{"word": "Eintritt", "text": "EINTRITT?!", "dur": 2.0, "color": "red", "x": 540, "y": 560}]}
@@ -23,7 +24,7 @@ from render_blocks import word_times, ts, esc, norm, dur, COLORS, FONT, W, H  # 
 
 ENGINE = os.path.join(os.path.dirname(HERE), "engine")
 PIPER_DIR = os.environ.get("PIPER_VOICES", "/root/piper")
-GAP = 0.12  # Pause zwischen Zeilen (s)
+GAP = 0.06  # Pause zwischen Zeilen (s)
 
 
 def tts(text, model, speed, out):
@@ -49,7 +50,14 @@ def main(cfg_path):
     beats, t = [], 0.0
     for i, b in enumerate(cfg["beats"], 1):
         wav = os.path.join(tmp, f"beat{i}.wav")
-        tts(b["text"], model, speed, wav)
+        if b.get("audio"):  # fertige Sprachdatei (z. B. ElevenLabs über Higgsfield)
+            src = b["audio"] if os.path.isabs(b["audio"]) else P(b["audio"])
+            tempo = v.get("tempo", 1.0)
+            subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", src, "-af",
+                            f"atempo={tempo},silenceremove=start_periods=1:start_threshold=-45dB,areverse,"
+                            "silenceremove=start_periods=1:start_threshold=-45dB,areverse", "-ar", "44100", wav], check=True)
+        else:
+            tts(b.get("say", b["text"]), model, speed, wav)
         d = dur(wav) + GAP
         beats.append({**b, "wav": wav, "start": t, "dur": d})
         t += d
@@ -58,8 +66,12 @@ def main(cfg_path):
     print(f"Sprecher: {total:.1f} s, {len(beats)} Zeilen")
 
     # 2) 3D-Aufnahme
-    plan = {"scene": cfg["scene"], "W": W, "H": H, "fps": 30,
-            "shots": [{"name": b["shot"], "start": b["start"], "dur": b["dur"]} for b in beats]}
+    shots = []
+    for b in beats:  # "shot" darf auch eine Liste sein -> Zeile wird gleichmäßig auf mehrere Einstellungen verteilt
+        names = b["shot"] if isinstance(b["shot"], list) else [b["shot"]]
+        for k, n in enumerate(names):
+            shots.append({"name": n, "start": b["start"] + b["dur"] * k / len(names), "dur": b["dur"] / len(names)})
+    plan = {"scene": cfg["scene"], "W": W, "H": H, "fps": 30, "shots": shots}
     plan_path = os.path.join(tmp, "plan.json"); json.dump(plan, open(plan_path, "w"))
     silent = os.path.join(tmp, "silent.mp4")
     env = {**os.environ, "NODE_PATH": subprocess.check_output(["npm", "root", "-g"], text=True).strip()}

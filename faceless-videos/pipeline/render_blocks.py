@@ -26,6 +26,7 @@ COLORS = {  # ASS: &HBBGGRR
     "red": ("&H002A2AE0", "&H00FFFFFF"),
     "white": ("&H00FFFFFF", "&H00101010"),
     "dark": ("&H00202020", "&H00FFFFFF"),
+    "green": ("&H0071CC2E", "&H00FFFFFF"),
 }
 
 

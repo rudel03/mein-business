@@ -251,3 +251,116 @@ export function camMove(cam, from, to, lookFrom, lookTo, t) {
   cam.position.set(...lerpV(from, to, e));
   cam.lookAt(...lerpV(lookFrom, lookTo || lookFrom, e));
 }
+
+// ---------- Requisiten Haushalt / Entrümpelung ----------
+export function room(w = 10, d = 8, h = 3.2, wall = 0xf3e9d8, floor = 0xb98a5a) {
+  const g = new THREE.Group();
+  const f = new THREE.Mesh(new THREE.PlaneGeometry(w, d), M(floor)); f.rotation.x = -Math.PI / 2; f.receiveShadow = true; g.add(f);
+  g.add(at(box(w, h, 0.2, wall), 0, h / 2, -d / 2));
+  const side = box(0.2, h, d, wall); at(side, -w / 2, h / 2, 0); g.add(side);
+  g.add(at(box(1.6, 1.3, 0.05, 0xbfe3ff, { emissive: 0x9fd3ff, emissiveIntensity: 0.4 }), 1.5, 1.8, -d / 2 + 0.12));
+  return g;
+}
+export function sofa(color = 0x3f6fb5) {
+  const g = new THREE.Group();
+  g.add(at(box(2.2, 0.45, 0.95, color), 0, 0.35, 0));
+  g.add(at(box(2.2, 0.75, 0.25, color), 0, 0.75, -0.38));
+  for (const x of [-1.0, 1.0]) g.add(at(box(0.22, 0.6, 0.95, color), x, 0.55, 0));
+  for (const x of [-0.5, 0.5]) g.add(at(box(0.95, 0.15, 0.7, 0xffffff & (color + 0x202020)), x, 0.62, 0.08));
+  return g;
+}
+export function wardrobe(color = 0x8a5a33) {
+  const g = new THREE.Group();
+  g.add(at(box(1.4, 2.1, 0.6, color), 0, 1.05, 0));
+  g.add(at(box(0.02, 1.9, 0.02, 0x3a2a1e), 0, 1.05, 0.31));
+  for (const x of [-0.12, 0.12]) g.add(at(box(0.05, 0.2, 0.04, 0xd4af37), x, 1.1, 0.32));
+  return g;
+}
+export function cardbox(s = 0.5) { const b = box(s, s * 0.8, s, 0xc8995c); return b; }
+export function lamp() {
+  const g = new THREE.Group();
+  g.add(at(cyl(0.18, 0.22, 0.05, 0x333333, 8), 0, 0.03, 0));
+  g.add(at(cyl(0.025, 0.025, 1.5, 0x333333, 6), 0, 0.78, 0));
+  g.add(at(cyl(0.15, 0.3, 0.3, 0xfff0c0, 8, { emissive: 0xffe08a, emissiveIntensity: 0.5 }), 0, 1.6, 0));
+  return g;
+}
+export function tv() {
+  const g = new THREE.Group();
+  g.add(at(box(1.0, 0.75, 0.6, 0x5a5a5a), 0, 0.38, 0));
+  g.add(at(box(0.8, 0.55, 0.02, 0x1a1a1a), 0, 0.42, 0.31));
+  return g;
+}
+export function van(color = 0xf2f2f2) {
+  const g = new THREE.Group();
+  g.add(at(box(2.1, 2.2, 4.0, color), 0, 1.45, -0.6));
+  g.add(at(box(2.1, 1.4, 1.6, color), 0, 1.05, 2.2));
+  g.add(at(box(1.9, 0.6, 0.05, 0x1e2a36), 0, 1.45, 3.01));
+  g.add(at(box(2.12, 0.25, 5.6, C.stripe), 0, 1.0, 0.2));
+  for (const [x, z] of [[-1.0, 2.0], [1.0, 2.0], [-1.0, -1.6], [1.0, -1.6]]) {
+    const w = cyl(0.42, 0.42, 0.32, 0x1b1b1b, 10); w.rotation.z = Math.PI / 2; at(w, x, 0.42, z); g.add(w);
+  }
+  return g;
+}
+export function skip(color = 0x2f7d3a) { // Container/Mulde
+  const g = new THREE.Group();
+  const s = new THREE.Mesh(new THREE.CylinderGeometry(2.0, 1.5, 1.4, 4, 1, true), M(color, { side: THREE.DoubleSide }));
+  s.rotation.y = Math.PI / 4; s.scale.set(1.5, 1, 0.8); s.position.y = 0.7; s.castShadow = true; g.add(s);
+  g.add(at(box(3.2, 0.1, 1.9, 0x2a2a2a), 0, 0.05, 0));
+  return g;
+}
+export function phone() {
+  const g = new THREE.Group();
+  g.add(box(0.75, 1.5, 0.08, 0x111111));
+  const scr = at(box(0.66, 1.36, 0.02, 0x2ecc71, { emissive: 0x2ecc71, emissiveIntensity: 0.35 }), 0, 0, 0.05); g.add(scr);
+  g.add(at(box(0.5, 0.35, 0.02, 0xffffff), 0, 0.3, 0.065)); // Foto-Platzhalter
+  g.add(at(box(0.5, 0.06, 0.02, 0xffffff), 0, -0.05, 0.065));
+  g.add(at(box(0.3, 0.06, 0.02, 0xffd400), -0.1, -0.18, 0.065));
+  return g;
+}
+export function scale() {
+  const g = new THREE.Group();
+  g.add(at(box(2.4, 0.2, 2.4, 0x6b7380), 0, 0.1, 0));
+  g.add(at(box(0.15, 1.6, 0.15, 0x6b7380), 0, 0.8, -1.1));
+  g.add(at(box(0.9, 0.5, 0.15, 0x111111, { emissive: 0x111111 }), 0, 1.7, -1.1));
+  return g;
+}
+export function scrapPile() {
+  const g = new THREE.Group(); let r = 7;
+  const rnd = () => (r = (r * 9301 + 49297) % 233280) / 233280;
+  for (let i = 0; i < 14; i++) {
+    const m = i % 3 === 0 ? cyl(0.06, 0.06, 1.2, 0xc8743a, 6) : box(0.3 + rnd() * 0.5, 0.1 + rnd() * 0.2, 0.3 + rnd() * 0.4, [0x8a939c, 0x6b7380, 0xa0a8b0][i % 3]);
+    m.position.set((rnd() - 0.5) * 1.6, 0.25 + rnd() * 0.5, (rnd() - 0.5) * 1.6); m.rotation.set(rnd() * 3, rnd() * 3, rnd() * 3); g.add(m);
+  }
+  return g;
+}
+export function cableCoil() { const t = new THREE.Mesh(new THREE.TorusGeometry(0.35, 0.08, 6, 14), M(0xc8743a)); t.rotation.x = Math.PI / 2; t.castShadow = true; return t; }
+export function table(w = 2.4) {
+  const g = new THREE.Group();
+  g.add(at(box(w, 0.08, 1.0, 0xd8c3a0), 0, 0.85, 0));
+  for (const [x, z] of [[-w / 2 + 0.1, -0.4], [w / 2 - 0.1, -0.4], [-w / 2 + 0.1, 0.4], [w / 2 - 0.1, 0.4]]) g.add(at(box(0.07, 0.85, 0.07, 0x8a5a33), x, 0.42, z));
+  return g;
+}
+export function bill() { return box(0.7, 0.02, 0.35, 0x58c26b, { emissive: 0x2f7a3a, emissiveIntensity: 0.25 }); }
+export function paper(w = 1.2, h = 1.6) {
+  const g = new THREE.Group();
+  g.add(box(w, h, 0.03, 0xffffff));
+  for (let i = 0; i < 6; i++) g.add(at(box(w * (i === 5 ? 0.4 : 0.75), 0.05, 0.01, i === 5 ? C.red : 0x9aa3ad), i === 5 ? w * 0.15 : 0, h * 0.35 - i * 0.2, 0.02));
+  return g;
+}
+export function pileMarker(color) { return cyl(0.9, 0.9, 0.04, color, 20, { emissive: color, emissiveIntensity: 0.35 }); }
+export function house() {
+  const g = new THREE.Group();
+  g.add(at(box(8, 6, 7, 0xf4efe6), 0, 3, 0));
+  const roof = new THREE.Mesh(new THREE.ConeGeometry(6.2, 2.6, 4), M(0x8b3a2b)); roof.rotation.y = Math.PI / 4; roof.position.y = 7.3; roof.scale.set(1, 1, 0.85); roof.castShadow = true; g.add(roof);
+  g.add(at(box(1.3, 2.3, 0.1, 0x6b4a2b), -1.5, 1.15, 3.52));
+  for (const [x, y] of [[1.8, 1.8], [1.8, 4.4], [-1.5, 4.4]]) g.add(at(box(1.2, 1.1, 0.1, 0x9fd3ff, { emissive: 0x6fa8d8, emissiveIntensity: 0.3 }), x, y, 3.52));
+  return g;
+}
+export function worker() { return person({ shirt: 0x37404d, pants: 0x2a2f38, cap: C.stripe, hat: 'cap' }); }
+export const pose2 = {
+  carry(p, a = 1) { const u = p.userData; u.armL.rotation.set(-1.5 * a, 0, -0.2 * a); u.armR.rotation.set(-1.5 * a, 0, 0.2 * a); },
+  phoneUp(p, a = 1) { const u = p.userData; u.armR.rotation.set(-1.9 * a, 0, 0.3 * a); u.head.rotation.x = 0.25 * a; },
+  give(p, a = 1) { const u = p.userData; u.armR.rotation.set(-1.3 * a, 0, 0); },
+  sit(p) { const u = p.userData; u.hip.position.y = 0.55; u.legL.rotation.x = -1.5; u.legR.rotation.x = -1.5; },
+  throwUp(p, k) { const u = p.userData; const a = Math.sin(k * Math.PI); u.armL.rotation.set(-2.6 * a, 0, 0); u.armR.rotation.set(-2.6 * a, 0, 0); },
+};

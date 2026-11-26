@@ -9,7 +9,7 @@ Wird beim Start jeder Sitzung gelesen. Ein Repository, ein Ordner pro Projekt. P
 | DURCHSCHICHT (E-Book für Schichtarbeit) | `durchschicht/` | mystore (`q2e8xh-pz.myshopify.com`) | Theme live, Produkt als Entwurf; offen: PDF anhängen, Impressum, bezahlter Plan |
 | Essensplaner | `essensplaner/` | – | Auftrag steht in `essensplaner/AUFTRAG.md`, Recherche noch nicht begonnen |
 | KI-Influencerin (virtuelle Instagram/TikTok-Persona) | `ai-influencerin/` | – | Nische: High-Protein-Küche + Gym + Athleisure; Higgsfield Plus aktiv; nächster Schritt: Persona anlegen. Start: `ai-influencerin/START-PROMPT.md` |
-| Faceless-Videos (automatischer Kanal: YouTube Shorts, Reels, TikTok) | `faceless-videos/` | – | Nische: Business-Modelle; Produktion per Code (Three.js + Piper, 0 Credits), Testvideo 003 wartet auf Feedback; offen: Kanalname, Konten + Postiz |
+| Faceless-Videos (automatischer Kanal: YouTube Shorts, Reels, TikTok) | `faceless-videos/` | – | Nische: Business-Modelle; Produktion per Code (Three.js + Piper, 0 Credits), Format „Geschäftsmodelle, auf die keiner kommt“ (FORMAT.md), Stimme ElevenLabs Dylan, Testvideo 004 Entrümpelung wartet auf Feedback; offen: Kanalname, Konten + Postiz |
 
 ## Arbeitsweise
 - **Eine Sitzung pro Projekt** (der Kontext bleibt sauber). Andere Projektordner nur lesen, wenn sie relevant sind.
