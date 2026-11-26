@@ -135,3 +135,12 @@ Referenz-Video (68 s, TikTok eines fremden Creators über „Claude editiert mei
 - B-Roll und Einblender ca. alle 2–3 s, Musik + Soundeffekte (Whoosh, Klick).
 - Genau dieser Stil = **Higgsfield Shorts Studio (`/shorts`)**: generierter Sprecher in 1080p/720p, Captions, Motion Design, SFX, Musik, Render im Higgsfield-Sandbox. Kosten vor allem durch die Sprecher-Takes.
 - Plan: 30 s, 720p, 4–5 Takes (~200–250 Credits); Guthaben 557 Credits (26.11.2026).
+
+## 11. Shorts-Studio-Lauf (26.11.2026)
+- Run-ID `shorts_studio-P3cC44qLlV8ucyyB-D8erngePRIc2cNbG`, Sandbox-Ordner `/home/user/shorts-studio/hip-thrust/`.
+- Route `finished_frame` (Startbild `5edff574…` = Person + Gym), Stimme: ElevenLabs-v4-Probe Juno als `audio_references` (Upload `2bd584fc…`), Referenzvideo Upload `d2b23f09…` (nur Stil, adaptiert).
+- 5 Takes Seedance 2.5, 720p, nativer Ton (je ~7 Credits/s, zusammen ~203 Credits): take-01 `14a845c5…` Hook frontal, take-02 `cce9554c…` Seite Fehler 1 (falsch → richtig), take-03 `d1cc19aa…` Füße, take-04 `e63e1fa4…` Endposition, take-05 `a8ea973d…` Outro. Musik `sonilo_music` `0ca58b14…` (Lo-Fi-Hip-Hop 96 BPM).
+- Schnitt: M1 Titelkarte („Die 3 Hip-Thrust-*Fehler.*“, Fenster FALSCH / SO ERKLÄRT), M2 je Fehler Fenster auf dunklem Raster + großes Wort + goldenes Serif-Wort mit Auswahlrahmen („Kopf / im Nacken?“, „Füße / zu nah, zu weit?“, „Oben / Hohlkreuz?“), M3 zweistufige Untertitel (Inter + Playfair Display kursiv gold), Chips FALSCH/RICHTIG/OBEN/FIX/HALTEN, SFX aus der Bibliothek.
+- **Aussprache-Befund** (Whisper small + large-v3 hören beide dasselbe → vermutlich echt): take-03 „Schienbeine senkrecht“ undeutlich, take-04 „Hohlkreuz“ (klingt wie „Heulkratz“), take-05 „Speicher dir“ (klingt wie „Spare dich“). Untertitel zeigen die richtigen Wörter. Neu erzeugen nur auf Wunsch des Inhabers (je Take ~35–49 Credits).
+- **Fertig (26.11.2026):** finales Video Higgsfield-Media `aeef1482-6ba7-4455-ae40-9c7c8b859709` (29,6 s, 1080×1920, −14,1 LUFS), registriert als Shorts-Ergebnis. Bildwechsel alle ~1,6 s (Referenz 1,45 s). Zusätzliche Szenen: „3 Fehler“-Karte, Split FALSCH (Standbild) / RICHTIG (Zeitlupe), „Knie über *Knöchel.*“, „Po *anspannen.*“, Endkarte „Speicher dir das für deinen *Leg Day.*“.
+- Offen: Aussprache in take-03/04/05 vom Inhaber anhören lassen; falls nötig nur diese Takes neu (~35–49 Credits je Take) und neu rendern. Musik aus der IG-Bibliothek nicht nötig (Musik ist eingebettet).
