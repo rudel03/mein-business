@@ -11,7 +11,7 @@ Vorgabe des Inhabers: unterschätzte Geschäftsmodelle (Entrümpelung, Umzug, Ca
 6. **Was kostet den Unternehmer** (ehrlich, mit Zahl).
 7. **Zusammenfassung in einem Satz** („Die kassieren doppelt.“).
 8. **Pro-Tipp für den Zuschauer** (Mehrwert: sparen, Steuer, worauf achten).
-9. **Plotwist (2 Zeilen):** absurd, aber logisch aus dem Modell heraus (z. B. du kaufst deine eigene Couch zurück). Kein CTA danach, Video endet auf der Pointe → Loop.
+9. **Plotwist (2 Zeilen): RICHTIG absurd und unrealistisch** (Feedback 26.11.), z. B. Haus fliegt zum Mond, Callcenter ruft sich selbst an, Mond in Chrom foliert, 300 Türen bis Australien. Am besten logisch aus dem Geschäftsmodell übertrieben, mit trockener Schlusspointe ("Die Halteverbotszone haben sie trotzdem berechnet.") (z. B. du kaufst deine eigene Couch zurück). Kein CTA danach, Video endet auf der Pointe → Loop.
 
 ## Bindung
 - Alle 2–3 s neuer Schnitt/Kamerawinkel; lange Zeilen → `"shot": ["a", "b"]`.
@@ -19,6 +19,7 @@ Vorgabe des Inhabers: unterschätzte Geschäftsmodelle (Entrümpelung, Umzug, Ca
 - Keine Begrüßung, kein „Heute erkläre ich…“, kein Abo-Aufruf am Anfang.
 
 ## Sprache
+- **Feedback 26.11.: weniger Umgangssprache** – höchstens 1–2 lockere Wörter pro Video, sonst normales, lockeres Deutsch.
 - Natürlich: „Digga“, „Bro“, „lowkey“, „safe“, „wild“, „komplett lost“, „Bude“, „nem“, „aufm“, „kassieren“. Sparsam dosieren (2–4 pro Video), nicht in jedem Satz.
 - Kraftausdrücke als Füllwörter erlaubt („verfickt“, „Scheiß“), **nie gegen echte Firmen, Personen oder Gruppen**.
 - Vom Inhaber genannt: „Gundi“, „zirto“ → Bedeutung/Verwendung vom Inhaber bestätigen lassen, bevor sie eingesetzt werden.
@@ -30,6 +31,6 @@ Vorgabe des Inhabers: unterschätzte Geschäftsmodelle (Entrümpelung, Umzug, Ca
 
 ## Produktion
 1. Skript schreiben → `skripte/<nr>-<thema>/video.json` (+ `skript.md` mit Quellen).
-2. Stimme: Higgsfield `generate_audio_batch`, `text2speech_v2`, `variant:"elevenlabs"`, Stimme **Dylan** `b847bc29-f184-583a-8ad9-d1f1e16d1a60`; max. 6 gleichzeitig; Zahlen im Prompt ausschreiben. Dateien nach `audio/01.mp3 …` laden. ≈ 0,45 Credits/Zeile.
+2. Stimme: Higgsfield `generate_audio_batch`, `text2speech_v2`, `variant:"elevenlabs"`, Stimme **Dylan** `b847bc29-f184-583a-8ad9-d1f1e16d1a60`, in video.json `"voice": {"tempo": 1.2, "pitch": -2}` (tiefer); max. 6 gleichzeitig; Zahlen im Prompt ausschreiben. Dateien nach `audio/01.mp3 …` laden. ≈ 0,45 Credits/Zeile.
 3. Szenen: `engine/scenes/<thema>.js` (Baukasten `engine/world.js`). Vorschau: `node engine/render3d.mjs plan.json st --stills 1,4,7`.
 4. `python3 -I pipeline/make_video.py skripte/<nr>/video.json` (≈ 9 min für 70 s).

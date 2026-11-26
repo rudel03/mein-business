@@ -1,0 +1,54 @@
+{
+"005-umzug": [
+ ["hook","Diese Firma trägt einfach nur Kartons von A nach B. Und verdient damit richtig Geld.","Diese Firma trägt einfach nur Kartons von A nach B. Und verdient damit richtig Geld."],
+ ["intro","Umzugsunternehmen. Klingt langweilig, ist aber ein ziemlich cleveres Geschäft. Und das Ende ist komplett absurd.","Umzugsunternehmen. Klingt langweilig, ist aber ein ziemlich cleveres Geschäft. Und das Ende ist komplett absurd."],
+ ["price","Eine Drei-Zimmer-Wohnung umziehen kostet im Schnitt so 830 bis 2.100 Euro.","Eine Drei-Zimmer-Wohnung umziehen kostet im Schnitt so achthundertdreißig bis zweitausendeinhundert Euro."],
+ ["hourly","Abgerechnet wird oft pro Mann und Stunde. Laut Branchenverband im Schnitt rund 42 Euro.","Abgerechnet wird oft pro Mann und Stunde. Laut Branchenverband im Schnitt rund zweiundvierzig Euro."],
+ ["wage","Der Helfer muss mindestens Mindestlohn kriegen, 2026 sind das 13,90 Euro. Die Differenz zahlt Lkw, Sprit, Versicherung und den Gewinn.","Der Helfer muss mindestens Mindestlohn kriegen, zweitausendsechsundzwanzig sind das dreizehn Euro neunzig. Die Differenz zahlt Lkw, Sprit, Versicherung und den Gewinn."],
+ ["halteverbot","Dazu kommen Extras. Eine Halteverbotszone zum Beispiel: 80 bis 200 Euro.","Dazu kommen Extras. Eine Halteverbotszone zum Beispiel: achtzig bis zweihundert Euro."],
+ ["stairs","Möbel ab- und aufbauen, Kartons, vierter Stock ohne Aufzug. Alles kostet extra.","Möbel ab- und aufbauen, Kartons, vierter Stock ohne Aufzug. Alles kostet extra."],
+ ["storage","Und der Trick: Manche vermieten auch Lagerräume. Wer einlagert, zahlt jeden Monat. Ganz ohne Schleppen.","Und der Trick: Manche vermieten auch Lagerräume. Wer einlagert, zahlt jeden Monat. Ganz ohne Schleppen."],
+ ["tip","Pro-Tipp: Kein Angebot ohne Besichtigung. Die Verbraucherzentrale warnt vor Lockpreisen, die am Umzugstag plötzlich explodieren.","Pro-Tipp: Kein Angebot ohne Besichtigung. Die Verbraucherzentrale warnt vor Lockpreisen, die am Umzugstag plötzlich explodieren."],
+ ["tax","Und 20 Prozent der Arbeitskosten kannst du von der Steuer absetzen.","Und zwanzig Prozent der Arbeitskosten kannst du von der Steuer absetzen."],
+ ["twist1","Und dann, am Umzugstag: Die Jungs packen alles ein. Und zwar wirklich alles.","Und dann, am Umzugstag: Die Jungs packen alles ein. Und zwar wirklich alles."],
+ ["twist2","Das ganze Haus. Mit dir drin. Neue Adresse: der Mond. Die Halteverbotszone haben sie trotzdem berechnet.","Das ganze Haus. Mit dir drin. Neue Adresse: der Mond. Die Halteverbotszone haben sie trotzdem berechnet."]
+],
+"006-callcenter": [
+ ["hook","Jede Minute, die du mit einer Hotline telefonierst, kann einer Firma Geld bringen. Nur nicht der, die du angerufen hast.","Jede Minute, die du mit einer Hotline telefonierst, kann einer Firma Geld bringen. Nur nicht der, die du angerufen hast."],
+ ["intro","Callcenter. Ein Geschäft, das jeder kennt und keiner versteht. Und das Ende ist komplett absurd.","Callcenter. Ein Geschäft, das jeder kennt und keiner versteht. Und das Ende ist komplett absurd."],
+ ["outsource","Viele Firmen lagern ihre Hotline an Dienstleister aus. Abgerechnet wird pro Minute, pro Anruf oder pro Stunde.","Viele Firmen lagern ihre Hotline an Dienstleister aus. Abgerechnet wird pro Minute, pro Anruf oder pro Stunde."],
+ ["perMinute","In Deutschland sind das so 50 Cent bis 1,20 Euro pro Gesprächsminute.","In Deutschland sind das so fünfzig Cent bis einen Euro zwanzig pro Gesprächsminute."],
+ ["perHour","Oder pro Mitarbeiterstunde: 25 bis 45 Euro.","Oder pro Mitarbeiterstunde: fünfundzwanzig bis fünfundvierzig Euro."],
+ ["wage","Der Mensch am Telefon kriegt mindestens Mindestlohn, 13,90 Euro. Der Rest zahlt Miete, Technik, Chefs und Gewinn.","Der Mensch am Telefon kriegt mindestens Mindestlohn, dreizehn Euro neunzig. Der Rest zahlt Miete, Technik, Chefs und Gewinn."],
+ ["mass","Der Trick ist Masse. Hunderte Plätze, Schichtbetrieb, und jede besetzte Minute wird verkauft.","Der Trick ist Masse. Hunderte Plätze, Schichtbetrieb, und jede besetzte Minute wird verkauft."],
+ ["commission","Beim Verkaufen am Telefon gibt's oft Provision pro Abschluss. Deshalb sind manche so verdammt hartnäckig.","Beim Verkaufen am Telefon gibt's oft Provision pro Abschluss. Deshalb sind manche so verdammt hartnäckig."],
+ ["tip","Pro-Tipp: Werbeanrufe ohne deine Einwilligung sind verboten. Melden kannst du das bei der Bundesnetzagentur. Bußgeld bis 300.000 Euro.","Pro-Tipp: Werbeanrufe ohne deine Einwilligung sind verboten. Melden kannst du das bei der Bundesnetzagentur. Bußgeld bis dreihunderttausend Euro."],
+ ["twist1","Und jetzt das Beste: Eines Tages wählt ein Mitarbeiter aus Versehen die eigene Hotline.","Und jetzt das Beste: Eines Tages wählt ein Mitarbeiter aus Versehen die eigene Hotline."],
+ ["twist2","Das Callcenter ruft sich selbst an, verkauft sich 4.000 Handyverträge und wird Callcenter des Jahres. Die Leitung ist bis heute besetzt.","Das Callcenter ruft sich selbst an, verkauft sich viertausend Handyverträge und wird Callcenter des Jahres. Die Leitung ist bis heute besetzt."]
+],
+"007-folierer": [
+ ["hook","Dieser Typ macht aus deinem Auto in ein paar Tagen ein komplett anderes. Ohne einen Tropfen Lack.","Dieser Typ macht aus deinem Auto in ein paar Tagen ein komplett anderes. Ohne einen Tropfen Lack."],
+ ["intro","Folierer. Kaum einer denkt drüber nach, aber das Geschäft ist richtig clever. Und das Ende ist komplett absurd.","Folierer. Kaum einer denkt drüber nach, aber das Geschäft ist richtig clever. Und das Ende ist komplett absurd."],
+ ["price","Eine Vollfolierung kostet je nach Auto so 2.000 bis 5.000 Euro.","Eine Vollfolierung kostet je nach Auto so zweitausend bis fünftausend Euro."],
+ ["foil","Die Folie selbst kostet je nach Qualität so 20 bis 50 Euro pro Quadratmeter.","Die Folie selbst kostet je nach Qualität so zwanzig bis fünfzig Euro pro Quadratmeter."],
+ ["work","Der Rest ist Arbeit: waschen, entfetten, Teile abbauen, kleben, föhnen. Zwei bis fünf Tage.","Der Rest ist Arbeit: waschen, entfetten, Teile abbauen, kleben, föhnen. Zwei bis fünf Tage."],
+ ["fleet","Und der Trick: Dazu kommen Firmenkunden. Werbung auf Transportern, manchmal eine ganze Flotte auf einmal.","Und der Trick: Dazu kommen Firmenkunden. Werbung auf Transportern, manchmal eine ganze Flotte auf einmal."],
+ ["extras","Plus Extras: Scheiben tönen, Lackschutzfolie, und später die Folie wieder runterholen. Kostet natürlich auch.","Plus Extras: Scheiben tönen, Lackschutzfolie, und später die Folie wieder runterholen. Kostet natürlich auch."],
+ ["protect","Gut für dich: Die Folie schützt den Lack darunter vor Steinschlag und Kratzern.","Gut für dich: Die Folie schützt den Lack darunter vor Steinschlag und Kratzern."],
+ ["tip","Pro-Tipp: Angebote unter 1.500 Euro sind oft ein Zeichen für billige Folie. Die löst sich dann gern schneller.","Pro-Tipp: Angebote unter fünfzehnhundert Euro sind oft ein Zeichen für billige Folie. Die löst sich dann gern schneller."],
+ ["twist1","Und jetzt das Beste: Eines Tages kriegt der Folierer einfach nicht mehr genug.","Und jetzt das Beste: Eines Tages kriegt der Folierer einfach nicht mehr genug."],
+ ["twist2","Er foliert die Werkstatt, die Straße, seine Kunden. Und am Ende den Mond. In Chrom. Die Rechnung ging an die NASA.","Er foliert die Werkstatt, die Straße, seine Kunden. Und am Ende den Mond. In Chrom. Die Rechnung ging an die NASA."]
+],
+"008-schluesseldienst": [
+ ["hook","Dieser Mann braucht für deine Tür oft nur ein paar Minuten. Und kassiert trotzdem über 100 Euro.","Dieser Mann braucht für deine Tür oft nur ein paar Minuten. Und kassiert trotzdem über hundert Euro."],
+ ["intro","Schlüsseldienst. Eins der cleversten Notfall-Geschäfte überhaupt. Und das Ende ist komplett absurd.","Schlüsseldienst. Eins der cleversten Notfall-Geschäfte überhaupt. Und das Ende ist komplett absurd."],
+ ["click","Eine zugefallene Tür ist für einen Profi oft in Minuten offen. Ohne Schaden.","Eine zugefallene Tür ist für einen Profi oft in Minuten offen. Ohne Schaden."],
+ ["price","Die Verbraucherzentrale Hamburg hält tagsüber rund 100 Euro für angemessen. Nachts und am Wochenende bis zu 180.","Die Verbraucherzentrale Hamburg hält tagsüber rund hundert Euro für angemessen. Nachts und am Wochenende bis zu hundertachtzig."],
+ ["night","Du zahlst nicht für die Minuten. Du zahlst dafür, dass nachts um drei sofort jemand kommt.","Du zahlst nicht für die Minuten. Du zahlst dafür, dass nachts um drei sofort jemand kommt."],
+ ["middleman","Und der Trick: Manchmal rufst du gar nicht den Schlüsseldienst an, sondern ein Vermittler-Callcenter. Das verkauft deinen Notfall weiter.","Und der Trick: Manchmal rufst du gar nicht den Schlüsseldienst an, sondern ein Vermittler-Callcenter. Das verkauft deinen Notfall weiter."],
+ ["tip","Pro-Tipp: Am Telefon einen Festpreis mit Anfahrt ausmachen. Wer keinen nennt, gilt laut Verbraucherzentrale als unseriös.","Pro-Tipp: Am Telefon einen Festpreis mit Anfahrt ausmachen. Wer keinen nennt, gilt laut Verbraucherzentrale als unseriös."],
+ ["court","Ohne Preisabsprache schuldest du nur die übliche Vergütung. Ein Gericht kam da auf rund 112 Euro.","Ohne Preisabsprache schuldest du nur die übliche Vergütung. Ein Gericht kam da auf rund hundertzwölf Euro."],
+ ["twist1","Und jetzt das Beste: Er macht deine Tür auf. Dahinter: noch eine Tür.","Und jetzt das Beste: Er macht deine Tür auf. Dahinter: noch eine Tür."],
+ ["twist2","Und noch eine. Und noch eine. Dreihundert Türen später stehst du in Australien. Und die Rechnung ist länger als dein Flur.","Und noch eine. Und noch eine. Dreihundert Türen später stehst du in Australien. Und die Rechnung ist länger als dein Flur."]
+]
+}

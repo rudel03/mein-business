@@ -1,0 +1,175 @@
+{
+ "scene": "schluesseldienst",
+ "voice": {
+  "tempo": 1.2,
+  "pitch": -2
+ },
+ "beats": [
+  {
+   "shot": "hook",
+   "audio": "audio/01.mp3",
+   "text": "Dieser Mann braucht für deine Tür oft nur ein paar Minuten. Und kassiert trotzdem über 100 Euro.",
+   "labels": [
+    {
+     "word": "100",
+     "text": "> 100 €",
+     "dur": 2.0,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "shot": "intro",
+   "audio": "audio/02.mp3",
+   "text": "Schlüsseldienst. Eins der cleversten Notfall-Geschäfte überhaupt. Und das Ende ist komplett absurd.",
+   "labels": [
+    {
+     "word": "Schlüsseldienst.",
+     "text": "SCHLÜSSELDIENST",
+     "dur": 2.0,
+     "color": "yellow"
+    }
+   ]
+  },
+  {
+   "shot": "click",
+   "audio": "audio/03.mp3",
+   "text": "Eine zugefallene Tür ist für einen Profi oft in Minuten offen. Ohne Schaden.",
+   "labels": [
+    {
+     "word": "Minuten",
+     "text": "OFT IN MINUTEN OFFEN",
+     "dur": 2.2,
+     "color": "white"
+    }
+   ]
+  },
+  {
+   "shot": "price",
+   "audio": "audio/04.mp3",
+   "text": "Die Verbraucherzentrale Hamburg hält tagsüber rund 100 Euro für angemessen. Nachts und am Wochenende bis zu 180.",
+   "labels": [
+    {
+     "word": "100",
+     "text": "TAGS ≈ 100 €",
+     "dur": 2.4,
+     "color": "yellow",
+     "x": 330,
+     "y": 1480
+    },
+    {
+     "word": "180.",
+     "text": "NACHTS ≈ 180 €",
+     "dur": 2.4,
+     "color": "white",
+     "x": 760,
+     "y": 1400
+    }
+   ]
+  },
+  {
+   "shot": "night",
+   "audio": "audio/05.mp3",
+   "text": "Du zahlst nicht für die Minuten. Du zahlst dafür, dass nachts um drei sofort jemand kommt.",
+   "labels": [
+    {
+     "word": "drei",
+     "text": "03:00 UHR",
+     "dur": 2.0,
+     "color": "white"
+    }
+   ]
+  },
+  {
+   "shot": "middleman",
+   "audio": "audio/06.mp3",
+   "text": "Und der Trick: Manchmal rufst du gar nicht den Schlüsseldienst an, sondern ein Vermittler-Callcenter. Das verkauft deinen Notfall weiter.",
+   "labels": [
+    {
+     "word": "Vermittler-Callcenter.",
+     "text": "VERMITTLER",
+     "dur": 2.4,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "shot": "tip",
+   "audio": "audio/07.mp3",
+   "text": "Pro-Tipp: Am Telefon einen Festpreis mit Anfahrt ausmachen. Wer keinen nennt, gilt laut Verbraucherzentrale als unseriös.",
+   "labels": [
+    {
+     "word": "Festpreis",
+     "text": "FESTPREIS INKL. ANFAHRT",
+     "dur": 2.6,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "shot": "court",
+   "audio": "audio/08.mp3",
+   "text": "Ohne Preisabsprache schuldest du nur die übliche Vergütung. Ein Gericht kam da auf rund 112 Euro.",
+   "labels": [
+    {
+     "word": "112",
+     "text": "≈ 112 € (AG LINGEN)",
+     "dur": 2.4,
+     "color": "white"
+    }
+   ]
+  },
+  {
+   "shot": "twist1",
+   "audio": "audio/09.mp3",
+   "text": "Und jetzt das Beste: Er macht deine Tür auf. Dahinter: noch eine Tür."
+  },
+  {
+   "shot": "twist2",
+   "audio": "audio/10.mp3",
+   "text": "Und noch eine. Und noch eine. Dreihundert Türen später stehst du in Australien. Und die Rechnung ist länger als dein Flur.",
+   "labels": [
+    {
+     "word": "Australien.",
+     "text": "AUSTRALIEN",
+     "dur": 2.0,
+     "color": "yellow"
+    },
+    {
+     "word": "Rechnung",
+     "text": "300 × TÜRÖFFNUNG",
+     "dur": 2.0,
+     "color": "red"
+    }
+   ]
+  }
+ ],
+ "highlight": [
+  "Trick:",
+  "Pro-Tipp:",
+  "absurd.",
+  "Gewinn.",
+  "Mond.",
+  "NASA.",
+  "Australien.",
+  "Chrom.",
+  "doppelt.",
+  "Masse.",
+  "verdammt",
+  "Provision",
+  "Festpreis",
+  "verboten.",
+  "Mindestlohn",
+  "extra."
+ ],
+ "source": "Quellen: Verbraucherzentrale Hamburg/NRW/Niedersachsen · AG Lingen",
+ "source_beats": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+ ],
+ "out": "../../ausgabe/008-schluesseldienst.mp4"
+}

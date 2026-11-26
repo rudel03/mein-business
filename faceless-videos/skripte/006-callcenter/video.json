@@ -1,0 +1,184 @@
+{
+ "scene": "callcenter",
+ "voice": {
+  "tempo": 1.2,
+  "pitch": -2
+ },
+ "beats": [
+  {
+   "shot": "hook",
+   "audio": "audio/01.mp3",
+   "text": "Jede Minute, die du mit einer Hotline telefonierst, kann einer Firma Geld bringen. Nur nicht der, die du angerufen hast."
+  },
+  {
+   "shot": "intro",
+   "audio": "audio/02.mp3",
+   "text": "Callcenter. Ein Geschäft, das jeder kennt und keiner versteht. Und das Ende ist komplett absurd.",
+   "labels": [
+    {
+     "word": "Callcenter.",
+     "text": "CALLCENTER",
+     "dur": 2.0,
+     "color": "yellow"
+    }
+   ]
+  },
+  {
+   "shot": "outsource",
+   "audio": "audio/03.mp3",
+   "text": "Viele Firmen lagern ihre Hotline an Dienstleister aus. Abgerechnet wird pro Minute, pro Anruf oder pro Stunde.",
+   "labels": [
+    {
+     "word": "Minute,",
+     "text": "PRO MINUTE · PRO ANRUF · PRO STUNDE",
+     "dur": 3.0,
+     "color": "white"
+    }
+   ]
+  },
+  {
+   "shot": "perMinute",
+   "audio": "audio/04.mp3",
+   "text": "In Deutschland sind das so 50 Cent bis 1,20 Euro pro Gesprächsminute.",
+   "labels": [
+    {
+     "word": "50",
+     "text": "0,50–1,20 € PRO MINUTE",
+     "dur": 2.8,
+     "color": "yellow"
+    }
+   ]
+  },
+  {
+   "shot": "perHour",
+   "audio": "audio/05.mp3",
+   "text": "Oder pro Mitarbeiterstunde: 25 bis 45 Euro.",
+   "labels": [
+    {
+     "word": "25",
+     "text": "25–45 € PRO STUNDE",
+     "dur": 2.6,
+     "color": "yellow"
+    }
+   ]
+  },
+  {
+   "shot": "wage",
+   "audio": "audio/06.mp3",
+   "text": "Der Mensch am Telefon kriegt mindestens Mindestlohn, 13,90 Euro. Der Rest zahlt Miete, Technik, Chefs und Gewinn.",
+   "labels": [
+    {
+     "word": "13,90",
+     "text": "MINDESTLOHN: 13,90 €",
+     "dur": 2.6,
+     "color": "white",
+     "y": 420
+    },
+    {
+     "word": "Gewinn.",
+     "text": "GEWINN",
+     "dur": 1.6,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "shot": "mass",
+   "audio": "audio/07.mp3",
+   "text": "Der Trick ist Masse. Hunderte Plätze, Schichtbetrieb, und jede besetzte Minute wird verkauft.",
+   "labels": [
+    {
+     "word": "Masse.",
+     "text": "MASSE",
+     "dur": 1.8,
+     "color": "yellow"
+    }
+   ]
+  },
+  {
+   "shot": "commission",
+   "audio": "audio/08.mp3",
+   "text": "Beim Verkaufen am Telefon gibt's oft Provision pro Abschluss. Deshalb sind manche so verdammt hartnäckig.",
+   "labels": [
+    {
+     "word": "Provision",
+     "text": "PROVISION PRO ABSCHLUSS",
+     "dur": 2.4,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "shot": "tip",
+   "audio": "audio/09.mp3",
+   "text": "Pro-Tipp: Werbeanrufe ohne deine Einwilligung sind verboten. Melden kannst du das bei der Bundesnetzagentur. Bußgeld bis 300.000 Euro.",
+   "labels": [
+    {
+     "word": "verboten.",
+     "text": "§ 7 UWG: OHNE EINWILLIGUNG VERBOTEN",
+     "dur": 2.6,
+     "color": "red"
+    },
+    {
+     "word": "300.000",
+     "text": "BUSSGELD BIS 300.000 €",
+     "dur": 2.2,
+     "color": "white"
+    }
+   ]
+  },
+  {
+   "shot": "twist1",
+   "audio": "audio/10.mp3",
+   "text": "Und jetzt das Beste: Eines Tages wählt ein Mitarbeiter aus Versehen die eigene Hotline."
+  },
+  {
+   "shot": "twist2",
+   "audio": "audio/11.mp3",
+   "text": "Das Callcenter ruft sich selbst an, verkauft sich 4.000 Handyverträge und wird Callcenter des Jahres. Die Leitung ist bis heute besetzt.",
+   "labels": [
+    {
+     "word": "4.000",
+     "text": "4.000 VERTRÄGE",
+     "dur": 2.0,
+     "color": "yellow"
+    },
+    {
+     "word": "Jahres.",
+     "text": "CALLCENTER DES JAHRES",
+     "dur": 2.0,
+     "color": "green"
+    }
+   ]
+  }
+ ],
+ "highlight": [
+  "Trick:",
+  "Pro-Tipp:",
+  "absurd.",
+  "Gewinn.",
+  "Mond.",
+  "NASA.",
+  "Australien.",
+  "Chrom.",
+  "doppelt.",
+  "Masse.",
+  "verdammt",
+  "Provision",
+  "Festpreis",
+  "verboten.",
+  "Mindestlohn",
+  "extra."
+ ],
+ "source": "Quellen: yoummday (Marktspannen 2026) · MiLoG · § 7, § 20 UWG",
+ "source_beats": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "out": "../../ausgabe/006-callcenter.mp4"
+}

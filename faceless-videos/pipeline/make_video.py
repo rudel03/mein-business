@@ -53,8 +53,11 @@ def main(cfg_path):
         if b.get("audio"):  # fertige Sprachdatei (z. B. ElevenLabs über Higgsfield)
             src = b["audio"] if os.path.isabs(b["audio"]) else P(b["audio"])
             tempo = v.get("tempo", 1.0)
+            semis = v.get("pitch", 0)  # Halbtöne, negativ = tiefer (Formanten bleiben erhalten -> klingt natürlich)
+            fx = (f"rubberband=tempo={tempo}:pitch={2 ** (semis / 12):.4f}:formant=preserved:pitchq=quality"
+                  if semis else f"atempo={tempo}")
             subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", src, "-af",
-                            f"atempo={tempo},silenceremove=start_periods=1:start_threshold=-45dB,areverse,"
+                            f"{fx},silenceremove=start_periods=1:start_threshold=-45dB,areverse,"
                             "silenceremove=start_periods=1:start_threshold=-45dB,areverse", "-ar", "44100", wav], check=True)
         else:
             tts(b.get("say", b["text"]), model, speed, wav)

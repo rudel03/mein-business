@@ -34,9 +34,11 @@ const at = (o, x, y, z) => (o.position.set(x, y, z), o);
 
 // ---------- Umgebung ----------
 export function setupWorld(scene, renderer, { sky = 'sunset' } = {}) {
+  scene.userData.renderer = renderer;
   const cv = document.createElement('canvas'); cv.width = 4; cv.height = 256;
   const g = cv.getContext('2d'); const gr = g.createLinearGradient(0, 0, 0, 256);
   if (sky === 'indoor') { gr.addColorStop(0, '#d9dde3'); gr.addColorStop(1, '#f2efe8'); }
+  else if (sky === 'night') { gr.addColorStop(0, '#0b1030'); gr.addColorStop(1, '#2a3570'); }
   else { gr.addColorStop(0, '#6f7fd6'); gr.addColorStop(0.55, '#f2a3a0'); gr.addColorStop(1, '#ffd08a'); }
   g.fillStyle = gr; g.fillRect(0, 0, 4, 256);
   const tex = new THREE.CanvasTexture(cv); tex.colorSpace = THREE.SRGBColorSpace;
@@ -364,3 +366,123 @@ export const pose2 = {
   sit(p) { const u = p.userData; u.hip.position.y = 0.55; u.legL.rotation.x = -1.5; u.legR.rotation.x = -1.5; },
   throwUp(p, k) { const u = p.userData; const a = Math.sin(k * Math.PI); u.armL.rotation.set(-2.6 * a, 0, 0); u.armR.rotation.set(-2.6 * a, 0, 0); },
 };
+
+// ---------- Requisiten 005–008 (Umzug, Callcenter, Folierer, Schlüsseldienst) ----------
+export function truck(color = 0xf4f4f4, stripe = C.stripe) {
+  const g = new THREE.Group();
+  g.add(at(box(2.5, 3.0, 6.0, color), 0, 2.1, -1.0));
+  g.add(at(box(2.52, 0.35, 6.02, stripe), 0, 1.4, -1.0));
+  g.add(at(box(2.4, 2.0, 1.8, 0x2f6fde), 0, 1.6, 2.9));
+  g.add(at(box(2.2, 0.8, 0.05, 0x1e2a36), 0, 2.1, 3.81));
+  for (const [x, z] of [[-1.2, 2.8], [1.2, 2.8], [-1.2, -2.4], [1.2, -2.4], [-1.2, -3.4], [1.2, -3.4]]) {
+    const w = cyl(0.5, 0.5, 0.35, 0x1b1b1b, 10); w.rotation.z = Math.PI / 2; at(w, x, 0.5, z); g.add(w);
+  }
+  return g;
+}
+export function tower(floors = 5, color = 0xe9dcc6) {
+  const g = new THREE.Group();
+  g.add(at(box(6, floors * 3, 6, color), 0, floors * 1.5, 0));
+  for (let f = 0; f < floors; f++) for (const x of [-1.6, 1.6]) g.add(at(box(1.3, 1.3, 0.1, 0x9fd3ff, { emissive: 0x6fa8d8, emissiveIntensity: 0.3 }), x, f * 3 + 1.7, 3.02));
+  return g;
+}
+export function noParkingSign() {
+  const g = new THREE.Group();
+  g.add(at(cyl(0.05, 0.05, 2.4, 0x9aa3ad, 6), 0, 1.2, 0));
+  const ring = new THREE.Mesh(new THREE.CylinderGeometry(0.4, 0.4, 0.05, 20), M(C.red)); ring.rotation.x = Math.PI / 2; ring.position.set(0, 2.5, 0.03); g.add(ring);
+  const inner = new THREE.Mesh(new THREE.CylinderGeometry(0.31, 0.31, 0.06, 20), M(0x2f6fde)); inner.rotation.x = Math.PI / 2; inner.position.set(0, 2.5, 0.04); g.add(inner);
+  const x1 = at(box(0.6, 0.07, 0.02, C.red), 0, 2.5, 0.08); x1.rotation.z = 0.8; const x2 = at(box(0.6, 0.07, 0.02, C.red), 0, 2.5, 0.08); x2.rotation.z = -0.8; g.add(x1, x2);
+  return g;
+}
+export function storageUnit(color = 0xff8a1f) {
+  const g = new THREE.Group();
+  g.add(at(box(2.4, 2.6, 3, 0xc9cfd6), 0, 1.3, 0));
+  const door = at(box(2.0, 2.2, 0.05, color), 0, 1.1, 1.52); g.add(door);
+  for (let i = 0; i < 6; i++) g.add(at(box(2.0, 0.03, 0.06, 0x000000, { transparent: true, opacity: 0.2 }), 0, 0.3 + i * 0.36, 1.55));
+  g.userData.door = door; return g;
+}
+export function moon(r = 6) { const m = new THREE.Mesh(new THREE.IcosahedronGeometry(r, 2), M(0xe8e4d8, { emissive: 0x777366, emissiveIntensity: 0.4 })); return m; }
+export function desk() {
+  const g = new THREE.Group();
+  g.add(at(box(1.6, 0.06, 0.8, 0xe9e9e9), 0, 0.75, 0));
+  for (const [x, z] of [[-0.75, -0.35], [0.75, -0.35], [-0.75, 0.35], [0.75, 0.35]]) g.add(at(box(0.05, 0.75, 0.05, 0x777777), x, 0.37, z));
+  g.add(at(box(0.7, 0.45, 0.04, 0x1a1a1a), 0, 1.1, -0.25));
+  const scr = at(box(0.64, 0.38, 0.01, 0x3fa7ff, { emissive: 0x3fa7ff, emissiveIntensity: 0.5 }), 0, 1.1, -0.225); g.add(scr);
+  g.add(at(box(0.08, 0.25, 0.08, 0x333333), 0, 0.88, -0.25));
+  g.add(at(box(1.62, 0.5, 0.04, 0x6b7380), 0, 1.0, -0.42)); // Trennwand
+  g.userData.screen = scr; return g;
+}
+export function headset(p) { // an Kopf einer Figur hängen
+  const h = p.userData.head;
+  const band = new THREE.Mesh(new THREE.TorusGeometry(0.3, 0.03, 4, 12, Math.PI), M(0x222222)); band.position.y = 0.14; h.add(band);
+  h.add(at(box(0.06, 0.14, 0.14, 0x222222), 0.29, 0.1, 0), at(box(0.06, 0.14, 0.14, 0x222222), -0.29, 0.1, 0));
+  const mic = at(box(0.03, 0.03, 0.25, 0x222222), 0.25, 0.02, 0.15); mic.rotation.y = -0.6; h.add(mic);
+}
+export function officeBuilding(color = 0xd9dde3) {
+  const g = new THREE.Group();
+  g.add(at(box(14, 10, 8, color), 0, 5, 0));
+  for (let f = 0; f < 3; f++) g.add(at(box(13, 1.4, 0.1, 0x9fd3ff, { emissive: 0x6fa8d8, emissiveIntensity: 0.35 }), 0, 2 + f * 3, 4.02));
+  return g;
+}
+export function clock() {
+  const g = new THREE.Group();
+  const face = cyl(0.9, 0.9, 0.12, 0xffffff, 24); face.rotation.x = Math.PI / 2; g.add(face);
+  const rim = new THREE.Mesh(new THREE.TorusGeometry(0.9, 0.08, 6, 24), M(0x222222)); g.add(rim);
+  const hh = new THREE.Group(), mh = new THREE.Group();
+  hh.add(at(box(0.08, 0.45, 0.04, 0x111111), 0, 0.22, 0)); mh.add(at(box(0.05, 0.7, 0.04, C.red), 0, 0.35, 0));
+  hh.position.z = mh.position.z = 0.09; g.add(hh, mh);
+  g.userData = { hh, mh }; return g;
+}
+export function foilRoll(color = 0x7b2ff7) {
+  const g = new THREE.Group();
+  const r = cyl(0.25, 0.25, 1.5, color, 14, { emissive: color, emissiveIntensity: 0.15 }); r.rotation.z = Math.PI / 2; g.add(r);
+  return g;
+}
+export function heatGun() {
+  const g = new THREE.Group();
+  const b = cyl(0.08, 0.1, 0.45, 0xffd400, 8); b.rotation.x = Math.PI / 2; g.add(b);
+  g.add(at(box(0.08, 0.25, 0.1, 0x222222), 0, -0.15, 0.1));
+  return g;
+}
+export function door(color = 0x6b4a2b, { backing = false } = {}) {
+  const g = new THREE.Group();
+  for (const x of [-0.72, 0.72]) g.add(at(box(0.16, 2.5, 0.3, 0xd8cbb5), x, 1.25, -0.05)); // Rahmen links/rechts
+  g.add(at(box(1.6, 0.16, 0.3, 0xd8cbb5), 0, 2.42, -0.05)); // Sturz
+  if (backing) g.add(at(box(1.3, 2.35, 0.02, 0x1a1410), 0, 1.17, -0.18)); // dunkler Flur dahinter
+  const leaf = new THREE.Group(); leaf.position.set(-0.6, 0, 0.12);
+  leaf.add(at(box(1.2, 2.3, 0.08, color), 0.6, 1.15, 0));
+  leaf.add(at(ball(0.05, 0xd4af37, 0), 1.05, 1.1, 0.07));
+  g.add(leaf); g.userData.leaf = leaf; return g;
+}
+export function palm() {
+  const g = new THREE.Group();
+  for (let i = 0; i < 6; i++) { const s = cyl(0.16 - i * 0.01, 0.18 - i * 0.01, 0.7, 0x9a6b3a, 6); s.position.set(Math.sin(i * 0.4) * 0.15, 0.35 + i * 0.68, 0); s.rotation.z = 0.05 * i; g.add(s); }
+  for (let i = 0; i < 7; i++) { const l = box(0.25, 0.05, 2.0, 0x3fae2a); l.position.set(0.3, 4.2, 0); l.rotation.set(0.5, i * Math.PI * 2 / 7, 0); const p = new THREE.Group(); p.position.set(0.3, 4.2, 0); l.position.set(0, 0, 0.9); p.rotation.set(0, i * Math.PI * 2 / 7, 0); l.rotation.x = 0.4; p.add(l); g.add(p); }
+  return g;
+}
+export function trophy() {
+  const g = new THREE.Group();
+  const gold = { emissive: 0x6b4a00, emissiveIntensity: 0.35 };
+  g.add(at(box(0.9, 0.3, 0.9, 0x333333), 0, 0.15, 0));
+  g.add(at(cyl(0.12, 0.18, 0.6, C.gold, 10, gold), 0, 0.6, 0));
+  g.add(at(cyl(0.6, 0.25, 0.8, C.gold, 14, gold), 0, 1.3, 0));
+  return g;
+}
+export function contractStack(n) {
+  const geo = new THREE.BoxGeometry(0.7, 0.02, 0.95);
+  const m = new THREE.InstancedMesh(geo, M(0xffffff), n); const d = new THREE.Object3D();
+  for (let i = 0; i < n; i++) { d.position.set(Math.sin(i * 1.3) * 0.03, 0.01 + i * 0.022, Math.cos(i * 1.9) * 0.03); d.rotation.y = Math.sin(i) * 0.1; d.updateMatrix(); m.setMatrixAt(i, d.matrix); }
+  m.castShadow = true; m.count = 0; return m;
+}
+const chromeMat = new THREE.MeshStandardMaterial({ color: 0xe8eef5, metalness: 1.0, roughness: 0.18, flatShading: true });
+let envDone = false;
+export function chromeify(obj, scene, renderer) { // alles in Chrom verwandeln (Plotwist)
+  if (!envDone && renderer) {
+    const pm = new THREE.PMREMGenerator(renderer);
+    const s = new THREE.Scene(); s.background = new THREE.Color(0xffb27a);
+    const half = (col, a, b) => new THREE.Mesh(new THREE.SphereGeometry(10, 24, 12, 0, Math.PI * 2, a, b), new THREE.MeshBasicMaterial({ color: col, side: THREE.BackSide }));
+    s.add(half(0x5f73e0, 0, Math.PI * 0.42), half(0xffc58a, Math.PI * 0.42, Math.PI * 0.1), half(0x30343c, Math.PI * 0.52, Math.PI * 0.48));
+    const sunB = new THREE.Mesh(new THREE.SphereGeometry(1.2, 12, 8), new THREE.MeshBasicMaterial({ color: 0xffffff })); sunB.position.set(-5, 5, -6); s.add(sunB);
+    chromeMat.envMap = pm.fromScene(s).texture; envDone = true;
+  }
+  obj.traverse(o => { if (o.isMesh && !o.userData.keep) o.material = chromeMat; });
+}

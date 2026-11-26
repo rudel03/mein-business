@@ -1,0 +1,200 @@
+{
+ "scene": "umzug",
+ "voice": {
+  "tempo": 1.2,
+  "pitch": -2
+ },
+ "beats": [
+  {
+   "shot": "hook",
+   "audio": "audio/01.mp3",
+   "text": "Diese Firma trägt einfach nur Kartons von A nach B. Und verdient damit richtig Geld.",
+   "labels": [
+    {
+     "word": "Kartons",
+     "text": "KARTONS VON A NACH B",
+     "dur": 1.8,
+     "color": "white"
+    }
+   ]
+  },
+  {
+   "shot": "intro",
+   "audio": "audio/02.mp3",
+   "text": "Umzugsunternehmen. Klingt langweilig, ist aber ein ziemlich cleveres Geschäft. Und das Ende ist komplett absurd.",
+   "labels": [
+    {
+     "word": "Umzugsunternehmen.",
+     "text": "UMZUGSUNTERNEHMEN",
+     "dur": 2.0,
+     "color": "yellow"
+    }
+   ]
+  },
+  {
+   "shot": "price",
+   "audio": "audio/03.mp3",
+   "text": "Eine Drei-Zimmer-Wohnung umziehen kostet im Schnitt so 830 bis 2.100 Euro.",
+   "labels": [
+    {
+     "word": "830",
+     "text": "3 ZIMMER ≈ 830–2.100 €",
+     "dur": 3.0,
+     "color": "yellow"
+    }
+   ]
+  },
+  {
+   "shot": "hourly",
+   "audio": "audio/04.mp3",
+   "text": "Abgerechnet wird oft pro Mann und Stunde. Laut Branchenverband im Schnitt rund 42 Euro.",
+   "labels": [
+    {
+     "word": "42",
+     "text": "≈ 42 € PRO MANN & STUNDE",
+     "dur": 2.6,
+     "color": "yellow"
+    }
+   ]
+  },
+  {
+   "shot": "wage",
+   "audio": "audio/05.mp3",
+   "text": "Der Helfer muss mindestens Mindestlohn kriegen, 2026 sind das 13,90 Euro. Die Differenz zahlt Lkw, Sprit, Versicherung und den Gewinn.",
+   "labels": [
+    {
+     "word": "13,90",
+     "text": "MINDESTLOHN 2026: 13,90 €",
+     "dur": 2.6,
+     "color": "white",
+     "y": 420
+    },
+    {
+     "word": "Gewinn.",
+     "text": "GEWINN",
+     "dur": 1.6,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "shot": "halteverbot",
+   "audio": "audio/06.mp3",
+   "text": "Dazu kommen Extras. Eine Halteverbotszone zum Beispiel: 80 bis 200 Euro.",
+   "labels": [
+    {
+     "word": "Halteverbotszone",
+     "text": "HALTEVERBOT: 80–200 €",
+     "dur": 2.6,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "shot": "stairs",
+   "audio": "audio/07.mp3",
+   "text": "Möbel ab- und aufbauen, Kartons, vierter Stock ohne Aufzug. Alles kostet extra.",
+   "labels": [
+    {
+     "word": "extra.",
+     "text": "ALLES EXTRA",
+     "dur": 1.6,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "shot": "storage",
+   "audio": "audio/08.mp3",
+   "text": "Und der Trick: Manche vermieten auch Lagerräume. Wer einlagert, zahlt jeden Monat. Ganz ohne Schleppen.",
+   "labels": [
+    {
+     "word": "Lagerräume.",
+     "text": "LAGER = JEDEN MONAT GELD",
+     "dur": 2.6,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "shot": "tip",
+   "audio": "audio/09.mp3",
+   "text": "Pro-Tipp: Kein Angebot ohne Besichtigung. Die Verbraucherzentrale warnt vor Lockpreisen, die am Umzugstag plötzlich explodieren.",
+   "labels": [
+    {
+     "word": "Besichtigung.",
+     "text": "IMMER BESICHTIGUNG + FESTPREIS",
+     "dur": 2.6,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "shot": "tax",
+   "audio": "audio/10.mp3",
+   "text": "Und 20 Prozent der Arbeitskosten kannst du von der Steuer absetzen.",
+   "labels": [
+    {
+     "word": "20",
+     "text": "§ 35a EStG: 20 % ABSETZBAR",
+     "dur": 2.6,
+     "color": "white"
+    }
+   ]
+  },
+  {
+   "shot": "twist1",
+   "audio": "audio/11.mp3",
+   "text": "Und dann, am Umzugstag: Die Jungs packen alles ein. Und zwar wirklich alles."
+  },
+  {
+   "shot": "twist2",
+   "audio": "audio/12.mp3",
+   "text": "Das ganze Haus. Mit dir drin. Neue Adresse: der Mond. Die Halteverbotszone haben sie trotzdem berechnet.",
+   "labels": [
+    {
+     "word": "Mond.",
+     "text": "NEUE ADRESSE: MOND",
+     "dur": 2.0,
+     "color": "yellow"
+    },
+    {
+     "word": "Halteverbotszone",
+     "text": "+ 200 € HALTEVERBOT",
+     "dur": 2.0,
+     "color": "red"
+    }
+   ]
+  }
+ ],
+ "highlight": [
+  "Trick:",
+  "Pro-Tipp:",
+  "absurd.",
+  "Gewinn.",
+  "Mond.",
+  "NASA.",
+  "Australien.",
+  "Chrom.",
+  "doppelt.",
+  "Masse.",
+  "verdammt",
+  "Provision",
+  "Festpreis",
+  "verboten.",
+  "Mindestlohn",
+  "extra."
+ ],
+ "source": "Quellen: Trustlocal · AMÖ via Meister-Job · Aroundhome · Verbraucherzentrale · § 35a EStG",
+ "source_beats": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "out": "../../ausgabe/005-umzug.mp4"
+}

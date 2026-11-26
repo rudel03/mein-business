@@ -1,0 +1,179 @@
+{
+ "scene": "folierer",
+ "voice": {
+  "tempo": 1.2,
+  "pitch": -2
+ },
+ "beats": [
+  {
+   "shot": "hook",
+   "audio": "audio/01.mp3",
+   "text": "Dieser Typ macht aus deinem Auto in ein paar Tagen ein komplett anderes. Ohne einen Tropfen Lack.",
+   "labels": [
+    {
+     "word": "Lack.",
+     "text": "0 % LACK",
+     "dur": 1.8,
+     "color": "white"
+    }
+   ]
+  },
+  {
+   "shot": "intro",
+   "audio": "audio/02.mp3",
+   "text": "Folierer. Kaum einer denkt drüber nach, aber das Geschäft ist richtig clever. Und das Ende ist komplett absurd.",
+   "labels": [
+    {
+     "word": "Folierer.",
+     "text": "FOLIERER",
+     "dur": 2.0,
+     "color": "yellow"
+    }
+   ]
+  },
+  {
+   "shot": "price",
+   "audio": "audio/03.mp3",
+   "text": "Eine Vollfolierung kostet je nach Auto so 2.000 bis 5.000 Euro.",
+   "labels": [
+    {
+     "word": "2.000",
+     "text": "VOLLFOLIERUNG: 2.000–5.000 €",
+     "dur": 3.0,
+     "color": "yellow"
+    }
+   ]
+  },
+  {
+   "shot": "foil",
+   "audio": "audio/04.mp3",
+   "text": "Die Folie selbst kostet je nach Qualität so 20 bis 50 Euro pro Quadratmeter.",
+   "labels": [
+    {
+     "word": "20",
+     "text": "FOLIE: 20–50 € / m²",
+     "dur": 2.6,
+     "color": "yellow"
+    }
+   ]
+  },
+  {
+   "shot": "work",
+   "audio": "audio/05.mp3",
+   "text": "Der Rest ist Arbeit: waschen, entfetten, Teile abbauen, kleben, föhnen. Zwei bis fünf Tage.",
+   "labels": [
+    {
+     "word": "Zwei",
+     "text": "2–5 TAGE ARBEIT",
+     "dur": 2.4,
+     "color": "white"
+    }
+   ]
+  },
+  {
+   "shot": "fleet",
+   "audio": "audio/06.mp3",
+   "text": "Und der Trick: Dazu kommen Firmenkunden. Werbung auf Transportern, manchmal eine ganze Flotte auf einmal.",
+   "labels": [
+    {
+     "word": "Firmenkunden.",
+     "text": "FIRMENKUNDEN",
+     "dur": 2.4,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "shot": "extras",
+   "audio": "audio/07.mp3",
+   "text": "Plus Extras: Scheiben tönen, Lackschutzfolie, und später die Folie wieder runterholen. Kostet natürlich auch.",
+   "labels": [
+    {
+     "word": "Extras:",
+     "text": "EXTRAS = EXTRA GELD",
+     "dur": 2.4,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "shot": "protect",
+   "audio": "audio/08.mp3",
+   "text": "Gut für dich: Die Folie schützt den Lack darunter vor Steinschlag und Kratzern.",
+   "labels": [
+    {
+     "word": "Steinschlag",
+     "text": "LACKSCHUTZ",
+     "dur": 2.0,
+     "color": "green"
+    }
+   ]
+  },
+  {
+   "shot": "tip",
+   "audio": "audio/09.mp3",
+   "text": "Pro-Tipp: Angebote unter 1.500 Euro sind oft ein Zeichen für billige Folie. Die löst sich dann gern schneller.",
+   "labels": [
+    {
+     "word": "1.500",
+     "text": "UNTER 1.500 € = OFT BILLIGFOLIE",
+     "dur": 2.8,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "shot": "twist1",
+   "audio": "audio/10.mp3",
+   "text": "Und jetzt das Beste: Eines Tages kriegt der Folierer einfach nicht mehr genug."
+  },
+  {
+   "shot": "twist2",
+   "audio": "audio/11.mp3",
+   "text": "Er foliert die Werkstatt, die Straße, seine Kunden. Und am Ende den Mond. In Chrom. Die Rechnung ging an die NASA.",
+   "labels": [
+    {
+     "word": "Mond.",
+     "text": "DER MOND. IN CHROM.",
+     "dur": 2.2,
+     "color": "yellow"
+    },
+    {
+     "word": "NASA.",
+     "text": "RECHNUNG: NASA",
+     "dur": 1.8,
+     "color": "red"
+    }
+   ]
+  }
+ ],
+ "highlight": [
+  "Trick:",
+  "Pro-Tipp:",
+  "absurd.",
+  "Gewinn.",
+  "Mond.",
+  "NASA.",
+  "Australien.",
+  "Chrom.",
+  "doppelt.",
+  "Masse.",
+  "verdammt",
+  "Provision",
+  "Festpreis",
+  "verboten.",
+  "Mindestlohn",
+  "extra."
+ ],
+ "source": "Quellen: motor.com.de · ADAC · web.de · fairgarage · AutoScout24",
+ "source_beats": [
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "out": "../../ausgabe/007-folierer.mp4"
+}
