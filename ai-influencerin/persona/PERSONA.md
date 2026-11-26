@@ -1,5 +1,6 @@
 # Persona-Bibel
 
+> **Entscheidung Inhaber 26.11.2026 (nach Blond-/Skandinavien-Tests): weiter mit der Albanerin F3.** Element `d5f71ebe…` + Soul ID `85630d00…` bleiben gültig. Gesichts-Feinschliff (Nase/Kinn/Brauen/Make-up) optional, noch nicht übernommen.
 > Status: **angelegt (26.11.2026)** – Gesicht F3, Element + Soul ID fertig, Identitätsblock final. Name noch Platzhalter.
 > Alter Hinweis: Alles mit „VORSCHLAG“ ist vorbereitet und wird in Modus A (Start-Prompt) mit dem Inhaber bestätigt oder geändert. Danach wird „VORSCHLAG“ entfernt.
 > Was hier steht, ist verbindlich. Der Identitätsblock wird **wortgleich** in jeden Prompt kopiert.
