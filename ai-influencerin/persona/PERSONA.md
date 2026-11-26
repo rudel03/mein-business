@@ -4,6 +4,7 @@
 > Was hier steht, ist verbindlich. Der Identitätsblock wird **wortgleich** in jeden Prompt kopiert.
 
 ## Steckbrief (VORSCHLAG)
+- **Figur (Inhaber 26.11.2026):** ca. 1,60 m, breite Hüfte, kräftig trainierter Po, natürliche Taille, leicht trainiert mit etwas Körperfett (nicht definiert, kein Sixpack), Brust mittel. Prompt-EN: `petite around 160 cm, wide hips and strong well-developed glutes from squats, natural waist, medium bust, soft healthy body fat, fit but not shredded, no visible abs`.
 - **Name:** **Platzhalter „[Name]“** (Inhaber 26.11.2026, Entscheidung später). Technische Namen bis dahin: Element/Soul „Persona01“. Kriterien für später: Kriterien: kurz, in DE und international aussprechbar, Benutzername ≤ 15 Zeichen, auf Instagram + TikTok frei, keine Ähnlichkeit zu Promis/Marken. Beispiele zum Prüfen: Mira, Lia, Nele, Ella, Jana, Romy + Nische („mira.kocht.protein“ ist zu lang; besser „miraprotein“, „romyeats“).
 - **Wirkt wie:** 25–27 Jahre (klar erwachsen).
 - **Wohnort:** fiktive Altbauwohnung in **Köln-Ehrenfeld** (entschieden 26.11.2026) – urban, Cafés, Rhein/Park, sportlich, nicht protzig.
@@ -113,4 +114,6 @@ texture, long dark-brown hair with a soft middle part, athletic toned build of a
 - **Beispiel-Caption:** „38 g Protein und es schmeckt nach Kuchen. Overnight Oats mit Skyr, Zimt und Apfel – 5 Minuten am Abend, morgens einfach rausnehmen. Proteinbewertung: 9/10, Abzug weil ich wieder den Löffel vergessen hab. Wie viel Zimt ist bei euch zu viel?“
 
 ## Learnings aus Tests
+- **Sheets Runde 1 (26.11.2026, 3 × 1,375 Credits):** V1 haselnuss `544492c5-b82c-4b8b-849b-73c7b5459af4` (warm, nahbar, Empfehlung) · V2 braun `9c6dbed1-a726-42fb-b353-75764246fa07` (Model-Look, streng, Schrift „E. 03“ auf der Jacke) · V3 grün `625c8520-700b-482d-ac39-bc5721865f87` (Pony, edgy, Streifen wie eine Marke → passt nicht).
+  Learning: Der Baukasten wählt **weite Streetwear**, egal was im Brief steht. Figur-Wünsche (breite Hüfte, kräftiger Po, natürliche Taille, leicht trainiert mit etwas Körperfett, ca. 1,60 m, mittlere Brust) sind dadurch auf keinem Sheet zu sehen → in Runde 2 Outfit im Brief konkret vorgeben oder V1 als Identitätsbild (`medias`) mit figurnahem Gym-Set.
 - Baukasten-Probelauf 26.11.2026: Tier `normal` + obige Auswahl funktioniert; Muttermal + Sommersprossen nicht gleichzeitig wählbar.
