@@ -7,9 +7,9 @@ Status: ☐ offen · ◐ in Arbeit · ☑ freigegeben
 Das 3er-Raster soll im Wechsel Gesicht – Essen – Outfit zeigen und farblich ruhig sein (Creme/Olive/Holz).
 | # | Format | Säule | Kurzbeschreibung | Hook / Bild-1-Text | ☐ |
 |---|---|---|---|---|---|
-| 1 | Foto 3:4 | Vorstellung | Porträt am Küchenfenster, Morgenlicht, Oversize-Hoodie, Kaffeetasse, ehrliches Lächeln, Muttermal gut sichtbar | „Hi, ich bin [Name] 👋“ | ☐ |
-| 2 | Carousel 6 | Küche | Rezept R1 Overnight Oats Skyr-Zimt-Apfel: Hook-Glas + sie, Zutaten flatlay, 3 Schritte Hände, Makro-Slide, Abschluss | „38 g Protein, schmeckt nach Kuchen“ | ☐ |
-| 3 | Foto 3:4 | Mode | Spiegel-Selfie Flur, salbeigrünes Gym-Set + Zip-Jacke offen, Gym-Tasche über der Schulter | „Fit-Check, 6:45 Uhr“ | ☐ |
+| 1 | Foto 4:5 | Vorstellung | Porträt am Küchenfenster, Morgenlicht, Oversize-Hoodie, Kaffeetasse, ehrliches Lächeln, Muttermal gut sichtbar | „Hi, ich bin [Name] 👋“ | ◐ Batch 1 |
+| 2 | Carousel 6 | Küche | Rezept R1 Overnight Oats Skyr-Zimt-Apfel: Hook-Glas + sie, Zutaten flatlay, 3 Schritte Hände, Makro-Slide, Abschluss | „38 g Protein, schmeckt nach Kuchen“ | ◐ Batch 1 |
+| 3 | Foto 3:4 | Mode | Spiegel-Selfie Flur, salbeigrünes Gym-Set + Zip-Jacke offen, Gym-Tasche über der Schulter | „Fit-Check, 6:45 Uhr“ | ◐ Batch 1 |
 | 4 | Carousel 5 | Behind the Scenes | „So entsteht ein Foto von mir“: Kurzbeschreibung → Prompt-Ausschnitt → Rohbild → Fehlerbild (6 Finger) mit Humor → fertiges Bild | „Ihr fragt, wie ich entstehe“ | ☐ |
 | 5 | Carousel 6 | Küche | Rezept R2 High-Protein-Bowl Hähnchen-Reis-Edamame: Draufsicht Arbeitsplatte, Meal-Prep-Boxen | „4 Boxen, 25 Minuten“ | ☐ |
 | 6 | Foto 3:4 | Gym | Pause auf der Hantelbank, trinkt aus Flasche, leicht verschwitzt, Haare im Zopf, Gym unscharf | – | ☐ |

@@ -6,7 +6,7 @@
 
 | # | Rezept | Kernzutaten | Ziel Protein/Portion | Säule-Format | Status |
 |---|---|---|---|---|---|
-| R1 | Overnight Oats Skyr-Zimt-Apfel | Haferflocken, Skyr, Milch, Apfel, Zimt, optional Proteinpulver | 30–40 g | Carousel + Reel | ☐ Makros |
+| R1 | Overnight Oats Skyr-Zimt-Apfel | Haferflocken, Skyr, Milch, Apfel, Zimt, optional Proteinpulver | ca. 33 g (ohne Pulver) | Carousel + Reel | ✅ Makros (unten) |
 | R2 | Meal-Prep-Bowl Hähnchen-Reis-Edamame | Hähnchenbrust, Basmati, Edamame, Brokkoli, Sojasauce | 40–45 g | Carousel + Reel | ☐ |
 | R3 | Quark-Pancakes | Magerquark, Eier, Hafermehl, Backpulver, Beeren | 30 g | Carousel + Reel | ☐ |
 | R4 | Skyr-Bowl 3 Varianten | Skyr + Beeren / Kakao-Banane / Erdnussmus | 25–30 g | Carousel | ☐ |
@@ -28,3 +28,17 @@
 | R20 | Kaffee-Protein-Shake | kalter Kaffee, Milch, Proteinpulver, Eis | 30 g | Story/Reel | ☐ |
 
 Supplements (Proteinpulver) nur als Zutat nennen, ohne Marke (bis zu einer gekennzeichneten Kooperation) und ohne Wirkaussagen.
+
+
+## R1 Overnight Oats Skyr-Zimt-Apfel – Makros (berechnet 26.11.2026)
+Zubereitung: Haferflocken, Skyr, Milch und Zimt im Glas verrühren, Apfel würfeln und unterheben bzw. obenauf, über Nacht (mind. 4 h) in den Kühlschrank.
+| Zutat | kcal | Eiweiß g | KH g | Fett g |
+|---|---|---|---|---|
+| Haferflocken (zart) 50 g | 186 | 6.8 | 29.4 | 3.5 |
+| Skyr natur 200 g | 126 | 22.0 | 8.0 | 0.4 |
+| Milch 1,5 % 100 ml | 47 | 3.4 | 4.8 | 1.5 |
+| Apfel 100 g | 52 | 0.3 | 11.4 | 0.2 |
+| Zimt 1 TL (2 g) | 5 | 0.1 | 0.5 | 0.0 |
+| **Summe (1 Portion)** | **ca. 416** | **ca. 33** | **ca. 54** | **ca. 6** |
+Quelle: Nährwerte je 100 g typischer Discounter-Produkte (Verpackungsangaben, Größenordnung BLS). **Ohne Proteinpulver ca. 33 g Eiweiß** → Hook „33 g Protein“ (nicht 38 g). Mit 10 g Proteinpulver (ca. +8 g) wären es ca. 40 g.
+Status: Makros ✅ · Nachgekocht: ☐ → bis dahin in der Caption als „Rezeptidee“ formulieren.
