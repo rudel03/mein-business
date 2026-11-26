@@ -14,7 +14,8 @@ Eine fotorealistische, klar als KI gekennzeichnete Influencerin auf Instagram (+
   4. 30–40 Inhalte vorproduzieren (12 Raster-Posts, ~10 Reels, ~15 Stories).
   5. Account anlegen, Label an, Aufwärmen Tag 1 (`system/02-account-aufbau.md`).
   6. Optional: Postiz-Konto (Planen/Posten), Windsor.ai mit Instagram/TikTok verbinden. ✅ Canva-Connector verbunden (26.11.2026).
-- **Blocker:** Higgsfield-Konto ist auf dem Gratis-Plan mit 0 Credits (geprüft 26.11.2026). Vor dem Anlegen der Persona Plan buchen (Soul ID + kommerzielle Nutzung brauchen bezahlten Plan).
+- ✅ Higgsfield: **Plus-Plan, 1.000 Credits** (geprüft 26.11.2026). Kein Blocker mehr. Credits sparsam: Persona + Trainingsset + erste Bilder zuerst, Videos später.
+- Wiedererkennungsmerkmal vorgeschlagen: feine Narbe linke Augenbraue (+ optional Muttermal), siehe `persona/PERSONA.md`.
 - Verbunden: Higgsfield, Canva, Windsor.ai, Shopify. Keine zusätzlichen Plugins aktiviert (nicht nötig für den Start).
 - Phase: **0 – Vorbereitung**. Start-Datum Account: –
 
