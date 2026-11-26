@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      :root { --ground:#0c0b0d; --ink:#f2efe6; --gold:#d4b46a; --bad:#b8473a; }
+      * { margin:0; padding:0; box-sizing:border-box; }
+      html, body { width:1080px; height:1920px; overflow:hidden; background:var(--ground); }
+      #root { position:relative; width:1080px; height:1920px; overflow:hidden; background:var(--ground); }
+      .vid { position:absolute; left:0; top:0; width:1080px; height:1920px; object-fit:cover; }
+      .scrim { position:absolute; left:0; top:0; width:1080px; height:1920px; background:linear-gradient(180deg, rgba(12,11,13,.55) 0%, rgba(12,11,13,0) 25%, rgba(12,11,13,0) 40%, rgba(12,11,13,.72) 50%, rgba(12,11,13,.72) 68%, rgba(12,11,13,0) 82%); }
+      .txt { position:absolute; left:120px; top:300px; width:768px; }
+      .s { font-family:'Inter'; font-weight:700; font-size:58px; color:var(--ink); line-height:1.1; text-shadow:0 3px 14px rgba(0,0,0,.6); }
+      .h { font-family:'Inter'; font-weight:900; font-size:84px; color:var(--ink); line-height:1.02; letter-spacing:-0.02em; text-shadow:0 3px 16px rgba(0,0,0,.6); }
+      .g { font-family:'Playfair Display'; font-style:italic; font-weight:700; font-size:132px; color:var(--gold); line-height:1.0; text-shadow:0 4px 18px rgba(0,0,0,.65); }
+      .chip { display:inline-block; font-family:'JetBrains Mono'; font-weight:700; font-size:30px; letter-spacing:.1em; padding:8px 16px; border-radius:6px; margin-bottom:22px; }
+      .c-bad { background:var(--bad); color:#fff; }
+      .c-num { background:rgba(12,11,13,.75); color:var(--gold); border:1px solid rgba(212,180,106,.6); }
+      .c-good { background:var(--gold); color:#14100e; }
+      #end-card { position:absolute; left:0; top:0; width:1080px; height:1920px; background:radial-gradient(120% 70% at 50% 0%, #4a3a22 0%, #2a2117 45%, #0c0b0d 100%); }
+      .check { font-family:'Inter'; font-weight:700; font-size:50px; color:var(--ink); line-height:1.5; }
+      .check b { color:var(--gold); font-weight:900; margin-right:14px; }
+      .win { position:absolute; left:300px; top:1260px; width:480px; height:560px; overflow:hidden; border:2px solid rgba(242,239,230,.55); }
+      .win video { position:absolute; left:0; top:0; width:480px; height:560px; object-fit:cover; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="14" data-width="1080" data-height="1920">
+      <video id="v1" class="clip vid" src="assets/t2.mp4" data-start="0" data-duration="2.5" data-media-start="1.0" data-track-index="0" muted playsinline></video>
+      <video id="v2" class="clip vid" src="assets/t2.mp4" data-start="2.5" data-duration="2.5" data-media-start="4.3" data-track-index="0" muted playsinline></video>
+      <video id="v3" class="clip vid" src="assets/t3.mp4" data-start="5" data-duration="2.5" data-media-start="3.0" data-track-index="0" muted playsinline></video>
+      <video id="v4" class="clip vid" src="assets/t4.mp4" data-start="7.5" data-duration="2.5" data-media-start="2.0" data-track-index="0" muted playsinline></video>
+      <div id="scrim" class="clip scrim" data-start="0" data-duration="10" data-track-index="1"></div>
+
+      <div id="hook" class="clip txt" style="top:960px" data-start="0" data-duration="2.5" data-track-index="2">
+        <div id="hook-chip" class="chip c-bad">FALSCH</div>
+        <div id="hook-s" class="s">Hip Thrust nur im</div>
+        <div id="hook-g" class="g">Rücken?</div>
+      </div>
+      <div id="it1" class="clip txt" style="top:960px" data-start="2.5" data-duration="2.5" data-track-index="2">
+        <div id="it1-chip" class="chip c-num">1 / 3</div>
+        <div id="it1-h" class="h">Kinn</div>
+        <div id="it1-g" class="g">zur Brust.</div>
+      </div>
+      <div id="it2" class="clip txt" data-start="5" data-duration="2.5" data-track-index="2">
+        <div id="it2-chip" class="chip c-num">2 / 3</div>
+        <div id="it2-h" class="h">Schienbeine</div>
+        <div id="it2-g" class="g">senkrecht.</div>
+      </div>
+      <div id="it3" class="clip txt" style="top:960px" data-start="7.5" data-duration="2.5" data-track-index="2">
+        <div id="it3-chip" class="chip c-num">3 / 3</div>
+        <div id="it3-h" class="h">Oben 1 Sek.</div>
+        <div id="it3-g" class="g">halten.</div>
+      </div>
+
+      <div id="end-card" class="clip" data-start="10" data-duration="4" data-track-index="3">
+        <div class="txt">
+          <div id="end-chip" class="chip c-good">SPICKZETTEL</div>
+          <div id="end-s" class="s">Speicher dir das für deinen</div>
+          <div id="end-g" class="g">Leg Day.</div>
+          <div id="end-list" style="margin-top:30px">
+            <div id="ck1" class="check"><b>✓</b>Kinn zur Brust</div>
+            <div id="ck2" class="check"><b>✓</b>Schienbeine senkrecht</div>
+            <div id="ck3" class="check"><b>✓</b>Oben 1 Sek. halten</div>
+          </div>
+        </div>
+      </div>
+      <video id="v5" class="clip" src="assets/t5.mp4" data-start="10" data-duration="4" data-media-start="0.6" data-track-index="4" muted playsinline style="position:absolute;left:302px;top:1262px;width:476px;height:556px;object-fit:cover;z-index:5"></video>
+      <div id="v5-frame" class="clip" data-start="10" data-duration="4" data-track-index="5" style="position:absolute;left:300px;top:1260px;width:480px;height:560px;border:2px solid rgba(242,239,230,.6);z-index:6"></div>
+
+      <audio id="music" src="assets/music.m4a" data-start="0" data-duration="14" data-media-start="18" data-volume="0.8"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const inT = (sel, at, from) => tl.fromTo(sel, Object.assign({ opacity: 0, filter: "blur(10px)" }, from), { opacity: 1, filter: "blur(0px)", x: 0, y: 0, scale: 1, duration: 0.32, ease: "power4.out" }, at);
+      // punch-ins on the footage
+      [["#v1",0],["#v2",2.5],["#v3",5],["#v4",7.5]].forEach(([s,a]) => tl.fromTo(s, { scale: 1.0 }, { scale: 1.07, duration: 2.45, ease: "none" }, a));
+      // hook
+      inT("#hook-chip", 0.05, { y: -20 }); inT("#hook-s", 0.1, { y: 30 }); inT("#hook-g", 0.3, { y: 40 });
+      // items: three different entrances
+      inT("#it1-chip", 2.55, { y: -20 }); inT("#it1-h", 2.6, { x: -120 }); inT("#it1-g", 2.8, { y: 50 });
+      inT("#it2-chip", 5.05, { y: -20 }); inT("#it2-h", 5.1, { x: 160 }); inT("#it2-g", 5.3, { scale: 1.3 });
+      inT("#it3-chip", 7.55, { y: -20 }); inT("#it3-h", 7.6, { scale: 1.4 }); inT("#it3-g", 7.8, { y: 50 });
+      // end card
+      inT("#end-chip", 10.05, { y: -20 }); inT("#end-s", 10.1, { y: 30 }); inT("#end-g", 10.25, { y: 40 });
+      inT("#ck1", 10.5, { x: -60 }); inT("#ck2", 10.65, { x: -60 }); inT("#ck3", 10.8, { x: -60 });
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
