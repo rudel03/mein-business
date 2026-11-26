@@ -9,7 +9,7 @@ Wird beim Start jeder Sitzung gelesen. Ein Repository, ein Ordner pro Projekt. P
 | DURCHSCHICHT (E-Book für Schichtarbeit) | `durchschicht/` | mystore (`q2e8xh-pz.myshopify.com`) | Theme live, Produkt als Entwurf; offen: PDF anhängen, Impressum, bezahlter Plan |
 | Essensplaner | `essensplaner/` | – | Auftrag steht in `essensplaner/AUFTRAG.md`, Recherche noch nicht begonnen |
 | KI-Influencerin (virtuelle Instagram/TikTok-Persona) | `ai-influencerin/` | – | Nische: High-Protein-Küche + Gym + Athleisure; Higgsfield Plus aktiv; nächster Schritt: Persona anlegen. Start: `ai-influencerin/START-PROMPT.md` |
-| Faceless-Videos (automatischer Kanal: YouTube Shorts, Reels, TikTok) | `faceless-videos/` | – | Nische: Business-Modelle; Produktion per Code (Three.js + Piper, 0 Credits), Format „Geschäftsmodelle, auf die keiner kommt“ (FORMAT.md), Stimme ElevenLabs Dylan, Videos 004–008 (Entrümpelung, Umzug, Callcenter, Folierer, Schlüsseldienst) warten auf Feedback; offen: Kanalname, Konten + Postiz |
+| Faceless-Videos (automatischer Kanal: YouTube Shorts, Reels, TikTok) | `faceless-videos/` | – | **Stil freigegeben** (Referenz `ausgabe/005-umzug-v2.mp4`, Regeln `FORMAT.md`, Skill `geschaeftsmodell-video`): Geschäftsmodelle, frech + für Dumme erklärt, absurder Plotwist, Stimme ElevenLabs Orion, Video per Code (Three.js). Nächster Schritt: 006–008 im neuen Stil; offen: Kanalname, Konten + Postiz |
 
 ## Arbeitsweise
 - **Eine Sitzung pro Projekt** (der Kontext bleibt sauber). Andere Projektordner nur lesen, wenn sie relevant sind.
@@ -33,7 +33,7 @@ Wird beim Start jeder Sitzung gelesen. Ein Repository, ein Ordner pro Projekt. P
 - Domains prüfen per RDAP: `rdap.denic.de/domain/<name>.de`; 404 bedeutet frei.
 
 ## Skills (`.claude/skills/`)
-- 33 geprüfte Marketing-, Design- und Test-Skills plus 2 eigene (`influencer-prompt`, `influencer-redaktion`), siehe `.claude/skills/README.md`. Bei passenden Aufgaben nutzen: Texte → copywriting/copy-editing, Anzeigen → ad-creative/ads, Preise → pricing/paywalls, App/Landingpage → frontend-design + cro, Abo → onboarding/churn-prevention, Recherche → customer-research/competitor-profiling.
+- 33 geprüfte Marketing-, Design- und Test-Skills plus 3 eigene (`influencer-prompt`, `influencer-redaktion`, `geschaeftsmodell-video`), siehe `.claude/skills/README.md`. Bei passenden Aufgaben nutzen: Texte → copywriting/copy-editing, Anzeigen → ad-creative/ads, Preise → pricing/paywalls, App/Landingpage → frontend-design + cro, Abo → onboarding/churn-prevention, Recherche → customer-research/competitor-profiling.
 - Die Skills sind US-geprägt. **Deutsches/EU-Recht hat Vorrang** (Buchpreisbindung, UWG, HWG, DSGVO, § 312k BGB Kündigungsbutton, Double-Opt-in). Keine US-Taktiken wie Fake-Countdowns, versteckte Kündigung oder erfundene Zahlen.
 - Werkzeuge mit ◆ in marketingskills sind **gesponserte Partner**. Nicht bevorzugen, neutral vergleichen.
 - Mehrere Skills lesen eine Produktkontext-Datei `.agents/product-marketing.md`. Pro Projekt eine anlegen (z. B. `durchschicht/.agents/product-marketing.md`) mit Zielgruppe, Positionierung, Belegen und Learnings aus Tests.

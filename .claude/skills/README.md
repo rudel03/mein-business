@@ -13,3 +13,4 @@ Werden in jeder Sitzung automatisch geladen. Ausgewählt und gelesen am 28.10.20
 Bewusst weggelassen: Shopify- und Facebook-Ads-Skills aus claude-marketing (brauchen eigene API-Schlüssel, dafür gibt es die Shopify- und Windsor-Connectors) sowie alles ohne Bezug zu unseren Projekten (B2B-Vertrieb, Slack, Präsentationen …).
 
 Aktualisieren: Repository neu klonen, Änderungen lesen, nur geprüfte Skills übernehmen.
+- `geschaeftsmodell-video` (eigener Skill, 26.11.2026): Faceless-Kurzvideo im freigegebenen Stil „Geschäftsmodelle, auf die keiner kommt“ (Projekt `faceless-videos/`).

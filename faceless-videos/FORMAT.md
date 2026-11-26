@@ -1,37 +1,65 @@
-# Videoformat „Geschäftsmodelle, auf die keiner kommt“ (Stand 26.11.2026)
+# FREIGEGEBENER STIL – „Geschäftsmodelle, auf die keiner kommt“
 
-Vorgabe des Inhabers: unterschätzte Geschäftsmodelle (Entrümpelung, Umzug, Callcenter, Folierer …) so erklären, dass der Zuschauer **jedes Detail** mitnimmt und echten Mehrwert hat. Am Ende ein **unerwarteter Plotwist**, der das Video lächerlich macht. Ton: wie Jugendliche wirklich reden, nicht wie ein 30-Jähriger, der auf jung macht.
+**Vom Inhaber freigegeben am 26.11.2026: „Das ist perfekt, das gefällt mir sehr. Genau diesen Style festhalten.“**
+**Referenzvideo: `ausgabe/005-umzug-v2.mp4`** · Skript/Config: `skripte/005-umzug/video_v2.json` · Szenen: `engine/scenes/umzug.js`
 
-## Aufbau (60–70 s, 12–14 Zeilen, je 1 Zeile = 1–2 Einstellungen)
-1. **Hook (0–3 s):** paradoxe Aussage, sofort Bild dazu. „Digga, dieser Typ kriegt Geld dafür, dass er deinen Müll mitnimmt. Und verkauft ihn danach nochmal.“
-2. **Name + offene Schleife:** „Entrümpelung, Bro. … Und am Ende wird's komplett lost, bleib dran.“ (hält bis zum Plotwist)
-3. **Preis für den Kunden** (Zahl + Etikett), dann **Beispielrechnung**.
-4. **Ablauf / Kosten** (Leute, Fahrzeug, Zeit, Material).
-5. **Der Trick** (wo das eigentliche Geld herkommt) – 2–3 Zeilen mit konkreten Zahlen.
-6. **Was kostet den Unternehmer** (ehrlich, mit Zahl).
-7. **Zusammenfassung in einem Satz** („Die kassieren doppelt.“).
-8. **Pro-Tipp für den Zuschauer** (Mehrwert: sparen, Steuer, worauf achten).
-9. **Plotwist (2 Zeilen): RICHTIG absurd und unrealistisch** (Feedback 26.11.), z. B. Haus fliegt zum Mond, Callcenter ruft sich selbst an, Mond in Chrom foliert, 300 Türen bis Australien. Am besten logisch aus dem Geschäftsmodell übertrieben, mit trockener Schlusspointe ("Die Halteverbotszone haben sie trotzdem berechnet.") (z. B. du kaufst deine eigene Couch zurück). Kein CTA danach, Video endet auf der Pointe → Loop.
+Jedes neue Video wird **genau so** gemacht. Abweichungen nur, wenn der Inhaber es ausdrücklich sagt.
 
-## Bindung
-- Alle 2–3 s neuer Schnitt/Kamerawinkel; lange Zeilen → `"shot": ["a", "b"]`.
-- Jede Zahl als Etikett (Pill) im Bild; Schlüsselwörter gelb.
-- Keine Begrüßung, kein „Heute erkläre ich…“, kein Abo-Aufruf am Anfang.
+---
 
-## Sprache
-- **Feedback 26.11. (spät, gilt): MEHR Umgangssprache + oft Kraftausdrücke als Adjektive** („verfickt“, „scheiß“, „geil“, „krass“, „Digga“, „Bruder“, „safe“, „null Bock“) – in fast jeder Zeile eins. (Zwischenstand „weniger Umgangssprache“ ist überholt.)
-- **Für Dumme erklären:** „Pass auf, ganz easy:“, Alltagssituation des Zuschauers, dann **Rechnung zum Mitrechnen** (z. B. 3 Jungs × 8 Std × 42 € = 1.008 € an 1 Tag; Lohn dagegenrechnen; was bleibt). Dazu ein Detail, das den Einstieg leicht wirken lässt (z. B. „Transporter bis 3,5 t fährst du mit normalem Führerschein“). Ziel: Zuschauer denkt „warum macht das nicht jeder?“. Ehrlich bleiben: Kosten (Lkw, Sprit, Versicherung, Abgaben) nennen, keine Einkommensversprechen.
-- Natürlich: „Digga“, „Bro“, „lowkey“, „safe“, „wild“, „komplett lost“, „Bude“, „nem“, „aufm“, „kassieren“. Sparsam dosieren (2–4 pro Video), nicht in jedem Satz.
-- Kraftausdrücke als Füllwörter erlaubt („verfickt“, „Scheiß“), **nie gegen echte Firmen, Personen oder Gruppen**.
-- Vom Inhaber genannt: „Gundi“, „zirto“ → Bedeutung/Verwendung vom Inhaber bestätigen lassen, bevor sie eingesetzt werden.
+## 1. Die 7 Stil-Regeln (nicht verhandelbar)
+1. **Thema:** ein unterschätztes Geschäftsmodell, auf das keiner kommt (Umzug, Entrümpelung, Callcenter, Folierer, Schlüsseldienst …).
+2. **Ton:** Umgangssprache wie Jugendliche reden, **Kraftausdrücke als Adjektive in fast jeder Zeile**: „verfickt“, „scheiß“, „geil“, „krass“, „safe“, „null Bock“, „Digga“, „Bruder“, „komplett lost“. Nie gegen echte Firmen, Personen oder Gruppen richten.
+3. **Für Dumme erklärt:** „Pass auf, ganz easy:“ + Alltagssituation des Zuschauers, dann eine **Rechnung zum Mitrechnen** (Menge × Zeit × Preis = Umsatz an 1 Tag; Lohn dagegen; was übrig bleibt).
+4. **„Warum macht das nicht jeder?“-Moment:** ein Detail, das den Einstieg leicht wirken lässt (z. B. „Transporter bis 3,5 t fährst du mit normalem Führerschein“) + der „fetteste Trick“ (versteckte Zusatz-Einnahme, z. B. Lagerräume = jeden Monat Geld).
+5. **Ehrlich bleiben:** Kosten nennen (Lkw, Sprit, Versicherung, Abgaben), keine Einkommensversprechen, jede Zahl mit Quelle, Spannen statt Scheingenauigkeit.
+6. **Mehrwert für den Zuschauer:** ein Pro-Tipp (sparen, Steuer, Abzocke vermeiden).
+7. **Plotwist am Ende: RICHTIG absurd und unrealistisch**, logisch aus dem Geschäftsmodell übertrieben + trockene Schlusspointe. Kein Abo-Aufruf danach; das Video endet auf der Pointe.
 
-## Faktencheck (Pflicht)
-- Jede Zahl mit Quelle in `skripte/<nr>/skript.md`; regionale Preise mit Region benennen (Etikett z. B. „LK Schwäbisch Hall 2026“).
-- Spannen statt Scheingenauigkeit („30–50 €/m²“). Beispielrechnungen als solche kennzeichnen.
-- Keine Versprechen „so wirst du reich“, keine Einkommensbehauptungen ohne Beleg.
+## 2. Aufbau (12–14 Zeilen, ca. 70–80 s)
+| # | Baustein | Muster aus dem Referenzvideo |
+|---|---|---|
+| 1 | **Hook** (paradox, 0–3 s) | „Digga, diese Typen tragen einfach nur Kartons von A nach B. Und machen damit verfickt viel Geld.“ |
+| 2 | **Name + offene Schleife** | „Umzugsfirma, Bruder. Klingt scheiß langweilig, ist aber safe eins der geilsten Geschäfte. Und das Ende ist komplett lost.“ |
+| 3 | **Für Dumme: Alltag** | „Pass auf, ganz easy: Du ziehst um, hast null Bock zu schleppen, also rufst du die Jungs an.“ |
+| 4 | **Preis mit Quelle** | „Die nehmen pro Mann und Stunde im Schnitt so 42 Euro. Sagt der Branchenverband, kein Witz.“ |
+| 5 | **Rechnung: Umsatz** | „Jetzt rechnen wir, Digga: Drei Jungs, acht Stunden, mal 42 Euro. Macht 1.008 Euro. Für einen verfickten Tag.“ |
+| 6 | **Rechnung: Kosten** | „Und die Jungs? Kriegen mindestens Mindestlohn, 13,90 Euro. Drei mal acht Stunden sind rund 334 Euro.“ |
+| 7 | **Was bleibt (ehrlich)** | „Heißt: Von 1.000 Euro bleiben rund 670 übrig. Davon gehen noch Lkw, Sprit, Versicherung und Abgaben weg. Der Rest gehört dem Chef.“ |
+| 8 | **„Das Krasseste“ (leichter Einstieg)** | „Und das Krasseste: Für nen Transporter bis 3,5 Tonnen brauchst du keinen extra Führerschein. Der normale reicht.“ |
+| 9 | **Extras** | „Dann die Extras: Halteverbotszone 80 bis 200 Euro, Möbel abbauen extra, vierter Stock ohne Aufzug extra. Alles scheiß extra, Digga.“ |
+| 10 | **Der fetteste Trick** | „Und der fetteste Trick: Lagerräume. Leute lagern ihren Scheiß ein und zahlen jeden Monat. Ohne dass einer was schleppt.“ |
+| 11 | **Pro-Tipp** | „Pro-Tipp: Kein Angebot ohne Besichtigung, sonst wird's am Umzugstag plötzlich scheiß teuer. Und 20 Prozent vom Arbeitslohn kannst du von der Steuer absetzen.“ |
+| 12 | **Plotwist Teil 1** | „Und jetzt das Beste: Am Umzugstag packen die Jungs alles ein. Und zwar wirklich alles.“ |
+| 13 | **Plotwist Teil 2 + Pointe** | „Das ganze verfickte Haus. Mit dir drin. Neue Adresse: der Mond. Halteverbotszone haben sie trotzdem berechnet.“ |
 
-## Produktion
-1. Skript schreiben → `skripte/<nr>-<thema>/video.json` (+ `skript.md` mit Quellen).
-2. Stimme: Higgsfield `generate_audio_batch`, `text2speech_v2`, `variant:"elevenlabs"`, Stimme **Orion** `ed69c516-92d2-4b30-a967-617737a342e5` (tief, ~103 Hz), in video.json `"voice": {"tempo": 1.15, "tight": true}` (Pausen auf 0,1 s); **kein `pitch`** – Tonhöhen-Filter klingt „gedoppelt“; max. 6 gleichzeitig; Zahlen im Prompt ausschreiben. Dateien nach `audio/01.mp3 …` laden. ≈ 0,45 Credits/Zeile.
-3. Szenen: `engine/scenes/<thema>.js` (Baukasten `engine/world.js`). Vorschau: `node engine/render3d.mjs plan.json st --stills 1,4,7`.
-4. `python3 -I pipeline/make_video.py skripte/<nr>/video.json` (≈ 9 min für 70 s).
+Weitere freigegebene Plotwist-Ideen: Callcenter ruft sich selbst an und wird „Callcenter des Jahres“ · Folierer foliert den Mond in Chrom, Rechnung an die NASA · 300 Türen hinter der Tür bis Australien · du kaufst deine eigene Couch vom Entrümpler zurück.
+
+## 3. Bild & Schnitt
+- Eigene 3D-Engine (Three.js), Low-Poly, Abendhimmel lila → orange, Held = gelber Hoodie + schwarze Cap rückwärts, Arbeiter = dunkelgrau + orange Cap.
+- **Neuer Kamerawinkel alle 2–3 s**; lange Zeilen auf 2 Einstellungen verteilen: `"shot": ["math", "price"]`.
+- Rechnungen als **Münztürme** (Umsatz vs. Lohn), Zeit als **Uhr**, Geldfluss als **fliegende Scheine/Münzen**.
+- **Untertitel: 1 Wort**, groß, Mitte, weiß mit schwarzem Rand; Kraftausdrücke, Zahlen und Schlüsselwörter **gelb** (`highlight`).
+- **Etiketten (Pills) für jede Zahl und jede Rechnung**: „3 JUNGS × 8 STD × 42 €“, „= 1.008 € AN 1 TAG“, „≈ 670 € ÜBRIG“, „KLASSE B: BIS 3,5 t“. Farben: gelb = Zahl, grün = Gewinn/gut, rot = Kosten/Warnung, weiß = Info.
+- Quellenzeile klein unten in den Zahlen-Zeilen (`source`, `source_beats`).
+
+## 4. Stimme (freigegeben)
+- ElevenLabs **„Orion“** über Higgsfield: `text2speech_v2`, `variant: "elevenlabs"`, `voice_type: "preset"`, `voice_id: "ed69c516-92d2-4b30-a967-617737a342e5"`.
+- In `video.json`: `"voice": {"tempo": 1.15, "tight": true}` → 15 % schneller + Sprechpausen auf 0,1 s gekürzt.
+- **Kein `pitch`** (Tonhöhen-Filter klingt „gedoppelt“ – vom Inhaber abgelehnt).
+- Im Sprech-Prompt Zahlen **ausschreiben** („zweiundvierzig Euro“, „drei komma fünf Tonnen“), im Untertitel-Text (`text`) als Ziffern.
+- Max. 6 Aufträge gleichzeitig; ≈ 0,45 Credits pro Zeile (≈ 6 Credits pro Video).
+
+## 5. Faktencheck (Pflicht vor dem Sprechen)
+- Jede Zahl mit Quelle in `skripte/<nr>-<thema>/skript.md` (Link + Stand/Jahr).
+- Regionale Preise mit Region benennen; Branchen-/Anbieterzahlen als Spanne und „im Schnitt/so“.
+- Gesetze/Gebühren an der Primärquelle prüfen (PDF mit `pdftotext -layout`).
+- Rechnungen nachrechnen (z. B. 3 × 8 × 13,90 = 333,60 → „rund 334“).
+
+## 6. Produktion (Ablauf)
+1. Thema aus `skripte/themen.md` wählen, recherchieren, Skript nach Abschnitt 2 schreiben.
+2. `skripte/<nr>-<thema>/video.json` anlegen (Vorlage: `skripte/005-umzug/video_v2.json`) + `skript.md` mit Quellen.
+3. Sprachzeilen mit Orion erzeugen (`generate_audio_batch`), nach `audio/01.mp3 …` laden.
+4. Szenen: vorhandene Einstellungen aus `engine/scenes/*.js` und `_common.js` wiederverwenden (towersShot, tipShot …), neue nur bei Bedarf. Vorschau: `node engine/render3d.mjs plan.json st --stills 1,4,7`.
+5. `python3 -I pipeline/make_video.py skripte/<nr>-<thema>/video.json` (≈ 10 min). Neue Sitzung: vorher `bash pipeline/setup.sh`.
+6. Prüfen: Standbilder ansehen, Whisper-Transkript einer Zeile gegenlesen, Länge 60–85 s.
