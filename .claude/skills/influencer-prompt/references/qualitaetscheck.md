@@ -4,7 +4,7 @@ Bild in voller Größe **und** als Thumbnail ansehen. Thumbnail-Fehler sind meis
 
 | # | Prüfen | Durchgefallen wenn | Erste Korrektur |
 |---|---|---|---|
-| 1 | Identität | Augenform, Nase, Muttermal, Haaransatz, Augenfarbe weichen ab | Element/Soul-ID prüfen, Identitätsblock wortgleich, kreativen Teil kürzen |
+| 1 | Identität | Augenform, Nase, Muttermal, **Augenbrauen-Narbe (links; im Spiegel rechts)**, Haaransatz, Augenfarbe weichen ab | Element/Soul-ID prüfen, Identitätsblock wortgleich, kreativen Teil kürzen |
 | 2 | Hände | ≠ 5 Finger, verschmolzen, Gelenke falsch, Ring im Finger | Pose vereinfachen oder Ausschnitt ändern (Hände raus oder groß) |
 | 3 | Text & Logos | lesbare/falsche Schrift, Marken auf Tasse/Shirt/Schild | `no text, no logos`, Hintergrund vereinfachen |
 | 4 | Licht | Schatten in verschiedene Richtungen, Gesicht heller als die Lichtquelle erlaubt | eine Lichtquelle mit Richtung benennen |

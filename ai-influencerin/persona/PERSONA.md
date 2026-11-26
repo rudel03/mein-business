@@ -12,6 +12,13 @@
 - Was sie mag / was sie nervt (für Captions): …
 - Offen über KI: ja – Bio-Hinweis + Label. Standardantwort auf „Bist du echt?“: …
 
+## Wiedererkennungsmerkmal (Vorschlag 26.11.2026, in der Persona-Sitzung bestätigen)
+- **Hauptmerkmal: feine Narbe in der linken Augenbraue** (kleine, schräge Lücke im äußeren Drittel, ca. 4 mm, hautfarben, nicht gerötet). Im Higgsfield-Baukasten als Option „Brow scar“ vorhanden, dadurch stabil reproduzierbar, auch auf Thumbnails sichtbar, wirkt sportlich und passt zur Gym-Figur. Story dazu: „Fahrradsturz mit 9“.
+- **Nebenmerkmal (optional): kleines Muttermal** unter dem rechten Auge bzw. am rechten Wangenknochen.
+- Prompt-Text (EN): `a small healed scar creating a thin diagonal gap in the outer third of her left eyebrow`; optional `a tiny beauty mark on her right cheekbone`.
+- **Spiegel-Selfies:** Dort erscheint die Narbe physikalisch korrekt auf der **anderen** Seite. Im Qualitätscheck bewusst prüfen.
+- Verworfen: Pigmentstörung/Vitiligo (die Form ändert sich bei KI von Bild zu Bild, und eine echte Hauterkrankung als Erkennungsgag kann als unsensibel kritisiert werden), Heterochromie (wirkt schnell nach Fantasy/KI und geht auf kleinen Bildern verloren).
+
 ## Higgsfield-IDs
 - AI-Influencer-Job (Character Sheet): …
 - Element-ID: `<<<…>>>`
