@@ -7,7 +7,8 @@ Legende: ✅ einsatzbereit · 🔑 vorhanden, Anmeldung/Konto nötig · ➕ opti
 |---|---|
 | Persona entwerfen | `ai_influencer_get_options`, `ai_influencer_list_presets`, `ai_influencer_prepare` → `ai_influencer_generate` |
 | Character Sheet (vorn/hinten/Porträt, Outfits) | Workflow `character-sheet` (Stil „Realism“) |
-| Gesicht festhalten | Elements (`elements_create`, `<<<ID>>>` im Prompt), Soul ID (Training in der Higgsfield-Oberfläche), Modell `soul_2` mit `soul_id` |
+| Gesicht festhalten | Elements (`elements_create`, `<<<ID>>>` im Prompt), Soul ID (`show_characters` action `train`, 5–20 Bilder, ~10 Min.), Modell `soul_2` mit `soul_id` |
+| Projektordner | `create_project` → `default_folder_id` bei jeder Generierung |
 | Fotos | `gpt_image_2_6`, `nano_banana_pro` (bis 14 Referenzen), `soul_2` (UGC-Look), `nano_banana_2_1` (Inpainting mit Maske), `flux_3_image` |
 | Upscale / Format | `upscale_image`, `reframe`, `outpaint_image` |
 | Reels aus Standbild | `seedance_2_5` (start_image), `kling3_0`, `cinematic_studio_3_0` |

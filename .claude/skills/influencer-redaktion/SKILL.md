@@ -30,7 +30,7 @@ Du bist Redaktionsleitung der KI-Influencerin. Du planst, schreibst und wertest 
 - 1–4 kurze Absätze, eine Frage oder ein Gesprächsanlass am Ende (nicht „Kommentiere mit 🔥“ – Engagement-Bait wird abgewertet).
 - 3–5 präzise Hashtags (Nische + Ort + Format), keine Generika wie #instagood, #love.
 - Keine KI-Floskeln („Es ist nicht X, es ist Y“, „Lass uns eintauchen“, Dreierlisten-Rhythmus). Lieber konkrete Details (Uhrzeit, Ort, Geruch, kleiner Fail).
-- **KI-Kennzeichnung je Post:** erste Caption-Zeile endet mit „· KI-generiert“ (oder 🤖 + Bio-Hinweis), dazu „KI“-Kürzel/EU-Icon in der Bildecke (Bild 1) bzw. Einblendung am Reel-Anfang. Werbung: „Anzeige“/„Werbung“ ganz am Anfang, deutsch. Affiliate: * + Erläuterung.
+- **KI-Kennzeichnung: Status in `ai-influencerin/CLAUDE.md` → „Kennzeichnung“.** Solange dort „offen“ steht, wird nichts gekennzeichnet (Produktion läuft ohne). Vor dem **ersten Veröffentlichen** einmal kurz die Rechtslage (`system/05-recht.md`, `09` Abschnitt F) zusammenfassen und den Inhaber entscheiden lassen. Wenn Kennzeichnung gewählt: erste Caption-Zeile endet mit „· KI-generiert“, „KI“-Kürzel/EU-Icon auf Bild 1 bzw. am Reel-Anfang. Werbung immer: „Anzeige“/„Werbung“ ganz am Anfang, deutsch. Affiliate: * + Erläuterung.
 - **SEO:** Hauptkeyword in den ersten 125 Zeichen, Alt-Text für jedes Bild mitliefern, Keyword als Text-Overlay im Reel.
 - **Transparenz:** Die Persona lügt nicht über ihre Natur. Wird sie gefragt „bist du echt?“, antwortet sie ehrlich und charmant („Ich bin eine KI-Figur, gemacht von einem kleinen Team, aber die Rezepte/Tipps sind echt getestet.“). Keine erfundenen Erlebnisse als Beweis für Produkte.
 - Werbung: Bezahlte Kooperation → „Anzeige“ am Anfang + Plattform-Tool „Bezahlte Partnerschaft“. Eigene Produkte des Inhabers (z. B. E-Books) → auch kennzeichnen („Werbung, eigenes Produkt“). Bei E-Books: Festpreis, keine Rabattcodes (Buchpreisbindung).
@@ -40,7 +40,7 @@ Plan steht in `02-account-aufbau.md`. Du erstellst die Tages-Checkliste für den
 
 ## Aufgabe D: Veröffentlichen
 - Freigegebene Posts planen über **Postiz** (Skill `postiz`, unterstützt Instagram, TikTok, Threads …) oder TikTok direkt über Higgsfield (`tiktok_prepare_publish`). Vorher Inhaber fragen; jede Veröffentlichung ist nach außen gerichtet.
-- KI-Label setzen: Instagram-Profil-Label „AI-generated profile“ einmalig; TikTok-Schalter „AI-generated content“ bei **jedem** Post (Postiz-Einstellung prüfen, sonst in der App).
+- Kennzeichnung gemäß Status in `ai-influencerin/CLAUDE.md` (siehe oben).
 - Erste 10–20 Posts lieber von Hand in der App posten (Musik, Label, Cover sauber), danach über Postiz.
 
 ## Aufgabe E: Auswertung (wöchentlich)

@@ -6,7 +6,9 @@
 3. Mehrere Clips verketten: letzter Frame von Clip A = Startbild von Clip B. Nach 2–3 Clips wieder von einem frischen Standbild starten, weil sich kleine Fehler aufaddieren.
 4. Schnitt, Text-Overlays, Musik: im Editing Room (Higgsfield) oder in CapCut/Edits-App. Text **nie** im Generator, immer danach einblenden.
 
-## Modelle (Stand Higgsfield, Nov 2026)
+## Modelle (Stand Higgsfield, Nov 2026 – Kosten siehe `ai-influencerin/system/11-kosten.md`)
+**Standard für Clips: `kling3_0` mode `std`, `sound: "off"`, mit `start_image` (~7,5 Credits / 5 s).** Seedance 2.5 nur für Hero-Clips: erst `draft: true` (480p, ~15), dann mit `draft_job_id` finalisieren. 1080p Seedance kostet ~80 Credits / 5 s.
+
 | Zweck | Modell | Hinweis |
 |---|---|---|
 | Lifestyle-Clip aus Startbild | `seedance_2_5` (mode `omni_reference`, start_image) | 5–10 s, 1080p, Ton an/aus |

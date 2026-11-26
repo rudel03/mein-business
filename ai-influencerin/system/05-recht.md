@@ -1,7 +1,7 @@
 # Recht & Plattformregeln (keine Rechtsberatung, Stand 26.11.2026)
 
 ## Pflichten-Checkliste
-> Ausführlich und mit Verbandsleitfäden (Wettbewerbszentrale, ZAW, Medienanstalten): `09-profi-wissen.md`, Abschnitte F und G. **Unser Standard: Plattform-Label + Bio + sichtbares „KI“-Kürzel/EU-Icon auf jedem Bild bzw. am Anfang jedes Reels.**
+> Ausführlich und mit Verbandsleitfäden (Wettbewerbszentrale, ZAW, Medienanstalten): `09-profi-wissen.md`, Abschnitte F und G. **Status:** Kennzeichnung ist vom Inhaber vorerst zurückgestellt (CLAUDE.md → „Kennzeichnung: offen“). Die Produktion läuft ohne. Vor dem ersten Post entscheidet der Inhaber. Empfohlener Standard, falls gekennzeichnet wird: Plattform-Label + Bio + sichtbares „KI“-Kürzel/EU-Icon im Bild bzw. am Reel-Anfang. Risiken ohne Kennzeichnung: Reichweitendrosselung durch Instagram (nicht empfehlbar), TikTok-Pflichtlabel/automatische Labels, Bußgeld (Landesmedienanstalten) und Abmahnung nach § 3a UWG.
 
 - [ ] **Instagram:** „AI-generated profile“ im Profil aktiv (sonst Reichweitenverlust, nicht empfehlbar). Quelle: [Instagram](https://creators.instagram.com/blog/ai-generated-profile-label)
 - [ ] **TikTok:** Schalter „AI-generated content“ bei jedem realistischen KI-Video/-Bild. Quelle: [TikTok](https://support.tiktok.com/en/using-tiktok/creating-videos/ai-generated-content)

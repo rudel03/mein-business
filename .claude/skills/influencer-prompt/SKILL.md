@@ -64,12 +64,15 @@ Prompts auf **Englisch** schreiben (Modelle verstehen es am besten), Captions au
 ### Imperfektionen (genau 1–2 wählen)
 tiny flyaway hairs · slight motion blur on one hand · mild sensor noise in shadows · crumbs / used napkin on table · slightly crooked framing · lens flare from a window · small wrinkle in clothing · chipped nail polish · faint under-eye texture · other guests blurred in background
 
-## 3. Modell & Parameter (Higgsfield)
-- **Gesicht soll exakt stimmen:** Element der Persona einbinden: `<<<ELEMENT_ID>>>` im Prompt, Modell `gpt_image_2_6` oder `nano_banana_pro`. Alternativ `soul_2` mit `soul_id` (trainierte Identität, stärkste Konsistenz, „realistic UGC“-Look).
-- **Ohne Gesicht / Szene / Produkt:** `gpt_image_2_6` (Repo-Standard laut CLAUDE.md ist gpt_image_2_5; das neuere 2.6 vorziehen, wenn verfügbar).
-- **Erst testen:** für jede neue Bildidee 2–4 Varianten (verschiedene Kamera oder Licht), dann die beste hochskalieren (`upscale_image`) – nicht 20 Varianten blind.
-- Batch: höchstens ~8 Jobs auf einmal (Fehler 429), `jobs_wait` höchstens 12 Jobs, `timeout_seconds` ≤ 15 und wiederholen.
-- Kosten vorher mit `estimate_image_cost` prüfen, wenn > 10 Bilder.
+## 3. Modell & Parameter (Higgsfield, geprüft 26.11.2026)
+- **Immer `folder_id`** = Projektordner aus PERSONA.md mitgeben (alles landet im Projekt „KI-Influencerin“).
+- **Weg 1 – Soul ID (stärkste Gesichtstreue, UGC-Look):** `generate_image` mit `model: "soul_2"`, `soul_id` aus PERSONA.md, `aspect_ratio` 3:4 / 9:16, ~1 Credit. Kein Element-Platzhalter, keine Referenzbilder zusammen mit `style_id`. Nur EINE Person pro Bild.
+- **Weg 2 – Element (flexibler, mehrere Personen/Objekte):** `<<<ELEMENT_ID>>>` in `params.prompt`, Modell `gpt_image_2_6` (~0,75 Credits) oder `nano_banana_pro` (~2 Credits, bis 14 Referenzen). Element-IDs nie in `medias` stecken.
+- **Ohne Gesicht (Essen-Draufsicht, POV, Hände):** `gpt_image_2_6`, kein Element nötig (Hände/Nägel/Schmuck aber passend zur Persona beschreiben).
+- **Welcher Weg wann:** steht nach dem Testshooting unter „Learnings“ in PERSONA.md. Bis dahin: Porträts/Selfies → Soul 2.0, Szenen mit Requisiten/Text-freien Produkten → GPT Image 2.6 mit Element; bei Abweichung des Gesichts zum anderen Weg wechseln.
+- **Mehrere Bilder:** `generate_image_batch` (≤ 8 Jobs), dann `jobs_wait` (≤ 12 Jobs, `timeout_seconds` ≤ 15, wiederholen), dann **ein** `show_generation_by_ids`. Unsichere Submits nie blind wiederholen.
+- **Erst testen:** 2–4 Varianten (verschiedene Kamera ODER Licht), beste mit `upscale_image` hochskalieren.
+- **Kosten:** `estimate_image_cost` vor Batches > 10 Bildern; Preisliste in `ai-influencerin/system/11-kosten.md`.
 
 ## 4. Qualitätskontrolle (jedes Bild, bevor es dem Inhaber gezeigt wird)
 Bild ansehen und Checkliste in `references/qualitaetscheck.md` durchgehen. Kurzform:
@@ -80,13 +83,14 @@ Fehler → **eine** Variable ändern und neu generieren (oder lokal bearbeiten m
 Siehe `references/video.md`. Grundprinzip: **erst das perfekte Standbild, dann animieren** (start_image), Prompt beschreibt nur Bewegung + Kamera, nicht das Gesicht. Sprechende Clips: Higgsfield `intone` (Charakterbild + Sprachaufnahme), Stimme einmal mit `create_voice` festlegen und immer gleich verwenden.
 
 ## 5b. Formate
-Feed/Carousel **3:4** (1080 × 1440; über Postiz/API 4:5), Reels/Stories **9:16**, danach `upscale_image`. Bei Carousels alle Bilder im selben Format. Wichtiges im Reel in der Mitte (UI-Ränder oben/unten frei). Das „KI“-Kürzel kommt nachträglich (Canva), nie im Generator.
+Feed/Carousel **3:4** (1080 × 1440; über Postiz/API 4:5), Reels/Stories **9:16**, danach `upscale_image`. Bei Carousels alle Bilder im selben Format. Wichtiges im Reel in der Mitte (UI-Ränder oben/unten frei). Ein evtl. „KI“-Kürzel kommt nachträglich (Canva), nie im Generator.
 
 ## 6. Ausgabe an den Inhaber
-Kurz auf Deutsch: welche Bilder (Vorschau), welcher Prompt (aufklappbar/als Datei), Vorschlag für Caption + Hashtags (Skill `influencer-redaktion`), Hinweis „KI-Label beim Posten aktivieren“. Gewählte Bilder unter `ai-influencerin/content/bilder/JJJJ-MM-TT_kurzname.png` ablegen (keine Dateien > 50 MB committen) und Prompt + Job-ID in `ai-influencerin/content/LOG.md` eintragen.
+Kurz auf Deutsch: welche Bilder (Vorschau), welcher Prompt (aufklappbar/als Datei), Vorschlag für Caption + Hashtags (Skill `influencer-redaktion`), Kennzeichnung gemäß Status in `ai-influencerin/CLAUDE.md`. Gewählte Bilder unter `ai-influencerin/content/bilder/JJJJ-MM-TT_kurzname.png` ablegen (keine Dateien > 50 MB committen) und Prompt + Job-ID in `ai-influencerin/content/LOG.md` eintragen.
 
 ## Harte Regeln
 - Niemals eine reale Person nachbilden oder ihr ähneln lassen (Recht am eigenen Bild, KUG/DSGVO). Keine Promi-Namen in Prompts.
 - Keine Minderjährigen, keine sexualisierten Inhalte, keine Markenlogos, keine echten Marken ohne Vertrag.
 - Kein Content, der echte Erlebnisse vortäuscht, um Produkte zu bewerben („habe ich 4 Wochen getestet“) – UWG. Werbung immer als „Anzeige“ kennzeichnen.
-- Jeder fotorealistische Post bekommt das Plattform-KI-Label (Instagram „AI-generated profile“ + Post-Label, TikTok „AI-generated“). Details: `ai-influencerin/system/05-recht.md`.
+- **KI-Kennzeichnung: Status in `ai-influencerin/CLAUDE.md` → „Kennzeichnung“.** Solange dort „offen“ steht, wird nichts gekennzeichnet (Produktion läuft ohne). Vor dem **ersten Veröffentlichen** einmal kurz die Rechtslage (`system/05-recht.md`, `09` Abschnitt F) zusammenfassen und den Inhaber entscheiden lassen.
+- Die Figur behauptet nie, ein Mensch zu sein.

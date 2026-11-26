@@ -18,7 +18,7 @@ Ziel: Das Konto verhält sich wie ein neuer, echter Nutzer. Täglich 2–3 Sitzu
 
 | Tag | In der App (Inhaber) | Posten |
 |---|---|---|
-| 1 | Konto in der App anlegen (mobiles Netz), Creator-Konto, Profilbild, Name, Bio **ohne Link**, **„AI-generated profile“ einschalten**. Threads-Verknüpfung ablehnen. 10–15 Reels der Nische ansehen, ~5 Likes, 5–10 Nischen-Accounts folgen. | 1 Foto-Post (stärkstes Porträt) |
+| 1 | Konto in der App anlegen (mobiles Netz), Creator-Konto, Profilbild, Name, Bio **ohne Link**, **Kennzeichnung gemäß Entscheidung in CLAUDE.md** (Empfehlung: „AI-generated profile“ einschalten, sonst drosselt Instagram KI-Profile). Threads-Verknüpfung ablehnen. 10–15 Reels der Nische ansehen, ~5 Likes, 5–10 Nischen-Accounts folgen. | 1 Foto-Post (stärkstes Porträt) |
 | 2 | 15–20 Reels schauen, 5–10 Likes, 5–10 Follows | 1 Story + 1 Foto |
 | 3 | 10+ Likes, 2–3 echte Kommentare (selbst formuliert, mind. 4 Wörter, Bezug zum Post) | 1 Story + 1 Carousel |
 | 4 | wie Tag 3, Nachrichten/Kommentare beantworten | 1–2 Stories |

@@ -18,7 +18,7 @@ Diese Datei bündelt alles, was erfahrene Betreiber anders machen. Vor jeder Pla
 | 8 | **Zu perfekt** – makellose Symmetrie, zu sauberes Licht, Video-Bewegungsschleifen [Praxis] | 1–2 Imperfektionen, Handylicht, kurze Clips, Fehlerbilder als Humor-Content |
 | 9 | **Zu früh monetarisieren** – Kooperationen brauchen meist 2–6 Monate konstantes Posten [Anbieter] | Monetarisierung erst Phase 4; vorher nur eigenes Produkt testen |
 | 10 | **Gekaufte Follower** – Marken prüfen Engagement, fliegt auf [Praxis] | verboten |
-| 11 | **KI verschwiegen** → Reichweitenverlust + Rechtsrisiko [offiziell] | Label ab Tag 1 |
+| 11 | **KI verschwiegen** → Reichweitenverlust + Rechtsrisiko [offiziell] | Entscheidung des Inhabers vor dem ersten Post (CLAUDE.md „Kennzeichnung“) |
 | 12 | **Reposts/fremde Inhalte** → keine Empfehlungen (30-Tage-Bewertung) [offiziell] | nur eigene Inhalte |
 
 Quellen: [aicreatorworld](https://aicreatorworld.net/why-ai-influencer-accounts-stop-growing/), [ICG Community](https://ai-content.agency/community/why-do-some-ai-avatar-accounts-fail.html), [ryla](https://ryla.ai/en/blog/how-to-start-ai-influencer-business/), [Sozee](https://www.sozee.ai/resources/ai-influencer-mistakes-to-avoid/), [creatorflow](https://creatorflow.so/blog/grow-ai-influencer-account/), [wayin](https://wayin.ai/blog/ai-influencers-on-instagram/), [FakeOut](https://www.fakeout.io/blog/ai-fake-influencers-social-media-2026)
@@ -112,7 +112,7 @@ Quellen: [thinkpeak](https://thinkpeak.ai/virtual-influencer-sponsorship-rates-2
 - [ ] Hook (Bild 1 / erste 2 s) + Keyword im Overlay
 - [ ] Caption: Keyword in ersten 125 Zeichen, Gesprächsanlass, 3–5 Hashtags, keine KI-Floskeln
 - [ ] Alt-Text gesetzt
-- [ ] KI-Label aktiv (Profil) / TikTok-Schalter an
+- [ ] Kennzeichnung gemäß Status in CLAUDE.md (falls „offen“: Inhaber vor dem ersten Post entscheiden lassen)
 - [ ] Werbung? → „Anzeige“ + Partnerschafts-Tool
 - [ ] Nicht anzüglich, keine Markenlogos, keine Gesundheitsversprechen
 - [ ] In LOG.md eingetragen
@@ -131,7 +131,7 @@ Auswertung der Leitfäden von **Wettbewerbszentrale** („Kennzeichnung KI-gener
 6. **Sanktionen:** Bußgeld durch die **Landesmedienanstalten** (KI-Marktüberwachungsgesetz, 11.06.2026) bis 15 Mio. € bzw. 3 % des Jahresumsatzes; außerdem **Abmahnung** durch Wettbewerber/Verbände nach § 3a UWG.
 7. **Chat/DMs:** Antwortet ein KI-System automatisch in DMs, muss es gleich zu Beginn sagen, dass man mit einer KI chattet (Art. 50 Abs. 1). „Von KI unterstützt“ reicht dann nicht. Bei uns schickt der Inhaber die Antworten selbst; bei späterer Automatisierung (z. B. „REZEPT“-Auto-DM) den Satz „Automatische Nachricht von Lenas KI-Team“ voranstellen.
 
-**Unser Standard (ab Post 1):**
+**Empfohlener Standard (falls der Inhaber Kennzeichnung wählt):**
 - Instagram: Profil-Label „AI-generated profile“ **plus** Bio „KI-Figur“ **plus** kleines, gut lesbares **„KI“-Kürzel bzw. EU-Icon in einer Bildecke** (bei Carousels auf Bild 1) **plus** erste Caption-Zeile endet mit „· KI-generiert“ oder dem Icon-Emoji 🤖.
 - Reels/TikTok: „KI“-Einblendung in den ersten Sekunden (kleine Ecke, ganze Dauer), Plattform-Schalter an.
 - Werbung zusätzlich „Anzeige“/„Werbung“ **am Anfang** der Caption (deutsch!), bei Video als Einblendung „Werbung“ während der ganzen Sequenz.
