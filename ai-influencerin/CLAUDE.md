@@ -43,5 +43,6 @@ Eine fotorealistische, klar als KI gekennzeichnete Influencerin auf Instagram (+
 - Warm-up-Zahlen und Tageslimits in Blogs stammen von Anbietern, nicht von Instagram. Wir bleiben deutlich darunter.
 - Soul ID ist nicht exportierbar (an Higgsfield gebunden).
 - Element-Platzhalter nur als `<<<UUID>>>` im Prompt, nicht `@name`. Kling 3.0 braucht zusätzlich ein Startbild.
+- **HyperFrames (HeyGen, HTML→Video) installiert 26.11.2026:** `npm install -g hyperframes@0.9.99`, Testrender ok (ffmpeg + Chromium vorhanden). Container ist flüchtig → in neuer Sitzung neu installieren (oder Setup-Skript der Umgebung). `hyperframes init` kopiert 6 Skills nach `~/.claude/skills` (hyperframes, -cli, -registry, media-use, reverse-any-video, style-sampling; ~3,6 MB) – **nicht ins Repo übernommen** (Repo-Regel: fremde Skills nur nach vollständigem Lesen). Für UGC-Schnitt bisher Higgsfield Shorts Studio genutzt.
 - Text nie im Generator erzeugen, sondern nachträglich (Canva/Edits/CapCut).
 - TikTok-Supportseite ist nur per JavaScript lesbar; Regeln über Sekundärquellen bestätigt.
