@@ -1,0 +1,97 @@
+{
+ "blocks": [
+  {
+   "video": "b1.mp4",
+   "voice": "l1.mp3",
+   "text": "Stell dir vor, du musst Eintritt zahlen, bevor du im Supermarkt ein Brot kaufen darfst. Klingt bescheuert? Genau damit macht Costco Milliarden, du Lauch.",
+   "labels": [
+    {
+     "word": "Eintritt",
+     "text": "EINTRITT ZAHLEN?!",
+     "dur": 2.4,
+     "color": "red"
+    }
+   ]
+  },
+  {
+   "video": "b2.mp4",
+   "voice": "l2.mp3",
+   "text": "Die Ware verkaufen die mit Mini-Aufschlag. Da bleibt kaum was hängen. Das echte Geld kommt von der Mitgliedskarte, die jeder Kunde jedes Jahr neu bezahlt.",
+   "labels": [
+    {
+     "word": "Mini-Aufschlag.",
+     "text": "KAUM GEWINN",
+     "dur": 2.2,
+     "color": "white"
+    },
+    {
+     "word": "Mitgliedskarte,",
+     "text": "MITGLIEDSKARTE",
+     "dur": 3.0,
+     "color": "yellow"
+    }
+   ]
+  },
+  {
+   "video": "b3.mp4",
+   "voice": "l3.mp3",
+   "text": "Letztes Jahr: knapp 6 Milliarden nur an Mitgliedsbeiträgen. Gewinn: gut 9 Milliarden. Fast zwei Drittel für Plastikkarten, Bruder!",
+   "labels": [
+    {
+     "word": "6",
+     "text": "5,9 MRD. $ MITGLIEDSBEITRÄGE",
+     "dur": 3.0,
+     "color": "yellow"
+    },
+    {
+     "word": "Gewinn",
+     "text": "9,2 MRD. $ GEWINN",
+     "dur": 2.6,
+     "color": "white",
+     "y": 640
+    }
+   ]
+  },
+  {
+   "video": "b4.mp4",
+   "voice": "l4.mp3",
+   "text": "Und das Krasse: Fast neun von zehn verlängern jedes Jahr. Die billigen Chips sind nur der Köder. Das eigentliche Produkt bist du, du Hirsch.",
+   "labels": [
+    {
+     "word": "neun",
+     "text": "≈ 9 VON 10 VERLÄNGERN",
+     "dur": 2.6,
+     "color": "yellow"
+    },
+    {
+     "word": "Köder.",
+     "text": "KÖDER",
+     "dur": 1.8,
+     "color": "red"
+    }
+   ]
+  }
+ ],
+ "highlight": [
+  "Costco",
+  "Milliarden",
+  "Eintritt",
+  "Mitgliedskarte,",
+  "neun",
+  "zehn",
+  "Köder.",
+  "du,",
+  "Lauch.",
+  "Hirsch.",
+  "Bruder.",
+  "Mitgliedsbeiträgen.",
+  "zwei",
+  "Drittel,"
+ ],
+ "source": "Zahlen: Costco, Geschäftsjahr 2026 (endete 30.08.2026)",
+ "source_blocks": [
+  3,
+  4
+ ],
+ "out": "costco_v2.mp4"
+}
