@@ -121,3 +121,8 @@ Static vertical smartphone shot from the front at chest height, a little closer 
 5. Schnitt, Untertitel, Overlays, Lautheit → fertiges MP4 1080×1920.
 
 Guthaben vorher prüfen (zuletzt ~610 Credits).
+
+## 9. Entwurf 1 (26.11.2026)
+- Inhaber wollte nur **einen** Entwurf → ein Seedance-2.5-Clip mit 15 s und 5 Schnitten in einem Prompt (480p, Startbild `5edff574…`). Job `95559f81-1ddf-4df0-b413-4667ef353139`.
+- Gesichtet (Standbilder): Hook seitlich ✓, Fußshot tief ✓, Halten oben ✓, Outro frontal mit Stirnwischen ✓. Abweichungen: **weiße statt schwarzer Schuhe**, seitliche Shots zeigen vor allem den Oberkörper (Hüfte/Po teils von der Hantel verdeckt) → beim nächsten Mal Kamera weiter weg und etwas höher, Schuhfarbe doppelt nennen.
+- Ton und Lippensynchronität: Inhaber prüft.
