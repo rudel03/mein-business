@@ -8,7 +8,7 @@ Eine fotorealistische, klar als KI gekennzeichnete Influencerin auf Instagram (+
 ## Stand (26.11.2026)
 - System angelegt: Recherche, Account-Aufbau, Content-Strategie, Prompt-System, Recht, Workflow, Skills `influencer-prompt` + `influencer-redaktion`.
 - **Offen (nächste Schritte, in dieser Reihenfolge):**
-  1. Nische + Grundtyp der Persona entscheiden (Vorschläge in `system/03-content-strategie.md`).
+  1. ~~Nische entscheiden~~ → **Entschieden 26.11.2026: Frau, „High-Protein-Küche + Gym-Alltag + Athleisure/Mode“** (Details `system/03-content-strategie.md`, Abschnitt „Gewählte Nische“). Offen: Grundtyp/Aussehen der Persona.
   2. Persona anlegen (`system/06-workflow.md`): AI Influencer Builder → Element → 30 Porträts → Soul ID → Identitätsblock in `persona/PERSONA.md`.
   3. Benutzername prüfen, E-Mail anlegen.
   4. 12 Feed-Posts + 10 Stories vorproduzieren.
@@ -22,6 +22,8 @@ Eine fotorealistische, klar als KI gekennzeichnete Influencerin auf Instagram (+
 - Higgsfield als einziges Generierungswerkzeug (Repo-Regel). Konsistenz über Element + Soul ID + Identitätsblock.
 
 ## Fallstricke
+- Gym-Nische: keine Transformationen, keine Wirkversprechen zu Supplements (Health-Claims-VO), keine erfundenen Trainingserfolge. Nicht sexualisieren (Reichweite + falsche Zielgruppe).
+- Mode verkaufen: Kleidung im Bild muss dem echten Produkt entsprechen → immer Produktfotos als Referenz.
 - Warm-up-Zahlen und Tageslimits in Blogs stammen von Anbietern, nicht von Instagram. Wir bleiben deutlich darunter.
 - Soul ID ist nicht exportierbar (an Higgsfield gebunden).
 - Element-Platzhalter nur als `<<<UUID>>>` im Prompt, nicht `@name`. Kling 3.0 braucht zusätzlich ein Startbild.

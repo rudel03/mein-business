@@ -11,7 +11,22 @@ Kriterien: Thema funktioniert ohne „echte Erlebnisse“ (keine Produkttests am
 4. **Reisen in DE/Europa** – visuell stark, aber Risiko „erfundene Reise“ → nur als klar fiktive Reisetagebuch-Figur.
 Nicht empfohlen: Fitness-Transformation, Beauty-Produkttests, Gesundheit (Health-Claims, Täuschung über Wirkung am eigenen Körper).
 
-## Content-Säulen (Mix pro Woche)
+## Gewählte Nische (26.11.2026)
+**„High-Protein-Küche + Gym-Alltag + Athleisure/Mode“**: eine Frau, die trainiert, gern eiweißreich kocht und sich gut anzieht. Athleisure ist die Brücke zwischen Gym und Mode.
+
+| Säule | Anteil | Inhalt | Grenze |
+|---|---|---|---|
+| High-Protein-Küche | 50 % | Rezepte, Meal-Prep, Makros, „Was ich nach dem Training esse“ | Rezepte echt nachgekocht, Makros berechnet, keine Abnehm-/Heilversprechen |
+| Gym-Alltag | 25 % | Gym-Bag, Routinen, Morgen vor dem Training, Pausen, Motivation, Outfits im Gym | keine Vorher/Nachher-Transformationen, keine Trainingstutorials mit Erfolgsversprechen, Körper athletisch-realistisch, nicht extrem |
+| Mode/Athleisure | 25 % | Gym-Outfits, Streetwear, Spiegel-Selfies, Capsule Wardrobe | keine Markenlogos ohne Vertrag; verkaufte Kleidung nur nach echten Produktfotos |
+
+Monetarisierung in dieser Reihenfolge:
+1. Eigene digitale Produkte: High-Protein-Rezept-E-Book / Fitness-Variante des Essensplaners (Festpreis, Buchpreisbindung).
+2. Affiliate (Kleidung, Küchengeräte, Meal-Prep-Boxen), gekennzeichnet.
+3. Supplement-Kooperationen: Produkt als **Zutat im Rezept**, nur zugelassene Health Claims, keine „hat mir geholfen“-Aussagen.
+4. Eigene Kleidung / Kooperation mit Modemarke (erst mit stabiler Reichweite).
+
+ (Mix pro Woche)
 | Säule | Anteil | Beispiele |
 |---|---|---|
 | Mehrwert der Nische | 40 % | „5 Meal-Prep-Boxen für 18 €“-Carousel, Checklisten, Wochenplan |
