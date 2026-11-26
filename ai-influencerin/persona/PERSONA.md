@@ -6,7 +6,8 @@
 ## Steckbrief (VORSCHLAG)
 - **Figur (Inhaber 26.11.2026):** ca. 1,60 m, breite Hüfte, kräftig trainierter Po, natürliche Taille, leicht trainiert mit etwas Körperfett (nicht definiert, kein Sixpack), Brust mittel. Prompt-EN: `petite around 160 cm, wide hips and strong well-developed glutes from squats, natural waist, medium bust, soft healthy body fat, fit but not shredded, no visible abs`.
 - **Name:** **Platzhalter „[Name]“** (Inhaber 26.11.2026, Entscheidung später). Technische Namen bis dahin: Element/Soul „Persona01“. Kriterien für später: Kriterien: kurz, in DE und international aussprechbar, Benutzername ≤ 15 Zeichen, auf Instagram + TikTok frei, keine Ähnlichkeit zu Promis/Marken. Beispiele zum Prüfen: Mira, Lia, Nele, Ella, Jana, Romy + Nische („mira.kocht.protein“ ist zu lang; besser „miraprotein“, „romyeats“).
-- **Wirkt wie:** 25–27 Jahre (klar erwachsen).
+- **Alter (Inhaber 26.11.2026, ersetzt 25–27):** 19 Jahre, muss im Bild **klar erwachsen** wirken (im Prompt immer `19-year-old young adult woman, clearly an adult`; nie „teen“, „girl“, „baby face“).
+- **Herkunft/Typ (Inhaber 26.11.2026):** Russin, lebt in Köln-Ehrenfeld. Süß, zierlich (ca. 1,60 m), weiches Herzgesicht, große Augen, kleine Stupsnase, volle Lippen, warmes Lächeln. Richtung nur als Typ, **keine reale Person als Vorlage** (kein Promi-/Creator-Name in Prompts, keine Lookalikes).
 - **Wohnort:** fiktive Altbauwohnung in **Köln-Ehrenfeld** (entschieden 26.11.2026) – urban, Cafés, Rhein/Park, sportlich, nicht protzig.
 - **Aussehen (entschieden 26.11.2026):** lange **dunkelbraune** Haare, Typ **sportlich-natürlich**, **kein** künstliches Wiedererkennungsmerkmal (kein Muttermal, keine Grübchen, keine Sommersprossen-Vorgabe).
 - **Nische:** High-Protein-Küche 50 % · Gym-Alltag 25 % · Athleisure/Mode 25 %.
@@ -114,6 +115,8 @@ texture, long dark-brown hair with a soft middle part, athletic toned build of a
 - **Beispiel-Caption:** „38 g Protein und es schmeckt nach Kuchen. Overnight Oats mit Skyr, Zimt und Apfel – 5 Minuten am Abend, morgens einfach rausnehmen. Proteinbewertung: 9/10, Abzug weil ich wieder den Löffel vergessen hab. Wie viel Zimt ist bei euch zu viel?“
 
 ## Learnings aus Tests
+- **Sheets Runde 2 (26.11.2026, 3 × 1,375, Russin ~25):** rund `2429f26e-7253-4ca6-a858-24a519e65a64`, Herz `a795fd17-0654-4d5d-becf-6c221b01d243`, oval (Aufruf abgebrochen, lief trotzdem, ID unbekannt). Inhaber: Richtung jünger/süßer.
+- **Sheets Runde 3 (26.11.2026, 19 J., Herzgesicht, große Augen, `fn_tinynose`+`fn_fulllips`):** blau `1daac3da-…` **fehlgeschlagen** (Credits?), grau `4289eb0b-dd61-439b-8c77-c111e207a96b` (sehr natürlich, Trikot „36“), grün `b4a0d5f0-4b68-4842-b982-1da76273bdc4` (warm, süß, Selfie-Look – Empfehlung). Baukasten ignoriert das Outfit im Brief weiterhin (immer weite Streetwear).
 - **Sheets Runde 1 (26.11.2026, 3 × 1,375 Credits):** V1 haselnuss `544492c5-b82c-4b8b-849b-73c7b5459af4` (warm, nahbar, Empfehlung) · V2 braun `9c6dbed1-a726-42fb-b353-75764246fa07` (Model-Look, streng, Schrift „E. 03“ auf der Jacke) · V3 grün `625c8520-700b-482d-ac39-bc5721865f87` (Pony, edgy, Streifen wie eine Marke → passt nicht).
   Learning: Der Baukasten wählt **weite Streetwear**, egal was im Brief steht. Figur-Wünsche (breite Hüfte, kräftiger Po, natürliche Taille, leicht trainiert mit etwas Körperfett, ca. 1,60 m, mittlere Brust) sind dadurch auf keinem Sheet zu sehen → in Runde 2 Outfit im Brief konkret vorgeben oder V1 als Identitätsbild (`medias`) mit figurnahem Gym-Set.
 - Baukasten-Probelauf 26.11.2026: Tier `normal` + obige Auswahl funktioniert; Muttermal + Sommersprossen nicht gleichzeitig wählbar.
