@@ -19,9 +19,9 @@ Fitness-Essensplaner, Affiliate, Kooperationen (Sport, Food, Supplements als Zut
 Mein Aufwand: 20–30 Minuten am Tag. Alles andere machst du.
 
 # FESTSTEHEND (nicht neu diskutieren)
-- Frau, wirkt 25–27, attraktiv, natürlich, sportlich, mit Niveau – figurbetont, nie freizügig.
+- Frau, 19 Jahre (klar erwachsen), Albanerin aus Köln (Familie aus dem Kosovo), attraktiv, natürlich, sportlich-kurvig, mit Niveau – figurbetont, nie freizügig. (Persona steht seit 26.11.2026, siehe PERSONA.md.)
 - Nische: High-Protein-Küche 50 % · Gym-Alltag 25 % · Athleisure/Mode 25 %.
-- Wiedererkennung: KEINE Narbe. Vorschlag in PERSONA.md (Muttermal rechter Wangenknochen + Grübchen links).
+- Wiedererkennung über Gesicht (Element + Soul ID + Identitätsblock), kein künstliches Merkmal.
 - Higgsfield Plus ist gebucht. Konsistenz über Element + Soul ID + wortgleichen Identitätsblock.
 - KI-Kennzeichnung: vorerst KEINE erstellen (Status „offen“ in ai-influencerin/CLAUDE.md). Erst vor dem
   ersten Veröffentlichen fasst du mir die Rechtslage in 5 Zeilen zusammen und ich entscheide.

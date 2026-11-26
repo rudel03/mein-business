@@ -22,6 +22,7 @@ Eine fotorealistische, klar als KI gekennzeichnete Influencerin auf Instagram (+
 - **Modus A läuft (26.11.2026):** A0 erledigt (Guthaben 1.000, Higgsfield-Projekt „KI-Influencerin“ angelegt, folder_id `863d01bd-e756-40c7-9f8d-14845e0680c3`, steht in PERSONA.md). A1 (Briefing: Name, Haare, Typ, Stadt, Merkmal) an den Inhaber gestellt, Antwort offen. .de-Domains per RDAP frei: romyeats, romyprotein, miraprotein, nelekocht, nelefit (Instagram/TikTok-Handles muss der Inhaber in der App prüfen).
 
 ## Entscheidungen
+- **Persona-Änderungen des Inhabers (26.11.2026) ersetzen den START-PROMPT-Punkt „wirkt 25–27“:** 19 Jahre (klar erwachsen), Albanerin, kurvig ca. 1,60 m, Bildstil GPT Image 2.6 im unbearbeiteten Handy-Look. Details `persona/PERSONA.md`.
 - **Kennzeichnung: offen** (Entscheidung des Inhabers 26.11.2026: vorerst keine KI-Kennzeichnung erstellen). Produktion läuft ohne Kennzeichnung. Vor dem ersten Veröffentlichen entscheidet der Inhaber; Claude fasst dann einmal die Rechtslage zusammen (Instagram drosselt unmarkierte KI-Profile; Art. 50 KI-VO seit 02.08.2026, Bußgeld/Abmahnung möglich; Details `system/05-recht.md`, `09` F). Unabhängig davon: Die Figur behauptet nie, ein Mensch zu sein, und antwortet auf „Bist du echt?“ ehrlich.
 - Recherche-Empfehlung (falls Kennzeichnung gewählt): Profil-Label „AI-generated profile“ + Bio „KI-Figur“ + „KI“-Kürzel/EU-Icon im Bild bzw. am Reel-Anfang.
 - Engagement bei anderen (Folgen/Liken/Kommentieren) macht der Inhaber von Hand. Keine Bots, keine Warm-up-Dienste, kein VPN.
