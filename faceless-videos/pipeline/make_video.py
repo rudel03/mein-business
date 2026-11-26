@@ -46,26 +46,54 @@ def main(cfg_path):
     v = cfg.get("voice", {})
     model, speed = v.get("model", "de_DE-thorsten-high"), v.get("speed", 0.8)
 
-    # 1) Stimme pro Zeile
+    # 1) Stimme
+    def voice_fx():
+        tempo, semis, tight = v.get("tempo", 1.0), v.get("pitch", 0), v.get("tight", False)
+        fx = (f"rubberband=tempo={tempo}:pitch={2 ** (semis / 12):.4f}:formant=preserved:pitchq=quality"
+              if semis else f"atempo={tempo}")
+        if tight:  # lange Sprechpausen begrenzen: True = hart (0,09 s, alt), Zahl = sanfte Obergrenze in s (z. B. 0.25)
+            keep = 0.09 if tight is True else float(tight)
+            fx = (f"silenceremove=stop_periods=-1:stop_duration={keep + 0.05:.2f}:stop_threshold=-42dB:"
+                  f"stop_silence={keep:.2f}," + fx)
+        return fx + (",silenceremove=start_periods=1:start_threshold=-45dB,areverse,"
+                     "silenceremove=start_periods=1:start_threshold=-45dB,areverse")
+
     beats, t = [], 0.0
-    for i, b in enumerate(cfg["beats"], 1):
-        wav = os.path.join(tmp, f"beat{i}.wav")
-        if b.get("audio"):  # fertige Sprachdatei (z. B. ElevenLabs über Higgsfield)
-            src = b["audio"] if os.path.isabs(b["audio"]) else P(b["audio"])
-            tempo = v.get("tempo", 1.0)
-            semis = v.get("pitch", 0)  # Halbtöne, negativ = tiefer (Formanten bleiben erhalten -> klingt natürlich)
-            fx = (f"rubberband=tempo={tempo}:pitch={2 ** (semis / 12):.4f}:formant=preserved:pitchq=quality"
-                  if semis else f"atempo={tempo}")
-            if v.get("tight", False):  # Sprechpausen im Satz auf ~0,1 s kürzen (knackiger, ohne die Stimme zu verändern)
-                fx = "silenceremove=stop_periods=-1:stop_duration=0.14:stop_threshold=-40dB:stop_silence=0.09," + fx
-            subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", src, "-af",
-                            f"{fx},silenceremove=start_periods=1:start_threshold=-45dB,areverse,"
-                            "silenceremove=start_periods=1:start_threshold=-45dB,areverse", "-ar", "44100", wav], check=True)
-        else:
-            tts(b.get("say", b["text"]), model, speed, wav)
-        d = dur(wav) + GAP
-        beats.append({**b, "wav": wav, "start": t, "dur": d})
-        t += d
+    if cfg.get("audio_full"):
+        # GANZER Text in EINEM Stück gesprochen (natürlicher Fluss) -> per Whisper an den Beat-Grenzen schneiden
+        from faster_whisper import WhisperModel
+        wm0 = WhisperModel("small", device="cpu", compute_type="int8")
+        full = os.path.join(tmp, "full.wav")
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", P(cfg["audio_full"]), "-af", voice_fx(), "-ar", "44100", full], check=True)
+        all_words, owner = [], []
+        for i, b in enumerate(cfg["beats"]):
+            ws = b["text"].split(); all_words += ws; owner += [i] * len(ws)
+        times = word_times(wm0, full, " ".join(all_words))
+        firsts = [owner.index(i) for i in range(len(cfg["beats"]))]
+        total_full = dur(full)
+        cuts = [0.0]
+        for k in firsts[1:]:
+            prev_end, nxt_start = times[k - 1][1], times[k][0]
+            cuts.append(max(cuts[-1] + 0.3, (prev_end + nxt_start) / 2))
+        cuts.append(total_full)
+        for i, b in enumerate(cfg["beats"], 1):
+            wav = os.path.join(tmp, f"beat{i}.wav")
+            subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", full, "-ss", f"{cuts[i-1]:.3f}", "-to", f"{cuts[i]:.3f}",
+                            "-ar", "44100", wav], check=True)
+            d = cuts[i] - cuts[i - 1]
+            beats.append({**b, "wav": wav, "start": t, "dur": d})
+            t += d
+    else:
+        for i, b in enumerate(cfg["beats"], 1):
+            wav = os.path.join(tmp, f"beat{i}.wav")
+            if b.get("audio"):  # fertige Sprachdatei pro Zeile (z. B. ElevenLabs über Higgsfield)
+                src = b["audio"] if os.path.isabs(b["audio"]) else P(b["audio"])
+                subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", src, "-af", voice_fx(), "-ar", "44100", wav], check=True)
+            else:
+                tts(b.get("say", b["text"]), model, speed, wav)
+            d = dur(wav) + GAP
+            beats.append({**b, "wav": wav, "start": t, "dur": d})
+            t += d
     total = t + 0.4
     beats[-1]["dur"] += 0.4
     print(f"Sprecher: {total:.1f} s, {len(beats)} Zeilen")
@@ -77,10 +105,17 @@ def main(cfg_path):
         for k, n in enumerate(names):
             shots.append({"name": n, "start": b["start"] + b["dur"] * k / len(names), "dur": b["dur"] / len(names)})
     plan = {"scene": cfg["scene"], "W": W, "H": H, "fps": 30, "shots": shots}
-    plan_path = os.path.join(tmp, "plan.json"); json.dump(plan, open(plan_path, "w"))
+    plan_path = os.path.join(tmp, "plan.json")
     silent = os.path.join(tmp, "silent.mp4")
-    env = {**os.environ, "NODE_PATH": subprocess.check_output(["npm", "root", "-g"], text=True).strip()}
-    subprocess.run(["node", os.path.join(ENGINE, "render3d.mjs"), plan_path, silent], check=True, env=env)
+    scene_file = os.path.join(ENGINE, "scenes", cfg["scene"] + ".js")
+    same = (os.path.exists(silent) and os.path.exists(plan_path) and json.load(open(plan_path)) == plan
+            and os.path.getmtime(silent) > max(os.path.getmtime(scene_file), os.path.getmtime(os.path.join(ENGINE, "world.js"))))
+    if same:
+        print("3D-Aufnahme unverändert -> wird wiederverwendet")
+    else:
+        json.dump(plan, open(plan_path, "w"))
+        env = {**os.environ, "NODE_PATH": subprocess.check_output(["npm", "root", "-g"], text=True).strip()}
+        subprocess.run(["node", os.path.join(ENGINE, "render3d.mjs"), plan_path, silent], check=True, env=env)
 
     # 3) Tonspur
     narr = os.path.join(tmp, "narration.wav")

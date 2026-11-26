@@ -5,6 +5,12 @@
 
 Jedes neue Video wird **genau so** gemacht. Abweichungen nur, wenn der Inhaber es ausdrücklich sagt.
 
+> **Feinschliff 26.11.2026 (gilt ab sofort, Vorrang vor dem Muster unten):**
+> - **Am Anfang NICHT ankündigen, dass das Ende lost/absurd ist** – Baustein 2 endet ohne Teaser („Golfball-Taucher. Klingt scheiß bescheuert, ist aber safe eins der krassesten Geschäfte überhaupt.“).
+> - **„Digga“ höchstens 1× pro Video** (am besten im Hook). Sonst „Bruder“, „Alter“, „safe“, „krass“ und die Kraftausdrücke.
+> - **Geschmeidig sprechen:** ganzer Text in **einem** Sprach-Auftrag (`audio_full`), keine Einzelzeilen; Pausen nur sanft begrenzen (`"tight": 0.25`), Tempo 1.12. Weniger Kommas/Doppelpunkte im Sprechtext („Jetzt rechnen wir mal.“ statt „Jetzt rechnen wir, Digga:“), Rückfragen mit „?“ („Und das Krasseste?“).
+> - Referenz für den Feinschliff: `skripte/009-golfball-taucher/video_v2.json`.
+
 ---
 
 ## 1. Die 7 Stil-Regeln (nicht verhandelbar)
@@ -20,7 +26,7 @@ Jedes neue Video wird **genau so** gemacht. Abweichungen nur, wenn der Inhaber e
 | # | Baustein | Muster aus dem Referenzvideo |
 |---|---|---|
 | 1 | **Hook** (paradox, 0–3 s) | „Digga, diese Typen tragen einfach nur Kartons von A nach B. Und machen damit verfickt viel Geld.“ |
-| 2 | **Name + offene Schleife** | „Umzugsfirma, Bruder. Klingt scheiß langweilig, ist aber safe eins der geilsten Geschäfte. Und das Ende ist komplett lost.“ |
+| 2 | **Name** (ohne Ende-Teaser!) | „Umzugsfirma, Bruder. Klingt scheiß langweilig, ist aber safe eins der geilsten Geschäfte überhaupt.“ |
 | 3 | **Für Dumme: Alltag** | „Pass auf, ganz easy: Du ziehst um, hast null Bock zu schleppen, also rufst du die Jungs an.“ |
 | 4 | **Preis mit Quelle** | „Die nehmen pro Mann und Stunde im Schnitt so 42 Euro. Sagt der Branchenverband, kein Witz.“ |
 | 5 | **Rechnung: Umsatz** | „Jetzt rechnen wir, Digga: Drei Jungs, acht Stunden, mal 42 Euro. Macht 1.008 Euro. Für einen verfickten Tag.“ |
@@ -45,10 +51,10 @@ Weitere freigegebene Plotwist-Ideen: Callcenter ruft sich selbst an und wird „
 
 ## 4. Stimme (freigegeben)
 - ElevenLabs **„Orion“** über Higgsfield: `text2speech_v2`, `variant: "elevenlabs"`, `voice_type: "preset"`, `voice_id: "ed69c516-92d2-4b30-a967-617737a342e5"`.
-- In `video.json`: `"voice": {"tempo": 1.15, "tight": true}` → 15 % schneller + Sprechpausen auf 0,1 s gekürzt.
+- In `video.json`: **`"audio_full": "audio/full.mp3"`** (ganzer Text in einem Stück) + `"voice": {"tempo": 1.12, "tight": 0.25}`. Das Programm schneidet per Whisper automatisch an den Beat-Grenzen. (Alt: Einzelzeilen + `tight: true` → abgehackte Pausen, nicht mehr nutzen.)
 - **Kein `pitch`** (Tonhöhen-Filter klingt „gedoppelt“ – vom Inhaber abgelehnt).
 - Im Sprech-Prompt Zahlen **ausschreiben** („zweiundvierzig Euro“, „drei komma fünf Tonnen“), im Untertitel-Text (`text`) als Ziffern.
-- Max. 6 Aufträge gleichzeitig; ≈ 0,45 Credits pro Zeile (≈ 6 Credits pro Video).
+- Ein Auftrag pro Video (≈ 1.300 Zeichen gehen problemlos); danach Vollständigkeit per Whisper prüfen.
 
 ## 5. Faktencheck (Pflicht vor dem Sprechen)
 - Jede Zahl mit Quelle in `skripte/<nr>-<thema>/skript.md` (Link + Stand/Jahr).
@@ -59,7 +65,7 @@ Weitere freigegebene Plotwist-Ideen: Callcenter ruft sich selbst an und wird „
 ## 6. Produktion (Ablauf)
 1. Thema aus `skripte/themen.md` wählen, recherchieren, Skript nach Abschnitt 2 schreiben.
 2. `skripte/<nr>-<thema>/video.json` anlegen (Vorlage: `skripte/005-umzug/video_v2.json`) + `skript.md` mit Quellen.
-3. Sprachzeilen mit Orion erzeugen (`generate_audio_batch`), nach `audio/01.mp3 …` laden.
+3. Ganzen Sprechtext (Zahlen ausgeschrieben) in **einem** `generate_audio`-Auftrag mit Orion erzeugen → `audio/full.mp3`; Vollständigkeit per Whisper prüfen.
 4. Szenen: vorhandene Einstellungen aus `engine/scenes/*.js` und `_common.js` wiederverwenden (towersShot, tipShot …), neue nur bei Bedarf. Vorschau: `node engine/render3d.mjs plan.json st --stills 1,4,7`.
 5. `python3 -I pipeline/make_video.py skripte/<nr>-<thema>/video.json` (≈ 10 min). Neue Sitzung: vorher `bash pipeline/setup.sh`.
 6. Prüfen: Standbilder ansehen, Whisper-Transkript einer Zeile gegenlesen, Länge 60–85 s.

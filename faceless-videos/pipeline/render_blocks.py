@@ -49,14 +49,18 @@ def norm(w):
 
 def word_times(model, voice, text):
     """Zeiten pro Anzeige-Wort: Whisper-Wörter per difflib auf den Skripttext abbilden."""
-    segs, _ = model.transcribe(load16k(voice), language="de", word_timestamps=True)
-    ww = [(w.word.strip(), w.start, w.end) for s in segs for w in s.words]
+    PAD = 0.5  # stiller Vorlauf, damit Whisper das erste Wort nicht überhört
+    audio = np.concatenate([np.zeros(int(16000 * PAD), np.float32), load16k(voice)])
+    segs, _ = model.transcribe(audio, language="de", word_timestamps=True)
+    ww = [(w.word.strip(), max(0.0, w.start - PAD), max(0.0, w.end - PAD)) for s in segs for w in s.words]
     disp = text.split()
     a, b = [norm(x) for x in disp], [norm(x[0]) for x in ww]
     times = [None] * len(disp)
-    for blk in difflib.SequenceMatcher(None, a, b, autojunk=False).get_matching_blocks():
-        for k in range(blk.size):
-            times[blk.a + k] = (ww[blk.b + k][1], ww[blk.b + k][2])
+    for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(None, a, b, autojunk=False).get_opcodes():
+        # gleich lange Abweichungen (z. B. „Digga“ vs. „Digger“) 1:1 übernehmen
+        if tag == "equal" or (tag == "replace" and i2 - i1 == j2 - j1):
+            for k in range(i2 - i1):
+                times[i1 + k] = (ww[j1 + k][1], ww[j1 + k][2])
     # Lücken linear auffüllen
     total = dur(voice)
     known = [(i, t) for i, t in enumerate(times) if t]

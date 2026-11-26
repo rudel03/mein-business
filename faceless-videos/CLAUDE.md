@@ -12,18 +12,19 @@ Inhaber: **„Das ist perfekt, das gefällt mir sehr. Genau diesen Style festhal
 ## Stand (26.11.2026)
 - Nische: **Geschäftsmodelle, auf die keiner kommt**. Themen: `skripte/themen.md`.
 - ✅ 005-umzug-v2 = freigegeben (Referenz).
-- ✅ **009 Golfball-Taucher** (26.11.2026, „Geschäft, auf das niemals einer kommt“) im freigegebenen Stil: `ausgabe/009-golfball-taucher.mp4`, 78 s, Orion, ≈ 6 Credits. Plotwist: Golfer seit 2009 im Teich kauft seinen Ball zurück (2,50 € + 10 Cent Ablöse). Neue Szenen `engine/scenes/golftaucher.js`, neue Bausteine: pond, flag, golfBall, ballField, golfer/swing, diver, netBag, oldGolfer, sortTable, Himmel `underwater`. Wartet auf Feedback.
+- ✅ **009 Golfball-Taucher v2** (Feinschliff nach Feedback „kein Ende-Teaser am Anfang, unpassende Pausen, weniger Digga“): ganzer Text in EINEM Sprachauftrag (`audio_full`), Pausen sanft auf 0,25 s, Tempo 1,12, „Digga“ nur im Hook → `ausgabe/009-golfball-taucher-v2.mp4`, 87 s, ≈ 1 Credit Stimme. Config `skripte/009-golfball-taucher/video_v2.json` = **neue Vorlage**. (v1: Orion, ≈ 6 Credits. Plotwist: Golfer seit 2009 im Teich kauft seinen Ball zurück (2,50 € + 10 Cent Ablöse). Neue Szenen `engine/scenes/golftaucher.js`, neue Bausteine: pond, flag, golfBall, ballField, golfer/swing, diver, netBag, oldGolfer, sortTable, Himmel `underwater`. Wartet auf Feedback.
 - ⏳ **Nächster Schritt:** 006 Callcenter, 007 Folierer, 008 Schlüsseldienst im freigegebenen Stil neu schreiben (frecher, Rechnung zum Mitrechnen) und mit Orion neu sprechen. Szenen/Plotwists existieren schon (`engine/scenes/callcenter.js`, `folierer.js`, `schluesseldienst.js`), Quellen in `skripte/00x-*/skript.md`. Alte Fassungen (Dylan, alter Ton) liegen in `ausgabe/006–008*.mp4` und gelten als überholt.
 - 004 Entrümpelung: alter Ton/Stimme (Dylan) → bei Bedarf ebenfalls im neuen Stil neu machen.
 - **Offen:** Kanalname · Konten (YouTube, Instagram-Creator, TikTok) · Postiz verbinden + API-Key · danach Vollautomatik als geplante Aufgabe (Inhaber will voll automatisch posten).
 - Higgsfield-Credits (geteilt mit `ai-influencerin/`): ≈ 250–270 übrig (Stand 26.11. spät, grob).
 
 ## Nicht machen (vom Inhaber abgelehnt)
-- Standbilder mit Zoom (001) · Higgsfield-Videoclips (002, zu teuer, „unlustig“) · Piper-Stimmen (alt, gelangweilt) · Stimme Dylan (zu hoch) · **Tonhöhen-Filter `pitch`** (klingt gedoppelt) · Slang „wie ein 30-Jähriger, der auf jung macht“ · zu wenig Umgangssprache · Plotwist nur leicht witzig.
+- Ende-Teaser am Anfang („das Ende ist komplett lost“) · „Digga“ öfter als 1× · Einzelzeilen-Sprachaufträge + harte Pausenkürzung (klingt abgehackt) · Standbilder mit Zoom (001) · Higgsfield-Videoclips (002, zu teuer, „unlustig“) · Piper-Stimmen (alt, gelangweilt) · Stimme Dylan (zu hoch) · **Tonhöhen-Filter `pitch`** (klingt gedoppelt) · Slang „wie ein 30-Jähriger, der auf jung macht“ · zu wenig Umgangssprache · Plotwist nur leicht witzig.
 - Unklar, nicht verwenden ohne Rückfrage: „Gundi“, „zirto“ (Bedeutung vom Inhaber erfragen).
 
 ## Technik
 - Neue Sitzung: `bash pipeline/setup.sh` (piper, faster-whisper, three.js). Für Stimmvergleiche zusätzlich `pip install librosa` (pyin).
+- `make_video.py` kann `audio_full` (ein Sprachstück → automatisch per Whisper an Beat-Grenzen geschnitten) und verwendet die 3D-Aufnahme wieder, wenn Plan + Szenen unverändert sind (nur Untertitel/Ton neu ≈ 1,5 min). Wort-Zuordnung toleriert Schreibvarianten („Digger“ ↔ „Digga“), Whisper bekommt 0,5 s Vorlauf.
 - Ein Video: `python3 -I pipeline/make_video.py skripte/<nr>-<thema>/video.json` → Stimme je Zeile (Beat-Feld `audio`), 3D-Aufnahme `engine/render3d.mjs` (Headless-Chromium, SwiftShader, 1080×1920, 30 fps), Untertitel per faster-whisper, Etiketten, −14 LUFS. ≈ 10 min pro Video; 4 parallel ≈ 35 min.
 - `video.json`-Felder: `scene`, `voice` {tempo, tight}, `beats` [{shot | [shots], audio, text, labels [{word, text, dur, color, x, y}]}], `highlight`, `source`, `source_beats`, `out`.
 - Engine: `engine/world.js` (Baukasten: Figuren + Posen, Fahrzeuge, Gebäude, Büro, Münztürme, Uhr, Türen, Mond, Chrom-Effekt …), `engine/scenes/_common.js` (street, floorRoom, towersShot, tipShot, flyBills), pro Thema `engine/scenes/<thema>.js`.
