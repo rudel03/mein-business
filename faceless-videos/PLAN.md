@@ -16,7 +16,11 @@
 
 Vollautomatik: eine **geplante Aufgabe** startet z. B. täglich eine frische Claude-Sitzung, die Schritte 1–9 abarbeitet, in `CLAUDE.md`/`ausgabe/log.md` protokolliert und pusht.
 
-## 2. Nische – Vorschläge (Entscheidung des Inhabers offen)
+## 2. Nische – **entschieden: „Business-Modelle leicht erklärt“** (26.11.2026)
+
+Format: eine Frage als Hook („Warum verdient Costco fast nichts an seinen Produkten?“), 3–4 Schritte Erklärung, eine überraschende Pointe, Frage an die Zuschauer. Themenvorrat: `skripte/themen.md`.
+
+Ursprüngliche Vorschläge (zur Einordnung):
 
 Kriterien: auf Deutsch wenig Konkurrenz mit guter Qualität, gut mit KI-Bildern darstellbar, unbegrenzt Themen, rechtlich unkritisch, später monetarisierbar.
 
