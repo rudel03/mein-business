@@ -19,6 +19,7 @@ Eine fotorealistische, klar als KI gekennzeichnete Influencerin auf Instagram (+
 - Persona-Vorschläge (Steckbrief, Charakter, Kleiderschrank, Orte, Stimme, Baukasten-Einstellungen) sind in `persona/PERSONA.md` vorbereitet; Startvorrat 40 Inhalte in `content/plan/vorrat.md`, Rezepte in `content/rezepte.md`, Caption-/Hook-/Hashtag-Vorlagen in `content/vorlagen.md`, Kosten in `system/11-kosten.md`.
 - Verbunden: Higgsfield, Canva, Windsor.ai, Shopify. Keine zusätzlichen Plugins aktiviert (nicht nötig für den Start).
 - Phase: **0 – Vorbereitung**. Start-Datum Account: –
+- **Modus A läuft (26.11.2026):** A0 erledigt (Guthaben 1.000, Higgsfield-Projekt „KI-Influencerin“ angelegt, folder_id `863d01bd-e756-40c7-9f8d-14845e0680c3`, steht in PERSONA.md). A1 (Briefing: Name, Haare, Typ, Stadt, Merkmal) an den Inhaber gestellt, Antwort offen. .de-Domains per RDAP frei: romyeats, romyprotein, miraprotein, nelekocht, nelefit (Instagram/TikTok-Handles muss der Inhaber in der App prüfen).
 
 ## Entscheidungen
 - **Kennzeichnung: offen** (Entscheidung des Inhabers 26.11.2026: vorerst keine KI-Kennzeichnung erstellen). Produktion läuft ohne Kennzeichnung. Vor dem ersten Veröffentlichen entscheidet der Inhaber; Claude fasst dann einmal die Rechtslage zusammen (Instagram drosselt unmarkierte KI-Profile; Art. 50 KI-VO seit 02.08.2026, Bußgeld/Abmahnung möglich; Details `system/05-recht.md`, `09` F). Unabhängig davon: Die Figur behauptet nie, ein Mensch zu sein, und antwortet auf „Bist du echt?“ ehrlich.
