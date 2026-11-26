@@ -26,7 +26,7 @@ Monetarisierung in dieser Reihenfolge:
 3. Supplement-Kooperationen: Produkt als **Zutat im Rezept**, nur zugelassene Health Claims, keine „hat mir geholfen“-Aussagen.
 4. Eigene Kleidung / Kooperation mit Modemarke (erst mit stabiler Reichweite).
 
- (Mix pro Woche)
+## Content-Säulen allgemein (Mix pro Woche, gilt quer über die drei Themen)
 | Säule | Anteil | Beispiele |
 |---|---|---|
 | Mehrwert der Nische | 40 % | „5 Meal-Prep-Boxen für 18 €“-Carousel, Checklisten, Wochenplan |
