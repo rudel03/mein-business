@@ -132,9 +132,9 @@ export const shots = {
   // 11a Müllabfuhr hält vor der glänzenden Tonne – Arbeiter zuckt, fährt weiter
   skip: {
     setup(scene, ctx) { street(scene, ctx, { bins: 0, walkers: false }); ctx.b = W.bin(W.BIN.bio); ctx.b.scale.setScalar(1.2); W.shine(ctx.b); ctx.b.position.set(0, 0, 2.4); scene.add(ctx.b); W.sparkles(scene, [0, 0.9, 2.4], 10, 0.6);
-      const pot = W.bush(0.5); pot.position.set(0, 1.3, 2.4); scene.add(pot); ctx.tk = W.truck(0xff8a1f, 0xffffff); ctx.tk.rotation.y = -Math.PI / 2; ctx.tk.position.set(6, 0, 5.4); scene.add(ctx.tk);
+      const pot = W.bush(0.5); pot.position.set(0, 1.3, 2.4); scene.add(pot); ctx.tk = W.truck(0xff8a1f, 0xffffff); ctx.tk.rotation.y = Math.PI / 2; ctx.tk.position.set(7.5, 0, 5.4); scene.add(ctx.tk);
       ctx.w = W.worker(); ctx.w.position.set(1.2, 0, 2.6); ctx.w.rotation.y = -1.6; scene.add(ctx.w); tagAt(ctx, scene, 'tg', 'DEKO?', 'yellow', 0.85, [0.6, 2.9, 2.6]); },
-    update(t, d, cam, ctx) { const p = t / d; pose.reset(ctx.w); pose.shrug(ctx.w, clamp01(p * 3)); ctx.tk.position.x = 6 - ease(clamp01((p - 0.55) / 0.45)) * 14;
+    update(t, d, cam, ctx) { const p = t / d; pose.reset(ctx.w); pose.shrug(ctx.w, clamp01(p * 3)); ctx.tk.position.x = 7.5 + ease(clamp01((p - 0.5) / 0.5)) * 12;
       W.popIn(ctx.tg, p * 3 - 0.5); camMove(cam, [-1.0, 3.0, 9], [-0.6, 2.6, 8], [0.4, 1.0, 2.6], [0.4, 1.2, 2.6], p); },
   },
   // 11b Museum: Tonne auf dem Sockel, Spot, Absperrung, Besucher – Eintritt 12 €, er kriegt 0 €
