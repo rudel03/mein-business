@@ -605,7 +605,7 @@ export function tag(text, color = 'white', h = 0.55) {
   g.fillStyle = fg; g.textBaseline = 'middle'; g.fillText(text, 24, fs / 2 + 19);
   const tex = new THREE.CanvasTexture(cv); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4;
   const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthTest: false, fog: false, toneMapped: false, sizeAttenuation: false }));
-  const sh = Math.min(0.06, h > 0.2 ? 0.036 * (h / 0.55) : h); // feste Bildschirmgröße (Anteil der Bildhöhe) wie UI-Pills
+  const sh = Math.min(0.085, h > 0.2 ? 0.05 * (h / 0.55) : h); // feste Bildschirmgröße (Anteil der Bildhöhe) wie UI-Pills
   sp.scale.set(sh * cv.width / cv.height, sh, 1); sp.renderOrder = 999; sp.userData.keep = true; sp.layers.set(1); return sp;
 }
 function rr(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
@@ -660,3 +660,51 @@ export function shelfShop(rows = 4, cols = 5) { // Pro-Shop-Regal mit Ballschach
   return g;
 }
 export function calendarPage(year = '2009') { const t = tag(year, 'red', 0.9); return t; }
+
+// ---------- Kaugummiautomaten-Welt (010) ----------
+const GUM_COLS = [0xff3b3b, 0xffd400, 0x2ecc71, 0x3b82f6, 0xff8a1f, 0xd94f8a, 0xffffff];
+export function gumMachine(body = 0xd62828) {
+  const g = new THREE.Group();
+  g.add(at(box(0.5, 0.9, 0.35, body, { emissive: body, emissiveIntensity: 0.08 }), 0, 0.45, 0));
+  const glass = new THREE.Mesh(new THREE.BoxGeometry(0.44, 0.5, 0.3), new THREE.MeshStandardMaterial({ color: 0xdff6ff, transparent: true, opacity: 0.25, roughness: 0.05, metalness: 0.1 }));
+  glass.position.set(0, 1.15, 0); g.add(glass);
+  const balls = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(0.045, 1), new THREE.MeshLambertMaterial({ vertexColors: false }), 40); const d = new THREE.Object3D(); const col = new THREE.Color();
+  for (let i = 0; i < 40; i++) { d.position.set(((i % 5) - 2) * 0.08, 0.95 + Math.floor(i / 10) * 0.08 + (i % 2) * 0.02, (Math.floor(i / 5) % 2 - 0.5) * 0.12); d.updateMatrix(); balls.setMatrixAt(i, d.matrix); balls.setColorAt(i, col.setHex(GUM_COLS[i % GUM_COLS.length])); }
+  g.add(balls);
+  g.add(at(box(0.48, 0.06, 0.33, 0xb0b8c0), 0, 1.42, 0));
+  const knob = new THREE.Group(); knob.position.set(0, 0.55, 0.19); knob.add(cyl(0.08, 0.08, 0.05, 0xd0d4da, 10)); knob.children[0].rotation.x = Math.PI / 2; knob.add(at(box(0.16, 0.03, 0.03, 0x8a939c), 0, 0, 0.03)); g.add(knob);
+  g.add(at(box(0.12, 0.04, 0.02, 0x111111), 0, 0.75, 0.18)); // Münzschlitz
+  g.add(at(box(0.14, 0.1, 0.06, 0x8a939c), 0, 0.22, 0.2)); // Ausgabe
+  const lamp = at(box(0.5, 0.05, 0.1, 0xfff0c0, { emissive: 0xffe08a, emissiveIntensity: 0 }), 0, 1.47, 0.12); g.add(lamp);
+  g.userData = { knob, lamp }; return g;
+}
+export function capsuleMachine() {
+  const g = new THREE.Group();
+  g.add(at(box(0.8, 1.0, 0.6, 0x2f6fde), 0, 0.5, 0));
+  const dome = new THREE.Mesh(new THREE.SphereGeometry(0.42, 18, 12), new THREE.MeshStandardMaterial({ color: 0xdff6ff, transparent: true, opacity: 0.3, roughness: 0.05 })); dome.position.y = 1.4; g.add(dome);
+  for (let i = 0; i < 14; i++) { const c = new THREE.Mesh(new THREE.SphereGeometry(0.1, 10, 8), M(GUM_COLS[i % 6])); c.position.set(Math.sin(i * 2.1) * 0.22, 1.2 + (i % 4) * 0.09, Math.cos(i * 1.7) * 0.22); g.add(c); }
+  const knob = cyl(0.1, 0.1, 0.06, 0xd0d4da, 10); knob.rotation.x = Math.PI / 2; knob.position.set(0, 0.6, 0.32); g.add(knob);
+  g.userData.knob = knob; return g;
+}
+export function capsule(color = 0xff3b3b) { const g = new THREE.Group(); const a = new THREE.Mesh(new THREE.SphereGeometry(0.12, 12, 8, 0, Math.PI * 2, 0, Math.PI / 2), M(color)); const b = new THREE.Mesh(new THREE.SphereGeometry(0.12, 12, 8, 0, Math.PI * 2, Math.PI / 2, Math.PI / 2), M(0xffffff, { transparent: true, opacity: 0.7 })); g.add(a, b); return g; }
+export function rowHouses(n = 6, seed = 2) { // Häuserzeile mit bunten Fassaden
+  const g = new THREE.Group(); const cols = [0xf4efe6, 0xf2d7b6, 0xd9e6f2, 0xe8d0d0, 0xdfe8cf, 0xf0e3a8]; let r = seed;
+  const rnd = () => (r = (r * 9301 + 49297) % 233280) / 233280;
+  for (let i = 0; i < n; i++) { const h = 7 + Math.floor(rnd() * 3) * 2.5; const hb = new THREE.Group();
+    hb.add(at(box(5.8, h, 6, cols[i % cols.length]), 0, h / 2, 0));
+    hb.add(at(box(6, 0.6, 6.2, 0x8b3a2b), 0, h + 0.3, 0));
+    for (let f = 1; f < h / 2.6; f++) for (const x of [-1.6, 1.6]) hb.add(at(box(1.1, 1.2, 0.1, 0x9fd3ff, { emissive: 0xffd9a0, emissiveIntensity: 0.15 }), x, f * 2.6, 3.02));
+    hb.add(at(box(1.2, 2.2, 0.1, 0x6b4a2b), 0, 1.1, 3.02));
+    hb.position.set((i - (n - 1) / 2) * 6, 0, 0); g.add(hb); }
+  return g;
+}
+export function oldOwner() { // der Automatenkönig: Schnurrbart, Weste, Schiebermütze
+  const p = person({ shirt: 0x6d4c41, pants: 0x3e2723, cap: 0x5d4037, hat: 'cap', skin: 0xf1c7a0 });
+  const h = p.userData.head; h.add(at(box(0.3, 0.07, 0.05, 0xdddddd), 0, 0.06, 0.26)); h.add(at(box(0.36, 0.08, 0.05, 0xdddddd), 0, 0.27, 0.24));
+  p.userData.torso.add(at(box(0.64, 0.5, 0.38, 0xb8860b), 0, 0.05, 0)); return p;
+}
+export function kid(shirt = 0x3b82f6) { const p = person({ shirt, hat: 'hair', hair: 0x6d4c41 }); p.scale.setScalar(0.62); return p; }
+export function bed() { const g = new THREE.Group(); g.add(at(box(2.0, 0.45, 3.0, 0x8a5a33), 0, 0.22, 0)); g.add(at(box(1.9, 0.25, 2.9, 0xffffff), 0, 0.55, 0)); g.add(at(box(1.9, 0.18, 2.0, 0x3b82f6), 0, 0.7, 0.4)); g.add(at(box(0.9, 0.2, 0.5, 0xffffff), 0, 0.75, -1.1)); g.add(at(box(2.0, 1.0, 0.15, 0x6b4a2b), 0, 0.7, -1.5)); return g; }
+export function counterDesk() { const g = new THREE.Group(); g.add(at(box(3.4, 1.1, 0.8, 0x9aa3ad), 0, 0.55, 0)); g.add(at(box(3.6, 0.08, 1.0, 0xd8dde3), 0, 1.14, 0)); g.add(at(box(3.4, 1.0, 0.05, 0xbfe3ff, { transparent: true, opacity: 0.35 }), 0, 1.7, -0.1)); return g; }
+export function stamp() { const g = new THREE.Group(); g.add(at(cyl(0.08, 0.1, 0.3, 0x6d4c41, 8), 0, 0.3, 0)); g.add(at(box(0.3, 0.08, 0.2, C.red), 0, 0.1, 0)); return g; }
+export function throne() { const g = new THREE.Group(); g.add(at(box(1.6, 0.6, 1.4, C.gold, { emissive: 0x6b4a00, emissiveIntensity: 0.3 }), 0, 0.3, 0)); g.add(at(box(1.6, 2.4, 0.3, C.gold, { emissive: 0x6b4a00, emissiveIntensity: 0.3 }), 0, 1.2, -0.6)); g.add(at(box(1.7, 0.2, 0.2, 0xc62828), 0, 2.4, -0.6)); return g; }

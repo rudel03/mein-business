@@ -1,0 +1,22 @@
+{
+ "scene": "kaugummi",
+ "audio_full": "audio/full.mp3",
+ "voice": {"tempo": 1.12, "tight": 0.25},
+ "series": "Geschäftsmodelle, auf die keiner kommt",
+ "beats": [
+  {"shot": ["wall", "street"], "text": "Ein Typ in Deutschland soll 15.000 Kaugummiautomaten besitzen. Und du hast dich nie gefragt, warum die überall hängen."},
+  {"shot": "closeup", "text": "Pass auf. Eine Kugel kostet im Einkauf so 5 Cent. Du zahlst 50. Das ist das Zehnfache, Bruder."},
+  {"shot": ["nightSale", "sleep"], "text": "Und das Teil hängt einfach da. Kein Laden, kein Personal, keine Öffnungszeiten. Der verkauft rund um die Uhr, auch wenn er pennt."},
+  {"shot": ["grid", "rich"], "text": "Rechnen wir mal. Sagen wir, ein Automat macht nur 20 Euro Gewinn im Monat. Mal 15.000 Automaten. Sind 300.000 Euro. Jeden verfickten Monat."},
+  {"shot": ["refill", "landlord"], "text": "Klar, davon gehen noch Sprit, Reparaturen und die Miete an den Hausbesitzer weg. Aber der kriegt meistens nur ne kleine Provision."},
+  {"shot": "amt", "text": "Und das Krasseste? Für reine Kaugummiautomaten brauchst du keine spezielle Erlaubnis. Gewerbe anmelden, Hausbesitzer fragen, fertig."},
+  {"shot": ["capsule", "broken"], "text": "Der fetteste Trick sind aber Spielzeugkapseln. Da kostet ein Dreh 1 bis 2 Euro. Für scheiß Plastik, das nach 2 Minuten kaputt ist."},
+  {"shot": "homeowner", "text": "Pro-Tipp. Wenn dein Haus an ner Straße mit viel Laufkundschaft steht, lass dir so ein Ding hinhängen. Kostet dich nix und bringt dir Provision."},
+  {"shot": "grow", "text": "Und jetzt das Beste. Ein kleiner Junge wirft jeden Tag 50 Cent rein. Zehn Jahre lang."},
+  {"shot": ["throne", "broke"], "text": "Heute gehören ihm alle 15.000 Automaten. Und der alte Typ steht jetzt selbst davor. Ohne Kleingeld."}
+ ],
+ "highlight": ["Bruder.", "verfickten", "scheiß", "Krasseste?", "fetteste", "Trick", "Pro-Tipp.", "Beste.", "Zehnfache,", "Kleingeld.", "pennt."],
+ "source": "Quellen: Berichte über Automatenaufsteller · Händlerpreise Kaugummikugeln · § 33c GewO",
+ "source_beats": [1, 2, 4, 6, 7],
+ "out": "../../ausgabe/010-kaugummiautomaten.mp4"
+}

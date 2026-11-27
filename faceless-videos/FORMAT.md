@@ -9,6 +9,11 @@ Jedes neue Video wird **genau so** gemacht. Abweichungen nur, wenn der Inhaber e
 > - **Am Anfang NICHT ankündigen, dass das Ende lost/absurd ist** – Baustein 2 endet ohne Teaser („Golfball-Taucher. Klingt scheiß bescheuert, ist aber safe eins der krassesten Geschäfte überhaupt.“).
 > - **„Digga“ höchstens 1× pro Video** (am besten im Hook). Sonst „Bruder“, „Alter“, „safe“, „krass“ und die Kraftausdrücke.
 > - **Geschmeidig sprechen:** ganzer Text in **einem** Sprach-Auftrag (`audio_full`), keine Einzelzeilen; Pausen nur sanft begrenzen (`"tight": 0.25`), Tempo 1.12. Weniger Kommas/Doppelpunkte im Sprechtext („Jetzt rechnen wir mal.“ statt „Jetzt rechnen wir, Digga:“), Rückfragen mit „?“ („Und das Krasseste?“).
+> **Länge & Tempo (Feedback 27.11.2026, gilt ab sofort):**
+> - **Ziel 60–70 Sekunden** („nur bisschen über eine Minute“) → **ca. 190–210 Wörter, 10 Sätze/Beats** statt 13. Bausteine zusammenfassen: Preis+Marge in einen Satz, Kosten+Ehrlichkeit in einen Satz.
+> - **Stärkere Hooks:** erster Satz = überraschende Zahl oder Behauptung + Neugier-Lücke, die der Zuschauer sofort aufgelöst haben will. Formeln: „Ein Typ in Deutschland soll 15.000 X besitzen. Und du hast dich nie gefragt, warum.“ · „Dieses Teil an jeder Hauswand bringt mehr Geld als …“ · „Leute zahlen jeden Monat dafür, dass …“. Kein „Heute erkläre ich…“, kein Name des Geschäfts als erstes Wort.
+> - **Kein Gelaber, keine langweiligen Infos:** jeder Satz muss entweder eine überraschende Zahl, einen Aha-Moment oder einen Lacher bringen. Weg mit Aufzählungen ohne Zahl, Wiederholungen und Allgemeinplätzen.
+> - Referenz: `skripte/010-kaugummiautomaten/` (Hook, 10 Beats, ~65 s).
 > - Referenz für den Feinschliff: `skripte/009-golfball-taucher/video_v3.json` + Szenen `engine/scenes/golftaucher.js` (19 einzigartige Einstellungen).
 
 ---
@@ -22,7 +27,7 @@ Jedes neue Video wird **genau so** gemacht. Abweichungen nur, wenn der Inhaber e
 6. **Mehrwert für den Zuschauer:** ein Pro-Tipp (sparen, Steuer, Abzocke vermeiden).
 7. **Plotwist am Ende: RICHTIG absurd und unrealistisch**, logisch aus dem Geschäftsmodell übertrieben + trockene Schlusspointe. Kein Abo-Aufruf danach; das Video endet auf der Pointe.
 
-## 2. Aufbau (12–14 Zeilen, ca. 70–80 s)
+## 2. Aufbau (Muster 13 Zeilen – ab 27.11. auf ~10 Beats / 60–70 s verdichten, siehe Kasten oben)
 | # | Baustein | Muster aus dem Referenzvideo |
 |---|---|---|
 | 1 | **Hook** (paradox, 0–3 s) | „Digga, diese Typen tragen einfach nur Kartons von A nach B. Und machen damit verfickt viel Geld.“ |
