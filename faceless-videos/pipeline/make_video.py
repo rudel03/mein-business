@@ -164,7 +164,7 @@ WrapStyle: 2
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Word,{FONT},120,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,1,0,1,9,4,5,40,40,0,1
+Style: Word,{FONT},110,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,1,0,1,9,4,2,40,40,{cfg.get('caption_margin', 540)},1
 Style: Pill,{FONT},54,&H00101010,&H00FFFFFF,&H0000D8FF,&H00000000,-1,0,0,0,100,100,1,0,3,16,0,5,40,40,0,1
 Style: Head,Inter Display SemiBold,34,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,0,0,0,0,100,100,3,0,1,0,2,7,60,60,150,1
 Style: Src,Inter Display SemiBold,30,&H00FFFFFF,&H00FFFFFF,&H00000000,&H78000000,0,0,0,0,100,100,0,0,1,2,1,2,40,40,70,1

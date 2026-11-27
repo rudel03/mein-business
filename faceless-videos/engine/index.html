@@ -13,11 +13,12 @@ import { setupWorld } from './world.js';
 
 // Abschluss-Look: Vignette + leichte Farbwärme + feines Korn (wirkt hochwertiger, weniger "Computer")
 const GradeShader = {
-  uniforms: { tDiffuse: { value: null }, time: { value: 0 }, vig: { value: 0.32 }, warm: { value: 0.04 } },
+  uniforms: { tDiffuse: { value: null }, time: { value: 0 }, vig: { value: 0.32 }, warm: { value: 0.04 }, blur: { value: 0 }, dir: { value: new THREE.Vector2(1, 0) } },
   vertexShader: `varying vec2 vUv; void main(){ vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
-  fragmentShader: `uniform sampler2D tDiffuse; uniform float time, vig, warm; varying vec2 vUv;
+  fragmentShader: `uniform sampler2D tDiffuse; uniform float time, vig, warm, blur; uniform vec2 dir; varying vec2 vUv;
     float rnd(vec2 p){ return fract(sin(dot(p, vec2(12.9898,78.233)) + time) * 43758.5453); }
     void main(){ vec4 c = texture2D(tDiffuse, vUv);
+      if (blur > 0.001) { vec4 acc = vec4(0.0); for (int i = -8; i <= 8; i++) { acc += texture2D(tDiffuse, clamp(vUv + dir * blur * 0.09 * float(i) / 8.0, 0.001, 0.999)); } c = acc / 17.0; }
       c.rgb = mix(c.rgb, c.rgb * vec3(1.0 + warm, 1.0, 1.0 - warm), 1.0);
       float l = dot(c.rgb, vec3(0.299,0.587,0.114)); c.rgb = mix(vec3(l), c.rgb, 1.08);
       vec2 d = vUv - 0.5; c.rgb *= 1.0 - vig * dot(d, d) * 2.2;
@@ -78,6 +79,13 @@ window.frame = (t) => {
   scene.userData.time = t;
   (scene.userData.tickers || []).forEach(f => f(t, lt));   // Hintergrund-Leben (Vögel, Wolken, Leute …)
   mod.shots[s.name].update(lt, s.dur, cam, ctx);
+  // Kamera-Energie: Zoom-Kick am Schnitt + leichte Handkamera + Wisch-Übergang (Bewegungsunschärfe) an jedem Schnitt
+  const baseFov = plan.fov || 55; const kick = 1 - Math.pow(Math.min(lt / 0.45, 1), 2) * (3 - 2 * Math.min(lt / 0.45, 1));
+  cam.fov = baseFov * (1 + 0.12 * (i > 0 ? kick : 0)); cam.updateProjectionMatrix();
+  cam.rotateY(Math.sin(t * 0.9) * 0.006 + Math.sin(t * 2.3) * 0.002); cam.rotateX(Math.sin(t * 1.1 + 1) * 0.004); cam.rotateZ(Math.sin(t * 0.7) * 0.006);
+  if (grade) { const W8 = 0.13; const din = i > 0 ? lt : 9, dout = i < plan.shots.length - 1 ? s.dur - lt : 9; const d = Math.min(din, dout);
+    grade.uniforms.blur.value = Math.max(0, 1 - d / W8) ** 1.5; const sgn = (din < dout ? i : i + 1) % 2 ? 1 : -1; grade.uniforms.dir.value.set(sgn, 0);
+    if (d < W8) cam.rotateY(sgn * (1 - d / W8) * 0.12 * (din < dout ? -1 : 1)); }
   cam.layers.set(0);
   if (composer) { grade.uniforms.time.value = t; composer.render(); } else R.render(scene, cam);
   // Etiketten (Layer 1) danach scharf obendrauf zeichnen – kein Glow, keine Farbverfälschung

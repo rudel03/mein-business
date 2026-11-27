@@ -61,7 +61,7 @@ Weitere freigegebene Plotwist-Ideen: Callcenter ruft sich selbst an und wird „
 - Rechnungen als **Münztürme** (Umsatz vs. Lohn), Zeit als **Uhr**, Geldfluss als **fliegende Scheine/Münzen**.
 - **Untertitel: 1 Wort**, groß, Mitte, weiß mit schwarzem Rand; Kraftausdrücke, Zahlen und Schlüsselwörter **gelb** (`highlight`).
 - **Etiketten (Pills) für jede Zahl und jede Rechnung**: „3 JUNGS × 8 STD × 42 €“, „= 1.008 € AN 1 TAG“, „≈ 670 € ÜBRIG“, „KLASSE B: BIS 3,5 t“. Farben: gelb = Zahl, grün = Gewinn/gut, rot = Kosten/Warnung, weiß = Info.
-- Quellenzeile klein unten in den Zahlen-Zeilen (`source`, `source_beats`).
+- ~~Quellenzeile unten~~ → seit 27.11.2026 NICHT mehr im Bild (Inhaber: „komischer Text unten“). Quellen nur in `skript.md` + Post-Beschreibung.
 
 
 ## 3b. Qualität & Abwechslung (Feedback 26.11.2026, Referenz „Stau aus dem Nichts“ von theoriefuchs)
@@ -71,7 +71,7 @@ Weitere freigegebene Plotwist-Ideen: Callcenter ruft sich selbst an und wird „
 3. **Nie tote Bilder:** in jeder Außenszene Hintergrund-Leben (`W.walkers`, `W.birds`, Wolken kommen automatisch, Fahrzeuge/Carts fahren, Tiere, wehende Fahnen `W.sway`); innen: laufende Maschinen, Schaum, Funkeln. Unter Wasser: Fische, Blasen, Lichtstrahlen.
 4. **Lange Sätze auf 2 verschiedene Einstellungen** (`"shot": ["a", "b"]`), Ziel: neuer Bildinhalt alle 3–4 s.
 5. **Zahlen als 3D-Etiketten direkt an Objekten** (`W.tag(text, farbe)` + `W.popIn`), z. B. Zähler „1.500 BÄLLE“ an der Kiste, „− 200 € AN DEN CLUB“ über dem Manager. Overlay-Pills nur noch, wenn es kein passendes Objekt gibt.
-6. **Look (automatisch in der Engine):** Glow/Bloom, ACES-Filmfarben, Vignette, Sonnenscheibe, Wolken, Hügel am Horizont, Dunst; Serien-Zeile oben (`"series": "Geschäftsmodelle, auf die keiner kommt"`).
+6. **Look (automatisch in der Engine):** Glow/Bloom, ACES-Filmfarben, Vignette, Sonnenscheibe, Wolken, Hügel am Horizont, Dunst; ~~Serien-Zeile oben~~ → seit 27.11.2026 weg. Neu automatisch: Zoom-Kick am Schnitt, Wisch-Übergänge, Handkamera. Untertitel unteres Drittel.
 7. Vor dem Rendern **alle Einstellungen als Standbilder prüfen**: Kamera nicht in Objekten, Hauptsache groß im Bild, nichts Schwarzes.
 
 ## 4. Stimme (freigegeben)

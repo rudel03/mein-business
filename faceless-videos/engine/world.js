@@ -828,3 +828,50 @@ export function beach(scene) { const sand = new THREE.Mesh(new THREE.PlaneGeomet
   const sea = new THREE.Mesh(new THREE.PlaneGeometry(400, 200), new THREE.MeshStandardMaterial({ color: 0x1ca3d8, roughness: 0.15, metalness: 0.2, emissive: 0x05324a, emissiveIntensity: 0.3 })); sea.rotation.x = -Math.PI / 2; sea.position.set(0, 0.03, -110); scene.add(sea);
   scene.userData.tickers.push((t) => { sea.position.y = 0.03 + Math.sin(t * 1.2) * 0.02; }); return { sand, sea }; }
 export function umbrella(color = 0xff3b3b) { const g = new THREE.Group(); g.add(at(cyl(0.03, 0.03, 2.2, 0xffffff, 6), 0, 1.1, 0)); g.add(at(new THREE.Mesh(new THREE.ConeGeometry(1.2, 0.5, 10), M(color, { side: THREE.DoubleSide })), 0, 2.3, 0)); return g; }
+
+// ---------- Mülltonnen-Welt (014) ----------
+export const BIN = { bio: 0x6d4c2f, rest: 0x2b2f36, papier: 0x1e5fb4, gelb: 0xf2c200 };
+export function bin(color = BIN.bio, { dirty = false } = {}) { // 240-l-Tonne mit Deckel (Scharnier hinten) + Rädern
+  const g = new THREE.Group(); const body = new THREE.Mesh(new THREE.CylinderGeometry(0.36, 0.3, 1.0, 4, 1), M(color)); body.rotation.y = Math.PI / 4; body.scale.set(1, 1, 1.25); body.position.y = 0.55; body.castShadow = true; g.add(body);
+  g.add(at(box(0.56, 0.06, 0.74, color), 0, 1.05, 0));
+  const lid = new THREE.Group(); lid.position.set(0, 1.1, -0.36); lid.add(at(box(0.6, 0.06, 0.76, color), 0, 0, 0.38)); g.add(lid);
+  lid.add(at(box(0.3, 0.05, 0.06, 0x222222), 0, 0.02, 0.76));
+  for (const x of [-0.25, 0.25]) { const w = cyl(0.1, 0.1, 0.06, 0x111111, 10); w.rotation.z = Math.PI / 2; w.position.set(x, 0.1, -0.38); g.add(w); }
+  g.add(at(box(0.5, 0.05, 0.05, 0x333333), 0, 0.95, -0.42));
+  if (dirty) for (let i = 0; i < 7; i++) { const sp = box(0.16 + (i % 3) * 0.06, 0.12 + (i % 2) * 0.08, 0.01, 0x4a3b1c); sp.position.set(-0.2 + (i * 0.13) % 0.4, 0.3 + (i * 0.17) % 0.6, 0.46); g.add(sp); }
+  g.userData = { lid, body }; return g;
+}
+export function flies(scene, center = [0, 1.2, 0], n = 14, r = 0.7) { const g = new THREE.Group(); const fl = [];
+  for (let i = 0; i < n; i++) { const f = new THREE.Mesh(new THREE.SphereGeometry(0.022, 6, 4), new THREE.MeshBasicMaterial({ color: 0x111111 })); g.add(f); fl.push(f); }
+  g.position.set(...center); scene.add(g); scene.userData.tickers.push((t) => fl.forEach((f, i) => f.position.set(Math.sin(t * (3 + i % 4) + i) * r * (0.5 + (i % 3) * 0.25), Math.sin(t * (5 + i % 3) + i * 2) * 0.35, Math.cos(t * (3.5 + i % 5) + i) * r * (0.5 + (i % 2) * 0.4)))); return g; }
+export function maggots(scene, center = [0, 0, 0], n = 20, r = 0.6) { const g = new THREE.Group(); const ms = [];
+  for (let i = 0; i < n; i++) { const m = new THREE.Mesh(new THREE.CapsuleGeometry(0.03, 0.1, 2, 6), M(0xf4ecd0)); m.rotation.z = Math.PI / 2; g.add(m); ms.push(m); }
+  g.position.set(...center); scene.add(g); scene.userData.tickers.push((t) => ms.forEach((m, i) => { const a = i * 2.4 + t * 0.3 * (i % 2 ? 1 : -1); const rr = r * (0.4 + (i % 5) * 0.15); m.position.set(Math.cos(a) * rr, 0.02, Math.sin(a) * rr); m.rotation.y = -a; m.scale.x = 1 + Math.sin(t * 8 + i) * 0.25; })); return g; }
+export function stink(scene, center = [0, 1.2, 0], n = 3, color = 0x8bc34a) { const ws = [];
+  for (let i = 0; i < n; i++) { const pts = []; for (let k = 0; k < 12; k++) pts.push(new THREE.Vector3(Math.sin(k * 0.9) * 0.08, k * 0.07, 0)); const l = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 20, 0.022, 5), new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.8 })); l.position.set(center[0] - 0.2 + i * 0.2, center[1], center[2]); scene.add(l); ws.push(l); }
+  scene.userData.tickers.push((t) => ws.forEach((l, i) => { const k = (t * 0.6 + i / n) % 1; l.position.y = center[1] + k * 0.6; l.material.opacity = 0.9 * (1 - k); l.rotation.y = t + i; })); return ws; }
+export function waterJet(scene, from = [0, 1, 0], to = [0, 0, 0], n = 60, color = 0xbfe8ff) { // Hochdruck-Strahl aus Tröpfchen
+  const geo = new THREE.BufferGeometry(); const pos = new Float32Array(n * 3); geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const pts = new THREE.Points(geo, new THREE.PointsMaterial({ color, size: 0.06, transparent: true, opacity: 0.9 })); scene.add(pts);
+  const F = new THREE.Vector3(...from), T = new THREE.Vector3(...to);
+  pts.userData.set = (f, tt) => { F.set(...f); T.set(...tt); };
+  scene.userData.tickers.push((t) => { for (let i = 0; i < n; i++) { const k = (t * 3 + i / n) % 1; const j = Math.sin(i * 12.9) * 0.05; pos.set([F.x + (T.x - F.x) * k + j, F.y + (T.y - F.y) * k + Math.sin(i * 7.1) * 0.04, F.z + (T.z - F.z) * k + j], i * 3); } geo.attributes.position.needsUpdate = true; }); return pts; }
+export function splash(scene, at3 = [0, 0, 0], n = 40) { const geo = new THREE.BufferGeometry(); const pos = new Float32Array(n * 3); geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const pts = new THREE.Points(geo, new THREE.PointsMaterial({ color: 0xd8f1ff, size: 0.05, transparent: true, opacity: 0.85 })); pts.position.set(...at3); scene.add(pts);
+  scene.userData.tickers.push((t) => { for (let i = 0; i < n; i++) { const k = (t * 2 + i / n) % 1; const a = i * 2.4; pos.set([Math.cos(a) * k * 0.5, Math.sin(k * Math.PI) * 0.4, Math.sin(a) * k * 0.5], i * 3); } geo.attributes.position.needsUpdate = true; }); return pts; }
+export function cleanTrailer() { // Reinigungsanhänger: Kasten, Tank, Hebebühne vorne
+  const g = new THREE.Group(); g.add(at(box(2.0, 1.6, 3.2, 0x1e88e5), 0, 1.25, 0)); g.add(at(box(2.02, 0.2, 3.22, 0xffffff), 0, 1.6, 0));
+  const tank = cyl(0.45, 0.45, 1.6, 0xdfe6ee, 14); tank.rotation.z = Math.PI / 2; tank.position.set(0, 2.3, -0.6); g.add(tank);
+  for (const z of [-0.9, 0.9]) { const w = cyl(0.4, 0.4, 2.2, 0x111111, 12); w.rotation.z = Math.PI / 2; w.position.set(0, 0.4, z); g.add(w); }
+  const lift = new THREE.Group(); lift.position.set(0, 1.0, 1.7); lift.add(at(box(0.8, 0.08, 0.5, 0x9aa3ad), 0, 0, 0.2)); g.add(lift);
+  const nozzle = at(cyl(0.05, 0.05, 0.4, 0x333333, 6), 0, 2.2, 1.65); g.add(nozzle); g.userData = { lift, nozzle }; return g; }
+export function gully() { const g = new THREE.Group(); g.add(at(box(0.7, 0.04, 0.45, 0x2a2a2a), 0, 0.03, 0)); for (let i = 0; i < 6; i++) g.add(at(box(0.06, 0.05, 0.38, 0x555555), -0.25 + i * 0.1, 0.05, 0)); return g; }
+export function pedestal() { const g = new THREE.Group(); g.add(at(box(1.2, 1.0, 1.2, 0xf5f5f5), 0, 0.5, 0)); g.add(at(box(1.3, 0.08, 1.3, 0xd8c3a0), 0, 1.04, 0)); return g; }
+export function ropeBarrier(len = 3) { const g = new THREE.Group(); for (const x of [-len / 2, len / 2]) { g.add(at(cyl(0.04, 0.06, 0.9, 0xd4af37, 8), x, 0.45, 0)); g.add(at(new THREE.Mesh(new THREE.SphereGeometry(0.06, 8, 6), M(0xd4af37)), x, 0.92, 0)); }
+  const r = cyl(0.03, 0.03, len, 0xb71c1c, 6); r.rotation.z = Math.PI / 2; r.position.y = 0.8; g.add(r); return g; }
+export function spotlight(scene, target, color = 0xfff3d6) { const s = new THREE.SpotLight(color, 60, 20, 0.45, 0.5); s.position.set(target.x, target.y + 6, target.z + 2); s.target.position.copy(target); scene.add(s, s.target);
+  const cone = new THREE.Mesh(new THREE.ConeGeometry(1.4, 6, 20, 1, true), new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.07, side: THREE.DoubleSide, depthWrite: false })); cone.position.set(target.x, target.y + 3, target.z + 1); cone.rotation.x = -0.32; scene.add(cone); return s; }
+export function sparkles(scene, center = [0, 1, 0], n = 10, r = 0.6) { const ss = []; for (let i = 0; i < n; i++) { const s = new THREE.Mesh(new THREE.OctahedronGeometry(0.06, 0), new THREE.MeshBasicMaterial({ color: 0xffffff })); scene.add(s); ss.push(s); }
+  scene.userData.tickers.push((t) => ss.forEach((s, i) => { const k = (t * 1.5 + i / n) % 1; s.position.set(center[0] + Math.sin(i * 3.3) * r, center[1] + Math.cos(i * 2.1) * r * 0.8, center[2] + 0.4 + Math.cos(i * 1.7) * 0.2); s.scale.setScalar(Math.sin(k * Math.PI) * 1.6); s.rotation.y = t * 3; })); return ss; }
+export function shinyMat() { return new THREE.MeshStandardMaterial({ color: 0xe8edf2, metalness: 0.9, roughness: 0.12, emissive: 0x6c7a88, emissiveIntensity: 0.35 }); }
+export function shine(obj) { const m = shinyMat(); obj.traverse(o => { if (o.isMesh && !o.userData.keep) o.material = m; }); }

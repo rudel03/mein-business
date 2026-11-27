@@ -1,0 +1,101 @@
+{
+ "scene": "muelltonne",
+ "voice": {
+  "tempo": 1.15,
+  "tight": true
+ },
+ "beats": [
+  {
+   "shot": [
+    "washHook",
+    "payMonthly"
+   ],
+   "text": "Dieser Typ wäscht Mülltonnen. Und Leute zahlen ihm dafür jeden Monat Geld. Für ne verfickte Tonne.",
+   "audio": "audio/01.mp3"
+  },
+  {
+   "shot": "eklig",
+   "text": "Mülltonnen-Reinigung. Klingt eklig. Ist es auch. Aber das Geschäft dahinter ist richtig geil.",
+   "audio": "audio/02.mp3"
+  },
+  {
+   "shot": "summer",
+   "text": "Pass auf. Im Sommer stinkt jede Biotonne nach Tod. Maden, Fliegen, alles dabei.",
+   "audio": "audio/03.mp3"
+  },
+  {
+   "shot": [
+    "diy",
+    "gully"
+   ],
+   "text": "Selber sauber machen? Viel Spaß. Wer das Dreckwasser einfach in den Gully kippt, riskiert sogar ein Bußgeld.",
+   "audio": "audio/04.mp3"
+  },
+  {
+   "shot": "trailer",
+   "text": "Also kommt er. Mit nem Wagen voller heißem Wasser. Tonne rein, Hochdruck drauf, nach ein paar Minuten ist sie wie neu.",
+   "audio": "audio/05.mp3"
+  },
+  {
+   "shot": "route",
+   "text": "Und jetzt der fetteste Trick. Er kommt immer am Abfuhrtag. Da stehen alle Tonnen schon leer an der Straße.",
+   "audio": "audio/06.mp3"
+  },
+  {
+   "shot": "abo",
+   "text": "Die Leute zahlen ihm meistens so 4 bis 11 Euro pro Reinigung. Im Abo. Jeden Monat.",
+   "audio": "audio/07.mp3"
+  },
+  {
+   "shot": [
+    "grid",
+    "money"
+   ],
+   "text": "Rechnen wir mal. 500 Kunden im Abo mal 8 Euro. Macht 4.000 Euro im Monat. Fürs Tonnen duschen, Digga.",
+   "audio": "audio/08.mp3"
+  },
+  {
+   "shot": [
+    "costs",
+    "neighbors"
+   ],
+   "text": "Davon gehen noch Wasser, Sprit und der Wagen ab. Aber Werbung braucht er kaum. Die Nachbarn sehen die saubere Tonne und wollen auch.",
+   "audio": "audio/09.mp3"
+  },
+  {
+   "shot": "mirrorBin",
+   "text": "Und jetzt das Beste. Eines Tages putzt er eine Tonne so sauber, dass sie glänzt wie ein Spiegel.",
+   "audio": "audio/10.mp3"
+  },
+  {
+   "shot": [
+    "skip",
+    "museum"
+   ],
+   "text": "Die Müllabfuhr hält sie für Deko und lässt sie stehen. Jetzt steht sie im Museum. Eintritt 12 Euro. Und er kriegt keinen Cent.",
+   "audio": "audio/11.mp3"
+  }
+ ],
+ "highlight": [
+  "verfickte",
+  "eklig.",
+  "geil.",
+  "Tod.",
+  "Bußgeld.",
+  "heißem",
+  "fetteste",
+  "Abfuhrtag.",
+  "4",
+  "11",
+  "500",
+  "8",
+  "4.000",
+  "Digga.",
+  "Beste.",
+  "Spiegel.",
+  "Museum.",
+  "12",
+  "Cent."
+ ],
+ "out": "../../ausgabe/014-muelltonnen.mp4"
+}
