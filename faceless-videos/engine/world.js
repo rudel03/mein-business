@@ -790,3 +790,41 @@ export function mower() { const g = new THREE.Group(); g.add(at(box(1.2, 0.5, 1.
 export function hammock() { const g = new THREE.Group(); for (const x of [-1.6, 1.6]) g.add(at(cyl(0.08, 0.08, 1.8, 0x8a5a33, 6), x, 0.9, 0)); const n = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 3.0, 12, 1, true, Math.PI, Math.PI), M(0xffb74d, { side: THREE.DoubleSide })); n.rotation.z = Math.PI / 2; n.position.y = 1.1; g.add(n); return g; }
 export function signBoard(text, color = 'red') { const g = new THREE.Group(); g.add(at(cyl(0.03, 0.03, 1.2, 0x8a5a33, 6), 0, 0.6, 0)); const t = tag(text, color, 0.6); t.position.y = 1.35; g.add(t); return g; }
 export function nailScissors() { const g = new THREE.Group(); const a = box(0.02, 0.01, 0.18, 0xd0d4da), b = box(0.02, 0.01, 0.18, 0xd0d4da); a.rotation.y = 0.2; b.rotation.y = -0.2; g.add(a, b); g.add(at(new THREE.Mesh(new THREE.TorusGeometry(0.03, 0.008, 4, 8), M(0xd0d4da)), 0.02, 0, -0.1)); return g; }
+
+// ---------- Hüpfburg-Welt (013) ----------
+export function bouncyCastle(s = 1, cols = [0xe53935, 0xffd400, 0x1e88e5]) { // aufblasbares Schloss, Ursprung Boden-Mitte, ca. 5 × 5 m
+  const g = new THREE.Group(); const inner = new THREE.Group(); g.add(inner);
+  const soft = (c) => M(c);
+  const base = new THREE.Mesh(new THREE.BoxGeometry(5, 0.6, 5), soft(cols[0])); base.position.y = 0.3; base.castShadow = true; base.receiveShadow = true; inner.add(base);
+  const floor = new THREE.Mesh(new THREE.BoxGeometry(4.2, 0.05, 4.2), soft(cols[1])); floor.position.y = 0.62; inner.add(floor);
+  for (const [x, z, w, d] of [[0, -2.2, 4.4, 0.4], [-2.2, 0, 0.4, 4.4], [2.2, 0, 0.4, 4.4]]) { const wl = new THREE.Mesh(new THREE.BoxGeometry(w, 1.6, d), soft(cols[2])); wl.position.set(x, 1.4, z); wl.castShadow = true; inner.add(wl); }
+  for (const x of [-1.5, 1.5]) { const fw = new THREE.Mesh(new THREE.BoxGeometry(1.0, 0.9, 0.4), soft(cols[2])); fw.position.set(x, 1.05, 2.2); inner.add(fw); }
+  const towers = [];
+  for (const [x, z, i] of [[-2.2, -2.2, 0], [2.2, -2.2, 1], [-2.2, 2.2, 2], [2.2, 2.2, 3]]) { const t = new THREE.Group(); t.position.set(x, 0.6, z);
+    const c = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.55, 2.6, 14), soft(i % 2 ? cols[1] : cols[0])); c.position.y = 1.3; c.castShadow = true; t.add(c);
+    const cone = new THREE.Mesh(new THREE.ConeGeometry(0.62, 1.0, 14), soft(cols[2])); cone.position.y = 3.1; t.add(cone);
+    const ball2 = new THREE.Mesh(new THREE.SphereGeometry(0.15, 10, 8), soft(cols[1])); ball2.position.y = 3.65; t.add(ball2); inner.add(t); towers.push(t); }
+  const arch = new THREE.Mesh(new THREE.TorusGeometry(1.0, 0.28, 10, 18, Math.PI), soft(cols[0])); arch.position.set(0, 2.3, -2.2); inner.add(arch);
+  g.scale.setScalar(s); g.userData = { inner, towers }; return g;
+}
+export function inflate(castle, k, t = 0) { const i = castle.userData.inner; const e = Math.max(0.04, k); i.scale.set(1 + (1 - e) * 0.15, e, 1 + (1 - e) * 0.15); i.rotation.z = (1 - e) * 0.05 * Math.sin(t * 3); }
+export function wobble(castle, t, amp = 0.03) { const i = castle.userData.inner; i.scale.y = 1 + Math.sin(t * 9) * amp; i.scale.x = i.scale.z = 1 - Math.sin(t * 9) * amp * 0.5; }
+export function blower() { const g = new THREE.Group(); g.add(at(box(0.6, 0.6, 0.5, 0x1e88e5), 0, 0.35, 0)); const fan = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.22, 0.05, 12), M(0x222222)); fan.rotation.x = Math.PI / 2; fan.position.set(0, 0.4, 0.27); g.add(fan);
+  const tube = cyl(0.16, 0.16, 1.6, 0xe53935, 10); tube.rotation.x = Math.PI / 2; tube.position.set(0, 0.35, -1.0); g.add(tube); g.userData.fan = fan; return g; }
+export function airJar() { const g = new THREE.Group(); g.add(new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 0.45, 16), new THREE.MeshStandardMaterial({ color: 0xcfefff, transparent: true, opacity: 0.35, roughness: 0.05, metalness: 0.1 })));
+  g.add(at(cyl(0.21, 0.21, 0.08, 0xd4af37, 16), 0, 0.26, 0)); return g; }
+export function cake() { const g = new THREE.Group(); g.add(at(cyl(0.35, 0.35, 0.25, 0x8d5524, 16), 0, 0.12, 0)); g.add(at(cyl(0.36, 0.36, 0.06, 0xffc1d9, 16), 0, 0.27, 0));
+  for (let i = 0; i < 5; i++) { const a = i / 5 * Math.PI * 2; g.add(at(cyl(0.015, 0.015, 0.14, [0xff3b3b, 0x3b82f6, 0xffd400][i % 3], 5), Math.sin(a) * 0.2, 0.37, Math.cos(a) * 0.2)); g.add(at(new THREE.Mesh(new THREE.SphereGeometry(0.025, 6, 4), new THREE.MeshBasicMaterial({ color: 0xffb300 })), Math.sin(a) * 0.2, 0.46, Math.cos(a) * 0.2)); } return g; }
+export function balloon(color = 0xff3b3b, len = 1.6) { const g = new THREE.Group(); const b = new THREE.Mesh(new THREE.SphereGeometry(0.28, 14, 10), M(color)); b.scale.y = 1.2; b.position.y = len; g.add(b);
+  g.add(at(box(0.01, len, 0.01, 0xeeeeee), 0, len / 2, 0)); return g; }
+export function partyHat(color = 0x9b59b6) { return new THREE.Mesh(new THREE.ConeGeometry(0.12, 0.3, 10), M(color)); }
+export function rolledCastle() { const g = new THREE.Group(); const r = cyl(0.55, 0.55, 1.6, 0xe53935, 14); r.rotation.z = Math.PI / 2; r.position.y = 0.55; g.add(r); for (const x of [-0.5, 0.5]) { const s = cyl(0.57, 0.57, 0.08, 0x222222, 14); s.rotation.z = Math.PI / 2; s.position.set(x, 0.55, 0); g.add(s); } return g; }
+export function pallet() { const g = new THREE.Group(); for (let i = 0; i < 5; i++) g.add(at(box(0.18, 0.04, 1.2, 0xc8a165), -0.5 + i * 0.25, 0.14, 0)); for (const z of [-0.5, 0, 0.5]) g.add(at(box(1.2, 0.12, 0.12, 0xa88452), 0, 0.06, z)); return g; }
+export function rain(scene, n = 600, area = 24, center = [0, 0, 0]) { const geo = new THREE.BufferGeometry(); const pos = new Float32Array(n * 6); let r = 3; const rnd = () => (r = (r * 9301 + 49297) % 233280) / 233280;
+  const seeds = []; for (let i = 0; i < n; i++) seeds.push([center[0] + (rnd() - 0.5) * area, rnd() * 14, center[2] + (rnd() - 0.5) * area]);
+  geo.setAttribute('position', new THREE.BufferAttribute(pos, 3)); const ln = new THREE.LineSegments(geo, new THREE.LineBasicMaterial({ color: 0xaecbe8, transparent: true, opacity: 0.6 })); scene.add(ln);
+  scene.userData.tickers.push((t) => { for (let i = 0; i < n; i++) { const [x, y0, z] = seeds[i]; const y = (y0 - t * 12) % 14; const yy = y < 0 ? y + 14 : y; pos.set([x, yy, z, x + 0.03, yy + 0.5, z], i * 6); } geo.attributes.position.needsUpdate = true; }); return ln; }
+export function beach(scene) { const sand = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), M(0xf2d79b)); sand.rotation.x = -Math.PI / 2; sand.receiveShadow = true; scene.add(sand);
+  const sea = new THREE.Mesh(new THREE.PlaneGeometry(400, 200), new THREE.MeshStandardMaterial({ color: 0x1ca3d8, roughness: 0.15, metalness: 0.2, emissive: 0x05324a, emissiveIntensity: 0.3 })); sea.rotation.x = -Math.PI / 2; sea.position.set(0, 0.03, -110); scene.add(sea);
+  scene.userData.tickers.push((t) => { sea.position.y = 0.03 + Math.sin(t * 1.2) * 0.02; }); return { sand, sea }; }
+export function umbrella(color = 0xff3b3b) { const g = new THREE.Group(); g.add(at(cyl(0.03, 0.03, 2.2, 0xffffff, 6), 0, 1.1, 0)); g.add(at(new THREE.Mesh(new THREE.ConeGeometry(1.2, 0.5, 10), M(color, { side: THREE.DoubleSide })), 0, 2.3, 0)); return g; }

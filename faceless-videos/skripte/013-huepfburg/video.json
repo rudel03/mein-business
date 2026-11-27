@@ -1,0 +1,107 @@
+{
+ "scene": "huepfburg",
+ "voice": {
+  "tempo": 1.15,
+  "tight": true
+ },
+ "series": "Geschäftsmodelle, auf die keiner kommt",
+ "beats": [
+  {
+   "shot": [
+    "airJar",
+    "inflate"
+   ],
+   "text": "Dieser Typ verdient jedes Wochenende Geld mit Luft. Also wirklich mit Luft. Er bläst sie in ein Plastikschloss. Fertig.",
+   "audio": "audio/01.mp3"
+  },
+  {
+   "shot": "party",
+   "text": "Hüpfburg-Vermietung, Bruder. Klingt nach Kindergeburtstag. Ist aber ein verfickt cleveres Geschäft.",
+   "audio": "audio/02.mp3"
+  },
+  {
+   "shot": "buy",
+   "text": "Pass auf, ganz easy. Du kaufst einmal ne Profi-Hüpfburg. Neu kostet die so 2.000 bis 3.000 Euro.",
+   "audio": "audio/03.mp3"
+  },
+  {
+   "shot": [
+    "rentTag",
+    "delivery"
+   ],
+   "text": "Dann vermietest du sie. Ein Wochenende bringt so 130 bis 240 Euro. Lieferung und Aufbau? Nochmal 60 Euro extra.",
+   "audio": "audio/04.mp3"
+  },
+  {
+   "shot": "math",
+   "text": "Rechnen wir mal. 200 Euro Miete plus 60 Euro Lieferung. Macht 260 Euro pro Wochenende.",
+   "audio": "audio/05.mp3"
+  },
+  {
+   "shot": [
+    "tenWeekends",
+    "costs"
+   ],
+   "text": "Nach ungefähr zehn Wochenenden ist die scheiß Burg bezahlt. Ab dann bleibt das meiste hängen. Minus Sprit, Versicherung und Reinigung.",
+   "audio": "audio/06.mp3"
+  },
+  {
+   "shot": "birthdays",
+   "text": "Und das Krasseste? Die Kunden buchen sich von selbst. Jedes Kind hat einmal im Jahr Geburtstag. Jedes verdammte Jahr.",
+   "audio": "audio/07.mp3"
+  },
+  {
+   "shot": [
+    "cakeKid",
+    "classroom"
+   ],
+   "text": "Den Rest macht das Kind. Das hüpft fünf Stunden, schmeißt einmal Kuchen und erzählt es danach der ganzen Klasse. Gratis Werbung.",
+   "audio": "audio/08.mp3"
+  },
+  {
+   "shot": "rain",
+   "text": "Pro-Tipp: Bei Regen sofort zurückholen. Ne nasse Hüpfburg schimmelt. Und dann hüpfst du nur noch in Schulden.",
+   "audio": "audio/09.mp3"
+  },
+  {
+   "shot": "overPump",
+   "text": "Und jetzt das Beste. Einmal hat er die Burg ein bisschen zu prall aufgepumpt.",
+   "audio": "audio/10.mp3"
+  },
+  {
+   "shot": [
+    "liftOff",
+    "mallorca"
+   ],
+   "text": "Die Burg hebt ab. Mit dem kompletten Kindergeburtstag. Landet auf Mallorca. Und er berechnet trotzdem 60 Euro Anfahrt.",
+   "audio": "audio/11.mp3"
+  }
+ ],
+ "highlight": [
+  "Luft.",
+  "Fertig.",
+  "Bruder.",
+  "verfickt",
+  "2.000",
+  "3.000",
+  "60",
+  "260",
+  "scheiß",
+  "Krasseste?",
+  "verdammte",
+  "Gratis",
+  "Werbung.",
+  "Pro-Tipp:",
+  "Schulden.",
+  "Beste.",
+  "Mallorca.",
+  "Anfahrt."
+ ],
+ "source": "Quellen: Mietangebote (Stadt München Spielgeräteverleih, Online-Verleiher) · Händlerpreise Profi-Hüpfburgen 2026",
+ "source_beats": [
+  2,
+  3,
+  4
+ ],
+ "out": "../../ausgabe/013-huepfburg.mp4"
+}
