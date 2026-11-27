@@ -750,3 +750,43 @@ export function mug(color = 0xc62828) { const g = new THREE.Group(); g.add(at(cy
 export function mirror() { const g = new THREE.Group(); g.add(at(box(1.0, 1.6, 0.08, 0x8a5a33), 0, 1.6, 0)); g.add(at(box(0.85, 1.45, 0.02, 0xcfe8ff, { emissive: 0x9fc6e8, emissiveIntensity: 0.4 }), 0, 1.6, 0.05)); return g; }
 export function sofaRoom(scene) { scene.add(ground(200, 0x9a9a9a)); scene.add(room(10, 8, 3.2, 0xf6e1c3, 0x8d6e63)); const s = sofa(0x8e2424); s.position.set(-2, 0, -2.6); scene.add(s);
   const t = xmasTree(1.2); t.position.set(2.6, 0, -2.6); scene.add(t); for (let i = 0; i < 4; i++) { const pr = present([0xe53935, 0x1e88e5, 0x43a047, 0xfdd835][i], 0xffffff, 0.4); pr.position.set(2 + (i % 2) * 0.6, 0, -1.8 + Math.floor(i / 2) * 0.5); scene.add(pr); } }
+
+// ---------- Solarpark & Schafe (012) ----------
+export function panelRow(n = 8, tilt = 0.5) {
+  const g = new THREE.Group();
+  const panelMat = new THREE.MeshStandardMaterial({ color: 0x1d3c78, metalness: 0.6, roughness: 0.25, emissive: 0x0a1a3a, emissiveIntensity: 0.3 });
+  for (let i = 0; i < n; i++) {
+    const p = new THREE.Group();
+    const pan = new THREE.Mesh(new THREE.BoxGeometry(1.9, 0.05, 1.6), panelMat); pan.rotation.x = tilt; pan.position.y = 1.3; pan.castShadow = true; pan.receiveShadow = true; p.add(pan);
+    for (let k = 1; k < 4; k++) { const ln = box(1.9, 0.055, 0.02, 0x9fb4d8); ln.rotation.x = tilt; ln.position.set(0, 1.3 - Math.sin(tilt) * (-0.8 + k * 0.4), Math.cos(tilt) * (-0.8 + k * 0.4) * 1); p.add(ln); }
+    for (const [x, z, h] of [[-0.8, -0.5, 1.6], [0.8, -0.5, 1.6], [-0.8, 0.5, 0.95], [0.8, 0.5, 0.95]]) p.add(at(box(0.06, h, 0.06, 0x9aa3ad), x, h / 2, z));
+    p.position.x = (i - (n - 1) / 2) * 2.0; g.add(p);
+  }
+  return g;
+}
+export function solarPark(scene, rows = 6, cols = 10, gap = 4.5) { const g = new THREE.Group(); for (let r = 0; r < rows; r++) { const row = panelRow(cols); row.position.z = -r * gap; g.add(row); } scene.add(g); return g; }
+export function sheep(s = 1) {
+  const g = new THREE.Group(); const wool = M(0xf5f1e6);
+  const body = new THREE.Group(); body.position.y = 0.55 * s;
+  for (const [x, y, z, r] of [[0, 0, 0, 0.42], [0, 0.08, 0.28, 0.32], [0, 0.08, -0.28, 0.32], [0.18, 0.12, 0, 0.3], [-0.18, 0.12, 0, 0.3]]) { const b = new THREE.Mesh(new THREE.IcosahedronGeometry(r * s, 1), wool); b.position.set(x * s, y * s, z * s); b.castShadow = true; body.add(b); }
+  g.add(body);
+  const head = new THREE.Group(); head.position.set(0, 0.7 * s, 0.5 * s); head.add(at(box(0.24 * s, 0.26 * s, 0.32 * s, 0x2b2b2b), 0, 0, 0.05 * s));
+  head.add(at(box(0.08 * s, 0.05 * s, 0.14 * s, 0x2b2b2b), -0.16 * s, 0.06 * s, -0.02 * s), at(box(0.08 * s, 0.05 * s, 0.14 * s, 0x2b2b2b), 0.16 * s, 0.06 * s, -0.02 * s));
+  head.add(at(box(0.05 * s, 0.05 * s, 0.02 * s, 0xffffff), -0.07 * s, 0.05 * s, 0.22 * s), at(box(0.05 * s, 0.05 * s, 0.02 * s, 0xffffff), 0.07 * s, 0.05 * s, 0.22 * s));
+  head.add(at(box(0.25 * s, 0.1 * s, 0.1 * s, wool.color.getHex()), 0, 0.15 * s, 0)); g.add(head);
+  const legs = []; for (const [x, z] of [[-0.15, 0.22], [0.15, 0.22], [-0.15, -0.22], [0.15, -0.22]]) { const l = at(box(0.07 * s, 0.4 * s, 0.07 * s, 0x2b2b2b), x * s, 0.2 * s, z * s); g.add(l); legs.push(l); }
+  g.userData = { head, body, legs }; return g;
+}
+export function graze(sh, t, i = 0) { const u = sh.userData; const k = (Math.sin(t * 1.5 + i) + 1) / 2; u.head.rotation.x = 0.2 + k * 0.7; u.head.position.y = u.head.userData.y0 ?? (u.head.userData.y0 = u.head.position.y); u.head.position.y = u.head.userData.y0 - k * 0.2 * (sh.scale.x || 1); }
+export function sheepWalk(sh, t, i = 0) { sh.userData.legs.forEach((l, k) => l.rotation.x = Math.sin(t * 10 + i + (k % 2) * Math.PI) * 0.5); sh.userData.body.position.y = 0.55 + Math.abs(Math.sin(t * 10 + i)) * 0.04; }
+export function shepherd() { const p = person({ shirt: 0x5d7a3a, pants: 0x4e342e, hat: 'hair', hair: 0x6d4c41 }); const h = p.userData.head;
+  h.add(at(cyl(0.42, 0.42, 0.04, 0x6d4c41, 14), 0, 0.3, 0)); h.add(at(cyl(0.24, 0.27, 0.22, 0x6d4c41, 12), 0, 0.42, 0)); h.add(at(box(0.3, 0.06, 0.04, 0x5d4037), 0, 0.02, 0.27));
+  const st = at(cyl(0.03, 0.03, 1.8, 0x8a5a33, 6), 0, -0.6, 0.1); p.userData.armR.add(st); p.userData.staff = st; return p; }
+export function grassTufts(n = 300, area = 30, h = 0.3, seed = 4, color = 0x4f9d3a, w = 1) {
+  const m = new THREE.InstancedMesh(new THREE.ConeGeometry(0.12, 1, 4), M(color), n); const d = new THREE.Object3D(); let r = seed; const rnd = () => (r = (r * 9301 + 49297) % 233280) / 233280;
+  for (let i = 0; i < n; i++) { d.position.set((rnd() - 0.5) * area, h / 2, (rnd() - 0.5) * area); d.scale.set(w, h * (0.6 + rnd() * 0.6), w); d.rotation.y = rnd() * 3; d.updateMatrix(); m.setMatrixAt(i, d.matrix); } m.userData = { n, area, seed }; return m;
+}
+export function mower() { const g = new THREE.Group(); g.add(at(box(1.2, 0.5, 1.6, 0xd32f2f), 0, 0.55, 0)); g.add(at(box(0.6, 0.5, 0.5, 0x333333), 0, 1.0, -0.3)); for (const [x, z, r] of [[-0.65, 0.55, 0.28], [0.65, 0.55, 0.28], [-0.65, -0.5, 0.38], [0.65, -0.5, 0.38]]) { const w = cyl(r, r, 0.2, 0x1b1b1b, 10); w.rotation.z = Math.PI / 2; w.position.set(x, r, z); g.add(w); } return g; }
+export function hammock() { const g = new THREE.Group(); for (const x of [-1.6, 1.6]) g.add(at(cyl(0.08, 0.08, 1.8, 0x8a5a33, 6), x, 0.9, 0)); const n = new THREE.Mesh(new THREE.CylinderGeometry(0.5, 0.5, 3.0, 12, 1, true, Math.PI, Math.PI), M(0xffb74d, { side: THREE.DoubleSide })); n.rotation.z = Math.PI / 2; n.position.y = 1.1; g.add(n); return g; }
+export function signBoard(text, color = 'red') { const g = new THREE.Group(); g.add(at(cyl(0.03, 0.03, 1.2, 0x8a5a33, 6), 0, 0.6, 0)); const t = tag(text, color, 0.6); t.position.y = 1.35; g.add(t); return g; }
+export function nailScissors() { const g = new THREE.Group(); const a = box(0.02, 0.01, 0.18, 0xd0d4da), b = box(0.02, 0.01, 0.18, 0xd0d4da); a.rotation.y = 0.2; b.rotation.y = -0.2; g.add(a, b); g.add(at(new THREE.Mesh(new THREE.TorusGeometry(0.03, 0.008, 4, 8), M(0xd0d4da)), 0.02, 0, -0.1)); return g; }

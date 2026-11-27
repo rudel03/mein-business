@@ -12,6 +12,7 @@ Inhaber: **„Das ist perfekt, das gefällt mir sehr. Genau diesen Style festhal
 ## Stand (26.11.2026)
 - Nische: **Geschäftsmodelle, auf die keiner kommt**. Themen: `skripte/themen.md`.
 - ✅ 005-umzug-v2 = freigegeben (Referenz).
+- ✅ **012 Schafe im Solarpark** (27.11.2026): Hook „Dieser Typ kriegt Geld dafür, dass seine Schafe Gras fressen“, 11 Beats, 16 Einstellungen (Hängematte mit Geldregen, Mäher steckt fest, Stein → Glasbruch, Hektar-Raster, Mitarbeiter des Monats, Lämmer, Streik mit Schildern), Plotwist: Schafe gründen Gewerkschaft, Schäfer mäht mit der Nagelschere. Stimme nach Rezept. `ausgabe/012-schafe-solarpark.mp4`, Szenen `engine/scenes/solarschafe.js`. Neue Bausteine: panelRow, solarPark, sheep/graze/sheepWalk, shepherd, grassTufts (Breite w), mower, hammock, signBoard, nailScissors. Wartet auf Feedback.
 - ✅ **011 Mietweihnachtsmann v2** (27.11.2026): Stimme zurück auf freigegebenes Rezept (Orion, jeder Satz einzeln, tempo 1.15, tight true) → `ausgabe/011-mietweihnachtsmann-v2.mp4`, 63,9 s, Config `video_v2.json`, Audio `audio_v2/`. Wartet auf Feedback.
 - (v1, Stimme in einem Stück → abgelehnt) **011 Mietweihnachtsmann** (27.11.2026, nach Feedback „nicht gut – interessanteres Geschäft, mehr Humor“): Humor in jeder Szene (Running Gag Bart, E-Roller statt Rentiere, Wohnung 3B statt Nordpol, Hund/Kind/Onkel Jürgen), 11 Beats, 17 Einstellungen, Plotwist echter Weihnachtsmann wird Praktikant für Mindestlohn. `ausgabe/011-mietweihnachtsmann.mp4`, 70,7 s (Tempo 1,2, Pausen 0,22). Neue Bausteine: snowGround, snowfall, lightString, xmasHouse, xmasTree, present, santa (real), student, eScooter, dog, mug, mirror, sofaRoom; Nachtlicht + Sterne.
 - ❌ **010 Kaugummiautomaten** vom Inhaber als „nicht gut“ bewertet (Thema zu trocken, zu wenig Humor).
@@ -51,6 +52,8 @@ Inhaber: **„Das ist perfekt, das gefällt mir sehr. Genau diesen Style festhal
 - Higgsfield: max. 6 gleichzeitige Jobs; hängende `queued`-Jobs blockieren Plätze. Zahlen im Sprech-Prompt ausschreiben.
 - faster-whisper: Audio per ffmpeg als numpy-Array übergeben (`av.open`-Fehler).
 - Kamera nie in Figuren/Wände stellen → vor dem Rendern Standbilder prüfen (`--stills`).
+- Hochformat ist schmal: Objekte/Etiketten in Kameranähe innerhalb ca. ±1 m (bei 5 m Abstand ±1,5 m) um die Bildmitte halten, sonst abgeschnitten. Erst Standbilder aller Einstellungen als Kontaktbogen prüfen.
+- `W.box(...)` hat eine schreibgeschützte `position` → nie `Object.assign(mesh, {position})`, immer `position.set`.
 - Türen: `W.door(color, {backing:true})` vor Häusern (Haus ist ein massiver Block).
 - Regionale Gebühren an der Quelle prüfen (lrasha.de = LK Schwäbisch Hall). PDFs: `pdftotext -layout`.
 - Geplante Aufgaben: Higgsfield-Connector mitgeben, Postiz-Key in der Umgebung hinterlegen.

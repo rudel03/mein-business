@@ -1,0 +1,105 @@
+{
+ "scene": "solarschafe",
+ "voice": {
+  "tempo": 1.15,
+  "tight": true
+ },
+ "series": "Geschäftsmodelle, auf die keiner kommt",
+ "beats": [
+  {
+   "shot": [
+    "eating",
+    "hammockCash"
+   ],
+   "text": "Dieser Typ kriegt Geld dafür, dass seine Schafe Gras fressen. Mehr nicht. Die fressen. Er kassiert.",
+   "audio": "audio/01.mp3"
+  },
+  {
+   "shot": "parkFly",
+   "text": "Schafe im Solarpark. Klingt nach nem schlechten Witz. Ist aber ein echtes Geschäft, Bruder.",
+   "audio": "audio/02.mp3"
+  },
+  {
+   "shot": "shadow",
+   "text": "Pass auf. Unter Solarmodulen wächst Gras. Wird das zu hoch, macht es Schatten. Und Schatten kostet Strom.",
+   "audio": "audio/03.mp3"
+  },
+  {
+   "shot": [
+    "mowerStuck",
+    "stone"
+   ],
+   "text": "Mähen ist scheiß nervig. Zwischen den Modulen kommt kaum ne Maschine durch. Und jeder Stein, der hochfliegt, trifft teures Glas.",
+   "audio": "audio/04.mp3"
+  },
+  {
+   "shot": "sheepArrive",
+   "text": "Also holt der Betreiber Schafe. Die passen überall drunter, fressen alles und beschweren sich nie.",
+   "audio": "audio/05.mp3"
+  },
+  {
+   "shot": "perHa",
+   "text": "Gezahlt wird pro Hektar. Meistens so 150 bis 400 Euro im Jahr. Manche kriegen deutlich mehr.",
+   "audio": "audio/06.mp3"
+  },
+  {
+   "shot": [
+    "bigMath",
+    "money"
+   ],
+   "text": "Rechnen wir mal. Ein Solarpark mit 100 Hektar. Mal 400 Euro. Macht 40.000 Euro im Jahr. Fürs verfickte Grasfressen.",
+   "audio": "audio/07.mp3"
+  },
+  {
+   "shot": [
+    "employee",
+    "lambs"
+   ],
+   "text": "Und das Krasseste? Die Mitarbeiter wollen keinen Lohn. Kein Urlaub, keine Pause. Und nebenbei machen die noch Wolle und Lämmer.",
+   "audio": "audio/08.mp3"
+  },
+  {
+   "shot": "forFree",
+   "text": "Fun Fact: Fast die Hälfte der Schäfer macht's sogar umsonst. Weil das Futter ja schon da ist.",
+   "audio": "audio/09.mp3"
+  },
+  {
+   "shot": "realize",
+   "text": "Und jetzt das Beste. Eines Tages merken die Schafe, wie viel Geld sie wert sind.",
+   "audio": "audio/10.mp3"
+  },
+  {
+   "shot": [
+    "strike",
+    "scissors"
+   ],
+   "text": "Sie gründen ne Gewerkschaft. Streiken. Und jetzt mäht der Schäfer den Solarpark. Mit der Nagelschere.",
+   "audio": "audio/11.mp3"
+  }
+ ],
+ "highlight": [
+  "Er",
+  "kassiert.",
+  "Bruder.",
+  "Schatten",
+  "scheiß",
+  "Glas.",
+  "400",
+  "40.000",
+  "verfickte",
+  "Krasseste?",
+  "Lohn.",
+  "umsonst.",
+  "Beste.",
+  "Gewerkschaft.",
+  "Streiken.",
+  "Nagelschere."
+ ],
+ "source": "Quellen: LfL Bayern · agrarheute · Masterarbeit (LELF Brandenburg) · Utopia",
+ "source_beats": [
+  5,
+  6,
+  8
+ ],
+ "out": "../../ausgabe/012-schafe-solarpark.mp4"
+}
