@@ -27,7 +27,7 @@ const port = srv.address().port;
 const browser = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
 const page = await browser.newPage({ viewport: { width: plan.W, height: plan.H } });
 page.on('pageerror', e => console.error('PAGE ERROR', e.message));
-page.on('console', m => { if (m.type() === 'error') console.error('CONSOLE', m.text()); });
+page.on('console', m => { if (m.type() === 'error' || m.type() === 'warning') console.error('CONSOLE', m.text()); });
 await page.goto(`http://127.0.0.1:${port}/index.html`);
 await page.waitForFunction(() => window.init);
 await page.evaluate(p => window.init(p), plan);

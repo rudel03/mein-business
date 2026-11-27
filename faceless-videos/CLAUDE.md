@@ -12,7 +12,8 @@ Inhaber: **„Das ist perfekt, das gefällt mir sehr. Genau diesen Style festhal
 ## Stand (26.11.2026)
 - Nische: **Geschäftsmodelle, auf die keiner kommt**. Themen: `skripte/themen.md`.
 - ✅ 005-umzug-v2 = freigegeben (Referenz).
-- ✅ **009 Golfball-Taucher v2** (Feinschliff nach Feedback „kein Ende-Teaser am Anfang, unpassende Pausen, weniger Digga“): ganzer Text in EINEM Sprachauftrag (`audio_full`), Pausen sanft auf 0,25 s, Tempo 1,12, „Digga“ nur im Hook → `ausgabe/009-golfball-taucher-v2.mp4`, 87 s, ≈ 1 Credit Stimme. Config `skripte/009-golfball-taucher/video_v2.json` = **neue Vorlage**. (v1: Orion, ≈ 6 Credits. Plotwist: Golfer seit 2009 im Teich kauft seinen Ball zurück (2,50 € + 10 Cent Ablöse). Neue Szenen `engine/scenes/golftaucher.js`, neue Bausteine: pond, flag, golfBall, ballField, golfer/swing, diver, netBag, oldGolfer, sortTable, Himmel `underwater`. Wartet auf Feedback.
+- ✅ **009 Golfball-Taucher v3 „hochwertig“** (27.11.2026, nach Feedback + Referenzvideo „Stau aus dem Nichts“/theoriefuchs): Engine-Upgrade (Bloom/Glow, ACES-Farben, Vignette/Korn, NaN-Filter, Sonnenscheibe, Wolken, Horizont-Hügel, Hintergrund-Leben, 3D-Etiketten an Objekten als eigene scharfe Ebene, Serien-Zeile oben). Szenen komplett neu: 19 einzigartige Einstellungen passend zu jedem Satz (echtes Clubhaus, Pro-Shop, Waschmaschine, Förderband, Clubmanager …). `ausgabe/009-golfball-taucher-v3.mp4`, Config `skripte/009-golfball-taucher/video_v3.json`. Render mit Glow ≈ 19 min. Wartet auf Feedback.
+- (alt) **009 Golfball-Taucher v2** (Feinschliff nach Feedback „kein Ende-Teaser am Anfang, unpassende Pausen, weniger Digga“): ganzer Text in EINEM Sprachauftrag (`audio_full`), Pausen sanft auf 0,25 s, Tempo 1,12, „Digga“ nur im Hook → `ausgabe/009-golfball-taucher-v2.mp4`, 87 s, ≈ 1 Credit Stimme. Config `skripte/009-golfball-taucher/video_v2.json` = **neue Vorlage**. (v1: Orion, ≈ 6 Credits. Plotwist: Golfer seit 2009 im Teich kauft seinen Ball zurück (2,50 € + 10 Cent Ablöse). Neue Szenen `engine/scenes/golftaucher.js`, neue Bausteine: pond, flag, golfBall, ballField, golfer/swing, diver, netBag, oldGolfer, sortTable, Himmel `underwater`. Wartet auf Feedback.
 - ⏳ **Nächster Schritt:** 006 Callcenter, 007 Folierer, 008 Schlüsseldienst im freigegebenen Stil neu schreiben (frecher, Rechnung zum Mitrechnen) und mit Orion neu sprechen. Szenen/Plotwists existieren schon (`engine/scenes/callcenter.js`, `folierer.js`, `schluesseldienst.js`), Quellen in `skripte/00x-*/skript.md`. Alte Fassungen (Dylan, alter Ton) liegen in `ausgabe/006–008*.mp4` und gelten als überholt.
 - 004 Entrümpelung: alter Ton/Stimme (Dylan) → bei Bedarf ebenfalls im neuen Stil neu machen.
 - **Offen:** Kanalname · Konten (YouTube, Instagram-Creator, TikTok) · Postiz verbinden + API-Key · danach Vollautomatik als geplante Aufgabe (Inhaber will voll automatisch posten).
@@ -38,6 +39,8 @@ Inhaber: **„Das ist perfekt, das gefällt mir sehr. Genau diesen Style festhal
 - Posten über Postiz: Datei erst `postiz upload`, TikTok immer `DIRECT_POST`, `integrations:settings` vorher lesen.
 
 ## Fallstricke
+- Glow (UnrealBloom) verschmiert einzelne NaN-Pixel zu komplett schwarzen Bildern → `CleanShader` vor dem Bloom (in index.html) nicht entfernen.
+- 3D-Etiketten `W.tag` liegen auf Layer 1 und werden NACH dem Glow gezeichnet (sonst unscharf/überstrahlt); Größe = Anteil der Bildhöhe (sizeAttenuation false).
 - Higgsfield: max. 6 gleichzeitige Jobs; hängende `queued`-Jobs blockieren Plätze. Zahlen im Sprech-Prompt ausschreiben.
 - faster-whisper: Audio per ffmpeg als numpy-Array übergeben (`av.open`-Fehler).
 - Kamera nie in Figuren/Wände stellen → vor dem Rendern Standbilder prüfen (`--stills`).

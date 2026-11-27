@@ -9,7 +9,7 @@ Jedes neue Video wird **genau so** gemacht. Abweichungen nur, wenn der Inhaber e
 > - **Am Anfang NICHT ankündigen, dass das Ende lost/absurd ist** – Baustein 2 endet ohne Teaser („Golfball-Taucher. Klingt scheiß bescheuert, ist aber safe eins der krassesten Geschäfte überhaupt.“).
 > - **„Digga“ höchstens 1× pro Video** (am besten im Hook). Sonst „Bruder“, „Alter“, „safe“, „krass“ und die Kraftausdrücke.
 > - **Geschmeidig sprechen:** ganzer Text in **einem** Sprach-Auftrag (`audio_full`), keine Einzelzeilen; Pausen nur sanft begrenzen (`"tight": 0.25`), Tempo 1.12. Weniger Kommas/Doppelpunkte im Sprechtext („Jetzt rechnen wir mal.“ statt „Jetzt rechnen wir, Digga:“), Rückfragen mit „?“ („Und das Krasseste?“).
-> - Referenz für den Feinschliff: `skripte/009-golfball-taucher/video_v2.json`.
+> - Referenz für den Feinschliff: `skripte/009-golfball-taucher/video_v3.json` + Szenen `engine/scenes/golftaucher.js` (19 einzigartige Einstellungen).
 
 ---
 
@@ -48,6 +48,17 @@ Weitere freigegebene Plotwist-Ideen: Callcenter ruft sich selbst an und wird „
 - **Untertitel: 1 Wort**, groß, Mitte, weiß mit schwarzem Rand; Kraftausdrücke, Zahlen und Schlüsselwörter **gelb** (`highlight`).
 - **Etiketten (Pills) für jede Zahl und jede Rechnung**: „3 JUNGS × 8 STD × 42 €“, „= 1.008 € AN 1 TAG“, „≈ 670 € ÜBRIG“, „KLASSE B: BIS 3,5 t“. Farben: gelb = Zahl, grün = Gewinn/gut, rot = Kosten/Warnung, weiß = Info.
 - Quellenzeile klein unten in den Zahlen-Zeilen (`source`, `source_beats`).
+
+
+## 3b. Qualität & Abwechslung (Feedback 26.11.2026, Referenz „Stau aus dem Nichts“ von theoriefuchs)
+**Pflicht für jedes Video:**
+1. **Jeder Satz bekommt eine eigene Szene, die genau das Gesagte zeigt.** Wird „Golfclub“ gesagt → echtes Clubhaus (`W.clubhouse()`), nicht ein normales Haus. Wird „Pro-Shop“ gesagt → Laden mit Regal. Erst Szene ausdenken, dann bauen.
+2. **Keine Einstellung zweimal pro Video**, keine generischen Ersatzszenen (z. B. NICHT bei jeder Zahl „Münztürme vor einem Haus“). Rechnungen themenbezogen zeigen (Zähler an einer Kiste voller Bälle, Geld fliegt aus der Kiste, Manager hält die Hand auf, Kosten-Etiketten an Waschmaschine/Paket …).
+3. **Nie tote Bilder:** in jeder Außenszene Hintergrund-Leben (`W.walkers`, `W.birds`, Wolken kommen automatisch, Fahrzeuge/Carts fahren, Tiere, wehende Fahnen `W.sway`); innen: laufende Maschinen, Schaum, Funkeln. Unter Wasser: Fische, Blasen, Lichtstrahlen.
+4. **Lange Sätze auf 2 verschiedene Einstellungen** (`"shot": ["a", "b"]`), Ziel: neuer Bildinhalt alle 3–4 s.
+5. **Zahlen als 3D-Etiketten direkt an Objekten** (`W.tag(text, farbe)` + `W.popIn`), z. B. Zähler „1.500 BÄLLE“ an der Kiste, „− 200 € AN DEN CLUB“ über dem Manager. Overlay-Pills nur noch, wenn es kein passendes Objekt gibt.
+6. **Look (automatisch in der Engine):** Glow/Bloom, ACES-Filmfarben, Vignette, Sonnenscheibe, Wolken, Hügel am Horizont, Dunst; Serien-Zeile oben (`"series": "Geschäftsmodelle, auf die keiner kommt"`).
+7. Vor dem Rendern **alle Einstellungen als Standbilder prüfen**: Kamera nicht in Objekten, Hauptsache groß im Bild, nichts Schwarzes.
 
 ## 4. Stimme (freigegeben)
 - ElevenLabs **„Orion“** über Higgsfield: `text2speech_v2`, `variant: "elevenlabs"`, `voice_type: "preset"`, `voice_id: "ed69c516-92d2-4b30-a967-617737a342e5"`.

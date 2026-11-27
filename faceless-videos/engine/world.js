@@ -40,11 +40,13 @@ export function setupWorld(scene, renderer, { sky = 'sunset' } = {}) {
   if (sky === 'indoor') { gr.addColorStop(0, '#d9dde3'); gr.addColorStop(1, '#f2efe8'); }
   else if (sky === 'underwater') { gr.addColorStop(0, '#2fa6c9'); gr.addColorStop(1, '#0b3a52'); }
   else if (sky === 'night') { gr.addColorStop(0, '#0b1030'); gr.addColorStop(1, '#2a3570'); }
-  else { gr.addColorStop(0, '#6f7fd6'); gr.addColorStop(0.55, '#f2a3a0'); gr.addColorStop(1, '#ffd08a'); }
+  else if (sky === 'day') { gr.addColorStop(0, '#4f7fc4'); gr.addColorStop(0.6, '#a9c6e6'); gr.addColorStop(1, '#e9eef0'); }
+  else { gr.addColorStop(0, '#5a4f9e'); gr.addColorStop(0.45, '#c98aa8'); gr.addColorStop(0.75, '#f3b38a'); gr.addColorStop(1, '#ffd9a0'); }
   g.fillStyle = gr; g.fillRect(0, 0, 4, 256);
   const tex = new THREE.CanvasTexture(cv); tex.colorSpace = THREE.SRGBColorSpace;
   scene.background = tex;
-  scene.fog = sky === 'underwater' ? new THREE.Fog(0x1d6f8c, 4, 26) : new THREE.Fog(sky === 'indoor' ? 0xe8e6e0 : 0xf6c79a, 60, 190);
+  const fogCol = { underwater: 0x1d6f8c, indoor: 0xe8e6e0, night: 0x2a3570, day: 0xdfe7ee }[sky] || 0xf0b892;
+  scene.fog = sky === 'underwater' ? new THREE.Fog(fogCol, 4, 26) : new THREE.Fog(fogCol, 45, sky === 'indoor' ? 190 : 230);
   scene.add(new THREE.HemisphereLight(0xfff1dc, 0x6a7a5a, sky === 'indoor' ? 2.2 : 1.9));
   const sun = new THREE.DirectionalLight(sky === 'indoor' ? 0xffffff : 0xffd2a0, sky === 'indoor' ? 1.8 : 2.8);
   sun.position.set(-30, 40, 25); sun.castShadow = true;
@@ -52,6 +54,22 @@ export function setupWorld(scene, renderer, { sky = 'sunset' } = {}) {
   Object.assign(sun.shadow.camera, { left: -45, right: 45, top: 45, bottom: -45, near: 1, far: 140 });
   sun.shadow.bias = -0.0005;
   scene.add(sun); scene.add(sun.target);
+  scene.userData.tickers = [];
+  if (sky === 'sunset' || sky === 'day') { // Sonnenscheibe + Horizont-Landschaft + Wolken -> Tiefe & Atmosphäre
+    const disc = new THREE.Mesh(new THREE.CircleGeometry(16, 32), new THREE.MeshBasicMaterial({ color: sky === 'day' ? 0xfffbe8 : 0xfff0c8, fog: false }));
+    disc.position.set(-120, 38, -330); disc.lookAt(0, 0, 0); scene.add(disc);
+    const halo = new THREE.Mesh(new THREE.CircleGeometry(40, 32), new THREE.MeshBasicMaterial({ color: 0xffd6a0, transparent: true, opacity: 0.25, fog: false }));
+    halo.position.set(-119, 38, -329); halo.lookAt(0, 0, 0); scene.add(halo);
+    let r = 11; const rnd = () => (r = (r * 9301 + 49297) % 233280) / 233280;
+    for (let i = 0; i < 26; i++) { // ferne Hügel/Felder am Horizont
+      const a = (i / 26) * Math.PI * 2, d = 230 + rnd() * 60;
+      const hill = new THREE.Mesh(new THREE.SphereGeometry(30 + rnd() * 30, 10, 6, 0, Math.PI * 2, 0, Math.PI / 2), M([0x7fa65a, 0x9bb86a, 0x6f9a52][i % 3]));
+      hill.scale.y = 0.25 + rnd() * 0.2; hill.position.set(Math.cos(a) * d, -2, Math.sin(a) * d); scene.add(hill);
+    }
+    const clouds = [];
+    for (let i = 0; i < 9; i++) { const c = cloud(); c.position.set(-160 + i * 40 + rnd() * 20, 45 + rnd() * 25, -150 - rnd() * 120); c.scale.setScalar(2 + rnd() * 2.5); scene.add(c); clouds.push(c); }
+    scene.userData.tickers.push((t) => clouds.forEach((c, i) => { c.position.x += 0.02 + i * 0.002; }));
+  }
   return { sun };
 }
 
@@ -548,3 +566,97 @@ export function sortTable() {
   g.userData.bins = [-1.6, -0.55, 0.55, 1.6].map((x, i) => { const b = at(box(0.9, 0.35, 0.9, [0x9aa3ad, 0x3b82f6, 0x2ecc71, C.gold][i]), x, 1.12, 0); g.add(b); return b; });
   return g;
 }
+
+// ---------- Atmosphäre & Leben ----------
+export function cloud() {
+  const g = new THREE.Group(); const m = M(0xffffff, { emissive: 0xffe9d6, emissiveIntensity: 0.35 });
+  for (const [x, y, r] of [[0, 0, 4], [4, 0.6, 3.2], [-4, 0.4, 3], [1.5, 2.2, 3]]) { const b = new THREE.Mesh(new THREE.IcosahedronGeometry(r, 1), m); b.position.set(x, y, 0); b.scale.y = 0.7; g.add(b); }
+  return g;
+}
+export function birds(scene, n = 7, center = [0, 18, -20]) { // V-Formation, fliegt langsam übers Bild
+  const g = new THREE.Group(); const bs = [];
+  for (let i = 0; i < n; i++) { const b = new THREE.Group(); const w1 = box(0.7, 0.05, 0.25, 0x2a2a2a), w2 = box(0.7, 0.05, 0.25, 0x2a2a2a); w1.position.x = -0.35; w2.position.x = 0.35; b.add(w1, w2); b.userData = { w1, w2 }; b.position.set((i - n / 2) * 0.9, -Math.abs(i - n / 2) * 0.4, Math.abs(i - n / 2) * 0.6); g.add(b); bs.push(b); }
+  g.position.set(...center); scene.add(g);
+  scene.userData.tickers.push((t) => { g.position.x = center[0] - 30 + (t * 2.2) % 60; bs.forEach((b, i) => { const f = Math.sin(t * 9 + i) * 0.5; b.userData.w1.rotation.z = f; b.userData.w2.rotation.z = -f; }); });
+  return g;
+}
+export function walkers(scene, n = 4, path = [[-20, 0, -12], [20, 0, -12]], opts = {}) { // Hintergrund-Passanten
+  const shirts = [0x3b82f6, 0xe94b3c, 0x22a06b, 0x9b59b6, 0xff8a1f, 0xf5f5f5];
+  for (let i = 0; i < n; i++) {
+    const p = opts.make ? opts.make(i) : person({ shirt: shirts[i % shirts.length], hat: i % 2 ? 'hair' : 'cap', hair: [0x3a2a1e, 0xd8b26a][i % 2] });
+    scene.add(p); const off = i / n, sp = 0.03 + (i % 3) * 0.008;
+    scene.userData.tickers.push((t) => { const k = (t * sp + off) % 1, dir = i % 2 ? 1 - k : k;
+      p.position.set(path[0][0] + (path[1][0] - path[0][0]) * dir, 0, path[0][2] + (path[1][2] - path[0][2]) * dir + (i % 3) * 1.2);
+      p.rotation.y = (i % 2 ? -1 : 1) * Math.PI / 2; pose.reset(p); pose.walk(p, t + i, 0.8); });
+  }
+}
+export function sway(scene, obj, amp = 0.04, speed = 1.3) { scene.userData.tickers.push((t) => { obj.rotation.z = Math.sin(t * speed + obj.position.x) * amp; }); }
+
+// ---------- 3D-Etiketten (wie "58 km/h" am Auto) ----------
+const TAG_COLORS = { yellow: ['#ffd400', '#111111'], red: ['#e5383b', '#ffffff'], green: ['#2ecc71', '#ffffff'], white: ['#ffffff', '#111111'], dark: ['#1d2230', '#ffffff'], blue: ['#2f6fde', '#ffffff'], orange: ['#ff8a1f', '#ffffff'] };
+export function tag(text, color = 'white', h = 0.55) {
+  const [bg, fg] = TAG_COLORS[color] || TAG_COLORS.white;
+  const cv = document.createElement('canvas'); const g = cv.getContext('2d');
+  const fs = 64; g.font = `800 ${fs}px Inter, "Inter Display", sans-serif`;
+  const w = Math.ceil(g.measureText(text).width) + 56; cv.width = w; cv.height = fs + 40;
+  g.font = `800 ${fs}px Inter, "Inter Display", sans-serif`;
+  const r = 22; g.fillStyle = 'rgba(0,0,0,0.25)'; rr(g, 4, 8, w - 8, fs + 30, r); g.fill();
+  g.fillStyle = bg; rr(g, 0, 2, w - 8, fs + 30, r); g.fill();
+  g.fillStyle = fg; g.textBaseline = 'middle'; g.fillText(text, 24, fs / 2 + 19);
+  const tex = new THREE.CanvasTexture(cv); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4;
+  const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthTest: false, fog: false, toneMapped: false, sizeAttenuation: false }));
+  const sh = Math.min(0.06, h > 0.2 ? 0.036 * (h / 0.55) : h); // feste Bildschirmgröße (Anteil der Bildhöhe) wie UI-Pills
+  sp.scale.set(sh * cv.width / cv.height, sh, 1); sp.renderOrder = 999; sp.userData.keep = true; sp.layers.set(1); return sp;
+}
+function rr(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+export function popIn(sp, k) { const s = Math.min(1, Math.max(0, k)); const e = s < 1 ? 1 - Math.pow(1 - s, 3) * Math.cos(s * 6) : 1; sp.visible = s > 0; const base = sp.userData.base || (sp.userData.base = sp.scale.clone()); sp.scale.set(base.x * e, base.y * e, 1); }
+
+// ---------- Golf-Welt (Upgrade) ----------
+export function clubhouse() {
+  const g = new THREE.Group();
+  g.add(at(box(16, 5, 9, 0xf6f1e7), 0, 2.5, 0));
+  const roof = new THREE.Mesh(new THREE.CylinderGeometry(0.1, 7.2, 3, 4, 1), M(0x2f3a4a)); roof.rotation.y = Math.PI / 4; roof.scale.set(1.62, 1, 0.95); roof.position.y = 6.5; roof.castShadow = true; g.add(roof);
+  for (let i = 0; i < 6; i++) g.add(at(box(1.6, 2.2, 0.1, 0x9fd3ff, { emissive: 0xffd9a0, emissiveIntensity: 0.35 }), -6 + i * 2.4, 2.4, 4.52));
+  g.add(at(box(17, 0.3, 4, 0xb98a5a), 0, 0.15, 6.4)); // Terrasse
+  for (let i = 0; i < 4; i++) { const u = new THREE.Group(); u.add(at(cyl(0.05, 0.05, 2.4, 0xeeeeee, 6), 0, 1.2, 0)); const top = new THREE.Mesh(new THREE.ConeGeometry(1.2, 0.6, 8), M([0x2e7d32, 0xffffff][i % 2])); top.position.y = 2.5; u.add(top); u.add(at(cyl(0.6, 0.6, 0.06, 0xffffff, 10), 0, 0.8, 0)); u.position.set(-6 + i * 4, 0.3, 6.6); g.add(u); }
+  for (const x of [-9.5, 9.5]) { g.add(at(cyl(0.06, 0.06, 7, 0xeeeeee, 6), x, 3.5, 5.5)); g.add(at(box(1.4, 0.9, 0.04, [0x2e7d32, 0xc62828][x > 0 ? 1 : 0]), x + 0.72, 6.4, 5.5)); }
+  const t = tag('GOLFCLUB', 'dark', 1.1); t.position.set(0, 9.2, 4.6); g.add(t);
+  return g;
+}
+export function golfCart(color = 0xffffff) {
+  const g = new THREE.Group();
+  g.add(at(box(1.3, 0.5, 2.2, color), 0, 0.55, 0));
+  g.add(at(box(1.2, 0.5, 0.6, 0x333333), 0, 1.0, -0.2));
+  for (const z of [-0.9, 0.7]) for (const x of [-0.6, 0.6]) g.add(at(box(0.06, 1.1, 0.06, 0x999999), x, 1.4, z));
+  g.add(at(box(1.4, 0.08, 2.0, 0x2e7d32), 0, 2.0, -0.1));
+  for (const [x, z] of [[-0.65, 0.75], [0.65, 0.75], [-0.65, -0.75], [0.65, -0.75]]) { const w = cyl(0.25, 0.25, 0.2, 0x1b1b1b, 10); w.rotation.z = Math.PI / 2; w.position.set(x, 0.25, z); g.add(w); }
+  const bag = at(cyl(0.2, 0.2, 0.9, 0x1d3557, 8), 0, 1.0, -1.15); bag.rotation.x = 0.3; g.add(bag);
+  return g;
+}
+export function bunker(r = 3) { const b = new THREE.Mesh(new THREE.CircleGeometry(r, 18), M(0xf0dfae)); b.rotation.x = -Math.PI / 2; b.position.y = 0.04; b.scale.y = 0.6; b.receiveShadow = true; return b; }
+export function fairway(w = 12, l = 60) { const f = new THREE.Mesh(new THREE.PlaneGeometry(w, l), M(0x63d14a)); f.rotation.x = -Math.PI / 2; f.position.y = 0.02; f.receiveShadow = true; return f; }
+export function duck(color = 0xffffff) { const g = new THREE.Group(); g.add(at(ball(0.3, color, 1), 0, 0.15, 0)); g.children[0].scale.set(1, 0.7, 1.4); g.add(at(ball(0.16, 0x2e7d32, 1), 0, 0.42, 0.3)); g.add(at(box(0.12, 0.05, 0.16, 0xff9800), 0, 0.4, 0.48)); return g; }
+export function fish(color = 0xff8a1f) { const g = new THREE.Group(); const b = ball(0.25, color, 1); b.scale.set(0.5, 0.8, 1.4); g.add(b); const tl = box(0.04, 0.3, 0.25, color); tl.position.z = -0.4; g.add(tl); return g; }
+export function suitGuy() { const p = person({ shirt: 0x1d2230, pants: 0x1d2230, hat: 'hair', hair: 0x8a8a8a }); p.userData.torso.add(at(box(0.12, 0.5, 0.02, C.red), 0, 0.05, 0.19)); return p; }
+export function washer() {
+  const g = new THREE.Group();
+  g.add(at(box(1.6, 1.8, 1.4, 0xf2f2f2), 0, 0.9, 0));
+  const door = new THREE.Mesh(new THREE.CylinderGeometry(0.55, 0.55, 0.1, 24), M(0x9fd3ff, { transparent: true, opacity: 0.7, emissive: 0x6fa8d8, emissiveIntensity: 0.3 })); door.rotation.x = Math.PI / 2; door.position.set(0, 0.85, 0.72); g.add(door);
+  const drum = new THREE.Group(); drum.position.set(0, 0.85, 0.55); for (let i = 0; i < 14; i++) { const b = golfBall(); b.position.set(Math.cos(i) * 0.35, Math.sin(i * 1.7) * 0.35, 0); drum.add(b); } g.add(drum);
+  g.add(at(box(1.4, 0.2, 0.05, 0x333333), 0, 1.65, 0.71));
+  g.userData.drum = drum; return g;
+}
+export function conveyor(len = 6) {
+  const g = new THREE.Group();
+  g.add(at(box(len, 0.15, 1, 0x2b2b2b), 0, 1.0, 0));
+  for (let x = -len / 2; x <= len / 2; x += 1.5) g.add(at(box(0.1, 1.0, 0.9, 0x8a939c), x, 0.5, 0));
+  return g;
+}
+export function shelfShop(rows = 4, cols = 5) { // Pro-Shop-Regal mit Ballschachteln
+  const g = new THREE.Group();
+  g.add(at(box(cols * 0.9 + 0.4, rows * 0.7 + 0.4, 0.6, 0x5b4a3a), 0, (rows * 0.7 + 0.4) / 2, -0.35));
+  const cols3 = [0xffffff, 0xf5c542, 0xe94b3c, 0x2f6fde];
+  for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) g.add(at(box(0.7, 0.45, 0.4, cols3[(r + c) % 4]), (c - (cols - 1) / 2) * 0.9, 0.45 + r * 0.7, -0.05));
+  return g;
+}
+export function calendarPage(year = '2009') { const t = tag(year, 'red', 0.9); return t; }

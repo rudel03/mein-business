@@ -1,0 +1,122 @@
+{
+ "scene": "golftaucher",
+ "voice": {
+  "tempo": 1.12,
+  "tight": 0.25
+ },
+ "beats": [
+  {
+   "shot": [
+    "jump",
+    "emerge"
+   ],
+   "text": "Digga, dieser Typ springt in dreckige Teiche und holt da verfickt viel Geld raus. Kein Witz.",
+   "labels": []
+  },
+  {
+   "shot": "flyover",
+   "text": "Golfball-Taucher. Klingt scheiß bescheuert, ist aber safe eins der krassesten Geschäfte überhaupt.",
+   "labels": []
+  },
+  {
+   "shot": "teeLine",
+   "text": "Pass auf, ganz easy. Golfer hauen ihre Bälle ständig ins Wasser und keiner hat Bock da reinzuspringen.",
+   "labels": []
+  },
+  {
+   "shot": [
+    "proShop",
+    "mud"
+   ],
+   "text": "Ein neuer Ball kostet im Schnitt so 4 Euro. Und da unten liegen tausende davon einfach so im Schlamm.",
+   "labels": []
+  },
+  {
+   "shot": [
+    "haul",
+    "counter"
+   ],
+   "text": "Jetzt rechnen wir mal. An nem guten Tag holt ein Taucher so 2.000 Bälle raus. Mal 30 Cent macht das 600 Euro. An einem verfickten Tag.",
+   "labels": []
+  },
+  {
+   "shot": "terrace",
+   "text": "Aber die Bälle gehören dem Golfclub. Der will pro Ball so 8 bis 10 Cent. Bei 2.000 Bällen sind das bis zu 200 Euro.",
+   "labels": []
+  },
+  {
+   "shot": "van",
+   "text": "Bleiben also rund 400 Euro übrig. Davon gehen noch Ausrüstung, Waschen und Versand weg. Der Rest gehört dir.",
+   "labels": []
+  },
+  {
+   "shot": "managerParty",
+   "text": "Und das Krasseste? Der Club freut sich sogar. Der kriegt Geld für Zeug das sonst einfach in seinem Teich vergammelt.",
+   "labels": []
+  },
+  {
+   "shot": [
+    "washer",
+    "grades"
+   ],
+   "text": "Dann wird sortiert. Die Bälle kriegen Noten wie Diamanten bis vierfach A. Je geiler der Zustand desto teurer. Bis zu 2,50 Euro pro Ball.",
+   "labels": []
+  },
+  {
+   "shot": "belt",
+   "text": "Und der fetteste Trick? Teure Markenbälle werden einzeln rausgesucht und teurer verkauft. Der billige Scheiß geht im Großpack weg.",
+   "labels": []
+  },
+  {
+   "shot": [
+    "buyLake",
+    "stopJump"
+   ],
+   "text": "Pro-Tipp. Wenn du golfst kauf gebrauchte Seebälle. Die kosten nur nen Bruchteil vom Neupreis. Aber spring nicht einfach selbst rein. Ohne Erlaubnis vom Club gibt's scheiß Ärger.",
+   "labels": []
+  },
+  {
+   "shot": "pull",
+   "text": "Und jetzt das Beste. Eines Tages zieht er nicht nur Bälle aus dem Teich sondern nen Golfer.",
+   "labels": []
+  },
+  {
+   "shot": [
+    "since2009",
+    "handback"
+   ],
+   "text": "Der sucht da unten seit 2009 seinen verfickten Ball. Er verkauft ihn ihm zurück. Für 2,50 Euro. Plus 10 Cent Ablöse an den Club.",
+   "labels": []
+  }
+ ],
+ "highlight": [
+  "Digga,",
+  "Bruder.",
+  "verfickt",
+  "verfickten",
+  "scheiß",
+  "Scheiß",
+  "geiler",
+  "krassesten",
+  "lost.",
+  "fetteste",
+  "Golfer.",
+  "Diamanten,",
+  "Schlamm.",
+  "Krasseste?",
+  "Trick?",
+  "Pro-Tipp.",
+  "Beste."
+ ],
+ "source": "Quellen: Golfforscher · Cursiv · Remszeitung · exklusiv-golfen · Händlerangebote (Lakeballs AAAA)",
+ "source_beats": [
+  4,
+  5,
+  6,
+  7,
+  9
+ ],
+ "out": "../../ausgabe/009-golfball-taucher-v3.mp4",
+ "audio_full": "audio/full_v2.mp3",
+ "series": "Geschäftsmodelle, auf die keiner kommt"
+}

@@ -152,6 +152,8 @@ def main(cfg_path):
                       f"{{\\pos({lab.get('x', W // 2)},{lab.get('y', 560)})\\3c{boxc}\\c{txtc}\\fscx60\\fscy60\\t(0,120,\\fscx100\\fscy100)}}{esc(lab['text'])}")
         if cfg.get("source") and bi in cfg.get("source_beats", []):
             ev.append(f"Dialogue: 2,{ts(b['start'])},{ts(b['start'] + b['dur'])},Src,,0,0,0,,{esc(cfg['source'])}")
+    if cfg.get("series"):  # Serien-Zeile oben links (wie bei hochwertigen Erklär-Kanälen)
+        ev.append(f"Dialogue: 3,{ts(0)},{ts(total)},Head,,0,0,0,,{{\\c&H001F8AFF&}}●{{\\c&HFFFFFF&}}  {esc(cfg['series'].upper())}")
     ass = os.path.join(tmp, "subs.ass")
     with open(ass, "w", encoding="utf-8") as f:
         f.write(f"""[Script Info]
@@ -164,6 +166,7 @@ WrapStyle: 2
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
 Style: Word,{FONT},120,&H00FFFFFF,&H00FFFFFF,&H00000000,&H96000000,-1,0,0,0,100,100,1,0,1,9,4,5,40,40,0,1
 Style: Pill,{FONT},54,&H00101010,&H00FFFFFF,&H0000D8FF,&H00000000,-1,0,0,0,100,100,1,0,3,16,0,5,40,40,0,1
+Style: Head,Inter Display SemiBold,34,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,0,0,0,0,100,100,3,0,1,0,2,7,60,60,150,1
 Style: Src,Inter Display SemiBold,30,&H00FFFFFF,&H00FFFFFF,&H00000000,&H78000000,0,0,0,0,100,100,0,0,1,2,1,2,40,40,70,1
 
 [Events]

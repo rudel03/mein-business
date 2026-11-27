@@ -1,11 +1,40 @@
 <!doctype html>
 <html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000;overflow:hidden}</style>
-<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js"}}</script>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script>
 </head><body>
 <script type="module">
 import * as THREE from 'three';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { setupWorld } from './world.js';
-let R, cam, cur = -1, scene, ctx, mod, plan;
+
+// Abschluss-Look: Vignette + leichte Farbwärme + feines Korn (wirkt hochwertiger, weniger "Computer")
+const GradeShader = {
+  uniforms: { tDiffuse: { value: null }, time: { value: 0 }, vig: { value: 0.32 }, warm: { value: 0.04 } },
+  vertexShader: `varying vec2 vUv; void main(){ vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+  fragmentShader: `uniform sampler2D tDiffuse; uniform float time, vig, warm; varying vec2 vUv;
+    float rnd(vec2 p){ return fract(sin(dot(p, vec2(12.9898,78.233)) + time) * 43758.5453); }
+    void main(){ vec4 c = texture2D(tDiffuse, vUv);
+      c.rgb = mix(c.rgb, c.rgb * vec3(1.0 + warm, 1.0, 1.0 - warm), 1.0);
+      float l = dot(c.rgb, vec3(0.299,0.587,0.114)); c.rgb = mix(vec3(l), c.rgb, 1.08);
+      vec2 d = vUv - 0.5; c.rgb *= 1.0 - vig * dot(d, d) * 2.2;
+      c.rgb += (rnd(vUv * 900.0) - 0.5) * 0.018;
+      gl_FragColor = c; }`,
+};
+
+// entfernt ungültige Pixel (NaN/Inf), bevor der Glow sie über das ganze Bild verschmiert
+const CleanShader = {
+  uniforms: { tDiffuse: { value: null } },
+  vertexShader: `varying vec2 vUv; void main(){ vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+  fragmentShader: `uniform sampler2D tDiffuse; varying vec2 vUv;
+    void main(){ vec4 c = texture2D(tDiffuse, vUv);
+      if (c.r != c.r || c.g != c.g || c.b != c.b || c.a != c.a) c = vec4(0.0, 0.0, 0.0, 1.0);
+      gl_FragColor = clamp(c, 0.0, 8.0); }`,
+};
+let R, cam, cur = -1, scene, ctx, mod, plan, composer, renderPass, bloom, grade;
 function disposeScene(s) { s?.traverse(o => { o.geometry?.dispose?.(); }); }
 window.init = async (p) => {
   plan = p;
@@ -14,8 +43,17 @@ window.init = async (p) => {
   R.setPixelRatio(1); R.setSize(p.W, p.H);
   R.shadowMap.enabled = true; R.shadowMap.type = THREE.PCFSoftShadowMap;
   R.outputColorSpace = THREE.SRGBColorSpace;
+  R.toneMapping = THREE.ACESFilmicToneMapping; R.toneMappingExposure = (mod.fx && mod.fx.exposure) || 1.05;
   document.body.appendChild(R.domElement);
-  cam = new THREE.PerspectiveCamera(p.fov || 55, p.W / p.H, 0.1, 400);
+  cam = new THREE.PerspectiveCamera(p.fov || 55, p.W / p.H, 0.1, 600);
+  if (p.hq !== false) {
+    composer = new EffectComposer(R);
+    renderPass = new RenderPass(new THREE.Scene(), cam); composer.addPass(renderPass);
+    composer.addPass(new ShaderPass(CleanShader));
+    bloom = new UnrealBloomPass(new THREE.Vector2(p.W / 2, p.H / 2), 0.32, 0.45, 0.93); composer.addPass(bloom);
+    composer.addPass(new OutputPass());
+    grade = new ShaderPass(GradeShader); composer.addPass(grade);
+  }
   return Object.keys(mod.shots);
 };
 window.frame = (t) => {
@@ -27,10 +65,18 @@ window.frame = (t) => {
     scene = new THREE.Scene(); ctx = {};
     setupWorld(scene, R, { sky: (mod.sky || {})[s.name] || 'sunset' });
     mod.shots[s.name].setup(scene, ctx);
+    if (renderPass) renderPass.scene = scene;
     cur = i;
   }
-  mod.shots[s.name].update(Math.min(t - s.start, s.dur), s.dur, cam, ctx);
-  R.render(scene, cam);
+  const lt = Math.min(t - s.start, s.dur);
+  scene.userData.time = t;
+  (scene.userData.tickers || []).forEach(f => f(t, lt));   // Hintergrund-Leben (Vögel, Wolken, Leute …)
+  mod.shots[s.name].update(lt, s.dur, cam, ctx);
+  cam.layers.set(0);
+  if (composer) { grade.uniforms.time.value = t; composer.render(); } else R.render(scene, cam);
+  // Etiketten (Layer 1) danach scharf obendrauf zeichnen – kein Glow, keine Farbverfälschung
+  R.autoClear = false; cam.layers.set(1); const bg = scene.background, fog = scene.fog; scene.background = null; scene.fog = null;
+  R.render(scene, cam); scene.background = bg; scene.fog = fog; cam.layers.set(0); R.autoClear = true;
   return R.domElement.toDataURL('image/jpeg', 0.92);
 };
 </script></body></html>
