@@ -14,6 +14,11 @@ Jedes neue Video wird **genau so** gemacht. Abweichungen nur, wenn der Inhaber e
 > - **Stärkere Hooks:** erster Satz = überraschende Zahl oder Behauptung + Neugier-Lücke, die der Zuschauer sofort aufgelöst haben will. Formeln: „Ein Typ in Deutschland soll 15.000 X besitzen. Und du hast dich nie gefragt, warum.“ · „Dieses Teil an jeder Hauswand bringt mehr Geld als …“ · „Leute zahlen jeden Monat dafür, dass …“. Kein „Heute erkläre ich…“, kein Name des Geschäfts als erstes Wort.
 > - **Kein Gelaber, keine langweiligen Infos:** jeder Satz muss entweder eine überraschende Zahl, einen Aha-Moment oder einen Lacher bringen. Weg mit Aufzählungen ohne Zahl, Wiederholungen und Allgemeinplätzen.
 > - Referenz: `skripte/010-kaugummiautomaten/` (Hook, 10 Beats, ~65 s).
+> **Humor & Themenwahl (Feedback 27.11.2026 – Kaugummiautomaten-Video „nicht gut“):**
+> - **Interessantes Geschäft wählen**, das schon beim Hören Bilder und Lacher erzeugt (Menschen, Situationen, Chaos), nicht nur Zahlen/Maschinen. Gut: Mietweihnachtsmann, Golfball-Taucher. Schwach: reine Automaten-/Zahlen-Themen.
+> - **Humor in JEDEM Satz/jeder Szene**, nicht nur im Plotwist: Running Gags (z. B. der Bart: aus dem Internet → fällt ab → Kind reißt ihn ab → festkleben), Erwartungsbruch („kommt nicht vom Nordpol, sondern aus Wohnung 3B“, „Rentiere? Nö. E-Roller.“), konkrete Witzfiguren („Onkel Jürgen mit drei Glühwein“), Risiko-/Chaos-Listen mit Bildgag pro Punkt.
+> - Bild-Gags gehören dazu: Dinge fallen ab, Tiere stören, Leute wollen Selfies, Countdown-Uhr, absurde Vergleiche als Etikett.
+> - Referenz Humor: `skripte/011-mietweihnachtsmann/`.
 > - Referenz für den Feinschliff: `skripte/009-golfball-taucher/video_v3.json` + Szenen `engine/scenes/golftaucher.js` (19 einzigartige Einstellungen).
 
 ---

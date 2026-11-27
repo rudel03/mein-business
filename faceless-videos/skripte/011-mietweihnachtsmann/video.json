@@ -1,0 +1,23 @@
+{
+ "scene": "weihnachtsmann",
+ "audio_full": "audio/full.mp3",
+ "voice": {"tempo": 1.2, "tight": 0.22},
+ "series": "Geschäftsmodelle, auf die keiner kommt",
+ "beats": [
+  {"shot": ["countCash", "beardBox"], "text": "Dieser Student macht an Heiligabend in ein paar Stunden bis zu 800 Euro. Mit nem Bart aus dem Internet."},
+  {"shot": "mirror", "text": "Mietweihnachtsmann. Und bevor du lachst: Das ist ein knallhartes Geschäft."},
+  {"shot": ["doorbell", "livingroom"], "text": "Pass auf. Ein Besuch kostet die Eltern so 80 bis 110 Euro. Dauer? 15 Minuten. Ho ho ho, Geschenke, Abflug."},
+  {"shot": "stopwatch", "text": "Rechnen wir mal. 90 Euro für 15 Minuten. Das ist ein Stundenlohn von 360 Euro. Für ein verficktes Ho ho ho, Bruder."},
+  {"shot": ["sneakGifts", "apartment"], "text": "Und die Geschenke? Bringt er nicht mal selber. Die stellen die Eltern heimlich vor die Tür. Er tut nur so, als käm er vom Nordpol. Kommt aber aus Wohnung 3B."},
+  {"shot": "route", "text": "An Heiligabend schafft einer so acht Familien hintereinander. Rentiere? Nö. E-Roller."},
+  {"shot": ["dogBite", "beardPull", "uncle"], "text": "Klar, der Job hat Risiken. Hunde, die deinen Mantel fressen. Kinder, die an deinem scheiß Bart ziehen. Und Onkel Jürgen mit drei Glühwein, der unbedingt ein Selfie will."},
+  {"shot": "agency", "text": "Und das Krasseste? Du brauchst null Ausbildung. Bart, Mantel, tiefe Stimme. Fertig. Die Agenturen suchen jedes Jahr Leute."},
+  {"shot": "tipGlue", "text": "Pro-Tipp. Wenn du das machen willst, bewirb dich jetzt. Im Dezember ist alles weg. Und kleb den Bart fest. Ernsthaft."},
+  {"shot": "midnight", "text": "Und jetzt das Beste. Um Mitternacht klingelt es bei ihm. Der echte Weihnachtsmann steht vor der Tür."},
+  {"shot": "intern", "text": "Arbeitslos. Er fragt, ob er bei ihm anfangen darf. Als Praktikant. Für Mindestlohn."}
+ ],
+ "highlight": ["Bruder.", "verficktes", "scheiß", "Krasseste?", "Pro-Tipp.", "Beste.", "Ho", "ho,", "Abflug.", "E-Roller.", "3B.", "Ernsthaft.", "Praktikant.", "Mindestlohn.", "Jürgen", "Glühwein,"],
+ "source": "Quellen: weihnachtszeit-hamburg.de 2026 · news-on-tour.de 2025 · Stellenanzeigen (z. B. STAV Dresden)",
+ "source_beats": [1, 3, 4, 6, 8],
+ "out": "../../ausgabe/011-mietweihnachtsmann.mp4"
+}

@@ -35,7 +35,13 @@ const CleanShader = {
       gl_FragColor = clamp(c, 0.0, 8.0); }`,
 };
 let R, cam, cur = -1, scene, ctx, mod, plan, composer, renderPass, bloom, grade;
-function disposeScene(s) { s?.traverse(o => { o.geometry?.dispose?.(); }); }
+function disposeScene(s) { // alles freigeben (Formen, Materialien, Texturen) – sonst läuft bei langen Videos der Grafikspeicher voll → schwarze Bilder
+  if (!s) return;
+  s.traverse(o => { o.geometry?.dispose?.(); const ms = Array.isArray(o.material) ? o.material : (o.material ? [o.material] : []);
+    ms.forEach(m => { for (const k of ['map', 'envMap', 'emissiveMap']) m[k]?.dispose?.(); m.dispose?.(); }); });
+  if (s.background && s.background.isTexture) s.background.dispose();
+  R?.renderLists?.dispose?.();
+}
 window.init = async (p) => {
   plan = p;
   mod = await import(`./scenes/${p.scene}.js`);

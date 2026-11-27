@@ -47,14 +47,16 @@ export function setupWorld(scene, renderer, { sky = 'sunset' } = {}) {
   scene.background = tex;
   const fogCol = { underwater: 0x1d6f8c, indoor: 0xe8e6e0, night: 0x2a3570, day: 0xdfe7ee }[sky] || 0xf0b892;
   scene.fog = sky === 'underwater' ? new THREE.Fog(fogCol, 4, 26) : new THREE.Fog(fogCol, 45, sky === 'indoor' ? 190 : 230);
-  scene.add(new THREE.HemisphereLight(0xfff1dc, 0x6a7a5a, sky === 'indoor' ? 2.2 : 1.9));
-  const sun = new THREE.DirectionalLight(sky === 'indoor' ? 0xffffff : 0xffd2a0, sky === 'indoor' ? 1.8 : 2.8);
+  scene.add(sky === 'night' ? new THREE.HemisphereLight(0x7f8fd6, 0x2a2a3a, 1.3) : new THREE.HemisphereLight(0xfff1dc, 0x6a7a5a, sky === 'indoor' ? 2.2 : 1.9));
+  const sun = new THREE.DirectionalLight(sky === 'night' ? 0x9fb4ff : sky === 'indoor' ? 0xffffff : 0xffd2a0, sky === 'night' ? 1.0 : sky === 'indoor' ? 1.8 : 2.8);
   sun.position.set(-30, 40, 25); sun.castShadow = true;
   sun.shadow.mapSize.set(1024, 1024);
   Object.assign(sun.shadow.camera, { left: -45, right: 45, top: 45, bottom: -45, near: 1, far: 140 });
   sun.shadow.bias = -0.0005;
   scene.add(sun); scene.add(sun.target);
   scene.userData.tickers = [];
+  if (sky === 'night') { const sg = new THREE.BufferGeometry(); const sp = []; for (let i = 0; i < 500; i++) { const th = Math.random() * Math.PI * 2, ph = Math.random() * 1.2; sp.push(Math.cos(th) * Math.cos(ph) * 300, 40 + Math.sin(ph) * 260, Math.sin(th) * Math.cos(ph) * 300); }
+    sg.setAttribute('position', new THREE.Float32BufferAttribute(sp, 3)); scene.add(new THREE.Points(sg, new THREE.PointsMaterial({ color: 0xffffff, size: 1.2, sizeAttenuation: false, fog: false }))); }
   if (sky === 'sunset' || sky === 'day') { // Sonnenscheibe + Horizont-Landschaft + Wolken -> Tiefe & Atmosphäre
     const disc = new THREE.Mesh(new THREE.CircleGeometry(16, 32), new THREE.MeshBasicMaterial({ color: sky === 'day' ? 0xfffbe8 : 0xfff0c8, fog: false }));
     disc.position.set(-120, 38, -330); disc.lookAt(0, 0, 0); scene.add(disc);
@@ -708,3 +710,43 @@ export function bed() { const g = new THREE.Group(); g.add(at(box(2.0, 0.45, 3.0
 export function counterDesk() { const g = new THREE.Group(); g.add(at(box(3.4, 1.1, 0.8, 0x9aa3ad), 0, 0.55, 0)); g.add(at(box(3.6, 0.08, 1.0, 0xd8dde3), 0, 1.14, 0)); g.add(at(box(3.4, 1.0, 0.05, 0xbfe3ff, { transparent: true, opacity: 0.35 }), 0, 1.7, -0.1)); return g; }
 export function stamp() { const g = new THREE.Group(); g.add(at(cyl(0.08, 0.1, 0.3, 0x6d4c41, 8), 0, 0.3, 0)); g.add(at(box(0.3, 0.08, 0.2, C.red), 0, 0.1, 0)); return g; }
 export function throne() { const g = new THREE.Group(); g.add(at(box(1.6, 0.6, 1.4, C.gold, { emissive: 0x6b4a00, emissiveIntensity: 0.3 }), 0, 0.3, 0)); g.add(at(box(1.6, 2.4, 0.3, C.gold, { emissive: 0x6b4a00, emissiveIntensity: 0.3 }), 0, 1.2, -0.6)); g.add(at(box(1.7, 0.2, 0.2, 0xc62828), 0, 2.4, -0.6)); return g; }
+
+// ---------- Weihnachts-Welt (011) ----------
+export function snowGround(size = 600) { const g = new THREE.Mesh(new THREE.PlaneGeometry(size, size), M(0xf2f6fb)); g.rotation.x = -Math.PI / 2; g.receiveShadow = true; return g; }
+export function snowfall(scene, n = 400, area = 30, center = [0, 0, 0]) {
+  const geo = new THREE.BufferGeometry(); const pos = new Float32Array(n * 3); let r = 9; const rnd = () => (r = (r * 9301 + 49297) % 233280) / 233280;
+  for (let i = 0; i < n; i++) { pos[i * 3] = center[0] + (rnd() - 0.5) * area; pos[i * 3 + 1] = rnd() * 14; pos[i * 3 + 2] = center[2] + (rnd() - 0.5) * area; }
+  geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+  const pts = new THREE.Points(geo, new THREE.PointsMaterial({ color: 0xffffff, size: 0.12, transparent: true, opacity: 0.9 })); scene.add(pts);
+  const base = pos.slice(); scene.userData.tickers.push((t) => { for (let i = 0; i < n; i++) { pos[i * 3 + 1] = ((base[i * 3 + 1] - t * 1.2) % 14 + 14) % 14; pos[i * 3] = base[i * 3] + Math.sin(t + i) * 0.3; } geo.attributes.position.needsUpdate = true; });
+  return pts;
+}
+export function lightString(len = 6, colors = [0xff3b3b, 0xffd400, 0x2ecc71, 0x3b82f6]) { const g = new THREE.Group(); for (let i = 0; i < len * 3; i++) { const b = new THREE.Mesh(new THREE.SphereGeometry(0.07, 6, 4), new THREE.MeshBasicMaterial({ color: colors[i % colors.length] })); b.position.set(-len / 2 + i / 3, -Math.abs(Math.sin(i * 0.5)) * 0.25, 0); g.add(b); } return g; }
+export function xmasHouse(wall = 0xf4efe6) { const h = house(); h.children[0].material = M(wall); const ls = lightString(8); ls.position.set(0, 6.1, 3.6); h.add(ls); const ls2 = lightString(7, [0xffe08a]); ls2.position.set(0, 2.9, 3.6); h.add(ls2);
+  const wreath = new THREE.Mesh(new THREE.TorusGeometry(0.35, 0.12, 6, 14), M(0x2e7d32)); wreath.position.set(-1.5, 1.9, 3.62); h.add(wreath); return h; }
+export function xmasTree(s = 1) { const g = new THREE.Group(); g.add(at(cyl(0.15 * s, 0.2 * s, 0.6 * s, C.trunk, 6), 0, 0.3 * s, 0));
+  for (let i = 0; i < 3; i++) { const c = new THREE.Mesh(new THREE.ConeGeometry((1.1 - i * 0.3) * s, 1.2 * s, 8), M(0x2e7d32)); c.position.y = (0.9 + i * 0.7) * s; c.castShadow = true; g.add(c); }
+  const star = new THREE.Mesh(new THREE.OctahedronGeometry(0.22 * s), new THREE.MeshBasicMaterial({ color: 0xffe066 })); star.position.y = 2.7 * s; g.add(star);
+  for (let i = 0; i < 18; i++) { const a = i * 2.4, h = 0.7 + (i / 18) * 1.7; const rr = (1.0 - (h - 0.6) / 2.4) * s; const b = new THREE.Mesh(new THREE.SphereGeometry(0.06 * s, 6, 4), new THREE.MeshBasicMaterial({ color: [0xff3b3b, 0xffd400, 0x3b82f6, 0xffffff][i % 4] })); b.position.set(Math.cos(a) * rr, h * s, Math.sin(a) * rr); g.add(b); }
+  return g; }
+export function present(color = 0xe53935, ribbon = 0xffd400, s = 0.5) { const g = new THREE.Group(); g.add(at(box(s, s * 0.8, s, color), 0, s * 0.4, 0)); g.add(at(box(s + 0.02, s * 0.82, s * 0.15, ribbon), 0, s * 0.4, 0)); g.add(at(box(s * 0.15, s * 0.82, s + 0.02, ribbon), 0, s * 0.4, 0)); return g; }
+export function santa({ real = false } = {}) {
+  const p = person({ shirt: 0xc62828, pants: 0xc62828, skin: 0xffd2b0, hat: 'hair', hair: 0xffffff });
+  const u = p.userData, h = u.head;
+  const hat = new THREE.Group(); const cone = new THREE.Mesh(new THREE.ConeGeometry(0.28, 0.6, 10), M(0xc62828)); cone.position.y = 0.55; cone.rotation.z = -0.3; hat.add(cone); hat.add(at(cyl(0.3, 0.3, 0.1, 0xffffff, 12), 0, 0.3, 0)); hat.add(at(ball(0.08, 0xffffff, 1), 0.18, 0.8, 0)); h.add(hat);
+  const beard = new THREE.Group(); const b1 = box(0.42, 0.42, 0.14, 0xffffff); b1.position.set(0, -0.08, 0.2); beard.add(b1); beard.add(at(box(0.34, 0.06, 0.06, 0xffffff), 0, 0.06, 0.27)); h.add(beard); u.beard = beard;
+  u.torso.add(at(box(0.66, 0.12, 0.4, 0x111111), 0, -0.1, 0)); u.torso.add(at(box(0.14, 0.1, 0.42, 0xd4af37), 0, -0.1, 0.01));
+  u.torso.add(at(box(0.12, 0.7, 0.38, 0xffffff), 0, 0.02, 0.01));
+  for (const l of [u.legL, u.legR]) l.add(at(box(0.25, 0.25, 0.36, 0x111111), 0, -0.82, 0.03));
+  if (real) { p.scale.setScalar(1.25); const aura = new THREE.Mesh(new THREE.SphereGeometry(0.9, 16, 12), new THREE.MeshBasicMaterial({ color: 0xffd27a, transparent: true, opacity: 0.12, depthWrite: false })); aura.position.y = 1.2; p.add(aura); }
+  return p;
+}
+export function student() { return person({ shirt: 0x6d6d6d, pants: 0x2f3b55, hat: 'hair', hair: 0x3a2a1e }); }
+export function eScooter() { const g = new THREE.Group(); g.add(at(box(0.25, 0.06, 1.0, 0x222222), 0, 0.18, 0)); for (const z of [-0.45, 0.45]) { const w = cyl(0.13, 0.13, 0.06, 0x111111, 10); w.rotation.z = Math.PI / 2; w.position.set(0, 0.13, z); g.add(w); }
+  g.add(at(cyl(0.025, 0.025, 1.0, 0x9aa3ad, 6), 0, 0.68, 0.45)); g.add(at(box(0.5, 0.04, 0.04, 0x222222), 0, 1.18, 0.45)); const lamp = new THREE.Mesh(new THREE.SphereGeometry(0.05, 6, 4), new THREE.MeshBasicMaterial({ color: 0xffffff })); lamp.position.set(0, 1.0, 0.5); g.add(lamp); return g; }
+export function dog(color = 0x8d6e63) { const g = new THREE.Group(); g.add(at(box(0.35, 0.3, 0.8, color), 0, 0.45, 0)); const head = at(box(0.3, 0.3, 0.35, color), 0, 0.65, 0.5); g.add(head); g.add(at(box(0.08, 0.15, 0.08, 0x5d4037), -0.12, 0.85, 0.45), at(box(0.08, 0.15, 0.08, 0x5d4037), 0.12, 0.85, 0.45));
+  for (const [x, z] of [[-0.12, 0.3], [0.12, 0.3], [-0.12, -0.3], [0.12, -0.3]]) g.add(at(box(0.08, 0.3, 0.08, color), x, 0.15, z)); const tail = at(box(0.05, 0.05, 0.3, color), 0, 0.6, -0.5); g.add(tail); g.userData = { head, tail }; return g; }
+export function mug(color = 0xc62828) { const g = new THREE.Group(); g.add(at(cyl(0.08, 0.07, 0.18, color, 10), 0, 0.09, 0)); const h = new THREE.Mesh(new THREE.TorusGeometry(0.05, 0.015, 4, 8), M(color)); h.position.set(0.09, 0.1, 0); g.add(h); return g; }
+export function mirror() { const g = new THREE.Group(); g.add(at(box(1.0, 1.6, 0.08, 0x8a5a33), 0, 1.6, 0)); g.add(at(box(0.85, 1.45, 0.02, 0xcfe8ff, { emissive: 0x9fc6e8, emissiveIntensity: 0.4 }), 0, 1.6, 0.05)); return g; }
+export function sofaRoom(scene) { scene.add(ground(200, 0x9a9a9a)); scene.add(room(10, 8, 3.2, 0xf6e1c3, 0x8d6e63)); const s = sofa(0x8e2424); s.position.set(-2, 0, -2.6); scene.add(s);
+  const t = xmasTree(1.2); t.position.set(2.6, 0, -2.6); scene.add(t); for (let i = 0; i < 4; i++) { const pr = present([0xe53935, 0x1e88e5, 0x43a047, 0xfdd835][i], 0xffffff, 0.4); pr.position.set(2 + (i % 2) * 0.6, 0, -1.8 + Math.floor(i / 2) * 0.5); scene.add(pr); } }
