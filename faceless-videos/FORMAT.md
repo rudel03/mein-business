@@ -5,10 +5,14 @@
 
 Jedes neue Video wird **genau so** gemacht. Abweichungen nur, wenn der Inhaber es ausdrücklich sagt.
 
+> ## 🔒 STIMM-REZEPT EINGEFROREN (27.11.2026) – NUR MIT AUSDRÜCKLICHEM OK DES INHABERS ÄNDERN
+> Exakt wie im freigegebenen Referenzvideo `005-umzug-v2`: **Orion** (`ed69c516-92d2-4b30-a967-617737a342e5`), **jeder Satz/Beat als eigener Sprachauftrag** (`generate_audio_batch`, Beat-Feld `audio`), in video.json **`"voice": {"tempo": 1.15, "tight": true}`**, kein `audio_full`, kein `pitch`.
+> Der Versuch „ganzer Text in einem Stück“ (`audio_full`, tempo 1.12–1.2, tight 0.22–0.25; Videos 009 v2/v3, 010, 011 v1) klang laut Inhaber „scheiße“ → **nicht mehr verwenden**. Gegen Stockpausen nur am TEXT arbeiten (kurze Sätze, wenig Kommas), nie an der Stimmverarbeitung.
+>
 > **Feinschliff 26.11.2026 (gilt ab sofort, Vorrang vor dem Muster unten):**
 > - **Am Anfang NICHT ankündigen, dass das Ende lost/absurd ist** – Baustein 2 endet ohne Teaser („Golfball-Taucher. Klingt scheiß bescheuert, ist aber safe eins der krassesten Geschäfte überhaupt.“).
 > - **„Digga“ höchstens 1× pro Video** (am besten im Hook). Sonst „Bruder“, „Alter“, „safe“, „krass“ und die Kraftausdrücke.
-> - **Geschmeidig sprechen:** ganzer Text in **einem** Sprach-Auftrag (`audio_full`), keine Einzelzeilen; Pausen nur sanft begrenzen (`"tight": 0.25`), Tempo 1.12. Weniger Kommas/Doppelpunkte im Sprechtext („Jetzt rechnen wir mal.“ statt „Jetzt rechnen wir, Digga:“), Rückfragen mit „?“ („Und das Krasseste?“).
+> - ~~Geschmeidig sprechen: ganzer Text in einem Sprach-Auftrag (`audio_full`)~~ → **ZURÜCKGENOMMEN** (siehe 🔒 oben). Weniger Kommas/Doppelpunkte im Sprechtext („Jetzt rechnen wir mal.“ statt „Jetzt rechnen wir, Digga:“), Rückfragen mit „?“ („Und das Krasseste?“).
 > **Länge & Tempo (Feedback 27.11.2026, gilt ab sofort):**
 > - **Ziel 60–70 Sekunden** („nur bisschen über eine Minute“) → **ca. 190–210 Wörter, 10 Sätze/Beats** statt 13. Bausteine zusammenfassen: Preis+Marge in einen Satz, Kosten+Ehrlichkeit in einen Satz.
 > - **Stärkere Hooks:** erster Satz = überraschende Zahl oder Behauptung + Neugier-Lücke, die der Zuschauer sofort aufgelöst haben will. Formeln: „Ein Typ in Deutschland soll 15.000 X besitzen. Und du hast dich nie gefragt, warum.“ · „Dieses Teil an jeder Hauswand bringt mehr Geld als …“ · „Leute zahlen jeden Monat dafür, dass …“. Kein „Heute erkläre ich…“, kein Name des Geschäfts als erstes Wort.
@@ -72,10 +76,10 @@ Weitere freigegebene Plotwist-Ideen: Callcenter ruft sich selbst an und wird „
 
 ## 4. Stimme (freigegeben)
 - ElevenLabs **„Orion“** über Higgsfield: `text2speech_v2`, `variant: "elevenlabs"`, `voice_type: "preset"`, `voice_id: "ed69c516-92d2-4b30-a967-617737a342e5"`.
-- In `video.json`: **`"audio_full": "audio/full.mp3"`** (ganzer Text in einem Stück) + `"voice": {"tempo": 1.12, "tight": 0.25}`. Das Programm schneidet per Whisper automatisch an den Beat-Grenzen. (Alt: Einzelzeilen + `tight: true` → abgehackte Pausen, nicht mehr nutzen.)
+- In `video.json`: pro Beat `"audio": "audio/NN.mp3"` + **`"voice": {"tempo": 1.15, "tight": true}`** (🔒 eingefroren, siehe oben).
 - **Kein `pitch`** (Tonhöhen-Filter klingt „gedoppelt“ – vom Inhaber abgelehnt).
 - Im Sprech-Prompt Zahlen **ausschreiben** („zweiundvierzig Euro“, „drei komma fünf Tonnen“), im Untertitel-Text (`text`) als Ziffern.
-- Ein Auftrag pro Video (≈ 1.300 Zeichen gehen problemlos); danach Vollständigkeit per Whisper prüfen.
+- Ein Auftrag pro Satz/Beat, max. 6 gleichzeitig; ≈ 0,45 Credits pro Zeile.
 
 ## 5. Faktencheck (Pflicht vor dem Sprechen)
 - Jede Zahl mit Quelle in `skripte/<nr>-<thema>/skript.md` (Link + Stand/Jahr).
@@ -86,7 +90,7 @@ Weitere freigegebene Plotwist-Ideen: Callcenter ruft sich selbst an und wird „
 ## 6. Produktion (Ablauf)
 1. Thema aus `skripte/themen.md` wählen, recherchieren, Skript nach Abschnitt 2 schreiben.
 2. `skripte/<nr>-<thema>/video.json` anlegen (Vorlage: `skripte/005-umzug/video_v2.json`) + `skript.md` mit Quellen.
-3. Ganzen Sprechtext (Zahlen ausgeschrieben) in **einem** `generate_audio`-Auftrag mit Orion erzeugen → `audio/full.mp3`; Vollständigkeit per Whisper prüfen.
+3. Jeden Satz/Beat einzeln mit Orion erzeugen (`generate_audio_batch`, Zahlen ausgeschrieben) → `audio/01.mp3 …`.
 4. Szenen: vorhandene Einstellungen aus `engine/scenes/*.js` und `_common.js` wiederverwenden (towersShot, tipShot …), neue nur bei Bedarf. Vorschau: `node engine/render3d.mjs plan.json st --stills 1,4,7`.
 5. `python3 -I pipeline/make_video.py skripte/<nr>-<thema>/video.json` (≈ 10 min). Neue Sitzung: vorher `bash pipeline/setup.sh`.
 6. Prüfen: Standbilder ansehen, Whisper-Transkript einer Zeile gegenlesen, Länge 60–85 s.
